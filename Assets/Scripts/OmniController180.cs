@@ -47,8 +47,8 @@ public class OmniController180 : MonoBehaviour {
 		/*_0deg.volume = Mathf.Abs(Mathf.Cos(azimuthRad/2)) * vol;
 		_180deg.volume = Mathf.Abs(Mathf.Cos(azimuthRad/2 + Mathf.PI /2)) * vol;*/
 
-		_0deg.volume = Mathf.Abs( Remap(azimuth % 360, 0, 360, -1, 1));
-		_180deg.volume = Mathf.Abs( Remap((azimuth + 180) % 360, 0, 360, -1, 1) );
+		_0deg.volume = Mathf.Abs( Remap(azimuth % 360, 0, 360, -1, 1)) * vol ;
+		_180deg.volume = Mathf.Abs( Remap((azimuth + 180) % 360, 0, 360, -1, 1) ) * vol ;
 
 
 		Debug.Log(_0deg.volume + ", "+_180deg.volume);
