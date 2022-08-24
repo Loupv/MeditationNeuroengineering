@@ -92,7 +92,8 @@ public class OmniController : MonoBehaviour {
 			_270deg.volume = Mathf.Abs(Remap(azimuth % 360, 270, 360, 1, 0));
 		}
 
-		
+
+		//Camera.main.transform.Rotate(0.0f, 1.0f, 0.0f, Space.World);
 
 		/*if (azimuth <= 90.0f) 
 		{

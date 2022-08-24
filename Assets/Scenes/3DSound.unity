@@ -388,6 +388,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SoundController
       objectReference: {fileID: 0}
+    - target: {fileID: 2638580807520692068, guid: 6005f2ddccc624443b9fd9e338dfc050,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6005f2ddccc624443b9fd9e338dfc050, type: 3}
 --- !u!1001 &2670434722055457960
@@ -402,11 +407,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: SoundController180
       objectReference: {fileID: 0}
+    - target: {fileID: 2670434722523791945, guid: 5c864153a91372d4aa1d7f1948608500,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2670434722523791946, guid: 5c864153a91372d4aa1d7f1948608500,
+        type: 3}
+      propertyPath: clipIn0
+      value: 
+      objectReference: {fileID: 8300000, guid: a7cf3a0d4323b1e428b281ac4629c309, type: 3}
     - target: {fileID: 2670434722523791946, guid: 5c864153a91372d4aa1d7f1948608500,
         type: 3}
       propertyPath: myCamera
       value: 
       objectReference: {fileID: 277954525}
+    - target: {fileID: 2670434722523791946, guid: 5c864153a91372d4aa1d7f1948608500,
+        type: 3}
+      propertyPath: clipIn180
+      value: 
+      objectReference: {fileID: 8300000, guid: 01ecb0f0ea18bf144b958904d483e039, type: 3}
     - target: {fileID: 2670434722523791947, guid: 5c864153a91372d4aa1d7f1948608500,
         type: 3}
       propertyPath: m_RootOrder
