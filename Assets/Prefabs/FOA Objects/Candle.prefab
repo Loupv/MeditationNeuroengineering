@@ -90,6 +90,7 @@ GameObject:
   - component: {fileID: 7435196699691436641}
   - component: {fileID: 3739602932444649142}
   - component: {fileID: 6588283794944983290}
+  - component: {fileID: 8309198200512403521}
   m_Layer: 0
   m_Name: Flame
   m_TagString: Untagged
@@ -4833,6 +4834,22 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!111 &8309198200512403521
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4865887915944935926}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 7280a2e0117e931439204fd4824b4016, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 7280a2e0117e931439204fd4824b4016, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &6729099914705623479
 GameObject:
   m_ObjectHideFlags: 0
