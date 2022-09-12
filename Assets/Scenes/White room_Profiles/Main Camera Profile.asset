@@ -1422,7 +1422,7 @@ MonoBehaviour:
     value: {fileID: 0}
     defaultState: 1
   dirtIntensity:
-    overrideState: 1
+    overrideState: 0
     value: 0.47
 --- !u!114 &3602882738438114160
 MonoBehaviour:
