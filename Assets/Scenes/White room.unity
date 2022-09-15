@@ -2814,12 +2814,37 @@ PrefabInstance:
       propertyPath: m_Name
       value: WhiteRoom
       objectReference: {fileID: 0}
+    - target: {fileID: 5465050943730573121, guid: c130b8f01dd016c4baf88d00a7a09ce6,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7471351935486602830, guid: c130b8f01dd016c4baf88d00a7a09ce6,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 7471351935486602830, guid: c130b8f01dd016c4baf88d00a7a09ce6,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 7471351935486602830, guid: c130b8f01dd016c4baf88d00a7a09ce6,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2000
+      objectReference: {fileID: 0}
     - target: {fileID: 7471351935486602831, guid: c130b8f01dd016c4baf88d00a7a09ce6,
         type: 3}
       propertyPath: m_Name
       value: SkySphere
       objectReference: {fileID: 0}
     - target: {fileID: 7471351935486602831, guid: c130b8f01dd016c4baf88d00a7a09ce6,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8143003919848983564, guid: c130b8f01dd016c4baf88d00a7a09ce6,
         type: 3}
       propertyPath: m_IsActive
       value: 1

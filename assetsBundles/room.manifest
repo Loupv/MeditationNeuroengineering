@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 2651986472
+CRC: 3601300984
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 40d548ae5b501d96af4e0748df3a7f8f
+    Hash: 4bfac5e8e0415d5a1453e74b8a59f427
   TypeTreeHash:
     serializedVersion: 2
     Hash: f9ea7c8828b2b8300c025ba08a2ec948
@@ -45,5 +45,5 @@ SerializeReferenceClassIdentifiers: []
 Assets:
 - Assets/Prefabs/ScenesBundles/RoomParent.prefab
 Dependencies:
-- C:/Users/vuarness/Documents/GitHub/BundlesProject/../assetsBundles/cylindricwalls
-- C:/Users/vuarness/Documents/GitHub/BundlesProject/../assetsBundles/distantsmoke
+- C:/Users/vuarness/Documents/GitHub/BundlesProject/./assetsBundles/cylindricwalls
+- C:/Users/vuarness/Documents/GitHub/BundlesProject/./assetsBundles/distantsmoke

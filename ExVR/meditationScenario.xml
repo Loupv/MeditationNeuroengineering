@@ -10,8 +10,9 @@
         <Resource key="11" type="UnityAssetBundle" alias="cubicplatformfull" path="../assetsBundles/cubicplatformfull.unity3d"/>
         <Resource key="12" type="UnityAssetBundle" alias="roundtable" path="../assetsBundles/roundtable.unity3d"/>
         <Resource key="13" type="UnityAssetBundle" alias="focusedattentionobjects" path="../assetsBundles/focusedattentionobjects.unity3d"/>
-        <Resource key="14" type="VolumetricVideo" alias="namaste" path="../assetsBundles/namaste.kvid"/>
-        <Resource key="15" type="VolumetricVideo" alias="namaste2" path="../assetsBundles/namaste2.kvid"/>
+        <Resource key="17" type="VolumetricVideo" alias="guide" path="../VolumetricVideos/guide.kvid"/>
+        <Resource key="18" type="VolumetricVideo" alias="namaste" path="../VolumetricVideos/namaste.kvid"/>
+        <Resource key="19" type="VolumetricVideo" alias="namaste2" path="../VolumetricVideos/namaste2.kvid"/>
     </Resources>
     <Components>
         <Component key="0" name="Global logger" category="Output" type="GlobalLogger" global="1" always_updating="1" exceptions="0" frame_logging="0" trigger_logging="0" restricted="0" priority="2">
@@ -97,7 +98,7 @@
             <InitConfig key="8" name="standard">
                 <Arg name="init_transform" ui="Transformation" value="0 0 0 0 0 0 1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
                 <Arg name="init_transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                <Arg name="volumetric_video" ui="Resource" value="namaste%%%14" type="System.String" dim="1" sep="%%%" sizes="2"/>
+                <Arg name="volumetric_video" ui="Resource" value="namaste%%%18" type="System.String" dim="1" sep="%%%" sizes="2"/>
             </InitConfig>
             <Configs>
                 <Config key="9" name="standard">
@@ -126,7 +127,7 @@
             <InitConfig key="10" name="standard">
                 <Arg name="init_transform" ui="Transformation" value="0 0 0 0 0 0 1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
                 <Arg name="init_transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                <Arg name="volumetric_video" ui="Resource" value="namaste2%%%15" type="System.String" dim="1" sep="%%%" sizes="2"/>
+                <Arg name="volumetric_video" ui="Resource" value="namaste2%%%19" type="System.String" dim="1" sep="%%%" sizes="2"/>
             </InitConfig>
             <Configs>
                 <Config key="11" name="standard">
@@ -142,7 +143,7 @@
                     <Arg name="filtering_obb_tr_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="loop" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="rendering" ui="Combo box index" value="2" type="System.Int32" dim="0"/>
-                    <Arg name="size_points" ui="Float spin box" value="0.0016" type="System.Single" dim="0"/>
+                    <Arg name="size_points" ui="Float spin box" value="0.0037" type="System.Single" dim="0"/>
                     <Arg name="start_time" ui="Float spin box" value="0" type="System.Single" dim="0"/>
                     <Arg name="tint" ui="Color pick" value="0 1 1 1" type="System.Single" dim="1" sep=" " sizes="4"/>
                     <Arg name="transform" ui="Transformation" value="0 1.1 -0.5 0 0 2.77556e-17 1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
@@ -151,7 +152,36 @@
                 </Config>
             </Configs>
         </Component>
-        <Component key="6" name="LabSky" category="Environment" type="Sky" global="0" always_updating="0" exceptions="1" frame_logging="0" trigger_logging="0" restricted="0" priority="2">
+        <Component key="14" name="Volumetric video 3" category="Video" type="VolumetricVideo" global="0" always_updating="0" exceptions="1" frame_logging="0" trigger_logging="0" restricted="2" priority="2">
+            <InitConfig key="28" name="standard">
+                <Arg name="init_transform" ui="Transformation" value="0 0 0 0 0 0 1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
+                <Arg name="init_transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                <Arg name="volumetric_video" ui="Resource" value="guide%%%17" type="System.String" dim="1" sep="%%%" sizes="2"/>
+            </InitConfig>
+            <Configs>
+                <Config key="29" name="standard">
+                    <Arg name="audio_id" ui="Integer spin box" value="0" type="System.Int32" dim="0"/>
+                    <Arg name="circles" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="cones" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="details" ui="Combo box index" value="3" type="System.Int32" dim="0"/>
+                    <Arg name="display_filtering_obb" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="enable_audio" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="end_time" ui="Float spin box" value="50" type="System.Single" dim="0"/>
+                    <Arg name="filter_points_outside_obb" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="filtering_obb_tr" ui="Transformation" value="0 0 0 0 0 0 1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
+                    <Arg name="filtering_obb_tr_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="loop" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="rendering" ui="Combo box index" value="2" type="System.Int32" dim="0"/>
+                    <Arg name="size_points" ui="Float spin box" value="0.0044" type="System.Single" dim="0"/>
+                    <Arg name="start_time" ui="Float spin box" value="0" type="System.Single" dim="0"/>
+                    <Arg name="tint" ui="Color pick" value="0 1 1 1" type="System.Single" dim="1" sep=" " sizes="4"/>
+                    <Arg name="transform" ui="Transformation" value="0 1 -0.04 0 180 0 1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
+                    <Arg name="transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="volume" ui="Float spin box" value="1" type="System.Single" dim="0"/>
+                </Config>
+            </Configs>
+        </Component>
+        <Component key="6" name="WhiteRoomSky" category="Environment" type="Sky" global="0" always_updating="0" exceptions="1" frame_logging="0" trigger_logging="0" restricted="0" priority="2">
             <InitConfig key="12" name="standard"/>
             <Configs>
                 <Config key="13" name="standard">
@@ -173,7 +203,7 @@
                     <Arg name="ambient_color" ui="Color pick" value="1 0.211765 0.227451 0.258824" type="System.Single" dim="1" sep=" " sizes="4"/>
                     <Arg name="ambient_intensity" ui="Float spin box" value="1" type="System.Single" dim="0"/>
                     <Arg name="ambient_mode" ui="Combo box index" value="0" type="System.Int32" dim="0"/>
-                    <Arg name="atmosphere-thickness" ui="Float spin box" value="0.2" type="System.Single" dim="0"/>
+                    <Arg name="atmosphere-thickness" ui="Float spin box" value="0.25" type="System.Single" dim="0"/>
                     <Arg name="background_color" ui="Color pick" value="1 0.207843 0.188235 0.188235" type="System.Single" dim="1" sep=" " sizes="4"/>
                     <Arg name="convergence" ui="Float spin box" value="1" type="System.Single" dim="0"/>
                     <Arg name="cubemap" ui="Resource" value="%%%-1" type="System.String" dim="1" sep="%%%" sizes="2"/>
@@ -193,7 +223,7 @@
                     <Arg name="panoramic-tint" ui="Color pick" value="0.498039 0.498039 0.498039 0.498039" type="System.Single" dim="1" sep=" " sizes="4"/>
                     <Arg name="panoramic-type" ui="Combo box index" value="0" type="System.Int32" dim="0"/>
                     <Arg name="panoramic_invert" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="procedural-exposure" ui="Float spin box" value="0.2" type="System.Single" dim="0"/>
+                    <Arg name="procedural-exposure" ui="Float spin box" value="1.4" type="System.Single" dim="0"/>
                     <Arg name="procedural-ground-color" ui="Color pick" value="1 1 1 1" type="System.Single" dim="1" sep=" " sizes="4"/>
                     <Arg name="procedural-sky-tint" ui="Color pick" value="1 0.886275 0.886275 0.886275" type="System.Single" dim="1" sep=" " sizes="4"/>
                     <Arg name="sky_color" ui="Color pick" value="1 0.211765 0.227451 0.258824" type="System.Single" dim="1" sep=" " sizes="4"/>
@@ -239,17 +269,17 @@
                     <Arg name="ao_thickness" ui="Float values slider" value="5.22" type="System.Single" dim="0"/>
                     <Arg name="ao_thickness_enable" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="cg_enable" ui="Check box" value="true" type="System.Boolean" dim="0"/>
-                    <Arg name="cg_tone_color_filter" ui="Color pick" value="1 1 1 1" type="System.Single" dim="1" sep=" " sizes="4"/>
+                    <Arg name="cg_tone_color_filter" ui="Color pick" value="1 1 0 0" type="System.Single" dim="1" sep=" " sizes="4"/>
                     <Arg name="cg_tone_color_filter_enable" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="cg_tone_contrast" ui="Integer slider" value="0" type="System.Int32" dim="0"/>
                     <Arg name="cg_tone_contrast_enable" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="cg_tone_hue_shift" ui="Integer slider" value="0" type="System.Int32" dim="0"/>
-                    <Arg name="cg_tone_hue_shift_enable" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="cg_tone_post_exposure" ui="Float values slider" value="0.4" type="System.Single" dim="0"/>
+                    <Arg name="cg_tone_hue_shift_enable" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="cg_tone_post_exposure" ui="Float values slider" value="0.9" type="System.Single" dim="0"/>
                     <Arg name="cg_tone_post_exposure_enable" ui="Check box" value="true" type="System.Boolean" dim="0"/>
-                    <Arg name="cg_tone_saturation" ui="Integer slider" value="0" type="System.Int32" dim="0"/>
-                    <Arg name="cg_tone_saturation_enable" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="cg_wb_temp" ui="Float values slider" value="1.38778e-16" type="System.Single" dim="0"/>
+                    <Arg name="cg_tone_saturation" ui="Integer slider" value="1" type="System.Int32" dim="0"/>
+                    <Arg name="cg_tone_saturation_enable" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="cg_wb_temp" ui="Float values slider" value="18.6" type="System.Single" dim="0"/>
                     <Arg name="cg_wb_temp_enable" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="cg_wb_tint" ui="Float values slider" value="0" type="System.Single" dim="0"/>
                     <Arg name="cg_wb_tint_enable" ui="Check box" value="false" type="System.Boolean" dim="0"/>
@@ -338,7 +368,7 @@
                         </Timeline>
                     </Action>
                     <Action key="7" key_component="6" key_config="13" node_used="0" node_position="0 0">
-                        <!--Component LabSky with config standard -->
+                        <!--Component WhiteRoomSky with config standard -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
                             <Interval t1="0" t2="100"/>
@@ -408,7 +438,7 @@
                         </Timeline>
                     </Action>
                     <Action key="8" key_component="6" key_config="13" node_used="0" node_position="0 0">
-                        <!--Component LabSky with config standard -->
+                        <!--Component WhiteRoomSky with config standard -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
                             <Interval t1="0" t2="100"/>
@@ -431,6 +461,17 @@
                     </Action>
                     <Action key="13" key_component="11" key_config="23" node_used="0" node_position="0 0">
                         <!--Component Post process with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
+                            <Interval t1="0" t2="100"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
+                            <Interval t1="0" t2="100"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="23" key_component="14" key_config="29" node_used="0" node_position="0 0">
+                        <!--Component Volumetric video 3 with config standard -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
                             <Interval t1="0" t2="100"/>
@@ -478,7 +519,7 @@
                         </Timeline>
                     </Action>
                     <Action key="18" key_component="6" key_config="13" node_used="0" node_position="0 0">
-                        <!--Component LabSky with config standard -->
+                        <!--Component WhiteRoomSky with config standard -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
                             <Interval t1="0" t2="100"/>

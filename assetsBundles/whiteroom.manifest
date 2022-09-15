@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 3595219781
+CRC: 4147183496
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 984156a06d4fb81f679bc0d11897d6ae
+    Hash: 724314120010b5253042292c15f316c6
   TypeTreeHash:
     serializedVersion: 2
     Hash: f9ea7c8828b2b8300c025ba08a2ec948
@@ -45,5 +45,5 @@ SerializeReferenceClassIdentifiers: []
 Assets:
 - Assets/Prefabs/ScenesBundles/WhiteRoom.prefab
 Dependencies:
-- C:/Users/vuarness/Documents/GitHub/BundlesProject/../assetsBundles/cylindricwalls
-- C:/Users/vuarness/Documents/GitHub/BundlesProject/../assetsBundles/distantsmoke
+- C:/Users/vuarness/Documents/GitHub/BundlesProject/./assetsBundles/cylindricwalls
+- C:/Users/vuarness/Documents/GitHub/BundlesProject/./assetsBundles/distantsmoke
