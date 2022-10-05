@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.Audio;
+
 
 public class OmniController : MonoBehaviour {
 
@@ -15,6 +17,7 @@ public class OmniController : MonoBehaviour {
 	public GameObject myCamera;
 	public float vol = 100.0f;
 
+	public AudioMixerGroup audioMixerGroup;
 
 	// Use this for initialization
 	void Start () {
@@ -29,6 +32,11 @@ public class OmniController : MonoBehaviour {
 		_90deg = gameObject.AddComponent<AudioSource>() as AudioSource;
 		_180deg = gameObject.AddComponent<AudioSource>() as AudioSource;
 		_270deg = gameObject.AddComponent<AudioSource>() as AudioSource;
+
+		_0deg.outputAudioMixerGroup = audioMixerGroup;
+		_90deg.outputAudioMixerGroup = audioMixerGroup;
+		_180deg.outputAudioMixerGroup = audioMixerGroup;
+		_270deg.outputAudioMixerGroup = audioMixerGroup;
 
 		_0deg.clip = clipIn0;
 		_90deg.clip = clipIn90;
