@@ -4,9 +4,21 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/SampleScene.unity
+    guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scenes/WhiteRoom.unity
+    guid: bc5dc980a1c1388469e1c21d55d896d7
+  - enabled: 1
+    path: Assets/Scenes/LabRoom.unity
+    guid: e0c0c2fa010783b4db7e8f6a83770df6
+  - enabled: 1
+    path: Assets/Scenes/ForestScene.unity
+    guid: cf2e4ad51707ced4796896b1c1fc10e0
   m_configObjects:
-    Unity.XR.WindowsMR.Settings: {fileID: 11400000, guid: 38745896b44049b4c9d03a1225464062,
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 185f7728123062445ab3762d6830fa67,
       type: 2}
-    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 351928f02df12ee48809b70418bfa898,
+    com.unity.xr.openxr.settings4: {fileID: 11400000, guid: 734f288929bc2874dbfb57be88391884,
       type: 2}

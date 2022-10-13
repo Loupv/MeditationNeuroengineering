@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7549639463553158221
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7549639463553158218}
+  - component: {fileID: 7549639463553158219}
+  m_Layer: 0
+  m_Name: AmbianceOmniForest
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7549639463553158218
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7549639463553158221}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.92149115, y: -1.3135858, z: 0.9193764}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7549639463553158219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7549639463553158221}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffcaf70ad993e77459e2262a83b3c9b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clipIn0: {fileID: 8300000, guid: 9dc28e7b8aaf0ba45ad63f11f98850e9, type: 3}
+  clipIn90: {fileID: 8300000, guid: a0dcdeee0fda4584f81e524230f6c941, type: 3}
+  clipIn180: {fileID: 8300000, guid: 1095f3733d50a9149a457cadb39de78d, type: 3}
+  clipIn270: {fileID: 8300000, guid: 5c3f610f2fe88434784236a6a384e4a9, type: 3}
+  myCamera: {fileID: 0}
+  vol: 100
+  playDelay: 0
+  audioMixerGroup: {fileID: 24300002, guid: ad6ade5e7029d7c41b2cb39a6022498c, type: 2}

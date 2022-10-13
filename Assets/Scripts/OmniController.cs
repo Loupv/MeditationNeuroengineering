@@ -17,6 +17,8 @@ public class OmniController : MonoBehaviour {
 	public GameObject myCamera;
 	public float vol = 100.0f;
 
+	public float playDelay;
+
 	public AudioMixerGroup audioMixerGroup;
 
 	// Use this for initialization
@@ -58,11 +60,10 @@ public class OmniController : MonoBehaviour {
 		_180deg.loop = true;
 		_270deg.loop = true;
 
-		_0deg.Play ();
-		_90deg.Play ();
-		_180deg.Play ();
-		_270deg.Play ();
-
+		_0deg.Play();
+		_90deg.Play();
+		_180deg.Play();
+		_270deg.Play();
 	}
 	
 	// Update is called once per frame
@@ -131,6 +132,18 @@ public class OmniController : MonoBehaviour {
 			_180deg.volume = 0.0f;
 			_270deg.volume = Mathf.Cos (azimuthRad - Mathf.PI - Mathf.PI/2.0f) * vol;
 		}*/
+
+		//Debug.Log(_0deg.time);
+
+		if (_0deg.time < playDelay)
+		{
+			Debug.Log("Looping to custom clip start");
+			_0deg.time = playDelay;
+			_90deg.time = playDelay;
+			_180deg.time = playDelay;
+			_270deg.time = playDelay;
+		}
+
 	}
 
 	public float Remap(float value, float from1, float from2, float to1, float to2)

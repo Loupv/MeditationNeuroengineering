@@ -195,7 +195,7 @@ TextureImporter:
       213: -3972247917245959451
     second: pbb0nn08_63
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -215,6 +215,8 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -246,10 +248,14 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
   applyGammaDecoding: 0
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -277,6 +283,18 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -1644,6 +1662,71 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      pbb0nn08_2: -9127723962303535713
+      pbb0nn08_48: -5139022950192470986
+      pbb0nn08_36: -107257371872378165
+      pbb0nn08_13: -5883421819403793403
+      pbb0nn08_25: 9201732332836346302
+      pbb0nn08_18: 2602220557776580609
+      pbb0nn08_11: 2248225213008309775
+      pbb0nn08_43: 1241367935284595541
+      pbb0nn08_30: 4172034421633418226
+      pbb0nn08_34: -2891919745996350866
+      pbb0nn08_29: -7966749352892571559
+      pbb0nn08_32: -2367989454735933734
+      pbb0nn08_37: -2326191024803397993
+      pbb0nn08_42: -8314689572330625473
+      pbb0nn08_55: 8206497124250206654
+      pbb0nn08_61: 5032666852433660341
+      pbb0nn08_6: 2397423312219837948
+      pbb0nn08_15: -5856571304416411449
+      pbb0nn08_26: 4742623923407389632
+      pbb0nn08_58: 4997678696870486343
+      pbb0nn08_60: 6190833505234347595
+      pbb0nn08_21: 772989005897358238
+      pbb0nn08_40: -8320830777005611132
+      pbb0nn08_12: 3604148045580034533
+      pbb0nn08_10: -4479170188392796234
+      pbb0nn08_4: 2311315833722878706
+      pbb0nn08_28: 3682376944694851579
+      pbb0nn08_45: 5327881248852754384
+      pbb0nn08_39: 1552268609782772644
+      pbb0nn08_33: 6903321778709917075
+      pbb0nn08_22: 4390001778718397727
+      pbb0nn08_23: -4671055422383870245
+      pbb0nn08_27: -687132839311638202
+      pbb0nn08_16: 5781309614313468879
+      pbb0nn08_35: 2891928412229533676
+      pbb0nn08_56: -8507809317005978870
+      pbb0nn08_24: 7508115867593849732
+      pbb0nn08_1: 4261044904200830659
+      pbb0nn08_14: -6233791044120475279
+      pbb0nn08_31: -566109900664804574
+      pbb0nn08_52: -1001624336346876359
+      pbb0nn08_44: -3894233833746170081
+      pbb0nn08_7: 2847892260142947312
+      pbb0nn08_17: 4103748856017595256
+      pbb0nn08_3: 8963602606051229425
+      pbb0nn08_41: 8286486459778871952
+      pbb0nn08_57: 7349485145723816239
+      pbb0nn08_51: 9222448606596920829
+      pbb0nn08_63: -3972247917245959451
+      pbb0nn08_54: 6189882441014849806
+      pbb0nn08_5: 5788679807372854773
+      pbb0nn08_47: 3107636778954477283
+      pbb0nn08_50: 8376295986264535459
+      pbb0nn08_8: -1377364320520474258
+      pbb0nn08_49: 7668579707328544850
+      pbb0nn08_62: -3109507210195037188
+      pbb0nn08_53: -6841132690628909188
+      pbb0nn08_46: 2654534824052928338
+      pbb0nn08_19: 2782540448763581955
+      pbb0nn08_59: 1966844117046123523
+      pbb0nn08_9: -7161279833212044329
+      pbb0nn08_20: 1155955324666051136
+      pbb0nn08_0: -5290169546537579002
+      pbb0nn08_38: 3045734832612373392
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

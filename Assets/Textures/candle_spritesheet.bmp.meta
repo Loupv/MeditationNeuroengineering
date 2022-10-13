@@ -195,7 +195,7 @@ TextureImporter:
       213: 6209011009446902230
     second: candle_spritesheet_63
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -215,6 +215,8 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -246,10 +248,14 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
   applyGammaDecoding: 0
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -265,6 +271,18 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -1632,6 +1650,71 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      candle_spritesheet_29: -477364702118719040
+      candle_spritesheet_44: -8054495802467608196
+      candle_spritesheet_30: 8997662629999492312
+      candle_spritesheet_51: 4916774761446151831
+      candle_spritesheet_60: 6255899177575832190
+      candle_spritesheet_58: 7071219966622651662
+      candle_spritesheet_37: -2701212358134430013
+      candle_spritesheet_24: 7336435914893031723
+      candle_spritesheet_33: 30723563176245083
+      candle_spritesheet_5: 6763727912305911937
+      candle_spritesheet_14: 5035261609281294976
+      candle_spritesheet_31: 2874153007756323898
+      candle_spritesheet_56: -7628981618171633987
+      candle_spritesheet_13: -7545201032964720162
+      candle_spritesheet_21: -847279303475477770
+      candle_spritesheet_38: 8852650863009021666
+      candle_spritesheet_63: 6209011009446902230
+      candle_spritesheet_26: -6858536015672646438
+      candle_spritesheet_16: -111667144141442072
+      candle_spritesheet_8: -9180332166622320293
+      candle_spritesheet_47: 8010341784566559347
+      candle_spritesheet_3: 8237509479057402876
+      candle_spritesheet_62: -2295900414424606005
+      candle_spritesheet_12: 7170140802706089253
+      candle_spritesheet_39: -3978306572042081747
+      candle_spritesheet_43: 7759169227104815747
+      candle_spritesheet_45: -7132788664037113734
+      candle_spritesheet_40: -7083855509486251634
+      candle_spritesheet_15: -7697380129695363821
+      candle_spritesheet_35: -3224802413870105338
+      candle_spritesheet_19: -662612031365399812
+      candle_spritesheet_49: 1841758282479825561
+      candle_spritesheet_41: 4573557302261172670
+      candle_spritesheet_11: 4657372264547441458
+      candle_spritesheet_25: -6473117531740125809
+      candle_spritesheet_46: -1287074708338027078
+      candle_spritesheet_59: 4125871708637414308
+      candle_spritesheet_53: 5468905758423960137
+      candle_spritesheet_32: 1669497413814905164
+      candle_spritesheet_17: 8884564634741730546
+      candle_spritesheet_18: 8739700686864526678
+      candle_spritesheet_0: 7206388064039903736
+      candle_spritesheet_52: 7678029899961528746
+      candle_spritesheet_42: 2683674432569599056
+      candle_spritesheet_48: -5969049116609913875
+      candle_spritesheet_36: -8389810880623823278
+      candle_spritesheet_22: 4826143001494154994
+      candle_spritesheet_55: -8764615815642303277
+      candle_spritesheet_20: -7445718655641356845
+      candle_spritesheet_54: 4193073632009664784
+      candle_spritesheet_10: 7884642599100107593
+      candle_spritesheet_61: -6789614897296353353
+      candle_spritesheet_7: -3322395098406713293
+      candle_spritesheet_9: 3193568657893087110
+      candle_spritesheet_23: 8495047316362752178
+      candle_spritesheet_57: -8532678464886271196
+      candle_spritesheet_2: -4827694337183181372
+      candle_spritesheet_34: -6166580660374401766
+      candle_spritesheet_6: 6682846184805400442
+      candle_spritesheet_1: -4139211675538507856
+      candle_spritesheet_27: -7607001510110240703
+      candle_spritesheet_50: 4936872106015833417
+      candle_spritesheet_28: 3512574255263887547
+      candle_spritesheet_4: -6586519002412454779
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

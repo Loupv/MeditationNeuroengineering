@@ -1,14 +1,9 @@
 fileFormatVersion: 2
-guid: a264630e50dfb184f8d3e4625c204970
+guid: ffcaf70ad993e77459e2262a83b3c9b6
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences:
-  - clipIn0: {instanceID: 0}
-  - clipIn90: {fileID: 8300000, guid: 0704a43589fb4f94481614253e4f4825, type: 3}
-  - clipIn180: {instanceID: 0}
-  - clipIn270: {instanceID: 0}
-  - myCamera: {instanceID: 0}
+  defaultReferences: []
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
