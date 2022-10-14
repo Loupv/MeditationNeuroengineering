@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 227895232}
   - component: {fileID: 227895231}
   m_Layer: 0
-  m_Name: Plane (3)
-  m_TagString: MeditationShelter
+  m_Name: ShelterScreen
+  m_TagString: ShelterScreens
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -147,8 +147,8 @@ GameObject:
   - component: {fileID: 740249852}
   - component: {fileID: 740249851}
   m_Layer: 0
-  m_Name: Plane (4)
-  m_TagString: MeditationShelter
+  m_Name: ShelterScreen
+  m_TagString: ShelterScreens
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -245,8 +245,8 @@ GameObject:
   - component: {fileID: 953991030}
   - component: {fileID: 953991029}
   m_Layer: 0
-  m_Name: Plane
-  m_TagString: MeditationShelter
+  m_Name: ShelterScreen
+  m_TagString: ShelterScreens
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -343,8 +343,8 @@ GameObject:
   - component: {fileID: 1505471980}
   - component: {fileID: 1505471979}
   m_Layer: 0
-  m_Name: Plane (2)
-  m_TagString: MeditationShelter
+  m_Name: ShelterScreen
+  m_TagString: ShelterScreens
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -441,8 +441,8 @@ GameObject:
   - component: {fileID: 1846719187}
   - component: {fileID: 1846719186}
   m_Layer: 0
-  m_Name: Plane (1)
-  m_TagString: MeditationShelter
+  m_Name: ShelterScreen
+  m_TagString: ShelterScreens
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5199,7 +5199,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8771550510874218586}
   - component: {fileID: 6119266040700710111}
-  - component: {fileID: 6733738359658155944}
   m_Layer: 0
   m_Name: ShelterTransitionLight
   m_TagString: MeditationShelter
@@ -5284,26 +5283,6 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!114 &6733738359658155944
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7642219578975864759}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Version: 1
-  m_UsePipelineSettings: 1
-  m_AdditionalLightsShadowResolutionTier: 2
-  m_LightLayerMask: 1
-  m_CustomShadowLayers: 0
-  m_ShadowLayerMask: 1
-  m_LightCookieSize: {x: 1, y: 1}
-  m_LightCookieOffset: {x: 0, y: 0}
 --- !u!1 &7688075001076359481
 GameObject:
   m_ObjectHideFlags: 0
@@ -5879,7 +5858,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 50022a37693608a48a145739ce437a0d, type: 2}
+  - {fileID: 2100000, guid: 4e9a2caaa8a13474f8a1577ed91fb90c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

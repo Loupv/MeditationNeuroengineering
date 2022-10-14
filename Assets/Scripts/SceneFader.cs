@@ -2,14 +2,14 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using System.Collections;
-using UnityEngine.SceneManagement;
 using System.Collections.Generic;
+using System.Linq;
 
 public class SceneFader : MonoBehaviour
 {
 
 	public GameObject[] fadeScreens;
-	UnityEngine.Rendering.Volume globalVolume;
+	//UnityEngine.Rendering.Volume globalVolume;
 	public float fadeSpeed = 0.8f, waitingTimeBetweenScenes = 2f;
 	public string[] scenesArray;
 	public int currentScenesArrayID;
@@ -38,7 +38,8 @@ public class SceneFader : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && !isFading)
+		
+		if (Input.GetKeyDown(KeyCode.Space) && !isFading)
         {
 			isFading = true;
 			currentScenesArrayID += 1;
@@ -47,7 +48,6 @@ public class SceneFader : MonoBehaviour
         }
 	}
 
-    #region HELPERS
     public IEnumerator FadeOutAndLoadScene()
 	{
 		yield return Fade(FadeDirection.Out);
@@ -57,7 +57,10 @@ public class SceneFader : MonoBehaviour
 
 		yield return 0;
 
-		if (FindObjectsOfType<DontDestroyOnLoad>().Length > 1) Destroy(FindObjectsOfType<DontDestroyOnLoad>()[1].gameObject);
+		//if (FindObjectsOfType<DontDestroyOnLoad>().Length > 1) Destroy(FindObjectsOfType<DontDestroyOnLoad>()[1].gameObject);
+
+		yield return 0; // wait for the frame to end and the objects to be destroyed
+
 		PrepareNewSceneFadeIn();
 
 		yield return new WaitForSeconds(waitingTimeBetweenScenes);
@@ -65,12 +68,23 @@ public class SceneFader : MonoBehaviour
 	}
 
 
-	#region FADE
 	void PrepareNewSceneFadeIn()
     {
-		globalVolume = FindObjectOfType<UnityEngine.Rendering.Volume>();
-		globalVolume.weight = 0;
-		
+		//globalVolume = FindObjectOfType<UnityEngine.Rendering.Volume>();
+		//globalVolume.weight = 0;
+
+		//fadeScreens = GameObject.FindGameObjectsWithTag("ShelterScreens");
+		fadeScreens = Resources.FindObjectsOfTypeAll<GameObject>().Where(obj => (obj.name == "ShelterScreen" && obj.activeInHierarchy)).ToArray();
+
+		/*try
+        {
+			FindObjectOfType<OmniController>().myCamera = Camera.main.gameObject;
+        }
+        catch
+        {
+			Debug.Log("No omni system or no main camera found");
+        }*/
+
 		CopyCurrentSkybox();
 
 		GetLightsReferences();
@@ -106,7 +120,6 @@ public class SceneFader : MonoBehaviour
 		// fade cycle is now complete
 		if (fadeDirection == FadeDirection.In) isFading = false;
 	}
-    #endregion
 
 	private void SetGOFadeAmount(ref float alpha, FadeDirection fadeDirection)
 	{
@@ -123,7 +136,7 @@ public class SceneFader : MonoBehaviour
 			lights[i].intensity = lightsLastIntensity[i] * (1-alpha);
         }
 
-		globalVolume.weight = 1 - alpha;
+		//globalVolume.weight = 1 - alpha;
 
 		tmpSkybox.SetFloat("_SunSize", skyboxSunsize*(1-alpha));
 		tmpSkybox.SetFloat("_SunSizeConvergence", skyboxConvergence * (1 - alpha));
@@ -197,5 +210,4 @@ public class SceneFader : MonoBehaviour
 	}
 
 
-	#endregion
 }

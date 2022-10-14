@@ -120,6 +120,43 @@ public class AssetBundleBuilder : MonoBehaviour{
         BuildAllAssetBundles(BuildAssetBundleOptions.ForceRebuildAssetBundle);
     }
 
+    [MenuItem("AssetBundles/Clear All AssetBundles")]
+    static void ClearAllAssetBundles()
+    {
+        var assetBundleDependencies = AssetDatabase.GetAllAssetBundleNames();
+
+        foreach (var bundleName in assetBundleDependencies)
+        {
+            AssetDatabase.RemoveAssetBundleName(bundleName, true);
+            Debug.Log("Gone good for " + bundleName);
+        }
+
+
+        /*foreach (string prefabPath in AssetDatabase.FindAssets("t:prefab", new string[] { "Assets/Prefabs" }))
+        {
+            try {
+                
+                Debug.Log(AssetDatabase.GUIDToAssetPath(prefabPath));
+                var assetBundleName = AssetDatabase.GetImplicitAssetBundleName(AssetDatabase.GUIDToAssetPath(prefabPath));
+                var assetBundleDependencies = AssetDatabase.GetAssetBundleDependencies(assetBundleName, true);
+
+                AssetDatabase.RemoveAssetBundleName(assetBundleName, true);
+
+                foreach (var bundleName in assetBundleDependencies)
+                {
+                    AssetDatabase.RemoveAssetBundleName(bundleName, true);
+                }
+                Debug.Log("Gone good for " + assetBundleName);
+            }
+            catch
+            {
+
+            }
+        }*/
+
+    }
+
+
     [MenuItem("AssetBundles/Clean AssetBundles dir")]
     static void CleanAllAssetBundles() {
 
@@ -206,8 +243,6 @@ public class AssetBundleBuilder : MonoBehaviour{
     //        return manifest != null;
     //    }
     //}
-
-
 
 }
 #endif

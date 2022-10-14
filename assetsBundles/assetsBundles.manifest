@@ -1,77 +1,16 @@
 ManifestFileVersion: 0
-CRC: 371539897
+CRC: 1579247271
 AssetBundleManifest:
   AssetBundleInfos:
     Info_0:
-      Name: animatedsphere2
-      Dependencies: {}
-    Info_1:
-      Name: cylindricwalls
-      Dependencies: {}
-    Info_2:
-      Name: distantsmoke
-      Dependencies: {}
-    Info_3:
-      Name: room
-      Dependencies:
-        Dependency_0: cylindricwalls
-        Dependency_1: distantsmoke
-    Info_4:
-      Name: flutist
-      Dependencies: {}
-    Info_5:
-      Name: focusedattentionobjects
-      Dependencies: {}
-    Info_6:
-      Name: chair
-      Dependencies: {}
-    Info_7:
-      Name: roundtable
-      Dependencies: {}
-    Info_8:
-      Name: platform
-      Dependencies: {}
-    Info_9:
-      Name: neutralskybox
-      Dependencies: {}
-    Info_10:
-      Name: frontal-parietal_l
-      Dependencies: {}
-    Info_11:
-      Name: cerebellum_r
-      Dependencies: {}
-    Info_12:
-      Name: cerebellum_l
-      Dependencies: {}
-    Info_13:
-      Name: brainstem_r
-      Dependencies: {}
-    Info_14:
-      Name: brainstem_l
-      Dependencies: {}
-    Info_15:
-      Name: base
-      Dependencies: {}
-    Info_16:
-      Name: 3dbrainexecercice_low
-      Dependencies: {}
-    Info_17:
-      Name: temporal_r
-      Dependencies: {}
-    Info_18:
-      Name: temporal_l
-      Dependencies: {}
-    Info_19:
-      Name: frontal-parietal_r
-      Dependencies: {}
-    Info_20:
-      Name: cubicplatformfull
-      Dependencies: {}
-    Info_21:
       Name: labroom
       Dependencies: {}
-    Info_22:
+    Info_1:
       Name: whiteroom
-      Dependencies:
-        Dependency_0: cylindricwalls
-        Dependency_1: distantsmoke
+      Dependencies: {}
+    Info_2:
+      Name: forestroom
+      Dependencies: {}
+    Info_3:
+      Name: gameengine
+      Dependencies: {}
