@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2888239456813453208}
   - component: {fileID: 2888239456813453211}
+  - component: {fileID: 6958084493298249023}
   m_Layer: 0
   m_Name: SceneFader
   m_TagString: Untagged
@@ -27,7 +28,6 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.4685565, y: 0.33948505, z: -12.309096}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -44,11 +44,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 273b68858c21bd4498d5c8737cf42f2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeOutUIImage: {fileID: 0}
+  fadeScreens: []
   fadeSpeed: 2
+  waitingTimeBetweenScenes: 2
   scenesArray:
   - LabRoom
   - WhiteRoom
   - ForestScene
   currentScenesArrayID: 0
   hasFaded: 0
+  isFading: 0
+  lights: []
+  lightsLastIntensity: []
+--- !u!114 &6958084493298249023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2888239456813453210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d1c07a6449b0ca439ee6fac5f6f7d83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
