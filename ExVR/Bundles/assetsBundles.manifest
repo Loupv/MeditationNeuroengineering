@@ -1,0 +1,21 @@
+ManifestFileVersion: 0
+CRC: 2769250402
+AssetBundleManifest:
+  AssetBundleInfos:
+    Info_0:
+      Name: labroom
+      Dependencies: {}
+    Info_1:
+      Name: whiteroom
+      Dependencies: {}
+    Info_2:
+      Name: forestroom
+      Dependencies: {}
+    Info_3:
+      Name: gameengine
+      Dependencies: {}
+    Info_4:
+      Name: labroomscene
+      Dependencies:
+        Dependency_0: labroom
+        Dependency_1: gameengine

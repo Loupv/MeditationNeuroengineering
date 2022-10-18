@@ -1,0 +1,35 @@
+ManifestFileVersion: 0
+CRC: 1138626791
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: f04bc4d9afce7ce8196176d656180c8f
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 1b6d75c01a9fac5c570ee117ae12f598
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 108
+  Script: {instanceID: 0}
+- Class: 215
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Prefabs/ScenesBundles/LabRoom.prefab
+Dependencies: []
