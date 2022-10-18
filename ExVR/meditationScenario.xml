@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Experiment name="meditationScenario" version="1.0a60" mode="designer" designer-used="C:/Users/loupv/Documents/exvr-designer/ExVR.exe">
+<Experiment name="meditationScenario" version="1.0a60" mode="designer" designer-used="C:/Users/vuarness/Documents/exvr-designer/ExVR.exe">
     <Settings debug="1" csharp_debug_info="0" catch_components_exceptions="0" positional_tracking="1" catch_external_keyboard_events="0">
         <Display mode="0" stereo_fov="60" fullscreen="0" monitor_id="1" resolution_id="2" custom_width="1920" custom_height="1080"/>
         <Camera neutral_x="0" neutral_y="1" neutral_z="0"/>
@@ -226,7 +226,81 @@
         <Component key="11" name="Post process" category="Environment" type="PostProcess" global="0" always_updating="0" exceptions="1" frame_logging="0" trigger_logging="0" restricted="0" priority="2">
             <InitConfig key="22" name="standard"/>
             <Configs>
-                <Config key="23" name="standard">
+                <Config key="23" name="labroom">
+                    <Arg name="ao_color" ui="Color pick" value="1 0 0 0" type="System.Single" dim="1" sep=" " sizes="4"/>
+                    <Arg name="ao_color_enable" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="ao_enable" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="ao_intensity" ui="Float values slider" value="0.43" type="System.Single" dim="0"/>
+                    <Arg name="ao_intensity_enable" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="ao_thickness" ui="Float values slider" value="5.22" type="System.Single" dim="0"/>
+                    <Arg name="ao_thickness_enable" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="cg_enable" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="cg_tone_color_filter" ui="Color pick" value="1 1 1 1" type="System.Single" dim="1" sep=" " sizes="4"/>
+                    <Arg name="cg_tone_color_filter_enable" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="cg_tone_contrast" ui="Integer slider" value="0" type="System.Int32" dim="0"/>
+                    <Arg name="cg_tone_contrast_enable" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="cg_tone_hue_shift" ui="Integer slider" value="0" type="System.Int32" dim="0"/>
+                    <Arg name="cg_tone_hue_shift_enable" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="cg_tone_post_exposure" ui="Float values slider" value="0.9" type="System.Single" dim="0"/>
+                    <Arg name="cg_tone_post_exposure_enable" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="cg_tone_saturation" ui="Integer slider" value="1" type="System.Int32" dim="0"/>
+                    <Arg name="cg_tone_saturation_enable" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="cg_wb_temp" ui="Float values slider" value="18.6" type="System.Single" dim="0"/>
+                    <Arg name="cg_wb_temp_enable" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="cg_wb_tint" ui="Float values slider" value="0" type="System.Single" dim="0"/>
+                    <Arg name="cg_wb_tint_enable" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="v_center" ui="Vector 2D" value="0.5 0.5" type="System.Single" dim="1" sep=" " sizes="2"/>
+                    <Arg name="v_center_enable" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="v_color" ui="Color pick" value="1 0 0 0" type="System.Single" dim="1" sep=" " sizes="4"/>
+                    <Arg name="v_color_enable" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="v_enable" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="v_intensity" ui="Float values slider" value="0.2" type="System.Single" dim="0"/>
+                    <Arg name="v_intensity_enable" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="v_rounded" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="v_rounded_enable" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="v_roundness" ui="Float values slider" value="1" type="System.Single" dim="0"/>
+                    <Arg name="v_roundness_enable" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="v_smoothness" ui="Float values slider" value="0.8" type="System.Single" dim="0"/>
+                    <Arg name="v_smoothness_enable" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                </Config>
+                <Config key="64" name="whiteroom">
+                    <Arg name="ao_color" ui="Color pick" value="1 0 0 0" type="System.Single" dim="1" sep=" " sizes="4"/>
+                    <Arg name="ao_color_enable" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="ao_enable" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="ao_intensity" ui="Float values slider" value="0.43" type="System.Single" dim="0"/>
+                    <Arg name="ao_intensity_enable" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="ao_thickness" ui="Float values slider" value="5.22" type="System.Single" dim="0"/>
+                    <Arg name="ao_thickness_enable" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="cg_enable" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="cg_tone_color_filter" ui="Color pick" value="1 1 0 0" type="System.Single" dim="1" sep=" " sizes="4"/>
+                    <Arg name="cg_tone_color_filter_enable" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="cg_tone_contrast" ui="Integer slider" value="0" type="System.Int32" dim="0"/>
+                    <Arg name="cg_tone_contrast_enable" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="cg_tone_hue_shift" ui="Integer slider" value="0" type="System.Int32" dim="0"/>
+                    <Arg name="cg_tone_hue_shift_enable" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="cg_tone_post_exposure" ui="Float values slider" value="0.5" type="System.Single" dim="0"/>
+                    <Arg name="cg_tone_post_exposure_enable" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="cg_tone_saturation" ui="Integer slider" value="1" type="System.Int32" dim="0"/>
+                    <Arg name="cg_tone_saturation_enable" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="cg_wb_temp" ui="Float values slider" value="18.6" type="System.Single" dim="0"/>
+                    <Arg name="cg_wb_temp_enable" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="cg_wb_tint" ui="Float values slider" value="0" type="System.Single" dim="0"/>
+                    <Arg name="cg_wb_tint_enable" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="v_center" ui="Vector 2D" value="0.5 0.5" type="System.Single" dim="1" sep=" " sizes="2"/>
+                    <Arg name="v_center_enable" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="v_color" ui="Color pick" value="1 0 0 0" type="System.Single" dim="1" sep=" " sizes="4"/>
+                    <Arg name="v_color_enable" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="v_enable" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="v_intensity" ui="Float values slider" value="0.5" type="System.Single" dim="0"/>
+                    <Arg name="v_intensity_enable" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="v_rounded" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="v_rounded_enable" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="v_roundness" ui="Float values slider" value="0.5" type="System.Single" dim="0"/>
+                    <Arg name="v_roundness_enable" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="v_smoothness" ui="Float values slider" value="0.5" type="System.Single" dim="0"/>
+                    <Arg name="v_smoothness_enable" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                </Config>
+                <Config key="65" name="forestscene">
                     <Arg name="ao_color" ui="Color pick" value="1 0 0 0" type="System.Single" dim="1" sep=" " sizes="4"/>
                     <Arg name="ao_color_enable" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="ao_enable" ui="Check box" value="true" type="System.Boolean" dim="0"/>
@@ -439,8 +513,8 @@
         </Component>
         <Component key="23" name="FPPCamera" category="Camera" type="Camera" global="0" always_updating="0" exceptions="1" frame_logging="0" trigger_logging="0" restricted="0" priority="0">
             <InitConfig key="48" name="standard">
-                <Arg name="position" ui="Vector 3D" value="0 0.92 0" type="System.Single" dim="1" sep=" " sizes="3"/>
-                <Arg name="rotation" ui="Vector 3D" value="0 2.9 0" type="System.Single" dim="1" sep=" " sizes="3"/>
+                <Arg name="position" ui="Vector 3D" value="0 1.7 1.8" type="System.Single" dim="1" sep=" " sizes="3"/>
+                <Arg name="rotation" ui="Vector 3D" value="10.7 180 0" type="System.Single" dim="1" sep=" " sizes="3"/>
                 <Arg name="start_experiment" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                 <Arg name="use_eye" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
                 <Arg name="use_neutral" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
@@ -449,8 +523,8 @@
                 <Config key="49" name="standard">
                     <Arg name="debug_camera" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="m_speed" ui="Float spin box" value="1" type="System.Single" dim="0"/>
-                    <Arg name="position" ui="Vector 3D" value="0 1 0" type="System.Single" dim="1" sep=" " sizes="3"/>
-                    <Arg name="rotation" ui="Vector 3D" value="0 3.2 0" type="System.Single" dim="1" sep=" " sizes="3"/>
+                    <Arg name="position" ui="Vector 3D" value="0 1.7 1.8" type="System.Single" dim="1" sep=" " sizes="3"/>
+                    <Arg name="rotation" ui="Vector 3D" value="10.7 180 0" type="System.Single" dim="1" sep=" " sizes="3"/>
                     <Arg name="rx_speed" ui="Float spin box" value="2" type="System.Single" dim="0"/>
                     <Arg name="ry_speed" ui="Float spin box" value="2" type="System.Single" dim="0"/>
                     <Arg name="rz_speed" ui="Float spin box" value="2" type="System.Single" dim="0"/>
@@ -565,7 +639,7 @@
                         </Timeline>
                     </Action>
                     <Action key="14" key_component="11" key_config="23" node_used="0" node_position="0 0">
-                        <!--Component Post process with config standard -->
+                        <!--Component Post process with config labroom -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
                             <Interval t1="0" t2="100"/>
@@ -667,8 +741,8 @@
             </Routine>
             <Routine key="3" name="WhiteRoom" randomizer="0" informations="">
                 <Condition key="1" name="default" duration="100" ui_scale="10" ui_size="1" sets_keys="0">
-                    <Action key="13" key_component="11" key_config="23" node_used="0" node_position="0 0">
-                        <!--Component Post process with config standard -->
+                    <Action key="48" key_component="26" key_config="55" node_used="0" node_position="0 0">
+                        <!--Component WhiteRoom with config standard -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
                             <Interval t1="0" t2="100"/>
@@ -678,8 +752,8 @@
                             <Interval t1="0" t2="100"/>
                         </Timeline>
                     </Action>
-                    <Action key="37" key_component="6" key_config="46" node_used="0" node_position="0 0">
-                        <!--Component SkyBox with config WhiteRoom -->
+                    <Action key="57" key_component="30" key_config="63" node_used="0" node_position="0 0">
+                        <!--Component MeditationShelter with config standard -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
                             <Interval t1="0" t2="100"/>
@@ -700,8 +774,41 @@
                             <Interval t1="0" t2="100"/>
                         </Timeline>
                     </Action>
-                    <Action key="48" key_component="26" key_config="55" node_used="0" node_position="0 0">
-                        <!--Component WhiteRoom with config standard -->
+                    <Action key="37" key_component="6" key_config="46" node_used="0" node_position="0 0">
+                        <!--Component SkyBox with config WhiteRoom -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
+                            <Interval t1="0" t2="100"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
+                            <Interval t1="0" t2="100"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="13" key_component="11" key_config="64" node_used="0" node_position="0 0">
+                        <!--Component Post process with config whiteroom -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
+                            <Interval t1="0" t2="100"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
+                            <Interval t1="0" t2="100"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="58" key_component="23" key_config="49" node_used="0" node_position="0 0">
+                        <!--Component FPPCamera with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
+                            <Interval t1="0" t2="100"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
+                            <Interval t1="0" t2="100"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="59" key_component="28" key_config="59" node_used="0" node_position="0 0">
+                        <!--Component OmniController with config standard -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
                             <Interval t1="0" t2="100"/>
@@ -726,8 +833,19 @@
                             <Interval t1="0" t2="100"/>
                         </Timeline>
                     </Action>
+                    <Action key="60" key_component="30" key_config="63" node_used="0" node_position="0 0">
+                        <!--Component MeditationShelter with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
+                            <Interval t1="0" t2="100"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
+                            <Interval t1="0" t2="100"/>
+                        </Timeline>
+                    </Action>
                     <Action key="28" key_component="11" key_config="23" node_used="0" node_position="0 0">
-                        <!--Component Post process with config standard -->
+                        <!--Component Post process with config labroom -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
                             <Interval t1="0" t2="100"/>
@@ -750,6 +868,72 @@
                     </Action>
                     <Action key="38" key_component="6" key_config="47" node_used="0" node_position="0 0">
                         <!--Component SkyBox with config Forest -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
+                            <Interval t1="0" t2="100"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
+                            <Interval t1="0" t2="100"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="61" key_component="23" key_config="49" node_used="0" node_position="0 0">
+                        <!--Component FPPCamera with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
+                            <Interval t1="0" t2="100"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
+                            <Interval t1="0" t2="100"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="62" key_component="28" key_config="59" node_used="0" node_position="0 0">
+                        <!--Component OmniController with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
+                            <Interval t1="0" t2="100"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
+                            <Interval t1="0" t2="100"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="63" key_component="17" key_config="35" node_used="0" node_position="0 0">
+                        <!--Component Front with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
+                            <Interval t1="0" t2="100"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
+                            <Interval t1="0" t2="100"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="64" key_component="18" key_config="37" node_used="0" node_position="0 0">
+                        <!--Component Back with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
+                            <Interval t1="0" t2="100"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
+                            <Interval t1="0" t2="100"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="65" key_component="19" key_config="39" node_used="0" node_position="0 0">
+                        <!--Component Left with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
+                            <Interval t1="0" t2="100"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
+                            <Interval t1="0" t2="100"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="66" key_component="20" key_config="41" node_used="0" node_position="0 0">
+                        <!--Component Right with config standard -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
                             <Interval t1="0" t2="100"/>
@@ -786,7 +970,7 @@
                         </Timeline>
                     </Action>
                     <Action key="20" key_component="11" key_config="23" node_used="0" node_position="0 0">
-                        <!--Component Post process with config standard -->
+                        <!--Component Post process with config labroom -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
                             <Interval t1="0" t2="100"/>
