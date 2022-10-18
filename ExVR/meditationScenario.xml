@@ -15,6 +15,7 @@
         <Resource key="41" type="UnityAssetBundle" alias="labroom" path="Bundles/labroom.unity3d"/>
         <Resource key="43" type="UnityAssetBundle" alias="whiteroom" path="Bundles/whiteroom.unity3d"/>
         <Resource key="45" type="UnityAssetBundle" alias="meditationshelter" path="Bundles/meditationshelter.unity3d"/>
+        <Resource key="46" type="UnityAssetBundle" alias="distantsmokefx" path="Bundles/distantsmokefx.unity3d"/>
         <Resource key="37" type="CSharpScript" alias="OmniController" path="Assets/OmniController.cs"/>
         <Resource key="44" type="CSharpScript" alias="SceneFaderExVR" path="Assets/SceneFaderExVR.cs"/>
     </Resources>
@@ -595,12 +596,19 @@
                 </Config>
             </Configs>
         </Component>
-        <Component key="28" name="OmniController" category="Script" type="CSharpScript" global="0" always_updating="0" exceptions="1" frame_logging="0" trigger_logging="0" restricted="0" priority="0">
-            <InitConfig key="58" name="standard">
-                <Arg name="component_class_name" ui="Line text editor" value="OmniController" type="System.String" dim="0"/>
+        <Component key="31" name="DistantSmoke" category="Scene" type="AssetBundle" global="0" always_updating="0" exceptions="1" frame_logging="0" trigger_logging="0" restricted="0" priority="2">
+            <InitConfig key="66" name="standard">
+                <Arg name="asset_bundle" ui="Resource" value="distantsmokefx%%%46" type="System.String" dim="1" sep="%%%" sizes="2"/>
+                <Arg name="display_hierarchy" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                <Arg name="init_transform" ui="Transformation" value="0 0 0 0 0 0 1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
+                <Arg name="init_transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                <Arg name="name_sub_object" ui="Line text editor" value="" type="System.String" dim="0"/>
             </InitConfig>
             <Configs>
-                <Config key="59" name="standard"/>
+                <Config key="67" name="standard">
+                    <Arg name="transform" ui="Transformation" value="0 0 0 0 0 0 1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
+                    <Arg name="transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                </Config>
             </Configs>
         </Component>
         <Component key="29" name="SceneFader" category="Script" type="CSharpScript" global="0" always_updating="0" exceptions="1" frame_logging="0" trigger_logging="0" restricted="0" priority="0">
@@ -609,6 +617,14 @@
             </InitConfig>
             <Configs>
                 <Config key="61" name="standard"/>
+            </Configs>
+        </Component>
+        <Component key="28" name="OmniController" category="Script" type="CSharpScript" global="0" always_updating="0" exceptions="1" frame_logging="0" trigger_logging="0" restricted="0" priority="0">
+            <InitConfig key="58" name="standard">
+                <Arg name="component_class_name" ui="Line text editor" value="OmniController" type="System.String" dim="0"/>
+            </InitConfig>
+            <Configs>
+                <Config key="59" name="standard"/>
             </Configs>
         </Component>
     </Components>
@@ -638,19 +654,8 @@
                             <Interval t1="0" t2="100"/>
                         </Timeline>
                     </Action>
-                    <Action key="14" key_component="11" key_config="23" node_used="0" node_position="0 0">
-                        <!--Component Post process with config labroom -->
-                        <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
-                            <Interval t1="0" t2="100"/>
-                        </Timeline>
-                        <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
-                            <Interval t1="0" t2="100"/>
-                        </Timeline>
-                    </Action>
-                    <Action key="36" key_component="6" key_config="13" node_used="0" node_position="0 0">
-                        <!--Component SkyBox with config Lab -->
+                    <Action key="52" key_component="29" key_config="61" node_used="0" node_position="0 0">
+                        <!--Component SceneFader with config standard -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
                             <Interval t1="0" t2="100"/>
@@ -671,8 +676,19 @@
                             <Interval t1="0" t2="100"/>
                         </Timeline>
                     </Action>
-                    <Action key="52" key_component="29" key_config="61" node_used="0" node_position="0 0">
-                        <!--Component SceneFader with config standard -->
+                    <Action key="14" key_component="11" key_config="23" node_used="0" node_position="0 0">
+                        <!--Component Post process with config labroom -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
+                            <Interval t1="0" t2="100"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
+                            <Interval t1="0" t2="100"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="36" key_component="6" key_config="13" node_used="0" node_position="0 0">
+                        <!--Component SkyBox with config Lab -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
                             <Interval t1="0" t2="100"/>
@@ -774,8 +790,8 @@
                             <Interval t1="0" t2="100"/>
                         </Timeline>
                     </Action>
-                    <Action key="37" key_component="6" key_config="46" node_used="0" node_position="0 0">
-                        <!--Component SkyBox with config WhiteRoom -->
+                    <Action key="58" key_component="23" key_config="49" node_used="0" node_position="0 0">
+                        <!--Component FPPCamera with config standard -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
                             <Interval t1="0" t2="100"/>
@@ -796,8 +812,8 @@
                             <Interval t1="0" t2="100"/>
                         </Timeline>
                     </Action>
-                    <Action key="58" key_component="23" key_config="49" node_used="0" node_position="0 0">
-                        <!--Component FPPCamera with config standard -->
+                    <Action key="37" key_component="6" key_config="46" node_used="0" node_position="0 0">
+                        <!--Component SkyBox with config WhiteRoom -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
                             <Interval t1="0" t2="100"/>
@@ -809,6 +825,17 @@
                     </Action>
                     <Action key="59" key_component="28" key_config="59" node_used="0" node_position="0 0">
                         <!--Component OmniController with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
+                            <Interval t1="0" t2="100"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
+                            <Interval t1="0" t2="100"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="67" key_component="31" key_config="67" node_used="0" node_position="0 0">
+                        <!--Component DistantSmoke with config standard -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
                             <Interval t1="0" t2="100"/>
@@ -844,17 +871,6 @@
                             <Interval t1="0" t2="100"/>
                         </Timeline>
                     </Action>
-                    <Action key="28" key_component="11" key_config="23" node_used="0" node_position="0 0">
-                        <!--Component Post process with config labroom -->
-                        <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
-                            <Interval t1="0" t2="100"/>
-                        </Timeline>
-                        <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
-                            <Interval t1="0" t2="100"/>
-                        </Timeline>
-                    </Action>
                     <Action key="54" key_component="29" key_config="61" node_used="0" node_position="0 0">
                         <!--Component SceneFader with config standard -->
                         <Timeline type="Update">
@@ -866,8 +882,8 @@
                             <Interval t1="0" t2="100"/>
                         </Timeline>
                     </Action>
-                    <Action key="38" key_component="6" key_config="47" node_used="0" node_position="0 0">
-                        <!--Component SkyBox with config Forest -->
+                    <Action key="61" key_component="23" key_config="49" node_used="0" node_position="0 0">
+                        <!--Component FPPCamera with config standard -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
                             <Interval t1="0" t2="100"/>
@@ -877,8 +893,19 @@
                             <Interval t1="0" t2="100"/>
                         </Timeline>
                     </Action>
-                    <Action key="61" key_component="23" key_config="49" node_used="0" node_position="0 0">
-                        <!--Component FPPCamera with config standard -->
+                    <Action key="28" key_component="11" key_config="65" node_used="0" node_position="0 0">
+                        <!--Component Post process with config forestscene -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
+                            <Interval t1="0" t2="100"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
+                            <Interval t1="0" t2="100"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="38" key_component="6" key_config="47" node_used="0" node_position="0 0">
+                        <!--Component SkyBox with config Forest -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
                             <Interval t1="0" t2="100"/>
@@ -958,8 +985,8 @@
                             <Interval t1="0" t2="100"/>
                         </Timeline>
                     </Action>
-                    <Action key="18" key_component="6" key_config="13" node_used="0" node_position="0 0">
-                        <!--Component SkyBox with config Lab -->
+                    <Action key="68" key_component="30" key_config="63" node_used="0" node_position="0 0">
+                        <!--Component MeditationShelter with config standard -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
                             <Interval t1="0" t2="100"/>
@@ -969,8 +996,96 @@
                             <Interval t1="0" t2="100"/>
                         </Timeline>
                     </Action>
-                    <Action key="20" key_component="11" key_config="23" node_used="0" node_position="0 0">
-                        <!--Component Post process with config labroom -->
+                    <Action key="69" key_component="29" key_config="61" node_used="0" node_position="0 0">
+                        <!--Component SceneFader with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
+                            <Interval t1="0" t2="100"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
+                            <Interval t1="0" t2="100"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="75" key_component="23" key_config="49" node_used="0" node_position="0 0">
+                        <!--Component FPPCamera with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
+                            <Interval t1="0" t2="100"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
+                            <Interval t1="0" t2="100"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="20" key_component="11" key_config="65" node_used="0" node_position="0 0">
+                        <!--Component Post process with config forestscene -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
+                            <Interval t1="0" t2="100"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
+                            <Interval t1="0" t2="100"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="18" key_component="6" key_config="47" node_used="0" node_position="0 0">
+                        <!--Component SkyBox with config Forest -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
+                            <Interval t1="0" t2="100"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
+                            <Interval t1="0" t2="100"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="70" key_component="28" key_config="59" node_used="0" node_position="0 0">
+                        <!--Component OmniController with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
+                            <Interval t1="0" t2="100"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
+                            <Interval t1="0" t2="100"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="71" key_component="17" key_config="35" node_used="0" node_position="0 0">
+                        <!--Component Front with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
+                            <Interval t1="0" t2="100"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
+                            <Interval t1="0" t2="100"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="72" key_component="18" key_config="37" node_used="0" node_position="0 0">
+                        <!--Component Back with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
+                            <Interval t1="0" t2="100"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
+                            <Interval t1="0" t2="100"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="73" key_component="19" key_config="39" node_used="0" node_position="0 0">
+                        <!--Component Left with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
+                            <Interval t1="0" t2="100"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
+                            <Interval t1="0" t2="100"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="74" key_component="20" key_config="41" node_used="0" node_position="0 0">
+                        <!--Component Right with config standard -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
                             <Interval t1="0" t2="100"/>

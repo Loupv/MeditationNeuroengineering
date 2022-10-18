@@ -1,0 +1,46 @@
+ManifestFileVersion: 0
+CRC: 3527857260
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: dff80b7518925b1083db7667d2468564
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 555d844a12066762a9db4381e73860a3
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 64
+  Script: {instanceID: 0}
+- Class: 108
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: abdaae8d2b81ba54498967f33610da0d, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+- Class: 135
+  Script: {instanceID: 0}
+- Class: 198
+  Script: {instanceID: 0}
+- Class: 199
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Prefabs/ScenesBundles/WhiteRoom.prefab
+Dependencies:
+- C:/Users/vuarness/Documents/GitHub/BundlesProject/./assetsBundles/distantsmokefx

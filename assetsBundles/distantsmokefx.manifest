@@ -1,0 +1,29 @@
+ManifestFileVersion: 0
+CRC: 414233113
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 6d72a1c4ccd0ab50ecb73075d3df031b
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 64510a3cd72920554ca1c94caa554491
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 198
+  Script: {instanceID: 0}
+- Class: 199
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Prefabs/DistantSmoke.prefab
+Dependencies: []
