@@ -23,7 +23,7 @@ namespace Ex
 		public Transform myCameraTransform;
 		public float vol = 100.0f;
 
-		public float playDelay;
+		//public float playDelay;
 
         // Use this for initialization
         public override void start_routine()
@@ -54,9 +54,9 @@ namespace Ex
         public override void update()
 		{
 			float azimuth = myCameraTransform.rotation.eulerAngles.y;
-			float azimuthRad = azimuth * Mathf.Deg2Rad;
+			//float azimuthRad = azimuth * Mathf.Deg2Rad;
 
-            log_message(myCameraTransform.position.y.ToString() +" "+ azimuthRad.ToString());
+            //log_message(myCameraTransform.position.y.ToString() +" "+ azimuthRad.ToString());
 
 
             if (azimuth <= 90.0f)
@@ -87,6 +87,8 @@ namespace Ex
 				_180deg.set_volume(0.0f);
 				_270deg.set_volume(Mathf.Abs(Remap(azimuth % 360, 270, 360, 1, 0)));
 			}
+
+			//log_message(azimuth.ToString() +", "+ _0deg.audioSource.volume+", "+ _90deg.audioSource.volume+", "+ _180deg.audioSource.volume+", "+ _270deg.audioSource.volume);
 
 			/*if (_0deg.time < playDelay)
 			{
