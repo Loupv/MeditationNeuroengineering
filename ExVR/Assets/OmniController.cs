@@ -21,15 +21,13 @@ namespace Ex
 		private AudioSourceComponent _270deg;
 
 		public Transform myCameraTransform;
-		public float vol = 100.0f;
+		public float mainVolume = 1f;
 
 		//public float playDelay;
 
         // Use this for initialization
         public override void start_routine()
 		{
-			vol = vol / 100.0f;
-
             //myCamera = get<CameraComponent>("FPPCamera");
             //var disp = ExVR.Display.cameras();
             //myCamera 
@@ -37,25 +35,28 @@ namespace Ex
 
 
             //log_message(myCameraTransform.name);
-            if(log_message(current_routine().name == "LabScene"){
-                _0deg = get<AudioSourceComponent>("AmbianceForest_Front");
-                _90deg = get<AudioSourceComponent>("AmbianceForest_Right");
-			    _180deg = get<AudioSourceComponent>("AmbianceForest_Back");
-			    _270deg = get<AudioSourceComponent>("AmbianceForest_Left");
+            if(current_routine().name == "LabScene"){
+                _0deg = get<AudioSourceComponent>("LabRoom_Front");
+                _90deg = get<AudioSourceComponent>("LabRoom_Right");
+			    _180deg = get<AudioSourceComponent>("LabRoom_Back");
+			    _270deg = get<AudioSourceComponent>("LabRoom_Left");
             }
-            else if (log_message(current_routine().name == "WhiteScene"){
-                _0deg = get<AudioSourceComponent>("AmbianceForest_Front"); 
-                _90deg = get<AudioSourceComponent>("AmbianceForest_Right");
-                _180deg = get<AudioSourceComponent>("AmbianceForest_Back");
-                _270deg = get<AudioSourceComponent>("AmbianceForest_Left");
+            else if (current_routine().name == "WhiteScene"){
+                _0deg = get<AudioSourceComponent>("WhiteRoom_Front"); 
+                _90deg = get<AudioSourceComponent>("WhiteRoom_Right");
+                _180deg = get<AudioSourceComponent>("WhiteRoom_Back");
+                _270deg = get<AudioSourceComponent>("WhiteRoom_Left");
             }
-            else if (log_message(current_routine().name == "ForestScene"){
+            else if (current_routine().name == "ForestScene"){
                 _0deg = get<AudioSourceComponent>("AmbianceForest_Front"); 
                 _90deg = get<AudioSourceComponent>("AmbianceForest_Right");
                 _180deg = get<AudioSourceComponent>("AmbianceForest_Back");
                 _270deg = get<AudioSourceComponent>("AmbianceForest_Left");
             }
 
+            log_message("sounds set");
+
+            mainVolume = 0;
             _0deg.set_volume(0);
             _90deg.set_volume(0);
             _180deg.set_volume(0);
@@ -74,31 +75,31 @@ namespace Ex
 
             if (azimuth <= 90.0f)
 			{
-				_0deg.set_volume(Mathf.Abs(Remap(azimuth % 360, 0, 90, 1, 0)));
-				_90deg.set_volume(Mathf.Abs(Remap(azimuth % 360, 0, 90, 0, 1)));
+				_0deg.set_volume(Mathf.Abs(Remap(azimuth % 360, 0, 90, 1, 0))*mainVolume);
+				_90deg.set_volume(Mathf.Abs(Remap(azimuth % 360, 0, 90, 0, 1)) * mainVolume);
 				_180deg.set_volume(0.0f);
 				_270deg.set_volume(0.0f);
 			}
 			else if (azimuth > 90.0f && azimuth <= 180.0f)
 			{
 				_0deg.set_volume(0.0f);
-				_90deg.set_volume(Mathf.Abs(Remap(azimuth % 360, 90, 180, 1, 0)));
-				_180deg.set_volume(Mathf.Abs(Remap(azimuth % 360, 90, 180, 0, 1)));
+				_90deg.set_volume(Mathf.Abs(Remap(azimuth % 360, 90, 180, 1, 0)) * mainVolume);
+				_180deg.set_volume(Mathf.Abs(Remap(azimuth % 360, 90, 180, 0, 1)) * mainVolume);
 				_270deg.set_volume(0.0f);
 			}
 			else if (azimuth > 180.0f && azimuth <= 270.0f)
 			{
 				_0deg.set_volume(0.0f);
 				_90deg.set_volume(0.0f);
-				_180deg.set_volume(Mathf.Abs(Remap(azimuth % 360, 180, 270, 1, 0)));
-				_270deg.set_volume(Mathf.Abs(Remap(azimuth % 360, 180, 270, 0, 1)));
+				_180deg.set_volume(Mathf.Abs(Remap(azimuth % 360, 180, 270, 1, 0)) * mainVolume);
+				_270deg.set_volume(Mathf.Abs(Remap(azimuth % 360, 180, 270, 0, 1)) * mainVolume);
 			}
 			else if (azimuth > 270.0f && azimuth <= 360.0f)
 			{
-				_0deg.set_volume(Mathf.Abs(Remap(azimuth % 360, 270, 360, 0, 1)));
+				_0deg.set_volume(Mathf.Abs(Remap(azimuth % 360, 270, 360, 0, 1)) * mainVolume);
 				_90deg.set_volume(0.0f);
 				_180deg.set_volume(0.0f);
-				_270deg.set_volume(Mathf.Abs(Remap(azimuth % 360, 270, 360, 1, 0)));
+				_270deg.set_volume(Mathf.Abs(Remap(azimuth % 360, 270, 360, 1, 0)) * mainVolume);
 			}
 
 			//log_message(azimuth.ToString() +", "+ _0deg.audioSource.volume+", "+ _90deg.audioSource.volume+", "+ _180deg.audioSource.volume+", "+ _270deg.audioSource.volume);

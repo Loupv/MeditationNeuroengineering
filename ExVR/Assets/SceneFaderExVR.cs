@@ -27,6 +27,7 @@ namespace Ex
         Material tmpSkybox;
         float skyboxExposure, skyboxSunsize, skyboxConvergence, skyboxThickness;
 
+        OmniController omniController;
 
         public enum FadeDirection
         {
@@ -36,8 +37,16 @@ namespace Ex
 
         // ### Ex component flow functions, uncomment to use
         // # main functions
-        // public override bool initialize() {return true;}
         
+        /*public override bool initialize() {
+            return true;
+        }*/
+
+        public override void start_experiment()
+        {
+            omniController = FindObjectOfType<OmniController>();
+            if(omniController != null ) log_message(omniController.name + " found");
+        }
 
         public override void start_routine()
         {
@@ -104,9 +113,10 @@ namespace Ex
                 log_message("fading in");
                 while (alpha >= fadeEndValue)
                 {
-                    SetGOFadeAmount(ref alpha, fadeDirection);
+                    ApplyFadeAmount(ref alpha, fadeDirection);
                     yield return null;
                 }
+                log_message("fade in done");
                 //foreach (GameObject screen in fadeScreens) screen.SetActive(false);
             }
             else
@@ -115,17 +125,22 @@ namespace Ex
                 //foreach (GameObject screen in fadeScreens) screen.SetActive(true);
                 while (alpha <= fadeEndValue)
                 {
-                    SetGOFadeAmount(ref alpha, fadeDirection);
+                    ApplyFadeAmount(ref alpha, fadeDirection);
                     yield return null;
                 }
+                log_message("fade out done");
+                yield return new WaitForEndOfFrame();
+                next();
             }
 
             // fade cycle is now complete
             if (fadeDirection == FadeDirection.In) isFading = false;
         }
 
-        private void SetGOFadeAmount(ref float alpha, FadeDirection fadeDirection)
+        private void ApplyFadeAmount(ref float alpha, FadeDirection fadeDirection)
         {
+
+            // meditation shelter
             foreach (GameObject screen in fadeScreens)
             {
                 Material mat = screen.GetComponent<MeshRenderer>().materials[0];
@@ -134,6 +149,7 @@ namespace Ex
 
             shelterTransitionLight.intensity = alpha;
 
+            // lights
             for (int i = 0; i < lights.Count; i++)
             {
                 lights[i].intensity = lightsLastIntensity[i] * (1 - alpha);
@@ -141,10 +157,14 @@ namespace Ex
 
             //globalVolume.weight = 1 - alpha;
 
+            // skybox
             tmpSkybox.SetFloat("_SunSize", skyboxSunsize * (1 - alpha));
             tmpSkybox.SetFloat("_SunSizeConvergence", skyboxConvergence * (1 - alpha));
             tmpSkybox.SetFloat("_AtmosphereThickness", skyboxThickness * (1 - alpha));
             tmpSkybox.SetFloat("_Exposure", skyboxExposure * (1 - alpha));
+
+            // sounds
+            omniController.mainVolume = 1-alpha;
 
             alpha += Time.deltaTime * (1.0f / fadeSpeed) * ((fadeDirection == FadeDirection.In) ? -1 : 1);
         }
@@ -154,7 +174,7 @@ namespace Ex
         {
             yield return Fade(FadeDirection.Out);
 
-            next();
+            
             //SceneManager.LoadScene(scenesArray[currentScenesArrayID]);
 
             // remove already present dontdestroyonload object (atm shelter)
