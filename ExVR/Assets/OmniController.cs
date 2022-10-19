@@ -37,11 +37,24 @@ namespace Ex
 
 
             //log_message(myCameraTransform.name);
-
-			_0deg   = get<AudioSourceComponent>("Front"); //clipIn0;
-			_90deg  = get<AudioSourceComponent>("Right"); //clipIn90;
-			_180deg = get<AudioSourceComponent>("Back");//clipIn180;
-			_270deg = get<AudioSourceComponent>("Left"); //clipIn270;
+            if(log_message(current_routine().name == "LabScene"){
+                _0deg = get<AudioSourceComponent>("AmbianceForest_Front");
+                _90deg = get<AudioSourceComponent>("AmbianceForest_Right");
+			    _180deg = get<AudioSourceComponent>("AmbianceForest_Back");
+			    _270deg = get<AudioSourceComponent>("AmbianceForest_Left");
+            }
+            else if (log_message(current_routine().name == "WhiteScene"){
+                _0deg = get<AudioSourceComponent>("AmbianceForest_Front"); 
+                _90deg = get<AudioSourceComponent>("AmbianceForest_Right");
+                _180deg = get<AudioSourceComponent>("AmbianceForest_Back");
+                _270deg = get<AudioSourceComponent>("AmbianceForest_Left");
+            }
+            else if (log_message(current_routine().name == "ForestScene"){
+                _0deg = get<AudioSourceComponent>("AmbianceForest_Front"); 
+                _90deg = get<AudioSourceComponent>("AmbianceForest_Right");
+                _180deg = get<AudioSourceComponent>("AmbianceForest_Back");
+                _270deg = get<AudioSourceComponent>("AmbianceForest_Left");
+            }
 
             _0deg.set_volume(0);
             _90deg.set_volume(0);
