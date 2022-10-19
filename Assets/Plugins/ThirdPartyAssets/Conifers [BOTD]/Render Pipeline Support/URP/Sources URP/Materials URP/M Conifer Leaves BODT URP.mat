@@ -8,18 +8,15 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: M Conifer Leaves BODT URP
-  m_Shader: {fileID: 4800000, guid: 6ae32366f15a64fc19f245f040af8f21, type: 3}
+  m_Shader: {fileID: 4800000, guid: c4a044523a8cf0e41989736faf9c02b5, type: 3}
   m_ValidKeywords:
-  - GEOM_TYPE_LEAF
-  - _EMISSION
-  - _METALLICGLOSSMAP
-  - _NORMALMAP
-  m_InvalidKeywords:
   - _GBUFFERLIGHTING_SIMPLE
   - _LEAFTUMBLING
   - _LEAFTURBULENCE
   - _NORMALINDEPTHNORMALPASS
+  - _NORMALMAP
   - _SPECULARHIGHLIGHTS_OFF
+  m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 1
   m_DoubleSidedGI: 0

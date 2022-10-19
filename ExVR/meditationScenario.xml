@@ -14,6 +14,9 @@
         <Resource key="52" type="Audio" alias="LabRoom_Left_shorten" path="Assets/LabRoom_Left_shorten.wav"/>
         <Resource key="53" type="Audio" alias="LabRoom_Right_shorten" path="Assets/LabRoom_Right_shorten.wav"/>
         <Resource key="54" type="Audio" alias="WideAmbience" path="Assets/WideAmbience.wav"/>
+        <Resource key="55" type="Audio" alias="Music_WelcomeJonHopkins" path="Assets/Music_WelcomeJonHopkins.wav"/>
+        <Resource key="56" type="Audio" alias="Music_BrieflyNilsFrahm" path="Assets/Music_BrieflyNilsFrahm.wav"/>
+        <Resource key="57" type="Audio" alias="Music_SisterMartinSigAndersen" path="Assets/Music_SisterMartinSigAndersen.wav"/>
         <Resource key="38" type="UnityAssetBundle" alias="assetsBundles" path="Bundles/assetsBundles.unity3d"/>
         <Resource key="39" type="UnityAssetBundle" alias="forestroom" path="Bundles/forestroom.unity3d"/>
         <Resource key="40" type="UnityAssetBundle" alias="gameengine" path="Bundles/gameengine.unity3d"/>
@@ -412,7 +415,7 @@
             </InitConfig>
             <Configs>
                 <Config key="57" name="standard">
-                    <Arg name="transform" ui="Transformation" value="0 0 0 0 0 0 1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
+                    <Arg name="transform" ui="Transformation" value="9 -4 -8 0 0 0 1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
                     <Arg name="transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                 </Config>
             </Configs>
@@ -1037,6 +1040,99 @@
                 </Config>
             </Configs>
         </Component>
+        <Component key="42" name="BackgroundMusic" category="Audio" type="AudioSource" global="0" always_updating="0" exceptions="1" frame_logging="0" trigger_logging="0" restricted="0" priority="1">
+            <InitConfig key="88" name="standard">
+                <Arg name="asset_bundle" ui="Resource" value="%%%-1" type="System.String" dim="1" sep="%%%" sizes="2"/>
+                <Arg name="channel_0_copy_destination" ui="Line text editor" value="1 2" type="System.String" dim="0"/>
+                <Arg name="channel_1_copy_destination" ui="Line text editor" value="" type="System.String" dim="0"/>
+                <Arg name="channel_2_copy_destination" ui="Line text editor" value="" type="System.String" dim="0"/>
+                <Arg name="channel_3_copy_destination" ui="Line text editor" value="" type="System.String" dim="0"/>
+                <Arg name="channel_4_copy_destination" ui="Line text editor" value="" type="System.String" dim="0"/>
+                <Arg name="channel_5_copy_destination" ui="Line text editor" value="" type="System.String" dim="0"/>
+                <Arg name="channel_6_copy_destination" ui="Line text editor" value="" type="System.String" dim="0"/>
+                <Arg name="channel_7_copy_destination" ui="Line text editor" value="" type="System.String" dim="0"/>
+                <Arg name="generate_new_sound" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                <Arg name="new_sound_channel" ui="Combo box index" value="0" type="System.Int32" dim="0"/>
+                <Arg name="sound" ui="Resource" value="Music_SisterMartinSigAndersen%%%57" type="System.String" dim="1" sep="%%%" sizes="2"/>
+            </InitConfig>
+            <Configs>
+                <Config key="89" name="labroom">
+                    <Arg name="display" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="doppler_level" ui="Float values slider" value="1" type="System.Single" dim="0"/>
+                    <Arg name="loop" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="max_distance" ui="Float values slider" value="10" type="System.Single" dim="0"/>
+                    <Arg name="min_distance" ui="Float values slider" value="0.01" type="System.Single" dim="0"/>
+                    <Arg name="mute" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="nothing_end_block" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="nothing_new_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="pause_end_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="pause_new_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="pitch" ui="Float values slider" value="1" type="System.Single" dim="0"/>
+                    <Arg name="play_end_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="play_new_block" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="rollof_mode" ui="Combo box index" value="1" type="System.Int32" dim="0"/>
+                    <Arg name="spatial_blend" ui="Float values slider" value="1" type="System.Single" dim="0"/>
+                    <Arg name="spatialized" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="spread" ui="Integer slider" value="184" type="System.Int32" dim="0"/>
+                    <Arg name="stereo" ui="Float values slider" value="0" type="System.Single" dim="0"/>
+                    <Arg name="stop_end_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="stop_new_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="transform" ui="Transformation" value="-1 1 -2 0 0 0 0.3 0.3 0.3" type="System.Single" dim="1" sep=" " sizes="9"/>
+                    <Arg name="transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="volume" ui="Float values slider" value="0.2" type="System.Single" dim="0"/>
+                </Config>
+                <Config key="90" name="whiteroom">
+                    <Arg name="display" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="doppler_level" ui="Float values slider" value="1" type="System.Single" dim="0"/>
+                    <Arg name="loop" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="max_distance" ui="Float values slider" value="10" type="System.Single" dim="0"/>
+                    <Arg name="min_distance" ui="Float values slider" value="0.01" type="System.Single" dim="0"/>
+                    <Arg name="mute" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="nothing_end_block" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="nothing_new_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="pause_end_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="pause_new_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="pitch" ui="Float values slider" value="1" type="System.Single" dim="0"/>
+                    <Arg name="play_end_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="play_new_block" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="rollof_mode" ui="Combo box index" value="1" type="System.Int32" dim="0"/>
+                    <Arg name="spatial_blend" ui="Float values slider" value="0" type="System.Single" dim="0"/>
+                    <Arg name="spatialized" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="spread" ui="Integer slider" value="289" type="System.Int32" dim="0"/>
+                    <Arg name="stereo" ui="Float values slider" value="0" type="System.Single" dim="0"/>
+                    <Arg name="stop_end_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="stop_new_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="transform" ui="Transformation" value="0 1 -2 0 0 0 0.3 0.3 0.3" type="System.Single" dim="1" sep=" " sizes="9"/>
+                    <Arg name="transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="volume" ui="Float values slider" value="0.2" type="System.Single" dim="0"/>
+                </Config>
+                <Config key="91" name="forestscene">
+                    <Arg name="display" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="doppler_level" ui="Float values slider" value="1" type="System.Single" dim="0"/>
+                    <Arg name="loop" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="max_distance" ui="Float values slider" value="10" type="System.Single" dim="0"/>
+                    <Arg name="min_distance" ui="Float values slider" value="0.01" type="System.Single" dim="0"/>
+                    <Arg name="mute" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="nothing_end_block" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="nothing_new_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="pause_end_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="pause_new_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="pitch" ui="Float values slider" value="1" type="System.Single" dim="0"/>
+                    <Arg name="play_end_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="play_new_block" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="rollof_mode" ui="Combo box index" value="1" type="System.Int32" dim="0"/>
+                    <Arg name="spatial_blend" ui="Float values slider" value="0" type="System.Single" dim="0"/>
+                    <Arg name="spatialized" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="spread" ui="Integer slider" value="289" type="System.Int32" dim="0"/>
+                    <Arg name="stereo" ui="Float values slider" value="0" type="System.Single" dim="0"/>
+                    <Arg name="stop_end_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="stop_new_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="transform" ui="Transformation" value="0 1 -2 0 0 0 0.3 0.3 0.3" type="System.Single" dim="1" sep=" " sizes="9"/>
+                    <Arg name="transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="volume" ui="Float values slider" value="0.2" type="System.Single" dim="0"/>
+                </Config>
+            </Configs>
+        </Component>
     </Components>
     <FlowElements>
         <Routines>
@@ -1172,6 +1268,17 @@
                         <!--Component Volumetric video 2 with config standard -->
                         <Timeline type="Update"/>
                         <Timeline type="Visibiliy"/>
+                    </Action>
+                    <Action key="90" key_component="42" key_config="89" node_used="0" node_position="0 0">
+                        <!--Component BackgroundMusic with config labroom -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
+                            <Interval t1="0" t2="100"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
+                            <Interval t1="0" t2="100"/>
+                        </Timeline>
                     </Action>
                 </Condition>
             </Routine>
@@ -1309,6 +1416,17 @@
                             <Interval t1="0" t2="100"/>
                         </Timeline>
                     </Action>
+                    <Action key="91" key_component="42" key_config="90" node_used="0" node_position="0 0">
+                        <!--Component BackgroundMusic with config whiteroom -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
+                            <Interval t1="0" t2="100"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
+                            <Interval t1="0" t2="100"/>
+                        </Timeline>
+                    </Action>
                 </Condition>
             </Routine>
             <Routine key="10" name="ForestScene" randomizer="0" informations="">
@@ -1425,6 +1543,17 @@
                     </Action>
                     <Action key="66" key_component="20" key_config="41" node_used="0" node_position="0 0">
                         <!--Component AmbianceForest_Right with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
+                            <Interval t1="0" t2="100"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
+                            <Interval t1="0" t2="100"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="92" key_component="42" key_config="91" node_used="0" node_position="0 0">
+                        <!--Component BackgroundMusic with config forestscene -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
                             <Interval t1="0" t2="100"/>

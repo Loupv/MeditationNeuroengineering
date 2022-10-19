@@ -77,9 +77,7 @@ namespace Ex
             yield return 0;
              
             fadeScreens = Resources.FindObjectsOfTypeAll<GameObject>().Where(obj => (obj.name == "ShelterScreen" && obj.activeInHierarchy)).ToArray();
-            log_message("Count : " + fadeScreens.Length.ToString());
-            foreach (GameObject screen in fadeScreens) log_message(screen.name);
-
+            
             //fadeScreens = GameObject.FindGameObjectsWithTag("ShelterScreens");
 
             /*try
