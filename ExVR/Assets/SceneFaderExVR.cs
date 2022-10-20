@@ -27,6 +27,8 @@ namespace Ex
         Material tmpSkybox;
         float skyboxExposure, skyboxSunsize, skyboxConvergence, skyboxThickness;
 
+        string lastRoutineName = "";
+
         OmniController omniController;
 
         public enum FadeDirection
@@ -44,14 +46,30 @@ namespace Ex
 
         public override void start_experiment()
         {
-            omniController = FindObjectOfType<OmniController>();
-            if(omniController != null ) log_message(omniController.name + " found");
+            StartCoroutine(PrepareExperiment());
         }
 
         public override void start_routine()
         {
-            StartCoroutine(PrepareNewSceneFadeIn());
-            
+            StartCoroutine(PrepareNewRoutine());
+        }
+
+        private IEnumerator PrepareExperiment()
+        {
+            yield return new WaitForEndOfFrame();
+            omniController = FindObjectOfType<OmniController>();
+            omniController.InitExperiment();
+            if (omniController != null) log_message(omniController.name + " found");
+        }
+
+        private IEnumerator PrepareNewRoutine()
+        {
+            yield return new WaitForEndOfFrame();
+            omniController.PrepareSoundInNewRoutine(current_routine().name);
+            if (current_routine().name == "LabScene" || current_routine().name == "WhiteScene" || current_routine().name == "ForestScene" || lastRoutineName == "")
+            {
+                StartCoroutine(PrepareNewSceneFadeIn());
+            }
         }
 
         public override void update()
@@ -59,15 +77,21 @@ namespace Ex
 
             if (UnityEngine.Input.GetKeyDown(KeyCode.Space) && !isFading)
             {
-                isFading = true;
-                //currentScenesArrayID += 1;
-                //if (currentScenesArrayID >= scenesArray.Length) currentScenesArrayID = 0;
-                StartCoroutine(FadeOutAndLoadScene());
+                if (current_routine().name == "LabScene" || current_routine().name == "WhiteScene")
+                {
+                    isFading = true;
+                    //currentScenesArrayID += 1;
+                    //if (currentScenesArrayID >= scenesArray.Length) currentScenesArrayID = 0;
+                    StartCoroutine(FadeOutAndLoadScene());
+                }
+                else
+                {
+                    next();
+                }
             }
+
+            omniController.UpdateSound();
         }
-
-
-
 
         private IEnumerator PrepareNewSceneFadeIn()
         {
@@ -78,17 +102,6 @@ namespace Ex
              
             fadeScreens = Resources.FindObjectsOfTypeAll<GameObject>().Where(obj => (obj.name == "ShelterScreen" && obj.activeInHierarchy)).ToArray();
             
-            //fadeScreens = GameObject.FindGameObjectsWithTag("ShelterScreens");
-
-            /*try
-			{
-				FindObjectOfType<OmniController>().myCamera = Camera.main.gameObject;
-			}
-			catch
-			{
-				Debug.Log("No omni system or no main camera found");
-			}*/
-
             CopyCurrentSkybox();
 
             GetLightsReferences();
@@ -127,6 +140,7 @@ namespace Ex
                     yield return null;
                 }
                 log_message("fade out done");
+                lastRoutineName = current_routine().name;
                 yield return new WaitForEndOfFrame();
                 next();
             }
