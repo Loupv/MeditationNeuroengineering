@@ -15,7 +15,6 @@
         <Resource key="53" type="Audio" alias="LabRoom_Right_shorten" path="Assets/LabRoom_Right_shorten.wav"/>
         <Resource key="54" type="Audio" alias="WideAmbience" path="Assets/WideAmbience.wav"/>
         <Resource key="55" type="Audio" alias="Music_WelcomeJonHopkins" path="Assets/Music_WelcomeJonHopkins.wav"/>
-        <Resource key="56" type="Audio" alias="Music_BrieflyNilsFrahm" path="Assets/Music_BrieflyNilsFrahm.wav"/>
         <Resource key="57" type="Audio" alias="Music_SisterMartinSigAndersen" path="Assets/Music_SisterMartinSigAndersen.wav"/>
         <Resource key="38" type="UnityAssetBundle" alias="assetsBundles" path="Bundles/assetsBundles.unity3d"/>
         <Resource key="39" type="UnityAssetBundle" alias="forestroom" path="Bundles/forestroom.unity3d"/>
@@ -26,11 +25,10 @@
         <Resource key="46" type="UnityAssetBundle" alias="distantsmokefx" path="Bundles/distantsmokefx.unity3d"/>
         <Resource key="58" type="UnityAssetBundle" alias="focusedattentionobjects" path="Bundles/focusedattentionobjects.unity3d"/>
         <Resource key="59" type="UnityAssetBundle" alias="roundtable" path="Bundles/roundtable.unity3d"/>
+        <Resource key="60" type="UnityAssetBundle" alias="sunlight" path="Bundles/sunlight.unity3d"/>
         <Resource key="37" type="CSharpScript" alias="OmniController" path="Assets/OmniController.cs"/>
         <Resource key="44" type="CSharpScript" alias="SceneFaderExVR" path="Assets/SceneFaderExVR.cs"/>
-        <Resource key="47" type="VolumetricVideo" alias="guide" path="VolumetricVideos/guide.kvid"/>
-        <Resource key="48" type="VolumetricVideo" alias="namaste" path="VolumetricVideos/namaste.kvid"/>
-        <Resource key="49" type="VolumetricVideo" alias="namaste2" path="VolumetricVideos/namaste2.kvid"/>
+        <Resource key="61" type="CSharpScript" alias="GraphicsHandler" path="Assets/GraphicsHandler.cs"/>
     </Resources>
     <Components>
         <Component key="0" name="Global logger" category="Output" type="GlobalLogger" global="1" always_updating="1" exceptions="0" frame_logging="0" trigger_logging="0" restricted="0" priority="2">
@@ -197,9 +195,9 @@
                     <Arg name="Z-" ui="Resource" value="%%%-1" type="System.String" dim="1" sep="%%%" sizes="2"/>
                     <Arg name="Z-_invert" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="ambient_color" ui="Color pick" value="1 0.211765 0.227451 0.258824" type="System.Single" dim="1" sep=" " sizes="4"/>
-                    <Arg name="ambient_intensity" ui="Float spin box" value="1" type="System.Single" dim="0"/>
+                    <Arg name="ambient_intensity" ui="Float spin box" value="1.5" type="System.Single" dim="0"/>
                     <Arg name="ambient_mode" ui="Combo box index" value="0" type="System.Int32" dim="0"/>
-                    <Arg name="atmosphere-thickness" ui="Float spin box" value="0.88" type="System.Single" dim="0"/>
+                    <Arg name="atmosphere-thickness" ui="Float spin box" value="0.68" type="System.Single" dim="0"/>
                     <Arg name="background_color" ui="Color pick" value="1 0.207843 0.188235 0.188235" type="System.Single" dim="1" sep=" " sizes="4"/>
                     <Arg name="convergence" ui="Float spin box" value="3.49" type="System.Single" dim="0"/>
                     <Arg name="cubemap" ui="Resource" value="%%%-1" type="System.String" dim="1" sep="%%%" sizes="2"/>
@@ -219,7 +217,7 @@
                     <Arg name="panoramic-tint" ui="Color pick" value="0.498039 0.498039 0.498039 0.498039" type="System.Single" dim="1" sep=" " sizes="4"/>
                     <Arg name="panoramic-type" ui="Combo box index" value="0" type="System.Int32" dim="0"/>
                     <Arg name="panoramic_invert" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="procedural-exposure" ui="Float spin box" value="1.55" type="System.Single" dim="0"/>
+                    <Arg name="procedural-exposure" ui="Float spin box" value="1.7" type="System.Single" dim="0"/>
                     <Arg name="procedural-ground-color" ui="Color pick" value="1 0.376471 0.352941 0.345098" type="System.Single" dim="1" sep=" " sizes="4"/>
                     <Arg name="procedural-sky-tint" ui="Color pick" value="1 0.207843 0.647059 0.772549" type="System.Single" dim="1" sep=" " sizes="4"/>
                     <Arg name="sky_color" ui="Color pick" value="1 0.211765 0.227451 0.258824" type="System.Single" dim="1" sep=" " sizes="4"/>
@@ -227,10 +225,10 @@
                     <Arg name="sun-size" ui="Float spin box" value="0.08" type="System.Single" dim="0"/>
                     <Arg name="sun_bounce_intensity" ui="Float spin box" value="1" type="System.Single" dim="0"/>
                     <Arg name="sun_color" ui="Color pick" value="1 1 1 1" type="System.Single" dim="1" sep=" " sizes="4"/>
-                    <Arg name="sun_intensity" ui="Float spin box" value="0.5" type="System.Single" dim="0"/>
-                    <Arg name="sun_rotation" ui="Vector 3D" value="0 0 0" type="System.Single" dim="1" sep=" " sizes="3"/>
+                    <Arg name="sun_intensity" ui="Float spin box" value="0.88" type="System.Single" dim="0"/>
+                    <Arg name="sun_rotation" ui="Vector 3D" value="-39.1 15 0" type="System.Single" dim="1" sep=" " sizes="3"/>
                     <Arg name="sun_shadow_bias" ui="Float spin box" value="0.05" type="System.Single" dim="0"/>
-                    <Arg name="sun_shadow_mode" ui="Combo box index" value="2" type="System.Int32" dim="0"/>
+                    <Arg name="sun_shadow_mode" ui="Combo box index" value="0" type="System.Int32" dim="0"/>
                     <Arg name="sun_shadow_near_plane" ui="Float spin box" value="0.2" type="System.Single" dim="0"/>
                     <Arg name="sun_shadow_normal_bias" ui="Float spin box" value="0.4" type="System.Single" dim="0"/>
                     <Arg name="sun_shadow_strength" ui="Float spin box" value="1" type="System.Single" dim="0"/>
@@ -252,11 +250,11 @@
                     <Arg name="Z-" ui="Resource" value="%%%-1" type="System.String" dim="1" sep="%%%" sizes="2"/>
                     <Arg name="Z-_invert" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="ambient_color" ui="Color pick" value="1 0.211765 0.227451 0.258824" type="System.Single" dim="1" sep=" " sizes="4"/>
-                    <Arg name="ambient_intensity" ui="Float spin box" value="1" type="System.Single" dim="0"/>
+                    <Arg name="ambient_intensity" ui="Float spin box" value="0.7" type="System.Single" dim="0"/>
                     <Arg name="ambient_mode" ui="Combo box index" value="0" type="System.Int32" dim="0"/>
-                    <Arg name="atmosphere-thickness" ui="Float spin box" value="0.88" type="System.Single" dim="0"/>
+                    <Arg name="atmosphere-thickness" ui="Float spin box" value="0.83" type="System.Single" dim="0"/>
                     <Arg name="background_color" ui="Color pick" value="1 0.207843 0.188235 0.188235" type="System.Single" dim="1" sep=" " sizes="4"/>
-                    <Arg name="convergence" ui="Float spin box" value="3.49" type="System.Single" dim="0"/>
+                    <Arg name="convergence" ui="Float spin box" value="1.89" type="System.Single" dim="0"/>
                     <Arg name="cubemap" ui="Resource" value="%%%-1" type="System.String" dim="1" sep="%%%" sizes="2"/>
                     <Arg name="cubemap-exposure" ui="Float spin box" value="1" type="System.Single" dim="0"/>
                     <Arg name="cubemap-rotation" ui="Float spin box" value="0" type="System.Single" dim="0"/>
@@ -274,15 +272,15 @@
                     <Arg name="panoramic-tint" ui="Color pick" value="0.498039 0.498039 0.498039 0.498039" type="System.Single" dim="1" sep=" " sizes="4"/>
                     <Arg name="panoramic-type" ui="Combo box index" value="0" type="System.Int32" dim="0"/>
                     <Arg name="panoramic_invert" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="procedural-exposure" ui="Float spin box" value="0.85" type="System.Single" dim="0"/>
+                    <Arg name="procedural-exposure" ui="Float spin box" value="1.3" type="System.Single" dim="0"/>
                     <Arg name="procedural-ground-color" ui="Color pick" value="1 0.376471 0.352941 0.345098" type="System.Single" dim="1" sep=" " sizes="4"/>
-                    <Arg name="procedural-sky-tint" ui="Color pick" value="1 0.207843 0.647059 0.772549" type="System.Single" dim="1" sep=" " sizes="4"/>
+                    <Arg name="procedural-sky-tint" ui="Color pick" value="1 0.054902 0.180392 0.368627" type="System.Single" dim="1" sep=" " sizes="4"/>
                     <Arg name="sky_color" ui="Color pick" value="1 0.211765 0.227451 0.258824" type="System.Single" dim="1" sep=" " sizes="4"/>
                     <Arg name="sun" ui="Combo box index" value="2" type="System.Int32" dim="0"/>
-                    <Arg name="sun-size" ui="Float spin box" value="0.08" type="System.Single" dim="0"/>
+                    <Arg name="sun-size" ui="Float spin box" value="0" type="System.Single" dim="0"/>
                     <Arg name="sun_bounce_intensity" ui="Float spin box" value="1" type="System.Single" dim="0"/>
                     <Arg name="sun_color" ui="Color pick" value="1 1 1 1" type="System.Single" dim="1" sep=" " sizes="4"/>
-                    <Arg name="sun_intensity" ui="Float spin box" value="0.5" type="System.Single" dim="0"/>
+                    <Arg name="sun_intensity" ui="Float spin box" value="1.38778e-17" type="System.Single" dim="0"/>
                     <Arg name="sun_rotation" ui="Vector 3D" value="0 0 0" type="System.Single" dim="1" sep=" " sizes="3"/>
                     <Arg name="sun_shadow_bias" ui="Float spin box" value="0.05" type="System.Single" dim="0"/>
                     <Arg name="sun_shadow_mode" ui="Combo box index" value="2" type="System.Int32" dim="0"/>
@@ -553,62 +551,12 @@
                 <Config key="59" name="standard"/>
             </Configs>
         </Component>
-        <Component key="32" name="Volumetric video" category="Video" type="VolumetricVideo" global="0" always_updating="0" exceptions="1" frame_logging="0" trigger_logging="0" restricted="2" priority="2">
-            <InitConfig key="68" name="standard">
-                <Arg name="init_transform" ui="Transformation" value="0 0.33 0 0 0 0 1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
-                <Arg name="init_transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                <Arg name="volumetric_video" ui="Resource" value="guide%%%47" type="System.String" dim="1" sep="%%%" sizes="2"/>
+        <Component key="48" name="GraphicsHandler" category="Script" type="CSharpScript" global="0" always_updating="0" exceptions="1" frame_logging="0" trigger_logging="0" restricted="0" priority="0">
+            <InitConfig key="106" name="standard">
+                <Arg name="component_class_name" ui="Line text editor" value="GraphicsHandler" type="System.String" dim="0"/>
             </InitConfig>
             <Configs>
-                <Config key="69" name="standard">
-                    <Arg name="audio_id" ui="Integer spin box" value="0" type="System.Int32" dim="0"/>
-                    <Arg name="circles" ui="Check box" value="true" type="System.Boolean" dim="0"/>
-                    <Arg name="cones" ui="Check box" value="true" type="System.Boolean" dim="0"/>
-                    <Arg name="details" ui="Combo box index" value="3" type="System.Int32" dim="0"/>
-                    <Arg name="display_filtering_obb" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="enable_audio" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="end_time" ui="Float spin box" value="10.1" type="System.Single" dim="0"/>
-                    <Arg name="filter_points_outside_obb" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="filtering_obb_tr" ui="Transformation" value="0 0 0 0 0 0 1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
-                    <Arg name="filtering_obb_tr_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="loop" ui="Check box" value="true" type="System.Boolean" dim="0"/>
-                    <Arg name="rendering" ui="Combo box index" value="2" type="System.Int32" dim="0"/>
-                    <Arg name="size_points" ui="Float spin box" value="0.0025" type="System.Single" dim="0"/>
-                    <Arg name="start_time" ui="Float spin box" value="0" type="System.Single" dim="0"/>
-                    <Arg name="tint" ui="Color pick" value="0 1 1 1" type="System.Single" dim="1" sep=" " sizes="4"/>
-                    <Arg name="transform" ui="Transformation" value="0.16 1.15 0 0 180 0 1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
-                    <Arg name="transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="volume" ui="Float spin box" value="1" type="System.Single" dim="0"/>
-                </Config>
-            </Configs>
-        </Component>
-        <Component key="33" name="Volumetric video 2" category="Video" type="VolumetricVideo" global="0" always_updating="0" exceptions="1" frame_logging="0" trigger_logging="0" restricted="2" priority="2">
-            <InitConfig key="70" name="standard">
-                <Arg name="init_transform" ui="Transformation" value="0 0 0 0 0 0 1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
-                <Arg name="init_transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                <Arg name="volumetric_video" ui="Resource" value="namaste%%%48" type="System.String" dim="1" sep="%%%" sizes="2"/>
-            </InitConfig>
-            <Configs>
-                <Config key="71" name="standard">
-                    <Arg name="audio_id" ui="Integer spin box" value="0" type="System.Int32" dim="0"/>
-                    <Arg name="circles" ui="Check box" value="true" type="System.Boolean" dim="0"/>
-                    <Arg name="cones" ui="Check box" value="true" type="System.Boolean" dim="0"/>
-                    <Arg name="details" ui="Combo box index" value="3" type="System.Int32" dim="0"/>
-                    <Arg name="display_filtering_obb" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="enable_audio" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="end_time" ui="Float spin box" value="10" type="System.Single" dim="0"/>
-                    <Arg name="filter_points_outside_obb" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="filtering_obb_tr" ui="Transformation" value="0 0 0 0 0 0 1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
-                    <Arg name="filtering_obb_tr_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="loop" ui="Check box" value="true" type="System.Boolean" dim="0"/>
-                    <Arg name="rendering" ui="Combo box index" value="2" type="System.Int32" dim="0"/>
-                    <Arg name="size_points" ui="Float spin box" value="0.0025" type="System.Single" dim="0"/>
-                    <Arg name="start_time" ui="Float spin box" value="0" type="System.Single" dim="0"/>
-                    <Arg name="tint" ui="Color pick" value="0 1 1 1" type="System.Single" dim="1" sep=" " sizes="4"/>
-                    <Arg name="transform" ui="Transformation" value="-0.01 1.21 -0.27 0 -2.77556e-17 0 1 1 0.99" type="System.Single" dim="1" sep=" " sizes="9"/>
-                    <Arg name="transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="volume" ui="Float spin box" value="1" type="System.Single" dim="0"/>
-                </Config>
+                <Config key="107" name="standard"/>
             </Configs>
         </Component>
         <Component key="17" name="AmbianceForest_Front" category="Audio" type="AudioSource" global="0" always_updating="0" exceptions="1" frame_logging="0" trigger_logging="0" restricted="0" priority="1">
@@ -1192,7 +1140,7 @@
                     <Arg name="loop" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="max_distance" ui="Float values slider" value="10" type="System.Single" dim="0"/>
                     <Arg name="min_distance" ui="Float values slider" value="0.01" type="System.Single" dim="0"/>
-                    <Arg name="mute" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="mute" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="nothing_end_block" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="nothing_new_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="pause_end_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
@@ -1210,6 +1158,21 @@
                     <Arg name="transform" ui="Transformation" value="-1 1 -2 0 0 0 0.3 0.3 0.3" type="System.Single" dim="1" sep=" " sizes="9"/>
                     <Arg name="transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="volume" ui="Float values slider" value="0.2" type="System.Single" dim="0"/>
+                </Config>
+            </Configs>
+        </Component>
+        <Component key="46" name="SunLight" category="Scene" type="AssetBundle" global="0" always_updating="0" exceptions="1" frame_logging="0" trigger_logging="0" restricted="0" priority="2">
+            <InitConfig key="102" name="standard">
+                <Arg name="asset_bundle" ui="Resource" value="sunlight%%%60" type="System.String" dim="1" sep="%%%" sizes="2"/>
+                <Arg name="display_hierarchy" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                <Arg name="init_transform" ui="Transformation" value="0 0 0 0 0 0 1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
+                <Arg name="init_transform_do_not_apply" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                <Arg name="name_sub_object" ui="Line text editor" value="" type="System.String" dim="0"/>
+            </InitConfig>
+            <Configs>
+                <Config key="103" name="standard">
+                    <Arg name="transform" ui="Transformation" value="0 0 0 24 -18 0 1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
+                    <Arg name="transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                 </Config>
             </Configs>
         </Component>
@@ -1360,16 +1323,6 @@
                             <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
                             <Interval t1="0" t2="100"/>
                         </Timeline>
-                    </Action>
-                    <Action key="76" key_component="32" key_config="69" node_used="0" node_position="0 0">
-                        <!--Component Volumetric video with config standard -->
-                        <Timeline type="Update"/>
-                        <Timeline type="Visibiliy"/>
-                    </Action>
-                    <Action key="77" key_component="33" key_config="71" node_used="0" node_position="0 0">
-                        <!--Component Volumetric video 2 with config standard -->
-                        <Timeline type="Update"/>
-                        <Timeline type="Visibiliy"/>
                     </Action>
                 </Condition>
             </Routine>
@@ -1665,6 +1618,17 @@
                             <Interval t1="0" t2="100"/>
                         </Timeline>
                     </Action>
+                    <Action key="117" key_component="48" key_config="107" node_used="0" node_position="0 0">
+                        <!--Component GraphicsHandler with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
+                            <Interval t1="0" t2="100"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
+                            <Interval t1="0" t2="100"/>
+                        </Timeline>
+                    </Action>
                 </Condition>
             </Routine>
             <Routine key="16" name="Forest FOA" randomizer="0" informations="">
@@ -1814,6 +1778,17 @@
                     </Action>
                     <Action key="112" key_component="45" key_config="99" node_used="0" node_position="0 0">
                         <!--Component FocusedObjectOfAttention with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
+                            <Interval t1="0" t2="100"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
+                            <Interval t1="0" t2="100"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="116" key_component="48" key_config="107" node_used="0" node_position="0 0">
+                        <!--Component GraphicsHandler with config standard -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
                             <Interval t1="0" t2="100"/>

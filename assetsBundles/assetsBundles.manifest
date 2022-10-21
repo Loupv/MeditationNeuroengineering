@@ -1,0 +1,16 @@
+ManifestFileVersion: 0
+CRC: 3327408211
+AssetBundleManifest:
+  AssetBundleInfos:
+    Info_0:
+      Name: forestroom
+      Dependencies: {}
+    Info_1:
+      Name: distantsmokefx
+      Dependencies: {}
+    Info_2:
+      Name: roundtable
+      Dependencies: {}
+    Info_3:
+      Name: sunlight
+      Dependencies: {}

@@ -27,7 +27,7 @@ namespace Ex
 		private AudioSourceComponent _270deg;
 
 		public Transform myCameraTransform;
-		public float mainVolume = 1f;
+		public float omniSoundsMainVolume = 1f;
 
         float backgroundMusicVolume;
         bool isInitialized, fading;
@@ -46,6 +46,7 @@ namespace Ex
             {
                 _SpatializedBackgroundMusic = get<AudioSourceComponent>("BackgroundMusic_Spatialized");
                 backgroundMusicVolume = _SpatializedBackgroundMusic.audioSource.volume;
+                _AmbientBackgroundMusic.set_volume(0);
                 musicType = MusicType.Spatialized; 
             }
             else // starting elsewhere
@@ -88,7 +89,7 @@ namespace Ex
 
             log_message("sounds set");
 
-            mainVolume = 0;
+            omniSoundsMainVolume = 0;
             _0deg.set_volume(0);
             _90deg.set_volume(0);
             _180deg.set_volume(0);
@@ -180,31 +181,31 @@ namespace Ex
 
             if (azimuth <= 90.0f)
             {
-                _0deg.set_volume(Mathf.Abs(Remap(azimuth % 360, 0, 90, 1, 0)) * mainVolume);
-                _90deg.set_volume(Mathf.Abs(Remap(azimuth % 360, 0, 90, 0, 1)) * mainVolume);
+                _0deg.set_volume(Mathf.Abs(Remap(azimuth % 360, 0, 90, 1, 0)) * omniSoundsMainVolume);
+                _90deg.set_volume(Mathf.Abs(Remap(azimuth % 360, 0, 90, 0, 1)) * omniSoundsMainVolume);
                 _180deg.set_volume(0.0f);
                 _270deg.set_volume(0.0f);
             }
             else if (azimuth > 90.0f && azimuth <= 180.0f)
             {
                 _0deg.set_volume(0.0f);
-                _90deg.set_volume(Mathf.Abs(Remap(azimuth % 360, 90, 180, 1, 0)) * mainVolume);
-                _180deg.set_volume(Mathf.Abs(Remap(azimuth % 360, 90, 180, 0, 1)) * mainVolume);
+                _90deg.set_volume(Mathf.Abs(Remap(azimuth % 360, 90, 180, 1, 0)) * omniSoundsMainVolume);
+                _180deg.set_volume(Mathf.Abs(Remap(azimuth % 360, 90, 180, 0, 1)) * omniSoundsMainVolume);
                 _270deg.set_volume(0.0f);
             }
             else if (azimuth > 180.0f && azimuth <= 270.0f)
             {
                 _0deg.set_volume(0.0f);
                 _90deg.set_volume(0.0f);
-                _180deg.set_volume(Mathf.Abs(Remap(azimuth % 360, 180, 270, 1, 0)) * mainVolume);
-                _270deg.set_volume(Mathf.Abs(Remap(azimuth % 360, 180, 270, 0, 1)) * mainVolume);
+                _180deg.set_volume(Mathf.Abs(Remap(azimuth % 360, 180, 270, 1, 0)) * omniSoundsMainVolume);
+                _270deg.set_volume(Mathf.Abs(Remap(azimuth % 360, 180, 270, 0, 1)) * omniSoundsMainVolume);
             }
             else if (azimuth > 270.0f && azimuth <= 360.0f)
             {
-                _0deg.set_volume(Mathf.Abs(Remap(azimuth % 360, 270, 360, 0, 1)) * mainVolume);
+                _0deg.set_volume(Mathf.Abs(Remap(azimuth % 360, 270, 360, 0, 1)) * omniSoundsMainVolume);
                 _90deg.set_volume(0.0f);
                 _180deg.set_volume(0.0f);
-                _270deg.set_volume(Mathf.Abs(Remap(azimuth % 360, 270, 360, 1, 0)) * mainVolume);
+                _270deg.set_volume(Mathf.Abs(Remap(azimuth % 360, 270, 360, 1, 0)) * omniSoundsMainVolume);
             }
         }
 

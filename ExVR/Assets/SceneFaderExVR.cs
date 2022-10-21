@@ -30,6 +30,7 @@ namespace Ex
         string lastRoutineName = "";
 
         OmniController omniController;
+        GraphicsHandler graphicsHandler;
 
         public enum FadeDirection
         {
@@ -60,12 +61,18 @@ namespace Ex
             omniController = FindObjectOfType<OmniController>();
             omniController.InitExperiment();
             if (omniController != null) log_message(omniController.name + " found");
+
+            graphicsHandler = FindObjectOfType<GraphicsHandler>();
+            if (omniController != null) log_message(graphicsHandler.name + " found");
         }
 
         private IEnumerator PrepareNewRoutine()
         {
             yield return new WaitForEndOfFrame();
+            
             omniController.PrepareSoundInNewRoutine(current_routine().name);
+            graphicsHandler.SetGraphicsForRoutine(current_routine().name);
+
             if (current_routine().name == "LabScene" || current_routine().name == "WhiteScene" || current_routine().name == "ForestScene" || lastRoutineName == "")
             {
                 StartCoroutine(PrepareNewSceneFadeIn());
@@ -159,7 +166,7 @@ namespace Ex
                 mat.SetColor("_Color", new Color(mat.color.r, mat.color.g, mat.color.b, alpha));
             }
 
-            shelterTransitionLight.intensity = alpha;
+            if(current_routine().name != "ForestScene" && current_routine().name != "Forest FOA") shelterTransitionLight.intensity = alpha;
 
             // lights
             for (int i = 0; i < lights.Count; i++)
@@ -176,7 +183,7 @@ namespace Ex
             tmpSkybox.SetFloat("_Exposure", skyboxExposure * (1 - alpha));
 
             // sounds
-            omniController.mainVolume = 1-alpha;
+            omniController.omniSoundsMainVolume = 1-alpha;
 
             alpha += Time.deltaTime * (1.0f / fadeSpeed) * ((fadeDirection == FadeDirection.In) ? -1 : 1);
         }
