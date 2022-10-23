@@ -43,8 +43,8 @@ namespace Ex
             {
                 log_message("Activating fog");
                 RenderSettings.fog = true;
-                RenderSettings.fogColor = new Color(0.69f, 0.66f, 0.54f, 1f);
-                RenderSettings.fogDensity = 0.006f;
+                RenderSettings.fogColor = new Color(0.67f, 0.72f, 0.72f, 1f);
+                RenderSettings.fogDensity = 0.0045f;
                 RenderSettings.fogMode = FogMode.ExponentialSquared;
                 fogActivated = true;
             }

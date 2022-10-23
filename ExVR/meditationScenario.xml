@@ -276,7 +276,7 @@
                     <Arg name="procedural-ground-color" ui="Color pick" value="1 0.376471 0.352941 0.345098" type="System.Single" dim="1" sep=" " sizes="4"/>
                     <Arg name="procedural-sky-tint" ui="Color pick" value="1 0.054902 0.180392 0.368627" type="System.Single" dim="1" sep=" " sizes="4"/>
                     <Arg name="sky_color" ui="Color pick" value="1 0.211765 0.227451 0.258824" type="System.Single" dim="1" sep=" " sizes="4"/>
-                    <Arg name="sun" ui="Combo box index" value="2" type="System.Int32" dim="0"/>
+                    <Arg name="sun" ui="Combo box index" value="0" type="System.Int32" dim="0"/>
                     <Arg name="sun-size" ui="Float spin box" value="0" type="System.Single" dim="0"/>
                     <Arg name="sun_bounce_intensity" ui="Float spin box" value="1" type="System.Single" dim="0"/>
                     <Arg name="sun_color" ui="Color pick" value="1 1 1 1" type="System.Single" dim="1" sep=" " sizes="4"/>
@@ -1097,7 +1097,7 @@
                     <Arg name="loop" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="max_distance" ui="Float values slider" value="10" type="System.Single" dim="0"/>
                     <Arg name="min_distance" ui="Float values slider" value="0.01" type="System.Single" dim="0"/>
-                    <Arg name="mute" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="mute" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="nothing_end_block" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="nothing_new_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="pause_end_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
