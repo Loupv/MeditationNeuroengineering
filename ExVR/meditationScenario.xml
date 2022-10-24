@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Experiment name="meditationScenario" version="1.0a60" mode="designer" designer-used="C:/Users/loupv/Documents/exvr-designer/ExVR.exe">
+<Experiment name="meditationScenario" version="1.0a60" mode="designer" designer-used="C:/Users/vuarness/Documents/exvr-designer/ExVR.exe">
     <Settings debug="1" csharp_debug_info="0" catch_components_exceptions="0" positional_tracking="1" catch_external_keyboard_events="0">
         <Display mode="0" stereo_fov="60" fullscreen="0" monitor_id="1" resolution_id="1" custom_width="1920" custom_height="1080"/>
         <Camera neutral_x="0" neutral_y="1" neutral_z="0"/>
@@ -142,7 +142,7 @@
                     <Arg name="ambient_color" ui="Color pick" value="1 0.211765 0.227451 0.258824" type="System.Single" dim="1" sep=" " sizes="4"/>
                     <Arg name="ambient_intensity" ui="Float spin box" value="1" type="System.Single" dim="0"/>
                     <Arg name="ambient_mode" ui="Combo box index" value="0" type="System.Int32" dim="0"/>
-                    <Arg name="atmosphere-thickness" ui="Float spin box" value="0.2" type="System.Single" dim="0"/>
+                    <Arg name="atmosphere-thickness" ui="Float spin box" value="0" type="System.Single" dim="0"/>
                     <Arg name="background_color" ui="Color pick" value="1 0.207843 0.188235 0.188235" type="System.Single" dim="1" sep=" " sizes="4"/>
                     <Arg name="convergence" ui="Float spin box" value="1" type="System.Single" dim="0"/>
                     <Arg name="cubemap" ui="Resource" value="%%%-1" type="System.String" dim="1" sep="%%%" sizes="2"/>
@@ -164,7 +164,7 @@
                     <Arg name="panoramic_invert" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="procedural-exposure" ui="Float spin box" value="1.4" type="System.Single" dim="0"/>
                     <Arg name="procedural-ground-color" ui="Color pick" value="1 1 1 1" type="System.Single" dim="1" sep=" " sizes="4"/>
-                    <Arg name="procedural-sky-tint" ui="Color pick" value="1 0.886275 0.886275 0.886275" type="System.Single" dim="1" sep=" " sizes="4"/>
+                    <Arg name="procedural-sky-tint" ui="Color pick" value="1 0.807843 0.807843 0.807843" type="System.Single" dim="1" sep=" " sizes="4"/>
                     <Arg name="sky_color" ui="Color pick" value="1 0.211765 0.227451 0.258824" type="System.Single" dim="1" sep=" " sizes="4"/>
                     <Arg name="sun" ui="Combo box index" value="2" type="System.Int32" dim="0"/>
                     <Arg name="sun-size" ui="Float spin box" value="0" type="System.Single" dim="0"/>
@@ -222,7 +222,7 @@
                     <Arg name="procedural-sky-tint" ui="Color pick" value="1 0.207843 0.647059 0.772549" type="System.Single" dim="1" sep=" " sizes="4"/>
                     <Arg name="sky_color" ui="Color pick" value="1 0.211765 0.227451 0.258824" type="System.Single" dim="1" sep=" " sizes="4"/>
                     <Arg name="sun" ui="Combo box index" value="2" type="System.Int32" dim="0"/>
-                    <Arg name="sun-size" ui="Float spin box" value="0.08" type="System.Single" dim="0"/>
+                    <Arg name="sun-size" ui="Float spin box" value="0.04" type="System.Single" dim="0"/>
                     <Arg name="sun_bounce_intensity" ui="Float spin box" value="1" type="System.Single" dim="0"/>
                     <Arg name="sun_color" ui="Color pick" value="1 1 1 1" type="System.Single" dim="1" sep=" " sizes="4"/>
                     <Arg name="sun_intensity" ui="Float spin box" value="0.88" type="System.Single" dim="0"/>
@@ -252,7 +252,7 @@
                     <Arg name="ambient_color" ui="Color pick" value="1 0.211765 0.227451 0.258824" type="System.Single" dim="1" sep=" " sizes="4"/>
                     <Arg name="ambient_intensity" ui="Float spin box" value="0.7" type="System.Single" dim="0"/>
                     <Arg name="ambient_mode" ui="Combo box index" value="0" type="System.Int32" dim="0"/>
-                    <Arg name="atmosphere-thickness" ui="Float spin box" value="0.83" type="System.Single" dim="0"/>
+                    <Arg name="atmosphere-thickness" ui="Float spin box" value="0.68" type="System.Single" dim="0"/>
                     <Arg name="background_color" ui="Color pick" value="1 0.207843 0.188235 0.188235" type="System.Single" dim="1" sep=" " sizes="4"/>
                     <Arg name="convergence" ui="Float spin box" value="1.89" type="System.Single" dim="0"/>
                     <Arg name="cubemap" ui="Resource" value="%%%-1" type="System.String" dim="1" sep="%%%" sizes="2"/>
@@ -274,7 +274,7 @@
                     <Arg name="panoramic_invert" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="procedural-exposure" ui="Float spin box" value="1.3" type="System.Single" dim="0"/>
                     <Arg name="procedural-ground-color" ui="Color pick" value="1 0.376471 0.352941 0.345098" type="System.Single" dim="1" sep=" " sizes="4"/>
-                    <Arg name="procedural-sky-tint" ui="Color pick" value="1 0.054902 0.180392 0.368627" type="System.Single" dim="1" sep=" " sizes="4"/>
+                    <Arg name="procedural-sky-tint" ui="Color pick" value="1 0.0235294 0.0745098 0.152941" type="System.Single" dim="1" sep=" " sizes="4"/>
                     <Arg name="sky_color" ui="Color pick" value="1 0.211765 0.227451 0.258824" type="System.Single" dim="1" sep=" " sizes="4"/>
                     <Arg name="sun" ui="Combo box index" value="0" type="System.Int32" dim="0"/>
                     <Arg name="sun-size" ui="Float spin box" value="0" type="System.Single" dim="0"/>
@@ -416,10 +416,10 @@
             </InitConfig>
             <Configs>
                 <Config key="49" name="standard">
-                    <Arg name="debug_camera" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="debug_camera" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="m_speed" ui="Float spin box" value="1" type="System.Single" dim="0"/>
-                    <Arg name="position" ui="Vector 3D" value="0 1.7 1.8" type="System.Single" dim="1" sep=" " sizes="3"/>
-                    <Arg name="rotation" ui="Vector 3D" value="10.7 180 0" type="System.Single" dim="1" sep=" " sizes="3"/>
+                    <Arg name="position" ui="Vector 3D" value="0 0 0" type="System.Single" dim="1" sep=" " sizes="3"/>
+                    <Arg name="rotation" ui="Vector 3D" value="0 0 0" type="System.Single" dim="1" sep=" " sizes="3"/>
                     <Arg name="rx_speed" ui="Float spin box" value="2" type="System.Single" dim="0"/>
                     <Arg name="ry_speed" ui="Float spin box" value="2" type="System.Single" dim="0"/>
                     <Arg name="rz_speed" ui="Float spin box" value="2" type="System.Single" dim="0"/>
@@ -470,7 +470,7 @@
             </InitConfig>
             <Configs>
                 <Config key="57" name="standard">
-                    <Arg name="transform" ui="Transformation" value="9 -4 -8 0 0 0 1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
+                    <Arg name="transform" ui="Transformation" value="5.8 -4 -5 0 0 0 1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
                     <Arg name="transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                 </Config>
             </Configs>
@@ -515,7 +515,7 @@
             </InitConfig>
             <Configs>
                 <Config key="97" name="standard">
-                    <Arg name="transform" ui="Transformation" value="0.08 0 -0.8 0 0 0 1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
+                    <Arg name="transform" ui="Transformation" value="0.08 0.06 -0.8 0 0 0 1 1.27 1" type="System.Single" dim="1" sep=" " sizes="9"/>
                     <Arg name="transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                 </Config>
             </Configs>
@@ -524,13 +524,13 @@
             <InitConfig key="98" name="standard">
                 <Arg name="asset_bundle" ui="Resource" value="focusedattentionobjects%%%58" type="System.String" dim="1" sep="%%%" sizes="2"/>
                 <Arg name="display_hierarchy" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                <Arg name="init_transform" ui="Transformation" value="0 -3.46945e-18 0 0 0 0 1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
+                <Arg name="init_transform" ui="Transformation" value="-3.1225e-17 2 0 0 0 0 1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
                 <Arg name="init_transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                 <Arg name="name_sub_object" ui="Line text editor" value="" type="System.String" dim="0"/>
             </InitConfig>
             <Configs>
                 <Config key="99" name="standard">
-                    <Arg name="transform" ui="Transformation" value="0 0.6 -0.74 0 0 0 3 3 3" type="System.Single" dim="1" sep=" " sizes="9"/>
+                    <Arg name="transform" ui="Transformation" value="-0.09 0.68 -0.77 0 0 0 4 4 4" type="System.Single" dim="1" sep=" " sizes="9"/>
                     <Arg name="transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                 </Config>
             </Configs>
@@ -1092,7 +1092,7 @@
             </InitConfig>
             <Configs>
                 <Config key="89" name="default">
-                    <Arg name="display" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="display" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="doppler_level" ui="Float values slider" value="1" type="System.Single" dim="0"/>
                     <Arg name="loop" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="max_distance" ui="Float values slider" value="10" type="System.Single" dim="0"/>
@@ -1176,6 +1176,22 @@
                 </Config>
             </Configs>
         </Component>
+        <Component key="50" name="First person perspective camera" category="Camera" type="FPPCamera" global="0" always_updating="0" exceptions="1" frame_logging="0" trigger_logging="0" restricted="0" priority="0">
+            <InitConfig key="110" name="standard">
+                <Arg name="init_transform" ui="Transformation" value="0 0 0 0 0 0 1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
+                <Arg name="init_transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                <Arg name="use_eye" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
+                <Arg name="use_neutral" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
+            </InitConfig>
+            <Configs>
+                <Config key="111" name="standard">
+                    <Arg name="transform" ui="Transformation" value="0 1.5 0.3 0 180 0 1.03 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
+                    <Arg name="transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="use_eye" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="use_neutral" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
+                </Config>
+            </Configs>
+        </Component>
     </Components>
     <FlowElements>
         <Routines>
@@ -1194,28 +1210,6 @@
                     </Action>
                     <Action key="55" key_component="30" key_config="63" node_used="0" node_position="0 0">
                         <!--Component MeditationShelter with config standard -->
-                        <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
-                            <Interval t1="0" t2="100"/>
-                        </Timeline>
-                        <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
-                            <Interval t1="0" t2="100"/>
-                        </Timeline>
-                    </Action>
-                    <Action key="52" key_component="29" key_config="61" node_used="0" node_position="0 0">
-                        <!--Component SceneFader with config standard -->
-                        <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
-                            <Interval t1="0" t2="100"/>
-                        </Timeline>
-                        <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
-                            <Interval t1="0" t2="100"/>
-                        </Timeline>
-                    </Action>
-                    <Action key="44" key_component="23" key_config="49" node_used="0" node_position="0 0">
-                        <!--Component FPPCamera with config standard -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
                             <Interval t1="0" t2="100"/>
@@ -1247,8 +1241,30 @@
                             <Interval t1="0" t2="100"/>
                         </Timeline>
                     </Action>
+                    <Action key="52" key_component="29" key_config="61" node_used="0" node_position="0 0">
+                        <!--Component SceneFader with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
+                            <Interval t1="0" t2="100"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
+                            <Interval t1="0" t2="100"/>
+                        </Timeline>
+                    </Action>
                     <Action key="51" key_component="28" key_config="59" node_used="0" node_position="0 0">
                         <!--Component OmniController with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
+                            <Interval t1="0" t2="100"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
+                            <Interval t1="0" t2="100"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="118" key_component="48" key_config="107" node_used="0" node_position="0 0">
+                        <!--Component GraphicsHandler with config standard -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
                             <Interval t1="0" t2="100"/>
@@ -1324,6 +1340,17 @@
                             <Interval t1="0" t2="100"/>
                         </Timeline>
                     </Action>
+                    <Action key="121" key_component="50" key_config="111" node_used="0" node_position="0 0">
+                        <!--Component First person perspective camera with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
+                            <Interval t1="0" t2="100"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
+                            <Interval t1="0" t2="100"/>
+                        </Timeline>
+                    </Action>
                 </Condition>
             </Routine>
             <Routine key="3" name="WhiteScene" randomizer="0" informations="">
@@ -1341,17 +1368,6 @@
                     </Action>
                     <Action key="57" key_component="30" key_config="63" node_used="0" node_position="0 0">
                         <!--Component MeditationShelter with config standard -->
-                        <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
-                            <Interval t1="0" t2="100"/>
-                        </Timeline>
-                        <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
-                            <Interval t1="0" t2="100"/>
-                        </Timeline>
-                    </Action>
-                    <Action key="53" key_component="29" key_config="61" node_used="0" node_position="0 0">
-                        <!--Component SceneFader with config standard -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
                             <Interval t1="0" t2="100"/>
@@ -1405,8 +1421,30 @@
                             <Interval t1="0" t2="100"/>
                         </Timeline>
                     </Action>
+                    <Action key="53" key_component="29" key_config="61" node_used="0" node_position="0 0">
+                        <!--Component SceneFader with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
+                            <Interval t1="0" t2="100"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
+                            <Interval t1="0" t2="100"/>
+                        </Timeline>
+                    </Action>
                     <Action key="59" key_component="28" key_config="59" node_used="0" node_position="0 0">
                         <!--Component OmniController with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
+                            <Interval t1="0" t2="100"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
+                            <Interval t1="0" t2="100"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="119" key_component="48" key_config="107" node_used="0" node_position="0 0">
+                        <!--Component GraphicsHandler with config standard -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
                             <Interval t1="0" t2="100"/>
@@ -1508,17 +1546,6 @@
                             <Interval t1="0" t2="100"/>
                         </Timeline>
                     </Action>
-                    <Action key="54" key_component="29" key_config="61" node_used="0" node_position="0 0">
-                        <!--Component SceneFader with config standard -->
-                        <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
-                            <Interval t1="0" t2="100"/>
-                        </Timeline>
-                        <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
-                            <Interval t1="0" t2="100"/>
-                        </Timeline>
-                    </Action>
                     <Action key="61" key_component="23" key_config="49" node_used="0" node_position="0 0">
                         <!--Component FPPCamera with config standard -->
                         <Timeline type="Update">
@@ -1552,8 +1579,30 @@
                             <Interval t1="0" t2="100"/>
                         </Timeline>
                     </Action>
+                    <Action key="54" key_component="29" key_config="61" node_used="0" node_position="0 0">
+                        <!--Component SceneFader with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
+                            <Interval t1="0" t2="100"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
+                            <Interval t1="0" t2="100"/>
+                        </Timeline>
+                    </Action>
                     <Action key="62" key_component="28" key_config="59" node_used="0" node_position="0 0">
                         <!--Component OmniController with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
+                            <Interval t1="0" t2="100"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
+                            <Interval t1="0" t2="100"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="117" key_component="48" key_config="107" node_used="0" node_position="0 0">
+                        <!--Component GraphicsHandler with config standard -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
                             <Interval t1="0" t2="100"/>
@@ -1618,17 +1667,6 @@
                             <Interval t1="0" t2="100"/>
                         </Timeline>
                     </Action>
-                    <Action key="117" key_component="48" key_config="107" node_used="0" node_position="0 0">
-                        <!--Component GraphicsHandler with config standard -->
-                        <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
-                            <Interval t1="0" t2="100"/>
-                        </Timeline>
-                        <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
-                            <Interval t1="0" t2="100"/>
-                        </Timeline>
-                    </Action>
                 </Condition>
             </Routine>
             <Routine key="16" name="Forest FOA" randomizer="0" informations="">
@@ -1646,17 +1684,6 @@
                     </Action>
                     <Action key="100" key_component="30" key_config="63" node_used="0" node_position="0 0">
                         <!--Component MeditationShelter with config standard -->
-                        <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
-                            <Interval t1="0" t2="100"/>
-                        </Timeline>
-                        <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
-                            <Interval t1="0" t2="100"/>
-                        </Timeline>
-                    </Action>
-                    <Action key="101" key_component="29" key_config="61" node_used="0" node_position="0 0">
-                        <!--Component SceneFader with config standard -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
                             <Interval t1="0" t2="100"/>
@@ -1699,8 +1726,52 @@
                             <Interval t1="0" t2="100"/>
                         </Timeline>
                     </Action>
+                    <Action key="101" key_component="29" key_config="61" node_used="0" node_position="0 0">
+                        <!--Component SceneFader with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
+                            <Interval t1="0" t2="100"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
+                            <Interval t1="0" t2="100"/>
+                        </Timeline>
+                    </Action>
                     <Action key="105" key_component="28" key_config="59" node_used="0" node_position="0 0">
                         <!--Component OmniController with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
+                            <Interval t1="0" t2="100"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
+                            <Interval t1="0" t2="100"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="116" key_component="48" key_config="107" node_used="0" node_position="0 0">
+                        <!--Component GraphicsHandler with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
+                            <Interval t1="0" t2="100"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
+                            <Interval t1="0" t2="100"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="111" key_component="44" key_config="97" node_used="0" node_position="0 0">
+                        <!--Component RoundTable with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
+                            <Interval t1="0" t2="100"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
+                            <Interval t1="0" t2="100"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="112" key_component="45" key_config="99" node_used="0" node_position="0 0">
+                        <!--Component FocusedObjectOfAttention with config standard -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
                             <Interval t1="0" t2="100"/>
@@ -1756,39 +1827,6 @@
                     </Action>
                     <Action key="110" key_component="43" key_config="93" node_used="0" node_position="0 0">
                         <!--Component BackgroundMusic_Ambient with config default -->
-                        <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
-                            <Interval t1="0" t2="100"/>
-                        </Timeline>
-                        <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
-                            <Interval t1="0" t2="100"/>
-                        </Timeline>
-                    </Action>
-                    <Action key="111" key_component="44" key_config="97" node_used="0" node_position="0 0">
-                        <!--Component RoundTable with config standard -->
-                        <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
-                            <Interval t1="0" t2="100"/>
-                        </Timeline>
-                        <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
-                            <Interval t1="0" t2="100"/>
-                        </Timeline>
-                    </Action>
-                    <Action key="112" key_component="45" key_config="99" node_used="0" node_position="0 0">
-                        <!--Component FocusedObjectOfAttention with config standard -->
-                        <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
-                            <Interval t1="0" t2="100"/>
-                        </Timeline>
-                        <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
-                            <Interval t1="0" t2="100"/>
-                        </Timeline>
-                    </Action>
-                    <Action key="116" key_component="48" key_config="107" node_used="0" node_position="0 0">
-                        <!--Component GraphicsHandler with config standard -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
                             <Interval t1="0" t2="100"/>

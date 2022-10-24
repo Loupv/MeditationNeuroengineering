@@ -68,6 +68,7 @@ namespace Ex
 
         private IEnumerator PrepareNewRoutine()
         {
+            
             yield return new WaitForEndOfFrame();
             
             omniController.PrepareSoundInNewRoutine(current_routine().name);
@@ -123,8 +124,8 @@ namespace Ex
 
         private IEnumerator Fade(FadeDirection fadeDirection)
         {
-            float alpha = (fadeDirection == FadeDirection.Out) ? 0 : 1;
-            float fadeEndValue = (fadeDirection == FadeDirection.Out) ? 1 : 0;
+            float alpha = (fadeDirection == FadeDirection.Out) ? 0f : 1f;
+            float fadeEndValue = (fadeDirection == FadeDirection.Out) ? 1f : 0f;
 
             if (fadeDirection == FadeDirection.In)
             {
@@ -134,6 +135,10 @@ namespace Ex
                     ApplyFadeAmount(ref alpha, fadeDirection);
                     yield return null;
                 }
+
+                // shut screens
+                foreach (GameObject screen in fadeScreens) screen.GetComponent<MeshRenderer>().enabled = false;
+
                 log_message("fade in done");
                 //foreach (GameObject screen in fadeScreens) screen.SetActive(false);
             }
@@ -141,6 +146,8 @@ namespace Ex
             {
                 log_message("fading out");
                 //foreach (GameObject screen in fadeScreens) screen.SetActive(true);
+                foreach (GameObject screen in fadeScreens) screen.GetComponent<MeshRenderer>().enabled = true;
+
                 while (alpha <= fadeEndValue)
                 {
                     ApplyFadeAmount(ref alpha, fadeDirection);

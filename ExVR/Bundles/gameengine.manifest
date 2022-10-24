@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 3528926065
+CRC: 1059697644
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 2f4363a719dbad086b4221449b49e2f7
+    Hash: 21335be68fb5dee94f4b5e424de95c2c
   TypeTreeHash:
     serializedVersion: 2
     Hash: 87dabf88b5b3b4e46e942b052f4e26e4
@@ -52,4 +52,6 @@ ClassTypes:
 SerializeReferenceClassIdentifiers: []
 Assets:
 - Assets/Prefabs/ScenesBundles/DontDestroyOnLoad.prefab
-Dependencies: []
+Dependencies:
+- C:/Users/vuarness/Documents/GitHub/BundlesProject/./assetsBundles/meditationshelter
+- C:/Users/vuarness/Documents/GitHub/BundlesProject/./assetsBundles/scenefaderscript
