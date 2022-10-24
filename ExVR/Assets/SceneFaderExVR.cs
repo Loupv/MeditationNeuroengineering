@@ -11,14 +11,22 @@ using UnityEngine;
 namespace Ex
 {
 
+    public class SceneConfig{
+
+        public string sceneName;
+        public bool fadeScreens, fadeSounds, keepShelterLightOn, activateFog;
+        public Color fogColor;
+        public float fogDensity;
+    }
+
+
+
     public class SceneFaderExVR : BaseCompiledCSharpComponent
     {
 
         public GameObject[] shelterScreens;
         //UnityEngine.Rendering.Volume globalVolume;
         public float fadeSpeed = 3.8f, waitingTimeBetweenScenes = 2f;
-        public string[] scenesArray;
-        public int currentScenesArrayID;
         public bool hasFaded, isFading;
 
         public List<Light> lights;
@@ -27,10 +35,14 @@ namespace Ex
         Material tmpSkybox;
         float skyboxExposure, skyboxSunsize, skyboxConvergence, skyboxThickness;
 
-        string lastRoutineName = "";
+        public string[] scenesArray;
+        public int currentScenesArrayID;
 
         OmniController omniController;
         GraphicsHandler graphicsHandler;
+
+        SceneConfig[] sceneConfigs;
+        SceneConfig currentSceneConfig, lastSceneConfig;
 
         public enum FadeDirection
         {
@@ -40,10 +52,12 @@ namespace Ex
 
         // ### Ex component flow functions, uncomment to use
         // # main functions
-        
+
         /*public override bool initialize() {
             return true;
         }*/
+
+        #region INIT
 
         public override void start_experiment()
         {
@@ -64,47 +78,75 @@ namespace Ex
 
             graphicsHandler = FindObjectOfType<GraphicsHandler>();
             if (omniController != null) log_message(graphicsHandler.name + " found");
+
+            sceneConfigs = InitSceneConfigArray();
+
+            switch (current_routine().name)
+            {
+                case "LabScene": 
+                    currentScenesArrayID = 0;
+                    break;
+                case "WhiteScene": 
+                    currentScenesArrayID = 1;
+                    break;
+                case "ForestScene": 
+                    currentScenesArrayID = 2;
+                    break;
+                case "Forest FOA": 
+                    currentScenesArrayID = 3;
+                    break;
+            }
+            currentSceneConfig = sceneConfigs[currentScenesArrayID];
         }
 
         private IEnumerator PrepareNewRoutine()
         {
             yield return 0;
             
-            omniController.PrepareSoundInNewRoutine(current_routine().name);
-            graphicsHandler.SetGraphicsForRoutine(current_routine().name);
-
-            if (current_routine().name == "LabScene" || current_routine().name == "WhiteScene" || current_routine().name == "ForestScene" || lastRoutineName == "")
-            {
-                StartCoroutine(PrepareNewSceneFadeIn(true, true));
-            }
-            else if(current_routine().name == "Forest FOA")
-            {
-                StartCoroutine(PrepareNewSceneFadeIn(false, true));
-            }
+            omniController.PrepareSoundInNewRoutine(currentSceneConfig.sceneName);
+            graphicsHandler.SetGraphicsForRoutine(currentSceneConfig);
+            StartCoroutine(PrepareNewSceneFadeIn());
         }
+
+        SceneConfig[] InitSceneConfigArray()
+        {
+            sceneConfigs = new SceneConfig[4];
+            sceneConfigs[0] = new SceneConfig{sceneName = "LabScene",    fadeScreens = true,  fadeSounds = true, keepShelterLightOn = false, activateFog = false, fogColor = Color.white, fogDensity = 0f };
+            sceneConfigs[1] = new SceneConfig{sceneName = "WhiteScene",  fadeScreens = true,  fadeSounds = true, keepShelterLightOn = false, activateFog = false, fogColor = Color.white, fogDensity = 0f };
+            sceneConfigs[2] = new SceneConfig{sceneName = "ForestScene", fadeScreens = true,  fadeSounds = true, keepShelterLightOn = true, activateFog = true, fogColor = new Color(0.67f, 0.72f, 0.72f, 1f) , fogDensity = 0.0045f };
+            sceneConfigs[3] = new SceneConfig{sceneName = "Forest FOA",  fadeScreens = false, fadeSounds = true, keepShelterLightOn = false, activateFog = true, fogColor = new Color(0.29f, 0.32f, 0.32f, 1f) , fogDensity = 0.0045f };
+            return sceneConfigs;
+        }
+
+
+        #endregion
+
 
         public override void update()
         {
 
             if (UnityEngine.Input.GetKeyDown(KeyCode.Space) && !isFading)
             {
-                if (current_routine().name == "LabScene" || current_routine().name == "WhiteScene" || current_routine().name == "ForestScene")
-                {
-                    isFading = true;
-                    //currentScenesArrayID += 1;
-                    //if (currentScenesArrayID >= scenesArray.Length) currentScenesArrayID = 0;
-                    StartCoroutine(FadeOutAndLoadScene());
-                }
-                else
-                {
-                    next();
-                }
+                isFading = true;
+
+                lastSceneConfig = currentSceneConfig;
+                currentScenesArrayID += 1;
+                currentSceneConfig = sceneConfigs[currentScenesArrayID];
+                LogNewConfig(currentSceneConfig);
+                StartCoroutine(Fade(FadeDirection.Out));
+               
             }
 
-            omniController.UpdateSound();
+            if(omniController.isInitialized) omniController.UpdateSound();
         }
 
-        private IEnumerator PrepareNewSceneFadeIn(bool fadeScreens, bool fadeSounds)
+
+
+
+
+        #region FADE
+
+        private IEnumerator PrepareNewSceneFadeIn()
         {
             //globalVolume = FindObjectOfType<UnityEngine.Rendering.Volume>();
             //globalVolume.weight = 0;
@@ -120,12 +162,12 @@ namespace Ex
 
             yield return 0;
 
-            StartCoroutine(Fade(FadeDirection.In, fadeScreens, fadeSounds));
+            StartCoroutine(Fade(FadeDirection.In));
         }
 
 
 
-        private IEnumerator Fade(FadeDirection fadeDirection, bool fadeScreens, bool fadeSounds)
+        private IEnumerator Fade(FadeDirection fadeDirection)
         {
             float alpha = (fadeDirection == FadeDirection.Out) ? 0f : 1f;
             float fadeEndValue = (fadeDirection == FadeDirection.Out) ? 1f : 0f;
@@ -136,19 +178,19 @@ namespace Ex
                 log_message("fading in");
                 while (alpha >= fadeEndValue)
                 {
-                    ApplyFadeAmount(ref alpha, fadeDirection, fadeScreens);
+                    ApplyFadeAmount(ref alpha, fadeDirection);
                     yield return null;
                 }
-                if (fadeScreens)  foreach (GameObject screen in shelterScreens) screen.GetComponent<MeshRenderer>().enabled = false;
+                if (currentSceneConfig.fadeScreens)  foreach (GameObject screen in shelterScreens) screen.GetComponent<MeshRenderer>().enabled = false;
             }
             else
             {
                 log_message("fading out");
-                if (fadeScreens)  foreach (GameObject screen in shelterScreens) screen.GetComponent<MeshRenderer>().enabled = true;
+                if (currentSceneConfig.fadeScreens)  foreach (GameObject screen in shelterScreens) screen.GetComponent<MeshRenderer>().enabled = true;
 
                 while (alpha <= fadeEndValue)
                 {
-                    ApplyFadeAmount(ref alpha, fadeDirection, fadeScreens);
+                    ApplyFadeAmount(ref alpha, fadeDirection);
                     yield return null;
                 }
             }
@@ -162,7 +204,6 @@ namespace Ex
             else
             {
                 log_message("fade out done");
-                lastRoutineName = current_routine().name;
                 yield return new WaitForEndOfFrame();
                 next();
             }
@@ -171,11 +212,13 @@ namespace Ex
             if (fadeDirection == FadeDirection.In) isFading = false;
         }
 
-        private void ApplyFadeAmount(ref float alpha, FadeDirection fadeDirection, bool fadeScreens)
+
+
+        private void ApplyFadeAmount(ref float alpha, FadeDirection fadeDirection)
         {
 
             // meditation shelter
-            if (fadeScreens)
+            if (currentSceneConfig.fadeScreens)
             {
                 foreach (GameObject screen in shelterScreens)
                 {
@@ -184,7 +227,11 @@ namespace Ex
                 }
             }
 
-            if(current_routine().name != "ForestScene" && current_routine().name != "Forest FOA") shelterTransitionLight.intensity = alpha;
+            // if light is already on, don't light it
+            if(fadeDirection == FadeDirection.Out && !lastSceneConfig.keepShelterLightOn) shelterTransitionLight.intensity = alpha;
+
+            // if current scene asks to keep shelter light on, don't do anything
+            if(fadeDirection == FadeDirection.In && !currentSceneConfig.keepShelterLightOn) shelterTransitionLight.intensity = alpha;
 
             // lights
             for (int i = 0; i < lights.Count; i++)
@@ -206,42 +253,7 @@ namespace Ex
             alpha += Time.deltaTime * (1.0f / fadeSpeed) * ((fadeDirection == FadeDirection.In) ? -1 : 1);
         }
 
-
-        public IEnumerator FadeOutAndLoadScene()
-        {
-
-            bool fadeScreens = false, fadeSounds = false;
-
-            if (current_routine().name == "LabScene" || current_routine().name == "WhiteScene")
-            {
-                fadeScreens = true;
-                fadeSounds = true;
-            }
-            else if (current_routine().name == "ForestScene" || current_routine().name == "Forest FOA")
-            {
-                fadeScreens = false;
-                fadeSounds = true;
-            }
-
-            yield return Fade(FadeDirection.Out, fadeScreens, fadeSounds);
-
-            
-            //SceneManager.LoadScene(scenesArray[currentScenesArrayID]);
-
-            // remove already present dontdestroyonload object (atm shelter)
-            /*
-            yield return 0;
-
-            //if (FindObjectsOfType<DontDestroyOnLoad>().Length > 1) Destroy(FindObjectsOfType<DontDestroyOnLoad>()[1].gameObject);
-
-            yield return 0; // wait for the frame to end and the objects to be destroyed
-
-            PrepareNewSceneFadeIn();
-
-            yield return new WaitForSeconds(waitingTimeBetweenScenes);
-            yield return Fade(FadeDirection.In);*/
-        }
-
+        #endregion
 
 
 
@@ -294,16 +306,15 @@ namespace Ex
             tmpSkybox.SetFloat("_AtmosphereThickness", 0);
 
             RenderSettings.skybox = tmpSkybox;
+        }
 
-            //skyboxExposure = tmpSkybox.GetFloat("_Exposure");
-            //skyboxSunsize = tmpSkybox.GetFloat("_SunSize");
-            //skyboxConvergence = tmpSkybox.GetFloat("_SunSizeConvergence");
-            //skyboxThickness = tmpSkybox.GetFloat("_AtmosphereThickness");
-            //tmpSkybox.SetFloat("_SunSize", RenderSettings.skybox.GetFloat("_SunSize"));
-            //tmpSkybox.SetFloat("_SunSizeConvergence", RenderSettings.skybox.GetFloat("_SunSizeConvergence"));
-            //tmpSkybox.SetFloat("_AtmosphereThickness", RenderSettings.skybox.GetFloat("_AtmosphereThickness"));
-            //tmpSkybox.SetFloat("_Exposure", RenderSettings.skybox.GetFloat("_Exposure"));
 
+        
+
+        void LogNewConfig(SceneConfig currentSceneConfig)
+        {
+            log_message("New config : " + currentSceneConfig.sceneName);
+            log_message("Prefs : " + currentSceneConfig.fadeScreens.ToString()+" "+ currentSceneConfig.fadeSounds.ToString() + " "+ currentSceneConfig.keepShelterLightOn.ToString());
         }
 
         // public override void stop_routine() {}

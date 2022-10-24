@@ -128,6 +128,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 770236152, guid: 78742d156e6cece4d9c7e33f8baf6629, type: 3}
+      propertyPath: m_Range
+      value: 5.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 770236152, guid: 78742d156e6cece4d9c7e33f8baf6629, type: 3}
+      propertyPath: m_Shadows.m_Strength
+      value: 0.68
+      objectReference: {fileID: 0}
     - target: {fileID: 4314112180137515364, guid: 78742d156e6cece4d9c7e33f8baf6629,
         type: 3}
       propertyPath: m_RootOrder
@@ -667,7 +675,7 @@ PrefabInstance:
     - target: {fileID: 7642219578975864759, guid: 1c4fe3af9e7fa7846bd80faee06aeb0b,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7730742395313090430, guid: 1c4fe3af9e7fa7846bd80faee06aeb0b,
         type: 3}

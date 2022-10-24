@@ -18,33 +18,27 @@ namespace Ex
         bool fogActivated;
 
 
-        public void SetGraphicsForRoutine(string routineName)
+        public void SetGraphicsForRoutine(SceneConfig sceneConfig)
         {
 
-            if(routineName == "ForestScene" || routineName == "Forest FOA")
-            {
-                ActivateFog(true);
-                RenderSettings.ambientIntensity = 0.55f; // au lieu de 1.55
-                // uncheck realtime global illumination
-                // shelter transition light à 1 ou équivalent
-            }
-            else
-            {
-                ActivateFog(false);   
-            }
+            ActivateFog(sceneConfig);
+            RenderSettings.ambientIntensity = 0.55f; // au lieu de 1.55
+            
+            // uncheck realtime global illumination
+            // shelter transition light à 1 ou équivalent
             //yield return 0; // new WaitForEndOfFrame();
 
         }
 
 
-        public void ActivateFog(bool activate)
+        public void ActivateFog(SceneConfig sceneConfig)
         {
-            if (activate)
+            if (sceneConfig.activateFog)
             {
                 log_message("Activating fog");
                 RenderSettings.fog = true;
-                RenderSettings.fogColor = new Color(0.67f, 0.72f, 0.72f, 1f);
-                RenderSettings.fogDensity = 0.0045f;
+                RenderSettings.fogColor = sceneConfig.fogColor;
+                RenderSettings.fogDensity = sceneConfig.fogDensity;
                 RenderSettings.fogMode = FogMode.ExponentialSquared;
                 fogActivated = true;
             }
@@ -59,7 +53,7 @@ namespace Ex
         public override void update()
         {
 
-            if (UnityEngine.Input.GetKeyDown(KeyCode.F)) ActivateFog(!fogActivated);
+            //if (UnityEngine.Input.GetKeyDown(KeyCode.F)) ActivateFog(!fogActivated);
         
         }
 

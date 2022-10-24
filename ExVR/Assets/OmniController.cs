@@ -20,7 +20,6 @@ namespace Ex
 
     public class OmniController : BaseCompiledCSharpComponent{
 
-
 		private AudioSourceComponent _0deg;
 		private AudioSourceComponent _90deg;
 		private AudioSourceComponent _180deg;
@@ -30,7 +29,8 @@ namespace Ex
 		public float omniSoundsMainVolume = 1f;
 
         float backgroundMusicVolume;
-        bool isInitialized, fading;
+        public bool isInitialized;
+        bool fading;
         MusicType musicType;
         //public float playDelay;
 
@@ -108,17 +108,6 @@ namespace Ex
                     StartCoroutine(SwitchFromSpatializedToAmbientMusic(5f));
                 }
             }
-
-			//log_message(azimuth.ToString() +", "+ _0deg.audioSource.volume+", "+ _90deg.audioSource.volume+", "+ _180deg.audioSource.volume+", "+ _270deg.audioSource.volume);
-
-			/*if (_0deg.time < playDelay)
-			{
-				Debug.Log("Looping to custom clip start");
-				_0deg.time = playDelay;
-				_90deg.time = playDelay;
-				_180deg.time = playDelay;
-				_270deg.time = playDelay;
-			}*/
 
 		}
 

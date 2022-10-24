@@ -15,7 +15,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7947288127495589801
 Transform:
   m_ObjectHideFlags: 0
@@ -716,7 +716,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7549639463553158221}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.92149115, y: -1.3135858, z: 0.9193764}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -743,10 +743,10 @@ MonoBehaviour:
   myCamera: {fileID: 0}
   vol: 100
   playDelay: 0
-  _0degMultiplier: 0
-  _90degMultiplier: 0
-  _180degMultiplier: 0
-  _270degMultiplier: 0
+  _0degMultiplier: 1
+  _90degMultiplier: 1
+  _180degMultiplier: 1
+  _270degMultiplier: 1
   audioMixerGroup: {fileID: 24300002, guid: ad6ade5e7029d7c41b2cb39a6022498c, type: 2}
 --- !u!1 &8168543980422623718
 GameObject:

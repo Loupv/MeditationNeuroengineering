@@ -347,10 +347,6 @@ MonoBehaviour:
   myCamera: {fileID: 0}
   vol: 100
   playDelay: 0
-  _0degMultiplier: 0
-  _90degMultiplier: 0
-  _180degMultiplier: 0
-  _270degMultiplier: 0
   audioMixerGroup: {fileID: 24300002, guid: ad6ade5e7029d7c41b2cb39a6022498c, type: 2}
 --- !u!1 &1455161514
 GameObject:
@@ -885,17 +881,17 @@ PrefabInstance:
     - target: {fileID: 7549639463553158218, guid: 8813cf2dad8c6db42b6e25b4073503a9,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.921
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7549639463553158218, guid: 8813cf2dad8c6db42b6e25b4073503a9,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.69
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7549639463553158218, guid: 8813cf2dad8c6db42b6e25b4073503a9,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -8.081
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7549639463553158218, guid: 8813cf2dad8c6db42b6e25b4073503a9,
         type: 3}
@@ -937,26 +933,6 @@ PrefabInstance:
       propertyPath: myCamera
       value: 
       objectReference: {fileID: 1894938264}
-    - target: {fileID: 7549639463553158219, guid: 8813cf2dad8c6db42b6e25b4073503a9,
-        type: 3}
-      propertyPath: _0degMultiplier
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7549639463553158219, guid: 8813cf2dad8c6db42b6e25b4073503a9,
-        type: 3}
-      propertyPath: _90degMultiplier
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7549639463553158219, guid: 8813cf2dad8c6db42b6e25b4073503a9,
-        type: 3}
-      propertyPath: _180degMultiplier
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7549639463553158219, guid: 8813cf2dad8c6db42b6e25b4073503a9,
-        type: 3}
-      propertyPath: _270degMultiplier
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7549639463553158221, guid: 8813cf2dad8c6db42b6e25b4073503a9,
         type: 3}
       propertyPath: m_Name
