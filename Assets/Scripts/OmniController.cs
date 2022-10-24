@@ -19,6 +19,8 @@ public class OmniController : MonoBehaviour {
 
 	public float playDelay;
 
+	public float _0degMultiplier, _90degMultiplier, _180degMultiplier, _270degMultiplier;
+
 	public AudioMixerGroup audioMixerGroup;
 
 	// Use this for initialization
@@ -72,7 +74,7 @@ public class OmniController : MonoBehaviour {
 		float azimuthRad = azimuth * Mathf.Deg2Rad;
 
 
-		if (azimuth <= 90.0f)
+		/*if (azimuth <= 90.0f)
 		{
 			_0deg.volume =  Mathf.Abs(Remap(azimuth % 360, 0, 90, 1, 0));
 			_90deg.volume = Mathf.Abs(Remap(azimuth % 360, 0, 90, 0, 1));
@@ -99,7 +101,43 @@ public class OmniController : MonoBehaviour {
 			_90deg.volume = 0.0f;
 			_180deg.volume = 0.0f;
 			_270deg.volume = Mathf.Abs(Remap(azimuth % 360, 270, 360, 1, 0));
+		}*/
+
+
+		if (azimuth <= 90.0f)
+		{
+			_0deg.volume = Mathf.Cos(azimuthRad) * vol;
+			_90deg.volume = Mathf.Sin(azimuthRad) * vol;
+			_180deg.volume = 0.0f;
+			_270deg.volume = 0.0f;
 		}
+		else if (azimuth > 90.0f && azimuth <= 180.0f)
+		{
+			_0deg.volume = 0.0f;
+			_90deg.volume = Mathf.Cos(azimuthRad - Mathf.PI / 2.0f) * vol;
+			_180deg.volume = Mathf.Sin(azimuthRad - Mathf.PI / 2.0f) * vol;
+			_270deg.volume = 0.0f;
+		}
+		else if (azimuth > 180.0f && azimuth <= 270.0f)
+		{
+			_0deg.volume = 0.0f;
+			_90deg.volume = 0.0f;
+			_180deg.volume = Mathf.Cos(azimuthRad - Mathf.PI) * vol;
+			_270deg.volume = Mathf.Sin(azimuthRad - Mathf.PI) * vol;
+		}
+		else if (azimuth > 270.0f && azimuth <= 360.0f)
+		{
+			_0deg.volume = Mathf.Sin(azimuthRad - Mathf.PI - Mathf.PI / 2.0f) * vol;
+			_90deg.volume = 0.0f;
+			_180deg.volume = 0.0f;
+			_270deg.volume = Mathf.Cos(azimuthRad - Mathf.PI - Mathf.PI / 2.0f) * vol;
+		}
+		Debug.Log("yes");
+
+		_0deg.volume *= _0degMultiplier;
+		_90deg.volume *= _90degMultiplier;
+		_180deg.volume *= _180degMultiplier;
+		_270deg.volume *= _270degMultiplier;
 
 
 		//Camera.main.transform.Rotate(0.0f, 1.0f, 0.0f, Space.World);

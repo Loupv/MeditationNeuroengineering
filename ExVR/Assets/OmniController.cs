@@ -175,11 +175,11 @@ namespace Ex
         void SetOmniControllerOrientation()
         {
             float azimuth = myCameraTransform.rotation.eulerAngles.y;
-            //float azimuthRad = azimuth * Mathf.Deg2Rad;
+            float azimuthRad = azimuth * Mathf.Deg2Rad;
 
             //log_message(myCameraTransform.position.y.ToString() +" "+ azimuth.ToString());
 
-            if (azimuth <= 90.0f)
+            /*if (azimuth <= 90.0f)
             {
                 _0deg.set_volume(Mathf.Abs(Remap(azimuth % 360, 0, 90, 1, 0)) * omniSoundsMainVolume);
                 _90deg.set_volume(Mathf.Abs(Remap(azimuth % 360, 0, 90, 0, 1)) * omniSoundsMainVolume);
@@ -206,7 +206,38 @@ namespace Ex
                 _90deg.set_volume(0.0f);
                 _180deg.set_volume(0.0f);
                 _270deg.set_volume(Mathf.Abs(Remap(azimuth % 360, 270, 360, 1, 0)) * omniSoundsMainVolume);
+            }*/
+
+            if (azimuth <= 90.0f)
+            {
+                _0deg.set_volume(Mathf.Cos(azimuthRad) * omniSoundsMainVolume);
+                _90deg.set_volume(Mathf.Sin(azimuthRad) * omniSoundsMainVolume);
+                _180deg.set_volume(0.0f);
+                _270deg.set_volume(0.0f);
             }
+            else if (azimuth > 90.0f && azimuth <= 180.0f)
+            {
+                _0deg.set_volume(0.0f);
+                _90deg.set_volume(Mathf.Cos(azimuthRad - Mathf.PI / 2.0f) * omniSoundsMainVolume);
+                _180deg.set_volume(Mathf.Sin(azimuthRad - Mathf.PI / 2.0f) * omniSoundsMainVolume);
+                _270deg.set_volume(0.0f);
+            }
+            else if (azimuth > 180.0f && azimuth <= 270.0f)
+            {
+                 _0deg.set_volume(0.0f);
+                 _90deg.set_volume(0.0f);
+                 _180deg.set_volume(Mathf.Cos(azimuthRad - Mathf.PI) * omniSoundsMainVolume);
+                _270deg.set_volume(Mathf.Sin(azimuthRad - Mathf.PI) * omniSoundsMainVolume);
+            }
+            else if (azimuth > 270.0f && azimuth <= 360.0f)
+            {
+                 _0deg.set_volume(Mathf.Sin(azimuthRad - Mathf.PI - Mathf.PI / 2.0f) * omniSoundsMainVolume);
+                 _90deg.set_volume(0.0f);
+                 _180deg.set_volume(0.0f);
+                _270deg.set_volume(Mathf.Cos(azimuthRad - Mathf.PI - Mathf.PI / 2.0f) * omniSoundsMainVolume);
+            }
+
+
         }
 
 

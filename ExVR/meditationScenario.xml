@@ -197,7 +197,7 @@
                     <Arg name="ambient_color" ui="Color pick" value="1 0.211765 0.227451 0.258824" type="System.Single" dim="1" sep=" " sizes="4"/>
                     <Arg name="ambient_intensity" ui="Float spin box" value="1.5" type="System.Single" dim="0"/>
                     <Arg name="ambient_mode" ui="Combo box index" value="0" type="System.Int32" dim="0"/>
-                    <Arg name="atmosphere-thickness" ui="Float spin box" value="0.68" type="System.Single" dim="0"/>
+                    <Arg name="atmosphere-thickness" ui="Float spin box" value="0.43" type="System.Single" dim="0"/>
                     <Arg name="background_color" ui="Color pick" value="1 0.207843 0.188235 0.188235" type="System.Single" dim="1" sep=" " sizes="4"/>
                     <Arg name="convergence" ui="Float spin box" value="3.49" type="System.Single" dim="0"/>
                     <Arg name="cubemap" ui="Resource" value="%%%-1" type="System.String" dim="1" sep="%%%" sizes="2"/>
@@ -408,8 +408,8 @@
         </Component>
         <Component key="23" name="FPPCamera" category="Camera" type="Camera" global="0" always_updating="0" exceptions="1" frame_logging="0" trigger_logging="0" restricted="0" priority="0">
             <InitConfig key="48" name="standard">
-                <Arg name="position" ui="Vector 3D" value="0 1.7 1.8" type="System.Single" dim="1" sep=" " sizes="3"/>
-                <Arg name="rotation" ui="Vector 3D" value="10.7 180 0" type="System.Single" dim="1" sep=" " sizes="3"/>
+                <Arg name="position" ui="Vector 3D" value="-0.22 1.7 1.8" type="System.Single" dim="1" sep=" " sizes="3"/>
+                <Arg name="rotation" ui="Vector 3D" value="11.5 180 0" type="System.Single" dim="1" sep=" " sizes="3"/>
                 <Arg name="start_experiment" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                 <Arg name="use_eye" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
                 <Arg name="use_neutral" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
@@ -418,7 +418,7 @@
                 <Config key="49" name="standard">
                     <Arg name="debug_camera" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="m_speed" ui="Float spin box" value="1" type="System.Single" dim="0"/>
-                    <Arg name="position" ui="Vector 3D" value="0 0 0" type="System.Single" dim="1" sep=" " sizes="3"/>
+                    <Arg name="position" ui="Vector 3D" value="0.16 0 0" type="System.Single" dim="1" sep=" " sizes="3"/>
                     <Arg name="rotation" ui="Vector 3D" value="0 0 0" type="System.Single" dim="1" sep=" " sizes="3"/>
                     <Arg name="rx_speed" ui="Float spin box" value="2" type="System.Single" dim="0"/>
                     <Arg name="ry_speed" ui="Float spin box" value="2" type="System.Single" dim="0"/>
@@ -1178,14 +1178,14 @@
         </Component>
         <Component key="50" name="First person perspective camera" category="Camera" type="FPPCamera" global="0" always_updating="0" exceptions="1" frame_logging="0" trigger_logging="0" restricted="0" priority="0">
             <InitConfig key="110" name="standard">
-                <Arg name="init_transform" ui="Transformation" value="0 0 0 0 0 0 1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
+                <Arg name="init_transform" ui="Transformation" value="-0.07 0 0 0 0 0 1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
                 <Arg name="init_transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                 <Arg name="use_eye" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
                 <Arg name="use_neutral" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
             </InitConfig>
             <Configs>
                 <Config key="111" name="standard">
-                    <Arg name="transform" ui="Transformation" value="0 1.5 0.3 0 180 0 1.03 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
+                    <Arg name="transform" ui="Transformation" value="-0.74 1.5 0.3 0 180 0 1.03 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
                     <Arg name="transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="use_eye" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="use_neutral" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
