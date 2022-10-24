@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Experiment name="meditationScenario" version="1.0a60" mode="designer" designer-used="C:/Users/vuarness/Documents/exvr-designer/ExVR.exe">
     <Settings debug="1" csharp_debug_info="0" catch_components_exceptions="0" positional_tracking="1" catch_external_keyboard_events="0">
-        <Display mode="0" stereo_fov="60" fullscreen="0" monitor_id="1" resolution_id="1" custom_width="1920" custom_height="1080"/>
+        <Display mode="1" stereo_fov="60" fullscreen="0" monitor_id="1" resolution_id="1" custom_width="1920" custom_height="1080"/>
         <Camera neutral_x="0" neutral_y="1" neutral_z="0"/>
     </Settings>
     <Resources reload="200">
@@ -68,7 +68,7 @@
         <Component key="6" name="SkyBox" category="Environment" type="Sky" global="0" always_updating="0" exceptions="1" frame_logging="0" trigger_logging="0" restricted="0" priority="2">
             <InitConfig key="12" name="standard"/>
             <Configs>
-                <Config key="13" name="Lab">
+                <Config key="13" name="LabScene">
                     <Arg name="6sided-exposure" ui="Float spin box" value="1" type="System.Single" dim="0"/>
                     <Arg name="6sided-rotation" ui="Float spin box" value="0" type="System.Single" dim="0"/>
                     <Arg name="6sided-tint" ui="Color pick" value="0.498039 0.498039 0.498039 0.498039" type="System.Single" dim="1" sep=" " sizes="4"/>
@@ -123,7 +123,7 @@
                     <Arg name="sun_shadow_normal_bias" ui="Float spin box" value="0.4" type="System.Single" dim="0"/>
                     <Arg name="sun_shadow_strength" ui="Float spin box" value="1" type="System.Single" dim="0"/>
                 </Config>
-                <Config key="46" name="WhiteRoom">
+                <Config key="46" name="WhiteScene">
                     <Arg name="6sided-exposure" ui="Float spin box" value="1" type="System.Single" dim="0"/>
                     <Arg name="6sided-rotation" ui="Float spin box" value="0" type="System.Single" dim="0"/>
                     <Arg name="6sided-tint" ui="Color pick" value="0.498039 0.498039 0.498039 0.498039" type="System.Single" dim="1" sep=" " sizes="4"/>
@@ -178,7 +178,7 @@
                     <Arg name="sun_shadow_normal_bias" ui="Float spin box" value="0.4" type="System.Single" dim="0"/>
                     <Arg name="sun_shadow_strength" ui="Float spin box" value="1" type="System.Single" dim="0"/>
                 </Config>
-                <Config key="47" name="Forest">
+                <Config key="47" name="ForestScene">
                     <Arg name="6sided-exposure" ui="Float spin box" value="1" type="System.Single" dim="0"/>
                     <Arg name="6sided-rotation" ui="Float spin box" value="0" type="System.Single" dim="0"/>
                     <Arg name="6sided-tint" ui="Color pick" value="0.498039 0.498039 0.498039 0.498039" type="System.Single" dim="1" sep=" " sizes="4"/>
@@ -233,7 +233,7 @@
                     <Arg name="sun_shadow_normal_bias" ui="Float spin box" value="0.4" type="System.Single" dim="0"/>
                     <Arg name="sun_shadow_strength" ui="Float spin box" value="1" type="System.Single" dim="0"/>
                 </Config>
-                <Config key="101" name="ForestFOA">
+                <Config key="101" name="Forest FOA">
                     <Arg name="6sided-exposure" ui="Float spin box" value="1" type="System.Single" dim="0"/>
                     <Arg name="6sided-rotation" ui="Float spin box" value="0" type="System.Single" dim="0"/>
                     <Arg name="6sided-tint" ui="Color pick" value="0.498039 0.498039 0.498039 0.498039" type="System.Single" dim="1" sep=" " sizes="4"/>
@@ -293,7 +293,7 @@
         <Component key="11" name="Post process" category="Environment" type="PostProcess" global="0" always_updating="0" exceptions="1" frame_logging="0" trigger_logging="0" restricted="0" priority="2">
             <InitConfig key="22" name="standard"/>
             <Configs>
-                <Config key="23" name="labroom">
+                <Config key="23" name="LabScene">
                     <Arg name="ao_color" ui="Color pick" value="1 0 0 0" type="System.Single" dim="1" sep=" " sizes="4"/>
                     <Arg name="ao_color_enable" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="ao_enable" ui="Check box" value="true" type="System.Boolean" dim="0"/>
@@ -330,7 +330,7 @@
                     <Arg name="v_smoothness" ui="Float values slider" value="0.8" type="System.Single" dim="0"/>
                     <Arg name="v_smoothness_enable" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                 </Config>
-                <Config key="64" name="whiteroom">
+                <Config key="64" name="WhiteScene">
                     <Arg name="ao_color" ui="Color pick" value="1 0 0 0" type="System.Single" dim="1" sep=" " sizes="4"/>
                     <Arg name="ao_color_enable" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="ao_enable" ui="Check box" value="false" type="System.Boolean" dim="0"/>
@@ -358,16 +358,16 @@
                     <Arg name="v_color" ui="Color pick" value="1 0 0 0" type="System.Single" dim="1" sep=" " sizes="4"/>
                     <Arg name="v_color_enable" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="v_enable" ui="Check box" value="true" type="System.Boolean" dim="0"/>
-                    <Arg name="v_intensity" ui="Float values slider" value="0.5" type="System.Single" dim="0"/>
+                    <Arg name="v_intensity" ui="Float values slider" value="0.2" type="System.Single" dim="0"/>
                     <Arg name="v_intensity_enable" ui="Check box" value="true" type="System.Boolean" dim="0"/>
-                    <Arg name="v_rounded" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="v_rounded_enable" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="v_roundness" ui="Float values slider" value="0.5" type="System.Single" dim="0"/>
+                    <Arg name="v_rounded" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="v_rounded_enable" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="v_roundness" ui="Float values slider" value="1" type="System.Single" dim="0"/>
                     <Arg name="v_roundness_enable" ui="Check box" value="true" type="System.Boolean" dim="0"/>
-                    <Arg name="v_smoothness" ui="Float values slider" value="0.5" type="System.Single" dim="0"/>
+                    <Arg name="v_smoothness" ui="Float values slider" value="0.8" type="System.Single" dim="0"/>
                     <Arg name="v_smoothness_enable" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                 </Config>
-                <Config key="65" name="forestscene">
+                <Config key="65" name="Forestscene">
                     <Arg name="ao_color" ui="Color pick" value="1 0 0 0" type="System.Single" dim="1" sep=" " sizes="4"/>
                     <Arg name="ao_color_enable" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="ao_enable" ui="Check box" value="true" type="System.Boolean" dim="0"/>
@@ -395,13 +395,50 @@
                     <Arg name="v_color" ui="Color pick" value="1 0 0 0" type="System.Single" dim="1" sep=" " sizes="4"/>
                     <Arg name="v_color_enable" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="v_enable" ui="Check box" value="true" type="System.Boolean" dim="0"/>
-                    <Arg name="v_intensity" ui="Float values slider" value="0.5" type="System.Single" dim="0"/>
+                    <Arg name="v_intensity" ui="Float values slider" value="0.2" type="System.Single" dim="0"/>
                     <Arg name="v_intensity_enable" ui="Check box" value="true" type="System.Boolean" dim="0"/>
-                    <Arg name="v_rounded" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="v_rounded_enable" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="v_roundness" ui="Float values slider" value="0.5" type="System.Single" dim="0"/>
+                    <Arg name="v_rounded" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="v_rounded_enable" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="v_roundness" ui="Float values slider" value="1" type="System.Single" dim="0"/>
                     <Arg name="v_roundness_enable" ui="Check box" value="true" type="System.Boolean" dim="0"/>
-                    <Arg name="v_smoothness" ui="Float values slider" value="0.5" type="System.Single" dim="0"/>
+                    <Arg name="v_smoothness" ui="Float values slider" value="0.8" type="System.Single" dim="0"/>
+                    <Arg name="v_smoothness_enable" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                </Config>
+                <Config key="112" name="Forest FOA">
+                    <Arg name="ao_color" ui="Color pick" value="1 0 0 0" type="System.Single" dim="1" sep=" " sizes="4"/>
+                    <Arg name="ao_color_enable" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="ao_enable" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="ao_intensity" ui="Float values slider" value="0.43" type="System.Single" dim="0"/>
+                    <Arg name="ao_intensity_enable" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="ao_thickness" ui="Float values slider" value="5.22" type="System.Single" dim="0"/>
+                    <Arg name="ao_thickness_enable" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="cg_enable" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="cg_tone_color_filter" ui="Color pick" value="1 1 0 0" type="System.Single" dim="1" sep=" " sizes="4"/>
+                    <Arg name="cg_tone_color_filter_enable" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="cg_tone_contrast" ui="Integer slider" value="0" type="System.Int32" dim="0"/>
+                    <Arg name="cg_tone_contrast_enable" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="cg_tone_hue_shift" ui="Integer slider" value="0" type="System.Int32" dim="0"/>
+                    <Arg name="cg_tone_hue_shift_enable" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="cg_tone_post_exposure" ui="Float values slider" value="0.9" type="System.Single" dim="0"/>
+                    <Arg name="cg_tone_post_exposure_enable" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="cg_tone_saturation" ui="Integer slider" value="1" type="System.Int32" dim="0"/>
+                    <Arg name="cg_tone_saturation_enable" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="cg_wb_temp" ui="Float values slider" value="18.6" type="System.Single" dim="0"/>
+                    <Arg name="cg_wb_temp_enable" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="cg_wb_tint" ui="Float values slider" value="0" type="System.Single" dim="0"/>
+                    <Arg name="cg_wb_tint_enable" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="v_center" ui="Vector 2D" value="0.5 0.5" type="System.Single" dim="1" sep=" " sizes="2"/>
+                    <Arg name="v_center_enable" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="v_color" ui="Color pick" value="1 0 0 0" type="System.Single" dim="1" sep=" " sizes="4"/>
+                    <Arg name="v_color_enable" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="v_enable" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="v_intensity" ui="Float values slider" value="0.2" type="System.Single" dim="0"/>
+                    <Arg name="v_intensity_enable" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="v_rounded" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="v_rounded_enable" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="v_roundness" ui="Float values slider" value="1" type="System.Single" dim="0"/>
+                    <Arg name="v_roundness_enable" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="v_smoothness" ui="Float values slider" value="0.8" type="System.Single" dim="0"/>
                     <Arg name="v_smoothness_enable" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                 </Config>
             </Configs>
@@ -416,7 +453,7 @@
             </InitConfig>
             <Configs>
                 <Config key="49" name="standard">
-                    <Arg name="debug_camera" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="debug_camera" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="m_speed" ui="Float spin box" value="1" type="System.Single" dim="0"/>
                     <Arg name="position" ui="Vector 3D" value="0.16 0 0" type="System.Single" dim="1" sep=" " sizes="3"/>
                     <Arg name="rotation" ui="Vector 3D" value="0 0 0" type="System.Single" dim="1" sep=" " sizes="3"/>
@@ -1220,7 +1257,7 @@
                         </Timeline>
                     </Action>
                     <Action key="14" key_component="11" key_config="23" node_used="0" node_position="0 0">
-                        <!--Component Post process with config labroom -->
+                        <!--Component Post process with config LabScene -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
                             <Interval t1="0" t2="100"/>
@@ -1231,7 +1268,7 @@
                         </Timeline>
                     </Action>
                     <Action key="36" key_component="6" key_config="13" node_used="0" node_position="0 0">
-                        <!--Component SkyBox with config Lab -->
+                        <!--Component SkyBox with config LabScene -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
                             <Interval t1="0" t2="100"/>
@@ -1351,6 +1388,17 @@
                             <Interval t1="0" t2="100"/>
                         </Timeline>
                     </Action>
+                    <Action key="122" key_component="23" key_config="49" node_used="0" node_position="0 0">
+                        <!--Component FPPCamera with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
+                            <Interval t1="0" t2="100"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
+                            <Interval t1="0" t2="100"/>
+                        </Timeline>
+                    </Action>
                 </Condition>
             </Routine>
             <Routine key="3" name="WhiteScene" randomizer="0" informations="">
@@ -1389,7 +1437,7 @@
                         </Timeline>
                     </Action>
                     <Action key="13" key_component="11" key_config="64" node_used="0" node_position="0 0">
-                        <!--Component Post process with config whiteroom -->
+                        <!--Component Post process with config WhiteScene -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
                             <Interval t1="0" t2="100"/>
@@ -1400,7 +1448,7 @@
                         </Timeline>
                     </Action>
                     <Action key="37" key_component="6" key_config="46" node_used="0" node_position="0 0">
-                        <!--Component SkyBox with config WhiteRoom -->
+                        <!--Component SkyBox with config WhiteScene -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
                             <Interval t1="0" t2="100"/>
@@ -1558,7 +1606,7 @@
                         </Timeline>
                     </Action>
                     <Action key="28" key_component="11" key_config="65" node_used="0" node_position="0 0">
-                        <!--Component Post process with config forestscene -->
+                        <!--Component Post process with config Forestscene -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
                             <Interval t1="0" t2="100"/>
@@ -1569,7 +1617,7 @@
                         </Timeline>
                     </Action>
                     <Action key="38" key_component="6" key_config="47" node_used="0" node_position="0 0">
-                        <!--Component SkyBox with config Forest -->
+                        <!--Component SkyBox with config ForestScene -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
                             <Interval t1="0" t2="100"/>
@@ -1704,8 +1752,8 @@
                             <Interval t1="0" t2="100"/>
                         </Timeline>
                     </Action>
-                    <Action key="103" key_component="11" key_config="65" node_used="0" node_position="0 0">
-                        <!--Component Post process with config forestscene -->
+                    <Action key="103" key_component="11" key_config="23" node_used="0" node_position="0 0">
+                        <!--Component Post process with config LabScene -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
                             <Interval t1="0" t2="100"/>
@@ -1716,7 +1764,7 @@
                         </Timeline>
                     </Action>
                     <Action key="114" key_component="6" key_config="101" node_used="0" node_position="0 0">
-                        <!--Component SkyBox with config ForestFOA -->
+                        <!--Component SkyBox with config Forest FOA -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
                             <Interval t1="0" t2="100"/>

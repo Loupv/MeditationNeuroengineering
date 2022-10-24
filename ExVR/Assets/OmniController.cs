@@ -55,7 +55,7 @@ namespace Ex
                 musicType = MusicType.Ambient; 
             }
 
-            isInitialized = true;
+            
         }
 
         // called by scene fader
@@ -64,7 +64,6 @@ namespace Ex
             //myCamera = get<CameraComponent>("FPPCamera");
             //var disp = ExVR.Display.cameras();
             //myCamera 
-
 
             //log_message(myCameraTransform.name);
             if(routineName == "LabScene"){
@@ -94,7 +93,10 @@ namespace Ex
             _90deg.set_volume(0);
             _180deg.set_volume(0);
             _270deg.set_volume(0);
+
+            isInitialized = true;
         }
+
 
         // Update is called once per frame
         public void UpdateSound()

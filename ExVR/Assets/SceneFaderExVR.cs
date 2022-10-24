@@ -14,7 +14,7 @@ namespace Ex
     public class SceneConfig{
 
         public string sceneName;
-        public bool fadeScreens, fadeSounds, keepShelterLightOn, activateFog;
+        public bool closeScreensBeforeFading, fadeSounds, keepShelterLightOn, activateFog;
         public Color fogColor;
         public float fogDensity;
     }
@@ -26,8 +26,8 @@ namespace Ex
 
         public GameObject[] shelterScreens;
         //UnityEngine.Rendering.Volume globalVolume;
-        public float fadeSpeed = 3.8f, waitingTimeBetweenScenes = 2f;
-        public bool hasFaded, isFading;
+        public float fadeSpeed = 3f, waitingTimeBetweenScenes = 2f;
+        public bool hasFaded, isFading, fadingDone;
 
         public List<Light> lights;
         Light shelterTransitionLight;
@@ -44,18 +44,23 @@ namespace Ex
         SceneConfig[] sceneConfigs;
         SceneConfig currentSceneConfig, lastSceneConfig;
 
+        SceneConfig[] InitSceneConfigArray()
+        {
+            sceneConfigs = new SceneConfig[4];
+            sceneConfigs[0] = new SceneConfig { sceneName = "LabScene", closeScreensBeforeFading = true, fadeSounds = true, keepShelterLightOn = false, activateFog = false, fogColor = Color.white, fogDensity = 0f };
+            sceneConfigs[1] = new SceneConfig { sceneName = "WhiteScene", closeScreensBeforeFading = true, fadeSounds = true, keepShelterLightOn = false, activateFog = false, fogColor = Color.white, fogDensity = 0f };
+            sceneConfigs[2] = new SceneConfig { sceneName = "ForestScene", closeScreensBeforeFading = true, fadeSounds = true, keepShelterLightOn = true, activateFog = true, fogColor = new Color(0.67f, 0.72f, 0.72f, 1f), fogDensity = 0.0045f };
+            sceneConfigs[3] = new SceneConfig { sceneName = "Forest FOA", closeScreensBeforeFading = false, fadeSounds = true, keepShelterLightOn = false, activateFog = true, fogColor = new Color(0.29f, 0.32f, 0.32f, 1f), fogDensity = 0.0045f };
+            return sceneConfigs;
+        }
+
         public enum FadeDirection
         {
             In, //Alpha = 1
             Out // Alpha = 0
         }
 
-        // ### Ex component flow functions, uncomment to use
-        // # main functions
 
-        /*public override bool initialize() {
-            return true;
-        }*/
 
         #region INIT
 
@@ -64,10 +69,6 @@ namespace Ex
             StartCoroutine(PrepareExperiment());
         }
 
-        public override void start_routine()
-        {
-            StartCoroutine(PrepareNewRoutine());
-        }
 
         private IEnumerator PrepareExperiment()
         {
@@ -80,7 +81,7 @@ namespace Ex
             if (omniController != null) log_message(graphicsHandler.name + " found");
 
             sceneConfigs = InitSceneConfigArray();
-
+            
             switch (current_routine().name)
             {
                 case "LabScene": 
@@ -97,29 +98,44 @@ namespace Ex
                     break;
             }
             currentSceneConfig = sceneConfigs[currentScenesArrayID];
+
         }
+
+
+        public override void start_routine()
+        {
+            StartCoroutine(PrepareNewRoutine());
+        }
+        
 
         private IEnumerator PrepareNewRoutine()
         {
             yield return 0;
-            
+
             omniController.PrepareSoundInNewRoutine(currentSceneConfig.sceneName);
             graphicsHandler.SetGraphicsForRoutine(currentSceneConfig);
-            StartCoroutine(PrepareNewSceneFadeIn());
+
+            //yield return new WaitForEndOfFrame();
+
+            shelterScreens = Resources.FindObjectsOfTypeAll<GameObject>().Where(obj => (obj.name == "ShelterScreen" && obj.activeInHierarchy)).ToArray();
+            
+            if(lastSceneConfig == null)
+            {
+                foreach (GameObject screen in shelterScreens)
+                {
+                    Material mat = screen.GetComponent<MeshRenderer>().materials[0];
+                    mat.SetColor("_Color", new Color(mat.color.r, mat.color.g, mat.color.b, 1));
+                }
+            }
+
+            //CopyCurrentSkybox();
+            GetLightsReferences();
+            ShutEveryLights();
+
+            yield return 0;
+           
+            StartCoroutine(FadeIn());
         }
-
-        SceneConfig[] InitSceneConfigArray()
-        {
-            sceneConfigs = new SceneConfig[4];
-            sceneConfigs[0] = new SceneConfig{sceneName = "LabScene",    fadeScreens = true,  fadeSounds = true, keepShelterLightOn = false, activateFog = false, fogColor = Color.white, fogDensity = 0f };
-            sceneConfigs[1] = new SceneConfig{sceneName = "WhiteScene",  fadeScreens = true,  fadeSounds = true, keepShelterLightOn = false, activateFog = false, fogColor = Color.white, fogDensity = 0f };
-            sceneConfigs[2] = new SceneConfig{sceneName = "ForestScene", fadeScreens = true,  fadeSounds = true, keepShelterLightOn = true, activateFog = true, fogColor = new Color(0.67f, 0.72f, 0.72f, 1f) , fogDensity = 0.0045f };
-            sceneConfigs[3] = new SceneConfig{sceneName = "Forest FOA",  fadeScreens = false, fadeSounds = true, keepShelterLightOn = false, activateFog = true, fogColor = new Color(0.29f, 0.32f, 0.32f, 1f) , fogDensity = 0.0045f };
-            return sceneConfigs;
-        }
-
-
-        #endregion
 
 
         public override void update()
@@ -133,99 +149,115 @@ namespace Ex
                 currentScenesArrayID += 1;
                 currentSceneConfig = sceneConfigs[currentScenesArrayID];
                 LogNewConfig(currentSceneConfig);
-                StartCoroutine(Fade(FadeDirection.Out));
+
+                StartCoroutine(FadeOut());
+
+                
                
+
             }
 
-            if(omniController.isInitialized) omniController.UpdateSound();
-        }
-
-
-
-
-
-        #region FADE
-
-        private IEnumerator PrepareNewSceneFadeIn()
-        {
-            //globalVolume = FindObjectOfType<UnityEngine.Rendering.Volume>();
-            //globalVolume.weight = 0;
-            
-            yield return 0;
-             
-            shelterScreens = Resources.FindObjectsOfTypeAll<GameObject>().Where(obj => (obj.name == "ShelterScreen" && obj.activeInHierarchy)).ToArray();
-            
-            CopyCurrentSkybox();
-
-            GetLightsReferences();
-            ShutEveryLights();
-
-            yield return 0;
-
-            StartCoroutine(Fade(FadeDirection.In));
-        }
-
-
-
-        private IEnumerator Fade(FadeDirection fadeDirection)
-        {
-            float alpha = (fadeDirection == FadeDirection.Out) ? 0f : 1f;
-            float fadeEndValue = (fadeDirection == FadeDirection.Out) ? 1f : 0f;
-
-            
-            if (fadeDirection == FadeDirection.In)
+            if (isFading && fadingDone)
             {
-                log_message("fading in");
-                while (alpha >= fadeEndValue)
-                {
-                    ApplyFadeAmount(ref alpha, fadeDirection);
-                    yield return null;
-                }
-                if (currentSceneConfig.fadeScreens)  foreach (GameObject screen in shelterScreens) screen.GetComponent<MeshRenderer>().enabled = false;
+                fadingDone = false;
+                next();
             }
-            else
+            if (omniController.isInitialized) omniController.UpdateSound();
+        }
+        #endregion
+
+
+
+
+        #region FADES
+
+    
+        private IEnumerator FadeOut()
+        {
+            log_message("fading out");
+
+            float alpha = 0;
+            float fadeEndValue = 1;
+            
+            // first we check if we need to fade screens
+            if (currentSceneConfig.closeScreensBeforeFading)
             {
-                log_message("fading out");
-                if (currentSceneConfig.fadeScreens)  foreach (GameObject screen in shelterScreens) screen.GetComponent<MeshRenderer>().enabled = true;
+                foreach (GameObject screen in shelterScreens) screen.GetComponent<MeshRenderer>().enabled = true;
+                
 
                 while (alpha <= fadeEndValue)
                 {
-                    ApplyFadeAmount(ref alpha, fadeDirection);
+                    foreach (GameObject screen in shelterScreens)
+                    {
+                        Material mat = screen.GetComponent<MeshRenderer>().materials[0];
+                        mat.SetColor("_Color", new Color(mat.color.r, mat.color.g, mat.color.b, alpha));
+                    }
+                    alpha += Time.deltaTime * (1.0f / fadeSpeed);
                     yield return null;
                 }
             }
-            
 
 
-            if (fadeDirection == FadeDirection.In)
+            // lights and sound
+            alpha = 0;
+            fadeEndValue = 1;
+
+            while (alpha >= fadeEndValue)
             {
-                log_message("fade in done");
-            }
-            else
-            {
-                log_message("fade out done");
-                yield return new WaitForEndOfFrame();
-                next();
+                FadeLightsAndSounds(alpha, FadeDirection.Out);
+                alpha += Time.deltaTime * (1.0f / fadeSpeed);
+                yield return null;
             }
 
-            // fade cycle is now complete
-            if (fadeDirection == FadeDirection.In) isFading = false;
+            // post process and skybox
+            StartCoroutine(LerpToNextRoutineValues(lastSceneConfig, currentSceneConfig));
         }
 
 
 
-        private void ApplyFadeAmount(ref float alpha, FadeDirection fadeDirection)
+        private IEnumerator FadeIn()
         {
+            log_message("fading in");
 
-            // meditation shelter
-            if (currentSceneConfig.fadeScreens)
+            float alpha = 1f;
+            float fadeEndValue = 0f;
+
+            while (alpha >= fadeEndValue)
             {
-                foreach (GameObject screen in shelterScreens)
-                {
-                    Material mat = screen.GetComponent<MeshRenderer>().materials[0];
-                    mat.SetColor("_Color", new Color(mat.color.r, mat.color.g, mat.color.b, alpha));
-                }
+                FadeLightsAndSounds(alpha, FadeDirection.In);
+
+                alpha -= Time.deltaTime * (1.0f / fadeSpeed);
+                yield return null;
             }
+
+
+            if (currentSceneConfig.closeScreensBeforeFading)
+            {
+                alpha = 1f;
+                fadeEndValue = 0f;
+
+                while (alpha >= fadeEndValue)
+                {
+                    foreach (GameObject screen in shelterScreens)
+                    {
+                        Material mat = screen.GetComponent<MeshRenderer>().materials[0];
+                        mat.SetColor("_Color", new Color(mat.color.r, mat.color.g, mat.color.b, alpha));
+                    }
+                    alpha -= Time.deltaTime * (1.0f / fadeSpeed);
+                    yield return null;
+                }
+                foreach (GameObject screen in shelterScreens) screen.GetComponent<MeshRenderer>().enabled = false;
+            }
+
+            // fade cycle is now complete
+            log_message("fade in done");
+            isFading = false;
+        }
+
+
+
+        private void FadeLightsAndSounds(float alpha, FadeDirection fadeDirection)
+        {
 
             // if light is already on, don't light it
             if(fadeDirection == FadeDirection.Out && !lastSceneConfig.keepShelterLightOn) shelterTransitionLight.intensity = alpha;
@@ -242,16 +274,65 @@ namespace Ex
             //globalVolume.weight = 1 - alpha;
 
             // skybox
-            tmpSkybox.SetFloat("_SunSize", skyboxSunsize * (1 - alpha));
-            tmpSkybox.SetFloat("_SunSizeConvergence", skyboxConvergence * (1 - alpha));
-            tmpSkybox.SetFloat("_AtmosphereThickness", skyboxThickness * (1 - alpha));
-            tmpSkybox.SetFloat("_Exposure", skyboxExposure * (1 - alpha));
+            //tmpSkybox.SetFloat("_SunSize", skyboxSunsize * (1 - alpha));
+            //tmpSkybox.SetFloat("_SunSizeConvergence", skyboxConvergence * (1 - alpha));
+            //tmpSkybox.SetFloat("_AtmosphereThickness", skyboxThickness * (1 - alpha));
+            //tmpSkybox.SetFloat("_Exposure", skyboxExposure * (1 - alpha));
 
             // sounds
             omniController.omniSoundsMainVolume = 1-alpha;
 
-            alpha += Time.deltaTime * (1.0f / fadeSpeed) * ((fadeDirection == FadeDirection.In) ? -1 : 1);
         }
+
+
+        private IEnumerator LerpToNextRoutineValues(SceneConfig lastSceneConfig, SceneConfig currentSceneConfig)
+        {
+            float amount = 0.0f;
+            //tmpSkybox = new Material(RenderSettings.skybox.shader);
+
+            float skyboxSunsize1 =     RenderSettings.skybox.GetFloat("_SunSize");
+            float skyboxConvergence1 = RenderSettings.skybox.GetFloat("_SunSizeConvergence");
+            float skyboxThickness1 =   RenderSettings.skybox.GetFloat("_AtmosphereThickness");
+            float skyboxExposure1 =    RenderSettings.skybox.GetFloat("_Exposure");
+            Color skyTint1 =           RenderSettings.skybox.GetColor("_SkyTint");
+            Color groundTint1 = RenderSettings.skybox.GetColor("_GroundColor");
+
+            SkyComponent skyComponent = get<SkyComponent>("SkyBox");
+            List<ComponentConfig> skyConfigs = skyComponent.configs;
+
+
+            ComponentConfig currentSkyConfig = skyConfigs[0];
+            foreach (ComponentConfig config in skyConfigs) if (config.name == currentSceneConfig.sceneName) currentSkyConfig = config;
+
+            float skyboxSunsize2 =     currentSkyConfig.get<float>("sun-size");
+            float skyboxConvergence2 = currentSkyConfig.get<float>("convergence");
+            float skyboxThickness2 =   currentSkyConfig.get<float>("atmosphere-thickness");
+            float skyboxExposure2 =    currentSkyConfig.get<float>("procedural-exposure");
+            Color skyTint2 =           currentSkyConfig.get_color("procedural-sky-tint");
+            Color groundTint2 =        currentSkyConfig.get_color("procedural-ground-color");
+
+            while (amount <= 1)
+            {
+                RenderSettings.skybox.SetFloat("_SunSize", Mathf.Lerp(skyboxSunsize1, skyboxSunsize2, amount));
+                RenderSettings.skybox.SetFloat("_SunSizeConvergence", Mathf.Lerp(skyboxConvergence1, skyboxConvergence2, amount));
+                RenderSettings.skybox.SetFloat("_AtmosphereThickness", Mathf.Lerp(skyboxThickness1, skyboxThickness2, amount));
+                RenderSettings.skybox.SetFloat("_Exposure", Mathf.Lerp(skyboxExposure1, skyboxExposure2, amount));
+                RenderSettings.skybox.SetColor("_SkyTint", Color.Lerp(skyTint1, skyTint2, amount));
+                RenderSettings.skybox.SetColor("_GroundColor", Color.Lerp(groundTint1, groundTint2, amount));
+
+                //RenderSettings.skybox = tmpSkybox;
+
+                amount += Time.deltaTime * (1.0f / fadeSpeed);
+                log_message(amount.ToString());
+                yield return null;
+            }
+
+            yield return new WaitForEndOfFrame();
+
+            log_message("fade out done");
+            fadingDone = true;
+        }
+
 
         #endregion
 
@@ -267,7 +348,7 @@ namespace Ex
             foreach (Light light in lightArray)
             {
                 //if (light.tag != "MeditationShelter") lights.Add(light);
-                if (light.gameObject.name != "ShelterTransitionLight") lights.Add(light);
+                if (light.gameObject.name != "ShelterTransitionLight" && light.type != LightType.Directional) lights.Add(light);
             }
 
             lightsLastIntensity = new float[lights.Count];
@@ -309,12 +390,10 @@ namespace Ex
         }
 
 
-        
-
         void LogNewConfig(SceneConfig currentSceneConfig)
         {
             log_message("New config : " + currentSceneConfig.sceneName);
-            log_message("Prefs : " + currentSceneConfig.fadeScreens.ToString()+" "+ currentSceneConfig.fadeSounds.ToString() + " "+ currentSceneConfig.keepShelterLightOn.ToString());
+            log_message("Prefs : " + currentSceneConfig.closeScreensBeforeFading.ToString()+" "+ currentSceneConfig.fadeSounds.ToString() + " "+ currentSceneConfig.keepShelterLightOn.ToString());
         }
 
         // public override void stop_routine() {}
