@@ -22,7 +22,7 @@ namespace Ex
         {
 
             ActivateFog(sceneConfig);
-            RenderSettings.ambientIntensity = 0.55f; // au lieu de 1.55
+            //RenderSettings.ambientIntensity = 0.55f; // au lieu de 1.55
             
             // uncheck realtime global illumination
             // shelter transition light à 1 ou équivalent

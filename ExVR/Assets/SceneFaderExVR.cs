@@ -26,7 +26,7 @@ namespace Ex
 
         public GameObject[] shelterScreens;
         //UnityEngine.Rendering.Volume globalVolume;
-        public float fadeSpeed = 3f, waitingTimeBetweenScenes = 2f;
+        public float curtainsClosingSpeed = 1f, fadeSpeed = 1f, waitingTimeBetweenScenes = 2f;
         public bool hasFaded, isFading, fadingDone;
 
         public List<Light> lights;
@@ -115,7 +115,15 @@ namespace Ex
             omniController.PrepareSoundInNewRoutine(currentSceneConfig.sceneName);
             graphicsHandler.SetGraphicsForRoutine(currentSceneConfig);
 
+            log_message("ambient int now " + RenderSettings.ambientIntensity);
+
             //yield return new WaitForEndOfFrame();
+
+            if (shelterTransitionLight == null)
+            {
+                shelterTransitionLight = GameObject.Find("ShelterTransitionLight").GetComponent<Light>();
+                shelterTransitionLight.gameObject.SetActive(false);
+            }
 
             shelterScreens = Resources.FindObjectsOfTypeAll<GameObject>().Where(obj => (obj.name == "ShelterScreen" && obj.activeInHierarchy)).ToArray();
             
@@ -152,14 +160,12 @@ namespace Ex
 
                 StartCoroutine(FadeOut());
 
-                
-               
-
             }
 
             if (isFading && fadingDone)
             {
                 fadingDone = false;
+                log_message("Next routine");
                 next();
             }
             if (omniController.isInitialized) omniController.UpdateSound();
@@ -192,7 +198,15 @@ namespace Ex
                         Material mat = screen.GetComponent<MeshRenderer>().materials[0];
                         mat.SetColor("_Color", new Color(mat.color.r, mat.color.g, mat.color.b, alpha));
                     }
-                    alpha += Time.deltaTime * (1.0f / fadeSpeed);
+
+                    /* int i;
+                    foreach(Light light in lights)
+                    {
+                        lights[i].intensity = lightsLastIntensity[i] * alpha;
+                        i++;
+                    }*/
+
+                    alpha += Time.deltaTime * (1.0f / curtainsClosingSpeed);
                     yield return null;
                 }
             }
@@ -202,7 +216,7 @@ namespace Ex
             alpha = 0;
             fadeEndValue = 1;
 
-            while (alpha >= fadeEndValue)
+            while (alpha <= fadeEndValue)
             {
                 FadeLightsAndSounds(alpha, FadeDirection.Out);
                 alpha += Time.deltaTime * (1.0f / fadeSpeed);
@@ -243,7 +257,7 @@ namespace Ex
                         Material mat = screen.GetComponent<MeshRenderer>().materials[0];
                         mat.SetColor("_Color", new Color(mat.color.r, mat.color.g, mat.color.b, alpha));
                     }
-                    alpha -= Time.deltaTime * (1.0f / fadeSpeed);
+                    alpha -= Time.deltaTime * (1.0f / curtainsClosingSpeed);
                     yield return null;
                 }
                 foreach (GameObject screen in shelterScreens) screen.GetComponent<MeshRenderer>().enabled = false;
@@ -260,10 +274,10 @@ namespace Ex
         {
 
             // if light is already on, don't light it
-            if(fadeDirection == FadeDirection.Out && !lastSceneConfig.keepShelterLightOn) shelterTransitionLight.intensity = alpha;
+            //if(fadeDirection == FadeDirection.Out && !lastSceneConfig.keepShelterLightOn) shelterTransitionLight.intensity = alpha;
 
             // if current scene asks to keep shelter light on, don't do anything
-            if(fadeDirection == FadeDirection.In && !currentSceneConfig.keepShelterLightOn) shelterTransitionLight.intensity = alpha;
+            //if(fadeDirection == FadeDirection.In && !currentSceneConfig.keepShelterLightOn) shelterTransitionLight.intensity = alpha;
 
             // lights
             for (int i = 0; i < lights.Count; i++)
@@ -288,21 +302,25 @@ namespace Ex
         private IEnumerator LerpToNextRoutineValues(SceneConfig lastSceneConfig, SceneConfig currentSceneConfig)
         {
             float amount = 0.0f;
+
+            Light sun = GameObject.Find("Sun").GetComponent<Light>();
+
             //tmpSkybox = new Material(RenderSettings.skybox.shader);
+            SkyComponent skyComponent = get<SkyComponent>("SkyBox");
+            List<ComponentConfig> skyConfigs = skyComponent.configs;
+            ComponentConfig currentSkyConfig = skyConfigs[0];
+            foreach (ComponentConfig config in skyConfigs) if (config.name == currentSceneConfig.sceneName) currentSkyConfig = config;
 
             float skyboxSunsize1 =     RenderSettings.skybox.GetFloat("_SunSize");
             float skyboxConvergence1 = RenderSettings.skybox.GetFloat("_SunSizeConvergence");
             float skyboxThickness1 =   RenderSettings.skybox.GetFloat("_AtmosphereThickness");
             float skyboxExposure1 =    RenderSettings.skybox.GetFloat("_Exposure");
             Color skyTint1 =           RenderSettings.skybox.GetColor("_SkyTint");
-            Color groundTint1 = RenderSettings.skybox.GetColor("_GroundColor");
+            Color groundTint1 =        RenderSettings.skybox.GetColor("_GroundColor");
 
-            SkyComponent skyComponent = get<SkyComponent>("SkyBox");
-            List<ComponentConfig> skyConfigs = skyComponent.configs;
+            float ambientIntensity1 =  RenderSettings.ambientIntensity; // skybox.GetFloat("_AmbientIntensity");
 
-
-            ComponentConfig currentSkyConfig = skyConfigs[0];
-            foreach (ComponentConfig config in skyConfigs) if (config.name == currentSceneConfig.sceneName) currentSkyConfig = config;
+            float sunIntensity1 =      sun.intensity;
 
             float skyboxSunsize2 =     currentSkyConfig.get<float>("sun-size");
             float skyboxConvergence2 = currentSkyConfig.get<float>("convergence");
@@ -310,6 +328,25 @@ namespace Ex
             float skyboxExposure2 =    currentSkyConfig.get<float>("procedural-exposure");
             Color skyTint2 =           currentSkyConfig.get_color("procedural-sky-tint");
             Color groundTint2 =        currentSkyConfig.get_color("procedural-ground-color");
+
+            float ambientIntensity2 =  currentSkyConfig.get<float>("ambient_intensity");
+
+            float sunIntensity2 =      currentSkyConfig.get<float>("sun_intensity");
+
+
+            /*PostprocessComponent postProcessComponent = get<SkyComponent>("PostProcess");
+            List<ComponentConfig> ppConfigs = postProcessComponent.configs;
+            ComponentConfig currentPPConfig = ppConfigs[0];
+            foreach (ComponentConfig config in ppConfigs) if (config.name == currentSceneConfig.sceneName) currentPPConfig = config;*/
+
+
+            // TO DO Dir lights & postprocess ?
+            // check in editor what's going on with the lights
+
+            //log_message("ambient int going from " + ambientIntensity1.ToString() + " to " + ambientIntensity2.ToString());
+
+            //log_message("ambient int now " + RenderSettings.ambientIntensity);
+
 
             while (amount <= 1)
             {
@@ -320,12 +357,20 @@ namespace Ex
                 RenderSettings.skybox.SetColor("_SkyTint", Color.Lerp(skyTint1, skyTint2, amount));
                 RenderSettings.skybox.SetColor("_GroundColor", Color.Lerp(groundTint1, groundTint2, amount));
 
+                sun.intensity = Mathf.Lerp(sunIntensity1, sunIntensity2, amount);
+                //RenderSettings.skybox.SetFloat("_AmbientIntensity", Mathf.Lerp(ambientIntensity1, ambientIntensity2, amount));
+                
+                
+                RenderSettings.ambientIntensity = Mathf.Lerp(ambientIntensity1, ambientIntensity2, amount);
+                
                 //RenderSettings.skybox = tmpSkybox;
 
                 amount += Time.deltaTime * (1.0f / fadeSpeed);
-                log_message(amount.ToString());
+                //log_message(amount.ToString());
                 yield return null;
             }
+
+            //log_message("ambient int now " + RenderSettings.ambientIntensity);
 
             yield return new WaitForEndOfFrame();
 
@@ -340,8 +385,6 @@ namespace Ex
 
         public void GetLightsReferences()
         {
-            shelterTransitionLight = GameObject.Find("ShelterTransitionLight").GetComponent<Light>();
-
             Light[] lightArray = FindObjectsOfType<Light>();
             lights = new List<Light>();
 
