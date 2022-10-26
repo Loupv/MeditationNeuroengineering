@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Experiment name="meditationScenario" version="1.0a60" mode="designer" designer-used="C:/Users/vuarness/Documents/exvr-designer/ExVR.exe">
+<Experiment name="meditationScenario" version="1.0a62" mode="designer" designer-used="C:/Users/vuarness/Documents/exvr-designer/ExVR.exe">
     <Settings debug="1" csharp_debug_info="0" catch_components_exceptions="0" positional_tracking="1" catch_external_keyboard_events="0">
-        <Display mode="1" stereo_fov="60" fullscreen="0" monitor_id="1" resolution_id="1" custom_width="1920" custom_height="1080"/>
+        <Display mode="0" stereo_fov="60" fullscreen="0" monitor_id="1" resolution_id="1" custom_width="1920" custom_height="1080"/>
         <Camera neutral_x="0" neutral_y="1" neutral_z="0"/>
     </Settings>
     <Resources reload="200">
@@ -137,10 +137,10 @@
                     <Arg name="Z+_invert" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="Z-" ui="Resource" value="%%%-1" type="System.String" dim="1" sep="%%%" sizes="2"/>
                     <Arg name="Z-_invert" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="ambient_color" ui="Color pick" value="1 0.211765 0.227451 0.258824" type="System.Single" dim="1" sep=" " sizes="4"/>
+                    <Arg name="ambient_color" ui="Color pick" value="1 0.262745 0.262745 0.262745" type="System.Single" dim="1" sep=" " sizes="4"/>
                     <Arg name="ambient_intensity" ui="Float spin box" value="1" type="System.Single" dim="0"/>
                     <Arg name="ambient_mode" ui="Combo box index" value="0" type="System.Int32" dim="0"/>
-                    <Arg name="atmosphere-thickness" ui="Float spin box" value="0" type="System.Single" dim="0"/>
+                    <Arg name="atmosphere-thickness" ui="Float spin box" value="0.7" type="System.Single" dim="0"/>
                     <Arg name="background_color" ui="Color pick" value="1 0.207843 0.188235 0.188235" type="System.Single" dim="1" sep=" " sizes="4"/>
                     <Arg name="convergence" ui="Float spin box" value="1" type="System.Single" dim="0"/>
                     <Arg name="cubemap" ui="Resource" value="%%%-1" type="System.String" dim="1" sep="%%%" sizes="2"/>
@@ -161,14 +161,14 @@
                     <Arg name="panoramic-type" ui="Combo box index" value="0" type="System.Int32" dim="0"/>
                     <Arg name="panoramic_invert" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="procedural-exposure" ui="Float spin box" value="1.4" type="System.Single" dim="0"/>
-                    <Arg name="procedural-ground-color" ui="Color pick" value="1 1 1 1" type="System.Single" dim="1" sep=" " sizes="4"/>
-                    <Arg name="procedural-sky-tint" ui="Color pick" value="1 0.807843 0.807843 0.807843" type="System.Single" dim="1" sep=" " sizes="4"/>
+                    <Arg name="procedural-ground-color" ui="Color pick" value="1 0.603922 0.603922 0.603922" type="System.Single" dim="1" sep=" " sizes="4"/>
+                    <Arg name="procedural-sky-tint" ui="Color pick" value="1 1 0.752941 0.47451" type="System.Single" dim="1" sep=" " sizes="4"/>
                     <Arg name="sky_color" ui="Color pick" value="1 0.211765 0.227451 0.258824" type="System.Single" dim="1" sep=" " sizes="4"/>
                     <Arg name="sun" ui="Combo box index" value="2" type="System.Int32" dim="0"/>
                     <Arg name="sun-size" ui="Float spin box" value="0" type="System.Single" dim="0"/>
                     <Arg name="sun_bounce_intensity" ui="Float spin box" value="1" type="System.Single" dim="0"/>
                     <Arg name="sun_color" ui="Color pick" value="1 1 1 1" type="System.Single" dim="1" sep=" " sizes="4"/>
-                    <Arg name="sun_intensity" ui="Float spin box" value="0.5" type="System.Single" dim="0"/>
+                    <Arg name="sun_intensity" ui="Float spin box" value="6.93889e-17" type="System.Single" dim="0"/>
                     <Arg name="sun_rotation" ui="Vector 3D" value="-39.1 15 0" type="System.Single" dim="1" sep=" " sizes="3"/>
                     <Arg name="sun_shadow_bias" ui="Float spin box" value="0.05" type="System.Single" dim="0"/>
                     <Arg name="sun_shadow_mode" ui="Combo box index" value="0" type="System.Int32" dim="0"/>
@@ -331,7 +331,7 @@
                 <Config key="64" name="WhiteScene">
                     <Arg name="ao_color" ui="Color pick" value="1 0 0 0" type="System.Single" dim="1" sep=" " sizes="4"/>
                     <Arg name="ao_color_enable" ui="Check box" value="true" type="System.Boolean" dim="0"/>
-                    <Arg name="ao_enable" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="ao_enable" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="ao_intensity" ui="Float values slider" value="0.45" type="System.Single" dim="0"/>
                     <Arg name="ao_intensity_enable" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="ao_thickness" ui="Float values slider" value="5.22" type="System.Single" dim="0"/>
@@ -443,9 +443,9 @@
         </Component>
         <Component key="23" name="FPPCamera" category="Camera" type="Camera" global="0" always_updating="0" exceptions="1" frame_logging="0" trigger_logging="0" restricted="0" priority="0">
             <InitConfig key="48" name="standard">
-                <Arg name="position" ui="Vector 3D" value="0 1.18 1.5" type="System.Single" dim="1" sep=" " sizes="3"/>
-                <Arg name="rotation" ui="Vector 3D" value="0 180 0" type="System.Single" dim="1" sep=" " sizes="3"/>
-                <Arg name="start_experiment" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                <Arg name="position" ui="Vector 3D" value="0 1.8 1.5" type="System.Single" dim="1" sep=" " sizes="3"/>
+                <Arg name="rotation" ui="Vector 3D" value="0 0 0" type="System.Single" dim="1" sep=" " sizes="3"/>
+                <Arg name="start_experiment" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                 <Arg name="use_eye" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
                 <Arg name="use_neutral" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
             </InitConfig>
@@ -453,7 +453,7 @@
                 <Config key="49" name="standard">
                     <Arg name="debug_camera" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="m_speed" ui="Float spin box" value="3" type="System.Single" dim="0"/>
-                    <Arg name="position" ui="Vector 3D" value="0 1.18 1.5" type="System.Single" dim="1" sep=" " sizes="3"/>
+                    <Arg name="position" ui="Vector 3D" value="-0.05 1.392 -0.002" type="System.Single" dim="1" sep=" " sizes="3"/>
                     <Arg name="rotation" ui="Vector 3D" value="0 180 0" type="System.Single" dim="1" sep=" " sizes="3"/>
                     <Arg name="rx_speed" ui="Float spin box" value="2" type="System.Single" dim="0"/>
                     <Arg name="ry_speed" ui="Float spin box" value="2" type="System.Single" dim="0"/>
@@ -528,14 +528,14 @@
         <Component key="31" name="DistantSmoke" category="Scene" type="AssetBundle" global="0" always_updating="0" exceptions="1" frame_logging="0" trigger_logging="0" restricted="0" priority="2">
             <InitConfig key="66" name="standard">
                 <Arg name="asset_bundle" ui="Resource" value="distantsmokefx%%%46" type="System.String" dim="1" sep="%%%" sizes="2"/>
-                <Arg name="display_hierarchy" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                <Arg name="display_hierarchy" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                 <Arg name="init_transform" ui="Transformation" value="0 0 0 0 0 0 1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
                 <Arg name="init_transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                 <Arg name="name_sub_object" ui="Line text editor" value="" type="System.String" dim="0"/>
             </InitConfig>
             <Configs>
                 <Config key="67" name="standard">
-                    <Arg name="transform" ui="Transformation" value="0 0 0 -90 0 0 1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
+                    <Arg name="transform" ui="Transformation" value="0 0 0 -90 0 0 0 0 0" type="System.Single" dim="1" sep=" " sizes="9"/>
                     <Arg name="transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                 </Config>
             </Configs>
@@ -591,6 +591,60 @@
             </InitConfig>
             <Configs>
                 <Config key="61" name="standard"/>
+            </Configs>
+        </Component>
+        <Component key="52" name="WhiteSceneLight" category="Environment" type="Light" global="0" always_updating="0" exceptions="1" frame_logging="0" trigger_logging="0" restricted="0" priority="0">
+            <InitConfig key="115" name="standard">
+                <Arg name="init_transform" ui="Transformation" value="0 14 0 0 0 0 1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
+                <Arg name="init_transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+            </InitConfig>
+            <Configs>
+                <Config key="116" name="standard">
+                    <Arg name="bounce_intensity" ui="Float spin box" value="1" type="System.Single" dim="0"/>
+                    <Arg name="color" ui="Color pick" value="1 0.792157 0.792157 0.792157" type="System.Single" dim="1" sep=" " sizes="4"/>
+                    <Arg name="cookie_size" ui="Float spin box" value="10" type="System.Single" dim="0"/>
+                    <Arg name="cookie_t" ui="Resource" value="%%%-1" type="System.String" dim="1" sep="%%%" sizes="2"/>
+                    <Arg name="display_source" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="inner_spot_angle" ui="Float spin box" value="21.8" type="System.Single" dim="0"/>
+                    <Arg name="intensity" ui="Float spin box" value="1.12" type="System.Single" dim="0"/>
+                    <Arg name="range" ui="Float spin box" value="57" type="System.Single" dim="0"/>
+                    <Arg name="shadow_bias" ui="Float spin box" value="0.05" type="System.Single" dim="0"/>
+                    <Arg name="shadow_near_plane" ui="Float spin box" value="0.2" type="System.Single" dim="0"/>
+                    <Arg name="shadow_normal_bias" ui="Float spin box" value="0.4" type="System.Single" dim="0"/>
+                    <Arg name="shadow_strength" ui="Float spin box" value="0.25" type="System.Single" dim="0"/>
+                    <Arg name="shadows" ui="Combo box index" value="2" type="System.Int32" dim="0"/>
+                    <Arg name="spot_angle" ui="Float spin box" value="30" type="System.Single" dim="0"/>
+                    <Arg name="transform" ui="Transformation" value="0 14 0 0 0 0 1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
+                    <Arg name="transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="type" ui="Combo box index" value="0" type="System.Int32" dim="0"/>
+                </Config>
+            </Configs>
+        </Component>
+        <Component key="53" name="WhiteSceneLight(copy)" category="Environment" type="Light" global="0" always_updating="0" exceptions="1" frame_logging="0" trigger_logging="0" restricted="0" priority="0">
+            <InitConfig key="117" name="standard">
+                <Arg name="init_transform" ui="Transformation" value="0 14 0 0 0 0 1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
+                <Arg name="init_transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+            </InitConfig>
+            <Configs>
+                <Config key="118" name="standard">
+                    <Arg name="bounce_intensity" ui="Float spin box" value="1" type="System.Single" dim="0"/>
+                    <Arg name="color" ui="Color pick" value="1 1 1 1" type="System.Single" dim="1" sep=" " sizes="4"/>
+                    <Arg name="cookie_size" ui="Float spin box" value="10" type="System.Single" dim="0"/>
+                    <Arg name="cookie_t" ui="Resource" value="%%%-1" type="System.String" dim="1" sep="%%%" sizes="2"/>
+                    <Arg name="display_source" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="inner_spot_angle" ui="Float spin box" value="21.8" type="System.Single" dim="0"/>
+                    <Arg name="intensity" ui="Float spin box" value="0.3" type="System.Single" dim="0"/>
+                    <Arg name="range" ui="Float spin box" value="5000" type="System.Single" dim="0"/>
+                    <Arg name="shadow_bias" ui="Float spin box" value="0.05" type="System.Single" dim="0"/>
+                    <Arg name="shadow_near_plane" ui="Float spin box" value="0.2" type="System.Single" dim="0"/>
+                    <Arg name="shadow_normal_bias" ui="Float spin box" value="0.4" type="System.Single" dim="0"/>
+                    <Arg name="shadow_strength" ui="Float spin box" value="0.25" type="System.Single" dim="0"/>
+                    <Arg name="shadows" ui="Combo box index" value="2" type="System.Int32" dim="0"/>
+                    <Arg name="spot_angle" ui="Float spin box" value="30" type="System.Single" dim="0"/>
+                    <Arg name="transform" ui="Transformation" value="0 30 0 0 0 0 1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
+                    <Arg name="transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="type" ui="Combo box index" value="0" type="System.Int32" dim="0"/>
+                </Config>
             </Configs>
         </Component>
         <Component key="28" name="OmniController" category="Script" type="CSharpScript" global="0" always_updating="0" exceptions="1" frame_logging="0" trigger_logging="0" restricted="0" priority="0">
@@ -1227,6 +1281,33 @@
                 </Config>
             </Configs>
         </Component>
+        <Component key="54" name="Cube" category="Model" type="Cube" global="0" always_updating="0" exceptions="0" frame_logging="0" trigger_logging="0" restricted="0" priority="1">
+            <InitConfig key="119" name="standard">
+                <Arg name="init_transform" ui="Transformation" value="0 0 0 0 0 0 1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
+                <Arg name="init_transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                <Arg name="size" ui="Float spin box" value="1" type="System.Single" dim="0"/>
+                <Arg name="transparent" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+            </InitConfig>
+            <Configs>
+                <Config key="120" name="standard">
+                    <Arg name="color" ui="Color pick" value="1 0.643137 0 0.0117647" type="System.Single" dim="1" sep=" " sizes="4"/>
+                    <Arg name="detect_collisions" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="drag" ui="Float spin box" value="0" type="System.Single" dim="0"/>
+                    <Arg name="enable_collider" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="enable_gravity" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="height_t" ui="Resource" value="%%%-1" type="System.String" dim="1" sep="%%%" sizes="2"/>
+                    <Arg name="mass" ui="Float spin box" value="1" type="System.Single" dim="0"/>
+                    <Arg name="metallic" ui="Float spin box" value="0" type="System.Single" dim="0"/>
+                    <Arg name="normal_t" ui="Resource" value="%%%-1" type="System.String" dim="1" sep="%%%" sizes="2"/>
+                    <Arg name="receive_shadows" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="rgba_t" ui="Resource" value="%%%-1" type="System.String" dim="1" sep="%%%" sizes="2"/>
+                    <Arg name="shadow_mode" ui="Combo box index" value="1" type="System.Int32" dim="0"/>
+                    <Arg name="smoothness" ui="Float spin box" value="0" type="System.Single" dim="0"/>
+                    <Arg name="transform" ui="Transformation" value="0 0.77 207 0 0 0 1 0.95 1" type="System.Single" dim="1" sep=" " sizes="9"/>
+                    <Arg name="transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                </Config>
+            </Configs>
+        </Component>
     </Components>
     <FlowElements>
         <Routines>
@@ -1389,17 +1470,14 @@
                 </Condition>
             </Routine>
             <Routine key="3" name="WhiteScene" randomizer="0" informations="">
-                <Condition key="1" name="default" duration="100" ui_scale="10" ui_size="1" sets_keys="0">
+                <Condition key="1" name="default" duration="10000" ui_scale="100" ui_size="1" sets_keys="0">
                     <Action key="48" key_component="26" key_config="55" node_used="0" node_position="0 0">
                         <!--Component WhiteRoom with config standard -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
                             <Interval t1="0" t2="100"/>
                         </Timeline>
-                        <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
-                            <Interval t1="0" t2="100"/>
-                        </Timeline>
+                        <Timeline type="Visibiliy"/>
                     </Action>
                     <Action key="57" key_component="30" key_config="63" node_used="0" node_position="0 0">
                         <!--Component MeditationShelter with config standard -->
@@ -1408,15 +1486,15 @@
                             <Interval t1="0" t2="100"/>
                         </Timeline>
                         <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
-                            <Interval t1="0" t2="100"/>
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
                         </Timeline>
                     </Action>
                     <Action key="58" key_component="23" key_config="49" node_used="0" node_position="0 0">
                         <!--Component FPPCamera with config standard -->
                         <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
-                            <Interval t1="0" t2="100"/>
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
                         </Timeline>
                         <Timeline type="Visibiliy">
                             <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
@@ -1452,107 +1530,129 @@
                             <Interval t1="0" t2="100"/>
                         </Timeline>
                         <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
-                            <Interval t1="0" t2="100"/>
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
                         </Timeline>
                     </Action>
                     <Action key="53" key_component="29" key_config="61" node_used="0" node_position="0 0">
                         <!--Component SceneFader with config standard -->
                         <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
-                            <Interval t1="0" t2="100"/>
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
                         </Timeline>
                         <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
-                            <Interval t1="0" t2="100"/>
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
                         </Timeline>
                     </Action>
                     <Action key="59" key_component="28" key_config="59" node_used="0" node_position="0 0">
                         <!--Component OmniController with config standard -->
                         <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
-                            <Interval t1="0" t2="100"/>
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
                         </Timeline>
                         <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
-                            <Interval t1="0" t2="100"/>
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
                         </Timeline>
                     </Action>
                     <Action key="119" key_component="48" key_config="107" node_used="0" node_position="0 0">
                         <!--Component GraphicsHandler with config standard -->
                         <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
-                            <Interval t1="0" t2="100"/>
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
                         </Timeline>
                         <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
-                            <Interval t1="0" t2="100"/>
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
                         </Timeline>
                     </Action>
                     <Action key="86" key_component="38" key_config="81" node_used="0" node_position="0 0">
                         <!--Component WhiteRoom_Front with config standard -->
                         <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
-                            <Interval t1="0" t2="100"/>
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
                         </Timeline>
                         <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
-                            <Interval t1="0" t2="100"/>
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
                         </Timeline>
                     </Action>
                     <Action key="87" key_component="39" key_config="83" node_used="0" node_position="0 0">
                         <!--Component WhiteRoom_Back with config standard -->
                         <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
-                            <Interval t1="0" t2="100"/>
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
                         </Timeline>
                         <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
-                            <Interval t1="0" t2="100"/>
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
                         </Timeline>
                     </Action>
                     <Action key="88" key_component="40" key_config="85" node_used="0" node_position="0 0">
                         <!--Component WhiteRoom_Left with config standard -->
                         <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
-                            <Interval t1="0" t2="100"/>
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
                         </Timeline>
                         <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
-                            <Interval t1="0" t2="100"/>
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
                         </Timeline>
                     </Action>
                     <Action key="89" key_component="41" key_config="87" node_used="0" node_position="0 0">
                         <!--Component WhiteRoom_Right with config standard -->
                         <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
-                            <Interval t1="0" t2="100"/>
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
                         </Timeline>
                         <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
-                            <Interval t1="0" t2="100"/>
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
                         </Timeline>
                     </Action>
                     <Action key="94" key_component="42" key_config="89" node_used="0" node_position="0 0">
                         <!--Component BackgroundMusic_Spatialized with config default -->
                         <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
-                            <Interval t1="0" t2="100"/>
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
                         </Timeline>
                         <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
-                            <Interval t1="0" t2="100"/>
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
                         </Timeline>
                     </Action>
                     <Action key="95" key_component="43" key_config="93" node_used="0" node_position="0 0">
                         <!--Component BackgroundMusic_Ambient with config default -->
                         <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
-                            <Interval t1="0" t2="100"/>
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
                         </Timeline>
                         <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
-                            <Interval t1="0" t2="100"/>
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="125" key_component="52" key_config="116" node_used="0" node_position="0 0">
+                        <!--Component WhiteSceneLight with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="126" key_component="53" key_config="118" node_used="0" node_position="0 0">
+                        <!--Component WhiteSceneLight(copy) with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
                         </Timeline>
                     </Action>
                 </Condition>

@@ -23,11 +23,11 @@ Material:
   m_Name: ShelterCurtains
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: _ALPHAPREMULTIPLY_ON _DETAILSOURCE_SPECULARALPHA _ENABLETRIPLANARPROJECTION_ON
-    _GLOSSYREFLECTIONS_OFF _SOURCE_SPECULARALPHA _TRIPLANARSPACEPROJECTION_OBJECTSPACE
+    _GLOSSYREFLECTIONS_OFF _SOURCE_SPECULARALPHA _SPECULARHIGHLIGHTS_OFF _TRIPLANARSPACEPROJECTION_OBJECTSPACE
     _USEAOFROMMAINPROPERTIES_ON _USEEMISSIONFROMMAINPROPERTIES_ON
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 1
+  m_DoubleSidedGI: 0
   m_CustomRenderQueue: 3000
   stringTagMap:
     RenderType: Transparent
@@ -151,7 +151,7 @@ Material:
     - _Smoothness: 0.273
     - _SmoothnessTextureChannel: 0
     - _Source: 0
-    - _SpecularHighlights: 1
+    - _SpecularHighlights: 0
     - _SpecularIntensity: 0.2
     - _SpreadDetailMap: 0
     - _SpreadTransparentMap: 0
@@ -170,7 +170,7 @@ Material:
     - __dirty: 1
     m_Colors:
     - _BaseColor: {r: 0.8584906, g: 0.8584906, b: 0.8584906, a: 0}
-    - _Color: {r: 0.4716981, g: 0.4716981, b: 0.4716981, a: 0}
+    - _Color: {r: 0.4716981, g: 0.4716981, b: 0.4716981, a: 1}
     - _DetailColor: {r: 1, g: 1, b: 1, a: 0}
     - _DetailSpecularColor: {r: 1, g: 1, b: 1, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
