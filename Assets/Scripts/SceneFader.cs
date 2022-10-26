@@ -16,7 +16,7 @@ public class SceneFader : MonoBehaviour
 	public bool hasFaded, isFading;
 
 	public List<Light> lights;
-	Light shelterTransitionLight;
+	//Light shelterTransitionLight;
 	public float[] lightsLastIntensity;
 	Material tmpSkybox;
 	float skyboxExposure, skyboxSunsize, skyboxConvergence, skyboxThickness; 
@@ -129,7 +129,7 @@ public class SceneFader : MonoBehaviour
 			mat.SetColor("_Color", new Color(mat.color.r, mat.color.g, mat.color.b, alpha));
         }
 
-		shelterTransitionLight.intensity = alpha;
+		//shelterTransitionLight.intensity = alpha;
 		
 		for (int i = 0; i<lights.Count; i++)
         {
@@ -151,7 +151,7 @@ public class SceneFader : MonoBehaviour
 	public void GetLightsReferences()
     {
 
-		shelterTransitionLight = GameObject.Find("ShelterTransitionLight").GetComponent<Light>();
+		//shelterTransitionLight = GameObject.Find("ShelterTransitionLight").GetComponent<Light>();
 
 		Light[] lightArray = FindObjectsOfType<Light>();
 		lights = new List<Light>();

@@ -1,54 +1,28 @@
 ManifestFileVersion: 0
-CRC: 374938107
+CRC: 3693507262
 AssetBundleManifest:
   AssetBundleInfos:
     Info_0:
-      Name: roundtable
-      Dependencies: {}
-    Info_1:
-      Name: forestroom
-      Dependencies: {}
-    Info_2:
-      Name: focusedattentionobjects
-      Dependencies: {}
-    Info_3:
-      Name: gameengine
-      Dependencies:
-        Dependency_0: meditationshelter
-        Dependency_1: scenefaderscript
-    Info_4:
-      Name: chair
-      Dependencies: {}
-    Info_5:
-      Name: labroomscene
-      Dependencies:
-        Dependency_0: labroom
-        Dependency_1: meditationshelter
-        Dependency_2: scenefaderscript
-    Info_6:
-      Name: flutist
-      Dependencies: {}
-    Info_7:
-      Name: platform
-      Dependencies: {}
-    Info_8:
-      Name: whiteroom
-      Dependencies: {}
-    Info_9:
-      Name: neutralskybox
-      Dependencies: {}
-    Info_10:
       Name: labroom
       Dependencies: {}
-    Info_11:
+    Info_1:
+      Name: whiteroom
+      Dependencies: {}
+    Info_2:
       Name: meditationshelter
       Dependencies: {}
-    Info_12:
-      Name: scenefaderscript
+    Info_3:
+      Name: forestscene
       Dependencies: {}
-    Info_13:
+    Info_4:
+      Name: roundtablewood
+      Dependencies: {}
+    Info_5:
       Name: distantsmokefx
       Dependencies: {}
-    Info_14:
-      Name: sunlight
+    Info_6:
+      Name: candlestick
+      Dependencies: {}
+    Info_7:
+      Name: toupie
       Dependencies: {}

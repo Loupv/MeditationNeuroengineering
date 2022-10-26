@@ -1,0 +1,37 @@
+ManifestFileVersion: 0
+CRC: 2815059792
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 7804d96dbdc3804e1827234a11169d5a
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: c0aa04397c36f560a784d2ded160e1f7
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 74
+  Script: {instanceID: 0}
+- Class: 108
+  Script: {instanceID: 0}
+- Class: 111
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Prefabs/FOA Objects/Toupie.prefab
+Dependencies: []

@@ -47,8 +47,8 @@ namespace Ex
         SceneConfig[] InitSceneConfigArray()
         {
             sceneConfigs = new SceneConfig[4];
-            sceneConfigs[0] = new SceneConfig { sceneName = "LabScene", closeScreensBeforeFading = true, fadeSounds = true, keepShelterLightOn = false, activateFog = false, fogColor = Color.white, fogDensity = 0f };
-            sceneConfigs[1] = new SceneConfig { sceneName = "WhiteScene", closeScreensBeforeFading = true, fadeSounds = true, keepShelterLightOn = false, activateFog = false, fogColor = Color.white, fogDensity = 0f };
+            sceneConfigs[0] = new SceneConfig { sceneName = "LabScene", closeScreensBeforeFading = true, fadeSounds = true, keepShelterLightOn = false, activateFog = true, fogColor = new Color(0.67f, 0.72f, 0.72f, 1f), fogDensity = 0.0045f };
+            sceneConfigs[1] = new SceneConfig { sceneName = "WhiteScene", closeScreensBeforeFading = true, fadeSounds = true, keepShelterLightOn = false, activateFog = true, fogColor = new Color(0.67f, 0.72f, 0.72f, 1f), fogDensity = 0.0045f };
             sceneConfigs[2] = new SceneConfig { sceneName = "ForestScene", closeScreensBeforeFading = true, fadeSounds = true, keepShelterLightOn = true, activateFog = true, fogColor = new Color(0.67f, 0.72f, 0.72f, 1f), fogDensity = 0.0045f };
             sceneConfigs[3] = new SceneConfig { sceneName = "Forest FOA", closeScreensBeforeFading = false, fadeSounds = true, keepShelterLightOn = false, activateFog = true, fogColor = new Color(0.29f, 0.32f, 0.32f, 1f), fogDensity = 0.0045f };
             return sceneConfigs;
@@ -112,18 +112,27 @@ namespace Ex
         {
             yield return 0;
 
+            int i = 0;
+            foreach (SceneConfig config in sceneConfigs)
+            {
+                if (current_routine().name == sceneConfigs[0].sceneName)
+                {
+                    currentScenesArrayID = i;
+                    currentSceneConfig = sceneConfigs[currentScenesArrayID];
+                    break;
+                }
+            }
+
             omniController.PrepareSoundInNewRoutine(currentSceneConfig.sceneName);
             graphicsHandler.SetGraphicsForRoutine(currentSceneConfig);
 
-            log_message("ambient int now " + RenderSettings.ambientIntensity);
-
             //yield return new WaitForEndOfFrame();
 
-            if (shelterTransitionLight == null)
+            /*if (shelterTransitionLight == null)
             {
                 shelterTransitionLight = GameObject.Find("ShelterTransitionLight").GetComponent<Light>();
                 shelterTransitionLight.gameObject.SetActive(false);
-            }
+            }*/
 
             shelterScreens = Resources.FindObjectsOfTypeAll<GameObject>().Where(obj => (obj.name == "ShelterScreen" && obj.activeInHierarchy)).ToArray();
             
@@ -141,8 +150,11 @@ namespace Ex
             ShutEveryLights();
 
             yield return 0;
-           
+
+            
+
             StartCoroutine(FadeIn());
+            
         }
 
 
@@ -319,7 +331,6 @@ namespace Ex
             Color groundTint1 =        RenderSettings.skybox.GetColor("_GroundColor");
 
             float ambientIntensity1 =  RenderSettings.ambientIntensity; // skybox.GetFloat("_AmbientIntensity");
-
             float sunIntensity1 =      sun.intensity;
 
             float skyboxSunsize2 =     currentSkyConfig.get<float>("sun-size");
@@ -330,7 +341,6 @@ namespace Ex
             Color groundTint2 =        currentSkyConfig.get_color("procedural-ground-color");
 
             float ambientIntensity2 =  currentSkyConfig.get<float>("ambient_intensity");
-
             float sunIntensity2 =      currentSkyConfig.get<float>("sun_intensity");
 
 

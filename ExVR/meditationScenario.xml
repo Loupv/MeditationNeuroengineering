@@ -16,16 +16,14 @@
         <Resource key="54" type="Audio" alias="WideAmbience" path="Assets/WideAmbience.wav"/>
         <Resource key="55" type="Audio" alias="Music_WelcomeJonHopkins" path="Assets/Music_WelcomeJonHopkins.wav"/>
         <Resource key="57" type="Audio" alias="Music_SisterMartinSigAndersen" path="Assets/Music_SisterMartinSigAndersen.wav"/>
-        <Resource key="38" type="UnityAssetBundle" alias="assetsBundles" path="Bundles/assetsBundles.unity3d"/>
-        <Resource key="39" type="UnityAssetBundle" alias="forestroom" path="Bundles/forestroom.unity3d"/>
-        <Resource key="40" type="UnityAssetBundle" alias="gameengine" path="Bundles/gameengine.unity3d"/>
         <Resource key="41" type="UnityAssetBundle" alias="labroom" path="Bundles/labroom.unity3d"/>
         <Resource key="43" type="UnityAssetBundle" alias="whiteroom" path="Bundles/whiteroom.unity3d"/>
         <Resource key="45" type="UnityAssetBundle" alias="meditationshelter" path="Bundles/meditationshelter.unity3d"/>
         <Resource key="46" type="UnityAssetBundle" alias="distantsmokefx" path="Bundles/distantsmokefx.unity3d"/>
-        <Resource key="58" type="UnityAssetBundle" alias="focusedattentionobjects" path="Bundles/focusedattentionobjects.unity3d"/>
-        <Resource key="59" type="UnityAssetBundle" alias="roundtable" path="Bundles/roundtable.unity3d"/>
-        <Resource key="60" type="UnityAssetBundle" alias="sunlight" path="Bundles/sunlight.unity3d"/>
+        <Resource key="62" type="UnityAssetBundle" alias="roundtablewood" path="Bundles/roundtablewood.unity3d"/>
+        <Resource key="63" type="UnityAssetBundle" alias="forestscene" path="Bundles/forestscene.unity3d"/>
+        <Resource key="64" type="UnityAssetBundle" alias="toupie" path="Bundles/toupie.unity3d"/>
+        <Resource key="65" type="UnityAssetBundle" alias="candlestick" path="Bundles/candlestick.unity3d"/>
         <Resource key="37" type="CSharpScript" alias="OmniController" path="Assets/OmniController.cs"/>
         <Resource key="44" type="CSharpScript" alias="SceneFaderExVR" path="Assets/SceneFaderExVR.cs"/>
         <Resource key="61" type="CSharpScript" alias="GraphicsHandler" path="Assets/GraphicsHandler.cs"/>
@@ -334,7 +332,7 @@
                     <Arg name="ao_color" ui="Color pick" value="1 0 0 0" type="System.Single" dim="1" sep=" " sizes="4"/>
                     <Arg name="ao_color_enable" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="ao_enable" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="ao_intensity" ui="Float values slider" value="0.43" type="System.Single" dim="0"/>
+                    <Arg name="ao_intensity" ui="Float values slider" value="0.45" type="System.Single" dim="0"/>
                     <Arg name="ao_intensity_enable" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="ao_thickness" ui="Float values slider" value="5.22" type="System.Single" dim="0"/>
                     <Arg name="ao_thickness_enable" ui="Check box" value="true" type="System.Boolean" dim="0"/>
@@ -408,9 +406,9 @@
                     <Arg name="ao_color" ui="Color pick" value="1 0 0 0" type="System.Single" dim="1" sep=" " sizes="4"/>
                     <Arg name="ao_color_enable" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="ao_enable" ui="Check box" value="true" type="System.Boolean" dim="0"/>
-                    <Arg name="ao_intensity" ui="Float values slider" value="0.43" type="System.Single" dim="0"/>
+                    <Arg name="ao_intensity" ui="Float values slider" value="0.29" type="System.Single" dim="0"/>
                     <Arg name="ao_intensity_enable" ui="Check box" value="true" type="System.Boolean" dim="0"/>
-                    <Arg name="ao_thickness" ui="Float values slider" value="5.22" type="System.Single" dim="0"/>
+                    <Arg name="ao_thickness" ui="Float values slider" value="4.96" type="System.Single" dim="0"/>
                     <Arg name="ao_thickness_enable" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="cg_enable" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="cg_tone_color_filter" ui="Color pick" value="1 1 0 0" type="System.Single" dim="1" sep=" " sizes="4"/>
@@ -445,8 +443,8 @@
         </Component>
         <Component key="23" name="FPPCamera" category="Camera" type="Camera" global="0" always_updating="0" exceptions="1" frame_logging="0" trigger_logging="0" restricted="0" priority="0">
             <InitConfig key="48" name="standard">
-                <Arg name="position" ui="Vector 3D" value="-0.22 1.7 1.8" type="System.Single" dim="1" sep=" " sizes="3"/>
-                <Arg name="rotation" ui="Vector 3D" value="11.5 180 0" type="System.Single" dim="1" sep=" " sizes="3"/>
+                <Arg name="position" ui="Vector 3D" value="0 1.18 1.5" type="System.Single" dim="1" sep=" " sizes="3"/>
+                <Arg name="rotation" ui="Vector 3D" value="0 180 0" type="System.Single" dim="1" sep=" " sizes="3"/>
                 <Arg name="start_experiment" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                 <Arg name="use_eye" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
                 <Arg name="use_neutral" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
@@ -454,13 +452,13 @@
             <Configs>
                 <Config key="49" name="standard">
                     <Arg name="debug_camera" ui="Check box" value="true" type="System.Boolean" dim="0"/>
-                    <Arg name="m_speed" ui="Float spin box" value="1" type="System.Single" dim="0"/>
-                    <Arg name="position" ui="Vector 3D" value="0.16 0 0" type="System.Single" dim="1" sep=" " sizes="3"/>
-                    <Arg name="rotation" ui="Vector 3D" value="0 0 0" type="System.Single" dim="1" sep=" " sizes="3"/>
+                    <Arg name="m_speed" ui="Float spin box" value="3" type="System.Single" dim="0"/>
+                    <Arg name="position" ui="Vector 3D" value="0 1.18 1.5" type="System.Single" dim="1" sep=" " sizes="3"/>
+                    <Arg name="rotation" ui="Vector 3D" value="0 180 0" type="System.Single" dim="1" sep=" " sizes="3"/>
                     <Arg name="rx_speed" ui="Float spin box" value="2" type="System.Single" dim="0"/>
                     <Arg name="ry_speed" ui="Float spin box" value="2" type="System.Single" dim="0"/>
                     <Arg name="rz_speed" ui="Float spin box" value="2" type="System.Single" dim="0"/>
-                    <Arg name="start_routine" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="start_routine" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="update_on" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="use_eye" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="use_neutral" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
@@ -492,14 +490,14 @@
             </InitConfig>
             <Configs>
                 <Config key="55" name="standard">
-                    <Arg name="transform" ui="Transformation" value="0 0 0 0 0 0 1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
+                    <Arg name="transform" ui="Transformation" value="0 -0.08 0 0 0 0 1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
                     <Arg name="transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                 </Config>
             </Configs>
         </Component>
         <Component key="27" name="ForestScene" category="Scene" type="AssetBundle" global="0" always_updating="0" exceptions="1" frame_logging="0" trigger_logging="0" restricted="0" priority="2">
             <InitConfig key="56" name="standard">
-                <Arg name="asset_bundle" ui="Resource" value="forestroom%%%39" type="System.String" dim="1" sep="%%%" sizes="2"/>
+                <Arg name="asset_bundle" ui="Resource" value="forestscene%%%63" type="System.String" dim="1" sep="%%%" sizes="2"/>
                 <Arg name="display_hierarchy" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                 <Arg name="init_transform" ui="Transformation" value="0 0 0 0 0 0 1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
                 <Arg name="init_transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
@@ -530,21 +528,21 @@
         <Component key="31" name="DistantSmoke" category="Scene" type="AssetBundle" global="0" always_updating="0" exceptions="1" frame_logging="0" trigger_logging="0" restricted="0" priority="2">
             <InitConfig key="66" name="standard">
                 <Arg name="asset_bundle" ui="Resource" value="distantsmokefx%%%46" type="System.String" dim="1" sep="%%%" sizes="2"/>
-                <Arg name="display_hierarchy" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                <Arg name="display_hierarchy" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                 <Arg name="init_transform" ui="Transformation" value="0 0 0 0 0 0 1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
                 <Arg name="init_transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                 <Arg name="name_sub_object" ui="Line text editor" value="" type="System.String" dim="0"/>
             </InitConfig>
             <Configs>
                 <Config key="67" name="standard">
-                    <Arg name="transform" ui="Transformation" value="0 0 0 0 0 0 1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
+                    <Arg name="transform" ui="Transformation" value="0 0 0 -90 0 0 1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
                     <Arg name="transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                 </Config>
             </Configs>
         </Component>
         <Component key="44" name="RoundTable" category="Scene" type="AssetBundle" global="0" always_updating="0" exceptions="1" frame_logging="0" trigger_logging="0" restricted="0" priority="2">
             <InitConfig key="96" name="standard">
-                <Arg name="asset_bundle" ui="Resource" value="roundtable%%%59" type="System.String" dim="1" sep="%%%" sizes="2"/>
+                <Arg name="asset_bundle" ui="Resource" value="roundtablewood%%%62" type="System.String" dim="1" sep="%%%" sizes="2"/>
                 <Arg name="display_hierarchy" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                 <Arg name="init_transform" ui="Transformation" value="0 0 0 0 0 0 1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
                 <Arg name="init_transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
@@ -557,9 +555,9 @@
                 </Config>
             </Configs>
         </Component>
-        <Component key="45" name="FocusedObjectOfAttention" category="Scene" type="AssetBundle" global="0" always_updating="0" exceptions="1" frame_logging="0" trigger_logging="0" restricted="0" priority="2">
+        <Component key="45" name="FOA1_Candle" category="Scene" type="AssetBundle" global="0" always_updating="0" exceptions="1" frame_logging="0" trigger_logging="0" restricted="0" priority="2">
             <InitConfig key="98" name="standard">
-                <Arg name="asset_bundle" ui="Resource" value="focusedattentionobjects%%%58" type="System.String" dim="1" sep="%%%" sizes="2"/>
+                <Arg name="asset_bundle" ui="Resource" value="candlestick%%%65" type="System.String" dim="1" sep="%%%" sizes="2"/>
                 <Arg name="display_hierarchy" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                 <Arg name="init_transform" ui="Transformation" value="-3.1225e-17 2 0 0 0 0 1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
                 <Arg name="init_transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
@@ -567,7 +565,22 @@
             </InitConfig>
             <Configs>
                 <Config key="99" name="standard">
-                    <Arg name="transform" ui="Transformation" value="-0.09 0.68 -0.77 0 0 0 4 4 4" type="System.Single" dim="1" sep=" " sizes="9"/>
+                    <Arg name="transform" ui="Transformation" value="-0.09 0.58 -0.77 0 0 0 4 4 4" type="System.Single" dim="1" sep=" " sizes="9"/>
+                    <Arg name="transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                </Config>
+            </Configs>
+        </Component>
+        <Component key="51" name="FOA2_Toupie" category="Scene" type="AssetBundle" global="0" always_updating="0" exceptions="1" frame_logging="0" trigger_logging="0" restricted="0" priority="2">
+            <InitConfig key="113" name="standard">
+                <Arg name="asset_bundle" ui="Resource" value="toupie%%%64" type="System.String" dim="1" sep="%%%" sizes="2"/>
+                <Arg name="display_hierarchy" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                <Arg name="init_transform" ui="Transformation" value="-3.1225e-17 2 0 0 0 0 1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
+                <Arg name="init_transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                <Arg name="name_sub_object" ui="Line text editor" value="" type="System.String" dim="0"/>
+            </InitConfig>
+            <Configs>
+                <Config key="114" name="standard">
+                    <Arg name="transform" ui="Transformation" value="-3.46945e-18 0.769 -0.68 0 80 -2.77556e-17 0.038 0.038 0.038" type="System.Single" dim="1" sep=" " sizes="9"/>
                     <Arg name="transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                 </Config>
             </Configs>
@@ -1362,17 +1375,6 @@
                             <Interval t1="0" t2="100"/>
                         </Timeline>
                     </Action>
-                    <Action key="121" key_component="50" key_config="111" node_used="0" node_position="0 0">
-                        <!--Component First person perspective camera with config standard -->
-                        <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
-                            <Interval t1="0" t2="100"/>
-                        </Timeline>
-                        <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
-                            <Interval t1="0" t2="100"/>
-                        </Timeline>
-                    </Action>
                     <Action key="122" key_component="23" key_config="49" node_used="0" node_position="0 0">
                         <!--Component FPPCamera with config standard -->
                         <Timeline type="Update">
@@ -1804,7 +1806,15 @@
                         </Timeline>
                     </Action>
                     <Action key="112" key_component="45" key_config="99" node_used="0" node_position="0 0">
-                        <!--Component FocusedObjectOfAttention with config standard -->
+                        <!--Component FOA1_Candle with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
+                            <Interval t1="0" t2="100"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy"/>
+                    </Action>
+                    <Action key="124" key_component="51" key_config="114" node_used="0" node_position="0 0">
+                        <!--Component FOA2_Toupie with config standard -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
                             <Interval t1="0" t2="100"/>

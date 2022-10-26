@@ -1,5 +1,5 @@
 ManifestFileVersion: 0
-CRC: 2769250402
+CRC: 478837055
 AssetBundleManifest:
   AssetBundleInfos:
     Info_0:
@@ -9,13 +9,20 @@ AssetBundleManifest:
       Name: whiteroom
       Dependencies: {}
     Info_2:
-      Name: forestroom
+      Name: meditationshelter
       Dependencies: {}
     Info_3:
-      Name: gameengine
+      Name: forestscene
       Dependencies: {}
     Info_4:
-      Name: labroomscene
-      Dependencies:
-        Dependency_0: labroom
-        Dependency_1: gameengine
+      Name: roundtablewood
+      Dependencies: {}
+    Info_5:
+      Name: distantsmokefx
+      Dependencies: {}
+    Info_6:
+      Name: candlestick
+      Dependencies: {}
+    Info_7:
+      Name: toupie
+      Dependencies: {}

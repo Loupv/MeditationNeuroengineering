@@ -122,6 +122,18 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &158285687 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 740249849, guid: 1c4fe3af9e7fa7846bd80faee06aeb0b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1595161555}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &181517348 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 227895229, guid: 1c4fe3af9e7fa7846bd80faee06aeb0b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1595161555}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &330585543
 GameObject:
   m_ObjectHideFlags: 0
@@ -310,6 +322,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &559507433 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 953991027, guid: 1c4fe3af9e7fa7846bd80faee06aeb0b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1595161555}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &706817061
 GameObject:
   m_ObjectHideFlags: 0
@@ -430,27 +448,27 @@ PrefabInstance:
         type: 3}
       propertyPath: fadeScreens.Array.data[0]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 559507433}
     - target: {fileID: 2888239456813453211, guid: 238cb48452684e44d9a4dddbb5e4ee1e,
         type: 3}
       propertyPath: fadeScreens.Array.data[1]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1909713577}
     - target: {fileID: 2888239456813453211, guid: 238cb48452684e44d9a4dddbb5e4ee1e,
         type: 3}
       propertyPath: fadeScreens.Array.data[2]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1361633286}
     - target: {fileID: 2888239456813453211, guid: 238cb48452684e44d9a4dddbb5e4ee1e,
         type: 3}
       propertyPath: fadeScreens.Array.data[3]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 181517348}
     - target: {fileID: 2888239456813453211, guid: 238cb48452684e44d9a4dddbb5e4ee1e,
         type: 3}
       propertyPath: fadeScreens.Array.data[4]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 158285687}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 238cb48452684e44d9a4dddbb5e4ee1e, type: 3}
 --- !u!4 &992851183 stripped
@@ -587,6 +605,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1361633286 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1505471977, guid: 1c4fe3af9e7fa7846bd80faee06aeb0b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1595161555}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1469933992
 GameObject:
   m_ObjectHideFlags: 0
@@ -658,11 +682,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 7642219578975864759, guid: 1c4fe3af9e7fa7846bd80faee06aeb0b,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7730742395313090430, guid: 1c4fe3af9e7fa7846bd80faee06aeb0b,
         type: 3}
       propertyPath: m_Name
@@ -842,13 +861,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: LabRoom
       objectReference: {fileID: 0}
-    - target: {fileID: 5304415126851256557, guid: 61b001ca0b25a814287dfb23a7fc22c4,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 61b001ca0b25a814287dfb23a7fc22c4, type: 3}
+--- !u!1 &1909713577 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1846719184, guid: 1c4fe3af9e7fa7846bd80faee06aeb0b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1595161555}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1014006733508080707
 PrefabInstance:
   m_ObjectHideFlags: 0
