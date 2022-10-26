@@ -446,22 +446,22 @@
                 <Arg name="position" ui="Vector 3D" value="0 1.8 1.5" type="System.Single" dim="1" sep=" " sizes="3"/>
                 <Arg name="rotation" ui="Vector 3D" value="0 0 0" type="System.Single" dim="1" sep=" " sizes="3"/>
                 <Arg name="start_experiment" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                <Arg name="use_eye" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
-                <Arg name="use_neutral" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
+                <Arg name="use_eye" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
+                <Arg name="use_neutral" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
             </InitConfig>
             <Configs>
                 <Config key="49" name="standard">
                     <Arg name="debug_camera" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="m_speed" ui="Float spin box" value="3" type="System.Single" dim="0"/>
-                    <Arg name="position" ui="Vector 3D" value="-0.05 1.392 -0.002" type="System.Single" dim="1" sep=" " sizes="3"/>
+                    <Arg name="position" ui="Vector 3D" value="0.068 1.613 0.523" type="System.Single" dim="1" sep=" " sizes="3"/>
                     <Arg name="rotation" ui="Vector 3D" value="0 180 0" type="System.Single" dim="1" sep=" " sizes="3"/>
                     <Arg name="rx_speed" ui="Float spin box" value="2" type="System.Single" dim="0"/>
                     <Arg name="ry_speed" ui="Float spin box" value="2" type="System.Single" dim="0"/>
                     <Arg name="rz_speed" ui="Float spin box" value="2" type="System.Single" dim="0"/>
                     <Arg name="start_routine" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="update_on" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="use_eye" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
-                    <Arg name="use_neutral" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="use_eye" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="use_neutral" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
                 </Config>
             </Configs>
         </Component>
