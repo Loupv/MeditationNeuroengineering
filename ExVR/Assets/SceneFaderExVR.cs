@@ -115,12 +115,14 @@ namespace Ex
             int i = 0;
             foreach (SceneConfig config in sceneConfigs)
             {
-                if (current_routine().name == sceneConfigs[0].sceneName)
+                if (current_routine().name == sceneConfigs[i].sceneName)
                 {
                     currentScenesArrayID = i;
                     currentSceneConfig = sceneConfigs[currentScenesArrayID];
+                    log_message("Starting Routine " + sceneConfigs[i].sceneName);
                     break;
                 }
+                i += 1;
             }
 
             omniController.PrepareSoundInNewRoutine(currentSceneConfig.sceneName);
@@ -180,6 +182,7 @@ namespace Ex
                 log_message("Next routine");
                 next();
             }
+
             if (omniController.isInitialized) omniController.UpdateSound();
         }
         #endregion
