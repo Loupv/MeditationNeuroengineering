@@ -91,7 +91,7 @@ MonoBehaviour:
     value: 65472
   diffusion:
     overrideState: 1
-    value: 8.5
+    value: 9.1
   anamorphicRatio:
     overrideState: 1
     value: 0.08
@@ -99,7 +99,7 @@ MonoBehaviour:
     overrideState: 1
     value: {r: 1.319508, g: 0.9831628, b: 0.1759344, a: 1}
   fastMode:
-    overrideState: 1
+    overrideState: 0
     value: 0
   dirtTexture:
     overrideState: 0
@@ -228,7 +228,7 @@ MonoBehaviour:
     value: 0
   postExposure:
     overrideState: 1
-    value: 0.91
+    value: 1
   contrast:
     overrideState: 1
     value: 0
@@ -242,13 +242,13 @@ MonoBehaviour:
     overrideState: 0
     value: 0
   mixerGreenOutRedIn:
-    overrideState: 1
+    overrideState: 0
     value: 0
   mixerGreenOutGreenIn:
-    overrideState: 1
+    overrideState: 0
     value: 100
   mixerGreenOutBlueIn:
-    overrideState: 1
+    overrideState: 0
     value: 0
   mixerBlueOutRedIn:
     overrideState: 0
