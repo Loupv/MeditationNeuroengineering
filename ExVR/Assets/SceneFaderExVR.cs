@@ -6,7 +6,7 @@ using System.Collections.Generic;
 // unity
 using System.Linq;
 using UnityEngine;
-
+using UnityEngine.Rendering.PostProcessing;
 
 namespace Ex
 {
@@ -17,6 +17,8 @@ namespace Ex
         public bool closeScreensBeforeFading, fadeSounds, keepShelterLightOn, activateFog;
         public Color fogColor;
         public float fogDensity;
+        public float[] bloomValues;
+        public Color bloomColor;
     }
 
 
@@ -47,10 +49,10 @@ namespace Ex
         SceneConfig[] InitSceneConfigArray()
         {
             sceneConfigs = new SceneConfig[4];
-            sceneConfigs[0] = new SceneConfig { sceneName = "LabScene", closeScreensBeforeFading = true, fadeSounds = true, keepShelterLightOn = false, activateFog = true, fogColor = new Color(0.67f, 0.72f, 0.72f, 1f), fogDensity = 0.0045f };
-            sceneConfigs[1] = new SceneConfig { sceneName = "WhiteScene", closeScreensBeforeFading = true, fadeSounds = true, keepShelterLightOn = false, activateFog = true, fogColor = new Color(0.67f, 0.72f, 0.72f, 1f), fogDensity = 0.01f };
-            sceneConfigs[2] = new SceneConfig { sceneName = "ForestScene", closeScreensBeforeFading = true, fadeSounds = true, keepShelterLightOn = true, activateFog = true, fogColor = new Color(0.67f, 0.72f, 0.72f, 1f), fogDensity = 0.0045f };
-            sceneConfigs[3] = new SceneConfig { sceneName = "Forest FOA", closeScreensBeforeFading = false, fadeSounds = true, keepShelterLightOn = false, activateFog = true, fogColor = new Color(0.29f, 0.32f, 0.32f, 1f), fogDensity = 0.0045f };
+            sceneConfigs[0] = new SceneConfig { sceneName = "LabScene", closeScreensBeforeFading = true, fadeSounds = true, keepShelterLightOn = false, activateFog = true, fogColor = new Color(0.67f, 0.72f, 0.72f, 1f), fogDensity = 0.0045f, bloomValues = new float[] { 1.96f, 0.78f, 0.5f, 10f }, bloomColor = new Color(1, 0, 0, 1) };
+            sceneConfigs[1] = new SceneConfig { sceneName = "WhiteScene", closeScreensBeforeFading = true, fadeSounds = true, keepShelterLightOn = false, activateFog = true, fogColor = new Color(0.67f, 0.72f, 0.72f, 1f), fogDensity = 0.01f, bloomValues = new float[] { 3f, 0.61f, 0.5f, 10f }, bloomColor = new Color(0.8f, 0.46, 0, 1) };
+            sceneConfigs[2] = new SceneConfig { sceneName = "ForestScene", closeScreensBeforeFading = true, fadeSounds = true, keepShelterLightOn = true, activateFog = true, fogColor = new Color(0.47f, 0.60f, 0.60f, 1f), fogDensity = 0.0045f, bloomValues = new float[] { 3.68f, 0.19f, 0.5f, 10f }, bloomColor=new Color(0.72f, 0.48f, 0, 1) };
+            sceneConfigs[3] = new SceneConfig { sceneName = "Forest FOA", closeScreensBeforeFading = false, fadeSounds = true, keepShelterLightOn = false, activateFog = true, fogColor = new Color(0.29f, 0.32f, 0.32f, 1f), fogDensity = 0.0045f, bloomValues = new float[] { 3.68f, 0.19f, 0.5f, 10f }, bloomColor = new Color(0.72f, 0.48f, 0, 1) };
             return sceneConfigs;
         }
 
@@ -150,6 +152,15 @@ namespace Ex
             //CopyCurrentSkybox();
             GetLightsReferences();
             ShutEveryLights();
+
+            var ppvp = ExVR.Display().postProcessingVolume.profile;
+            var bl = ppvp.GetSetting<Bloom>();
+            bl.active = true;
+            bl.intensity.value = currentSceneConfig.bloomValues[0];
+            bl.threshold.value = currentSceneConfig.bloomValues[1];
+            bl.softKnee.value = currentSceneConfig.bloomValues[2];
+            bl.diffusion.value = currentSceneConfig.bloomValues[3];
+            bl.color.value = currentSceneConfig.bloomColor;
 
             yield return 0;
 

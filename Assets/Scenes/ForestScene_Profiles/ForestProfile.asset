@@ -147,7 +147,7 @@ MonoBehaviour:
     value: -12
   thicknessModifier:
     overrideState: 1
-    value: 4.82
+    value: 2.17
   directLightingStrength:
     overrideState: 0
     value: 0
@@ -174,7 +174,7 @@ MonoBehaviour:
     overrideState: 1
     value: 1
   gradingMode:
-    overrideState: 0
+    overrideState: 1
     value: 1
   externalLut:
     overrideState: 0
@@ -261,13 +261,13 @@ MonoBehaviour:
     value: 100
   lift:
     overrideState: 1
-    value: {x: 1, y: 1, z: 1, w: -0.021186441}
+    value: {x: 1, y: 1, z: 1, w: 0.0037979425}
   gamma:
-    overrideState: 0
-    value: {x: 1, y: 1, z: 1, w: -0.021186441}
+    overrideState: 1
+    value: {x: 1, y: 1, z: 1, w: 0.52847004}
   gain:
-    overrideState: 0
-    value: {x: 1, y: 1, z: 1, w: 0.2330508}
+    overrideState: 1
+    value: {x: 1, y: 1, z: 1, w: 0.15809761}
   masterCurve:
     overrideState: 0
     value:

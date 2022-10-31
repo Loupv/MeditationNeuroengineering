@@ -1,25 +1,28 @@
 ManifestFileVersion: 0
-CRC: 341595945
+CRC: 2445520888
 AssetBundleManifest:
   AssetBundleInfos:
     Info_0:
-      Name: distantsmokefx
+      Name: labroom
       Dependencies: {}
     Info_1:
-      Name: roundtable
+      Name: whiteroom
       Dependencies: {}
     Info_2:
-      Name: sunlight
+      Name: meditationshelter
       Dependencies: {}
     Info_3:
-      Name: toupie
+      Name: forestscene
       Dependencies: {}
     Info_4:
-      Name: candlestick
-      Dependencies: {}
-    Info_5:
       Name: roundtablewood
       Dependencies: {}
+    Info_5:
+      Name: distantsmokefx
+      Dependencies: {}
     Info_6:
-      Name: forestscene
+      Name: candlestick
+      Dependencies: {}
+    Info_7:
+      Name: toupie
       Dependencies: {}
