@@ -49,10 +49,10 @@ namespace Ex
         public SceneConfig[] InitSceneConfigArray()
         {
             sceneConfigs = new SceneConfig[4];
-            sceneConfigs[0] = new SceneConfig { sceneName = "LabScene", closeScreensBeforeFading = true, fadeSounds = true, keepShelterLightOn = false, activateFog = true, fogColor = new Color(0.67f, 0.72f, 0.72f, 1f), fogDensity = 0.0045f, bloomValues = new float[4] { 1.96f, 0.78f, 0.5f, 10f }, bloomColor = new Color(1, 0, 0, 1) };
-            sceneConfigs[1] = new SceneConfig { sceneName = "WhiteScene", closeScreensBeforeFading = true, fadeSounds = true, keepShelterLightOn = false, activateFog = true, fogColor = new Color(0.67f, 0.72f, 0.72f, 1f), fogDensity = 0.01f, bloomValues = new float[4] { 3f, 0.61f, 0.5f, 10f }, bloomColor = new Color(0.8f, 0.46f, 0, 1) };
-            sceneConfigs[2] = new SceneConfig { sceneName = "ForestScene", closeScreensBeforeFading = true, fadeSounds = true, keepShelterLightOn = true, activateFog = true, fogColor = new Color(0.47f, 0.60f, 0.60f, 1f), fogDensity = 0.0045f, bloomValues = new float[4] { 3.68f, 0.19f, 0.5f, 10f }, bloomColor=new Color(0.83f, 0.99f, 0, 1) };
-            sceneConfigs[3] = new SceneConfig { sceneName = "Forest FOA", closeScreensBeforeFading = false, fadeSounds = true, keepShelterLightOn = false, activateFog = true, fogColor = new Color(0.29f, 0.32f, 0.32f, 1f), fogDensity = 0.0045f, bloomValues = new float[4] { 3.68f, 0.19f, 0.5f, 10f }, bloomColor = new Color(0.72f, 0.48f, 0, 1) };
+            sceneConfigs[0] = new SceneConfig { sceneName = "LabScene", closeScreensBeforeFading = true, fadeSounds = true, keepShelterLightOn = false, activateFog = true, fogColor = new Color(0.67f, 0.72f, 0.72f, 1f), fogDensity = 0.0045f, bloomValues = new float[4] { 1.96f, 0.78f, 0.5f, 10f }, bloomColor = new Color(1f, 0f, 0f, 1f) };
+            sceneConfigs[1] = new SceneConfig { sceneName = "WhiteScene", closeScreensBeforeFading = true, fadeSounds = true, keepShelterLightOn = false, activateFog = true, fogColor = new Color(0.67f, 0.72f, 0.72f, 1f), fogDensity = 0.01f, bloomValues = new float[4] { 3f, 0.61f, 0.5f, 10f }, bloomColor = new Color(0.8f, 0.46f, 0f, 1f) };
+            sceneConfigs[2] = new SceneConfig { sceneName = "ForestScene", closeScreensBeforeFading = true, fadeSounds = true, keepShelterLightOn = true, activateFog = true, fogColor = new Color(0.47f, 0.60f, 0.60f, 1f), fogDensity = 0.0045f, bloomValues = new float[4] { 3.68f, 0.19f, 0.5f, 10f }, bloomColor=new Color(0.83f, 0.99f, 0f, 1f) };
+            sceneConfigs[3] = new SceneConfig { sceneName = "Forest FOA", closeScreensBeforeFading = false, fadeSounds = true, keepShelterLightOn = false, activateFog = true, fogColor = new Color(0.29f, 0.32f, 0.32f, 1f), fogDensity = 0.0045f, bloomValues = new float[4] { 3.68f, 0.19f, 0.5f, 10f }, bloomColor = new Color(0.72f, 0.48f, 0f, 1f) };
             return sceneConfigs;
         }
 
