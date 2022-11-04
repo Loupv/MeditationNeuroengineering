@@ -22,6 +22,9 @@ Shader "Custom/Cloud/ParaboloidFragWorldSizeShader"
 		_offset ("Offset",Vector) = (1.0,1.0,1.0)
         _cosFreq ("Offset Frequency",Vector) = (1.0,1.0,1.0)
 		
+		_GlowingSpherePosition("GlowingSpherePosition", Vector) = (0,0,0)
+		_GlowingSphereRadius("GlowingSphereRadius", float) = 2
+
 		_ColorGain("ColorGain", float) = 1
         /*_octaves ("Octaves",Int) = 7
         _lacunarity("Lacunarity", Range( 1.0 , 5.0)) = 2
@@ -96,6 +99,10 @@ Shader "Custom/Cloud/ParaboloidFragWorldSizeShader"
 			float3 _offset,_cosFreq;
 			float noisyPointSize;
 			float _ColorGain;
+
+			float3 _GlowingSpherePosition;
+			float _GlowingSphereRadius;
+
 			// *********************** External noise functions 
 			
 			#define NOISE_SIMPLEX_1_DIV_289 0.00346020761245674740484429065744f
@@ -146,7 +153,12 @@ Shader "Custom/Cloud/ParaboloidFragWorldSizeShader"
 			float4 taylorInvSqrt(float4 r) {
 				return 1.79284291400159 - 0.85373472095314 * r;
 			}
- 
+			
+			float remap(float value, float low1, float high1, float low2, float high2) {
+				if (value > high1) return high2;
+				else if (value < low1) return low2;
+				else return (value - low1) * (high2 - low2) / (high1 - low1) + low2;
+			}
  
  
 			float4 grad4(float j, float4 ip)
@@ -286,25 +298,26 @@ Shader "Custom/Cloud/ParaboloidFragWorldSizeShader"
 				
 				float _p = snoise( float3(o.position.x * _cosFreq.x + cos(_Time.x), o.position.y * _cosFreq.y + sin(_Time.x), o.position.z * _cosFreq.z));
 
-				cc *= exp(_ColorGain+abs(_p));
+				// Color
+
+				float dist = distance(v.position, _GlowingSpherePosition);
+
+				cc *= (_ColorGain+abs(_p)) * (pow(1/remap(dist, 0, _GlowingSphereRadius, 0.01, 1),(abs(cos(_Time.y/1.5))*2+1)));
+
 
 				o.color = float4(cc,1);
 
+
+				// Position noise
 				float3 view = normalize(UNITY_MATRIX_IT_MV[2].xyz);
 				float3 upvec = normalize(UNITY_MATRIX_IT_MV[1].xyz);
 				float3 R = normalize(cross(view, upvec));
 
-				//float _p = snoise( o.position);
-
-				noisyPointSize = _PointSize ;//;* (abs(cos(_Time.y/5 + _p*2*PI)/2)+0.5 + _p);
-
+				noisyPointSize = _PointSize ;
 
 				o.U = float4(upvec * _PointSize, 0);
 				o.R = -float4(R * _PointSize, 0);
-				//o.U = float4(upvec * (abs(cos(_Time.y/20)/2)+0.5) * _PointSize, 0);
-				//o.R = -float4(R * (abs(cos(_Time.y/20)/2)+0.5) * _PointSize, 0);
 				
-
 				o.position.x += _p* _offset.x * cos(_Time.y/10 * _cosFreq.x+_p);
 				o.position.y += _p* _offset.y * cos(_Time.y/10 * _cosFreq.y+_p);
 				o.position.z += _p* _offset.z * cos(_Time.y/10 * _cosFreq.z+_p);
