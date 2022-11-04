@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Experiment name="meditationScenario" version="1.0a63" mode="designer" designer-used="C:/Users/vuarness/Documents/GitHub/exvr/cpp-projects/_build/bin/exvr-designer/ExVR.exe">
+<Experiment name="meditationScenario" version="1.0a63" mode="designer" designer-used="C:/Users/loupv/Documents/GitHub/exvr/cpp-projects/_build/bin/exvr-designer/ExVR.exe">
     <Settings debug="1" csharp_debug_info="0" catch_components_exceptions="0" positional_tracking="1" catch_external_keyboard_events="0">
         <Display mode="0" stereo_fov="60" fullscreen="0" monitor_id="1" resolution_id="1" custom_width="1920" custom_height="1080"/>
         <Camera neutral_x="0" neutral_y="1" neutral_z="0"/>
@@ -1337,50 +1337,6 @@
                 </Config>
             </Configs>
         </Component>
-        <Component key="57" name="K4 manager" category="TrackingDevice" type="K4Manager" global="0" always_updating="0" exceptions="1" frame_logging="0" trigger_logging="0" restricted="2" priority="2">
-            <InitConfig key="125" name="standard">
-                <Arg name="cameras_to_use" ui="Line text editor" value="0" type="System.String" dim="0"/>
-                <Arg name="color_init_default" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
-                <Arg name="color_init_file" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
-                <Arg name="color_init_nothing" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
-                <Arg name="color_settings" ui="Resource" value="%%%-1" type="System.String" dim="1" sep="%%%" sizes="2"/>
-                <Arg name="debug_bypass" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                <Arg name="device_init_default" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
-                <Arg name="device_init_file" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
-                <Arg name="device_init_nothing" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
-                <Arg name="device_settings" ui="Resource" value="%%%-1" type="System.String" dim="1" sep="%%%" sizes="2"/>
-                <Arg name="filters" ui="Resource" value="%%%-1" type="System.String" dim="1" sep="%%%" sizes="2"/>
-                <Arg name="filters_init_default" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
-                <Arg name="filters_init_file" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
-                <Arg name="filters_init_nothing" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
-                <Arg name="models" ui="Resource" value="%%%-1" type="System.String" dim="1" sep="%%%" sizes="2"/>
-                <Arg name="network_settings" ui="Resource" value="network_SV-10-003%%%68" type="System.String" dim="1" sep="%%%" sizes="2"/>
-            </InitConfig>
-            <Configs>
-                <Config key="126" name="standard"/>
-            </Configs>
-        </Component>
-        <Component key="58" name="K4 direct multi clouds" category="TrackingDevice" type="K4DirectMultiClouds" global="0" always_updating="0" exceptions="1" frame_logging="0" trigger_logging="0" restricted="2" priority="1">
-            <InitConfig key="127" name="standard">
-                <Arg name="k4_manager" ui="Component" value="K4 manager%%%57" type="System.String" dim="1" sep="%%%" sizes="2"/>
-            </InitConfig>
-            <Configs>
-                <Config key="128" name="standard">
-                    <Arg name="circles" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="cones" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="details" ui="Combo box index" value="3" type="System.Int32" dim="0"/>
-                    <Arg name="display_clouds" ui="Check box" value="true" type="System.Boolean" dim="0"/>
-                    <Arg name="display_filtering_obb" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="filter_points_outside_obb" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="filtering_obb_tab" ui="Tab" value="" type="System.String" dim="1" sep="[#T#]" sizes="0"/>
-                    <Arg name="global_transform" ui="Transformation" value="-0.37 1.51 -0.28 10.9 30 -0.1 -1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
-                    <Arg name="global_transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="rendering" ui="Combo box index" value="2" type="System.Int32" dim="0"/>
-                    <Arg name="size_points" ui="Float spin box" value="0.0009" type="System.Single" dim="0"/>
-                    <Arg name="tint" ui="Color pick" value="0 1 1 1" type="System.Single" dim="1" sep=" " sizes="4"/>
-                </Config>
-            </Configs>
-        </Component>
         <Component key="59" name="Volumetric video" category="Video" type="VolumetricVideo" global="0" always_updating="0" exceptions="1" frame_logging="0" trigger_logging="0" restricted="2" priority="2">
             <InitConfig key="129" name="standard">
                 <Arg name="init_transform" ui="Transformation" value="0 0 0 0 0 0 1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
@@ -1568,19 +1524,6 @@
                             <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
                             <Interval t1="0" t2="10000"/>
                         </Timeline>
-                    </Action>
-                    <Action key="132" key_component="57" key_config="126" node_used="0" node_position="0 0">
-                        <!--Component K4 manager with config standard -->
-                        <Timeline type="Update"/>
-                        <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                    </Action>
-                    <Action key="133" key_component="58" key_config="128" node_used="0" node_position="0 0">
-                        <!--Component K4 direct multi clouds with config standard -->
-                        <Timeline type="Update"/>
-                        <Timeline type="Visibiliy"/>
                     </Action>
                     <Action key="138" key_component="59" key_config="130" node_used="0" node_position="0 0">
                         <!--Component Volumetric video with config standard -->
@@ -1781,19 +1724,8 @@
                             <Interval t1="0" t2="10000"/>
                         </Timeline>
                     </Action>
-                    <Action key="130" key_component="57" key_config="126" node_used="0" node_position="0 0">
-                        <!--Component K4 manager with config standard -->
-                        <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                        <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                    </Action>
-                    <Action key="131" key_component="58" key_config="128" node_used="0" node_position="0 0">
-                        <!--Component K4 direct multi clouds with config standard -->
+                    <Action key="140" key_component="59" key_config="130" node_used="0" node_position="0 0">
+                        <!--Component Volumetric video with config standard -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
                             <Interval t1="0" t2="10000"/>
@@ -1961,19 +1893,8 @@
                             <Interval t1="0" t2="1000"/>
                         </Timeline>
                     </Action>
-                    <Action key="134" key_component="57" key_config="126" node_used="0" node_position="0 0">
-                        <!--Component K4 manager with config standard -->
-                        <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
-                            <Interval t1="0" t2="1000"/>
-                        </Timeline>
-                        <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
-                            <Interval t1="0" t2="1000"/>
-                        </Timeline>
-                    </Action>
-                    <Action key="135" key_component="58" key_config="128" node_used="0" node_position="0 0">
-                        <!--Component K4 direct multi clouds with config standard -->
+                    <Action key="139" key_component="59" key_config="130" node_used="0" node_position="0 0">
+                        <!--Component Volumetric video with config standard -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
                             <Interval t1="0" t2="1000"/>
@@ -2169,19 +2090,8 @@
                             <Interval t1="0" t2="1000"/>
                         </Timeline>
                     </Action>
-                    <Action key="136" key_component="57" key_config="126" node_used="0" node_position="0 0">
-                        <!--Component K4 manager with config standard -->
-                        <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
-                            <Interval t1="0" t2="1000"/>
-                        </Timeline>
-                        <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
-                            <Interval t1="0" t2="1000"/>
-                        </Timeline>
-                    </Action>
-                    <Action key="137" key_component="58" key_config="128" node_used="0" node_position="0 0">
-                        <!--Component K4 direct multi clouds with config standard -->
+                    <Action key="141" key_component="59" key_config="130" node_used="0" node_position="0 0">
+                        <!--Component Volumetric video with config standard -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
                             <Interval t1="0" t2="1000"/>
