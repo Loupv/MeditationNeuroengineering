@@ -12,8 +12,6 @@ Shader "Custom/Cloud/ParaboloidFragWorldSizeShader"
 	*/
 	Properties{
 		_PointSize("Point Size", Float) = 0.0013
-		_PointSizeMin("Point Size Min", Float) = 0.0013
-		_PointSizeMax("Point Size Max", Float) = 0.0025
 		[Toggle] _Circles("Circles", Int) = 1
 		[Toggle] _OBBFiltering("OBBFiltering", Int) = 0
 		[Toggle] _Cones("Cones", Int) = 0
@@ -86,7 +84,7 @@ Shader "Custom/Cloud/ParaboloidFragWorldSizeShader"
 				float depth : SV_DEPTH;
 			};
 
-			float _PointSize,_PointSizeMin, _PointSizeMax;
+			float _PointSize;
 			int _Circles;
 			int _Cones;
 			float4 _Tint;
@@ -97,7 +95,6 @@ Shader "Custom/Cloud/ParaboloidFragWorldSizeShader"
 			float4x4 _ObbsOrientation[10];
 
 			float3 _offset,_cosFreq;
-			float noisyPointSize;
 			float _ColorGain;
 
 			float3 _GlowingSpherePosition;
@@ -302,10 +299,12 @@ Shader "Custom/Cloud/ParaboloidFragWorldSizeShader"
 
 				float dist = distance(v.position, _GlowingSpherePosition);
 
-				cc *= (_ColorGain+abs(_p)) * (pow(1/remap(dist, 0, _GlowingSphereRadius, 0.01, 1),(abs(cos(_Time.y/1.5))*2+1)));
 
+				float distGain = (pow(1 / remap(dist, 0, _GlowingSphereRadius, 0.01, 1), (abs(cos(_Time.y / 1.5)) * 2 + 1)));
+				cc *= (_ColorGain+abs(_p)) * distGain;
 
-				o.color = float4(cc,1);
+				
+				o.color = float4(cc, 1);
 
 
 				// Position noise
@@ -313,10 +312,10 @@ Shader "Custom/Cloud/ParaboloidFragWorldSizeShader"
 				float3 upvec = normalize(UNITY_MATRIX_IT_MV[1].xyz);
 				float3 R = normalize(cross(view, upvec));
 
-				noisyPointSize = _PointSize ;
+				float pointSizeMultiplier = 0.75+1/(4*exp(1/abs(distGain)));
 
-				o.U = float4(upvec * _PointSize, 0);
-				o.R = -float4(R * _PointSize, 0);
+				o.U = float4(upvec * _PointSize * pointSizeMultiplier, 0);
+				o.R = -float4(R * _PointSize * pointSizeMultiplier, 0);
 				
 				o.position.x += _p* _offset.x * cos(_Time.y/10 * _cosFreq.x+_p);
 				o.position.y += _p* _offset.y * cos(_Time.y/10 * _cosFreq.y+_p);

@@ -51,8 +51,8 @@ namespace Ex
             sceneConfigs = new SceneConfig[4];
             sceneConfigs[0] = new SceneConfig { sceneName = "LabScene", closeScreensBeforeFading = true, fadeSounds = true, keepShelterLightOn = false, activateFog = true, fogColor = new Color(0.67f, 0.72f, 0.72f, 1f), fogDensity = 0.0045f, bloomValues = new float[4] { 1.96f, 0.78f, 0.5f, 10f }, bloomColor = new Color(1f, 0f, 0f, 1f) };
             sceneConfigs[1] = new SceneConfig { sceneName = "WhiteScene", closeScreensBeforeFading = true, fadeSounds = true, keepShelterLightOn = false, activateFog = true, fogColor = new Color(0.67f, 0.72f, 0.72f, 1f), fogDensity = 0.01f, bloomValues = new float[4] { 3f, 0.61f, 0.5f, 10f }, bloomColor = new Color(0.8f, 0.46f, 0f, 1f) };
-            sceneConfigs[2] = new SceneConfig { sceneName = "ForestScene", closeScreensBeforeFading = true, fadeSounds = true, keepShelterLightOn = true, activateFog = true, fogColor = new Color(0.47f, 0.60f, 0.60f, 1f), fogDensity = 0.0045f, bloomValues = new float[4] { 3.68f, 0.19f, 0.5f, 10f }, bloomColor=new Color(0.83f, 0.99f, 0f, 1f) };
-            sceneConfigs[3] = new SceneConfig { sceneName = "Forest FOA", closeScreensBeforeFading = false, fadeSounds = true, keepShelterLightOn = false, activateFog = true, fogColor = new Color(0.29f, 0.32f, 0.32f, 1f), fogDensity = 0.0045f, bloomValues = new float[4] { 3.68f, 0.19f, 0.5f, 10f }, bloomColor = new Color(0.72f, 0.48f, 0f, 1f) };
+            sceneConfigs[2] = new SceneConfig { sceneName = "ForestScene", closeScreensBeforeFading = true, fadeSounds = true, keepShelterLightOn = true, activateFog = true, fogColor = new Color(0.47f, 0.60f, 0.60f, 1f), fogDensity = 0.0045f, bloomValues = new float[4] { 1.13f, 2.19f, 0.5f, 10f }, bloomColor=new Color(0.98f, 0.43f, 0f, 1f) };
+            sceneConfigs[3] = new SceneConfig { sceneName = "Forest FOA", closeScreensBeforeFading = false, fadeSounds = true, keepShelterLightOn = false, activateFog = true, fogColor = new Color(0.29f, 0.32f, 0.32f, 1f), fogDensity = 0.0045f, bloomValues = new float[4] { 2.06f, 0.5f, 0.5f, 10f }, bloomColor = new Color(1f, 0f, 0f, 1f) };
             return sceneConfigs;
         }
 
@@ -157,6 +157,7 @@ namespace Ex
             var ppvp = ExVR.Display().postProcessingVolume.profile;
             var bl = ppvp.GetSetting<Bloom>();
             bl.active = true;
+            bl.enabled.value = true;
             bl.intensity.value = currentSceneConfig.bloomValues[0];
             bl.threshold.value = currentSceneConfig.bloomValues[1];
             bl.softKnee.value = currentSceneConfig.bloomValues[2];
