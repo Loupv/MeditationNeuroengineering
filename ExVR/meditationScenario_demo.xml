@@ -16,6 +16,10 @@
         <Resource key="54" type="Audio" alias="WideAmbience" path="Assets/WideAmbience.wav"/>
         <Resource key="55" type="Audio" alias="Music_WelcomeJonHopkins" path="Assets/Music_WelcomeJonHopkins.wav"/>
         <Resource key="57" type="Audio" alias="Music_SisterMartinSigAndersen" path="Assets/Music_SisterMartinSigAndersen.wav"/>
+        <Resource key="70" type="Audio" alias="LabRoom_Back_Reverb" path="Assets/LabRoom_Back_Reverb.wav"/>
+        <Resource key="71" type="Audio" alias="LabRoom_Front_Reverb" path="Assets/LabRoom_Front_Reverb.wav"/>
+        <Resource key="72" type="Audio" alias="LabRoom_Left_Reverb" path="Assets/LabRoom_Left_Reverb.wav"/>
+        <Resource key="73" type="Audio" alias="LabRoom_Right_Reverb" path="Assets/LabRoom_Right_Reverb.wav"/>
         <Resource key="68" type="Text" alias="network_SV-10-003" path="../../../k4-scaner-manager/config/network/network_SV-10-003.config"/>
         <Resource key="41" type="UnityAssetBundle" alias="labroom" path="Bundles/labroom.unity3d"/>
         <Resource key="43" type="UnityAssetBundle" alias="whiteroom" path="Bundles/whiteroom.unity3d"/>
@@ -890,7 +894,7 @@
                 <Arg name="channel_7_copy_destination" ui="Line text editor" value="" type="System.String" dim="0"/>
                 <Arg name="generate_new_sound" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                 <Arg name="new_sound_channel" ui="Combo box index" value="0" type="System.Int32" dim="0"/>
-                <Arg name="sound" ui="Resource" value="WideAmbience%%%54" type="System.String" dim="1" sep="%%%" sizes="2"/>
+                <Arg name="sound" ui="Resource" value="LabRoom_Front_Reverb%%%71" type="System.String" dim="1" sep="%%%" sizes="2"/>
             </InitConfig>
             <Configs>
                 <Config key="81" name="standard">
@@ -916,7 +920,7 @@
                     <Arg name="stop_new_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="transform" ui="Transformation" value="0 0 0 0 0 0 0.3 0.3 0.3" type="System.Single" dim="1" sep=" " sizes="9"/>
                     <Arg name="transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="volume" ui="Float values slider" value="1" type="System.Single" dim="0"/>
+                    <Arg name="volume" ui="Float values slider" value="0.43" type="System.Single" dim="0"/>
                 </Config>
             </Configs>
         </Component>
@@ -933,7 +937,7 @@
                 <Arg name="channel_7_copy_destination" ui="Line text editor" value="" type="System.String" dim="0"/>
                 <Arg name="generate_new_sound" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                 <Arg name="new_sound_channel" ui="Combo box index" value="0" type="System.Int32" dim="0"/>
-                <Arg name="sound" ui="Resource" value="WideAmbience%%%54" type="System.String" dim="1" sep="%%%" sizes="2"/>
+                <Arg name="sound" ui="Resource" value="LabRoom_Back_Reverb%%%70" type="System.String" dim="1" sep="%%%" sizes="2"/>
             </InitConfig>
             <Configs>
                 <Config key="83" name="standard">
@@ -959,7 +963,7 @@
                     <Arg name="stop_new_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="transform" ui="Transformation" value="0 0 0 0 0 0 0.3 0.3 0.3" type="System.Single" dim="1" sep=" " sizes="9"/>
                     <Arg name="transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="volume" ui="Float values slider" value="1" type="System.Single" dim="0"/>
+                    <Arg name="volume" ui="Float values slider" value="0.4" type="System.Single" dim="0"/>
                 </Config>
             </Configs>
         </Component>
@@ -976,7 +980,7 @@
                 <Arg name="channel_7_copy_destination" ui="Line text editor" value="" type="System.String" dim="0"/>
                 <Arg name="generate_new_sound" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                 <Arg name="new_sound_channel" ui="Combo box index" value="0" type="System.Int32" dim="0"/>
-                <Arg name="sound" ui="Resource" value="WideAmbience%%%54" type="System.String" dim="1" sep="%%%" sizes="2"/>
+                <Arg name="sound" ui="Resource" value="LabRoom_Left_Reverb%%%72" type="System.String" dim="1" sep="%%%" sizes="2"/>
             </InitConfig>
             <Configs>
                 <Config key="85" name="standard">
@@ -1002,7 +1006,7 @@
                     <Arg name="stop_new_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="transform" ui="Transformation" value="0 0 0 0 0 0 0.3 0.3 0.3" type="System.Single" dim="1" sep=" " sizes="9"/>
                     <Arg name="transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="volume" ui="Float values slider" value="1" type="System.Single" dim="0"/>
+                    <Arg name="volume" ui="Float values slider" value="0.4" type="System.Single" dim="0"/>
                 </Config>
             </Configs>
         </Component>
@@ -1019,7 +1023,7 @@
                 <Arg name="channel_7_copy_destination" ui="Line text editor" value="" type="System.String" dim="0"/>
                 <Arg name="generate_new_sound" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                 <Arg name="new_sound_channel" ui="Combo box index" value="0" type="System.Int32" dim="0"/>
-                <Arg name="sound" ui="Resource" value="WideAmbience%%%54" type="System.String" dim="1" sep="%%%" sizes="2"/>
+                <Arg name="sound" ui="Resource" value="LabRoom_Right_Reverb%%%73" type="System.String" dim="1" sep="%%%" sizes="2"/>
             </InitConfig>
             <Configs>
                 <Config key="87" name="standard">
@@ -1045,7 +1049,7 @@
                     <Arg name="stop_new_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="transform" ui="Transformation" value="0 0 0 0 0 0 0.3 0.3 0.3" type="System.Single" dim="1" sep=" " sizes="9"/>
                     <Arg name="transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="volume" ui="Float values slider" value="1" type="System.Single" dim="0"/>
+                    <Arg name="volume" ui="Float values slider" value="0.38" type="System.Single" dim="0"/>
                 </Config>
             </Configs>
         </Component>
@@ -1998,6 +2002,22 @@
                     </Action>
                     <Action key="140" key_component="59" key_config="130" node_used="0" node_position="0 0">
                         <!--Component Volumetric video with config standard -->
+                        <Timeline type="Update"/>
+                        <Timeline type="Visibiliy"/>
+                    </Action>
+                    <Action key="163" key_component="60" key_config="132" node_used="0" node_position="0 0">
+                        <!--Component K4 manager with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="164" key_component="61" key_config="134" node_used="0" node_position="0 0">
+                        <!--Component K4 direct multi clouds with config 3PP -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
                             <Interval t1="0" t2="10000"/>
@@ -2167,6 +2187,22 @@
                     </Action>
                     <Action key="139" key_component="59" key_config="130" node_used="0" node_position="0 0">
                         <!--Component Volumetric video with config standard -->
+                        <Timeline type="Update"/>
+                        <Timeline type="Visibiliy"/>
+                    </Action>
+                    <Action key="161" key_component="60" key_config="132" node_used="0" node_position="0 0">
+                        <!--Component K4 manager with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
+                            <Interval t1="0" t2="1000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
+                            <Interval t1="0" t2="1000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="162" key_component="61" key_config="134" node_used="0" node_position="0 0">
+                        <!--Component K4 direct multi clouds with config 3PP -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
                             <Interval t1="0" t2="1000"/>
@@ -2286,11 +2322,13 @@
                             <Interval t1="0" t2="1000"/>
                         </Timeline>
                         <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 70s(), duration: 70(s) -->
-                            <Interval t1="0" t2="10"/>
-                            <Interval t1="20" t2="30"/>
-                            <Interval t1="40" t2="50"/>
-                            <Interval t1="60" t2="70"/>
+                            <!--Starts at 0(s) and ends at 210s(), duration: 210(s) -->
+                            <Interval t1="0" t2="20"/>
+                            <Interval t1="40" t2="60"/>
+                            <Interval t1="80" t2="100"/>
+                            <Interval t1="110" t2="130"/>
+                            <Interval t1="150" t2="170"/>
+                            <Interval t1="190" t2="210"/>
                         </Timeline>
                     </Action>
                     <Action key="124" key_component="51" key_config="114" node_used="0" node_position="0 0">
@@ -2300,11 +2338,12 @@
                             <Interval t1="0" t2="1000"/>
                         </Timeline>
                         <Timeline type="Visibiliy">
-                            <!--Starts at 10(s) and ends at 80s(), duration: 70(s) -->
-                            <Interval t1="10" t2="20"/>
-                            <Interval t1="30" t2="40"/>
-                            <Interval t1="50" t2="60"/>
-                            <Interval t1="70" t2="80"/>
+                            <!--Starts at 20(s) and ends at 190s(), duration: 170(s) -->
+                            <Interval t1="20" t2="40"/>
+                            <Interval t1="60" t2="80"/>
+                            <Interval t1="100" t2="120"/>
+                            <Interval t1="130" t2="150"/>
+                            <Interval t1="170" t2="190"/>
                         </Timeline>
                     </Action>
                     <Action key="106" key_component="17" key_config="35" node_used="0" node_position="0 0">
@@ -2364,6 +2403,22 @@
                     </Action>
                     <Action key="141" key_component="59" key_config="130" node_used="0" node_position="0 0">
                         <!--Component Volumetric video with config standard -->
+                        <Timeline type="Update"/>
+                        <Timeline type="Visibiliy"/>
+                    </Action>
+                    <Action key="165" key_component="61" key_config="134" node_used="0" node_position="0 0">
+                        <!--Component K4 direct multi clouds with config 3PP -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
+                            <Interval t1="0" t2="1000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
+                            <Interval t1="0" t2="1000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="166" key_component="60" key_config="132" node_used="0" node_position="0 0">
+                        <!--Component K4 manager with config standard -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
                             <Interval t1="0" t2="1000"/>
