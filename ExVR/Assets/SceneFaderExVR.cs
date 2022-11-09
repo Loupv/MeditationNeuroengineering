@@ -52,7 +52,12 @@ namespace Ex
             sceneConfigs[0] = new SceneConfig { sceneName = "LabScene", closeScreensBeforeFading = true, fadeSounds = true, keepShelterLightOn = false, activateFog = true, fogColor = new Color(0.67f, 0.72f, 0.72f, 1f), fogDensity = 0.0045f, bloomValues = new float[4] { 1.96f, 0.78f, 0.5f, 10f }, bloomColor = new Color(1f, 0f, 0f, 1f) };
             sceneConfigs[1] = new SceneConfig { sceneName = "WhiteScene", closeScreensBeforeFading = true, fadeSounds = true, keepShelterLightOn = false, activateFog = true, fogColor = new Color(0.67f, 0.72f, 0.72f, 1f), fogDensity = 0.01f, bloomValues = new float[4] { 3f, 0.61f, 0.5f, 10f }, bloomColor = new Color(0.8f, 0.46f, 0f, 1f) };
             sceneConfigs[2] = new SceneConfig { sceneName = "ForestScene", closeScreensBeforeFading = true, fadeSounds = true, keepShelterLightOn = true, activateFog = true, fogColor = new Color(0.47f, 0.60f, 0.60f, 1f), fogDensity = 0.0045f, bloomValues = new float[4] { 1.13f, 2.19f, 0.5f, 10f }, bloomColor=new Color(0.98f, 0.43f, 0f, 1f) };
-            sceneConfigs[3] = new SceneConfig { sceneName = "Forest FOA", closeScreensBeforeFading = false, fadeSounds = true, keepShelterLightOn = false, activateFog = true, fogColor = new Color(0.29f, 0.32f, 0.32f, 1f), fogDensity = 0.0045f, bloomValues = new float[4] { 2.06f, 0.5f, 0.5f, 10f }, bloomColor = new Color(1f, 0f, 0f, 1f) };
+            sceneConfigs[3] = new SceneConfig { sceneName = "WhiteScene", closeScreensBeforeFading = true, fadeSounds = true, keepShelterLightOn = false, activateFog = true, fogColor = new Color(0.67f, 0.72f, 0.72f, 1f), fogDensity = 0.01f, bloomValues = new float[4] { 3f, 0.61f, 0.5f, 10f }, bloomColor = new Color(0.8f, 0.46f, 0f, 1f) };
+            sceneConfigs[4] = new SceneConfig { sceneName = "LabScene", closeScreensBeforeFading = true, fadeSounds = true, keepShelterLightOn = false, activateFog = true, fogColor = new Color(0.67f, 0.72f, 0.72f, 1f), fogDensity = 0.0045f, bloomValues = new float[4] { 1.96f, 0.78f, 0.5f, 10f }, bloomColor = new Color(1f, 0f, 0f, 1f) };
+            sceneConfigs[5] = new SceneConfig { sceneName = "LabScene", closeScreensBeforeFading = true, fadeSounds = true, keepShelterLightOn = false, activateFog = true, fogColor = new Color(0.67f, 0.72f, 0.72f, 1f), fogDensity = 0.0045f, bloomValues = new float[4] { 1.96f, 0.78f, 0.5f, 10f }, bloomColor = new Color(1f, 0f, 0f, 1f) };
+
+
+            //sceneConfigs[3] = new SceneConfig { sceneName = "Forest FOA", closeScreensBeforeFading = false, fadeSounds = true, keepShelterLightOn = false, activateFog = true, fogColor = new Color(0.29f, 0.32f, 0.32f, 1f), fogDensity = 0.0045f, bloomValues = new float[4] { 2.06f, 0.5f, 0.5f, 10f }, bloomColor = new Color(1f, 0f, 0f, 1f) };
             return sceneConfigs;
         }
 
@@ -84,24 +89,40 @@ namespace Ex
             if (omniController != null) log_message(graphicsHandler.name + " found");
 
             sceneConfigs = InitSceneConfigArray();
+            currentScenesArrayID = GetScenesArrayIDFromRoutineName(current_routine().name);
             
-            switch (current_routine().name)
-            {
-                case "LabScene": 
-                    currentScenesArrayID = 0;
-                    break;
-                case "WhiteScene": 
-                    currentScenesArrayID = 1;
-                    break;
-                case "ForestScene": 
-                    currentScenesArrayID = 2;
-                    break;
-                case "Forest FOA": 
-                    currentScenesArrayID = 3;
-                    break;
-            }
             currentSceneConfig = sceneConfigs[currentScenesArrayID];
 
+        }
+
+        int GetScenesArrayIDFromRoutineName(string routineName)
+        {
+            if (routineName.StartsWith("1_")) return 0;
+            else if (routineName.StartsWith("2_")) return 1;
+            else if (routineName.StartsWith("3_")) return 2;
+            else if (routineName.StartsWith("4_")) return 3;
+            else if (routineName.StartsWith("5_")) return 4;
+            else if (routineName.StartsWith("6_")) return 5;
+            else return 0;
+            /*switch (routineName)
+            {
+                case "LabScene1PP":
+                    return 0;
+                    break;
+                case "WhiteScene":
+                    return 1;
+                    break;
+                case "ForestScene":
+                    return 2;
+                    break;
+                case "Forest FOA":
+                    return 3;
+                    break;
+                case "LabScene3PP":
+                    return 0;
+                    break;
+            }
+            return 0;*/
         }
 
 
@@ -118,9 +139,9 @@ namespace Ex
             int i = 0;
             foreach (SceneConfig config in sceneConfigs)
             {
-                if (current_routine().name == sceneConfigs[i].sceneName)
+                if (current_routine().name.Contains(sceneConfigs[i].sceneName))
                 {
-                    currentScenesArrayID = i;
+                    currentScenesArrayID = i;// GetScenesArrayIDFromRoutineName(current_routine().name);
                     currentSceneConfig = sceneConfigs[currentScenesArrayID];
                     log_message("Starting Routine " + sceneConfigs[i].sceneName);
                     break;
@@ -181,7 +202,7 @@ namespace Ex
                 isFading = true;
 
                 lastSceneConfig = currentSceneConfig;
-                currentScenesArrayID += 1;
+                currentScenesArrayID += 1;// GetScenesArrayIDFromRoutineName(current_routine().name);
                 currentSceneConfig = sceneConfigs[currentScenesArrayID];
                 LogNewConfig(currentSceneConfig);
 
@@ -399,6 +420,8 @@ namespace Ex
             //log_message("ambient int now " + RenderSettings.ambientIntensity);
 
             yield return new WaitForEndOfFrame();
+            
+            PutEveryLightBackToItsOriginalIntensity();
 
             log_message("fade out done");
             fadingDone = true;
@@ -420,14 +443,22 @@ namespace Ex
                 if (light.gameObject.name != "ShelterTransitionLight" && light.type != LightType.Directional) lights.Add(light);
             }
 
-            lightsLastIntensity = new float[lights.Count];
+            log_message(lights.Count.ToString() + " lights found");
 
+            lightsLastIntensity = new float[lights.Count];
             for (int i = 0; i < lights.Count; i++)
             {
                 lightsLastIntensity[i] = lights[i].intensity;
             }
         }
 
+        void PutEveryLightBackToItsOriginalIntensity()
+        {
+            for (int i = 0; i < lights.Count; i++)
+            {
+                lights[i].intensity = lightsLastIntensity[i];
+            }
+        }
 
         void ShutEveryLights()
         {
