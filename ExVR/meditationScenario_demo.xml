@@ -472,8 +472,8 @@
                 <Config key="135" name="3PP">
                     <Arg name="debug_camera" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="m_speed" ui="Float spin box" value="3" type="System.Single" dim="0"/>
-                    <Arg name="position" ui="Vector 3D" value="0 1.799 2.18" type="System.Single" dim="1" sep=" " sizes="3"/>
-                    <Arg name="rotation" ui="Vector 3D" value="0 180 0" type="System.Single" dim="1" sep=" " sizes="3"/>
+                    <Arg name="position" ui="Vector 3D" value="-0.021 0.978 2.009" type="System.Single" dim="1" sep=" " sizes="3"/>
+                    <Arg name="rotation" ui="Vector 3D" value="353.58 174.685 0.434" type="System.Single" dim="1" sep=" " sizes="3"/>
                     <Arg name="rx_speed" ui="Float spin box" value="2" type="System.Single" dim="0"/>
                     <Arg name="ry_speed" ui="Float spin box" value="2.2" type="System.Single" dim="0"/>
                     <Arg name="rz_speed" ui="Float spin box" value="2" type="System.Single" dim="0"/>
@@ -1435,7 +1435,7 @@
                     <Arg name="global_transform" ui="Transformation" value="0.1 1.78 2.23 17.9 180 0 -1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
                     <Arg name="global_transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="rendering" ui="Combo box index" value="2" type="System.Int32" dim="0"/>
-                    <Arg name="size_points" ui="Float spin box" value="0.003" type="System.Single" dim="0"/>
+                    <Arg name="size_points" ui="Float spin box" value="0.0039" type="System.Single" dim="0"/>
                     <Arg name="tint" ui="Color pick" value="0 1 1 1" type="System.Single" dim="1" sep=" " sizes="4"/>
                 </Config>
                 <Config key="138" name="3PPReverse">
@@ -1462,8 +1462,8 @@
                     <Arg name="filtering_obb_tab" ui="Tab" value="true[#OBBFW#]false[#OBBFW#]0.192157 0.784314 0 0[#OBBFW#]0 0.8 1 0 0 0 1 1 1" type="System.String" dim="1" sep="[#T#]" sizes="1"/>
                     <Arg name="global_transform" ui="Transformation" value="0.1 1.78 2.23 17.9 180 0 -1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
                     <Arg name="global_transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="rendering" ui="Combo box index" value="2" type="System.Int32" dim="0"/>
-                    <Arg name="size_points" ui="Float spin box" value="0.003" type="System.Single" dim="0"/>
+                    <Arg name="rendering" ui="Combo box index" value="1" type="System.Int32" dim="0"/>
+                    <Arg name="size_points" ui="Float spin box" value="0.0037" type="System.Single" dim="0"/>
                     <Arg name="tint" ui="Color pick" value="0 1 1 1" type="System.Single" dim="1" sep=" " sizes="4"/>
                 </Config>
             </Configs>
