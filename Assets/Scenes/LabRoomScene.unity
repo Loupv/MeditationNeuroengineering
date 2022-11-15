@@ -1621,26 +1621,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1350421563850858815, guid: 780234ad2975c524f8421a7906e81a08,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -1.22
-      objectReference: {fileID: 0}
-    - target: {fileID: 1350421563850858815, guid: 780234ad2975c524f8421a7906e81a08,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -1.273
-      objectReference: {fileID: 0}
-    - target: {fileID: 3549171623898651409, guid: 780234ad2975c524f8421a7906e81a08,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 1.224
-      objectReference: {fileID: 0}
-    - target: {fileID: 3549171623898651409, guid: 780234ad2975c524f8421a7906e81a08,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -1.271
-      objectReference: {fileID: 0}
     - target: {fileID: 8053112909344827433, guid: 780234ad2975c524f8421a7906e81a08,
         type: 3}
       propertyPath: m_RootOrder
@@ -1779,21 +1759,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2445357434736396375, guid: bdf381d12601abe4d9c0279c0ac76c0d,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3159223976496444286, guid: bdf381d12601abe4d9c0279c0ac76c0d,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4787889522615165182, guid: bdf381d12601abe4d9c0279c0ac76c0d,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4948326335035206784, guid: bdf381d12601abe4d9c0279c0ac76c0d,
         type: 3}
       propertyPath: m_RootOrder
@@ -1853,16 +1818,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: LabRoom3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5755648947151156794, guid: bdf381d12601abe4d9c0279c0ac76c0d,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7017689132556589742, guid: bdf381d12601abe4d9c0279c0ac76c0d,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bdf381d12601abe4d9c0279c0ac76c0d, type: 3}

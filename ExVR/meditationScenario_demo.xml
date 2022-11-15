@@ -29,6 +29,8 @@
         <Resource key="63" type="UnityAssetBundle" alias="forestscene" path="Bundles/forestscene.unity3d"/>
         <Resource key="64" type="UnityAssetBundle" alias="toupie" path="Bundles/toupie.unity3d"/>
         <Resource key="65" type="UnityAssetBundle" alias="candlestick" path="Bundles/candlestick.unity3d"/>
+        <Resource key="74" type="UnityAssetBundle" alias="labroom_tiny" path="Bundles/labroom_tiny.unity3d"/>
+        <Resource key="75" type="UnityAssetBundle" alias="meditationshelter_tiny" path="Bundles/meditationshelter_tiny.unity3d"/>
         <Resource key="37" type="CSharpScript" alias="OmniController" path="Assets/OmniController.cs"/>
         <Resource key="44" type="CSharpScript" alias="SceneFaderExVR" path="Assets/SceneFaderExVR.cs"/>
         <Resource key="61" type="CSharpScript" alias="GraphicsHandler" path="Assets/GraphicsHandler.cs"/>
@@ -499,7 +501,7 @@
         </Component>
         <Component key="25" name="LabRoom" category="Model" type="AssetBundle" global="0" always_updating="0" exceptions="1" frame_logging="0" trigger_logging="0" restricted="0" priority="2">
             <InitConfig key="52" name="standard">
-                <Arg name="asset_bundle" ui="Resource" value="labroom%%%41" type="System.String" dim="1" sep="%%%" sizes="2"/>
+                <Arg name="asset_bundle" ui="Resource" value="labroom_tiny%%%74" type="System.String" dim="1" sep="%%%" sizes="2"/>
                 <Arg name="display_hierarchy" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                 <Arg name="init_transform" ui="Transformation" value="0 0 0 0 0 0 1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
                 <Arg name="init_transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
@@ -507,7 +509,7 @@
             </InitConfig>
             <Configs>
                 <Config key="53" name="standard">
-                    <Arg name="transform" ui="Transformation" value="0 0 0 0 0 0 1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
+                    <Arg name="transform" ui="Transformation" value="0 0 0 0 180 0 1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
                     <Arg name="transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                 </Config>
             </Configs>
@@ -546,7 +548,7 @@
             <InitConfig key="62" name="standard">
                 <Arg name="asset_bundle" ui="Resource" value="meditationshelter%%%45" type="System.String" dim="1" sep="%%%" sizes="2"/>
                 <Arg name="display_hierarchy" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                <Arg name="init_transform" ui="Transformation" value="0 0 0 0 0 0 1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
+                <Arg name="init_transform" ui="Transformation" value="0 0 0 0 180 0 1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
                 <Arg name="init_transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                 <Arg name="name_sub_object" ui="Line text editor" value="" type="System.String" dim="0"/>
             </InitConfig>
