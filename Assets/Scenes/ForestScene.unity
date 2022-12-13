@@ -1457,6 +1457,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: DistantClouds
       objectReference: {fileID: 0}
+    - target: {fileID: 8019338806286222905, guid: ee1f1ac71c308574ea83d53d130c91dc,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+    - target: {fileID: 8019338806286222905, guid: ee1f1ac71c308574ea83d53d130c91dc,
+        type: 3}
+      propertyPath: m_AllowRoll
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8019338806286222905, guid: ee1f1ac71c308574ea83d53d130c91dc,
+        type: 3}
+      propertyPath: m_RenderMode
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ee1f1ac71c308574ea83d53d130c91dc, type: 3}
 --- !u!1001 &5866648864579859091
