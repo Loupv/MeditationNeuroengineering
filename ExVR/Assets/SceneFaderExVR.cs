@@ -45,6 +45,17 @@ namespace Ex
 
         SceneConfig[] sceneConfigs;
         SceneConfig currentSceneConfig, lastSceneConfig;
+        
+        GameObject cameraRig;
+        Vector3 newCameraTarget, cameraOrigin;
+        
+        float lerpTimeInSeconds;
+
+        float targetDistance, targetHeight, targetAngle, lookForward, smoothHandle;
+        float lastTargetDistance = 0, lastTargetHeight = 0, lastTargetAngle = 0, lastLookForward = 0.5f;
+
+        bool cameraMoving;
+        float lerpStartTime;
 
         public SceneConfig[] InitSceneConfigArray()
         {
@@ -61,6 +72,15 @@ namespace Ex
             return sceneConfigs;
         }
 
+        public Vector3 GetCameraTarget(int i)
+        {
+            if (i == 0) return new Vector3(0.068f, 0.713f, 0.713f);
+            else if (i == 1) return new Vector3(-0.021f, 0.978f, 2.009f);
+            else if (i == 2) return cameraOrigin;
+            else return new Vector3(0f, 0f, 0f);
+        }
+
+
         public enum FadeDirection
         {
             In, //Alpha = 1
@@ -74,6 +94,7 @@ namespace Ex
         public override void start_experiment()
         {
             log_message("Starting Experiment");
+
             StartCoroutine(PrepareExperiment());
         }
 
@@ -93,8 +114,12 @@ namespace Ex
             
             currentSceneConfig = sceneConfigs[currentScenesArrayID];
 
+            
+            
         }
 
+
+        // TODO Clean this part, possible to know next routine's name ?
         int GetScenesArrayIDFromRoutineName(string routineName)
         {
             if (routineName.StartsWith("1_")) return 0;
@@ -135,6 +160,9 @@ namespace Ex
         private IEnumerator PrepareNewRoutine()
         {
             yield return 0;
+
+            cameraRig = GameObject.Find("[CameraRig]");
+            cameraOrigin = cameraRig.transform.position; // ExVR.Display().cameras().transform.position;
 
             int i = 0;
             foreach (SceneConfig config in sceneConfigs)
@@ -192,34 +220,6 @@ namespace Ex
             StartCoroutine(FadeIn());
             
         }
-
-
-        public override void update()
-        {
-
-            if (UnityEngine.Input.GetKeyDown(KeyCode.Space) && !isFading)
-            {
-                isFading = true;
-
-                lastSceneConfig = currentSceneConfig;
-                currentScenesArrayID += 1;// GetScenesArrayIDFromRoutineName(current_routine().name);
-                currentSceneConfig = sceneConfigs[currentScenesArrayID];
-                LogNewConfig(currentSceneConfig);
-
-                StartCoroutine(FadeOut());
-
-            }
-
-            if (isFading && fadingDone)
-            {
-                fadingDone = false;
-                log_message("Next routine");
-                next();
-            }
-
-            if (omniController.isInitialized) omniController.UpdateSound();
-        }
-        #endregion
 
 
 
@@ -431,6 +431,125 @@ namespace Ex
         #endregion
 
 
+        public override void update()
+        {
+
+            if (UnityEngine.Input.GetKeyDown(KeyCode.Space) && !isFading)
+            {
+                isFading = true;
+
+                lastSceneConfig = currentSceneConfig;
+                currentScenesArrayID += 1;// GetScenesArrayIDFromRoutineName(current_routine().name);
+                currentSceneConfig = sceneConfigs[currentScenesArrayID];
+                LogNewConfig(currentSceneConfig);
+
+                StartCoroutine(FadeOut());
+
+            }
+
+
+            if (isFading && fadingDone)
+            {
+                fadingDone = false;
+                log_message("Next routine");
+                next();
+            }
+
+            if (omniController.isInitialized) omniController.UpdateSound();
+            
+            
+            if (UnityEngine.Input.GetKeyDown(KeyCode.Keypad0)) InitCameraOrbit(0);
+            if (UnityEngine.Input.GetKeyDown(KeyCode.Keypad1)) InitCameraOrbit(1);
+            if (UnityEngine.Input.GetKeyDown(KeyCode.Keypad2)) InitCameraOrbit(2);
+            if (UnityEngine.Input.GetKeyDown(KeyCode.Keypad3)) InitCameraOrbit(3);
+
+        }
+        #endregion
+
+
+ 
+        void InitCameraOrbit(int i)
+        {
+            if (!cameraMoving)
+            {
+
+                switch (i){
+                    case 0:
+                        targetDistance = 0;
+                        targetHeight = 0;
+                        targetAngle = 0;
+                        lerpTimeInSeconds = 8;
+                        break;
+                    case 1:
+                        targetDistance = 2;
+                        targetHeight = 1;
+                        targetAngle = 0;
+                        lerpTimeInSeconds = 8;
+                        break;
+                    case 2:
+                        targetDistance = 2;
+                        targetHeight = 1;
+                        targetAngle = Mathf.PI * 2;
+                        lerpTimeInSeconds = 15;
+                        break;
+                    case 3:
+                        targetDistance = 3;
+                        targetHeight = 1;
+                        targetAngle = Mathf.PI * 4;
+                        lerpTimeInSeconds = 25;
+                        break;
+                }
+                lookForward = 0.5f;
+                smoothHandle = 2;
+
+                if (!cameraMoving)
+                {
+                    cameraMoving = true;
+                    lerpStartTime = Time.time;
+                    StartCoroutine("CameraOrbit");
+                }
+            }
+        }
+
+        IEnumerator CameraOrbit()
+        {
+            float t = 0;
+            Vector3 newPosition;
+
+            log_message("Camera lerp started");
+
+            while (t <= 1)
+            {
+                t = (Time.time - lerpStartTime) / lerpTimeInSeconds;
+
+                float theta = Mathf.Lerp(lastTargetAngle, targetAngle, LerpSmoother(t, smoothHandle)) + Mathf.PI / 2;
+                float ray = Mathf.Lerp(lastTargetDistance, targetDistance, LerpSmoother(t, smoothHandle));
+                float h = Mathf.Lerp(lastTargetHeight, targetHeight, LerpSmoother(t, smoothHandle));
+                float l = Mathf.Lerp(lastLookForward, lookForward, LerpSmoother(t, smoothHandle));
+
+                newPosition = new Vector3(ray * Mathf.Cos(theta), h, ray * Mathf.Sin(theta)) + cameraOrigin;
+                log_message(cameraOrigin.ToString());
+                
+                cameraRig.transform.position = newPosition; 
+                cameraRig.transform.LookAt(cameraOrigin - new Vector3(0,0,l));
+                
+                yield return new WaitForEndOfFrame();
+            }
+            
+            newPosition = new Vector3(targetDistance * Mathf.Cos(targetAngle + Mathf.PI / 2), targetHeight, targetDistance * Mathf.Sin(targetAngle + Mathf.PI / 2)) + cameraOrigin;
+            cameraRig.transform.position = newPosition;
+            cameraRig.transform.LookAt(cameraOrigin - new Vector3(0, 0, lookForward));
+
+
+            lastTargetDistance = targetDistance;
+            lastTargetHeight = targetHeight;
+            lastTargetAngle = targetAngle % (Mathf.PI *2) ;
+            lastLookForward = lookForward;
+
+            log_message("Camera lerp stopped");
+
+            cameraMoving = false;
+        }
 
         public void GetLightsReferences()
         {
@@ -494,6 +613,17 @@ namespace Ex
         {
             log_message("New config : " + currentSceneConfig.sceneName);
             log_message("Prefs : " + currentSceneConfig.closeScreensBeforeFading.ToString()+" "+ currentSceneConfig.fadeSounds.ToString() + " "+ currentSceneConfig.keepShelterLightOn.ToString());
+        }
+
+        float LerpSmoother(float x, float s)
+        {
+
+            return (1 / (1 + Mathf.Pow(x / (1-x), -s)));
+            //return (1 / (1 + Mathf.Exp(-s * (x-0.5f))));
+
+            // float t = 0.1f; // amount
+            // return (Mathf.Pow((1-x)/x, 2*t) -1) / (Mathf.Pow((1 - x) / x, 2) - 1); // accelerate at 1
+
         }
 
         // public override void stop_routine() {}

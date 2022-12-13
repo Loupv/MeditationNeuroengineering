@@ -20,7 +20,7 @@
         <Resource key="71" type="Audio" alias="LabRoom_Front_Reverb" path="Assets/LabRoom_Front_Reverb.wav"/>
         <Resource key="72" type="Audio" alias="LabRoom_Left_Reverb" path="Assets/LabRoom_Left_Reverb.wav"/>
         <Resource key="73" type="Audio" alias="LabRoom_Right_Reverb" path="Assets/LabRoom_Right_Reverb.wav"/>
-        <Resource key="77" type="Text" alias="network_SV-10-001" path="../../../k4-scaner-manager/config/network/network_SV-10-001.config"/>
+        <Resource key="77" type="Text" alias="network_SV-10-001" path="../network_SV-10-003.config"/>
         <Resource key="41" type="UnityAssetBundle" alias="labroom" path="Bundles/labroom.unity3d"/>
         <Resource key="43" type="UnityAssetBundle" alias="whiteroom" path="Bundles/whiteroom.unity3d"/>
         <Resource key="45" type="UnityAssetBundle" alias="meditationshelter" path="Bundles/meditationshelter.unity3d"/>
