@@ -72,13 +72,13 @@ namespace Ex
             return sceneConfigs;
         }
 
-        public Vector3 GetCameraTarget(int i)
+        /*public Vector3 GetCameraTarget(int i)
         {
             if (i == 0) return new Vector3(0.068f, 0.713f, 0.713f);
             else if (i == 1) return new Vector3(-0.021f, 0.978f, 2.009f);
             else if (i == 2) return cameraOrigin;
             else return new Vector3(0f, 0f, 0f);
-        }
+        }*/
 
 
         public enum FadeDirection
@@ -162,7 +162,7 @@ namespace Ex
             yield return 0;
 
             cameraRig = GameObject.Find("[CameraRig]");
-            cameraOrigin = cameraRig.transform.position; // ExVR.Display().cameras().transform.position;
+            cameraOrigin = cameraRig.transform.Find("Cameras").position; // ExVR.Display().cameras().transform.position;
 
             int i = 0;
             foreach (SceneConfig config in sceneConfigs)
@@ -481,15 +481,15 @@ namespace Ex
                         lerpTimeInSeconds = 8;
                         break;
                     case 1:
-                        targetDistance = 2;
-                        targetHeight = 1;
+                        targetDistance = 1.7f;
+                        targetHeight = 0.7f;
                         targetAngle = 0;
                         lerpTimeInSeconds = 8;
                         break;
                     case 2:
                         targetDistance = 2;
-                        targetHeight = 1;
-                        targetAngle = Mathf.PI * 2;
+                        targetHeight = 1.5f;
+                        targetAngle = 0;// Mathf.PI * 2;
                         lerpTimeInSeconds = 15;
                         break;
                     case 3:
@@ -499,7 +499,7 @@ namespace Ex
                         lerpTimeInSeconds = 25;
                         break;
                 }
-                lookForward = 0.5f;
+                lookForward =  0.5f;
                 smoothHandle = 2;
 
                 if (!cameraMoving)
@@ -528,17 +528,17 @@ namespace Ex
                 float l = Mathf.Lerp(lastLookForward, lookForward, LerpSmoother(t, smoothHandle));
 
                 newPosition = new Vector3(ray * Mathf.Cos(theta), h, ray * Mathf.Sin(theta)) + cameraOrigin;
-                log_message(cameraOrigin.ToString());
-                
-                cameraRig.transform.position = newPosition; 
-                cameraRig.transform.LookAt(cameraOrigin - new Vector3(0,0,l));
+                log_message(ray.ToString()+", "+ h.ToString()+", "+l.ToString());
+
+                cameraRig.transform.Find("Cameras").position = newPosition; 
+                //cameraRig.transform.Find("Cameras").LookAt(cameraOrigin - new Vector3(0,0,l));
                 
                 yield return new WaitForEndOfFrame();
             }
             
             newPosition = new Vector3(targetDistance * Mathf.Cos(targetAngle + Mathf.PI / 2), targetHeight, targetDistance * Mathf.Sin(targetAngle + Mathf.PI / 2)) + cameraOrigin;
-            cameraRig.transform.position = newPosition;
-            cameraRig.transform.LookAt(cameraOrigin - new Vector3(0, 0, lookForward));
+            cameraRig.transform.Find("Cameras").position = newPosition;
+            //cameraRig.transform.Find("Cameras").LookAt(cameraOrigin - new Vector3(0, 0, lookForward));
 
 
             lastTargetDistance = targetDistance;
