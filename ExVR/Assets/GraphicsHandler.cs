@@ -17,6 +17,23 @@ namespace Ex
         
         bool fogActivated;
 
+        GameObject cameraRig;
+        Vector3 newCameraTarget, cameraOrigin;
+
+        float lerpTimeInSeconds;
+
+        float targetDistance, targetHeight, targetAngle, lookForward, smoothHandle;
+        float lastTargetDistance = 0, lastTargetHeight = 0, lastTargetAngle = 0, lastLookForward = 0.5f;
+
+        bool cameraMoving;
+        float lerpStartTime;
+
+        public void InitExperiment()
+        {
+            cameraRig = GameObject.Find("[CameraRig]");
+            cameraOrigin = cameraRig.transform.Find("Cameras").position; // ExVR.Display().cameras().transform.position;
+        }
+
 
         public void SetGraphicsForRoutine(SceneConfig sceneConfig)
         {
@@ -54,8 +71,107 @@ namespace Ex
         {
 
             //if (UnityEngine.Input.GetKeyDown(KeyCode.F)) ActivateFog(!fogActivated);
-        
+
+            if (UnityEngine.Input.GetKeyDown(KeyCode.Keypad0)) InitCameraOrbit(0);
+            if (UnityEngine.Input.GetKeyDown(KeyCode.Keypad1)) InitCameraOrbit(1);
+            if (UnityEngine.Input.GetKeyDown(KeyCode.Keypad2)) InitCameraOrbit(2);
+            if (UnityEngine.Input.GetKeyDown(KeyCode.Keypad3)) InitCameraOrbit(3);
+
         }
+
+
+        void InitCameraOrbit(int i)
+        {
+            if (!cameraMoving)
+            {
+
+                switch (i)
+                {
+                    case 0: // initial position
+                        targetDistance = 0;
+                        targetHeight = 0;
+                        targetAngle = 0;
+                        lerpTimeInSeconds = 8;
+                        break;
+                    case 1: // close behind
+                        targetDistance = 1.7f;
+                        targetHeight = 0.7f;
+                        targetAngle = 0;
+                        lerpTimeInSeconds = 8;
+                        break;
+                    case 2: // far behind
+                        targetDistance = 2;
+                        targetHeight = 1.5f;
+                        targetAngle = 0;// Mathf.PI * 2;
+                        lerpTimeInSeconds = 15;
+                        break;
+                    case 3: // above
+                        targetDistance = 0.3f;
+                        targetHeight = 2;
+                        targetAngle = 0;// Mathf.PI * 4;
+                        lerpTimeInSeconds = 15;
+                        break;
+                }
+                lookForward = 0.5f;
+                smoothHandle = 2;
+
+                if (!cameraMoving)
+                {
+                    cameraMoving = true;
+                    lerpStartTime = Time.time;
+                    StartCoroutine("CameraOrbit");
+                }
+            }
+        }
+
+        IEnumerator CameraOrbit()
+        {
+            float t = 0;
+            Vector3 newPosition;
+
+            log_message("Camera lerp started");
+
+            while (t <= 1)
+            {
+                t = (Time.time - lerpStartTime) / lerpTimeInSeconds;
+
+                float theta = Mathf.Lerp(lastTargetAngle, targetAngle, LerpSmoother(t, smoothHandle)) + Mathf.PI / 2;
+                float ray = Mathf.Lerp(lastTargetDistance, targetDistance, LerpSmoother(t, smoothHandle));
+                float h = Mathf.Lerp(lastTargetHeight, targetHeight, LerpSmoother(t, smoothHandle));
+                float l = Mathf.Lerp(lastLookForward, lookForward, LerpSmoother(t, smoothHandle));
+
+                newPosition = new Vector3(ray * Mathf.Cos(theta), h, ray * Mathf.Sin(theta)) + cameraOrigin;
+                log_message(ray.ToString() + ", " + h.ToString() + ", " + l.ToString());
+
+                cameraRig.transform.Find("Cameras").position = newPosition;
+                //cameraRig.transform.Find("Cameras").LookAt(cameraOrigin - new Vector3(0,0,l));
+
+                yield return new WaitForEndOfFrame();
+            }
+
+            newPosition = new Vector3(targetDistance * Mathf.Cos(targetAngle + Mathf.PI / 2), targetHeight, targetDistance * Mathf.Sin(targetAngle + Mathf.PI / 2)) + cameraOrigin;
+            cameraRig.transform.Find("Cameras").position = newPosition;
+            cameraRig.transform.Find("Cameras").LookAt(cameraOrigin - new Vector3(0, 0, lookForward));
+
+
+            lastTargetDistance = targetDistance;
+            lastTargetHeight = targetHeight;
+            lastTargetAngle = targetAngle % (Mathf.PI * 2);
+            lastLookForward = lookForward;
+
+            log_message("Camera lerp stopped");
+
+            cameraMoving = false;
+        }
+
+
+        float LerpSmoother(float x, float s)
+        {
+            return (1 / (1 + Mathf.Pow(x / (1 - x), -s)));
+            //return (1 / (1 + Mathf.Exp(-s * (x-0.5f))));
+            // return (Mathf.Pow((1-x)/x, 2*t) -1) / (Mathf.Pow((1 - x) / x, 2) - 1); // accelerate at 1
+        }
+
 
         // public override void stop_routine() {}
         // public override void stop_experiment(){}
@@ -64,23 +180,23 @@ namespace Ex
         // public override void set_update_state(bool doUpdate) { }        
         // public override void set_visibility(bool visibility) { }
 
-                // # for advanced users 
-                // public override void clean(){}
-                // public override void pre_update() {}
-                // public override void post_update() {}
-                // public override void update_parameter_from_gui(XML.Arg arg){}
-                // public override void update_from_current_config(){}
+        // # for advanced users 
+        // public override void clean(){}
+        // public override void pre_update() {}
+        // public override void post_update() {}
+        // public override void update_parameter_from_gui(XML.Arg arg){}
+        // public override void update_from_current_config(){}
 
-                // # slots
-                // public override void slot1(object value){}
-                // public override void slot2(object value){}
-                // public override void slot3(object value){}
-                // public override void slot4(object value){}        
-                // public override void slot5(IdAny idValue){
-                // 	int id = idValue.id;
-                // 	object value = idValue.value;
-                // }  
-        }
+        // # slots
+        // public override void slot1(object value){}
+        // public override void slot2(object value){}
+        // public override void slot3(object value){}
+        // public override void slot4(object value){}        
+        // public override void slot5(IdAny idValue){
+        // 	int id = idValue.id;
+        // 	object value = idValue.value;
+        // }  
+    }
 }
 
 

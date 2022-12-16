@@ -66,19 +66,19 @@ namespace Ex
             //myCamera 
 
             //log_message(myCameraTransform.name);
-            if(routineName == "LabScene"){
+            if(routineName.Contains("Lab")){
                 _0deg = get<AudioSourceComponent>("LabRoom_Front");
                 _90deg = get<AudioSourceComponent>("LabRoom_Right");
 			    _180deg = get<AudioSourceComponent>("LabRoom_Back");
 			    _270deg = get<AudioSourceComponent>("LabRoom_Left");
             }
-            else if (routineName == "WhiteScene"){
+            else if (routineName.Contains("White")){
                 _0deg = get<AudioSourceComponent>("WhiteRoom_Front"); 
                 _90deg = get<AudioSourceComponent>("WhiteRoom_Right");
                 _180deg = get<AudioSourceComponent>("WhiteRoom_Back");
                 _270deg = get<AudioSourceComponent>("WhiteRoom_Left");
             }
-            else if (routineName == "ForestScene" || routineName == "Forest FOA")
+            else if (routineName.Contains("Forest"))
             {
                 _0deg = get<AudioSourceComponent>("AmbianceForest_Front"); 
                 _90deg = get<AudioSourceComponent>("AmbianceForest_Right");
