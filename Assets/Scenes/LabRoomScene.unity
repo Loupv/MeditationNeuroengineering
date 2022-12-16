@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.091168106, g: 0.08966616, b: 0.08492717, a: 1}
+  m_IndirectSpecularColor: {r: 0.0911685, g: 0.089666545, b: 0.08492754, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -145,6 +145,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: MeditationShelter
+      objectReference: {fileID: 0}
+    - target: {fileID: 7730742395313090430, guid: 1c4fe3af9e7fa7846bd80faee06aeb0b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8699809919750094399, guid: 1c4fe3af9e7fa7846bd80faee06aeb0b,
         type: 3}
@@ -755,11 +760,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: MeditationShelter_Tiny1
-      objectReference: {fileID: 0}
-    - target: {fileID: 841226853936910868, guid: c640fe1d56ae0794ebd7e47f501796d5,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1755930400141738837, guid: c640fe1d56ae0794ebd7e47f501796d5,
         type: 3}

@@ -112,13 +112,11 @@ namespace Ex
             currentScenesArrayID = GetScenesArrayIDFromRoutineName(current_routine().name);
             currentSceneConfig = sceneConfigs[currentScenesArrayID];
 
-            // first fade in of the experiment
-            
         }
 
 
-       
-        
+
+
 
 
 
@@ -139,6 +137,7 @@ namespace Ex
                     LogNewConfig(currentSceneConfig);
 
                     StartCoroutine(FadeOut());
+                    StartCoroutine(FadeLightsAndSounds(FadeDirection.Out));
                 }
 
 
@@ -154,7 +153,6 @@ namespace Ex
                 if(fadingState == FadingState.lerpingNextRoutine && lerpingDone)
                 {
                     lerpingDone = false;
-                    PutEveryLightBackToItsOriginalIntensity();
                     log_message("Next routine");
                     next();
                     return;
@@ -162,6 +160,7 @@ namespace Ex
 
                 if(fadingState == FadingState.initingRoutine)
                 {
+                    StartCoroutine(FadeLightsAndSounds(FadeDirection.In));
                     StartCoroutine(FadeIn());
                     return;
                 }
@@ -250,6 +249,8 @@ namespace Ex
 
 
 
+
+
         /*
          * 
          *  Fade Methods
@@ -263,22 +264,12 @@ namespace Ex
 
             log_message("fading in");
             //fadeInDone = false;
-            float alpha = 1f;
-            float fadeEndValue = 0f;
-
-            while (alpha >= fadeEndValue)
-            {
-                FadeLightsAndSounds(alpha, FadeDirection.In);
-
-                alpha -= Time.deltaTime * (1.0f / fadeSpeed);
-                yield return null;
-            }
-
+            
+            //FadeLightsAndSounds(FadeDirection.In);
 
             if (currentSceneConfig.closeScreensBeforeFading)
             {
-                alpha = 1f;
-                fadeEndValue = 0f;
+                float  alpha = 1f, fadeEndValue = 0f;
 
                 while (alpha >= fadeEndValue)
                 {
@@ -304,12 +295,12 @@ namespace Ex
         {
             log_message("fading out");
 
-            float alpha = 0;
-            float fadeEndValue = 1;
 
             // first we check if we need to fade screens
             if (currentSceneConfig.closeScreensBeforeFading)
             {
+                float alpha = 0, fadeEndValue = 1;
+
                 foreach (GameObject screen in shelterScreens) screen.GetComponent<MeshRenderer>().enabled = true;
 
                 while (alpha <= fadeEndValue)
@@ -322,17 +313,6 @@ namespace Ex
                     alpha += Time.deltaTime * (1.0f / curtainsClosingSpeed);
                     yield return null;
                 }
-            }
-
-            // then we fade lights and sound
-            alpha = 0;
-            fadeEndValue = 1;
-
-            while (alpha <= fadeEndValue)
-            {
-                FadeLightsAndSounds(alpha, FadeDirection.Out);
-                alpha += Time.deltaTime * (1.0f / fadeSpeed);
-                yield return null;
             }
 
             log_message("fade out done");
@@ -421,7 +401,7 @@ namespace Ex
 
                 amount += Time.deltaTime * (1.0f / fadeSpeed);
                 //log_message(amount.ToString());
-                yield return null;
+                yield return Time.deltaTime;
             }
 
             //log_message("ambient int now " + RenderSettings.ambientIntensity);
@@ -435,36 +415,78 @@ namespace Ex
         }
 
 
-
-
-
-
-        private void FadeLightsAndSounds(float alpha, FadeDirection fadeDirection)
+        public override void stop_routine()
         {
+            PutEveryLightBackToItsOriginalIntensity();
+        }
 
-            // if light is already on, don't light it
-            //if(fadeDirection == FadeDirection.Out && !lastSceneConfig.keepShelterLightOn) shelterTransitionLight.intensity = alpha;
 
-            // if current scene asks to keep shelter light on, don't do anything
-            //if(fadeDirection == FadeDirection.In && !currentSceneConfig.keepShelterLightOn) shelterTransitionLight.intensity = alpha;
+        IEnumerator FadeLightsAndSounds(FadeDirection fadeDirection)
+        {
+            log_message("Fading lights and sounds");
+            float value, fadeEndValue;
+            bool done = false;
 
-            // lights
-            for (int i = 0; i < lights.Count; i++)
+            if (fadeDirection == FadeDirection.Out)
             {
-                lights[i].intensity = lightsLastIntensity[i] * (1 - alpha);
+                value = 1f;
+                fadeEndValue = 0f;
+            }
+            else // if (fadeDirection == FadeDirection.Out)
+            {
+                value = 0;
+                fadeEndValue = 1f;
             }
 
-            //globalVolume.weight = 1 - alpha;
+            while (!done)
+            {
+                // lights
+                for (int i = 0; i < lights.Count; i++)
+                {
+                    lights[i].intensity = lightsLastIntensity[i] * value;
+                }
+                // sounds
+                omniController.omniSoundsMainVolume = value;
 
-            // skybox
-            //tmpSkybox.SetFloat("_SunSize", skyboxSunsize * (1 - alpha));
-            //tmpSkybox.SetFloat("_SunSizeConvergence", skyboxConvergence * (1 - alpha));
-            //tmpSkybox.SetFloat("_AtmosphereThickness", skyboxThickness * (1 - alpha));
-            //tmpSkybox.SetFloat("_Exposure", skyboxExposure * (1 - alpha));
 
-            // sounds
-            omniController.omniSoundsMainVolume = 1 - alpha;
+                if (fadeDirection == FadeDirection.Out)
+                {
+                    value -= Time.deltaTime * (1.0f / fadeSpeed);
+                    if (value <= fadeEndValue) done = true;
+                }
+                else if (fadeDirection == FadeDirection.In)
+                {
+                    value += Time.deltaTime * (1.0f / fadeSpeed);
+                    if (value >= fadeEndValue) done = true;
+                }
+                yield return null;
+            }
+/*
+                {
+                    // lights
+                    for (int i = 0; i < lights.Count; i++)
+                    {
+                        lights[i].intensity = lightsLastIntensity[i] * (1 - alpha);
+                    }
+                    // sounds
+                    omniController.omniSoundsMainVolume = 1 - alpha;
 
+                    yield return null;
+                }
+
+                while (alpha <= fadeEndValue)
+                {
+                    // lights
+                    for (int i = 0; i < lights.Count; i++)
+                    {
+                        lights[i].intensity = lightsLastIntensity[i] * (1 - alpha);
+                    }
+                    // sounds
+                    omniController.omniSoundsMainVolume = 1 - alpha;
+
+                    yield return null;
+                }
+            }*/
         }
 
 
@@ -564,7 +586,9 @@ namespace Ex
         }
 
 
-        // public override void stop_routine() {}
+        
+
+
         // public override void stop_experiment(){}
         // public override void play(){}
         // public override void pause(){}

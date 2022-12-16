@@ -32,6 +32,9 @@ namespace Ex
         {
             cameraRig = GameObject.Find("[CameraRig]");
             cameraOrigin = cameraRig.transform.Find("Cameras").position; // ExVR.Display().cameras().transform.position;
+
+            // be sure that object cameras is turned looking at origin, for orbital camera purposes later
+            cameraRig.transform.Find("Cameras").LookAt(cameraOrigin - new Vector3(0, 0, lookForward));
         }
 
 
@@ -72,10 +75,16 @@ namespace Ex
 
             //if (UnityEngine.Input.GetKeyDown(KeyCode.F)) ActivateFog(!fogActivated);
 
-            if (UnityEngine.Input.GetKeyDown(KeyCode.Keypad0)) InitCameraOrbit(0);
-            if (UnityEngine.Input.GetKeyDown(KeyCode.Keypad1)) InitCameraOrbit(1);
-            if (UnityEngine.Input.GetKeyDown(KeyCode.Keypad2)) InitCameraOrbit(2);
-            if (UnityEngine.Input.GetKeyDown(KeyCode.Keypad3)) InitCameraOrbit(3);
+            if (UnityEngine.Input.GetKeyDown(KeyCode.Keypad0) || UnityEngine.Input.GetKeyDown(KeyCode.Alpha0)) 
+                InitCameraOrbit(0);                                                                   
+            if (UnityEngine.Input.GetKeyDown(KeyCode.Keypad1) || UnityEngine.Input.GetKeyDown(KeyCode.Alpha1)) 
+                InitCameraOrbit(1);                                                                   
+            if (UnityEngine.Input.GetKeyDown(KeyCode.Keypad2) || UnityEngine.Input.GetKeyDown(KeyCode.Alpha2)) 
+                InitCameraOrbit(2);                                                                   
+            if (UnityEngine.Input.GetKeyDown(KeyCode.Keypad3) || UnityEngine.Input.GetKeyDown(KeyCode.Alpha3))
+                InitCameraOrbit(3);                                                                   
+            if (UnityEngine.Input.GetKeyDown(KeyCode.Keypad4) || UnityEngine.Input.GetKeyDown(KeyCode.Alpha4))
+                InitCameraOrbit(4);
 
         }
 
@@ -111,6 +120,12 @@ namespace Ex
                         targetAngle = 0;// Mathf.PI * 4;
                         lerpTimeInSeconds = 15;
                         break;
+                    case 4: // turning around
+                        targetDistance = 2f;
+                        targetHeight = 0.5f;
+                        targetAngle = Mathf.PI * 2;
+                        lerpTimeInSeconds = 45;
+                        break;
                 }
                 lookForward = 0.5f;
                 smoothHandle = 2;
@@ -144,7 +159,7 @@ namespace Ex
                 log_message(ray.ToString() + ", " + h.ToString() + ", " + l.ToString());
 
                 cameraRig.transform.Find("Cameras").position = newPosition;
-                //cameraRig.transform.Find("Cameras").LookAt(cameraOrigin - new Vector3(0,0,l));
+                cameraRig.transform.Find("Cameras").LookAt(cameraOrigin - new Vector3(0,0,l));
 
                 yield return new WaitForEndOfFrame();
             }
