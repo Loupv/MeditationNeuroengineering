@@ -55,6 +55,7 @@ namespace Ex
 
         AudioSource routineGuidance;
         Dictionary<string,string> guidanceClipNames;
+        bool guidanceClipFound;
 
 
         public SceneConfig[] InitSceneConfigArray()
@@ -143,7 +144,7 @@ namespace Ex
             if (routineInited)
             {
                 // 
-                if ((UnityEngine.Input.GetKeyDown(KeyCode.Space) || !routineGuidance.isPlaying) && fadingState == FadingState.idle && GetNextRoutineName() != "")
+                if ((UnityEngine.Input.GetKeyDown(KeyCode.Space) || (guidanceClipFound && !routineGuidance.isPlaying)) && fadingState == FadingState.idle && GetNextRoutineName() != "")
                 {
                     fadingState = FadingState.fadingOut;
 
@@ -164,7 +165,7 @@ namespace Ex
                         lerpingDone = true;
                     }
 
-                    routineGuidance.Stop();
+                    if(guidanceClipFound) routineGuidance.Stop();
                 }
 
 
@@ -242,12 +243,13 @@ namespace Ex
                 i += 1;
             }
 
-
-            log_message(current_routine().name);
-            log_message(guidanceClipNames[current_routine().name]);
-
-            routineGuidance = get<AudioSourceComponent>(guidanceClipNames[current_routine().name]).audioSource;
-            routineGuidance.Play();
+            guidanceClipFound = false;
+            if (guidanceClipNames.ContainsKey(current_routine().name))
+            {
+                routineGuidance = get<AudioSourceComponent>(guidanceClipNames[current_routine().name]).audioSource;
+                routineGuidance.Play();
+                guidanceClipFound = true;
+            }
 
             //yield return new WaitForEndOfFrame();
 
