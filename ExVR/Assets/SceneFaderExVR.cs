@@ -52,7 +52,9 @@ namespace Ex
 
         SceneConfig[] sceneConfigs;
         SceneConfig currentSceneConfig, lastSceneConfig;
-        
+
+        AudioSource routineGuidance;
+        Dictionary<string,string> guidanceClipNames;
 
 
         public SceneConfig[] InitSceneConfigArray()
@@ -63,6 +65,16 @@ namespace Ex
             sceneConfigs[2] = new SceneConfig { sceneName = "Forest", closeScreensBeforeFading = true, fadeSounds = true, keepShelterLightOn = true, activateFog = true, fogColor = new Color(0.47f, 0.60f, 0.60f, 1f), fogDensity = 0.0045f, bloomValues = new float[4] { 1.13f, 2.19f, 0.5f, 10f }, bloomColor=new Color(0.98f, 0.43f, 0f, 1f) };
             //sceneConfigs[3] = new SceneConfig { sceneName = "Forest FOA", closeScreensBeforeFading = false, fadeSounds = true, keepShelterLightOn = false, activateFog = true, fogColor = new Color(0.29f, 0.32f, 0.32f, 1f), fogDensity = 0.0045f, bloomValues = new float[4] { 2.06f, 0.5f, 0.5f, 10f }, bloomColor = new Color(1f, 0f, 0f, 1f) };
             return sceneConfigs;
+        }
+
+        public Dictionary<string, string> InitGuidanceClipsNames()
+        {
+            guidanceClipNames = new Dictionary<string, string>();
+            guidanceClipNames.Add("Lab_Intro","Guidance_Lab_Intro");
+            guidanceClipNames.Add("Forest_Arrival","Guidance_Forest_Arrival");
+            guidanceClipNames.Add("Forest_MPS1", "Guidance_Forest_MPS1");
+            guidanceClipNames.Add("Lab_Return", "Guidance_Lab_WelcomeBack");
+            return guidanceClipNames;
         }
 
         /*public Vector3 GetCameraTarget(int i)
@@ -112,6 +124,8 @@ namespace Ex
             currentScenesArrayID = GetScenesArrayIDFromRoutineName(current_routine().name);
             currentSceneConfig = sceneConfigs[currentScenesArrayID];
 
+            guidanceClipNames = InitGuidanceClipsNames();
+
         }
 
 
@@ -123,10 +137,13 @@ namespace Ex
         public override void update()
         {
 
+            //if (!routineGuidance.isPlaying) log_message("clip has ended");
+            
+
             if (routineInited)
             {
-
-                if (UnityEngine.Input.GetKeyDown(KeyCode.Space) && fadingState == FadingState.idle && GetNextRoutineName() != "")
+                // 
+                if ((UnityEngine.Input.GetKeyDown(KeyCode.Space) || !routineGuidance.isPlaying) && fadingState == FadingState.idle && GetNextRoutineName() != "")
                 {
                     fadingState = FadingState.fadingOut;
 
@@ -136,8 +153,18 @@ namespace Ex
 
                     LogNewConfig(currentSceneConfig);
 
-                    StartCoroutine(FadeOut());
-                    StartCoroutine(FadeLightsAndSounds(FadeDirection.Out));
+                    if(currentSceneConfig != lastSceneConfig)
+                    {
+                        StartCoroutine(FadeOut());
+                        StartCoroutine(FadeLightsAndSounds(FadeDirection.Out));
+                    }
+                    else
+                    {
+                        fadingState = FadingState.lerpingNextRoutine;
+                        lerpingDone = true;
+                    }
+
+                    routineGuidance.Stop();
                 }
 
 
@@ -160,8 +187,17 @@ namespace Ex
 
                 if(fadingState == FadingState.initingRoutine)
                 {
-                    StartCoroutine(FadeLightsAndSounds(FadeDirection.In));
-                    StartCoroutine(FadeIn());
+                    if (currentSceneConfig != lastSceneConfig)
+                    {
+                        StartCoroutine(FadeLightsAndSounds(FadeDirection.In));
+                        StartCoroutine(FadeIn());
+                    }
+                    else
+                    {
+                        fadingState = FadingState.fadingIn;
+                        log_message("No fade in");
+                        fadingInDone = true;
+                    }
                     return;
                 }
 
@@ -206,8 +242,12 @@ namespace Ex
                 i += 1;
             }
 
-            omniController.PrepareSoundInNewRoutine(currentSceneConfig.sceneName);
-            graphicsHandler.SetGraphicsForRoutine(currentSceneConfig);
+
+            log_message(current_routine().name);
+            log_message(guidanceClipNames[current_routine().name]);
+
+            routineGuidance = get<AudioSourceComponent>(guidanceClipNames[current_routine().name]).audioSource;
+            routineGuidance.Play();
 
             //yield return new WaitForEndOfFrame();
 
@@ -217,33 +257,39 @@ namespace Ex
                 shelterTransitionLight.gameObject.SetActive(false);
             }*/
 
-            shelterScreens = Resources.FindObjectsOfTypeAll<GameObject>().Where(obj => (obj.name == "ShelterScreen" && obj.activeInHierarchy)).ToArray();
+            if(currentSceneConfig != lastSceneConfig)
+            {
+                omniController.PrepareSoundInNewRoutine(currentSceneConfig.sceneName);
+                graphicsHandler.SetGraphicsForRoutine(currentSceneConfig);
+                shelterScreens = Resources.FindObjectsOfTypeAll<GameObject>().Where(obj => (obj.name == "ShelterScreen" && obj.activeInHierarchy)).ToArray();
 
-            //if (lastSceneConfig == null)
-            //{
+                //if (lastSceneConfig == null)
+                //{
                 foreach (GameObject screen in shelterScreens)
                 {
                     Material mat = screen.GetComponent<MeshRenderer>().materials[0];
                     mat.SetColor("_Color", new Color(mat.color.r, mat.color.g, mat.color.b, 1));
                 }
-            //}
+                //}
 
-            //CopyCurrentSkybox();
-            GetLightsReferences();
-            ShutEveryLights();
+                //CopyCurrentSkybox();
+                GetLightsReferences();
+                ShutEveryLights();
 
-            var ppvp = ExVR.Display().postProcessingVolume.profile;
-            var bl = ppvp.GetSetting<Bloom>();
-            bl.active = true;
-            bl.enabled.value = true;
-            bl.intensity.value = currentSceneConfig.bloomValues[0];
-            bl.threshold.value = currentSceneConfig.bloomValues[1];
-            bl.softKnee.value = currentSceneConfig.bloomValues[2];
-            bl.diffusion.value = currentSceneConfig.bloomValues[3];
-            bl.color.value = currentSceneConfig.bloomColor;
+                var ppvp = ExVR.Display().postProcessingVolume.profile;
+                var bl = ppvp.GetSetting<Bloom>();
+                bl.active = true;
+                bl.enabled.value = true;
+                bl.intensity.value = currentSceneConfig.bloomValues[0];
+                bl.threshold.value = currentSceneConfig.bloomValues[1];
+                bl.softKnee.value = currentSceneConfig.bloomValues[2];
+                bl.diffusion.value = currentSceneConfig.bloomValues[3];
+                bl.color.value = currentSceneConfig.bloomColor;
 
-            yield return 0;
+                yield return 0;
+            }
 
+            log_message("routine inited");
             routineInited = true;
         }
 

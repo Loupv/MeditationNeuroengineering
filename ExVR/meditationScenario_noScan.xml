@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Experiment name="meditationScenario_noScan" version="1.0b1" mode="designer" designer-used="C:/Users/loupv/Documents/GitHub/exvr/cpp-projects/_build/bin/exvr-designer/ExVR.exe">
+<Experiment name="meditationScenario_noScan" version="1.0b1" mode="designer" designer-used="C:/Users/vuarness/Documents/exvr-designer/ExVR.exe">
     <Settings debug="1" csharp_debug_info="0" catch_components_exceptions="0" positional_tracking="1" catch_external_keyboard_events="0">
         <Display mode="1" stereo_fov="60" fullscreen="0" monitor_id="1" resolution_id="1" custom_width="1920" custom_height="1080"/>
         <Camera neutral_x="0" neutral_y="1" neutral_z="0"/>
@@ -20,6 +20,8 @@
         <Resource key="71" type="Audio" alias="LabRoom_Front_Reverb" path="Assets/LabRoom_Front_Reverb.wav"/>
         <Resource key="72" type="Audio" alias="LabRoom_Left_Reverb" path="Assets/LabRoom_Left_Reverb.wav"/>
         <Resource key="73" type="Audio" alias="LabRoom_Right_Reverb" path="Assets/LabRoom_Right_Reverb.wav"/>
+        <Resource key="87" type="Audio" alias="1 - Intro - forest" path="../Verbal Guidances/1 - Intro - forest.wav"/>
+        <Resource key="88" type="Audio" alias="1 - Intro - lab" path="../Verbal Guidances/1 - Intro - lab.wav"/>
         <Resource key="41" type="UnityAssetBundle" alias="labroom" path="Bundles/labroom.unity3d"/>
         <Resource key="43" type="UnityAssetBundle" alias="whiteroom" path="Bundles/whiteroom.unity3d"/>
         <Resource key="45" type="UnityAssetBundle" alias="meditationshelter" path="Bundles/meditationshelter.unity3d"/>
@@ -32,6 +34,7 @@
         <Resource key="75" type="UnityAssetBundle" alias="meditationshelter_tiny" path="Bundles/meditationshelter_tiny.unity3d"/>
         <Resource key="83" type="UnityAssetBundle" alias="meditationshelternobars" path="Bundles/meditationshelternobars.unity3d"/>
         <Resource key="84" type="UnityAssetBundle" alias="attentionpoint" path="Bundles/attentionpoint.unity3d"/>
+        <Resource key="85" type="UnityAssetBundle" alias="virtualteacher" path="../assetsBundles/virtualteacher.unity3d"/>
         <Resource key="37" type="CSharpScript" alias="OmniController" path="Assets/OmniController.cs"/>
         <Resource key="44" type="CSharpScript" alias="SceneFaderExVR" path="Assets/SceneFaderExVR.cs"/>
         <Resource key="61" type="CSharpScript" alias="GraphicsHandler" path="Assets/GraphicsHandler.cs"/>
@@ -619,17 +622,17 @@
                 </Config>
             </Configs>
         </Component>
-        <Component key="51" name="FOA2_Toupie" category="Model" type="AssetBundle" global="0" always_updating="0" exceptions="1" frame_logging="0" trigger_logging="0" restricted="0" priority="2">
+        <Component key="51" name="VirtualTeacher" category="Model" type="AssetBundle" global="0" always_updating="0" exceptions="1" frame_logging="0" trigger_logging="0" restricted="0" priority="2">
             <InitConfig key="113" name="standard">
-                <Arg name="asset_bundle" ui="Resource" value="toupie%%%64" type="System.String" dim="1" sep="%%%" sizes="2"/>
+                <Arg name="asset_bundle" ui="Resource" value="virtualteacher%%%85" type="System.String" dim="1" sep="%%%" sizes="2"/>
                 <Arg name="display_hierarchy" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                <Arg name="init_transform" ui="Transformation" value="-3.1225e-17 2 0 0 0 0 1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
+                <Arg name="init_transform" ui="Transformation" value="0 0 0 0 0 0 1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
                 <Arg name="init_transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                 <Arg name="name_sub_object" ui="Line text editor" value="" type="System.String" dim="0"/>
             </InitConfig>
             <Configs>
                 <Config key="114" name="standard">
-                    <Arg name="transform" ui="Transformation" value="-3.46945e-18 0.769 -0.68 0 80 -2.77556e-17 0.038 0.038 0.038" type="System.Single" dim="1" sep=" " sizes="9"/>
+                    <Arg name="transform" ui="Transformation" value="1.875 0 -1.02 0 -40 0 1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
                     <Arg name="transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                 </Config>
             </Configs>
@@ -1341,6 +1344,92 @@
                 </Config>
             </Configs>
         </Component>
+        <Component key="65" name="Guidance_IntroLab" category="Audio" type="AudioSource" global="0" always_updating="0" exceptions="1" frame_logging="0" trigger_logging="0" restricted="0" priority="1">
+            <InitConfig key="145" name="standard">
+                <Arg name="asset_bundle" ui="Resource" value="%%%-1" type="System.String" dim="1" sep="%%%" sizes="2"/>
+                <Arg name="channel_0_copy_destination" ui="Line text editor" value="1 2" type="System.String" dim="0"/>
+                <Arg name="channel_1_copy_destination" ui="Line text editor" value="" type="System.String" dim="0"/>
+                <Arg name="channel_2_copy_destination" ui="Line text editor" value="" type="System.String" dim="0"/>
+                <Arg name="channel_3_copy_destination" ui="Line text editor" value="" type="System.String" dim="0"/>
+                <Arg name="channel_4_copy_destination" ui="Line text editor" value="" type="System.String" dim="0"/>
+                <Arg name="channel_5_copy_destination" ui="Line text editor" value="" type="System.String" dim="0"/>
+                <Arg name="channel_6_copy_destination" ui="Line text editor" value="" type="System.String" dim="0"/>
+                <Arg name="channel_7_copy_destination" ui="Line text editor" value="" type="System.String" dim="0"/>
+                <Arg name="generate_new_sound" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                <Arg name="new_sound_channel" ui="Combo box index" value="0" type="System.Int32" dim="0"/>
+                <Arg name="sound" ui="Resource" value="1 - Intro - lab%%%88" type="System.String" dim="1" sep="%%%" sizes="2"/>
+            </InitConfig>
+            <Configs>
+                <Config key="146" name="default">
+                    <Arg name="display" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="doppler_level" ui="Float values slider" value="1" type="System.Single" dim="0"/>
+                    <Arg name="loop" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="max_distance" ui="Float values slider" value="10" type="System.Single" dim="0"/>
+                    <Arg name="min_distance" ui="Float values slider" value="0.01" type="System.Single" dim="0"/>
+                    <Arg name="mute" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="nothing_end_block" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="nothing_new_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="pause_end_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="pause_new_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="pitch" ui="Float values slider" value="1" type="System.Single" dim="0"/>
+                    <Arg name="play_end_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="play_new_block" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="rollof_mode" ui="Combo box index" value="1" type="System.Int32" dim="0"/>
+                    <Arg name="spatial_blend" ui="Float values slider" value="0" type="System.Single" dim="0"/>
+                    <Arg name="spatialized" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="spread" ui="Integer slider" value="184" type="System.Int32" dim="0"/>
+                    <Arg name="stereo" ui="Float values slider" value="0" type="System.Single" dim="0"/>
+                    <Arg name="stop_end_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="stop_new_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="transform" ui="Transformation" value="1.76 1.26 -0.89 0 0 0 0.1 0.1 0.1" type="System.Single" dim="1" sep=" " sizes="9"/>
+                    <Arg name="transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="volume" ui="Float values slider" value="1" type="System.Single" dim="0"/>
+                </Config>
+            </Configs>
+        </Component>
+        <Component key="66" name="Guidance_IntroForest" category="Audio" type="AudioSource" global="0" always_updating="0" exceptions="1" frame_logging="0" trigger_logging="0" restricted="0" priority="1">
+            <InitConfig key="147" name="standard">
+                <Arg name="asset_bundle" ui="Resource" value="%%%-1" type="System.String" dim="1" sep="%%%" sizes="2"/>
+                <Arg name="channel_0_copy_destination" ui="Line text editor" value="1 2" type="System.String" dim="0"/>
+                <Arg name="channel_1_copy_destination" ui="Line text editor" value="" type="System.String" dim="0"/>
+                <Arg name="channel_2_copy_destination" ui="Line text editor" value="" type="System.String" dim="0"/>
+                <Arg name="channel_3_copy_destination" ui="Line text editor" value="" type="System.String" dim="0"/>
+                <Arg name="channel_4_copy_destination" ui="Line text editor" value="" type="System.String" dim="0"/>
+                <Arg name="channel_5_copy_destination" ui="Line text editor" value="" type="System.String" dim="0"/>
+                <Arg name="channel_6_copy_destination" ui="Line text editor" value="" type="System.String" dim="0"/>
+                <Arg name="channel_7_copy_destination" ui="Line text editor" value="" type="System.String" dim="0"/>
+                <Arg name="generate_new_sound" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                <Arg name="new_sound_channel" ui="Combo box index" value="0" type="System.Int32" dim="0"/>
+                <Arg name="sound" ui="Resource" value="1 - Intro - forest%%%87" type="System.String" dim="1" sep="%%%" sizes="2"/>
+            </InitConfig>
+            <Configs>
+                <Config key="148" name="default">
+                    <Arg name="display" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="doppler_level" ui="Float values slider" value="1" type="System.Single" dim="0"/>
+                    <Arg name="loop" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="max_distance" ui="Float values slider" value="10" type="System.Single" dim="0"/>
+                    <Arg name="min_distance" ui="Float values slider" value="0.01" type="System.Single" dim="0"/>
+                    <Arg name="mute" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="nothing_end_block" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="nothing_new_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="pause_end_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="pause_new_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="pitch" ui="Float values slider" value="1" type="System.Single" dim="0"/>
+                    <Arg name="play_end_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="play_new_block" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="rollof_mode" ui="Combo box index" value="1" type="System.Int32" dim="0"/>
+                    <Arg name="spatial_blend" ui="Float values slider" value="0" type="System.Single" dim="0"/>
+                    <Arg name="spatialized" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="spread" ui="Integer slider" value="184" type="System.Int32" dim="0"/>
+                    <Arg name="stereo" ui="Float values slider" value="0" type="System.Single" dim="0"/>
+                    <Arg name="stop_end_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="stop_new_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="transform" ui="Transformation" value="1.76 1.26 -0.89 0 0 0 0.1 0.1 0.1" type="System.Single" dim="1" sep=" " sizes="9"/>
+                    <Arg name="transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="volume" ui="Float values slider" value="0.2" type="System.Single" dim="0"/>
+                </Config>
+            </Configs>
+        </Component>
         <Component key="54" name="Cube" category="Model" type="Cube" global="0" always_updating="0" exceptions="0" frame_logging="0" trigger_logging="0" restricted="0" priority="1">
             <InitConfig key="119" name="standard">
                 <Arg name="init_transform" ui="Transformation" value="0 0 0 0 0 0 1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
@@ -1527,6 +1616,28 @@
                             <Interval t1="0" t2="10000"/>
                         </Timeline>
                     </Action>
+                    <Action key="224" key_component="51" key_config="114" node_used="0" node_position="0 0">
+                        <!--Component VirtualTeacher with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="227" key_component="65" key_config="146" node_used="0" node_position="0 0">
+                        <!--Component Guidance_IntroLab with config default -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                    </Action>
                 </Condition>
             </Routine>
             <Routine key="10" name="3_ForestScene" randomizer="0" informations="">
@@ -1696,6 +1807,28 @@
                             <Interval t1="0" t2="10000"/>
                         </Timeline>
                     </Action>
+                    <Action key="225" key_component="51" key_config="114" node_used="0" node_position="0 0">
+                        <!--Component VirtualTeacher with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="228" key_component="66" key_config="148" node_used="0" node_position="0 0">
+                        <!--Component Guidance_IntroForest with config default -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                    </Action>
                 </Condition>
             </Routine>
             <Routine key="26" name="5_LabScene1PP" randomizer="0" informations="">
@@ -1845,6 +1978,17 @@
                     </Action>
                     <Action key="200" key_component="23" key_config="49" node_used="0" node_position="0 0">
                         <!--Component FPPCamera with config 1PP -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="226" key_component="51" key_config="114" node_used="0" node_position="0 0">
+                        <!--Component VirtualTeacher with config standard -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
                             <Interval t1="0" t2="10000"/>
