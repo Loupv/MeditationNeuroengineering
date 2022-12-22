@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Experiment name="meditationScenario_verbalGuidances" version="1.0b1" mode="designer" designer-used="C:/Users/vuarness/Documents/exvr-designer/ExVR.exe">
     <Settings debug="1" csharp_debug_info="0" catch_components_exceptions="0" positional_tracking="1" catch_external_keyboard_events="0">
-        <Display mode="1" stereo_fov="60" fullscreen="0" monitor_id="1" resolution_id="1" custom_width="1920" custom_height="1080"/>
+        <Display mode="0" stereo_fov="60" fullscreen="0" monitor_id="1" resolution_id="1" custom_width="1920" custom_height="1080"/>
         <Camera neutral_x="0" neutral_y="1" neutral_z="0"/>
     </Settings>
     <Resources reload="200">
@@ -25,6 +25,10 @@
         <Resource key="89" type="Audio" alias="2 - MPS1" path="../Verbal Guidances/2 - MPS1.wav"/>
         <Resource key="91" type="Audio" alias="9 - WelcomeBack" path="../Verbal Guidances/9 - WelcomeBack.wav"/>
         <Resource key="92" type="Audio" alias="8 - Dissolution" path="../Verbal Guidances/8 - Dissolution.wav"/>
+        <Resource key="94" type="Text" alias="network_SV-10-005" path="L:/Users/Florian/_SCANER/k4-scaner-manager/config/network/network_SV-10-005.config"/>
+        <Resource key="95" type="Text" alias="filters_SV-10-005_all" path="L:/Users/Florian/_SCANER/k4-scaner-manager/config/settings/filters_SV-10-005_all.config"/>
+        <Resource key="96" type="Text" alias="device_SV-10-005_all" path="L:/Users/Florian/_SCANER/k4-scaner-manager/config/settings/device_SV-10-005_all.config"/>
+        <Resource key="97" type="Text" alias="model_SV-10-005_all" path="L:/Users/Florian/_SCANER/k4-scaner-manager/config/calibration/model_SV-10-005_all.config"/>
         <Resource key="41" type="UnityAssetBundle" alias="labroom" path="Bundles/labroom.unity3d"/>
         <Resource key="43" type="UnityAssetBundle" alias="whiteroom" path="Bundles/whiteroom.unity3d"/>
         <Resource key="45" type="UnityAssetBundle" alias="meditationshelter" path="Bundles/meditationshelter.unity3d"/>
@@ -1562,30 +1566,47 @@
                 </Config>
             </Configs>
         </Component>
-        <Component key="54" name="Cube" category="Model" type="Cube" global="0" always_updating="0" exceptions="0" frame_logging="0" trigger_logging="0" restricted="0" priority="1">
-            <InitConfig key="119" name="standard">
-                <Arg name="init_transform" ui="Transformation" value="0 0 0 0 0 0 1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
-                <Arg name="init_transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                <Arg name="size" ui="Float spin box" value="1" type="System.Single" dim="0"/>
-                <Arg name="transparent" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+        <Component key="70" name="K4 manager" category="AcquisitionDevice" type="K4Manager" global="0" always_updating="0" exceptions="1" frame_logging="0" trigger_logging="0" restricted="2" priority="2">
+            <InitConfig key="155" name="standard">
+                <Arg name="cameras_to_use" ui="Line text editor" value="0;1;2" type="System.String" dim="0"/>
+                <Arg name="color_init_default" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
+                <Arg name="color_init_file" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
+                <Arg name="color_init_nothing" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
+                <Arg name="color_settings" ui="Resource" value="%%%-1" type="System.String" dim="1" sep="%%%" sizes="2"/>
+                <Arg name="debug_bypass" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                <Arg name="device_init_default" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
+                <Arg name="device_init_file" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
+                <Arg name="device_init_nothing" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
+                <Arg name="device_settings" ui="Resource" value="device_SV-10-005_all%%%96" type="System.String" dim="1" sep="%%%" sizes="2"/>
+                <Arg name="filters" ui="Resource" value="filters_SV-10-005_all%%%95" type="System.String" dim="1" sep="%%%" sizes="2"/>
+                <Arg name="filters_init_default" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
+                <Arg name="filters_init_file" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
+                <Arg name="filters_init_nothing" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
+                <Arg name="models" ui="Resource" value="model_SV-10-005_all%%%97" type="System.String" dim="1" sep="%%%" sizes="2"/>
+                <Arg name="network_settings" ui="Resource" value="network_SV-10-005%%%94" type="System.String" dim="1" sep="%%%" sizes="2"/>
             </InitConfig>
             <Configs>
-                <Config key="120" name="standard">
-                    <Arg name="color" ui="Color pick" value="1 0.643137 0 0.0117647" type="System.Single" dim="1" sep=" " sizes="4"/>
-                    <Arg name="detect_collisions" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="drag" ui="Float spin box" value="0" type="System.Single" dim="0"/>
-                    <Arg name="enable_collider" ui="Check box" value="true" type="System.Boolean" dim="0"/>
-                    <Arg name="enable_gravity" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="height_t" ui="Resource" value="%%%-1" type="System.String" dim="1" sep="%%%" sizes="2"/>
-                    <Arg name="mass" ui="Float spin box" value="1" type="System.Single" dim="0"/>
-                    <Arg name="metallic" ui="Float spin box" value="0" type="System.Single" dim="0"/>
-                    <Arg name="normal_t" ui="Resource" value="%%%-1" type="System.String" dim="1" sep="%%%" sizes="2"/>
-                    <Arg name="receive_shadows" ui="Check box" value="true" type="System.Boolean" dim="0"/>
-                    <Arg name="rgba_t" ui="Resource" value="%%%-1" type="System.String" dim="1" sep="%%%" sizes="2"/>
-                    <Arg name="shadow_mode" ui="Combo box index" value="1" type="System.Int32" dim="0"/>
-                    <Arg name="smoothness" ui="Float spin box" value="0" type="System.Single" dim="0"/>
-                    <Arg name="transform" ui="Transformation" value="0 0.77 207 0 0 0 1 0.95 1" type="System.Single" dim="1" sep=" " sizes="9"/>
-                    <Arg name="transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                <Config key="156" name="standard"/>
+            </Configs>
+        </Component>
+        <Component key="71" name="K4 direct multi clouds" category="AcquisitionDevice" type="K4DirectMultiClouds" global="0" always_updating="0" exceptions="1" frame_logging="0" trigger_logging="0" restricted="2" priority="1">
+            <InitConfig key="157" name="standard">
+                <Arg name="k4_manager" ui="Component" value="K4 manager%%%70" type="System.String" dim="1" sep="%%%" sizes="2"/>
+            </InitConfig>
+            <Configs>
+                <Config key="158" name="standard">
+                    <Arg name="circles" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="cones" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="details" ui="Combo box index" value="3" type="System.Int32" dim="0"/>
+                    <Arg name="display_clouds" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="display_filtering_obb" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="filter_points_outside_obb" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="filtering_obb_tab" ui="Tab" value="" type="System.String" dim="1" sep="[#T#]" sizes="0"/>
+                    <Arg name="global_transform" ui="Transformation" value="2.49 1.81 -0.6 26.3 268 -0.8 -1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
+                    <Arg name="global_transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="rendering" ui="Combo box index" value="1" type="System.Int32" dim="0"/>
+                    <Arg name="size_points" ui="Float spin box" value="0.0037" type="System.Single" dim="0"/>
+                    <Arg name="tint" ui="Color pick" value="1 1 1 0" type="System.Single" dim="1" sep=" " sizes="4"/>
                 </Config>
             </Configs>
         </Component>
@@ -1761,6 +1782,28 @@
                     </Action>
                     <Action key="227" key_component="65" key_config="146" node_used="0" node_position="0 0">
                         <!--Component Guidance_Lab_Intro with config default -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="250" key_component="70" key_config="156" node_used="0" node_position="0 0">
+                        <!--Component K4 manager with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="254" key_component="71" key_config="158" node_used="0" node_position="0 0">
+                        <!--Component K4 direct multi clouds with config standard -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
                             <Interval t1="0" t2="10000"/>
@@ -1949,6 +1992,28 @@
                     </Action>
                     <Action key="228" key_component="66" key_config="148" node_used="0" node_position="0 0">
                         <!--Component Guidance_Forest_Arrival with config default -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="251" key_component="70" key_config="156" node_used="0" node_position="0 0">
+                        <!--Component K4 manager with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="255" key_component="71" key_config="158" node_used="0" node_position="0 0">
+                        <!--Component K4 direct multi clouds with config standard -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
                             <Interval t1="0" t2="10000"/>
@@ -2157,6 +2222,28 @@
                             <Interval t1="0" t2="10000"/>
                         </Timeline>
                     </Action>
+                    <Action key="252" key_component="70" key_config="156" node_used="0" node_position="0 0">
+                        <!--Component K4 manager with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="256" key_component="71" key_config="158" node_used="0" node_position="0 0">
+                        <!--Component K4 direct multi clouds with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                    </Action>
                 </Condition>
             </Routine>
             <Routine key="26" name="Lab_Return" randomizer="0" informations="">
@@ -2328,6 +2415,28 @@
                     </Action>
                     <Action key="249" key_component="69" key_config="154" node_used="0" node_position="0 0">
                         <!--Component Guidance_Lab_WelcomeBack with config default -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="253" key_component="70" key_config="156" node_used="0" node_position="0 0">
+                        <!--Component K4 manager with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="257" key_component="71" key_config="158" node_used="0" node_position="0 0">
+                        <!--Component K4 direct multi clouds with config standard -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
                             <Interval t1="0" t2="10000"/>
