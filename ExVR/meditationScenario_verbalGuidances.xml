@@ -88,7 +88,7 @@
         <Component key="6" name="SkyBox" category="Environment" type="Sky" global="0" always_updating="0" exceptions="1" frame_logging="0" trigger_logging="0" restricted="0" priority="2">
             <InitConfig key="12" name="standard"/>
             <Configs>
-                <Config key="13" name="LabScene">
+                <Config key="13" name="Lab">
                     <Arg name="6sided-exposure" ui="Float spin box" value="1" type="System.Single" dim="0"/>
                     <Arg name="6sided-rotation" ui="Float spin box" value="0" type="System.Single" dim="0"/>
                     <Arg name="6sided-tint" ui="Color pick" value="0.498039 0.498039 0.498039 0.498039" type="System.Single" dim="1" sep=" " sizes="4"/>
@@ -143,7 +143,7 @@
                     <Arg name="sun_shadow_normal_bias" ui="Float spin box" value="0.4" type="System.Single" dim="0"/>
                     <Arg name="sun_shadow_strength" ui="Float spin box" value="1" type="System.Single" dim="0"/>
                 </Config>
-                <Config key="46" name="WhiteScene">
+                <Config key="46" name="White">
                     <Arg name="6sided-exposure" ui="Float spin box" value="1" type="System.Single" dim="0"/>
                     <Arg name="6sided-rotation" ui="Float spin box" value="0" type="System.Single" dim="0"/>
                     <Arg name="6sided-tint" ui="Color pick" value="0.498039 0.498039 0.498039 0.498039" type="System.Single" dim="1" sep=" " sizes="4"/>
@@ -198,7 +198,7 @@
                     <Arg name="sun_shadow_normal_bias" ui="Float spin box" value="0.4" type="System.Single" dim="0"/>
                     <Arg name="sun_shadow_strength" ui="Float spin box" value="1" type="System.Single" dim="0"/>
                 </Config>
-                <Config key="47" name="ForestScene">
+                <Config key="47" name="Forest">
                     <Arg name="6sided-exposure" ui="Float spin box" value="1" type="System.Single" dim="0"/>
                     <Arg name="6sided-rotation" ui="Float spin box" value="0" type="System.Single" dim="0"/>
                     <Arg name="6sided-tint" ui="Color pick" value="0.498039 0.498039 0.498039 0.498039" type="System.Single" dim="1" sep=" " sizes="4"/>
@@ -1825,7 +1825,7 @@
                         </Timeline>
                     </Action>
                     <Action key="279" key_component="6" key_config="13" node_used="0" node_position="0 0">
-                        <!--Component SkyBox with config LabScene -->
+                        <!--Component SkyBox with config Lab -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
                             <Interval t1="0" t2="10000"/>
@@ -2016,7 +2016,7 @@
                         </Timeline>
                     </Action>
                     <Action key="147" key_component="6" key_config="13" node_used="0" node_position="0 0">
-                        <!--Component SkyBox with config LabScene -->
+                        <!--Component SkyBox with config Lab -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
                             <Interval t1="0" t2="10000"/>
@@ -2218,7 +2218,7 @@
                         </Timeline>
                     </Action>
                     <Action key="38" key_component="6" key_config="47" node_used="0" node_position="0 0">
-                        <!--Component SkyBox with config ForestScene -->
+                        <!--Component SkyBox with config Forest -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
                             <Interval t1="0" t2="100"/>
@@ -2428,7 +2428,7 @@
                         </Timeline>
                     </Action>
                     <Action key="233" key_component="6" key_config="47" node_used="0" node_position="0 0">
-                        <!--Component SkyBox with config ForestScene -->
+                        <!--Component SkyBox with config Forest -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
                             <Interval t1="0" t2="100"/>
@@ -2638,7 +2638,7 @@
                         </Timeline>
                     </Action>
                     <Action key="297" key_component="6" key_config="47" node_used="0" node_position="0 0">
-                        <!--Component SkyBox with config ForestScene -->
+                        <!--Component SkyBox with config Forest -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
                             <Interval t1="0" t2="100"/>
@@ -2848,7 +2848,7 @@
                         </Timeline>
                     </Action>
                     <Action key="317" key_component="6" key_config="47" node_used="0" node_position="0 0">
-                        <!--Component SkyBox with config ForestScene -->
+                        <!--Component SkyBox with config Forest -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
                             <Interval t1="0" t2="100"/>
@@ -3058,7 +3058,7 @@
                         </Timeline>
                     </Action>
                     <Action key="337" key_component="6" key_config="47" node_used="0" node_position="0 0">
-                        <!--Component SkyBox with config ForestScene -->
+                        <!--Component SkyBox with config Forest -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
                             <Interval t1="0" t2="100"/>
@@ -3268,7 +3268,7 @@
                         </Timeline>
                     </Action>
                     <Action key="357" key_component="6" key_config="47" node_used="0" node_position="0 0">
-                        <!--Component SkyBox with config ForestScene -->
+                        <!--Component SkyBox with config Forest -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
                             <Interval t1="0" t2="100"/>
@@ -3478,7 +3478,7 @@
                         </Timeline>
                     </Action>
                     <Action key="403" key_component="6" key_config="13" node_used="0" node_position="0 0">
-                        <!--Component SkyBox with config LabScene -->
+                        <!--Component SkyBox with config Lab -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
                             <Interval t1="0" t2="10000"/>
@@ -3680,7 +3680,7 @@
                         </Timeline>
                     </Action>
                     <Action key="190" key_component="6" key_config="13" node_used="0" node_position="0 0">
-                        <!--Component SkyBox with config LabScene -->
+                        <!--Component SkyBox with config Lab -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
                             <Interval t1="0" t2="10000"/>
