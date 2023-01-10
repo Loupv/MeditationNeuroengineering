@@ -3442,53 +3442,53 @@
                     </Action>
                 </Condition>
             </Routine>
-            <Routine key="56" name="Lab_Dissolution" randomizer="0" informations="">
-                <Condition key="16" name="default" duration="10000" ui_scale="100" ui_size="1" sets_keys="0">
-                    <Action key="374" key_component="27" key_config="57" node_used="0" node_position="0 0">
-                        <!--Component ForestScene with config standard -->
+            <Routine key="58" name="Lab_Dissolution" randomizer="0" informations="">
+                <Condition key="17" name="default" duration="10000" ui_scale="10" ui_size="1" sets_keys="0">
+                    <Action key="400" key_component="25" key_config="53" node_used="0" node_position="0 0">
+                        <!--Component LabRoom with config standard -->
                         <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
-                            <Interval t1="0" t2="100"/>
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
                         </Timeline>
                         <Timeline type="Visibiliy">
                             <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
                             <Interval t1="0" t2="10000"/>
                         </Timeline>
                     </Action>
-                    <Action key="375" key_component="23" key_config="49" node_used="0" node_position="0 0">
-                        <!--Component FPPCamera with config 1PP -->
+                    <Action key="401" key_component="30" key_config="63" node_used="0" node_position="0 0">
+                        <!--Component MeditationShelter with config standard -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
                             <Interval t1="0" t2="10000"/>
                         </Timeline>
                         <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
-                            <Interval t1="0" t2="100"/>
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
                         </Timeline>
                     </Action>
-                    <Action key="376" key_component="11" key_config="65" node_used="0" node_position="0 0">
-                        <!--Component PostProcess with config Forestscene -->
+                    <Action key="402" key_component="11" key_config="23" node_used="0" node_position="0 0">
+                        <!--Component PostProcess with config LabScene -->
                         <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
-                            <Interval t1="0" t2="100"/>
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
                         </Timeline>
                         <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
-                            <Interval t1="0" t2="100"/>
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
                         </Timeline>
                     </Action>
-                    <Action key="377" key_component="6" key_config="47" node_used="0" node_position="0 0">
-                        <!--Component SkyBox with config ForestScene -->
+                    <Action key="403" key_component="6" key_config="13" node_used="0" node_position="0 0">
+                        <!--Component SkyBox with config LabScene -->
                         <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
-                            <Interval t1="0" t2="100"/>
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
                         </Timeline>
                         <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
-                            <Interval t1="0" t2="100"/>
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
                         </Timeline>
                     </Action>
-                    <Action key="378" key_component="29" key_config="61" node_used="0" node_position="0 0">
+                    <Action key="404" key_component="29" key_config="61" node_used="0" node_position="0 0">
                         <!--Component SceneFader with config standard -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
@@ -3499,7 +3499,7 @@
                             <Interval t1="0" t2="10000"/>
                         </Timeline>
                     </Action>
-                    <Action key="379" key_component="28" key_config="59" node_used="0" node_position="0 0">
+                    <Action key="405" key_component="28" key_config="59" node_used="0" node_position="0 0">
                         <!--Component OmniController with config standard -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
@@ -3510,7 +3510,7 @@
                             <Interval t1="0" t2="10000"/>
                         </Timeline>
                     </Action>
-                    <Action key="380" key_component="48" key_config="107" node_used="0" node_position="0 0">
+                    <Action key="406" key_component="48" key_config="107" node_used="0" node_position="0 0">
                         <!--Component GraphicsHandler with config standard -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
@@ -3521,8 +3521,8 @@
                             <Interval t1="0" t2="10000"/>
                         </Timeline>
                     </Action>
-                    <Action key="381" key_component="17" key_config="35" node_used="0" node_position="0 0">
-                        <!--Component AmbianceForest_Front with config standard -->
+                    <Action key="407" key_component="34" key_config="73" node_used="0" node_position="0 0">
+                        <!--Component LabRoom_Front with config standard -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
                             <Interval t1="0" t2="10000"/>
@@ -3532,8 +3532,8 @@
                             <Interval t1="0" t2="10000"/>
                         </Timeline>
                     </Action>
-                    <Action key="382" key_component="18" key_config="37" node_used="0" node_position="0 0">
-                        <!--Component AmbianceForest_Back with config standard -->
+                    <Action key="408" key_component="37" key_config="79" node_used="0" node_position="0 0">
+                        <!--Component LabRoom_Right with config standard -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
                             <Interval t1="0" t2="10000"/>
@@ -3543,8 +3543,8 @@
                             <Interval t1="0" t2="10000"/>
                         </Timeline>
                     </Action>
-                    <Action key="383" key_component="19" key_config="39" node_used="0" node_position="0 0">
-                        <!--Component AmbianceForest_Left with config standard -->
+                    <Action key="409" key_component="36" key_config="77" node_used="0" node_position="0 0">
+                        <!--Component LabRoom_Left with config standard -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
                             <Interval t1="0" t2="10000"/>
@@ -3554,8 +3554,8 @@
                             <Interval t1="0" t2="10000"/>
                         </Timeline>
                     </Action>
-                    <Action key="384" key_component="20" key_config="41" node_used="0" node_position="0 0">
-                        <!--Component AmbianceForest_Right with config standard -->
+                    <Action key="410" key_component="35" key_config="75" node_used="0" node_position="0 0">
+                        <!--Component LabRoom_Back with config standard -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
                             <Interval t1="0" t2="10000"/>
@@ -3565,7 +3565,18 @@
                             <Interval t1="0" t2="10000"/>
                         </Timeline>
                     </Action>
-                    <Action key="385" key_component="43" key_config="93" node_used="0" node_position="0 0">
+                    <Action key="411" key_component="42" key_config="89" node_used="0" node_position="0 0">
+                        <!--Component BackgroundMusic_Spatialized with config default -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="412" key_component="43" key_config="93" node_used="0" node_position="0 0">
                         <!--Component BackgroundMusic_Ambient with config default -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
@@ -3576,8 +3587,8 @@
                             <Interval t1="0" t2="10000"/>
                         </Timeline>
                     </Action>
-                    <Action key="386" key_component="55" key_config="122" node_used="0" node_position="0 0">
-                        <!--Component ForestLight with config standard -->
+                    <Action key="413" key_component="23" key_config="49" node_used="0" node_position="0 0">
+                        <!--Component FPPCamera with config 1PP -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
                             <Interval t1="0" t2="10000"/>
@@ -3587,37 +3598,29 @@
                             <Interval t1="0" t2="10000"/>
                         </Timeline>
                     </Action>
-                    <Action key="387" key_component="64" key_config="144" node_used="0" node_position="0 0">
-                        <!--Component MeditationShelterNoBars with config standard -->
-                        <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                        <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                    </Action>
-                    <Action key="388" key_component="45" key_config="99" node_used="0" node_position="0 0">
-                        <!--Component FOA1 with config standard -->
-                        <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                        <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                    </Action>
-                    <Action key="389" key_component="51" key_config="114" node_used="0" node_position="0 0">
+                    <Action key="414" key_component="51" key_config="114" node_used="0" node_position="0 0">
                         <!--Component VirtualTeacher with config standard -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
                             <Interval t1="0" t2="10000"/>
                         </Timeline>
-                        <Timeline type="Visibiliy"/>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
                     </Action>
-                    <Action key="392" key_component="70" key_config="156" node_used="0" node_position="0 0">
+                    <Action key="418" key_component="68" key_config="152" node_used="0" node_position="0 0">
+                        <!--Component Guidance_Lab_Dissolution with config default -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="416" key_component="70" key_config="156" node_used="0" node_position="0 0">
                         <!--Component K4 manager with config standard -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
@@ -3628,19 +3631,8 @@
                             <Interval t1="0" t2="10000"/>
                         </Timeline>
                     </Action>
-                    <Action key="393" key_component="71" key_config="158" node_used="0" node_position="0 0">
+                    <Action key="417" key_component="71" key_config="158" node_used="0" node_position="0 0">
                         <!--Component K4 direct multi clouds with config standard -->
-                        <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                        <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                    </Action>
-                    <Action key="394" key_component="68" key_config="152" node_used="0" node_position="0 0">
-                        <!--Component Guidance_Lab_Dissolution with config default -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
                             <Interval t1="0" t2="10000"/>
@@ -3867,7 +3859,7 @@
         <Element key="50" type="Routine"/>
         <Element key="52" type="Routine"/>
         <Element key="54" type="Routine"/>
-        <Element key="56" type="Routine"/>
+        <Element key="58" type="Routine"/>
         <Element key="26" type="Routine"/>
     </FlowSequence>
 </Experiment>
