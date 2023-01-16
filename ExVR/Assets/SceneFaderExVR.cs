@@ -45,13 +45,13 @@ namespace Ex
         float skyboxExposure, skyboxSunsize, skyboxConvergence, skyboxThickness;
 
         public string[] scenesArray;
-        public int currentScenesArrayID;
+        public int currentRoutineConfigID =-1, lastRoutineConfigID=-2;
 
         OmniController omniController;
         GraphicsHandler graphicsHandler;
 
         SceneConfig[] sceneConfigs;
-        SceneConfig currentSceneConfig, lastSceneConfig;
+        SceneConfig currentSceneConfig;
 
         AudioSource routineGuidance;
         Dictionary<string,string> guidanceClipNames;
@@ -61,9 +61,9 @@ namespace Ex
         public SceneConfig[] InitSceneConfigArray()
         {
             sceneConfigs = new SceneConfig[4];
-            sceneConfigs[0] = new SceneConfig { sceneName = "Lab", closeScreensBeforeFading = true, fadeSounds = true, keepShelterLightOn = false, activateFog = true, fogColor = new Color(0.67f, 0.72f, 0.72f, 1f), fogDensity = 0.0045f, bloomValues = new float[4] { 1.96f, 0.78f, 0.5f, 10f }, bloomColor = new Color(1f, 0f, 0f, 1f) };
-            sceneConfigs[1] = new SceneConfig { sceneName = "White", closeScreensBeforeFading = true, fadeSounds = true, keepShelterLightOn = false, activateFog = true, fogColor = new Color(0.67f, 0.72f, 0.72f, 1f), fogDensity = 0.01f, bloomValues = new float[4] { 3f, 0.61f, 0.5f, 10f }, bloomColor = new Color(0.8f, 0.46f, 0f, 1f) };
-            sceneConfigs[2] = new SceneConfig { sceneName = "Forest", closeScreensBeforeFading = true, fadeSounds = true, keepShelterLightOn = true, activateFog = true, fogColor = new Color(0.47f, 0.60f, 0.60f, 1f), fogDensity = 0.0045f, bloomValues = new float[4] { 1.13f, 2.19f, 0.5f, 10f }, bloomColor=new Color(0.98f, 0.43f, 0f, 1f) };
+            sceneConfigs[0] = new SceneConfig { closeScreensBeforeFading = true, fadeSounds = true, keepShelterLightOn = false, activateFog = true, fogColor = new Color(0.67f, 0.72f, 0.72f, 1f), fogDensity = 0.0045f, bloomValues = new float[4] { 1.96f, 0.78f, 0.5f, 10f }, bloomColor = new Color(1f, 0f, 0f, 1f) };
+            sceneConfigs[1] = new SceneConfig { closeScreensBeforeFading = true, fadeSounds = true, keepShelterLightOn = false, activateFog = true, fogColor = new Color(0.67f, 0.72f, 0.72f, 1f), fogDensity = 0.01f, bloomValues = new float[4] { 3f, 0.61f, 0.5f, 10f }, bloomColor = new Color(0.8f, 0.46f, 0f, 1f) };
+            sceneConfigs[2] = new SceneConfig { closeScreensBeforeFading = true, fadeSounds = true, keepShelterLightOn = true, activateFog = true, fogColor = new Color(0.47f, 0.60f, 0.60f, 1f), fogDensity = 0.0045f, bloomValues = new float[4] { 1.13f, 2.19f, 0.5f, 10f }, bloomColor=new Color(0.98f, 0.43f, 0f, 1f) };
             //sceneConfigs[3] = new SceneConfig { sceneName = "Forest FOA", closeScreensBeforeFading = false, fadeSounds = true, keepShelterLightOn = false, activateFog = true, fogColor = new Color(0.29f, 0.32f, 0.32f, 1f), fogDensity = 0.0045f, bloomValues = new float[4] { 2.06f, 0.5f, 0.5f, 10f }, bloomColor = new Color(1f, 0f, 0f, 1f) };
             return sceneConfigs;
         }
@@ -73,8 +73,13 @@ namespace Ex
             guidanceClipNames = new Dictionary<string, string>();
             guidanceClipNames.Add("Lab_Intro","Guidance_Lab_Intro");
             guidanceClipNames.Add("Forest_Arrival","Guidance_Forest_Arrival");
-            guidanceClipNames.Add("Forest_MPS1", "Guidance_Forest_MPS1");
-            guidanceClipNames.Add("Lab_Return", "Guidance_Lab_WelcomeBack");
+            guidanceClipNames.Add("Forest_MPS1_PartA", "Guidance_Forest_MPS1_PartA");
+            guidanceClipNames.Add("Forest_MPS1_PartB", "Guidance_Forest_MPS1_PartB");
+            guidanceClipNames.Add("Forest_MPS2_PartA", "Guidance_Forest_MPS2_PartA");
+            guidanceClipNames.Add("Forest_MPS2_PartB", "Guidance_Forest_MPS2_PartB");
+            guidanceClipNames.Add("Forest_MPS3", "Guidance_Forest_MPS3");
+            guidanceClipNames.Add("Lab_Dissolution", "Guidance_Lab_Dissolution");
+            guidanceClipNames.Add("Lab_WelcomeBack", "Guidance_Lab_WelcomeBack");
             return guidanceClipNames;
         }
 
@@ -122,8 +127,8 @@ namespace Ex
             }
 
             sceneConfigs = InitSceneConfigArray();
-            currentScenesArrayID = GetScenesArrayIDFromRoutineName(current_routine().name);
-            currentSceneConfig = sceneConfigs[currentScenesArrayID];
+            currentRoutineConfigID = GetConfigIDFromRoutineName(current_routine().name);
+            currentSceneConfig = sceneConfigs[currentRoutineConfigID];
 
             guidanceClipNames = InitGuidanceClipsNames();
 
@@ -143,22 +148,25 @@ namespace Ex
 
             if (routineInited)
             {
-                // 
+                // either we press space or soundguidance has stopped, and we're in the right state for it + there's a routine after this one
                 if ((UnityEngine.Input.GetKeyDown(KeyCode.Space) || (guidanceClipFound && !routineGuidance.isPlaying)) && fadingState == FadingState.idle && GetNextRoutineName() != "")
                 {
                     fadingState = FadingState.fadingOut;
 
-                    lastSceneConfig = currentSceneConfig;
-                    currentScenesArrayID = GetScenesArrayIDFromRoutineName(GetNextRoutineName()); //  current_routine().name
-                    currentSceneConfig = sceneConfigs[currentScenesArrayID];
+                    lastRoutineConfigID = currentRoutineConfigID;
+                    currentRoutineConfigID = GetConfigIDFromRoutineName(GetNextRoutineName()); //  current_routine().name
+                    currentSceneConfig = sceneConfigs[currentRoutineConfigID];
 
-                    LogNewConfig(currentSceneConfig);
-
-                    if(currentSceneConfig != lastSceneConfig)
+                    //LogNewConfig(currentSceneConfig);
+                    
+                    // if next routine's config is different, we fade
+                    if(currentRoutineConfigID != lastRoutineConfigID)
                     {
                         StartCoroutine(FadeOut());
                         StartCoroutine(FadeLightsAndSounds(FadeDirection.Out));
                     }
+
+                    // else we jump over the fading phase and will do next() just after
                     else
                     {
                         fadingState = FadingState.lerpingNextRoutine;
@@ -174,7 +182,7 @@ namespace Ex
                 if (fadingState == FadingState.fadingOut && fadeOutDone)
                 {
                     fadeOutDone = false;
-                    StartCoroutine(LerpToNextRoutineValues(lastSceneConfig, currentSceneConfig));
+                    StartCoroutine(LerpToNextRoutineValues(currentSceneConfig));
                     return;
                 }
 
@@ -188,8 +196,9 @@ namespace Ex
 
                 if(fadingState == FadingState.initingRoutine)
                 {
-                    if (currentSceneConfig != lastSceneConfig)
+                    if (currentRoutineConfigID != lastRoutineConfigID)
                     {
+                        log_message(currentRoutineConfigID.ToString()+ " vs " + lastRoutineConfigID.ToString());
                         StartCoroutine(FadeLightsAndSounds(FadeDirection.In));
                         StartCoroutine(FadeIn());
                     }
@@ -230,18 +239,8 @@ namespace Ex
             fadingState = FadingState.initingRoutine;
             yield return 0;
 
-            int i = 0;
-            foreach (SceneConfig config in sceneConfigs)
-            {
-                if (current_routine().name.Contains(sceneConfigs[i].sceneName))
-                {
-                    currentScenesArrayID = i;// GetScenesArrayIDFromRoutineName(current_routine().name);
-                    currentSceneConfig = sceneConfigs[currentScenesArrayID];
-                    log_message("Starting Routine " + sceneConfigs[i].sceneName);
-                    break;
-                }
-                i += 1;
-            }
+            currentRoutineConfigID = GetConfigIDFromRoutineName(current_routine().name);
+            currentSceneConfig = sceneConfigs[currentRoutineConfigID];
 
             guidanceClipFound = false;
             if (guidanceClipNames.ContainsKey(current_routine().name))
@@ -259,9 +258,9 @@ namespace Ex
                 shelterTransitionLight.gameObject.SetActive(false);
             }*/
 
-            if(currentSceneConfig != lastSceneConfig)
+            if(currentRoutineConfigID != lastRoutineConfigID)
             {
-                omniController.PrepareSoundInNewRoutine(currentSceneConfig.sceneName);
+                omniController.PrepareSoundInNewRoutine(current_routine().name);
                 graphicsHandler.SetGraphicsForRoutine(currentSceneConfig);
                 shelterScreens = Resources.FindObjectsOfTypeAll<GameObject>().Where(obj => (obj.name == "ShelterScreen" && obj.activeInHierarchy)).ToArray();
 
@@ -343,6 +342,9 @@ namespace Ex
         {
             log_message("fading out");
 
+            log_message(currentSceneConfig.closeScreensBeforeFading.ToString());
+            log_message(currentRoutineConfigID.ToString());
+            log_message(lastRoutineConfigID.ToString() + " vs " + currentRoutineConfigID.ToString());
 
             // first we check if we need to fade screens
             if (currentSceneConfig.closeScreensBeforeFading)
@@ -371,30 +373,28 @@ namespace Ex
 
 
 
-        private IEnumerator LerpToNextRoutineValues(SceneConfig lastSceneConfig, SceneConfig currentSceneConfig)
+        private IEnumerator LerpToNextRoutineValues(SceneConfig currentSceneConfig)
         {
             log_message("lerping to next config values");
             fadingState = FadingState.lerpingNextRoutine;
-
             float amount = 0.0f;
-
             Light sun = GameObject.Find("Sun").GetComponent<Light>();
-
+            
             //tmpSkybox = new Material(RenderSettings.skybox.shader);
             SkyComponent skyComponent = get<SkyComponent>("SkyBox");
             List<ComponentConfig> skyConfigs = skyComponent.configs;
             ComponentConfig currentSkyConfig = skyConfigs[0];
-            
+
             foreach (ComponentConfig config in skyConfigs)
             {
-                if (config.name.Contains(currentSceneConfig.sceneName))
+                if (GetNextRoutineName().Contains(config.name)) // config.name is either Lab, White, Forest, or Night
                 {
                     currentSkyConfig = config;
                     log_message("sky config :" + config.name);
                     break;
                 }
             }
-            
+
             float skyboxSunsize1 = RenderSettings.skybox.GetFloat("_SunSize");
             float skyboxConvergence1 = RenderSettings.skybox.GetFloat("_SunSizeConvergence");
             float skyboxThickness1 = RenderSettings.skybox.GetFloat("_AtmosphereThickness");
@@ -414,7 +414,6 @@ namespace Ex
 
             float ambientIntensity2 = currentSkyConfig.get<float>("ambient_intensity");
             float sunIntensity2 = currentSkyConfig.get<float>("sun_intensity");
-
 
             /*PostprocessComponent postProcessComponent = get<SkyComponent>("PostProcess");
             List<ComponentConfig> ppConfigs = postProcessComponent.configs;
@@ -456,8 +455,6 @@ namespace Ex
 
             yield return new WaitForEndOfFrame();
 
-            
-
             log_message("lerping done");
             lerpingDone = true;
         }
@@ -465,7 +462,7 @@ namespace Ex
 
         public override void stop_routine()
         {
-            PutEveryLightBackToItsOriginalIntensity();
+            if(lastRoutineConfigID != currentRoutineConfigID) PutEveryLightBackToItsOriginalIntensity();
         }
 
 
@@ -546,10 +543,10 @@ namespace Ex
 
 
         // TODO Clean this part, possible to know next routine's name ?
-        int GetScenesArrayIDFromRoutineName(string routineName)
+        int GetConfigIDFromRoutineName(string routineName)
         {
             if (routineName.Contains("Lab")) return 0;
-            else if (routineName.Contains("white")) return 1;
+            else if (routineName.Contains("White")) return 1;
             else if (routineName.Contains("Forest")) return 2;
             else return 0;
         }
@@ -613,11 +610,11 @@ namespace Ex
         }
 
 
-        void LogNewConfig(SceneConfig currentSceneConfig)
+        /*void LogNewConfig(SceneConfig currentSceneConfig)
         {
             log_message("New config : " + currentSceneConfig.sceneName);
             log_message("Prefs : " + currentSceneConfig.closeScreensBeforeFading.ToString()+" "+ currentSceneConfig.fadeSounds.ToString() + " "+ currentSceneConfig.keepShelterLightOn.ToString());
-        }
+        }*/
 
 
 

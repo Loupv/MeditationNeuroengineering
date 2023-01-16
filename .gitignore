@@ -74,3 +74,4 @@ crashlytics-build.properties
 /assetsBundles/*
 \assetsBundles\*
 .DS_Store
+ExVR/Bundles/forestscene.unity3d
