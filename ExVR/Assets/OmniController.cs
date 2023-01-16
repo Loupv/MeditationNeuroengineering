@@ -162,6 +162,22 @@ namespace Ex
             yield return 0;
         }
 
+        public void StartEveryAmbiences()
+        {
+            _0deg.start_sound();
+            _90deg.start_sound();
+            _180deg.start_sound();
+            _270deg.start_sound();
+        }
+
+        public void StopEveryAmbiences()
+        {
+            _0deg.stop_sound();
+            _90deg.stop_sound();
+            _180deg.stop_sound();
+            _270deg.stop_sound();
+        }
+
 
         void SetOmniControllerOrientation()
         {

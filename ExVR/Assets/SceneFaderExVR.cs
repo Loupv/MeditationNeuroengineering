@@ -78,6 +78,7 @@ namespace Ex
             guidanceClipNames.Add("Forest_MPS2_PartA", "Guidance_Forest_MPS2_PartA");
             guidanceClipNames.Add("Forest_MPS2_PartB", "Guidance_Forest_MPS2_PartB");
             guidanceClipNames.Add("Forest_MPS3", "Guidance_Forest_MPS3");
+            guidanceClipNames.Add("Forest_Dissolution", "Guidance_Forest_Dissolution");
             guidanceClipNames.Add("Lab_Dissolution", "Guidance_Lab_Dissolution");
             guidanceClipNames.Add("Lab_WelcomeBack", "Guidance_Lab_WelcomeBack");
             return guidanceClipNames;
@@ -483,6 +484,8 @@ namespace Ex
                 fadeEndValue = 1f;
             }
 
+            if (fadeDirection == FadeDirection.In) omniController.StartEveryAmbiences();
+
             while (!done)
             {
                 // lights
@@ -492,7 +495,6 @@ namespace Ex
                 }
                 // sounds
                 omniController.omniSoundsMainVolume = value;
-
 
                 if (fadeDirection == FadeDirection.Out)
                 {
@@ -506,6 +508,9 @@ namespace Ex
                 }
                 yield return null;
             }
+
+
+            if (fadeDirection == FadeDirection.Out) omniController.StopEveryAmbiences();
 /*
                 {
                     // lights
