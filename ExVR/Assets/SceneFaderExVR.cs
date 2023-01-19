@@ -159,9 +159,9 @@ namespace Ex
                     currentSceneConfig = sceneConfigs[currentRoutineConfigID];
 
                     //LogNewConfig(currentSceneConfig);
-                    
+
                     // if next routine's config is different, we fade
-                    if(currentRoutineConfigID != lastRoutineConfigID)
+                    if (currentRoutineConfigID != lastRoutineConfigID)
                     {
                         StartCoroutine(FadeOut());
                         StartCoroutine(FadeLightsAndSounds(FadeDirection.Out));
@@ -174,7 +174,7 @@ namespace Ex
                         lerpingDone = true;
                     }
 
-                    if(guidanceClipFound) routineGuidance.Stop();
+                    if (guidanceClipFound) routineGuidance.Stop();
                 }
 
 
@@ -553,6 +553,7 @@ namespace Ex
             if (routineName.Contains("Lab")) return 0;
             else if (routineName.Contains("White")) return 1;
             else if (routineName.Contains("Forest")) return 2;
+            else if (routineName.Contains("Exit") || routineName.Contains("Entry")) return 2;
             else return 0;
         }
 
@@ -579,10 +580,11 @@ namespace Ex
 
         void PutEveryLightBackToItsOriginalIntensity()
         {
-            for (int i = 0; i < lights.Count; i++)
-            {
-                lights[i].intensity = lightsLastIntensity[i];
-            }
+            if(lights != null)
+                for (int i = 0; i < lights.Count; i++)
+                {
+                    lights[i].intensity = lightsLastIntensity[i];
+                }
         }
 
         void ShutEveryLights()
@@ -636,7 +638,21 @@ namespace Ex
         }
 
 
-        
+        public override void slot1(object value) {
+            log_message(value.ToString());
+            graphicsHandler.InitCameraOrbit(1);
+        }
+
+        public override void slot2(object value)
+        {
+            log_message(value.ToString());
+            graphicsHandler.InitCameraOrbit(0);
+        }
+
+        public override void slot3(object value)
+        {
+            next();
+        }
 
 
         // public override void stop_experiment(){}
@@ -653,7 +669,7 @@ namespace Ex
         // public override void update_from_current_config(){}
 
         // # slots
-        // public override void slot1(object value){}
+        // 
         // public override void slot2(object value){}
         // public override void slot3(object value){}
         // public override void slot4(object value){}        

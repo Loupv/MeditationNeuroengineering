@@ -89,7 +89,7 @@ namespace Ex
         }
 
 
-        void InitCameraOrbit(int i)
+        public void InitCameraOrbit(int i)
         {
             if (!cameraMoving)
             {
@@ -100,13 +100,13 @@ namespace Ex
                         targetDistance = 0;
                         targetHeight = 0;
                         targetAngle = 0;
-                        lerpTimeInSeconds = 8;
+                        lerpTimeInSeconds = 5;
                         break;
                     case 1: // close behind
                         targetDistance = 1.7f;
                         targetHeight = 0.7f;
                         targetAngle = 0;
-                        lerpTimeInSeconds = 8;
+                        lerpTimeInSeconds = 5;
                         break;
                     case 2: // far behind
                         targetDistance = 2;
@@ -129,12 +129,13 @@ namespace Ex
                 }
                 lookForward = 0.5f;
                 smoothHandle = 2;
-
+                
                 if (!cameraMoving)
                 {
                     cameraMoving = true;
                     lerpStartTime = Time.time;
-                    StartCoroutine("CameraOrbit");
+                    //StartCoroutine("CameraOrbit");
+                    StartCoroutine("BodyExit");
                 }
             }
         }
@@ -150,10 +151,10 @@ namespace Ex
             {
                 t = (Time.time - lerpStartTime) / lerpTimeInSeconds;
 
-                float theta = Mathf.Lerp(lastTargetAngle, targetAngle, LerpSmoother(t, smoothHandle)) + Mathf.PI / 2;
-                float ray = Mathf.Lerp(lastTargetDistance, targetDistance, LerpSmoother(t, smoothHandle));
-                float h = Mathf.Lerp(lastTargetHeight, targetHeight, LerpSmoother(t, smoothHandle));
-                float l = Mathf.Lerp(lastLookForward, lookForward, LerpSmoother(t, smoothHandle));
+                float theta = Mathf.Lerp(lastTargetAngle, targetAngle, LerpSmoother(t, smoothHandle,1)) + Mathf.PI / 2;
+                float ray = Mathf.Lerp(lastTargetDistance, targetDistance, LerpSmoother(t, smoothHandle,1));
+                float h = Mathf.Lerp(lastTargetHeight, targetHeight, LerpSmoother(t, smoothHandle,1));
+                float l = Mathf.Lerp(lastLookForward, lookForward, LerpSmoother(t, smoothHandle,1));
 
                 newPosition = new Vector3(ray * Mathf.Cos(theta), h, ray * Mathf.Sin(theta)) + cameraOrigin;
                 log_message(ray.ToString() + ", " + h.ToString() + ", " + l.ToString());
@@ -177,14 +178,56 @@ namespace Ex
             log_message("Camera lerp stopped");
 
             cameraMoving = false;
+            invoke_signal1(true);
         }
 
 
-        float LerpSmoother(float x, float s)
+        // need to do an invert lerp for body entry
+        IEnumerator BodyExit()
         {
-            return (1 / (1 + Mathf.Pow(x / (1 - x), -s)));
-            //return (1 / (1 + Mathf.Exp(-s * (x-0.5f))));
-            // return (Mathf.Pow((1-x)/x, 2*t) -1) / (Mathf.Pow((1 - x) / x, 2) - 1); // accelerate at 1
+            float t = 0;
+            Vector3 newPosition;
+
+            log_message("Camera lerp started");
+
+            while (t < 1)
+            {
+                t = (Time.time - lerpStartTime) / lerpTimeInSeconds;
+
+                
+                float ylerper = LerpSmoother(t, 2.2f, 0.5f);
+                float zlerper = LerpSmoother(t, 2.2f, 1);
+                
+
+                //float x = xorigin;
+                float y = Mathf.Lerp(lastTargetHeight, targetHeight, ylerper);
+                float z = Mathf.Lerp(lastTargetDistance, targetDistance, zlerper);
+
+                cameraRig.transform.Find("Cameras").position = new Vector3(0,y,z) + cameraOrigin;
+                //cameraRig.transform.Find("Cameras").LookAt(cameraOrigin - new Vector3(0, 0, l));
+                log_message(t.ToString());
+                yield return new WaitForEndOfFrame();
+            }
+
+            lastTargetDistance = targetDistance;
+            lastTargetHeight = targetHeight;
+
+            newPosition = new Vector3(0, targetHeight, targetDistance) + cameraOrigin;
+            cameraRig.transform.Find("Cameras").position = newPosition;
+            //cameraRig.transform.Find("Cameras").LookAt(cameraOrigin - new Vector3(0, 0, lookForward));
+
+            log_message("Camera lerp stopped");
+
+            cameraMoving = false;
+            invoke_signal1(true);
+        }
+
+        // x is the time, s is the slope, v is the speed
+        float LerpSmoother(float t, float s, float v)
+        {
+            if(t < v) return (1 / (1 + Mathf.Pow(t / (v - t), -s)));
+            else return 1;
+            
         }
 
 
