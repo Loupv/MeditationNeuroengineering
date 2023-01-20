@@ -272,7 +272,7 @@ namespace Ex
             
         }
 
-        // https://mycurvefit.com/
+        // https://mycurvefit.com/ this curve goes to midpoint at x = 0.4, a bit faster that the one above
         float VerticalSmooth(float t)
         {
             if (t >= 0) return 1 - 1 / Mathf.Pow((1 + Mathf.Pow(t / 3.6f+ 0.001f, 2.06f)), 89);
