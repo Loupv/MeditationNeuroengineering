@@ -1549,6 +1549,75 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 774d93516a8414d40974a71c5507c578, type: 3}
+--- !u!1001 &5967338749687017723
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1148368239344405237, guid: 7f4a64b6a4df1874b86db82a3fdea520,
+        type: 3}
+      propertyPath: m_Name
+      value: MeditationShelter_NoBars_Final
+      objectReference: {fileID: 0}
+    - target: {fileID: 2025811608790965172, guid: 7f4a64b6a4df1874b86db82a3fdea520,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 2025811608790965172, guid: 7f4a64b6a4df1874b86db82a3fdea520,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.796
+      objectReference: {fileID: 0}
+    - target: {fileID: 2025811608790965172, guid: 7f4a64b6a4df1874b86db82a3fdea520,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.596
+      objectReference: {fileID: 0}
+    - target: {fileID: 2025811608790965172, guid: 7f4a64b6a4df1874b86db82a3fdea520,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -9.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2025811608790965172, guid: 7f4a64b6a4df1874b86db82a3fdea520,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2025811608790965172, guid: 7f4a64b6a4df1874b86db82a3fdea520,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2025811608790965172, guid: 7f4a64b6a4df1874b86db82a3fdea520,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2025811608790965172, guid: 7f4a64b6a4df1874b86db82a3fdea520,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2025811608790965172, guid: 7f4a64b6a4df1874b86db82a3fdea520,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2025811608790965172, guid: 7f4a64b6a4df1874b86db82a3fdea520,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2025811608790965172, guid: 7f4a64b6a4df1874b86db82a3fdea520,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7f4a64b6a4df1874b86db82a3fdea520, type: 3}
 --- !u!1001 &7549639464120471710
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1689,6 +1758,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: MeditationShelter_Tiny1_NoBars
+      objectReference: {fileID: 0}
+    - target: {fileID: 2095366798947874542, guid: 83e4a57ff70ad634ab7dfd5457477a69,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 83e4a57ff70ad634ab7dfd5457477a69, type: 3}
