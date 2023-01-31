@@ -119,12 +119,12 @@ WindZone:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2756530484842549214}
   m_Enabled: 1
-  m_Mode: 0
-  m_Radius: 20
+  m_Mode: 1
+  m_Radius: 100
   m_WindMain: 0.2
-  m_WindTurbulence: 1
-  m_WindPulseMagnitude: 0.2
-  m_WindPulseFrequency: 0.2
+  m_WindTurbulence: 15.45
+  m_WindPulseMagnitude: 0.58
+  m_WindPulseFrequency: 0.28
 --- !u!114 &2072288761
 MonoBehaviour:
   m_ObjectHideFlags: 0
