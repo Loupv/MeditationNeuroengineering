@@ -73,10 +73,8 @@ namespace Ex
             guidanceClipNames = new Dictionary<string, string>();
             guidanceClipNames.Add("Lab_Intro","Guidance_Lab_Intro");
             guidanceClipNames.Add("Forest_Arrival","Guidance_Forest_Arrival");
-            guidanceClipNames.Add("Forest_MPS1_PartA", "Guidance_Forest_MPS1_PartA");
-            guidanceClipNames.Add("Forest_MPS1_PartB", "Guidance_Forest_MPS1_PartB");
-            guidanceClipNames.Add("Forest_MPS2_PartA", "Guidance_Forest_MPS2_PartA");
-            guidanceClipNames.Add("Forest_MPS2_PartB", "Guidance_Forest_MPS2_PartB");
+            guidanceClipNames.Add("Forest_MPS1", "Guidance_Forest_MPS1");
+            guidanceClipNames.Add("Forest_MPS2", "Guidance_Forest_MPS2");
             guidanceClipNames.Add("Forest_MPS3", "Guidance_Forest_MPS3");
             guidanceClipNames.Add("Forest_Dissolution", "Guidance_Forest_Dissolution");
             guidanceClipNames.Add("Lab_Dissolution", "Guidance_Lab_Dissolution");
