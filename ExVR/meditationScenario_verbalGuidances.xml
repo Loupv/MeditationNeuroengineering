@@ -473,8 +473,8 @@
                 <Config key="49" name="1PP">
                     <Arg name="debug_camera" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="m_speed" ui="Float spin box" value="3" type="System.Single" dim="0"/>
-                    <Arg name="position" ui="Vector 3D" value="0.59 0.673 0.503" type="System.Single" dim="1" sep=" " sizes="3"/>
-                    <Arg name="rotation" ui="Vector 3D" value="0 172.4 0" type="System.Single" dim="1" sep=" " sizes="3"/>
+                    <Arg name="position" ui="Vector 3D" value="0.64 0.153 0.693" type="System.Single" dim="1" sep=" " sizes="3"/>
+                    <Arg name="rotation" ui="Vector 3D" value="0 181.3 0" type="System.Single" dim="1" sep=" " sizes="3"/>
                     <Arg name="rx_speed" ui="Float spin box" value="2" type="System.Single" dim="0"/>
                     <Arg name="ry_speed" ui="Float spin box" value="2" type="System.Single" dim="0"/>
                     <Arg name="rz_speed" ui="Float spin box" value="2" type="System.Single" dim="0"/>
@@ -551,7 +551,7 @@
             </InitConfig>
             <Configs>
                 <Config key="63" name="standard">
-                    <Arg name="transform" ui="Transformation" value="0.56 0 0 0 0 0 1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
+                    <Arg name="transform" ui="Transformation" value="0.49 3.46945e-18 0.16 0 0 0 1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
                     <Arg name="transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                 </Config>
             </Configs>
@@ -1684,7 +1684,7 @@
         </Component>
         <Component key="70" name="K4 manager" category="AcquisitionDevice" type="K4Manager" global="0" always_updating="0" exceptions="1" frame_logging="0" trigger_logging="0" restricted="2" priority="2">
             <InitConfig key="155" name="standard">
-                <Arg name="cameras_to_use" ui="Line text editor" value="0;1" type="System.String" dim="0"/>
+                <Arg name="cameras_to_use" ui="Line text editor" value="0;1;2" type="System.String" dim="0"/>
                 <Arg name="color_init_default" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
                 <Arg name="color_init_file" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
                 <Arg name="color_init_nothing" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
@@ -1718,7 +1718,7 @@
                     <Arg name="display_filtering_obb" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="filter_points_outside_obb" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="filtering_obb_tab" ui="Tab" value="true[#OBBFW#]false[#OBBFW#]0.784314 0 0 0.196078[#OBBFW#]0.5 1.2 -0.1 0 0 0 3 2 3" type="System.String" dim="1" sep="[#T#]" sizes="1"/>
-                    <Arg name="global_transform" ui="Transformation" value="0.65 1.54 2.46 38.1 197.5 109.9 -1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
+                    <Arg name="global_transform" ui="Transformation" value="2.09 1.55 1.66 0 215.5 91.7 -1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
                     <Arg name="global_transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="rendering" ui="Combo box index" value="1" type="System.Int32" dim="0"/>
                     <Arg name="size_points" ui="Float spin box" value="0.0037" type="System.Single" dim="0"/>
