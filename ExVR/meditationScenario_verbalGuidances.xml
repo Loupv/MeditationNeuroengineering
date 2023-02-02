@@ -20,16 +20,14 @@
         <Resource key="71" type="Audio" alias="LabRoom_Front_Reverb" path="Assets/LabRoom_Front_Reverb.wav"/>
         <Resource key="72" type="Audio" alias="LabRoom_Left_Reverb" path="Assets/LabRoom_Left_Reverb.wav"/>
         <Resource key="73" type="Audio" alias="LabRoom_Right_Reverb" path="Assets/LabRoom_Right_Reverb.wav"/>
-        <Resource key="98" type="Audio" alias="1 - Intro - Part A - Lab" path="../Verbal Guidances/Edit/1 - Intro - Part A - Lab.wav"/>
-        <Resource key="99" type="Audio" alias="2 - Intro - Part B - Forest " path="../Verbal Guidances/Edit/2 - Intro - Part B - Forest .wav"/>
-        <Resource key="100" type="Audio" alias="3a - MPS1 - Part A" path="../Verbal Guidances/Edit/3a - MPS1 - Part A.wav"/>
-        <Resource key="101" type="Audio" alias="3b - MPS1 - part B" path="../Verbal Guidances/Edit/3b - MPS1 - part B.wav"/>
-        <Resource key="102" type="Audio" alias="4a - MPS2 - Part A" path="../Verbal Guidances/Edit/4a - MPS2 - Part A.wav"/>
-        <Resource key="103" type="Audio" alias="4b - MPS2 - Part B" path="../Verbal Guidances/Edit/4b - MPS2 - Part B.wav"/>
-        <Resource key="104" type="Audio" alias="5 - MPS3" path="../Verbal Guidances/Edit/5 - MPS3.wav"/>
-        <Resource key="106" type="Audio" alias="9 - WelcomeBack" path="../Verbal Guidances/Edit/9 - WelcomeBack.wav"/>
-        <Resource key="108" type="Audio" alias="8 - Dissolution - PartA" path="../Verbal Guidances/Edit/8 - Dissolution - PartA.wav"/>
-        <Resource key="109" type="Audio" alias="8 - Dissolution - PartB" path="../Verbal Guidances/Edit/8 - Dissolution - PartB.wav"/>
+        <Resource key="110" type="Audio" alias="1 - Intro - Part A - Lab" path="../Verbal Guidances/1. InUse/1 - Intro - Part A - Lab.wav"/>
+        <Resource key="111" type="Audio" alias="2 - Intro - Part B - Forest " path="../Verbal Guidances/1. InUse/2 - Intro - Part B - Forest .wav"/>
+        <Resource key="112" type="Audio" alias="3 - MPS1 - part A" path="../Verbal Guidances/1. InUse/3 - MPS1 - part A.wav"/>
+        <Resource key="113" type="Audio" alias="4 - MPS2 - Part A" path="../Verbal Guidances/1. InUse/4 - MPS2 - Part A.wav"/>
+        <Resource key="114" type="Audio" alias="5 - MPS3" path="../Verbal Guidances/1. InUse/5 - MPS3.wav"/>
+        <Resource key="115" type="Audio" alias="8a - Dissolution - PartA" path="../Verbal Guidances/1. InUse/8a - Dissolution - PartA.wav"/>
+        <Resource key="116" type="Audio" alias="8b - Dissolution - PartB" path="../Verbal Guidances/1. InUse/8b - Dissolution - PartB.wav"/>
+        <Resource key="117" type="Audio" alias="9 - WelcomeBack" path="../Verbal Guidances/1. InUse/9 - WelcomeBack.wav"/>
         <Resource key="94" type="Text" alias="network_SV-10-005" path="L:/Users/Florian/_SCANER/k4-scaner-manager/config/network/network_SV-10-005.config"/>
         <Resource key="95" type="Text" alias="filters_SV-10-005_all" path="L:/Users/Florian/_SCANER/k4-scaner-manager/config/settings/filters_SV-10-005_all.config"/>
         <Resource key="96" type="Text" alias="device_SV-10-005_all" path="L:/Users/Florian/_SCANER/k4-scaner-manager/config/settings/device_SV-10-005_all.config"/>
@@ -45,6 +43,7 @@
         <Resource key="84" type="UnityAssetBundle" alias="attentionpoint" path="Bundles/attentionpoint.unity3d"/>
         <Resource key="85" type="UnityAssetBundle" alias="virtualteacher" path="../assetsBundles/virtualteacher.unity3d"/>
         <Resource key="107" type="UnityAssetBundle" alias="mediationshelter_final" path="Bundles/mediationshelter_final.unity3d"/>
+        <Resource key="118" type="UnityAssetBundle" alias="cairn" path="../assetsBundles/cairn.unity3d"/>
         <Resource key="37" type="CSharpScript" alias="OmniController" path="Assets/OmniController.cs"/>
         <Resource key="44" type="CSharpScript" alias="SceneFaderExVR" path="Assets/SceneFaderExVR.cs"/>
         <Resource key="61" type="CSharpScript" alias="GraphicsHandler" path="Assets/GraphicsHandler.cs"/>
@@ -474,8 +473,8 @@
                 <Config key="49" name="1PP">
                     <Arg name="debug_camera" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="m_speed" ui="Float spin box" value="3" type="System.Single" dim="0"/>
-                    <Arg name="position" ui="Vector 3D" value="0.59 0.673 0.503" type="System.Single" dim="1" sep=" " sizes="3"/>
-                    <Arg name="rotation" ui="Vector 3D" value="0 172.4 0" type="System.Single" dim="1" sep=" " sizes="3"/>
+                    <Arg name="position" ui="Vector 3D" value="0.64 0.153 0.693" type="System.Single" dim="1" sep=" " sizes="3"/>
+                    <Arg name="rotation" ui="Vector 3D" value="0 181.3 0" type="System.Single" dim="1" sep=" " sizes="3"/>
                     <Arg name="rx_speed" ui="Float spin box" value="2" type="System.Single" dim="0"/>
                     <Arg name="ry_speed" ui="Float spin box" value="2" type="System.Single" dim="0"/>
                     <Arg name="rz_speed" ui="Float spin box" value="2" type="System.Single" dim="0"/>
@@ -522,7 +521,7 @@
             </InitConfig>
             <Configs>
                 <Config key="53" name="standard">
-                    <Arg name="transform" ui="Transformation" value="0.5 0 0.15 0 180 0 1 1.02 1" type="System.Single" dim="1" sep=" " sizes="9"/>
+                    <Arg name="transform" ui="Transformation" value="0.5 0 0.15 0 90 0 1 1.02 1" type="System.Single" dim="1" sep=" " sizes="9"/>
                     <Arg name="transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                 </Config>
             </Configs>
@@ -537,7 +536,7 @@
             </InitConfig>
             <Configs>
                 <Config key="57" name="standard">
-                    <Arg name="transform" ui="Transformation" value="6 -1.545 8.205 0 0 0 1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
+                    <Arg name="transform" ui="Transformation" value="5.1 -1.545 8.205 0 0 0 1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
                     <Arg name="transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                 </Config>
             </Configs>
@@ -552,7 +551,7 @@
             </InitConfig>
             <Configs>
                 <Config key="63" name="standard">
-                    <Arg name="transform" ui="Transformation" value="0.56 0 0 0 0 0 1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
+                    <Arg name="transform" ui="Transformation" value="0.49 3.46945e-18 0.16 0 0 0 1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
                     <Arg name="transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                 </Config>
             </Configs>
@@ -602,9 +601,9 @@
                 </Config>
             </Configs>
         </Component>
-        <Component key="45" name="FOA1" category="Model" type="AssetBundle" global="0" always_updating="0" exceptions="1" frame_logging="0" trigger_logging="0" restricted="0" priority="2">
+        <Component key="45" name="FOA_cairn" category="Model" type="AssetBundle" global="0" always_updating="0" exceptions="1" frame_logging="0" trigger_logging="0" restricted="0" priority="2">
             <InitConfig key="98" name="standard">
-                <Arg name="asset_bundle" ui="Resource" value="attentionpoint%%%84" type="System.String" dim="1" sep="%%%" sizes="2"/>
+                <Arg name="asset_bundle" ui="Resource" value="cairn%%%118" type="System.String" dim="1" sep="%%%" sizes="2"/>
                 <Arg name="display_hierarchy" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                 <Arg name="init_transform" ui="Transformation" value="0 2 0 0 0 0 1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
                 <Arg name="init_transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
@@ -612,7 +611,7 @@
             </InitConfig>
             <Configs>
                 <Config key="99" name="standard">
-                    <Arg name="transform" ui="Transformation" value="0.54 0.08 -1.28 0 0 0 0.065 0.005 0.065" type="System.Single" dim="1" sep=" " sizes="9"/>
+                    <Arg name="transform" ui="Transformation" value="2.215 -3.22 -22 0 0 0 1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
                     <Arg name="transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                 </Config>
             </Configs>
@@ -1352,7 +1351,7 @@
                 <Arg name="channel_7_copy_destination" ui="Line text editor" value="" type="System.String" dim="0"/>
                 <Arg name="generate_new_sound" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                 <Arg name="new_sound_channel" ui="Combo box index" value="0" type="System.Int32" dim="0"/>
-                <Arg name="sound" ui="Resource" value="1 - Intro - Part A - Lab%%%98" type="System.String" dim="1" sep="%%%" sizes="2"/>
+                <Arg name="sound" ui="Resource" value="1 - Intro - Part A - Lab%%%110" type="System.String" dim="1" sep="%%%" sizes="2"/>
             </InitConfig>
             <Configs>
                 <Config key="146" name="default">
@@ -1395,7 +1394,7 @@
                 <Arg name="channel_7_copy_destination" ui="Line text editor" value="" type="System.String" dim="0"/>
                 <Arg name="generate_new_sound" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                 <Arg name="new_sound_channel" ui="Combo box index" value="0" type="System.Int32" dim="0"/>
-                <Arg name="sound" ui="Resource" value="2 - Intro - Part B - Forest %%%99" type="System.String" dim="1" sep="%%%" sizes="2"/>
+                <Arg name="sound" ui="Resource" value="2 - Intro - Part B - Forest %%%111" type="System.String" dim="1" sep="%%%" sizes="2"/>
             </InitConfig>
             <Configs>
                 <Config key="148" name="default">
@@ -1425,7 +1424,7 @@
                 </Config>
             </Configs>
         </Component>
-        <Component key="67" name="Guidance_Forest_MPS1_PartA" category="Audio" type="AudioSource" global="0" always_updating="0" exceptions="1" frame_logging="0" trigger_logging="0" restricted="0" priority="1">
+        <Component key="67" name="Guidance_Forest_MPS1" category="Audio" type="AudioSource" global="0" always_updating="0" exceptions="1" frame_logging="0" trigger_logging="0" restricted="0" priority="1">
             <InitConfig key="149" name="standard">
                 <Arg name="asset_bundle" ui="Resource" value="%%%-1" type="System.String" dim="1" sep="%%%" sizes="2"/>
                 <Arg name="channel_0_copy_destination" ui="Line text editor" value="1 2" type="System.String" dim="0"/>
@@ -1438,7 +1437,7 @@
                 <Arg name="channel_7_copy_destination" ui="Line text editor" value="" type="System.String" dim="0"/>
                 <Arg name="generate_new_sound" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                 <Arg name="new_sound_channel" ui="Combo box index" value="0" type="System.Int32" dim="0"/>
-                <Arg name="sound" ui="Resource" value="3a - MPS1 - Part A%%%100" type="System.String" dim="1" sep="%%%" sizes="2"/>
+                <Arg name="sound" ui="Resource" value="3 - MPS1 - part A%%%112" type="System.String" dim="1" sep="%%%" sizes="2"/>
             </InitConfig>
             <Configs>
                 <Config key="150" name="default">
@@ -1468,50 +1467,7 @@
                 </Config>
             </Configs>
         </Component>
-        <Component key="72" name="Guidance_Forest_MPS1_PartB" category="Audio" type="AudioSource" global="0" always_updating="0" exceptions="1" frame_logging="0" trigger_logging="0" restricted="0" priority="1">
-            <InitConfig key="159" name="standard">
-                <Arg name="asset_bundle" ui="Resource" value="%%%-1" type="System.String" dim="1" sep="%%%" sizes="2"/>
-                <Arg name="channel_0_copy_destination" ui="Line text editor" value="1 2" type="System.String" dim="0"/>
-                <Arg name="channel_1_copy_destination" ui="Line text editor" value="" type="System.String" dim="0"/>
-                <Arg name="channel_2_copy_destination" ui="Line text editor" value="" type="System.String" dim="0"/>
-                <Arg name="channel_3_copy_destination" ui="Line text editor" value="" type="System.String" dim="0"/>
-                <Arg name="channel_4_copy_destination" ui="Line text editor" value="" type="System.String" dim="0"/>
-                <Arg name="channel_5_copy_destination" ui="Line text editor" value="" type="System.String" dim="0"/>
-                <Arg name="channel_6_copy_destination" ui="Line text editor" value="" type="System.String" dim="0"/>
-                <Arg name="channel_7_copy_destination" ui="Line text editor" value="" type="System.String" dim="0"/>
-                <Arg name="generate_new_sound" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                <Arg name="new_sound_channel" ui="Combo box index" value="0" type="System.Int32" dim="0"/>
-                <Arg name="sound" ui="Resource" value="3b - MPS1 - part B%%%101" type="System.String" dim="1" sep="%%%" sizes="2"/>
-            </InitConfig>
-            <Configs>
-                <Config key="160" name="default">
-                    <Arg name="display" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="doppler_level" ui="Float values slider" value="1" type="System.Single" dim="0"/>
-                    <Arg name="loop" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="max_distance" ui="Float values slider" value="10" type="System.Single" dim="0"/>
-                    <Arg name="min_distance" ui="Float values slider" value="0.01" type="System.Single" dim="0"/>
-                    <Arg name="mute" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="nothing_end_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="nothing_new_block" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
-                    <Arg name="pause_end_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="pause_new_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="pitch" ui="Float values slider" value="1" type="System.Single" dim="0"/>
-                    <Arg name="play_end_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="play_new_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="rollof_mode" ui="Combo box index" value="1" type="System.Int32" dim="0"/>
-                    <Arg name="spatial_blend" ui="Float values slider" value="0" type="System.Single" dim="0"/>
-                    <Arg name="spatialized" ui="Check box" value="true" type="System.Boolean" dim="0"/>
-                    <Arg name="spread" ui="Integer slider" value="360" type="System.Int32" dim="0"/>
-                    <Arg name="stereo" ui="Float values slider" value="0" type="System.Single" dim="0"/>
-                    <Arg name="stop_end_block" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
-                    <Arg name="stop_new_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="transform" ui="Transformation" value="0 0 0 0 0 0 0.1 0.1 0.1" type="System.Single" dim="1" sep=" " sizes="9"/>
-                    <Arg name="transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="volume" ui="Float values slider" value="1" type="System.Single" dim="0"/>
-                </Config>
-            </Configs>
-        </Component>
-        <Component key="74" name="Guidance_Forest_MPS2_PartA" category="Audio" type="AudioSource" global="0" always_updating="0" exceptions="1" frame_logging="0" trigger_logging="0" restricted="0" priority="1">
+        <Component key="74" name="Guidance_Forest_MPS2" category="Audio" type="AudioSource" global="0" always_updating="0" exceptions="1" frame_logging="0" trigger_logging="0" restricted="0" priority="1">
             <InitConfig key="163" name="standard">
                 <Arg name="asset_bundle" ui="Resource" value="%%%-1" type="System.String" dim="1" sep="%%%" sizes="2"/>
                 <Arg name="channel_0_copy_destination" ui="Line text editor" value="1 2" type="System.String" dim="0"/>
@@ -1524,53 +1480,10 @@
                 <Arg name="channel_7_copy_destination" ui="Line text editor" value="" type="System.String" dim="0"/>
                 <Arg name="generate_new_sound" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                 <Arg name="new_sound_channel" ui="Combo box index" value="0" type="System.Int32" dim="0"/>
-                <Arg name="sound" ui="Resource" value="4a - MPS2 - Part A%%%102" type="System.String" dim="1" sep="%%%" sizes="2"/>
+                <Arg name="sound" ui="Resource" value="4 - MPS2 - Part A%%%113" type="System.String" dim="1" sep="%%%" sizes="2"/>
             </InitConfig>
             <Configs>
                 <Config key="164" name="default">
-                    <Arg name="display" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="doppler_level" ui="Float values slider" value="1" type="System.Single" dim="0"/>
-                    <Arg name="loop" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="max_distance" ui="Float values slider" value="10" type="System.Single" dim="0"/>
-                    <Arg name="min_distance" ui="Float values slider" value="0.01" type="System.Single" dim="0"/>
-                    <Arg name="mute" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="nothing_end_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="nothing_new_block" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
-                    <Arg name="pause_end_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="pause_new_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="pitch" ui="Float values slider" value="1" type="System.Single" dim="0"/>
-                    <Arg name="play_end_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="play_new_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="rollof_mode" ui="Combo box index" value="1" type="System.Int32" dim="0"/>
-                    <Arg name="spatial_blend" ui="Float values slider" value="0" type="System.Single" dim="0"/>
-                    <Arg name="spatialized" ui="Check box" value="true" type="System.Boolean" dim="0"/>
-                    <Arg name="spread" ui="Integer slider" value="360" type="System.Int32" dim="0"/>
-                    <Arg name="stereo" ui="Float values slider" value="0" type="System.Single" dim="0"/>
-                    <Arg name="stop_end_block" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
-                    <Arg name="stop_new_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="transform" ui="Transformation" value="0 0 0 0 0 0 0.1 0.1 0.1" type="System.Single" dim="1" sep=" " sizes="9"/>
-                    <Arg name="transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="volume" ui="Float values slider" value="1" type="System.Single" dim="0"/>
-                </Config>
-            </Configs>
-        </Component>
-        <Component key="73" name="Guidance_Forest_MPS2_PartB" category="Audio" type="AudioSource" global="0" always_updating="0" exceptions="1" frame_logging="0" trigger_logging="0" restricted="0" priority="1">
-            <InitConfig key="161" name="standard">
-                <Arg name="asset_bundle" ui="Resource" value="%%%-1" type="System.String" dim="1" sep="%%%" sizes="2"/>
-                <Arg name="channel_0_copy_destination" ui="Line text editor" value="1 2" type="System.String" dim="0"/>
-                <Arg name="channel_1_copy_destination" ui="Line text editor" value="" type="System.String" dim="0"/>
-                <Arg name="channel_2_copy_destination" ui="Line text editor" value="" type="System.String" dim="0"/>
-                <Arg name="channel_3_copy_destination" ui="Line text editor" value="" type="System.String" dim="0"/>
-                <Arg name="channel_4_copy_destination" ui="Line text editor" value="" type="System.String" dim="0"/>
-                <Arg name="channel_5_copy_destination" ui="Line text editor" value="" type="System.String" dim="0"/>
-                <Arg name="channel_6_copy_destination" ui="Line text editor" value="" type="System.String" dim="0"/>
-                <Arg name="channel_7_copy_destination" ui="Line text editor" value="" type="System.String" dim="0"/>
-                <Arg name="generate_new_sound" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                <Arg name="new_sound_channel" ui="Combo box index" value="0" type="System.Int32" dim="0"/>
-                <Arg name="sound" ui="Resource" value="4b - MPS2 - Part B%%%103" type="System.String" dim="1" sep="%%%" sizes="2"/>
-            </InitConfig>
-            <Configs>
-                <Config key="162" name="default">
                     <Arg name="display" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="doppler_level" ui="Float values slider" value="1" type="System.Single" dim="0"/>
                     <Arg name="loop" ui="Check box" value="false" type="System.Boolean" dim="0"/>
@@ -1610,7 +1523,7 @@
                 <Arg name="channel_7_copy_destination" ui="Line text editor" value="" type="System.String" dim="0"/>
                 <Arg name="generate_new_sound" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                 <Arg name="new_sound_channel" ui="Combo box index" value="0" type="System.Int32" dim="0"/>
-                <Arg name="sound" ui="Resource" value="5 - MPS3%%%104" type="System.String" dim="1" sep="%%%" sizes="2"/>
+                <Arg name="sound" ui="Resource" value="5 - MPS3%%%114" type="System.String" dim="1" sep="%%%" sizes="2"/>
             </InitConfig>
             <Configs>
                 <Config key="166" name="default">
@@ -1653,7 +1566,7 @@
                 <Arg name="channel_7_copy_destination" ui="Line text editor" value="" type="System.String" dim="0"/>
                 <Arg name="generate_new_sound" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                 <Arg name="new_sound_channel" ui="Combo box index" value="0" type="System.Int32" dim="0"/>
-                <Arg name="sound" ui="Resource" value="8 - Dissolution - PartA%%%108" type="System.String" dim="1" sep="%%%" sizes="2"/>
+                <Arg name="sound" ui="Resource" value="8a - Dissolution - PartA%%%115" type="System.String" dim="1" sep="%%%" sizes="2"/>
             </InitConfig>
             <Configs>
                 <Config key="152" name="default">
@@ -1696,7 +1609,7 @@
                 <Arg name="channel_7_copy_destination" ui="Line text editor" value="" type="System.String" dim="0"/>
                 <Arg name="generate_new_sound" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                 <Arg name="new_sound_channel" ui="Combo box index" value="0" type="System.Int32" dim="0"/>
-                <Arg name="sound" ui="Resource" value="8 - Dissolution - PartB%%%109" type="System.String" dim="1" sep="%%%" sizes="2"/>
+                <Arg name="sound" ui="Resource" value="8b - Dissolution - PartB%%%116" type="System.String" dim="1" sep="%%%" sizes="2"/>
             </InitConfig>
             <Configs>
                 <Config key="168" name="default">
@@ -1739,7 +1652,7 @@
                 <Arg name="channel_7_copy_destination" ui="Line text editor" value="" type="System.String" dim="0"/>
                 <Arg name="generate_new_sound" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                 <Arg name="new_sound_channel" ui="Combo box index" value="0" type="System.Int32" dim="0"/>
-                <Arg name="sound" ui="Resource" value="9 - WelcomeBack%%%106" type="System.String" dim="1" sep="%%%" sizes="2"/>
+                <Arg name="sound" ui="Resource" value="9 - WelcomeBack%%%117" type="System.String" dim="1" sep="%%%" sizes="2"/>
             </InitConfig>
             <Configs>
                 <Config key="154" name="default">
@@ -1771,7 +1684,7 @@
         </Component>
         <Component key="70" name="K4 manager" category="AcquisitionDevice" type="K4Manager" global="0" always_updating="0" exceptions="1" frame_logging="0" trigger_logging="0" restricted="2" priority="2">
             <InitConfig key="155" name="standard">
-                <Arg name="cameras_to_use" ui="Line text editor" value="0;1" type="System.String" dim="0"/>
+                <Arg name="cameras_to_use" ui="Line text editor" value="0;1;2" type="System.String" dim="0"/>
                 <Arg name="color_init_default" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
                 <Arg name="color_init_file" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
                 <Arg name="color_init_nothing" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
@@ -1805,7 +1718,7 @@
                     <Arg name="display_filtering_obb" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="filter_points_outside_obb" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="filtering_obb_tab" ui="Tab" value="true[#OBBFW#]false[#OBBFW#]0.784314 0 0 0.196078[#OBBFW#]0.5 1.2 -0.1 0 0 0 3 2 3" type="System.String" dim="1" sep="[#T#]" sizes="1"/>
-                    <Arg name="global_transform" ui="Transformation" value="0.65 1.62 2.46 46.7 198 115.4 -1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
+                    <Arg name="global_transform" ui="Transformation" value="2.09 1.55 1.66 0 215.5 91.7 -1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
                     <Arg name="global_transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="rendering" ui="Combo box index" value="1" type="System.Int32" dim="0"/>
                     <Arg name="size_points" ui="Float spin box" value="0.0037" type="System.Single" dim="0"/>
@@ -2366,7 +2279,7 @@
                         </Timeline>
                     </Action>
                     <Action key="223" key_component="45" key_config="99" node_used="0" node_position="0 0">
-                        <!--Component FOA1 with config standard -->
+                        <!--Component FOA_cairn with config standard -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
                             <Interval t1="0" t2="10000"/>
@@ -2419,7 +2332,7 @@
                     </Action>
                 </Condition>
             </Routine>
-            <Routine key="31" name="Forest_MPS1_PartA" randomizer="0" informations="">
+            <Routine key="31" name="Forest_MPS1" randomizer="0" informations="">
                 <Condition key="8" name="default" duration="10000" ui_scale="100" ui_size="1" sets_keys="0">
                     <Action key="230" key_component="27" key_config="57" node_used="0" node_position="0 0">
                         <!--Component ForestScene with config standard -->
@@ -2576,7 +2489,7 @@
                         </Timeline>
                     </Action>
                     <Action key="244" key_component="45" key_config="99" node_used="0" node_position="0 0">
-                        <!--Component FOA1 with config standard -->
+                        <!--Component FOA_cairn with config standard -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
                             <Interval t1="0" t2="10000"/>
@@ -2595,7 +2508,7 @@
                         <Timeline type="Visibiliy"/>
                     </Action>
                     <Action key="247" key_component="67" key_config="150" node_used="0" node_position="0 0">
-                        <!--Component Guidance_Forest_MPS1_PartA with config default -->
+                        <!--Component Guidance_Forest_MPS1 with config default -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
                             <Interval t1="0" t2="10000"/>
@@ -2629,7 +2542,7 @@
                     </Action>
                 </Condition>
             </Routine>
-            <Routine key="50" name="Forest_MPS2_PartA" randomizer="0" informations="">
+            <Routine key="50" name="Forest_MPS2" randomizer="0" informations="">
                 <Condition key="13" name="default" duration="10000" ui_scale="100" ui_size="1" sets_keys="0">
                     <Action key="314" key_component="27" key_config="57" node_used="0" node_position="0 0">
                         <!--Component ForestScene with config standard -->
@@ -2786,7 +2699,7 @@
                         </Timeline>
                     </Action>
                     <Action key="328" key_component="45" key_config="99" node_used="0" node_position="0 0">
-                        <!--Component FOA1 with config standard -->
+                        <!--Component FOA_cairn with config standard -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
                             <Interval t1="0" t2="10000"/>
@@ -2827,7 +2740,7 @@
                         </Timeline>
                     </Action>
                     <Action key="397" key_component="74" key_config="164" node_used="0" node_position="0 0">
-                        <!--Component Guidance_Forest_MPS2_PartA with config default -->
+                        <!--Component Guidance_Forest_MPS2 with config default -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
                             <Interval t1="0" t2="10000"/>
@@ -2996,7 +2909,7 @@
                         </Timeline>
                     </Action>
                     <Action key="454" key_component="45" key_config="99" node_used="0" node_position="0 0">
-                        <!--Component FOA1 with config standard -->
+                        <!--Component FOA_cairn with config standard -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
                             <Interval t1="0" t2="10000"/>
@@ -3194,7 +3107,7 @@
                         </Timeline>
                     </Action>
                     <Action key="368" key_component="45" key_config="99" node_used="0" node_position="0 0">
-                        <!--Component FOA1 with config standard -->
+                        <!--Component FOA_cairn with config standard -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
                             <Interval t1="0" t2="10000"/>
@@ -3404,7 +3317,7 @@
                         </Timeline>
                     </Action>
                     <Action key="473" key_component="45" key_config="99" node_used="0" node_position="0 0">
-                        <!--Component FOA1 with config standard -->
+                        <!--Component FOA_cairn with config standard -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
                             <Interval t1="0" t2="10000"/>
@@ -3602,7 +3515,7 @@
                         </Timeline>
                     </Action>
                     <Action key="433" key_component="45" key_config="99" node_used="0" node_position="0 0">
-                        <!--Component FOA1 with config standard -->
+                        <!--Component FOA_cairn with config standard -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
                             <Interval t1="0" t2="10000"/>
