@@ -28,10 +28,10 @@
         <Resource key="115" type="Audio" alias="8a - Dissolution - PartA" path="../Verbal Guidances/1. InUse/8a - Dissolution - PartA.wav"/>
         <Resource key="116" type="Audio" alias="8b - Dissolution - PartB" path="../Verbal Guidances/1. InUse/8b - Dissolution - PartB.wav"/>
         <Resource key="117" type="Audio" alias="9 - WelcomeBack" path="../Verbal Guidances/1. InUse/9 - WelcomeBack.wav"/>
-        <Resource key="94" type="Text" alias="network_SV-10-005" path="L:/Users/Florian/_SCANER/k4-scaner-manager/config/network/network_SV-10-005.config"/>
-        <Resource key="95" type="Text" alias="filters_SV-10-005_all" path="L:/Users/Florian/_SCANER/k4-scaner-manager/config/settings/filters_SV-10-005_all.config"/>
-        <Resource key="96" type="Text" alias="device_SV-10-005_all" path="L:/Users/Florian/_SCANER/k4-scaner-manager/config/settings/device_SV-10-005_all.config"/>
-        <Resource key="97" type="Text" alias="model_SV-10-005_all" path="L:/Users/Florian/_SCANER/k4-scaner-manager/config/calibration/model_SV-10-005_all.config"/>
+        <Resource key="122" type="Text" alias="network_SV-10-005" path="../../../../Desktop/k4-scaner-manager/config/network/network_SV-10-005.config"/>
+        <Resource key="123" type="Text" alias="model_SV-10-005_all" path="../../../../Desktop/k4-scaner-manager/config/calibration/model_SV-10-005_all.config"/>
+        <Resource key="124" type="Text" alias="device_SV-10-005_all" path="../../../../Desktop/k4-scaner-manager/config/settings/device_SV-10-005_all.config"/>
+        <Resource key="125" type="Text" alias="filters_SV-10-005_all" path="../../../../Desktop/k4-scaner-manager/config/settings/filters_SV-10-005_all.config"/>
         <Resource key="45" type="UnityAssetBundle" alias="meditationshelter" path="Bundles/meditationshelter.unity3d"/>
         <Resource key="46" type="UnityAssetBundle" alias="distantsmokefx" path="Bundles/distantsmokefx.unity3d"/>
         <Resource key="62" type="UnityAssetBundle" alias="roundtablewood" path="Bundles/roundtablewood.unity3d"/>
@@ -476,7 +476,7 @@
                 <Config key="49" name="1PP">
                     <Arg name="debug_camera" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="m_speed" ui="Float spin box" value="3" type="System.Single" dim="0"/>
-                    <Arg name="position" ui="Vector 3D" value="0.67 0.323 1.243" type="System.Single" dim="1" sep=" " sizes="3"/>
+                    <Arg name="position" ui="Vector 3D" value="0.67 0.053 1.373" type="System.Single" dim="1" sep=" " sizes="3"/>
                     <Arg name="rotation" ui="Vector 3D" value="0 183.9 0" type="System.Single" dim="1" sep=" " sizes="3"/>
                     <Arg name="rx_speed" ui="Float spin box" value="2" type="System.Single" dim="0"/>
                     <Arg name="ry_speed" ui="Float spin box" value="2" type="System.Single" dim="0"/>
@@ -569,7 +569,7 @@
             </InitConfig>
             <Configs>
                 <Config key="144" name="standard">
-                    <Arg name="transform" ui="Transformation" value="0.56 0 0 0 0 0 1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
+                    <Arg name="transform" ui="Transformation" value="0.56 0 0.16 0 0 0 1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
                     <Arg name="transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                 </Config>
             </Configs>
@@ -1681,13 +1681,13 @@
                 <Arg name="device_init_default" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
                 <Arg name="device_init_file" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
                 <Arg name="device_init_nothing" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
-                <Arg name="device_settings" ui="Resource" value="device_SV-10-005_all%%%96" type="System.String" dim="1" sep="%%%" sizes="2"/>
-                <Arg name="filters" ui="Resource" value="filters_SV-10-005_all%%%95" type="System.String" dim="1" sep="%%%" sizes="2"/>
+                <Arg name="device_settings" ui="Resource" value="device_SV-10-005_all%%%124" type="System.String" dim="1" sep="%%%" sizes="2"/>
+                <Arg name="filters" ui="Resource" value="filters_SV-10-005_all%%%125" type="System.String" dim="1" sep="%%%" sizes="2"/>
                 <Arg name="filters_init_default" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
                 <Arg name="filters_init_file" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
                 <Arg name="filters_init_nothing" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
-                <Arg name="models" ui="Resource" value="model_SV-10-005_all%%%97" type="System.String" dim="1" sep="%%%" sizes="2"/>
-                <Arg name="network_settings" ui="Resource" value="network_SV-10-005%%%94" type="System.String" dim="1" sep="%%%" sizes="2"/>
+                <Arg name="models" ui="Resource" value="model_SV-10-005_all%%%123" type="System.String" dim="1" sep="%%%" sizes="2"/>
+                <Arg name="network_settings" ui="Resource" value="network_SV-10-005%%%122" type="System.String" dim="1" sep="%%%" sizes="2"/>
             </InitConfig>
             <Configs>
                 <Config key="156" name="standard"/>
@@ -1705,8 +1705,8 @@
                     <Arg name="display_clouds" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="display_filtering_obb" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="filter_points_outside_obb" ui="Check box" value="true" type="System.Boolean" dim="0"/>
-                    <Arg name="filtering_obb_tab" ui="Tab" value="true[#OBBFW#]false[#OBBFW#]0.784314 0 0 0.196078[#OBBFW#]0.5 1.21 -0.1 0 0 0 3 2 3" type="System.String" dim="1" sep="[#T#]" sizes="1"/>
-                    <Arg name="global_transform" ui="Transformation" value="1.97 1.61 1.43 0 215.5 91.7 -1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
+                    <Arg name="filtering_obb_tab" ui="Tab" value="true[#OBBFW#]false[#OBBFW#]0.784314 0 0 0.196078[#OBBFW#]0.5 1.05 -0.1 0 0 0 2.7 2 2.7" type="System.String" dim="1" sep="[#T#]" sizes="1"/>
+                    <Arg name="global_transform" ui="Transformation" value="1.91 1.48 1.5 0 211.2 89.1 -1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
                     <Arg name="global_transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="rendering" ui="Combo box index" value="1" type="System.Int32" dim="0"/>
                     <Arg name="size_points" ui="Float spin box" value="0.0037" type="System.Single" dim="0"/>

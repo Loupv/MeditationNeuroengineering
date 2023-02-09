@@ -688,6 +688,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8077733545797370660, guid: 1c4fe3af9e7fa7846bd80faee06aeb0b,
         type: 3}
+      propertyPath: m_Name
+      value: CarpetFloor
+      objectReference: {fileID: 0}
+    - target: {fileID: 8077733545797370660, guid: 1c4fe3af9e7fa7846bd80faee06aeb0b,
+        type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
@@ -719,7 +724,7 @@ PrefabInstance:
     - target: {fileID: 8699809919750094399, guid: 1c4fe3af9e7fa7846bd80faee06aeb0b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.85
+      value: 0.54
       objectReference: {fileID: 0}
     - target: {fileID: 8699809919750094399, guid: 1c4fe3af9e7fa7846bd80faee06aeb0b,
         type: 3}
