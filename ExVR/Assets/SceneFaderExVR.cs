@@ -57,13 +57,13 @@ namespace Ex
         Dictionary<string,string> guidanceClipNames;
         bool guidanceClipFound;
 
-
+        // 0 is lab, 1 is white scene, 2 is forest
         public SceneConfig[] InitSceneConfigArray()
         {
             sceneConfigs = new SceneConfig[4];
-            sceneConfigs[0] = new SceneConfig { closeScreensBeforeFading = true, fadeSounds = true, keepShelterLightOn = false, activateFog = true, fogColor = new Color(0.67f, 0.72f, 0.72f, 1f), fogDensity = 0.0045f, bloomValues = new float[4] { 1.96f, 0.78f, 0.5f, 10f }, bloomColor = new Color(1f, 0f, 0f, 1f) };
-            sceneConfigs[1] = new SceneConfig { closeScreensBeforeFading = true, fadeSounds = true, keepShelterLightOn = false, activateFog = true, fogColor = new Color(0.67f, 0.72f, 0.72f, 1f), fogDensity = 0.01f, bloomValues = new float[4] { 3f, 0.61f, 0.5f, 10f }, bloomColor = new Color(0.8f, 0.46f, 0f, 1f) };
-            sceneConfigs[2] = new SceneConfig { closeScreensBeforeFading = true, fadeSounds = true, keepShelterLightOn = true, activateFog = true, fogColor = new Color(0.47f, 0.60f, 0.60f, 1f), fogDensity = 0.0045f, bloomValues = new float[4] { 1.13f, 2.19f, 0.5f, 10f }, bloomColor=new Color(0.98f, 0.43f, 0f, 1f) };
+            sceneConfigs[0] = new SceneConfig { closeScreensBeforeFading = true, fadeSounds = true, keepShelterLightOn = false, activateFog = true, fogColor = new Color(0.67f, 0.72f, 0.72f, 1f), fogDensity = 0.0045f, bloomValues = new float[5] { 1.96f, 0.78f, 0.5f, 5000f, 10f }, bloomColor = new Color(1f, 0f, 0f, 1f) };
+            sceneConfigs[1] = new SceneConfig { closeScreensBeforeFading = true, fadeSounds = true, keepShelterLightOn = false, activateFog = true, fogColor = new Color(0.67f, 0.72f, 0.72f, 1f), fogDensity = 0.01f, bloomValues = new float[5] { 3f, 0.61f, 0.5f, 2f, 10f }, bloomColor = new Color(0.8f, 0.46f, 0f, 1f) };
+            sceneConfigs[2] = new SceneConfig { closeScreensBeforeFading = true, fadeSounds = true, keepShelterLightOn = true, activateFog = true, fogColor = new Color(0.47f, 0.60f, 0.60f, 1f), fogDensity = 0.0045f, bloomValues = new float[5] { 0.92f, 1.67f, 0.11f, 1.9f, 6.97f }, bloomColor=new Color(0.98f, 0.43f, 0f, 1f) };
             //sceneConfigs[3] = new SceneConfig { sceneName = "Forest FOA", closeScreensBeforeFading = false, fadeSounds = true, keepShelterLightOn = false, activateFog = true, fogColor = new Color(0.29f, 0.32f, 0.32f, 1f), fogDensity = 0.0045f, bloomValues = new float[4] { 2.06f, 0.5f, 0.5f, 10f }, bloomColor = new Color(1f, 0f, 0f, 1f) };
             return sceneConfigs;
         }
@@ -283,7 +283,8 @@ namespace Ex
                 bl.intensity.value = currentSceneConfig.bloomValues[0];
                 bl.threshold.value = currentSceneConfig.bloomValues[1];
                 bl.softKnee.value = currentSceneConfig.bloomValues[2];
-                bl.diffusion.value = currentSceneConfig.bloomValues[3];
+                bl.clamp.value = currentSceneConfig.bloomValues[3];
+                bl.diffusion.value = currentSceneConfig.bloomValues[4];
                 bl.color.value = currentSceneConfig.bloomColor;
 
                 yield return 0;

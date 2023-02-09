@@ -244,7 +244,7 @@
                     <Arg name="sun_bounce_intensity" ui="Float spin box" value="1" type="System.Single" dim="0"/>
                     <Arg name="sun_color" ui="Color pick" value="1 1 1 1" type="System.Single" dim="1" sep=" " sizes="4"/>
                     <Arg name="sun_intensity" ui="Float spin box" value="0.8" type="System.Single" dim="0"/>
-                    <Arg name="sun_rotation" ui="Vector 3D" value="-30 20 0" type="System.Single" dim="1" sep=" " sizes="3"/>
+                    <Arg name="sun_rotation" ui="Vector 3D" value="-29 15 0" type="System.Single" dim="1" sep=" " sizes="3"/>
                     <Arg name="sun_shadow_bias" ui="Float spin box" value="0.05" type="System.Single" dim="0"/>
                     <Arg name="sun_shadow_mode" ui="Combo box index" value="2" type="System.Int32" dim="0"/>
                     <Arg name="sun_shadow_near_plane" ui="Float spin box" value="0.2" type="System.Single" dim="0"/>
@@ -473,8 +473,8 @@
                 <Config key="49" name="1PP">
                     <Arg name="debug_camera" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="m_speed" ui="Float spin box" value="3" type="System.Single" dim="0"/>
-                    <Arg name="position" ui="Vector 3D" value="0.64 0.153 0.693" type="System.Single" dim="1" sep=" " sizes="3"/>
-                    <Arg name="rotation" ui="Vector 3D" value="0 181.3 0" type="System.Single" dim="1" sep=" " sizes="3"/>
+                    <Arg name="position" ui="Vector 3D" value="0.67 0.323 1.243" type="System.Single" dim="1" sep=" " sizes="3"/>
+                    <Arg name="rotation" ui="Vector 3D" value="0 183.9 0" type="System.Single" dim="1" sep=" " sizes="3"/>
                     <Arg name="rx_speed" ui="Float spin box" value="2" type="System.Single" dim="0"/>
                     <Arg name="ry_speed" ui="Float spin box" value="2" type="System.Single" dim="0"/>
                     <Arg name="rz_speed" ui="Float spin box" value="2" type="System.Single" dim="0"/>
@@ -1717,8 +1717,8 @@
                     <Arg name="display_clouds" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="display_filtering_obb" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="filter_points_outside_obb" ui="Check box" value="true" type="System.Boolean" dim="0"/>
-                    <Arg name="filtering_obb_tab" ui="Tab" value="true[#OBBFW#]false[#OBBFW#]0.784314 0 0 0.196078[#OBBFW#]0.5 1.2 -0.1 0 0 0 3 2 3" type="System.String" dim="1" sep="[#T#]" sizes="1"/>
-                    <Arg name="global_transform" ui="Transformation" value="2.09 1.55 1.66 0 215.5 91.7 -1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
+                    <Arg name="filtering_obb_tab" ui="Tab" value="true[#OBBFW#]false[#OBBFW#]0.784314 0 0 0.196078[#OBBFW#]0.5 1.21 -0.1 0 0 0 3 2 3" type="System.String" dim="1" sep="[#T#]" sizes="1"/>
+                    <Arg name="global_transform" ui="Transformation" value="1.97 1.61 1.43 0 215.5 91.7 -1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
                     <Arg name="global_transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="rendering" ui="Combo box index" value="1" type="System.Int32" dim="0"/>
                     <Arg name="size_points" ui="Float spin box" value="0.0037" type="System.Single" dim="0"/>
