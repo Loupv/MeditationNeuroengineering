@@ -26,7 +26,7 @@ namespace Ex
 		private AudioSourceComponent _270deg;
 
 		public Transform myCameraTransform;
-		public float omniSoundsMainVolume = 1f;
+		public float omniSoundsMainVolume, volumeMultiplier = 0.77f; // 1st is for fading, 2nd is for general volume
 
         float backgroundMusicVolume;
         public bool isInitialized;
@@ -217,31 +217,31 @@ namespace Ex
 
             if (azimuth <= 90.0f)
             {
-                _0deg.set_volume(Mathf.Cos(azimuthRad) * omniSoundsMainVolume);
-                _90deg.set_volume(Mathf.Sin(azimuthRad) * omniSoundsMainVolume);
+                _0deg.set_volume(Mathf.Cos(azimuthRad) * omniSoundsMainVolume * volumeMultiplier);
+                _90deg.set_volume(Mathf.Sin(azimuthRad) * omniSoundsMainVolume * volumeMultiplier);
                 _180deg.set_volume(0.0f);
                 _270deg.set_volume(0.0f);
             }
             else if (azimuth > 90.0f && azimuth <= 180.0f)
             {
                 _0deg.set_volume(0.0f);
-                _90deg.set_volume(Mathf.Cos(azimuthRad - Mathf.PI / 2.0f) * omniSoundsMainVolume);
-                _180deg.set_volume(Mathf.Sin(azimuthRad - Mathf.PI / 2.0f) * omniSoundsMainVolume);
+                _90deg.set_volume(Mathf.Cos(azimuthRad - Mathf.PI / 2.0f) * omniSoundsMainVolume * volumeMultiplier);
+                _180deg.set_volume(Mathf.Sin(azimuthRad - Mathf.PI / 2.0f) * omniSoundsMainVolume * volumeMultiplier);
                 _270deg.set_volume(0.0f);
             }
             else if (azimuth > 180.0f && azimuth <= 270.0f)
             {
                  _0deg.set_volume(0.0f);
                  _90deg.set_volume(0.0f);
-                 _180deg.set_volume(Mathf.Cos(azimuthRad - Mathf.PI) * omniSoundsMainVolume);
-                _270deg.set_volume(Mathf.Sin(azimuthRad - Mathf.PI) * omniSoundsMainVolume);
+                 _180deg.set_volume(Mathf.Cos(azimuthRad - Mathf.PI) * omniSoundsMainVolume * volumeMultiplier);
+                _270deg.set_volume(Mathf.Sin(azimuthRad - Mathf.PI) * omniSoundsMainVolume * volumeMultiplier);
             }
             else if (azimuth > 270.0f && azimuth <= 360.0f)
             {
-                 _0deg.set_volume(Mathf.Sin(azimuthRad - Mathf.PI - Mathf.PI / 2.0f) * omniSoundsMainVolume);
+                 _0deg.set_volume(Mathf.Sin(azimuthRad - Mathf.PI - Mathf.PI / 2.0f) * omniSoundsMainVolume * volumeMultiplier);
                  _90deg.set_volume(0.0f);
                  _180deg.set_volume(0.0f);
-                _270deg.set_volume(Mathf.Cos(azimuthRad - Mathf.PI - Mathf.PI / 2.0f) * omniSoundsMainVolume);
+                _270deg.set_volume(Mathf.Cos(azimuthRad - Mathf.PI - Mathf.PI / 2.0f) * omniSoundsMainVolume * volumeMultiplier);
             }
 
 
