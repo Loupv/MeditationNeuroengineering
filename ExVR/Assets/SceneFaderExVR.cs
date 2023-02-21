@@ -68,14 +68,13 @@ namespace Ex
             return sceneConfigs;
         }
 
+        // routine name , audio component name
         public Dictionary<string, string> InitGuidanceClipsNames()
         {
             guidanceClipNames = new Dictionary<string, string>();
             guidanceClipNames.Add("Lab_Intro","Guidance_Lab_Intro");
-            guidanceClipNames.Add("Forest_Arrival","Guidance_Forest_Arrival");
-            guidanceClipNames.Add("Forest_MPS1", "Guidance_Forest_MPS1");
-            guidanceClipNames.Add("Forest_MPS2", "Guidance_Forest_MPS2");
-            guidanceClipNames.Add("Forest_MPS3", "Guidance_Forest_MPS3");
+            guidanceClipNames.Add("Forest_BuildingMPS","Guidance_Forest_BuildingMPS");
+            guidanceClipNames.Add("Forest_OBE", "Guidance_Forest_OBE");
             guidanceClipNames.Add("Forest_Dissolution", "Guidance_Forest_Dissolution");
             guidanceClipNames.Add("Lab_Dissolution", "Guidance_Lab_Dissolution");
             guidanceClipNames.Add("Lab_WelcomeBack", "Guidance_Lab_WelcomeBack");

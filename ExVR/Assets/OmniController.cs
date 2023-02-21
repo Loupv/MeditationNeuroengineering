@@ -26,7 +26,7 @@ namespace Ex
 		private AudioSourceComponent _270deg;
 
 		public Transform myCameraTransform;
-		public float omniSoundsMainVolume, volumeMultiplier = 0.77f; // 1st is for fading, 2nd is for general volume
+        public float omniSoundsMainVolume, volumeMultiplier = 1; // 1st is for fading (vary between 0 and 1), 2nd is for general volume and can be modified
 
         float backgroundMusicVolume;
         public bool isInitialized;
