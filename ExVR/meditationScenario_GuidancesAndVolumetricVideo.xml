@@ -1376,7 +1376,7 @@
             </InitConfig>
             <Configs>
                 <Config key="146" name="default">
-                    <Arg name="display" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="display" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="doppler_level" ui="Float values slider" value="1" type="System.Single" dim="0"/>
                     <Arg name="loop" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="max_distance" ui="Float values slider" value="10" type="System.Single" dim="0"/>
