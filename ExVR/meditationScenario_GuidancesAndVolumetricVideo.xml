@@ -1376,7 +1376,7 @@
             </InitConfig>
             <Configs>
                 <Config key="146" name="default">
-                    <Arg name="display" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="display" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="doppler_level" ui="Float values slider" value="1" type="System.Single" dim="0"/>
                     <Arg name="loop" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="max_distance" ui="Float values slider" value="10" type="System.Single" dim="0"/>
@@ -1396,7 +1396,7 @@
                     <Arg name="stereo" ui="Float values slider" value="0" type="System.Single" dim="0"/>
                     <Arg name="stop_end_block" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="stop_new_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="transform" ui="Transformation" value="1.76 1.26 -0.89 0 0 0 0.1 0.1 0.1" type="System.Single" dim="1" sep=" " sizes="9"/>
+                    <Arg name="transform" ui="Transformation" value="1.5 0.96 -0.89 0 0 0 0.1 0.1 0.1" type="System.Single" dim="1" sep=" " sizes="9"/>
                     <Arg name="transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="volume" ui="Float values slider" value="1" type="System.Single" dim="0"/>
                 </Config>
@@ -1441,7 +1441,7 @@
                     <Arg name="stop_new_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="transform" ui="Transformation" value="0 0 0 0 0 0 0.1 0.1 0.1" type="System.Single" dim="1" sep=" " sizes="9"/>
                     <Arg name="transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="volume" ui="Float values slider" value="1" type="System.Single" dim="0"/>
+                    <Arg name="volume" ui="Float values slider" value="0.75" type="System.Single" dim="0"/>
                 </Config>
             </Configs>
         </Component>
@@ -1484,7 +1484,7 @@
                     <Arg name="stop_new_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="transform" ui="Transformation" value="0 0 0 0 0 0 0.1 0.1 0.1" type="System.Single" dim="1" sep=" " sizes="9"/>
                     <Arg name="transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="volume" ui="Float values slider" value="1" type="System.Single" dim="0"/>
+                    <Arg name="volume" ui="Float values slider" value="0.75" type="System.Single" dim="0"/>
                 </Config>
             </Configs>
         </Component>
@@ -1527,7 +1527,7 @@
                     <Arg name="stop_new_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="transform" ui="Transformation" value="1.76 1.26 -0.89 0 0 0 0.1 0.1 0.1" type="System.Single" dim="1" sep=" " sizes="9"/>
                     <Arg name="transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="volume" ui="Float values slider" value="1" type="System.Single" dim="0"/>
+                    <Arg name="volume" ui="Float values slider" value="0.75" type="System.Single" dim="0"/>
                 </Config>
             </Configs>
         </Component>
@@ -1568,9 +1568,9 @@
                     <Arg name="stereo" ui="Float values slider" value="0" type="System.Single" dim="0"/>
                     <Arg name="stop_end_block" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="stop_new_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="transform" ui="Transformation" value="1.76 1.26 -0.89 0 0 0 0.1 0.1 0.1" type="System.Single" dim="1" sep=" " sizes="9"/>
+                    <Arg name="transform" ui="Transformation" value="1.5 0.96 -0.89 0 0 0 0.1 0.1 0.1" type="System.Single" dim="1" sep=" " sizes="9"/>
                     <Arg name="transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="volume" ui="Float values slider" value="1" type="System.Single" dim="0"/>
+                    <Arg name="volume" ui="Float values slider" value="0.75" type="System.Single" dim="0"/>
                 </Config>
             </Configs>
         </Component>
@@ -1611,7 +1611,7 @@
                     <Arg name="stereo" ui="Float values slider" value="0" type="System.Single" dim="0"/>
                     <Arg name="stop_end_block" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="stop_new_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="transform" ui="Transformation" value="1.76 1.26 -0.89 0 0 0 0.1 0.1 0.1" type="System.Single" dim="1" sep=" " sizes="9"/>
+                    <Arg name="transform" ui="Transformation" value="1.5 0.96 -0.89 0 0 0 0.1 0.1 0.1" type="System.Single" dim="1" sep=" " sizes="9"/>
                     <Arg name="transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="volume" ui="Float values slider" value="1" type="System.Single" dim="0"/>
                 </Config>
@@ -1634,7 +1634,7 @@
             </InitConfig>
             <Configs>
                 <Config key="186" name="default">
-                    <Arg name="display" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="display" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="doppler_level" ui="Float values slider" value="1" type="System.Single" dim="0"/>
                     <Arg name="loop" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="max_distance" ui="Float values slider" value="10" type="System.Single" dim="0"/>
@@ -1677,7 +1677,7 @@
             </InitConfig>
             <Configs>
                 <Config key="188" name="default">
-                    <Arg name="display" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="display" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="doppler_level" ui="Float values slider" value="1" type="System.Single" dim="0"/>
                     <Arg name="loop" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="max_distance" ui="Float values slider" value="10" type="System.Single" dim="0"/>
@@ -1720,7 +1720,7 @@
             </InitConfig>
             <Configs>
                 <Config key="190" name="default">
-                    <Arg name="display" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="display" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="doppler_level" ui="Float values slider" value="1" type="System.Single" dim="0"/>
                     <Arg name="loop" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="max_distance" ui="Float values slider" value="10" type="System.Single" dim="0"/>
@@ -1763,7 +1763,7 @@
             </InitConfig>
             <Configs>
                 <Config key="192" name="default">
-                    <Arg name="display" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="display" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="doppler_level" ui="Float values slider" value="1" type="System.Single" dim="0"/>
                     <Arg name="loop" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="max_distance" ui="Float values slider" value="10" type="System.Single" dim="0"/>
@@ -1858,7 +1858,7 @@
                     <Arg name="tint" ui="Color pick" value="1 1 1 0" type="System.Single" dim="1" sep=" " sizes="4"/>
                     <Arg name="transform" ui="Transformation" value="0.49 1.26 0.88 15.4 -214.1 90.2 -1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
                     <Arg name="transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="volume" ui="Float spin box" value="1" type="System.Single" dim="0"/>
+                    <Arg name="volume" ui="Float spin box" value="0.98" type="System.Single" dim="0"/>
                 </Config>
             </Configs>
         </Component>
@@ -1913,7 +1913,7 @@
                     <Arg name="rendering" ui="Combo box index" value="2" type="System.Int32" dim="0"/>
                     <Arg name="size_points" ui="Float spin box" value="0.0025" type="System.Single" dim="0"/>
                     <Arg name="start_time" ui="Float spin box" value="24" type="System.Single" dim="0"/>
-                    <Arg name="tint" ui="Color pick" value="1 1 1 0" type="System.Single" dim="1" sep=" " sizes="4"/>
+                    <Arg name="tint" ui="Color pick" value="1 1 1 1" type="System.Single" dim="1" sep=" " sizes="4"/>
                     <Arg name="transform" ui="Transformation" value="0.51 1.26 0.88 15.4 -214 90.2 -1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
                     <Arg name="transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="volume" ui="Float spin box" value="1" type="System.Single" dim="0"/>
@@ -1942,7 +1942,7 @@
                     <Arg name="rendering" ui="Combo box index" value="2" type="System.Int32" dim="0"/>
                     <Arg name="size_points" ui="Float spin box" value="0.0025" type="System.Single" dim="0"/>
                     <Arg name="start_time" ui="Float spin box" value="22.9" type="System.Single" dim="0"/>
-                    <Arg name="tint" ui="Color pick" value="1 1 1 0" type="System.Single" dim="1" sep=" " sizes="4"/>
+                    <Arg name="tint" ui="Color pick" value="1 1 1 1" type="System.Single" dim="1" sep=" " sizes="4"/>
                     <Arg name="transform" ui="Transformation" value="1.32 0.62 1.29 7.6 171.4 0.8 -1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
                     <Arg name="transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="volume" ui="Float spin box" value="1" type="System.Single" dim="0"/>

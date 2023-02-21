@@ -147,7 +147,7 @@ namespace Ex
             if (routineInited)
             {
                 // either we press space or soundguidance has stopped, and we're in the right state for it + there's a routine after this one
-                if ((UnityEngine.Input.GetKeyDown(KeyCode.Space) || (guidanceClipFound && !routineGuidance.isPlaying)) && fadingState == FadingState.idle && GetNextRoutineName() != "")
+                if ((UnityEngine.Input.GetKeyDown(KeyCode.Space) || (guidanceClipFound && !routineGuidance.isPlaying)) && fadingState == FadingState.idle && GetNextRoutineName() != "" && current_routine().name != "Lab_Familiarization")
                 {
                     fadingState = FadingState.fadingOut;
 
