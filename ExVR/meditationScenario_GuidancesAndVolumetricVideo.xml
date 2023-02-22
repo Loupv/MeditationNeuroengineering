@@ -484,7 +484,7 @@
             </InitConfig>
             <Configs>
                 <Config key="49" name="1PP">
-                    <Arg name="debug_camera" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="debug_camera" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="m_speed" ui="Float spin box" value="3" type="System.Single" dim="0"/>
                     <Arg name="position" ui="Vector 3D" value="0.67 0.053 1.373" type="System.Single" dim="1" sep=" " sizes="3"/>
                     <Arg name="rotation" ui="Vector 3D" value="0 183.9 0" type="System.Single" dim="1" sep=" " sizes="3"/>
@@ -1824,8 +1824,8 @@
                     <Arg name="display_clouds" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="display_filtering_obb" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="filter_points_outside_obb" ui="Check box" value="true" type="System.Boolean" dim="0"/>
-                    <Arg name="filtering_obb_tab" ui="Tab" value="true[#OBBFW#]true[#OBBFW#]0.784314 0 0 0.196078[#OBBFW#]0.5 1.03 -0.1 0 0 0 3 2 3" type="System.String" dim="1" sep="[#T#]" sizes="1"/>
-                    <Arg name="global_transform" ui="Transformation" value="1.91 1.48 1.5 0 211.2 89.1 -1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
+                    <Arg name="filtering_obb_tab" ui="Tab" value="true[#OBBFW#]false[#OBBFW#]0.784314 0 0 0.196078[#OBBFW#]0.55 1.03 0 0 0 0 2.8 2 2.8" type="System.String" dim="1" sep="[#T#]" sizes="1"/>
+                    <Arg name="global_transform" ui="Transformation" value="1.98 1.5 1.51 0 211.2 89.1 -1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
                     <Arg name="global_transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="rendering" ui="Combo box index" value="1" type="System.Int32" dim="0"/>
                     <Arg name="size_points" ui="Float spin box" value="0.0037" type="System.Single" dim="0"/>
@@ -1905,7 +1905,7 @@
                     <Arg name="details" ui="Combo box index" value="3" type="System.Int32" dim="0"/>
                     <Arg name="display_filtering_obb" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="enable_audio" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="end_time" ui="Float spin box" value="51.9" type="System.Single" dim="0"/>
+                    <Arg name="end_time" ui="Float spin box" value="52.9" type="System.Single" dim="0"/>
                     <Arg name="filter_points_outside_obb" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="filtering_obb_tr" ui="Transformation" value="0 0 0 0 0 0 1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
                     <Arg name="filtering_obb_tr_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
@@ -1914,6 +1914,26 @@
                     <Arg name="size_points" ui="Float spin box" value="0.0025" type="System.Single" dim="0"/>
                     <Arg name="start_time" ui="Float spin box" value="24" type="System.Single" dim="0"/>
                     <Arg name="tint" ui="Color pick" value="1 1 1 1" type="System.Single" dim="1" sep=" " sizes="4"/>
+                    <Arg name="transform" ui="Transformation" value="0.51 1.26 0.88 15.4 -214 90.2 -1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
+                    <Arg name="transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="volume" ui="Float spin box" value="1" type="System.Single" dim="0"/>
+                </Config>
+                <Config key="197" name="darkness">
+                    <Arg name="audio_id" ui="Integer spin box" value="0" type="System.Int32" dim="0"/>
+                    <Arg name="circles" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="cones" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="details" ui="Combo box index" value="3" type="System.Int32" dim="0"/>
+                    <Arg name="display_filtering_obb" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="enable_audio" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="end_time" ui="Float spin box" value="51.9" type="System.Single" dim="0"/>
+                    <Arg name="filter_points_outside_obb" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="filtering_obb_tr" ui="Transformation" value="0 0 0 0 0 0 1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
+                    <Arg name="filtering_obb_tr_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="loop" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="rendering" ui="Combo box index" value="2" type="System.Int32" dim="0"/>
+                    <Arg name="size_points" ui="Float spin box" value="0.0025" type="System.Single" dim="0"/>
+                    <Arg name="start_time" ui="Float spin box" value="24" type="System.Single" dim="0"/>
+                    <Arg name="tint" ui="Color pick" value="0 0 0 1" type="System.Single" dim="1" sep=" " sizes="4"/>
                     <Arg name="transform" ui="Transformation" value="0.51 1.26 0.88 15.4 -214 90.2 -1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
                     <Arg name="transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="volume" ui="Float spin box" value="1" type="System.Single" dim="0"/>
@@ -1934,7 +1954,7 @@
                     <Arg name="details" ui="Combo box index" value="3" type="System.Int32" dim="0"/>
                     <Arg name="display_filtering_obb" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="enable_audio" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="end_time" ui="Float spin box" value="51" type="System.Single" dim="0"/>
+                    <Arg name="end_time" ui="Float spin box" value="52" type="System.Single" dim="0"/>
                     <Arg name="filter_points_outside_obb" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="filtering_obb_tr" ui="Transformation" value="0 0 0 0 0 0 1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
                     <Arg name="filtering_obb_tr_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
@@ -1943,6 +1963,26 @@
                     <Arg name="size_points" ui="Float spin box" value="0.0025" type="System.Single" dim="0"/>
                     <Arg name="start_time" ui="Float spin box" value="22.9" type="System.Single" dim="0"/>
                     <Arg name="tint" ui="Color pick" value="1 1 1 1" type="System.Single" dim="1" sep=" " sizes="4"/>
+                    <Arg name="transform" ui="Transformation" value="1.32 0.62 1.29 7.6 171.4 0.8 -1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
+                    <Arg name="transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="volume" ui="Float spin box" value="1" type="System.Single" dim="0"/>
+                </Config>
+                <Config key="196" name="darkness">
+                    <Arg name="audio_id" ui="Integer spin box" value="0" type="System.Int32" dim="0"/>
+                    <Arg name="circles" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="cones" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="details" ui="Combo box index" value="3" type="System.Int32" dim="0"/>
+                    <Arg name="display_filtering_obb" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="enable_audio" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="end_time" ui="Float spin box" value="51" type="System.Single" dim="0"/>
+                    <Arg name="filter_points_outside_obb" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="filtering_obb_tr" ui="Transformation" value="0 0 0 0 0 0 1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
+                    <Arg name="filtering_obb_tr_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="loop" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="rendering" ui="Combo box index" value="2" type="System.Int32" dim="0"/>
+                    <Arg name="size_points" ui="Float spin box" value="0.0025" type="System.Single" dim="0"/>
+                    <Arg name="start_time" ui="Float spin box" value="22.9" type="System.Single" dim="0"/>
+                    <Arg name="tint" ui="Color pick" value="0 0 0 1" type="System.Single" dim="1" sep=" " sizes="4"/>
                     <Arg name="transform" ui="Transformation" value="1.32 0.62 1.29 7.6 171.4 0.8 -1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
                     <Arg name="transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="volume" ui="Float spin box" value="1" type="System.Single" dim="0"/>
@@ -3902,6 +3942,28 @@
                     </Action>
                     <Action key="439" key_component="76" key_config="168" node_used="0" node_position="0 0">
                         <!--Component Guidance_Lab_Dissolution with config default -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="520" key_component="79" key_config="197" node_used="0" node_position="0 0">
+                        <!--Component volumetricVid_2L with config darkness -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="521" key_component="80" key_config="196" node_used="0" node_position="0 0">
+                        <!--Component volumetricVid_2R with config darkness -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
                             <Interval t1="0" t2="10000"/>

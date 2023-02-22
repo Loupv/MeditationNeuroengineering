@@ -63,7 +63,7 @@ namespace Ex
             sceneConfigs = new SceneConfig[4];
             sceneConfigs[0] = new SceneConfig { closeScreensBeforeFading = true, fadeSounds = true, keepShelterLightOn = false, activateFog = true, fogColor = new Color(0.67f, 0.72f, 0.72f, 1f), fogDensity = 0.0045f, bloomValues = new float[5] { 1.96f, 0.78f, 0.5f, 5000f, 10f }, bloomColor = new Color(1f, 0f, 0f, 1f) };
             sceneConfigs[1] = new SceneConfig { closeScreensBeforeFading = true, fadeSounds = true, keepShelterLightOn = false, activateFog = true, fogColor = new Color(0.67f, 0.72f, 0.72f, 1f), fogDensity = 0.01f, bloomValues = new float[5] { 3f, 0.61f, 0.5f, 2f, 10f }, bloomColor = new Color(0.8f, 0.46f, 0f, 1f) };
-            sceneConfigs[2] = new SceneConfig { closeScreensBeforeFading = true, fadeSounds = true, keepShelterLightOn = true, activateFog = true, fogColor = new Color(0.47f, 0.60f, 0.60f, 1f), fogDensity = 0.0045f, bloomValues = new float[5] { 0.92f, 1.67f, 0.11f, 1.9f, 6.97f }, bloomColor=new Color(0.98f, 0.43f, 0f, 1f) };
+            sceneConfigs[2] = new SceneConfig { closeScreensBeforeFading = true, fadeSounds = true, keepShelterLightOn = true, activateFog = true, fogColor = new Color(0.47f, 0.60f, 0.60f, 1f), fogDensity = 0.0045f, bloomValues = new float[5] { 0.1f, 1.67f, 0.11f, 1.9f, 6.97f }, bloomColor=new Color(0.98f, 0.43f, 0f, 1f) };
             //sceneConfigs[3] = new SceneConfig { sceneName = "Forest FOA", closeScreensBeforeFading = false, fadeSounds = true, keepShelterLightOn = false, activateFog = true, fogColor = new Color(0.29f, 0.32f, 0.32f, 1f), fogDensity = 0.0045f, bloomValues = new float[4] { 2.06f, 0.5f, 0.5f, 10f }, bloomColor = new Color(1f, 0f, 0f, 1f) };
             return sceneConfigs;
         }
@@ -158,7 +158,7 @@ namespace Ex
                     //LogNewConfig(currentSceneConfig);
 
                     // if next routine's config is different, we fade
-                    if (currentRoutineConfigID != lastRoutineConfigID)
+                    if (currentRoutineConfigID != lastRoutineConfigID)// && current_routine().name != "Lab_Dissolution")
                     {
                         StartCoroutine(FadeOut());
                         StartCoroutine(FadeLightsAndSounds(FadeDirection.Out));
@@ -194,7 +194,7 @@ namespace Ex
 
                 if(fadingState == FadingState.initingRoutine)
                 {
-                    if (currentRoutineConfigID != lastRoutineConfigID)
+                    if (currentRoutineConfigID != lastRoutineConfigID)// && current_routine().name != "Lab_Dissolution")
                     {
                         log_message(currentRoutineConfigID.ToString()+ " vs " + lastRoutineConfigID.ToString());
                         StartCoroutine(FadeLightsAndSounds(FadeDirection.In));
