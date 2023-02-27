@@ -1,12 +1,15 @@
 // system
 using System;
 using System.Reflection;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 
 // unity
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Rendering.PostProcessing;
+//using UnityEngine.Rendering.Universal;
 
 namespace Ex{
 
@@ -25,16 +28,30 @@ namespace Ex{
         List<GameObject> answers;
         Image fillerImage;
 
-        public override void start_routine() {
-        
-        }
-        
-        public override void update() {
+        string currentQuestion;
+        IEnumerable<string> currentAnswers;
+        string[] lines, answerStrings;
+        int currentQuestionID;
+        bool questionLoaded;
+  
+        public override void slot1(object value)
+        {
+            string str = (string)value;
 
-            if (camera == null)
-            {
-                camera = ExVR.Display().cameras().get_eye_camera_transform().gameObject;// GameObject.Find("[CameraRig]").transform.Find("Cameras").gameObject;
-            }
+            lines = str.Split2("\n").ToArray();
+            var values = lines[currentQuestionID].Split2(";");// ToString();
+
+            currentQuestion = values.First();
+            answerStrings = values.Skip(1).ToArray();
+
+            //StartCoroutine("Init");
+            
+        }
+
+
+        public void Init()
+        {
+            
             if (questionModule == null)
             {
                 questionModule = GameObject.Find("QuestionModule");
@@ -53,30 +70,46 @@ namespace Ex{
                 radialFiller.SetActive(false);
             }
 
-            if (active)
+            if (camera == null)
             {
+                camera = ExVR.Display().cameras().get_eye_camera_transform().gameObject;// GameObject.Find("[CameraRig]").transform.Find("Cameras").gameObject;
+            }
+            active = true;
 
-                if (Physics.Raycast(camera.transform.position, camera.transform.forward, out HitInfo, 100.0f))
+            LoadNextQuestion();
+        } 
+
+
+        public override void update() {
+
+            
+            if (!active && GameObject.Find("QuestionModule") != null)
+            {
+                Init();
+            }
+
+            else if (active)
+            {
+                bool hasHit = Physics.Raycast(camera.transform.position, camera.transform.forward, out HitInfo, 100.0f);
+
+                string hitName = "";
+                if (hasHit) hitName = HitInfo.transform.gameObject.name;
+                
+                // if we look at the target for the first time
+                if (hasHit && hitName.Contains("Answer") && !active_selection)
                 {
-                    
-                    string hitName = HitInfo.transform.gameObject.name;
-                    if (hitName.Contains("Answer"))
-                    {
-                        if (!active_selection)
-                        {
-                            active_selection = true;
-                            InvokeRepeating("FillRadialUI", 0, Time.deltaTime);
-                            //log_message(HitInfo.point.ToString() + ", " + HitInfo.transform.gameObject);
-                        }
-                    }
-                    else 
-                    { 
-                        fillerImage.fillAmount = 0;
-                        radialFiller.SetActive(false);
-                        CancelInvoke("FillRadialUI");
-                        active_selection = false;
-                    }
-                    
+                    active_selection = true;
+                    InvokeRepeating("FillRadialUI", 0, Time.deltaTime);
+                    //log_message(HitInfo.point.ToString() + ", " + HitInfo.transform.gameObject);
+
+                }
+                // if no hit or hitting something else
+                else if(!hasHit || !hitName.Contains("Answer"))
+                { 
+                    fillerImage.fillAmount = 0;
+                    radialFiller.SetActive(false);
+                    CancelInvoke("FillRadialUI");
+                    active_selection = false;
                 }
             }
         }
@@ -86,6 +119,30 @@ namespace Ex{
             if(!radialFiller.activeSelf) radialFiller.SetActive(true);
             radialFiller.gameObject.transform.position = HitInfo.point;
             fillerImage.fillAmount += Time.deltaTime;
+
+            if (fillerImage.fillAmount >= 1)
+            {
+                fillerImage.fillAmount = 0;
+                currentQuestionID += 1;
+                radialFiller.SetActive(false);
+                CancelInvoke("FillRadialUI");
+
+                SendLogSignal();
+                
+                
+                LoadNextQuestion();
+            }
+        }
+
+
+        void SendLogSignal()
+        {
+            TimeManager timeManager = FindObjectOfType<TimeManager>();
+            double time = timeManager.ellapsed_exp_ms();
+
+            string str = time.ToString() + ";" + currentQuestion + ";" + HitInfo.transform.Find("Text").GetComponent<UnityEngine.UI.Text>().text;
+            invoke_signal1(str);
+
         }
 
 
@@ -104,31 +161,32 @@ namespace Ex{
         // public override void update_from_current_config(){}
         
         // # slots
-        public override void slot1(object value){
-           
-
-            string str = (string)value;
-
-            var values = str.Split2(";");// ToString();
-            
-            string question = values.First();
-            string[] answerStrings = str.Split2(";").Skip(1).ToArray();
+        
+       
 
 
-            questionModule.transform.Find("questionmodule/Canvas/Question/Text").GetComponent<UnityEngine.UI.Text>().text = question;
+        void LoadNextQuestion()
+        {
+            //currentQuestionID += 1;
+            var values = lines[currentQuestionID].Split2(";");// ToString();
 
-            for(int i  = 0; i <answers.Count; i++)
+            currentQuestion = values.First();
+            answerStrings = values.Skip(1).ToArray();
+
+            questionModule.transform.Find("questionmodule/Canvas/Question/Text").GetComponent<UnityEngine.UI.Text>().text = currentQuestion;
+
+            for (int i = 0; i < answers.Count; i++)
             {
-                if(i < answerStrings.Length) answers[i].transform.Find("Text").GetComponent<UnityEngine.UI.Text>().text = answerStrings[i];
+                if (i < answerStrings.Length) answers[i].transform.Find("Text").GetComponent<UnityEngine.UI.Text>().text = answerStrings[i];
                 else answers[i].SetActive(false);
             }
-
-            //invoke_signal1(question);
-            //invoke_signal2(answers);
-
-            active = true;
+            questionLoaded = true;
         }
 
+        /*public void invoke_signal1(object value)
+        {
+
+        }*/
 
         // public override void slot2(object value){}
         // public override void slot3(object value){}
