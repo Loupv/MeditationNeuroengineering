@@ -17,22 +17,23 @@ namespace Ex
         
         bool fogActivated;
 
-        GameObject cameraRig;
-        Vector3 newCameraTarget, cameraOrigin;
+        GameObject cameraRig, forestObject;
+        Vector3 newCameraTarget, cameraOrigin, forestOrigin;
 
         float lerpTimeInSeconds;
 
         float targetDistance, targetHeight, targetAngle, lookForward, smoothHandle;
         float lastTargetDistance = 0, lastTargetHeight = 0, lastTargetAngle = 0, lastLookForward = 0.5f;
 
-        bool cameraMoving;
+        bool cameraMoving, forestMoving;
         float lerpStartTime;
 
         public void InitExperiment()
         {
             cameraRig = GameObject.Find("[CameraRig]");
             cameraOrigin = cameraRig.transform.Find("Cameras").position; // ExVR.Display().cameras().transform.position;
-
+            forestObject = GameObject.Find("ForestScene");
+            forestOrigin = forestObject.transform.position;
             // be sure that object cameras is turned looking at origin, for orbital camera purposes later
             cameraRig.transform.Find("Cameras").LookAt(cameraOrigin - new Vector3(0, 0, lookForward));
         }
@@ -259,6 +260,121 @@ namespace Ex
             log_message("Camera lerp stopped");
 
             cameraMoving = false;
+            invoke_signal1(true);
+        }
+
+
+
+
+        public void InitPlatformMovement(int i)
+        {
+            if (!forestMoving)
+            {
+
+                switch (i)
+                {
+                    case 0: // initial position
+                        targetDistance = 0;
+                        targetHeight = 0;
+                        targetAngle = 0;
+                        lerpTimeInSeconds = 15;
+                        break;
+                    case 1: // close behind
+                        targetDistance = 1.7f;
+                        targetHeight = 0.7f;
+                        targetAngle = 0;
+                        lerpTimeInSeconds = 15;
+                        break;
+                }
+                lookForward = 0.5f;
+                smoothHandle = 2;
+
+                if (!cameraMoving)
+                {
+                    forestMoving = true;
+                    lerpStartTime = Time.time;
+                    //StartCoroutine("CameraOrbit");
+                    if (i == 0) StartCoroutine("PlatformMovementStart");
+                    else StartCoroutine("PlatformMovementBack");
+                }
+            }
+        }
+
+
+        IEnumerator PlatformMovementStart()
+        {
+            float t = 0;
+            Vector3 newPosition;
+
+            log_message("Forest lerp started");
+
+            while (t < 1)
+            {
+                t = Mathf.Min(1, (Time.time - lerpStartTime) / lerpTimeInSeconds);
+
+                float ylerper = VerticalSmooth(t);
+                float zlerper = LerpSmoother(t, 2.2f, 1);
+
+
+                //float x = xorigin;
+                float y = Mathf.Lerp(lastTargetHeight, targetHeight, ylerper);
+                float z = Mathf.Lerp(lastTargetDistance, targetDistance, zlerper);
+
+                forestObject.transform.position = new Vector3(0, y, z) + forestOrigin;
+                //cameraRig.transform.Find("Cameras").LookAt(cameraOrigin - new Vector3(0, 0, l));
+                log_message(t.ToString());
+                yield return new WaitForEndOfFrame();
+            }
+
+            lastTargetDistance = targetDistance;
+            lastTargetHeight = targetHeight;
+
+            newPosition = new Vector3(0, targetHeight, targetDistance) + forestOrigin;
+            forestObject.transform.position = newPosition;
+
+            //cameraRig.transform.Find("Cameras").LookAt(cameraOrigin - new Vector3(0, 0, lookForward));
+
+            log_message("Forest lerp stopped");
+
+            forestMoving = false;
+            invoke_signal1(true);
+        }
+
+        IEnumerator PlatformMovementBack()
+        {
+            float t = 1;
+            Vector3 newPosition;
+
+            log_message("Forest lerp started");
+
+            GameObject forestObject = GameObject.Find("ForestScene");
+
+            while (t > 0)
+            {
+                t = Mathf.Max(0, 1 - (Time.time - lerpStartTime) / lerpTimeInSeconds);
+
+                float ylerper = VerticalSmooth(t);
+                float zlerper = LerpSmoother(t, 2.2f, 1);
+
+                //float x = xorigin;
+                float y = Mathf.Lerp(targetHeight, lastTargetHeight, ylerper);
+                float z = Mathf.Lerp(targetDistance, lastTargetDistance, zlerper);
+
+                forestObject.transform.position = new Vector3(0, y, z) + forestOrigin;
+                //cameraRig.transform.Find("Cameras").LookAt(cameraOrigin - new Vector3(0, 0, l));
+                log_message(t.ToString());
+                yield return new WaitForEndOfFrame();
+            }
+
+            lastTargetDistance = targetDistance;
+            lastTargetHeight = targetHeight;
+
+            newPosition = forestOrigin;
+            forestObject.transform.position = newPosition;
+
+            log_message("Forest lerp stopped");
+
+            forestMoving = false;
             invoke_signal1(true);
         }
 

@@ -22,6 +22,7 @@ namespace Ex{
 
         bool active;
         GameObject camera;
+        PlaneComponent cursor;
         RaycastHit HitInfo;
         bool active_selection;
         GameObject radialFiller, questionModule;
@@ -43,7 +44,6 @@ namespace Ex{
 
             currentQuestion = values.First();
             answerStrings = values.Skip(1).ToArray();
-
             //StartCoroutine("Init");
             
         }
@@ -54,6 +54,7 @@ namespace Ex{
             
             if (questionModule == null)
             {
+                cursor = get<PlaneComponent>("Cursor");
                 questionModule = GameObject.Find("QuestionModule");
                 answers = new List<GameObject>();
                 for (int i = 0; i < 6; i++)
@@ -90,6 +91,8 @@ namespace Ex{
 
             else if (active)
             {
+
+
                 bool hasHit = Physics.Raycast(camera.transform.position, camera.transform.forward, out HitInfo, 100.0f);
 
                 string hitName = "";
@@ -111,6 +114,7 @@ namespace Ex{
                     CancelInvoke("FillRadialUI");
                     active_selection = false;
                 }
+                cursor.transform.position = HitInfo.point;
             }
         }
 
@@ -128,8 +132,7 @@ namespace Ex{
                 CancelInvoke("FillRadialUI");
 
                 SendLogSignal();
-                
-                
+  
                 LoadNextQuestion();
             }
         }
