@@ -244,7 +244,6 @@ namespace Ex
         {
             fadingState = FadingState.initingRoutine;
             yield return 0;
-
             currentRoutineConfigID = GetConfigIDFromRoutineName(current_routine().name);
             currentSceneConfig = sceneConfigs[currentRoutineConfigID];
 
@@ -270,16 +269,14 @@ namespace Ex
                 graphicsHandler.SetGraphicsForRoutine(currentSceneConfig);
                 shelterScreens = Resources.FindObjectsOfTypeAll<GameObject>().Where(obj => (obj.name == "ShelterScreen" && obj.activeInHierarchy)).ToArray();
 
-                //if (lastSceneConfig == null)
-                //{
+                
                 foreach (GameObject screen in shelterScreens)
                 {
                     Material mat = screen.GetComponent<MeshRenderer>().materials[0];
                     mat.SetColor("_Color", new Color(mat.color.r, mat.color.g, mat.color.b, 1));
                 }
-                //}
+                
 
-                //CopyCurrentSkybox();
                 GetLightsReferences();
                 ShutEveryLights();
 
@@ -650,6 +647,8 @@ namespace Ex
 
             if(current_routine().name.Contains("Exit"))
                 graphicsHandler.InitCameraOrbit(1);
+            else if (current_routine().name.Contains("FBIOut"))
+                graphicsHandler.InitCameraOrbit(3);
             else
                 graphicsHandler.InitPlatformMovement(1);
         }   
@@ -660,6 +659,8 @@ namespace Ex
 
             if (current_routine().name.Contains("Entry"))
                 graphicsHandler.InitCameraOrbit(0);
+            else if (current_routine().name.Contains("FBIIn"))
+                graphicsHandler.InitCameraOrbit(2);
             else
                 graphicsHandler.InitPlatformMovement(0);
         }

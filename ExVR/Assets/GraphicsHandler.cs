@@ -110,18 +110,30 @@ namespace Ex
                         lerpTimeInSeconds = 15;
                         break;
                     case 2: // far behind
+                        targetDistance = 0;
+                        targetHeight = 0f;
+                        targetAngle = 0;// Mathf.PI * 2;
+                        lerpTimeInSeconds = 0.01f;
+                        break;
+                    case 3: // above
+                        targetDistance = 1.7f;
+                        targetHeight = 0.7f;
+                        targetAngle = 0;// Mathf.PI * 4;
+                        lerpTimeInSeconds = 0.01f;
+                        break;
+                    case 7: // far behind
                         targetDistance = 2;
                         targetHeight = 1.5f;
                         targetAngle = 0;// Mathf.PI * 2;
                         lerpTimeInSeconds = 15;
                         break;
-                    case 3: // above
+                    case 8: // above
                         targetDistance = 0.3f;
                         targetHeight = 2;
                         targetAngle = 0;// Mathf.PI * 4;
                         lerpTimeInSeconds = 15;
                         break;
-                    case 4: // turning around
+                    case 9: // turning around
                         targetDistance = 2f;
                         targetHeight = 0.5f;
                         targetAngle = Mathf.PI * 2;

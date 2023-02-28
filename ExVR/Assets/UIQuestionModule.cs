@@ -41,7 +41,7 @@ namespace Ex{
 
             lines = str.Split2("\n").ToArray();
             var values = lines[currentQuestionID].Split2(";");// ToString();
-
+            
             currentQuestion = values.First();
             answerStrings = values.Skip(1).ToArray();
             //StartCoroutine("Init");
@@ -74,6 +74,7 @@ namespace Ex{
             if (camera == null)
             {
                 camera = ExVR.Display().cameras().get_eye_camera_transform().gameObject;// GameObject.Find("[CameraRig]").transform.Find("Cameras").gameObject;
+                //camera = Camera.main.gameObject;
             }
             active = true;
 
@@ -97,6 +98,7 @@ namespace Ex{
 
                 string hitName = "";
                 if (hasHit) hitName = HitInfo.transform.gameObject.name;
+
                 
                 // if we look at the target for the first time
                 if (hasHit && hitName.Contains("Answer") && !active_selection)
@@ -113,8 +115,8 @@ namespace Ex{
                     radialFiller.SetActive(false);
                     CancelInvoke("FillRadialUI");
                     active_selection = false;
+                    cursor.transform.position = HitInfo.point;// + new Vector3(0.1f, 0.1f, 0);
                 }
-                cursor.transform.position = HitInfo.point;
             }
         }
 
@@ -122,6 +124,7 @@ namespace Ex{
         {
             if(!radialFiller.activeSelf) radialFiller.SetActive(true);
             radialFiller.gameObject.transform.position = HitInfo.point;
+            cursor.transform.position = new Vector3(0, -10, 0);
             fillerImage.fillAmount += Time.deltaTime;
 
             if (fillerImage.fillAmount >= 1)
@@ -132,8 +135,10 @@ namespace Ex{
                 CancelInvoke("FillRadialUI");
 
                 SendLogSignal();
-  
-                LoadNextQuestion();
+
+                if (currentQuestionID < lines.Count())
+                    LoadNextQuestion();
+                else next();
             }
         }
 
@@ -169,8 +174,7 @@ namespace Ex{
 
 
         void LoadNextQuestion()
-        {
-            //currentQuestionID += 1;
+        {            
             var values = lines[currentQuestionID].Split2(";");// ToString();
 
             currentQuestion = values.First();
