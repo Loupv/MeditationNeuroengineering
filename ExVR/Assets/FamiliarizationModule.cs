@@ -52,18 +52,20 @@ namespace Ex{
                 if (UnityEngine.Input.GetKeyDown("space"))
                 {
                     sphere1.SetActive(false);
+                    sphere2.SetActive(false);
                     sphere3.SetActive(false);
-                    currentTask = Task.Depth;
+                    DestroySpheres();
+                    currentTask = Task.Handedness;
                 }
             }
-            else if (currentTask == Task.Depth) 
+            /*else if (currentTask == Task.Depth) 
             {
                 if (UnityEngine.Input.GetKeyDown("space"))
                 {
                     DestroySpheres();
                     currentTask = Task.Handedness;
                 }
-            }
+            }*/
             else if (currentTask == Task.Handedness) 
             {
                 next();

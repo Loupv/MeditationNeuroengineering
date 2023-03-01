@@ -59,9 +59,10 @@ namespace Ex{
                 cursor = get<PlaneComponent>("Cursor");
                 questionModule = GameObject.Find("QuestionModule");
                 answers = new List<GameObject>();
-                for (int i = 0; i < 6; i++)
+                for (int i = 0; i < 7; i++)
                 {
                     answers.Add(questionModule.transform.Find("questionmodule/Canvas/Answer" + (i + 1)).gameObject);
+                    log_message(i.ToString());
                 }
 
             }

@@ -57,7 +57,7 @@
         <Resource key="61" type="CSharpScript" alias="GraphicsHandler" path="Assets/GraphicsHandler.cs"/>
         <Resource key="146" type="CSharpScript" alias="FamiliarizationModule" path="Assets/FamiliarizationModule.cs"/>
         <Resource key="147" type="CSharpScript" alias="UIQuestionModule" path="Assets/UIQuestionModule.cs"/>
-        <Resource key="149" type="Directory" alias="Logs" path="../../../exvr-designer/Logs"/>
+        <Resource key="154" type="Directory" alias="Logs" path="Logs"/>
         <Resource key="124" type="VolumetricVideo" alias="firstPartL" path="VolumetricVideos/firstPartL.kvid"/>
         <Resource key="125" type="VolumetricVideo" alias="firstPartR" path="VolumetricVideos/firstPartR.kvid"/>
         <Resource key="126" type="VolumetricVideo" alias="fourthPartL" path="VolumetricVideos/fourthPartL.kvid"/>
@@ -2872,12 +2872,6 @@
                             <Interval t1="0" t2="10000"/>
                         </Timeline>
                     </Action>
-                    <Connector key="4" name="String" node_position="283 101">
-                        <Arg name="value" ui="Line text editor" value="why?;because;noidea" type="System.String" dim="0"/>
-                    </Connector>
-                    <Connector key="5" name="String" node_position="346 182">
-                        <Arg name="value" ui="Line text editor" value="hihi" type="System.String" dim="0"/>
-                    </Connector>
                 </Condition>
             </Routine>
             <Routine key="115" name="Lab_QuestionModule" randomizer="0" informations="">
