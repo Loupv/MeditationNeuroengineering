@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Experiment name="meditationScenario_OBEAndControl" version="1.0b1" mode="designer" designer-used="C:/Users/vuarness/Documents/exvr-designer/ExVR.exe">
     <Settings debug="1" csharp_debug_info="0" catch_components_exceptions="0" positional_tracking="1" catch_external_keyboard_events="0">
-        <Display mode="1" stereo_fov="60" fullscreen="0" monitor_id="1" resolution_id="1" custom_width="1920" custom_height="1080"/>
+        <Display mode="0" stereo_fov="60" fullscreen="0" monitor_id="1" resolution_id="1" custom_width="1920" custom_height="1080"/>
         <Camera neutral_x="0" neutral_y="1" neutral_z="0"/>
     </Settings>
     <Resources reload="200">
@@ -525,9 +525,9 @@
             </InitConfig>
             <Configs>
                 <Config key="49" name="1PP">
-                    <Arg name="debug_camera" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="debug_camera" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="m_speed" ui="Float spin box" value="3" type="System.Single" dim="0"/>
-                    <Arg name="position" ui="Vector 3D" value="0.68 0.053 1.763" type="System.Single" dim="1" sep=" " sizes="3"/>
+                    <Arg name="position" ui="Vector 3D" value="0.57 0.123 1.723" type="System.Single" dim="1" sep=" " sizes="3"/>
                     <Arg name="rotation" ui="Vector 3D" value="0 180 0" type="System.Single" dim="1" sep=" " sizes="3"/>
                     <Arg name="rx_speed" ui="Float spin box" value="2" type="System.Single" dim="0"/>
                     <Arg name="ry_speed" ui="Float spin box" value="2" type="System.Single" dim="0"/>
