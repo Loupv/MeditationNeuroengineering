@@ -51,7 +51,9 @@ namespace Ex{
 
         public void Init()
         {
-            
+            log_message("Initing question module");
+            currentQuestionID = 0;
+
             if (questionModule == null)
             {
                 cursor = get<PlaneComponent>("Cursor");
@@ -137,8 +139,16 @@ namespace Ex{
                 SendLogSignal();
 
                 if (currentQuestionID < lines.Count())
+                {
+                    log_message("Loading next question.");
                     LoadNextQuestion();
-                else next();
+                }
+                else
+                {
+                    log_message("End of questions. Next.");
+                    active = false;
+                    next();
+                }
             }
         }
 
