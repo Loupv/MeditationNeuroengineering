@@ -1,12 +1,2 @@
 1. It is easy for me to concentrate on what I am doing.;1 (Rarely/Not at all); 2 (Sometimes); 3 (Often); or 4 (Almost always);
 2. I am preoccupied by the future.;1 (Rarely/Not at all); 2 (Sometimes); 3 (Often); or 4 (Almost always);
-3. I can tolerate emotional pain.;1 (Rarely/Not at all); 2 (Sometimes); 3 (Often); or 4 (Almost always);
-4. I can accept things I cannot change.;1 (Rarely/Not at all); 2 (Sometimes); 3 (Often); or 4 (Almost always);
-5. I can usually describe how I feel at the moment in considerable detail.;1 (Rarely/Not at all); 2 (Sometimes); 3 (Often); or 4 (Almost always);
-6. I am easily distracted.;1 (Rarely/Not at all); 2 (Sometimes); 3 (Often); or 4 (Almost always);
-7. I am preoccupied by the past.;1 (Rarely/Not at all); 2 (Sometimes); 3 (Often); or 4 (Almost always);
-8. It's easy for me to keep track of my thoughts and feelings.;1 (Rarely/Not at all); 2 (Sometimes); 3 (Often); or 4 (Almost always);
-9. I try to notice my thoughts without judging them.;1 (Rarely/Not at all); 2 (Sometimes); 3 (Often); or 4 (Almost always);
-10. I am able to accept the thoughts and feelings I have.;1 (Rarely/Not at all); 2 (Sometimes); 3 (Often); or 4 (Almost always);
-11. I am able to focus on the present moment.;1 (Rarely/Not at all); 2 (Sometimes); 3 (Often); or 4 (Almost always);
-12. I am able to pay close attention to one thing for a long period of time.;1 (Rarely/Not at all); 2 (Sometimes); 3 (Often); or 4 (Almost always);

@@ -1,3 +1,0 @@
-What was the color of the left sphere?;Blue;Red;Green
-What was the color of the sphere in the middle?;Blue;Red;Green
-What was the color of the right sphere?;Blue;Red;Green

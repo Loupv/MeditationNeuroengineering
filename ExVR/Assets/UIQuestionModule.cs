@@ -21,18 +21,19 @@ namespace Ex{
         // public override void start_experiment() {}
 
         bool active;
-        GameObject camera;
+        GameObject myCamera;
         PlaneComponent cursor;
         RaycastHit HitInfo;
         bool active_selection;
-        GameObject radialFiller, questionModule;
+        GameObject radialFiller;
+        AssetBundleComponent questionModule;
         List<GameObject> answers;
         Image fillerImage;
 
-        string currentQuestion;
+        string currentQuestion, modulename;
         IEnumerable<string> currentAnswers;
         string[] lines, answerStrings;
-        int currentQuestionID;
+        int currentQuestionID, answersCount;
         bool questionLoaded;
   
         public override void slot1(object value)
@@ -40,12 +41,13 @@ namespace Ex{
             string str = (string)value;
 
             lines = str.Split2("\n").ToArray();
+            
             var values = lines[currentQuestionID].Split2(";");// ToString();
             
             currentQuestion = values.First();
             answerStrings = values.Skip(1).ToArray();
             //StartCoroutine("Init");
-            
+
         }
 
 
@@ -54,31 +56,50 @@ namespace Ex{
             log_message("Initing question module");
             currentQuestionID = 0;
 
-            if (questionModule == null)
+            cursor = get<PlaneComponent>("Cursor");
+
+            if (current_config().name == "4answers")
             {
-                cursor = get<PlaneComponent>("Cursor");
-                questionModule = GameObject.Find("QuestionModule");
+                questionModule = get<AssetBundleComponent>("QuestionModule_4answers");
                 answers = new List<GameObject>();
-                for (int i = 0; i < 7; i++)
-                {
-                    answers.Add(questionModule.transform.Find("questionmodule/Canvas/Answer" + (i + 1)).gameObject);
-                    log_message(i.ToString());
-                }
-
+                modulename = "questionmodule_4answers";
+                answersCount = 4;                
             }
-
-            if (radialFiller == null)
+            else if(current_config().name == "7answers")
             {
-                radialFiller = GameObject.Find("RadialFiller");
-                fillerImage = GameObject.Find("Filler").GetComponent<Image>();
-                radialFiller.SetActive(false);
+                questionModule = get<AssetBundleComponent>("QuestionModule_7answers");
+                answers = new List<GameObject>();
+                modulename = "questionmodule_7answers";
+                answersCount = 7;
+            }
+            else if (current_config().name == "pbb")
+            {
+                questionModule = get<AssetBundleComponent>("QuestionModule_PBB");
+                answers = new List<GameObject>();
+                modulename = "questionmodule_pbb";
+                answersCount = 7;
+            }
+            else if (current_config().name == "fbi")
+            {
+                questionModule = get<AssetBundleComponent>("QuestionModule_7answers");
+                answers = new List<GameObject>();
+                modulename = "questionmodule_7answers";
+                answersCount = 7;
             }
 
-            if (camera == null)
+            for (int i = 0; i < answersCount; i++)
             {
-                camera = ExVR.Display().cameras().get_eye_camera_transform().gameObject;// GameObject.Find("[CameraRig]").transform.Find("Cameras").gameObject;
-                //camera = Camera.main.gameObject;
+                answers.Add(questionModule.transform.Find(modulename+"/Canvas/Answer" + (i + 1)).gameObject);
+                log_message(i.ToString() + " " + answers[i].name);
             }
+
+
+            radialFiller = GameObject.Find("RadialFiller");
+            fillerImage = GameObject.Find("Filler").GetComponent<Image>();
+            radialFiller.SetActive(false);
+            
+            myCamera = ExVR.Display().cameras().get_eye_camera_transform().gameObject;// GameObject.Find("[CameraRig]").transform.Find("Cameras").gameObject;
+            
             active = true;
 
             LoadNextQuestion();
@@ -88,16 +109,16 @@ namespace Ex{
         public override void update() {
 
             
-            if (!active && GameObject.Find("QuestionModule") != null)
+            if (!active)
             {
                 Init();
             }
 
-            else if (active)
+            else
             {
 
 
-                bool hasHit = Physics.Raycast(camera.transform.position, camera.transform.forward, out HitInfo, 100.0f);
+                bool hasHit = Physics.Raycast(myCamera.transform.position, myCamera.transform.forward, out HitInfo, 100.0f);
 
                 string hitName = "";
                 if (hasHit) hitName = HitInfo.transform.gameObject.name;
@@ -148,6 +169,8 @@ namespace Ex{
                 {
                     log_message("End of questions. Next.");
                     active = false;
+                    active_selection = false;
+                    radialFiller.SetActive(false);
                     next();
                 }
             }
@@ -165,7 +188,10 @@ namespace Ex{
         }
 
 
-        // public override void stop_routine() {}
+        public override void stop_routine() {
+            active = false;
+        }
+
         // public override void stop_experiment(){}
         // public override void play(){}
         // public override void pause(){}
@@ -189,9 +215,11 @@ namespace Ex{
             var values = lines[currentQuestionID].Split2(";");// ToString();
 
             currentQuestion = values.First();
+            currentQuestion = currentQuestion.Replace("%", "\n");
+            log_message(currentQuestion);
             answerStrings = values.Skip(1).ToArray();
 
-            questionModule.transform.Find("questionmodule/Canvas/Question/Text").GetComponent<UnityEngine.UI.Text>().text = currentQuestion;
+            questionModule.transform.Find(modulename+"/Canvas/Question/Text").GetComponent<UnityEngine.UI.Text>().text = currentQuestion;
 
             for (int i = 0; i < answers.Count; i++)
             {
