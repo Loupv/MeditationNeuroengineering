@@ -33,7 +33,7 @@ namespace Ex
             cameraRig = GameObject.Find("[CameraRig]");
             cameraOrigin = cameraRig.transform.Find("Cameras").position; // ExVR.Display().cameras().transform.position;
             forestObject = GameObject.Find("ForestScene");
-            forestOrigin = forestObject.transform.position;
+            
             // be sure that object cameras is turned looking at origin, for orbital camera purposes later
             cameraRig.transform.Find("Cameras").LookAt(cameraOrigin - new Vector3(0, 0, lookForward));
         }
@@ -280,6 +280,8 @@ namespace Ex
 
         public void InitPlatformMovement(int i)
         {
+            if(i == 1) forestOrigin = forestObject.transform.position;
+
             if (!forestMoving)
             {
 
