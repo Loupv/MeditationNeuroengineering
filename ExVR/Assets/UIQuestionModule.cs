@@ -36,10 +36,12 @@ namespace Ex{
         int currentQuestionID, answersCount;
         bool questionLoaded;
   
+
+
         public override void slot1(object value)
         {
             string str = (string)value;
-
+            //currentQuestionID = 0;
             lines = str.Split2("\n").ToArray();
             
             var values = lines[currentQuestionID].Split2(";");// ToString();
@@ -50,11 +52,15 @@ namespace Ex{
 
         }
 
+        public override void slot2(object value)
+        {
+            Init();
+        }
 
         public void Init()
         {
             log_message("Initing question module");
-            currentQuestionID = 0;
+            //currentQuestionID = 0;
 
             cursor = get<PlaneComponent>("Cursor");
 
@@ -93,13 +99,12 @@ namespace Ex{
                 log_message(i.ToString() + " " + answers[i].name);
             }
 
-
-            radialFiller = GameObject.Find("RadialFiller");
+            radialFiller = questionModule.transform.Find(modulename + "/Canvas/RadialFiller").gameObject; //GameObject.Find("RadialFiller");
+            radialFiller.SetActive(true);
             fillerImage = GameObject.Find("Filler").GetComponent<Image>();
             radialFiller.SetActive(false);
             
             myCamera = ExVR.Display().cameras().get_eye_camera_transform().gameObject;// GameObject.Find("[CameraRig]").transform.Find("Cameras").gameObject;
-            
             active = true;
 
             LoadNextQuestion();
@@ -109,9 +114,9 @@ namespace Ex{
         public override void update() {
 
             
-            if (!active)
+            if (!active && currentQuestionID == 0) // last check to avoid to launch init if we're currently switching to next routine
             {
-                Init();
+                //Init();
             }
 
             else
@@ -129,7 +134,7 @@ namespace Ex{
                 {
                     active_selection = true;
                     InvokeRepeating("FillRadialUI", 0, Time.deltaTime);
-                    //log_message(HitInfo.point.ToString() + ", " + HitInfo.transform.gameObject);
+                    log_message(HitInfo.point.ToString() + ", " + HitInfo.transform.gameObject);
 
                 }
                 // if no hit or hitting something else
@@ -151,7 +156,7 @@ namespace Ex{
             cursor.transform.position = new Vector3(0, -10, 0);
             fillerImage.fillAmount += Time.deltaTime;
 
-            if (fillerImage.fillAmount >= 1)
+            if (fillerImage.fillAmount >= 1 && active)
             {
                 fillerImage.fillAmount = 0;
                 currentQuestionID += 1;
@@ -165,12 +170,12 @@ namespace Ex{
                     log_message("Loading next question.");
                     LoadNextQuestion();
                 }
-                else
+                else //if(current_routine().name.Contains("Questionnaire"))
                 {
                     log_message("End of questions. Next.");
+                    currentQuestionID = 0;
                     active = false;
                     active_selection = false;
-                    radialFiller.SetActive(false);
                     next();
                 }
             }
@@ -188,9 +193,9 @@ namespace Ex{
         }
 
 
-        public override void stop_routine() {
+        /*public override void stop_routine() {
             active = false;
-        }
+        }*/
 
         // public override void stop_experiment(){}
         // public override void play(){}

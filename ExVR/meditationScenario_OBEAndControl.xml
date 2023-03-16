@@ -40,10 +40,10 @@
         <Resource key="121" type="Text" alias="device_SV-10-005_all" path="../../k4-scaner-manager/config/settings/device_SV-10-005_all.config"/>
         <Resource key="122" type="Text" alias="filters_SV-10-005_all" path="../../k4-scaner-manager/config/settings/filters_SV-10-005_all.config"/>
         <Resource key="123" type="Text" alias="model_SV-10-005_all" path="../../k4-scaner-manager/config/calibration/model_SV-10-005_all.config"/>
-        <Resource key="153" type="Text" alias="FBIQuestionnaire" path="Resources/FBIQuestionnaire.txt"/>
         <Resource key="158" type="Text" alias="CAMS-R" path="../Questionnaires/CAMS-R.txt"/>
         <Resource key="163" type="Text" alias="OBE" path="../Questionnaires/OBE.txt"/>
         <Resource key="164" type="Text" alias="PBB" path="../Questionnaires/PBB.txt"/>
+        <Resource key="165" type="Text" alias="FBIQuestionnaire" path="../Questionnaires/FBIQuestionnaire.txt"/>
         <Resource key="45" type="UnityAssetBundle" alias="meditationshelter" path="Bundles/meditationshelter.unity3d"/>
         <Resource key="46" type="UnityAssetBundle" alias="distantsmokefx" path="Bundles/distantsmokefx.unity3d"/>
         <Resource key="62" type="UnityAssetBundle" alias="roundtablewood" path="Bundles/roundtablewood.unity3d"/>
@@ -156,7 +156,7 @@
             <InitConfig key="226" name="standard"/>
             <Configs>
                 <Config key="227" name="standard">
-                    <Arg name="text" ui="Resource" value="FBIQuestionnaire%%%153" type="System.String" dim="1" sep="%%%" sizes="2"/>
+                    <Arg name="text" ui="Resource" value="FBIQuestionnaire%%%165" type="System.String" dim="1" sep="%%%" sizes="2"/>
                 </Config>
             </Configs>
         </Component>
@@ -930,6 +930,7 @@
                 <Config key="199" name="4answers"/>
                 <Config key="237" name="7answers"/>
                 <Config key="236" name="pbb"/>
+                <Config key="242" name="fbi"/>
             </Configs>
         </Component>
         <Component key="17" name="AmbianceForest_Front" category="Audio" type="AudioSource" global="0" always_updating="0" exceptions="1" frame_logging="0" trigger_logging="0" restricted="0" priority="1">
@@ -5090,11 +5091,17 @@
                             <Interval t1="0" t2="1000"/>
                         </Timeline>
                     </Action>
-                    <Connector key="32" name="String" node_position="-7.6 252.8">
+                    <Connector key="32" name="String" node_position="-0.6 180.8">
                         <Arg name="value" ui="Line text editor" value="CAMS-R" type="System.String" dim="0"/>
                     </Connector>
-                    <Connector key="33" name="TextResource" node_position="260.2 254">
+                    <Connector key="33" name="TextResource" node_position="249.2 180">
                         <Arg name="value" ui="Label" value="" type="System.String" dim="0"/>
+                    </Connector>
+                    <Connector key="44" name="StartRoutine" node_position="-4 291">
+                        <Arg name="value" ui="Label" value="" type="System.String" dim="0"/>
+                    </Connector>
+                    <Connector key="45" name="Delay" node_position="263 349">
+                        <Arg name="value" ui="Integer spin box" value="5" type="System.Int32" dim="0"/>
                     </Connector>
                     <!--Connection between Key33:Connector:TextResource:Port0 and Key90:Component:UIQuestionModule:Port0 -->
                     <Connection key="124" out_type="connector" out_key="33" signal_id="0" out_data_type="string" signal="output value 0" in_type="component" in_key="90" slot_id="0" in_data_type="any" slot="slot1"/>
@@ -5102,6 +5109,10 @@
                     <Connection key="125" out_type="connector" out_key="32" signal_id="0" out_data_type="string" signal="output value 0" in_type="connector" in_key="33" slot_id="0" in_data_type="string" slot="input value 0"/>
                     <!--Connection between Key90:Component:UIQuestionModule:Port0 and Key91:Component:Logger:Port1 -->
                     <Connection key="126" out_type="component" out_key="90" signal_id="0" out_data_type="any" signal="signal1" in_type="component" in_key="91" slot_id="1" in_data_type="any" slot="write line"/>
+                    <!--Connection between Key44:Connector:StartRoutine:Port0 and Key45:Connector:Delay:Port0 -->
+                    <Connection key="178" out_type="connector" out_key="44" signal_id="0" out_data_type="string" signal="output value 0" in_type="connector" in_key="45" slot_id="0" in_data_type="any" slot="input value 0"/>
+                    <!--Connection between Key45:Connector:Delay:Port0 and Key90:Component:UIQuestionModule:Port1 -->
+                    <Connection key="179" out_type="connector" out_key="45" signal_id="0" out_data_type="any" signal="output value 0" in_type="component" in_key="90" slot_id="1" in_data_type="any" slot="slot2"/>
                 </Condition>
             </Routine>
             <Routine key="231" name="Lab_OBE_Questionnaire" randomizer="0" informations="">
@@ -5315,19 +5326,8 @@
                             <Interval t1="0" t2="1000"/>
                         </Timeline>
                     </Action>
-                    <Action key="939" key_component="104" key_config="229" node_used="0" node_position="0 0">
-                        <!--Component CAMS-R Questionnaire Header with config standard -->
-                        <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
-                            <Interval t1="0" t2="1000"/>
-                        </Timeline>
-                        <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
-                            <Interval t1="0" t2="1000"/>
-                        </Timeline>
-                    </Action>
-                    <Action key="941" key_component="107" key_config="235" node_used="0" node_position="0 0">
-                        <!--Component QuestionModule_PBB with config standard -->
+                    <Action key="964" key_component="106" key_config="233" node_used="0" node_position="0 0">
+                        <!--Component QuestionModule_7answers with config standard -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
                             <Interval t1="0" t2="1000"/>
@@ -5343,12 +5343,22 @@
                     <Connector key="35" name="TextResource" node_position="260.2 254">
                         <Arg name="value" ui="Label" value="" type="System.String" dim="0"/>
                     </Connector>
+                    <Connector key="46" name="StartRoutine" node_position="30 391">
+                        <Arg name="value" ui="Label" value="" type="System.String" dim="0"/>
+                    </Connector>
+                    <Connector key="47" name="Delay" node_position="264 413">
+                        <Arg name="value" ui="Integer spin box" value="5" type="System.Int32" dim="0"/>
+                    </Connector>
                     <!--Connection between Key35:Connector:TextResource:Port0 and Key90:Component:UIQuestionModule:Port0 -->
                     <Connection key="130" out_type="connector" out_key="35" signal_id="0" out_data_type="string" signal="output value 0" in_type="component" in_key="90" slot_id="0" in_data_type="any" slot="slot1"/>
                     <!--Connection between Key34:Connector:String:Port0 and Key35:Connector:TextResource:Port0 -->
                     <Connection key="131" out_type="connector" out_key="34" signal_id="0" out_data_type="string" signal="output value 0" in_type="connector" in_key="35" slot_id="0" in_data_type="string" slot="input value 0"/>
                     <!--Connection between Key90:Component:UIQuestionModule:Port0 and Key91:Component:Logger:Port1 -->
                     <Connection key="132" out_type="component" out_key="90" signal_id="0" out_data_type="any" signal="signal1" in_type="component" in_key="91" slot_id="1" in_data_type="any" slot="write line"/>
+                    <!--Connection between Key46:Connector:StartRoutine:Port0 and Key47:Connector:Delay:Port0 -->
+                    <Connection key="180" out_type="connector" out_key="46" signal_id="0" out_data_type="string" signal="output value 0" in_type="connector" in_key="47" slot_id="0" in_data_type="any" slot="input value 0"/>
+                    <!--Connection between Key47:Connector:Delay:Port0 and Key90:Component:UIQuestionModule:Port1 -->
+                    <Connection key="181" out_type="connector" out_key="47" signal_id="0" out_data_type="any" signal="output value 0" in_type="component" in_key="90" slot_id="1" in_data_type="any" slot="slot2"/>
                 </Condition>
             </Routine>
             <Routine key="238" name="Lab_PBB_Questionnaire" randomizer="0" informations="">
@@ -5562,17 +5572,6 @@
                             <Interval t1="0" t2="1000"/>
                         </Timeline>
                     </Action>
-                    <Action key="962" key_component="104" key_config="229" node_used="0" node_position="0 0">
-                        <!--Component CAMS-R Questionnaire Header with config standard -->
-                        <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
-                            <Interval t1="0" t2="1000"/>
-                        </Timeline>
-                        <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
-                            <Interval t1="0" t2="1000"/>
-                        </Timeline>
-                    </Action>
                     <Action key="963" key_component="107" key_config="235" node_used="0" node_position="0 0">
                         <!--Component QuestionModule_PBB with config standard -->
                         <Timeline type="Update">
@@ -5590,12 +5589,22 @@
                     <Connector key="37" name="TextResource" node_position="260.2 254">
                         <Arg name="value" ui="Label" value="" type="System.String" dim="0"/>
                     </Connector>
+                    <Connector key="48" name="StartRoutine" node_position="-2 407">
+                        <Arg name="value" ui="Label" value="" type="System.String" dim="0"/>
+                    </Connector>
+                    <Connector key="49" name="Delay" node_position="235 424">
+                        <Arg name="value" ui="Integer spin box" value="5" type="System.Int32" dim="0"/>
+                    </Connector>
                     <!--Connection between Key37:Connector:TextResource:Port0 and Key90:Component:UIQuestionModule:Port0 -->
                     <Connection key="136" out_type="connector" out_key="37" signal_id="0" out_data_type="string" signal="output value 0" in_type="component" in_key="90" slot_id="0" in_data_type="any" slot="slot1"/>
                     <!--Connection between Key36:Connector:String:Port0 and Key37:Connector:TextResource:Port0 -->
                     <Connection key="137" out_type="connector" out_key="36" signal_id="0" out_data_type="string" signal="output value 0" in_type="connector" in_key="37" slot_id="0" in_data_type="string" slot="input value 0"/>
                     <!--Connection between Key90:Component:UIQuestionModule:Port0 and Key91:Component:Logger:Port1 -->
                     <Connection key="138" out_type="component" out_key="90" signal_id="0" out_data_type="any" signal="signal1" in_type="component" in_key="91" slot_id="1" in_data_type="any" slot="write line"/>
+                    <!--Connection between Key48:Connector:StartRoutine:Port0 and Key49:Connector:Delay:Port0 -->
+                    <Connection key="182" out_type="connector" out_key="48" signal_id="0" out_data_type="string" signal="output value 0" in_type="connector" in_key="49" slot_id="0" in_data_type="any" slot="input value 0"/>
+                    <!--Connection between Key49:Connector:Delay:Port0 and Key90:Component:UIQuestionModule:Port1 -->
+                    <Connection key="183" out_type="connector" out_key="49" signal_id="0" out_data_type="any" signal="output value 0" in_type="component" in_key="90" slot_id="1" in_data_type="any" slot="slot2"/>
                 </Condition>
             </Routine>
             <Routine key="100" name="Lab_Idle" randomizer="0" informations="">
@@ -5824,7 +5833,7 @@
                             <Interval t1="0" t2="10000"/>
                         </Timeline>
                     </Action>
-                    <Action key="811" key_component="29" key_config="61" node_used="1" node_position="968 64">
+                    <Action key="811" key_component="29" key_config="61" node_used="1" node_position="1020 110">
                         <!--Component SceneFader with config standard -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
@@ -6555,7 +6564,7 @@
                 </Condition>
             </Routine>
             <Routine key="191" name="Lab_FBIQuestionnaire" randomizer="0" informations="">
-                <Condition key="51" name="default" duration="1000" ui_scale="10" ui_size="1" sets_keys="0">
+                <Condition key="51" name="default" duration="10000" ui_scale="10" ui_size="1" sets_keys="0">
                     <Action key="877" key_component="25" key_config="53" node_used="0" node_position="0 0">
                         <!--Component LabRoom with config standard -->
                         <Timeline type="Update">
@@ -6633,8 +6642,8 @@
                             <Interval t1="0" t2="1000"/>
                         </Timeline>
                     </Action>
-                    <Action key="884" key_component="90" key_config="199" node_used="1" node_position="545.2 155.8">
-                        <!--Component UIQuestionModule with config 4answers -->
+                    <Action key="884" key_component="90" key_config="242" node_used="1" node_position="545.2 155.8">
+                        <!--Component UIQuestionModule with config fbi -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
                             <Interval t1="0" t2="1000"/>
@@ -6644,18 +6653,7 @@
                             <Interval t1="0" t2="1000"/>
                         </Timeline>
                     </Action>
-                    <Action key="885" key_component="51" key_config="114" node_used="0" node_position="0 0">
-                        <!--Component QuestionModule_4answers with config standard -->
-                        <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
-                            <Interval t1="0" t2="100"/>
-                        </Timeline>
-                        <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
-                            <Interval t1="0" t2="1000"/>
-                        </Timeline>
-                    </Action>
-                    <Action key="886" key_component="91" key_config="201" node_used="1" node_position="772 119.8">
+                    <Action key="886" key_component="91" key_config="201" node_used="1" node_position="785 121.8">
                         <!--Component Logger with config standard -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
@@ -6776,20 +6774,28 @@
                             <Interval t1="0" t2="1000"/>
                         </Timeline>
                     </Action>
-                    <Connector key="26" name="String" node_position="32.4 254.8">
+                    <Action key="965" key_component="106" key_config="233" node_used="0" node_position="0 0">
+                        <!--Component QuestionModule_7answers with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
+                            <Interval t1="0" t2="1000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
+                            <Interval t1="0" t2="1000"/>
+                        </Timeline>
+                    </Action>
+                    <Connector key="26" name="String" node_position="-23.6 250.8">
                         <Arg name="value" ui="Line text editor" value="FBIQuestionnaire" type="System.String" dim="0"/>
                     </Connector>
-                    <Connector key="27" name="TextResource" node_position="287.2 253">
+                    <Connector key="27" name="TextResource" node_position="275.2 155">
                         <Arg name="value" ui="Label" value="" type="System.String" dim="0"/>
                     </Connector>
-                    <Connector key="28" name="StartRoutine" node_position="12.8 -80.4">
+                    <Connector key="42" name="Delay" node_position="280 339">
+                        <Arg name="value" ui="Integer spin box" value="5" type="System.Int32" dim="0"/>
+                    </Connector>
+                    <Connector key="43" name="StartRoutine" node_position="28 368">
                         <Arg name="value" ui="Label" value="" type="System.String" dim="0"/>
-                    </Connector>
-                    <Connector key="30" name="StringOperation" node_position="286 27">
-                        <Arg name="value" ui="Combo box text" value="Remove" type="System.String" dim="0"/>
-                    </Connector>
-                    <Connector key="31" name="String" node_position="-52.6 136.8">
-                        <Arg name="value" ui="Line text editor" value="Lab_" type="System.String" dim="0"/>
                     </Connector>
                     <!--Connection between Key27:Connector:TextResource:Port0 and Key90:Component:UIQuestionModule:Port0 -->
                     <Connection key="108" out_type="connector" out_key="27" signal_id="0" out_data_type="string" signal="output value 0" in_type="component" in_key="90" slot_id="0" in_data_type="any" slot="slot1"/>
@@ -6797,12 +6803,10 @@
                     <Connection key="109" out_type="connector" out_key="26" signal_id="0" out_data_type="string" signal="output value 0" in_type="connector" in_key="27" slot_id="0" in_data_type="string" slot="input value 0"/>
                     <!--Connection between Key90:Component:UIQuestionModule:Port0 and Key91:Component:Logger:Port1 -->
                     <Connection key="110" out_type="component" out_key="90" signal_id="0" out_data_type="any" signal="signal1" in_type="component" in_key="91" slot_id="1" in_data_type="any" slot="write line"/>
-                    <!--Connection between Key31:Connector:String:Port0 and Key30:Connector:StringOperation:Port1 -->
-                    <Connection key="115" out_type="connector" out_key="31" signal_id="0" out_data_type="string" signal="output value 0" in_type="connector" in_key="30" slot_id="1" in_data_type="string" slot="input value 1"/>
-                    <!--Connection between Key28:Connector:StartRoutine:Port0 and Key30:Connector:StringOperation:Port0 -->
-                    <Connection key="116" out_type="connector" out_key="28" signal_id="0" out_data_type="string" signal="output value 0" in_type="connector" in_key="30" slot_id="0" in_data_type="string" slot="input value 0"/>
-                    <!--Connection between Key30:Connector:StringOperation:Port0 and Key26:Connector:String:Port0 -->
-                    <Connection key="117" out_type="connector" out_key="30" signal_id="0" out_data_type="string" signal="output value 0" in_type="connector" in_key="26" slot_id="0" in_data_type="string" slot="input value 0"/>
+                    <!--Connection between Key42:Connector:Delay:Port0 and Key90:Component:UIQuestionModule:Port1 -->
+                    <Connection key="169" out_type="connector" out_key="42" signal_id="0" out_data_type="any" signal="output value 0" in_type="component" in_key="90" slot_id="1" in_data_type="any" slot="slot2"/>
+                    <!--Connection between Key43:Connector:StartRoutine:Port0 and Key42:Connector:Delay:Port0 -->
+                    <Connection key="177" out_type="connector" out_key="43" signal_id="0" out_data_type="string" signal="output value 0" in_type="connector" in_key="42" slot_id="0" in_data_type="any" slot="input value 0"/>
                 </Condition>
             </Routine>
             <Routine key="164" name="Break" randomizer="1" informations="">

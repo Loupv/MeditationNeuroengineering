@@ -154,7 +154,7 @@ namespace Ex
             }
         }
 
-        IEnumerator CameraOrbit()
+        /*IEnumerator CameraOrbit()
         {
             float t = 0;
             Vector3 newPosition;
@@ -193,7 +193,7 @@ namespace Ex
 
             cameraMoving = false;
             invoke_signal1(true);
-        }
+        }*/
 
 
         // need to do an invert lerp for body entry
