@@ -35,7 +35,6 @@
         <Resource key="145" type="Audio" alias="note4" path="../Assets/Audio/note4.wav"/>
         <Resource key="155" type="Audio" alias="ControlCondition_AfterMovement" path="../Verbal Guidances/1. InUse/ControlCondition_AfterMovement.wav"/>
         <Resource key="156" type="Audio" alias="ControlCondition_Building" path="../Verbal Guidances/1. InUse/ControlCondition_Building.wav"/>
-        <Resource key="157" type="Audio" alias="ControlCondition_Dissolution" path="../Verbal Guidances/1. InUse/ControlCondition_Dissolution.wav"/>
         <Resource key="120" type="Text" alias="network_SV-10-005" path="../../k4-scaner-manager/config/network/network_SV-10-005.config"/>
         <Resource key="121" type="Text" alias="device_SV-10-005_all" path="../../k4-scaner-manager/config/settings/device_SV-10-005_all.config"/>
         <Resource key="122" type="Text" alias="filters_SV-10-005_all" path="../../k4-scaner-manager/config/settings/filters_SV-10-005_all.config"/>
@@ -1597,6 +1596,49 @@
                 </Config>
             </Configs>
         </Component>
+        <Component key="94" name="Guidance_Lab_Intro2" category="Audio" type="AudioSource" global="0" always_updating="0" exceptions="1" frame_logging="0" trigger_logging="0" restricted="0" priority="1">
+            <InitConfig key="207" name="standard">
+                <Arg name="asset_bundle" ui="Resource" value="%%%-1" type="System.String" dim="1" sep="%%%" sizes="2"/>
+                <Arg name="channel_0_copy_destination" ui="Line text editor" value="1 2" type="System.String" dim="0"/>
+                <Arg name="channel_1_copy_destination" ui="Line text editor" value="" type="System.String" dim="0"/>
+                <Arg name="channel_2_copy_destination" ui="Line text editor" value="" type="System.String" dim="0"/>
+                <Arg name="channel_3_copy_destination" ui="Line text editor" value="" type="System.String" dim="0"/>
+                <Arg name="channel_4_copy_destination" ui="Line text editor" value="" type="System.String" dim="0"/>
+                <Arg name="channel_5_copy_destination" ui="Line text editor" value="" type="System.String" dim="0"/>
+                <Arg name="channel_6_copy_destination" ui="Line text editor" value="" type="System.String" dim="0"/>
+                <Arg name="channel_7_copy_destination" ui="Line text editor" value="" type="System.String" dim="0"/>
+                <Arg name="generate_new_sound" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                <Arg name="new_sound_channel" ui="Combo box index" value="0" type="System.Int32" dim="0"/>
+                <Arg name="sound" ui="Resource" value="Intro_2ndPart%%%139" type="System.String" dim="1" sep="%%%" sizes="2"/>
+            </InitConfig>
+            <Configs>
+                <Config key="208" name="default">
+                    <Arg name="display" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="doppler_level" ui="Float values slider" value="1" type="System.Single" dim="0"/>
+                    <Arg name="loop" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="max_distance" ui="Float values slider" value="10" type="System.Single" dim="0"/>
+                    <Arg name="min_distance" ui="Float values slider" value="0.01" type="System.Single" dim="0"/>
+                    <Arg name="mute" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="nothing_end_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="nothing_new_block" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="pause_end_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="pause_new_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="pitch" ui="Float values slider" value="1" type="System.Single" dim="0"/>
+                    <Arg name="play_end_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="play_new_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="rollof_mode" ui="Combo box index" value="1" type="System.Int32" dim="0"/>
+                    <Arg name="spatial_blend" ui="Float values slider" value="1" type="System.Single" dim="0"/>
+                    <Arg name="spatialized" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="spread" ui="Integer slider" value="184" type="System.Int32" dim="0"/>
+                    <Arg name="stereo" ui="Float values slider" value="0" type="System.Single" dim="0"/>
+                    <Arg name="stop_end_block" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="stop_new_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="transform" ui="Transformation" value="1.5 0.96 -0.89 0 0 0 0.1 0.1 0.1" type="System.Single" dim="1" sep=" " sizes="9"/>
+                    <Arg name="transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="volume" ui="Float values slider" value="1" type="System.Single" dim="0"/>
+                </Config>
+            </Configs>
+        </Component>
         <Component key="66" name="Guidance_Forest_BuildingMPS" category="Audio" type="AudioSource" global="0" always_updating="0" exceptions="1" frame_logging="0" trigger_logging="0" restricted="0" priority="1">
             <InitConfig key="147" name="standard">
                 <Arg name="asset_bundle" ui="Resource" value="%%%-1" type="System.String" dim="1" sep="%%%" sizes="2"/>
@@ -1640,6 +1682,49 @@
                 </Config>
             </Configs>
         </Component>
+        <Component key="96" name="Guidance_Forest_FocusedAttention" category="Audio" type="AudioSource" global="0" always_updating="0" exceptions="1" frame_logging="0" trigger_logging="0" restricted="0" priority="1">
+            <InitConfig key="211" name="standard">
+                <Arg name="asset_bundle" ui="Resource" value="%%%-1" type="System.String" dim="1" sep="%%%" sizes="2"/>
+                <Arg name="channel_0_copy_destination" ui="Line text editor" value="1 2" type="System.String" dim="0"/>
+                <Arg name="channel_1_copy_destination" ui="Line text editor" value="" type="System.String" dim="0"/>
+                <Arg name="channel_2_copy_destination" ui="Line text editor" value="" type="System.String" dim="0"/>
+                <Arg name="channel_3_copy_destination" ui="Line text editor" value="" type="System.String" dim="0"/>
+                <Arg name="channel_4_copy_destination" ui="Line text editor" value="" type="System.String" dim="0"/>
+                <Arg name="channel_5_copy_destination" ui="Line text editor" value="" type="System.String" dim="0"/>
+                <Arg name="channel_6_copy_destination" ui="Line text editor" value="" type="System.String" dim="0"/>
+                <Arg name="channel_7_copy_destination" ui="Line text editor" value="" type="System.String" dim="0"/>
+                <Arg name="generate_new_sound" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                <Arg name="new_sound_channel" ui="Combo box index" value="0" type="System.Int32" dim="0"/>
+                <Arg name="sound" ui="Resource" value="ControlCondition_Building%%%156" type="System.String" dim="1" sep="%%%" sizes="2"/>
+            </InitConfig>
+            <Configs>
+                <Config key="212" name="default">
+                    <Arg name="display" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="doppler_level" ui="Float values slider" value="1" type="System.Single" dim="0"/>
+                    <Arg name="loop" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="max_distance" ui="Float values slider" value="10" type="System.Single" dim="0"/>
+                    <Arg name="min_distance" ui="Float values slider" value="0.01" type="System.Single" dim="0"/>
+                    <Arg name="mute" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="nothing_end_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="nothing_new_block" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="pause_end_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="pause_new_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="pitch" ui="Float values slider" value="1" type="System.Single" dim="0"/>
+                    <Arg name="play_end_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="play_new_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="rollof_mode" ui="Combo box index" value="1" type="System.Int32" dim="0"/>
+                    <Arg name="spatial_blend" ui="Float values slider" value="0" type="System.Single" dim="0"/>
+                    <Arg name="spatialized" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="spread" ui="Integer slider" value="201" type="System.Int32" dim="0"/>
+                    <Arg name="stereo" ui="Float values slider" value="0" type="System.Single" dim="0"/>
+                    <Arg name="stop_end_block" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="stop_new_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="transform" ui="Transformation" value="0 0 0 0 0 0 0.1 0.1 0.1" type="System.Single" dim="1" sep=" " sizes="9"/>
+                    <Arg name="transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="volume" ui="Float values slider" value="0.75" type="System.Single" dim="0"/>
+                </Config>
+            </Configs>
+        </Component>
         <Component key="75" name="Guidance_Forest_OBE" category="Audio" type="AudioSource" global="0" always_updating="0" exceptions="1" frame_logging="0" trigger_logging="0" restricted="0" priority="1">
             <InitConfig key="165" name="standard">
                 <Arg name="asset_bundle" ui="Resource" value="%%%-1" type="System.String" dim="1" sep="%%%" sizes="2"/>
@@ -1657,6 +1742,49 @@
             </InitConfig>
             <Configs>
                 <Config key="166" name="default">
+                    <Arg name="display" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="doppler_level" ui="Float values slider" value="1" type="System.Single" dim="0"/>
+                    <Arg name="loop" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="max_distance" ui="Float values slider" value="10" type="System.Single" dim="0"/>
+                    <Arg name="min_distance" ui="Float values slider" value="0.01" type="System.Single" dim="0"/>
+                    <Arg name="mute" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="nothing_end_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="nothing_new_block" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="pause_end_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="pause_new_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="pitch" ui="Float values slider" value="1" type="System.Single" dim="0"/>
+                    <Arg name="play_end_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="play_new_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="rollof_mode" ui="Combo box index" value="1" type="System.Int32" dim="0"/>
+                    <Arg name="spatial_blend" ui="Float values slider" value="0" type="System.Single" dim="0"/>
+                    <Arg name="spatialized" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="spread" ui="Integer slider" value="360" type="System.Int32" dim="0"/>
+                    <Arg name="stereo" ui="Float values slider" value="0" type="System.Single" dim="0"/>
+                    <Arg name="stop_end_block" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="stop_new_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="transform" ui="Transformation" value="0 0 0 0 0 0 0.1 0.1 0.1" type="System.Single" dim="1" sep=" " sizes="9"/>
+                    <Arg name="transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="volume" ui="Float values slider" value="0.75" type="System.Single" dim="0"/>
+                </Config>
+            </Configs>
+        </Component>
+        <Component key="97" name="Guidance_Forest_ControlState" category="Audio" type="AudioSource" global="0" always_updating="0" exceptions="1" frame_logging="0" trigger_logging="0" restricted="0" priority="1">
+            <InitConfig key="213" name="standard">
+                <Arg name="asset_bundle" ui="Resource" value="%%%-1" type="System.String" dim="1" sep="%%%" sizes="2"/>
+                <Arg name="channel_0_copy_destination" ui="Line text editor" value="1 2" type="System.String" dim="0"/>
+                <Arg name="channel_1_copy_destination" ui="Line text editor" value="" type="System.String" dim="0"/>
+                <Arg name="channel_2_copy_destination" ui="Line text editor" value="" type="System.String" dim="0"/>
+                <Arg name="channel_3_copy_destination" ui="Line text editor" value="" type="System.String" dim="0"/>
+                <Arg name="channel_4_copy_destination" ui="Line text editor" value="" type="System.String" dim="0"/>
+                <Arg name="channel_5_copy_destination" ui="Line text editor" value="" type="System.String" dim="0"/>
+                <Arg name="channel_6_copy_destination" ui="Line text editor" value="" type="System.String" dim="0"/>
+                <Arg name="channel_7_copy_destination" ui="Line text editor" value="" type="System.String" dim="0"/>
+                <Arg name="generate_new_sound" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                <Arg name="new_sound_channel" ui="Combo box index" value="0" type="System.Int32" dim="0"/>
+                <Arg name="sound" ui="Resource" value="ControlCondition_AfterMovement%%%155" type="System.String" dim="1" sep="%%%" sizes="2"/>
+            </InitConfig>
+            <Configs>
+                <Config key="214" name="default">
                     <Arg name="display" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="doppler_level" ui="Float values slider" value="1" type="System.Single" dim="0"/>
                     <Arg name="loop" ui="Check box" value="false" type="System.Boolean" dim="0"/>
@@ -1726,6 +1854,49 @@
                 </Config>
             </Configs>
         </Component>
+        <Component key="98" name="Guidance_Forest_Dissolution2" category="Audio" type="AudioSource" global="0" always_updating="0" exceptions="1" frame_logging="0" trigger_logging="0" restricted="0" priority="1">
+            <InitConfig key="215" name="standard">
+                <Arg name="asset_bundle" ui="Resource" value="%%%-1" type="System.String" dim="1" sep="%%%" sizes="2"/>
+                <Arg name="channel_0_copy_destination" ui="Line text editor" value="1 2" type="System.String" dim="0"/>
+                <Arg name="channel_1_copy_destination" ui="Line text editor" value="" type="System.String" dim="0"/>
+                <Arg name="channel_2_copy_destination" ui="Line text editor" value="" type="System.String" dim="0"/>
+                <Arg name="channel_3_copy_destination" ui="Line text editor" value="" type="System.String" dim="0"/>
+                <Arg name="channel_4_copy_destination" ui="Line text editor" value="" type="System.String" dim="0"/>
+                <Arg name="channel_5_copy_destination" ui="Line text editor" value="" type="System.String" dim="0"/>
+                <Arg name="channel_6_copy_destination" ui="Line text editor" value="" type="System.String" dim="0"/>
+                <Arg name="channel_7_copy_destination" ui="Line text editor" value="" type="System.String" dim="0"/>
+                <Arg name="generate_new_sound" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                <Arg name="new_sound_channel" ui="Combo box index" value="0" type="System.Int32" dim="0"/>
+                <Arg name="sound" ui="Resource" value="Meditation_ForestDissolution%%%136" type="System.String" dim="1" sep="%%%" sizes="2"/>
+            </InitConfig>
+            <Configs>
+                <Config key="216" name="default">
+                    <Arg name="display" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="doppler_level" ui="Float values slider" value="1" type="System.Single" dim="0"/>
+                    <Arg name="loop" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="max_distance" ui="Float values slider" value="10" type="System.Single" dim="0"/>
+                    <Arg name="min_distance" ui="Float values slider" value="0.01" type="System.Single" dim="0"/>
+                    <Arg name="mute" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="nothing_end_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="nothing_new_block" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="pause_end_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="pause_new_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="pitch" ui="Float values slider" value="1" type="System.Single" dim="0"/>
+                    <Arg name="play_end_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="play_new_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="rollof_mode" ui="Combo box index" value="1" type="System.Int32" dim="0"/>
+                    <Arg name="spatial_blend" ui="Float values slider" value="1" type="System.Single" dim="0"/>
+                    <Arg name="spatialized" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="spread" ui="Integer slider" value="184" type="System.Int32" dim="0"/>
+                    <Arg name="stereo" ui="Float values slider" value="0" type="System.Single" dim="0"/>
+                    <Arg name="stop_end_block" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="stop_new_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="transform" ui="Transformation" value="1.76 1.26 -0.89 0 0 0 0.1 0.1 0.1" type="System.Single" dim="1" sep=" " sizes="9"/>
+                    <Arg name="transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="volume" ui="Float values slider" value="0.75" type="System.Single" dim="0"/>
+                </Config>
+            </Configs>
+        </Component>
         <Component key="76" name="Guidance_Lab_Dissolution" category="Audio" type="AudioSource" global="0" always_updating="0" exceptions="1" frame_logging="0" trigger_logging="0" restricted="0" priority="1">
             <InitConfig key="167" name="standard">
                 <Arg name="asset_bundle" ui="Resource" value="%%%-1" type="System.String" dim="1" sep="%%%" sizes="2"/>
@@ -1743,6 +1914,49 @@
             </InitConfig>
             <Configs>
                 <Config key="168" name="default">
+                    <Arg name="display" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="doppler_level" ui="Float values slider" value="1" type="System.Single" dim="0"/>
+                    <Arg name="loop" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="max_distance" ui="Float values slider" value="10" type="System.Single" dim="0"/>
+                    <Arg name="min_distance" ui="Float values slider" value="0.01" type="System.Single" dim="0"/>
+                    <Arg name="mute" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="nothing_end_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="nothing_new_block" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="pause_end_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="pause_new_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="pitch" ui="Float values slider" value="1" type="System.Single" dim="0"/>
+                    <Arg name="play_end_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="play_new_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="rollof_mode" ui="Combo box index" value="1" type="System.Int32" dim="0"/>
+                    <Arg name="spatial_blend" ui="Float values slider" value="1" type="System.Single" dim="0"/>
+                    <Arg name="spatialized" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="spread" ui="Integer slider" value="184" type="System.Int32" dim="0"/>
+                    <Arg name="stereo" ui="Float values slider" value="0" type="System.Single" dim="0"/>
+                    <Arg name="stop_end_block" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="stop_new_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="transform" ui="Transformation" value="1.5 0.96 -0.89 0 0 0 0.1 0.1 0.1" type="System.Single" dim="1" sep=" " sizes="9"/>
+                    <Arg name="transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="volume" ui="Float values slider" value="0.75" type="System.Single" dim="0"/>
+                </Config>
+            </Configs>
+        </Component>
+        <Component key="99" name="Guidance_Lab_Dissolution2" category="Audio" type="AudioSource" global="0" always_updating="0" exceptions="1" frame_logging="0" trigger_logging="0" restricted="0" priority="1">
+            <InitConfig key="217" name="standard">
+                <Arg name="asset_bundle" ui="Resource" value="%%%-1" type="System.String" dim="1" sep="%%%" sizes="2"/>
+                <Arg name="channel_0_copy_destination" ui="Line text editor" value="1 2" type="System.String" dim="0"/>
+                <Arg name="channel_1_copy_destination" ui="Line text editor" value="" type="System.String" dim="0"/>
+                <Arg name="channel_2_copy_destination" ui="Line text editor" value="" type="System.String" dim="0"/>
+                <Arg name="channel_3_copy_destination" ui="Line text editor" value="" type="System.String" dim="0"/>
+                <Arg name="channel_4_copy_destination" ui="Line text editor" value="" type="System.String" dim="0"/>
+                <Arg name="channel_5_copy_destination" ui="Line text editor" value="" type="System.String" dim="0"/>
+                <Arg name="channel_6_copy_destination" ui="Line text editor" value="" type="System.String" dim="0"/>
+                <Arg name="channel_7_copy_destination" ui="Line text editor" value="" type="System.String" dim="0"/>
+                <Arg name="generate_new_sound" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                <Arg name="new_sound_channel" ui="Combo box index" value="0" type="System.Int32" dim="0"/>
+                <Arg name="sound" ui="Resource" value="Meditation_LabDissolution%%%137" type="System.String" dim="1" sep="%%%" sizes="2"/>
+            </InitConfig>
+            <Configs>
+                <Config key="218" name="default">
                     <Arg name="display" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="doppler_level" ui="Float values slider" value="1" type="System.Single" dim="0"/>
                     <Arg name="loop" ui="Check box" value="false" type="System.Boolean" dim="0"/>
@@ -1809,221 +2023,6 @@
                     <Arg name="transform" ui="Transformation" value="1.5 0.96 -0.89 0 0 0 0.1 0.1 0.1" type="System.Single" dim="1" sep=" " sizes="9"/>
                     <Arg name="transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="volume" ui="Float values slider" value="1" type="System.Single" dim="0"/>
-                </Config>
-            </Configs>
-        </Component>
-        <Component key="94" name="Guidance_Lab_Intro2" category="Audio" type="AudioSource" global="0" always_updating="0" exceptions="1" frame_logging="0" trigger_logging="0" restricted="0" priority="1">
-            <InitConfig key="207" name="standard">
-                <Arg name="asset_bundle" ui="Resource" value="%%%-1" type="System.String" dim="1" sep="%%%" sizes="2"/>
-                <Arg name="channel_0_copy_destination" ui="Line text editor" value="1 2" type="System.String" dim="0"/>
-                <Arg name="channel_1_copy_destination" ui="Line text editor" value="" type="System.String" dim="0"/>
-                <Arg name="channel_2_copy_destination" ui="Line text editor" value="" type="System.String" dim="0"/>
-                <Arg name="channel_3_copy_destination" ui="Line text editor" value="" type="System.String" dim="0"/>
-                <Arg name="channel_4_copy_destination" ui="Line text editor" value="" type="System.String" dim="0"/>
-                <Arg name="channel_5_copy_destination" ui="Line text editor" value="" type="System.String" dim="0"/>
-                <Arg name="channel_6_copy_destination" ui="Line text editor" value="" type="System.String" dim="0"/>
-                <Arg name="channel_7_copy_destination" ui="Line text editor" value="" type="System.String" dim="0"/>
-                <Arg name="generate_new_sound" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                <Arg name="new_sound_channel" ui="Combo box index" value="0" type="System.Int32" dim="0"/>
-                <Arg name="sound" ui="Resource" value="Intro_2ndPart%%%139" type="System.String" dim="1" sep="%%%" sizes="2"/>
-            </InitConfig>
-            <Configs>
-                <Config key="208" name="default">
-                    <Arg name="display" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="doppler_level" ui="Float values slider" value="1" type="System.Single" dim="0"/>
-                    <Arg name="loop" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="max_distance" ui="Float values slider" value="10" type="System.Single" dim="0"/>
-                    <Arg name="min_distance" ui="Float values slider" value="0.01" type="System.Single" dim="0"/>
-                    <Arg name="mute" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="nothing_end_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="nothing_new_block" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
-                    <Arg name="pause_end_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="pause_new_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="pitch" ui="Float values slider" value="1" type="System.Single" dim="0"/>
-                    <Arg name="play_end_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="play_new_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="rollof_mode" ui="Combo box index" value="1" type="System.Int32" dim="0"/>
-                    <Arg name="spatial_blend" ui="Float values slider" value="1" type="System.Single" dim="0"/>
-                    <Arg name="spatialized" ui="Check box" value="true" type="System.Boolean" dim="0"/>
-                    <Arg name="spread" ui="Integer slider" value="184" type="System.Int32" dim="0"/>
-                    <Arg name="stereo" ui="Float values slider" value="0" type="System.Single" dim="0"/>
-                    <Arg name="stop_end_block" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
-                    <Arg name="stop_new_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="transform" ui="Transformation" value="1.5 0.96 -0.89 0 0 0 0.1 0.1 0.1" type="System.Single" dim="1" sep=" " sizes="9"/>
-                    <Arg name="transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="volume" ui="Float values slider" value="1" type="System.Single" dim="0"/>
-                </Config>
-            </Configs>
-        </Component>
-        <Component key="96" name="Guidance_Forest_FocusedAttention" category="Audio" type="AudioSource" global="0" always_updating="0" exceptions="1" frame_logging="0" trigger_logging="0" restricted="0" priority="1">
-            <InitConfig key="211" name="standard">
-                <Arg name="asset_bundle" ui="Resource" value="%%%-1" type="System.String" dim="1" sep="%%%" sizes="2"/>
-                <Arg name="channel_0_copy_destination" ui="Line text editor" value="1 2" type="System.String" dim="0"/>
-                <Arg name="channel_1_copy_destination" ui="Line text editor" value="" type="System.String" dim="0"/>
-                <Arg name="channel_2_copy_destination" ui="Line text editor" value="" type="System.String" dim="0"/>
-                <Arg name="channel_3_copy_destination" ui="Line text editor" value="" type="System.String" dim="0"/>
-                <Arg name="channel_4_copy_destination" ui="Line text editor" value="" type="System.String" dim="0"/>
-                <Arg name="channel_5_copy_destination" ui="Line text editor" value="" type="System.String" dim="0"/>
-                <Arg name="channel_6_copy_destination" ui="Line text editor" value="" type="System.String" dim="0"/>
-                <Arg name="channel_7_copy_destination" ui="Line text editor" value="" type="System.String" dim="0"/>
-                <Arg name="generate_new_sound" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                <Arg name="new_sound_channel" ui="Combo box index" value="0" type="System.Int32" dim="0"/>
-                <Arg name="sound" ui="Resource" value="ControlCondition_Building%%%156" type="System.String" dim="1" sep="%%%" sizes="2"/>
-            </InitConfig>
-            <Configs>
-                <Config key="212" name="default">
-                    <Arg name="display" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="doppler_level" ui="Float values slider" value="1" type="System.Single" dim="0"/>
-                    <Arg name="loop" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="max_distance" ui="Float values slider" value="10" type="System.Single" dim="0"/>
-                    <Arg name="min_distance" ui="Float values slider" value="0.01" type="System.Single" dim="0"/>
-                    <Arg name="mute" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="nothing_end_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="nothing_new_block" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
-                    <Arg name="pause_end_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="pause_new_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="pitch" ui="Float values slider" value="1" type="System.Single" dim="0"/>
-                    <Arg name="play_end_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="play_new_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="rollof_mode" ui="Combo box index" value="1" type="System.Int32" dim="0"/>
-                    <Arg name="spatial_blend" ui="Float values slider" value="0" type="System.Single" dim="0"/>
-                    <Arg name="spatialized" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="spread" ui="Integer slider" value="201" type="System.Int32" dim="0"/>
-                    <Arg name="stereo" ui="Float values slider" value="0" type="System.Single" dim="0"/>
-                    <Arg name="stop_end_block" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
-                    <Arg name="stop_new_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="transform" ui="Transformation" value="0 0 0 0 0 0 0.1 0.1 0.1" type="System.Single" dim="1" sep=" " sizes="9"/>
-                    <Arg name="transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="volume" ui="Float values slider" value="0.75" type="System.Single" dim="0"/>
-                </Config>
-            </Configs>
-        </Component>
-        <Component key="97" name="Guidance_Forest_ControlState" category="Audio" type="AudioSource" global="0" always_updating="0" exceptions="1" frame_logging="0" trigger_logging="0" restricted="0" priority="1">
-            <InitConfig key="213" name="standard">
-                <Arg name="asset_bundle" ui="Resource" value="%%%-1" type="System.String" dim="1" sep="%%%" sizes="2"/>
-                <Arg name="channel_0_copy_destination" ui="Line text editor" value="1 2" type="System.String" dim="0"/>
-                <Arg name="channel_1_copy_destination" ui="Line text editor" value="" type="System.String" dim="0"/>
-                <Arg name="channel_2_copy_destination" ui="Line text editor" value="" type="System.String" dim="0"/>
-                <Arg name="channel_3_copy_destination" ui="Line text editor" value="" type="System.String" dim="0"/>
-                <Arg name="channel_4_copy_destination" ui="Line text editor" value="" type="System.String" dim="0"/>
-                <Arg name="channel_5_copy_destination" ui="Line text editor" value="" type="System.String" dim="0"/>
-                <Arg name="channel_6_copy_destination" ui="Line text editor" value="" type="System.String" dim="0"/>
-                <Arg name="channel_7_copy_destination" ui="Line text editor" value="" type="System.String" dim="0"/>
-                <Arg name="generate_new_sound" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                <Arg name="new_sound_channel" ui="Combo box index" value="0" type="System.Int32" dim="0"/>
-                <Arg name="sound" ui="Resource" value="ControlCondition_AfterMovement%%%155" type="System.String" dim="1" sep="%%%" sizes="2"/>
-            </InitConfig>
-            <Configs>
-                <Config key="214" name="default">
-                    <Arg name="display" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="doppler_level" ui="Float values slider" value="1" type="System.Single" dim="0"/>
-                    <Arg name="loop" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="max_distance" ui="Float values slider" value="10" type="System.Single" dim="0"/>
-                    <Arg name="min_distance" ui="Float values slider" value="0.01" type="System.Single" dim="0"/>
-                    <Arg name="mute" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="nothing_end_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="nothing_new_block" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
-                    <Arg name="pause_end_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="pause_new_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="pitch" ui="Float values slider" value="1" type="System.Single" dim="0"/>
-                    <Arg name="play_end_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="play_new_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="rollof_mode" ui="Combo box index" value="1" type="System.Int32" dim="0"/>
-                    <Arg name="spatial_blend" ui="Float values slider" value="0" type="System.Single" dim="0"/>
-                    <Arg name="spatialized" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="spread" ui="Integer slider" value="360" type="System.Int32" dim="0"/>
-                    <Arg name="stereo" ui="Float values slider" value="0" type="System.Single" dim="0"/>
-                    <Arg name="stop_end_block" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
-                    <Arg name="stop_new_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="transform" ui="Transformation" value="0 0 0 0 0 0 0.1 0.1 0.1" type="System.Single" dim="1" sep=" " sizes="9"/>
-                    <Arg name="transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="volume" ui="Float values slider" value="0.75" type="System.Single" dim="0"/>
-                </Config>
-            </Configs>
-        </Component>
-        <Component key="98" name="Guidance_Forest_Dissolution2" category="Audio" type="AudioSource" global="0" always_updating="0" exceptions="1" frame_logging="0" trigger_logging="0" restricted="0" priority="1">
-            <InitConfig key="215" name="standard">
-                <Arg name="asset_bundle" ui="Resource" value="%%%-1" type="System.String" dim="1" sep="%%%" sizes="2"/>
-                <Arg name="channel_0_copy_destination" ui="Line text editor" value="1 2" type="System.String" dim="0"/>
-                <Arg name="channel_1_copy_destination" ui="Line text editor" value="" type="System.String" dim="0"/>
-                <Arg name="channel_2_copy_destination" ui="Line text editor" value="" type="System.String" dim="0"/>
-                <Arg name="channel_3_copy_destination" ui="Line text editor" value="" type="System.String" dim="0"/>
-                <Arg name="channel_4_copy_destination" ui="Line text editor" value="" type="System.String" dim="0"/>
-                <Arg name="channel_5_copy_destination" ui="Line text editor" value="" type="System.String" dim="0"/>
-                <Arg name="channel_6_copy_destination" ui="Line text editor" value="" type="System.String" dim="0"/>
-                <Arg name="channel_7_copy_destination" ui="Line text editor" value="" type="System.String" dim="0"/>
-                <Arg name="generate_new_sound" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                <Arg name="new_sound_channel" ui="Combo box index" value="0" type="System.Int32" dim="0"/>
-                <Arg name="sound" ui="Resource" value="ControlCondition_Dissolution%%%157" type="System.String" dim="1" sep="%%%" sizes="2"/>
-            </InitConfig>
-            <Configs>
-                <Config key="216" name="default">
-                    <Arg name="display" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="doppler_level" ui="Float values slider" value="1" type="System.Single" dim="0"/>
-                    <Arg name="loop" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="max_distance" ui="Float values slider" value="10" type="System.Single" dim="0"/>
-                    <Arg name="min_distance" ui="Float values slider" value="0.01" type="System.Single" dim="0"/>
-                    <Arg name="mute" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="nothing_end_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="nothing_new_block" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
-                    <Arg name="pause_end_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="pause_new_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="pitch" ui="Float values slider" value="1" type="System.Single" dim="0"/>
-                    <Arg name="play_end_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="play_new_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="rollof_mode" ui="Combo box index" value="1" type="System.Int32" dim="0"/>
-                    <Arg name="spatial_blend" ui="Float values slider" value="1" type="System.Single" dim="0"/>
-                    <Arg name="spatialized" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="spread" ui="Integer slider" value="184" type="System.Int32" dim="0"/>
-                    <Arg name="stereo" ui="Float values slider" value="0" type="System.Single" dim="0"/>
-                    <Arg name="stop_end_block" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
-                    <Arg name="stop_new_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="transform" ui="Transformation" value="1.76 1.26 -0.89 0 0 0 0.1 0.1 0.1" type="System.Single" dim="1" sep=" " sizes="9"/>
-                    <Arg name="transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="volume" ui="Float values slider" value="0.75" type="System.Single" dim="0"/>
-                </Config>
-            </Configs>
-        </Component>
-        <Component key="99" name="Guidance_Lab_Dissolution2" category="Audio" type="AudioSource" global="0" always_updating="0" exceptions="1" frame_logging="0" trigger_logging="0" restricted="0" priority="1">
-            <InitConfig key="217" name="standard">
-                <Arg name="asset_bundle" ui="Resource" value="%%%-1" type="System.String" dim="1" sep="%%%" sizes="2"/>
-                <Arg name="channel_0_copy_destination" ui="Line text editor" value="1 2" type="System.String" dim="0"/>
-                <Arg name="channel_1_copy_destination" ui="Line text editor" value="" type="System.String" dim="0"/>
-                <Arg name="channel_2_copy_destination" ui="Line text editor" value="" type="System.String" dim="0"/>
-                <Arg name="channel_3_copy_destination" ui="Line text editor" value="" type="System.String" dim="0"/>
-                <Arg name="channel_4_copy_destination" ui="Line text editor" value="" type="System.String" dim="0"/>
-                <Arg name="channel_5_copy_destination" ui="Line text editor" value="" type="System.String" dim="0"/>
-                <Arg name="channel_6_copy_destination" ui="Line text editor" value="" type="System.String" dim="0"/>
-                <Arg name="channel_7_copy_destination" ui="Line text editor" value="" type="System.String" dim="0"/>
-                <Arg name="generate_new_sound" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                <Arg name="new_sound_channel" ui="Combo box index" value="0" type="System.Int32" dim="0"/>
-                <Arg name="sound" ui="Resource" value="Meditation_LabDissolution%%%137" type="System.String" dim="1" sep="%%%" sizes="2"/>
-            </InitConfig>
-            <Configs>
-                <Config key="218" name="default">
-                    <Arg name="display" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="doppler_level" ui="Float values slider" value="1" type="System.Single" dim="0"/>
-                    <Arg name="loop" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="max_distance" ui="Float values slider" value="10" type="System.Single" dim="0"/>
-                    <Arg name="min_distance" ui="Float values slider" value="0.01" type="System.Single" dim="0"/>
-                    <Arg name="mute" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="nothing_end_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="nothing_new_block" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
-                    <Arg name="pause_end_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="pause_new_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="pitch" ui="Float values slider" value="1" type="System.Single" dim="0"/>
-                    <Arg name="play_end_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="play_new_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="rollof_mode" ui="Combo box index" value="1" type="System.Int32" dim="0"/>
-                    <Arg name="spatial_blend" ui="Float values slider" value="1" type="System.Single" dim="0"/>
-                    <Arg name="spatialized" ui="Check box" value="true" type="System.Boolean" dim="0"/>
-                    <Arg name="spread" ui="Integer slider" value="184" type="System.Int32" dim="0"/>
-                    <Arg name="stereo" ui="Float values slider" value="0" type="System.Single" dim="0"/>
-                    <Arg name="stop_end_block" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
-                    <Arg name="stop_new_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="transform" ui="Transformation" value="1.5 0.96 -0.89 0 0 0 0.1 0.1 0.1" type="System.Single" dim="1" sep=" " sizes="9"/>
-                    <Arg name="transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="volume" ui="Float values slider" value="0.75" type="System.Single" dim="0"/>
                 </Config>
             </Configs>
         </Component>
@@ -8734,8 +8733,8 @@
         <Element key="150" type="Routine"/>
         <Element key="152" type="Routine"/>
         <Element key="154" type="Routine"/>
-        <Element key="143" type="LoopEnd"/>
         <Element key="158" type="Routine"/>
+        <Element key="143" type="LoopEnd"/>
         <Element key="162" type="Routine"/>
     </FlowSequence>
 </Experiment>

@@ -74,16 +74,16 @@ namespace Ex
         {
             guidanceClipNames = new Dictionary<string, string>();
             guidanceClipNames.Add("Lab_Intro","Guidance_Lab_Intro");
-            guidanceClipNames.Add("Forest_BuildingMPS","Guidance_Forest_BuildingMPS");
-            guidanceClipNames.Add("Forest_OBE", "Guidance_Forest_OBE");
-            guidanceClipNames.Add("Forest_Dissolution", "Guidance_Forest_Dissolution");
-            guidanceClipNames.Add("Lab_Dissolution", "Guidance_Lab_Dissolution");
-            guidanceClipNames.Add("Lab_WelcomeBack", "Guidance_Lab_WelcomeBack");
             guidanceClipNames.Add("Lab_Intro2", "Guidance_Lab_Intro2");
+            guidanceClipNames.Add("Forest_BuildingMPS","Guidance_Forest_BuildingMPS");
             guidanceClipNames.Add("Forest_FocusedAttention", "Guidance_Forest_FocusedAttention");
+            guidanceClipNames.Add("Forest_OBE", "Guidance_Forest_OBE");
             guidanceClipNames.Add("Forest_ControlState", "Guidance_Forest_ControlState");
-            guidanceClipNames.Add("Forest_Dissolution2", "Guidance_Forest_Dissolution2");
+            guidanceClipNames.Add("Forest_Dissolution", "Guidance_Forest_Dissolution"); // these are
+            guidanceClipNames.Add("Forest_Dissolution2", "Guidance_Forest_Dissolution"); // the same
+            guidanceClipNames.Add("Lab_Dissolution", "Guidance_Lab_Dissolution");
             guidanceClipNames.Add("Lab_Dissolution2", "Guidance_Lab_Dissolution2");
+            guidanceClipNames.Add("Lab_WelcomeBack", "Guidance_Lab_WelcomeBack");
             guidanceClipNames.Add("Lab_WelcomeBack2", "Guidance_Lab_WelcomeBack2");
             return guidanceClipNames;
         }
