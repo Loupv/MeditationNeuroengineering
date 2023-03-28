@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Experiment name="meditationScenario_OBEAndControl" version="1.0b1" mode="designer" designer-used="D:/flo-22-03-23/exvr-designer/ExVR.exe">
+<Experiment name="obe1stpptest" version="1.0b1" mode="designer" designer-used="D:/flo-22-03-23/exvr-designer/ExVR.exe">
     <Settings debug="1" csharp_debug_info="0" catch_components_exceptions="0" positional_tracking="1" catch_external_keyboard_events="0">
         <Display mode="0" stereo_fov="60" fullscreen="0" monitor_id="1" resolution_id="1" custom_width="1920" custom_height="1080"/>
         <Camera neutral_x="0" neutral_y="1" neutral_z="0"/>
@@ -2243,9 +2243,9 @@
         </Component>
         <Component key="70" name="K4 manager" category="AcquisitionDevice" type="K4Manager" global="0" always_updating="0" exceptions="1" frame_logging="0" trigger_logging="0" restricted="0" priority="2">
             <InitConfig key="155" name="standard">
-                <Arg name="cameras_to_use" ui="Line text editor" value="0;1;2;3" type="System.String" dim="0"/>
-                <Arg name="color_init_default" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
-                <Arg name="color_init_file" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
+                <Arg name="cameras_to_use" ui="Line text editor" value="0" type="System.String" dim="0"/>
+                <Arg name="color_init_default" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
+                <Arg name="color_init_file" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
                 <Arg name="color_init_nothing" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
                 <Arg name="color_settings" ui="Resource" value="%%%-1" type="System.String" dim="1" sep="%%%" sizes="2"/>
                 <Arg name="debug_bypass" ui="Check box" value="false" type="System.Boolean" dim="0"/>
@@ -2254,10 +2254,10 @@
                 <Arg name="device_init_nothing" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
                 <Arg name="device_settings" ui="Resource" value="device_SV-10-005_all%%%121" type="System.String" dim="1" sep="%%%" sizes="2"/>
                 <Arg name="filters" ui="Resource" value="filters_SV-10-005_all%%%122" type="System.String" dim="1" sep="%%%" sizes="2"/>
-                <Arg name="filters_init_default" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
-                <Arg name="filters_init_file" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
+                <Arg name="filters_init_default" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
+                <Arg name="filters_init_file" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
                 <Arg name="filters_init_nothing" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
-                <Arg name="models" ui="Resource" value="model_SV-10-005_all%%%123" type="System.String" dim="1" sep="%%%" sizes="2"/>
+                <Arg name="models" ui="Resource" value="%%%-1" type="System.String" dim="1" sep="%%%" sizes="2"/>
                 <Arg name="network_settings" ui="Resource" value="network_SV-10-005%%%120" type="System.String" dim="1" sep="%%%" sizes="2"/>
             </InitConfig>
             <Configs>
@@ -2278,284 +2278,12 @@
                     <Arg name="display_clouds" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="display_filtering_obb" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="filter_points_outside_obb" ui="Check box" value="true" type="System.Boolean" dim="0"/>
-                    <Arg name="filtering_obb_tab" ui="Tab" value="true[#OBBFW#]false[#OBBFW#]0.784314 0 0 0.196078[#OBBFW#]0.55 1.05 0.2 0 0 0 2.8 2 2.8[#T#]false[#OBBFW#]false[#OBBFW#]0.784314 0.784314 0.784314 0.117647[#OBBFW#]0.6 0.8 0.7 0 0 0 1.2 1.8 1.2" type="System.String" dim="1" sep="[#T#]" sizes="2"/>
-                    <Arg name="global_transform" ui="Transformation" value="0.41 2.13 -1.32 -200.5 180 -1.4 -1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
+                    <Arg name="filtering_obb_tab" ui="Tab" value="true[#OBBFW#]false[#OBBFW#]0.784314 0 0 0.196078[#OBBFW#]0.55 1.1 0.2 0 0 0 2.8 2 2.8[#T#]false[#OBBFW#]false[#OBBFW#]0.784314 0.784314 0.784314 0.117647[#OBBFW#]0.6 0.8 0.7 0 0 0 1.2 1.8 1.2" type="System.String" dim="1" sep="[#T#]" sizes="2"/>
+                    <Arg name="global_transform" ui="Transformation" value="0.43 1.25 2.22 19.2 180 0 -1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
                     <Arg name="global_transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="rendering" ui="Combo box index" value="1" type="System.Int32" dim="0"/>
                     <Arg name="size_points" ui="Float spin box" value="0.0037" type="System.Single" dim="0"/>
                     <Arg name="tint" ui="Color pick" value="1 1 1 0" type="System.Single" dim="1" sep=" " sizes="4"/>
-                </Config>
-            </Configs>
-        </Component>
-        <Component key="77" name="volumetricVid_1L" category="Video" type="VolumetricVideo" global="0" always_updating="0" exceptions="1" frame_logging="0" trigger_logging="0" restricted="0" priority="2">
-            <InitConfig key="169" name="standard">
-                <Arg name="init_transform" ui="Transformation" value="0 0 0 0 0 0 1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
-                <Arg name="init_transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                <Arg name="volumetric_video" ui="Resource" value="firstPartL%%%124" type="System.String" dim="1" sep="%%%" sizes="2"/>
-            </InitConfig>
-            <Configs>
-                <Config key="170" name="standard">
-                    <Arg name="audio_id" ui="Integer spin box" value="0" type="System.Int32" dim="0"/>
-                    <Arg name="circles" ui="Check box" value="true" type="System.Boolean" dim="0"/>
-                    <Arg name="cones" ui="Check box" value="true" type="System.Boolean" dim="0"/>
-                    <Arg name="details" ui="Combo box index" value="3" type="System.Int32" dim="0"/>
-                    <Arg name="display_filtering_obb" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="enable_audio" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="end_time" ui="Float spin box" value="120" type="System.Single" dim="0"/>
-                    <Arg name="filter_points_outside_obb" ui="Check box" value="true" type="System.Boolean" dim="0"/>
-                    <Arg name="filtering_obb_tr" ui="Transformation" value="0 0 0 0 0 0 0.1 0.1 0.1" type="System.Single" dim="1" sep=" " sizes="9"/>
-                    <Arg name="filtering_obb_tr_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="loop" ui="Check box" value="true" type="System.Boolean" dim="0"/>
-                    <Arg name="rendering" ui="Combo box index" value="2" type="System.Int32" dim="0"/>
-                    <Arg name="size_points" ui="Float spin box" value="0.0025" type="System.Single" dim="0"/>
-                    <Arg name="start_time" ui="Float spin box" value="13" type="System.Single" dim="0"/>
-                    <Arg name="tint" ui="Color pick" value="1 0.972549 0.913725 0" type="System.Single" dim="1" sep=" " sizes="4"/>
-                    <Arg name="transform" ui="Transformation" value="0.49 1.26 0.88 15.4 -214.1 90.2 -1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
-                    <Arg name="transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="volume" ui="Float spin box" value="0.98" type="System.Single" dim="0"/>
-                </Config>
-            </Configs>
-        </Component>
-        <Component key="78" name="volumetricVid_1R" category="Video" type="VolumetricVideo" global="0" always_updating="0" exceptions="1" frame_logging="0" trigger_logging="0" restricted="0" priority="2">
-            <InitConfig key="171" name="standard">
-                <Arg name="init_transform" ui="Transformation" value="0 0 0 0 0 0 1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
-                <Arg name="init_transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                <Arg name="volumetric_video" ui="Resource" value="firstPartR%%%125" type="System.String" dim="1" sep="%%%" sizes="2"/>
-            </InitConfig>
-            <Configs>
-                <Config key="172" name="standard">
-                    <Arg name="audio_id" ui="Integer spin box" value="0" type="System.Int32" dim="0"/>
-                    <Arg name="circles" ui="Check box" value="true" type="System.Boolean" dim="0"/>
-                    <Arg name="cones" ui="Check box" value="true" type="System.Boolean" dim="0"/>
-                    <Arg name="details" ui="Combo box index" value="3" type="System.Int32" dim="0"/>
-                    <Arg name="display_filtering_obb" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="enable_audio" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="end_time" ui="Float spin box" value="121.3" type="System.Single" dim="0"/>
-                    <Arg name="filter_points_outside_obb" ui="Check box" value="true" type="System.Boolean" dim="0"/>
-                    <Arg name="filtering_obb_tr" ui="Transformation" value="0.23 0.29 0 0 0 0 0.1 0.1 0.1" type="System.Single" dim="1" sep=" " sizes="9"/>
-                    <Arg name="filtering_obb_tr_do_not_apply" ui="Check box" value="true" type="System.Boolean" dim="0"/>
-                    <Arg name="loop" ui="Check box" value="true" type="System.Boolean" dim="0"/>
-                    <Arg name="rendering" ui="Combo box index" value="2" type="System.Int32" dim="0"/>
-                    <Arg name="size_points" ui="Float spin box" value="0.0025" type="System.Single" dim="0"/>
-                    <Arg name="start_time" ui="Float spin box" value="14.3" type="System.Single" dim="0"/>
-                    <Arg name="tint" ui="Color pick" value="1 0.984314 0.952941 0" type="System.Single" dim="1" sep=" " sizes="4"/>
-                    <Arg name="transform" ui="Transformation" value="1.32 0.62 1.29 7.6 171.4 0.8 -1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
-                    <Arg name="transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="volume" ui="Float spin box" value="1" type="System.Single" dim="0"/>
-                </Config>
-            </Configs>
-        </Component>
-        <Component key="79" name="volumetricVid_2L" category="Video" type="VolumetricVideo" global="0" always_updating="0" exceptions="1" frame_logging="0" trigger_logging="0" restricted="0" priority="2">
-            <InitConfig key="173" name="standard">
-                <Arg name="init_transform" ui="Transformation" value="0 0 0 0 0 0 1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
-                <Arg name="init_transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                <Arg name="volumetric_video" ui="Resource" value="secondPartL%%%128" type="System.String" dim="1" sep="%%%" sizes="2"/>
-            </InitConfig>
-            <Configs>
-                <Config key="174" name="standard">
-                    <Arg name="audio_id" ui="Integer spin box" value="0" type="System.Int32" dim="0"/>
-                    <Arg name="circles" ui="Check box" value="true" type="System.Boolean" dim="0"/>
-                    <Arg name="cones" ui="Check box" value="true" type="System.Boolean" dim="0"/>
-                    <Arg name="details" ui="Combo box index" value="3" type="System.Int32" dim="0"/>
-                    <Arg name="display_filtering_obb" ui="Check box" value="true" type="System.Boolean" dim="0"/>
-                    <Arg name="enable_audio" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="end_time" ui="Float spin box" value="52.9" type="System.Single" dim="0"/>
-                    <Arg name="filter_points_outside_obb" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="filtering_obb_tr" ui="Transformation" value="0 0 0 0 0 0 1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
-                    <Arg name="filtering_obb_tr_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="loop" ui="Check box" value="true" type="System.Boolean" dim="0"/>
-                    <Arg name="rendering" ui="Combo box index" value="2" type="System.Int32" dim="0"/>
-                    <Arg name="size_points" ui="Float spin box" value="0.0025" type="System.Single" dim="0"/>
-                    <Arg name="start_time" ui="Float spin box" value="24" type="System.Single" dim="0"/>
-                    <Arg name="tint" ui="Color pick" value="1 1 1 1" type="System.Single" dim="1" sep=" " sizes="4"/>
-                    <Arg name="transform" ui="Transformation" value="0.51 1.26 0.88 15.4 -214 90.2 -1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
-                    <Arg name="transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="volume" ui="Float spin box" value="1" type="System.Single" dim="0"/>
-                </Config>
-                <Config key="197" name="darkness">
-                    <Arg name="audio_id" ui="Integer spin box" value="0" type="System.Int32" dim="0"/>
-                    <Arg name="circles" ui="Check box" value="true" type="System.Boolean" dim="0"/>
-                    <Arg name="cones" ui="Check box" value="true" type="System.Boolean" dim="0"/>
-                    <Arg name="details" ui="Combo box index" value="3" type="System.Int32" dim="0"/>
-                    <Arg name="display_filtering_obb" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="enable_audio" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="end_time" ui="Float spin box" value="51.9" type="System.Single" dim="0"/>
-                    <Arg name="filter_points_outside_obb" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="filtering_obb_tr" ui="Transformation" value="0 0 0 0 0 0 1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
-                    <Arg name="filtering_obb_tr_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="loop" ui="Check box" value="true" type="System.Boolean" dim="0"/>
-                    <Arg name="rendering" ui="Combo box index" value="2" type="System.Int32" dim="0"/>
-                    <Arg name="size_points" ui="Float spin box" value="0.0025" type="System.Single" dim="0"/>
-                    <Arg name="start_time" ui="Float spin box" value="24" type="System.Single" dim="0"/>
-                    <Arg name="tint" ui="Color pick" value="0 0 0 1" type="System.Single" dim="1" sep=" " sizes="4"/>
-                    <Arg name="transform" ui="Transformation" value="0.51 1.26 0.88 15.4 -214 90.2 -1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
-                    <Arg name="transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="volume" ui="Float spin box" value="1" type="System.Single" dim="0"/>
-                </Config>
-            </Configs>
-        </Component>
-        <Component key="80" name="volumetricVid_2R" category="Video" type="VolumetricVideo" global="0" always_updating="0" exceptions="1" frame_logging="0" trigger_logging="0" restricted="0" priority="2">
-            <InitConfig key="175" name="standard">
-                <Arg name="init_transform" ui="Transformation" value="0 0 0 0 0 0 1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
-                <Arg name="init_transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                <Arg name="volumetric_video" ui="Resource" value="secondPartR%%%129" type="System.String" dim="1" sep="%%%" sizes="2"/>
-            </InitConfig>
-            <Configs>
-                <Config key="176" name="standard">
-                    <Arg name="audio_id" ui="Integer spin box" value="0" type="System.Int32" dim="0"/>
-                    <Arg name="circles" ui="Check box" value="true" type="System.Boolean" dim="0"/>
-                    <Arg name="cones" ui="Check box" value="true" type="System.Boolean" dim="0"/>
-                    <Arg name="details" ui="Combo box index" value="3" type="System.Int32" dim="0"/>
-                    <Arg name="display_filtering_obb" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="enable_audio" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="end_time" ui="Float spin box" value="52" type="System.Single" dim="0"/>
-                    <Arg name="filter_points_outside_obb" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="filtering_obb_tr" ui="Transformation" value="0 0 0 0 0 0 1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
-                    <Arg name="filtering_obb_tr_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="loop" ui="Check box" value="true" type="System.Boolean" dim="0"/>
-                    <Arg name="rendering" ui="Combo box index" value="2" type="System.Int32" dim="0"/>
-                    <Arg name="size_points" ui="Float spin box" value="0.0025" type="System.Single" dim="0"/>
-                    <Arg name="start_time" ui="Float spin box" value="22.9" type="System.Single" dim="0"/>
-                    <Arg name="tint" ui="Color pick" value="1 1 1 1" type="System.Single" dim="1" sep=" " sizes="4"/>
-                    <Arg name="transform" ui="Transformation" value="1.32 0.62 1.29 7.6 171.4 0.8 -1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
-                    <Arg name="transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="volume" ui="Float spin box" value="1" type="System.Single" dim="0"/>
-                </Config>
-                <Config key="196" name="darkness">
-                    <Arg name="audio_id" ui="Integer spin box" value="0" type="System.Int32" dim="0"/>
-                    <Arg name="circles" ui="Check box" value="true" type="System.Boolean" dim="0"/>
-                    <Arg name="cones" ui="Check box" value="true" type="System.Boolean" dim="0"/>
-                    <Arg name="details" ui="Combo box index" value="3" type="System.Int32" dim="0"/>
-                    <Arg name="display_filtering_obb" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="enable_audio" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="end_time" ui="Float spin box" value="51" type="System.Single" dim="0"/>
-                    <Arg name="filter_points_outside_obb" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="filtering_obb_tr" ui="Transformation" value="0 0 0 0 0 0 1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
-                    <Arg name="filtering_obb_tr_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="loop" ui="Check box" value="true" type="System.Boolean" dim="0"/>
-                    <Arg name="rendering" ui="Combo box index" value="2" type="System.Int32" dim="0"/>
-                    <Arg name="size_points" ui="Float spin box" value="0.0025" type="System.Single" dim="0"/>
-                    <Arg name="start_time" ui="Float spin box" value="22.9" type="System.Single" dim="0"/>
-                    <Arg name="tint" ui="Color pick" value="0 0 0 1" type="System.Single" dim="1" sep=" " sizes="4"/>
-                    <Arg name="transform" ui="Transformation" value="1.32 0.62 1.29 7.6 171.4 0.8 -1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
-                    <Arg name="transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="volume" ui="Float spin box" value="1" type="System.Single" dim="0"/>
-                </Config>
-            </Configs>
-        </Component>
-        <Component key="81" name="volumetricVid_3L" category="Video" type="VolumetricVideo" global="0" always_updating="0" exceptions="1" frame_logging="0" trigger_logging="0" restricted="0" priority="2">
-            <InitConfig key="177" name="standard">
-                <Arg name="init_transform" ui="Transformation" value="0 0 0 0 0 0 1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
-                <Arg name="init_transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                <Arg name="volumetric_video" ui="Resource" value="thirdPartL%%%130" type="System.String" dim="1" sep="%%%" sizes="2"/>
-            </InitConfig>
-            <Configs>
-                <Config key="178" name="standard">
-                    <Arg name="audio_id" ui="Integer spin box" value="0" type="System.Int32" dim="0"/>
-                    <Arg name="circles" ui="Check box" value="true" type="System.Boolean" dim="0"/>
-                    <Arg name="cones" ui="Check box" value="true" type="System.Boolean" dim="0"/>
-                    <Arg name="details" ui="Combo box index" value="3" type="System.Int32" dim="0"/>
-                    <Arg name="display_filtering_obb" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="enable_audio" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="end_time" ui="Float spin box" value="109" type="System.Single" dim="0"/>
-                    <Arg name="filter_points_outside_obb" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="filtering_obb_tr" ui="Transformation" value="0 0 0 0 0 0 1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
-                    <Arg name="filtering_obb_tr_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="loop" ui="Check box" value="true" type="System.Boolean" dim="0"/>
-                    <Arg name="rendering" ui="Combo box index" value="2" type="System.Int32" dim="0"/>
-                    <Arg name="size_points" ui="Float spin box" value="0.0025" type="System.Single" dim="0"/>
-                    <Arg name="start_time" ui="Float spin box" value="8.4" type="System.Single" dim="0"/>
-                    <Arg name="tint" ui="Color pick" value="1 1 1 0" type="System.Single" dim="1" sep=" " sizes="4"/>
-                    <Arg name="transform" ui="Transformation" value="0.49 1.26 0.88 15.4 -214.1 90.2 -1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
-                    <Arg name="transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="volume" ui="Float spin box" value="1" type="System.Single" dim="0"/>
-                </Config>
-            </Configs>
-        </Component>
-        <Component key="82" name="volumetricVid_3R" category="Video" type="VolumetricVideo" global="0" always_updating="0" exceptions="1" frame_logging="0" trigger_logging="0" restricted="0" priority="2">
-            <InitConfig key="179" name="standard">
-                <Arg name="init_transform" ui="Transformation" value="0 0 0 0 0 0 1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
-                <Arg name="init_transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                <Arg name="volumetric_video" ui="Resource" value="thirdPartR%%%131" type="System.String" dim="1" sep="%%%" sizes="2"/>
-            </InitConfig>
-            <Configs>
-                <Config key="180" name="standard">
-                    <Arg name="audio_id" ui="Integer spin box" value="0" type="System.Int32" dim="0"/>
-                    <Arg name="circles" ui="Check box" value="true" type="System.Boolean" dim="0"/>
-                    <Arg name="cones" ui="Check box" value="true" type="System.Boolean" dim="0"/>
-                    <Arg name="details" ui="Combo box index" value="3" type="System.Int32" dim="0"/>
-                    <Arg name="display_filtering_obb" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="enable_audio" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="end_time" ui="Float spin box" value="109" type="System.Single" dim="0"/>
-                    <Arg name="filter_points_outside_obb" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="filtering_obb_tr" ui="Transformation" value="0 0 0 0 0 0 1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
-                    <Arg name="filtering_obb_tr_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="loop" ui="Check box" value="true" type="System.Boolean" dim="0"/>
-                    <Arg name="rendering" ui="Combo box index" value="2" type="System.Int32" dim="0"/>
-                    <Arg name="size_points" ui="Float spin box" value="0.0025" type="System.Single" dim="0"/>
-                    <Arg name="start_time" ui="Float spin box" value="9.6" type="System.Single" dim="0"/>
-                    <Arg name="tint" ui="Color pick" value="1 1 1 0" type="System.Single" dim="1" sep=" " sizes="4"/>
-                    <Arg name="transform" ui="Transformation" value="1.32 0.62 1.29 7.6 171.4 0.8 -1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
-                    <Arg name="transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="volume" ui="Float spin box" value="1" type="System.Single" dim="0"/>
-                </Config>
-            </Configs>
-        </Component>
-        <Component key="83" name="volumetricVid_4L" category="Video" type="VolumetricVideo" global="0" always_updating="0" exceptions="1" frame_logging="0" trigger_logging="0" restricted="0" priority="2">
-            <InitConfig key="181" name="standard">
-                <Arg name="init_transform" ui="Transformation" value="0 0 0 0 0 0 1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
-                <Arg name="init_transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                <Arg name="volumetric_video" ui="Resource" value="fourthPartL%%%126" type="System.String" dim="1" sep="%%%" sizes="2"/>
-            </InitConfig>
-            <Configs>
-                <Config key="182" name="standard">
-                    <Arg name="audio_id" ui="Integer spin box" value="0" type="System.Int32" dim="0"/>
-                    <Arg name="circles" ui="Check box" value="true" type="System.Boolean" dim="0"/>
-                    <Arg name="cones" ui="Check box" value="true" type="System.Boolean" dim="0"/>
-                    <Arg name="details" ui="Combo box index" value="3" type="System.Int32" dim="0"/>
-                    <Arg name="display_filtering_obb" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="enable_audio" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="end_time" ui="Float spin box" value="49.3" type="System.Single" dim="0"/>
-                    <Arg name="filter_points_outside_obb" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="filtering_obb_tr" ui="Transformation" value="0 0 0 0 0 0 1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
-                    <Arg name="filtering_obb_tr_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="loop" ui="Check box" value="true" type="System.Boolean" dim="0"/>
-                    <Arg name="rendering" ui="Combo box index" value="2" type="System.Int32" dim="0"/>
-                    <Arg name="size_points" ui="Float spin box" value="0.0025" type="System.Single" dim="0"/>
-                    <Arg name="start_time" ui="Float spin box" value="8.3" type="System.Single" dim="0"/>
-                    <Arg name="tint" ui="Color pick" value="1 1 1 0" type="System.Single" dim="1" sep=" " sizes="4"/>
-                    <Arg name="transform" ui="Transformation" value="0.51 1.26 0.88 15.4 -214 90.2 -1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
-                    <Arg name="transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="volume" ui="Float spin box" value="1" type="System.Single" dim="0"/>
-                </Config>
-            </Configs>
-        </Component>
-        <Component key="84" name="volumetricVid_4R" category="Video" type="VolumetricVideo" global="0" always_updating="0" exceptions="1" frame_logging="0" trigger_logging="0" restricted="0" priority="2">
-            <InitConfig key="183" name="standard">
-                <Arg name="init_transform" ui="Transformation" value="0 0 0 0 0 0 1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
-                <Arg name="init_transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                <Arg name="volumetric_video" ui="Resource" value="fourthPartR%%%127" type="System.String" dim="1" sep="%%%" sizes="2"/>
-            </InitConfig>
-            <Configs>
-                <Config key="184" name="standard">
-                    <Arg name="audio_id" ui="Integer spin box" value="0" type="System.Int32" dim="0"/>
-                    <Arg name="circles" ui="Check box" value="true" type="System.Boolean" dim="0"/>
-                    <Arg name="cones" ui="Check box" value="true" type="System.Boolean" dim="0"/>
-                    <Arg name="details" ui="Combo box index" value="3" type="System.Int32" dim="0"/>
-                    <Arg name="display_filtering_obb" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="enable_audio" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="end_time" ui="Float spin box" value="52" type="System.Single" dim="0"/>
-                    <Arg name="filter_points_outside_obb" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="filtering_obb_tr" ui="Transformation" value="0 0 0 0 0 0 1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
-                    <Arg name="filtering_obb_tr_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="loop" ui="Check box" value="true" type="System.Boolean" dim="0"/>
-                    <Arg name="rendering" ui="Combo box index" value="2" type="System.Int32" dim="0"/>
-                    <Arg name="size_points" ui="Float spin box" value="0.0025" type="System.Single" dim="0"/>
-                    <Arg name="start_time" ui="Float spin box" value="11" type="System.Single" dim="0"/>
-                    <Arg name="tint" ui="Color pick" value="1 1 1 0" type="System.Single" dim="1" sep=" " sizes="4"/>
-                    <Arg name="transform" ui="Transformation" value="1.32 0.62 1.29 7.6 171.4 0.8 -1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
-                    <Arg name="transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="volume" ui="Float spin box" value="1" type="System.Single" dim="0"/>
                 </Config>
             </Configs>
         </Component>
@@ -2752,7 +2480,7 @@
                             <Interval t1="0" t2="10000"/>
                         </Timeline>
                     </Action>
-                    <Action key="292" key_component="70" key_config="156" node_used="0" node_position="757 120">
+                    <Action key="292" key_component="70" key_config="156" node_used="0" node_position="256 113">
                         <!--Component K4 manager with config standard -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
@@ -2763,7 +2491,7 @@
                             <Interval t1="0" t2="10000"/>
                         </Timeline>
                     </Action>
-                    <Action key="293" key_component="71" key_config="158" node_used="0" node_position="387 303">
+                    <Action key="293" key_component="71" key_config="158" node_used="0" node_position="228 63">
                         <!--Component K4 direct multi clouds with config standard -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
@@ -3624,28 +3352,6 @@
                     </Action>
                     <Action key="254" key_component="71" key_config="158" node_used="0" node_position="0 0">
                         <!--Component K4 direct multi clouds with config standard -->
-                        <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                        <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                    </Action>
-                    <Action key="476" key_component="77" key_config="170" node_used="0" node_position="0 0">
-                        <!--Component volumetricVid_1L with config standard -->
-                        <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                        <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                    </Action>
-                    <Action key="477" key_component="78" key_config="172" node_used="0" node_position="0 0">
-                        <!--Component volumetricVid_1R with config standard -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
                             <Interval t1="0" t2="10000"/>
@@ -4895,28 +4601,6 @@
                             <Interval t1="0" t2="10000"/>
                         </Timeline>
                     </Action>
-                    <Action key="478" key_component="79" key_config="174" node_used="0" node_position="0 0">
-                        <!--Component volumetricVid_2L with config standard -->
-                        <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                        <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                    </Action>
-                    <Action key="479" key_component="80" key_config="176" node_used="0" node_position="0 0">
-                        <!--Component volumetricVid_2R with config standard -->
-                        <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                        <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                    </Action>
                 </Condition>
             </Routine>
             <Routine key="236" name="Questionnaire" randomizer="1" informations="">
@@ -5851,9 +5535,6 @@
                     </Action>
                 </Condition>
             </Routine>
-            <Routine key="280" name="FBI_Randomizer" randomizer="1" informations="">
-                <Condition key="56" name="default" duration="100" ui_scale="10" ui_size="1" sets_keys=""/>
-            </Routine>
             <Routine key="179" name="Lab_FBIOut" randomizer="0" informations="">
                 <Condition key="45" name="default" duration="10000" ui_scale="10" ui_size="1" sets_keys="0">
                     <Action key="807" key_component="25" key_config="53" node_used="0" node_position="0 0">
@@ -6010,7 +5691,7 @@
                             <Interval t1="0" t2="10000"/>
                         </Timeline>
                     </Action>
-                    <Action key="821" key_component="70" key_config="156" node_used="1" node_position="1517.14 -123.456">
+                    <Action key="821" key_component="70" key_config="156" node_used="0" node_position="0 0">
                         <!--Component K4 manager with config standard -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
@@ -6043,7 +5724,7 @@
                             <Interval t1="0" t2="10000"/>
                         </Timeline>
                     </Action>
-                    <Connector key="21" name="StartRoutine" node_position="54.72 17.68">
+                    <Connector key="21" name="StartRoutine" node_position="525 52">
                         <Arg name="value" ui="Label" value="" type="System.String" dim="0"/>
                     </Connector>
                     <Connector key="22" name="Delay" node_position="756 263">
@@ -6051,33 +5732,6 @@
                     </Connector>
                     <Connector key="23" name="Delay" node_position="740 86">
                         <Arg name="value" ui="Integer spin box" value="500" type="System.Int32" dim="0"/>
-                    </Connector>
-                    <Connector key="53" name="VariableDelay" node_position="1048.32 -275.04">
-                        <Arg name="value" ui="Curve" value="0 0 0.61165 1409.4 2 2000" type="System.Single" dim="1" sep=" " sizes="6"/>
-                    </Connector>
-                    <Connector key="54" name="VariableDelay" node_position="1049.36 -117.04">
-                        <Arg name="value" ui="Curve" value="0 0 1.53398 469.799 2 2000" type="System.Single" dim="1" sep=" " sizes="6"/>
-                    </Connector>
-                    <Connector key="55" name="StringOperation" node_position="757.68 -274.512">
-                        <Arg name="value" ui="Combo box text" value="Equals" type="System.String" dim="0"/>
-                    </Connector>
-                    <Connector key="56" name="PassValues" node_position="1254.53 -219.456">
-                        <Arg name="value" ui="Label" value="" type="System.String" dim="0"/>
-                    </Connector>
-                    <Connector key="57" name="StringOperation" node_position="759.68 -110.512">
-                        <Arg name="value" ui="Combo box text" value="Equals" type="System.String" dim="0"/>
-                    </Connector>
-                    <Connector key="58" name="String" node_position="465.488 -74.616">
-                        <Arg name="value" ui="Line text editor" value="asynchroneous" type="System.String" dim="0"/>
-                    </Connector>
-                    <Connector key="59" name="String" node_position="460.488 -237.616">
-                        <Arg name="value" ui="Line text editor" value="synchroneous" type="System.String" dim="0"/>
-                    </Connector>
-                    <Connector key="60" name="PassValueTrigger" node_position="758.4 -496.8">
-                        <Arg name="value" ui="Label" value="" type="System.String" dim="0"/>
-                    </Connector>
-                    <Connector key="61" name="String" node_position="1508.4 -226.8">
-                        <Arg name="value" ui="Line text editor" value="default text" type="System.String" dim="0"/>
                     </Connector>
                     <!--Connection between Key48:Component:GraphicsHandler:Port0 and Key22:Connector:Delay:Port0 -->
                     <Connection key="99" out_type="component" out_key="48" signal_id="0" out_data_type="any" signal="signal1" in_type="connector" in_key="22" slot_id="0" in_data_type="any" slot="input value 0"/>
@@ -6087,26 +5741,6 @@
                     <Connection key="101" out_type="connector" out_key="21" signal_id="0" out_data_type="string" signal="output value 0" in_type="connector" in_key="23" slot_id="0" in_data_type="any" slot="input value 0"/>
                     <!--Connection between Key23:Connector:Delay:Port0 and Key29:Component:SceneFader:Port0 -->
                     <Connection key="102" out_type="connector" out_key="23" signal_id="0" out_data_type="any" signal="output value 0" in_type="component" in_key="29" slot_id="0" in_data_type="any" slot="slot1"/>
-                    <!--Connection between Key53:Connector:VariableDelay:Port0 and Key56:Connector:PassValues:Port0 -->
-                    <Connection key="191" out_type="connector" out_key="53" signal_id="0" out_data_type="any" signal="output value 0" in_type="connector" in_key="56" slot_id="0" in_data_type="any" slot="input value 0"/>
-                    <!--Connection between Key54:Connector:VariableDelay:Port0 and Key56:Connector:PassValues:Port1 -->
-                    <Connection key="192" out_type="connector" out_key="54" signal_id="0" out_data_type="any" signal="output value 0" in_type="connector" in_key="56" slot_id="1" in_data_type="any" slot="input value 1"/>
-                    <!--Connection between Key56:Connector:PassValues:Port0 and Key70:Component:K4 manager:Port0 -->
-                    <Connection key="193" out_type="connector" out_key="56" signal_id="0" out_data_type="any" signal="output value 0" in_type="component" in_key="70" slot_id="0" in_data_type="integer" slot="set delay (ms)"/>
-                    <!--Connection between Key57:Connector:StringOperation:Port0 and Key54:Connector:VariableDelay:Port1 -->
-                    <Connection key="194" out_type="connector" out_key="57" signal_id="0" out_data_type="bool" signal="output value 0" in_type="connector" in_key="54" slot_id="1" in_data_type="any" slot="input value 1"/>
-                    <!--Connection between Key55:Connector:StringOperation:Port0 and Key53:Connector:VariableDelay:Port1 -->
-                    <Connection key="196" out_type="connector" out_key="55" signal_id="0" out_data_type="bool" signal="output value 0" in_type="connector" in_key="53" slot_id="1" in_data_type="any" slot="input value 1"/>
-                    <!--Connection between Key58:Connector:String:Port0 and Key57:Connector:StringOperation:Port1 -->
-                    <Connection key="197" out_type="connector" out_key="58" signal_id="0" out_data_type="string" signal="output value 0" in_type="connector" in_key="57" slot_id="1" in_data_type="string" slot="input value 1"/>
-                    <!--Connection between Key59:Connector:String:Port0 and Key55:Connector:StringOperation:Port1 -->
-                    <Connection key="198" out_type="connector" out_key="59" signal_id="0" out_data_type="string" signal="output value 0" in_type="connector" in_key="55" slot_id="1" in_data_type="string" slot="input value 1"/>
-                    <!--Connection between Key21:Connector:StartRoutine:Port1 and Key57:Connector:StringOperation:Port0 -->
-                    <Connection key="199" out_type="connector" out_key="21" signal_id="1" out_data_type="string" signal="output value 1" in_type="connector" in_key="57" slot_id="0" in_data_type="string" slot="input value 0"/>
-                    <!--Connection between Key21:Connector:StartRoutine:Port1 and Key55:Connector:StringOperation:Port0 -->
-                    <Connection key="200" out_type="connector" out_key="21" signal_id="1" out_data_type="string" signal="output value 1" in_type="connector" in_key="55" slot_id="0" in_data_type="string" slot="input value 0"/>
-                    <!--Connection between Key56:Connector:PassValues:Port0 and Key61:Connector:String:Port0 -->
-                    <Connection key="201" out_type="connector" out_key="56" signal_id="0" out_data_type="any" signal="output value 0" in_type="connector" in_key="61" slot_id="0" in_data_type="string" slot="input value 0"/>
                 </Condition>
             </Routine>
             <Routine key="185" name="Lab_Idle" randomizer="0" informations="">
@@ -7278,28 +6912,6 @@
                     </Action>
                     <Action key="548" key_component="71" key_config="158" node_used="0" node_position="0 0">
                         <!--Component K4 direct multi clouds with config standard -->
-                        <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                        <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                    </Action>
-                    <Action key="696" key_component="81" key_config="178" node_used="0" node_position="0 0">
-                        <!--Component volumetricVid_3L with config standard -->
-                        <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                        <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                    </Action>
-                    <Action key="697" key_component="82" key_config="180" node_used="0" node_position="0 0">
-                        <!--Component volumetricVid_3R with config standard -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
                             <Interval t1="0" t2="10000"/>
@@ -8518,28 +8130,6 @@
                             <Interval t1="0" t2="10000"/>
                         </Timeline>
                     </Action>
-                    <Action key="699" key_component="83" key_config="182" node_used="0" node_position="0 0">
-                        <!--Component volumetricVid_4L with config standard -->
-                        <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                        <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                    </Action>
-                    <Action key="700" key_component="84" key_config="184" node_used="0" node_position="0 0">
-                        <!--Component volumetricVid_4R with config standard -->
-                        <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                        <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                    </Action>
                     <Action key="705" key_component="95" key_config="210" node_used="0" node_position="0 0">
                         <!--Component Guidance_Lab_WelcomeBack2 with config default -->
                         <Timeline type="Update">
@@ -8768,7 +8358,6 @@
         <Element key="231" type="Routine"/>
         <Element key="238" type="Routine"/>
         <Element key="100" type="Routine"/>
-        <Element key="280" type="Routine"/>
         <Element key="168" type="LoopStart"/>
         <Element key="179" type="Routine"/>
         <Element key="185" type="Routine"/>
