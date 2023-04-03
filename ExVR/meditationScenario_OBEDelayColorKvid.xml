@@ -975,7 +975,7 @@
                     <Arg name="max_distance" ui="Float values slider" value="5" type="System.Single" dim="0"/>
                     <Arg name="min_distance" ui="Float values slider" value="0.01" type="System.Single" dim="0"/>
                     <Arg name="mute" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="nothing_end_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="nothing_end_block" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="nothing_new_block" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="pause_end_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="pause_new_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
@@ -987,7 +987,7 @@
                     <Arg name="spatialized" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="spread" ui="Integer slider" value="0" type="System.Int32" dim="0"/>
                     <Arg name="stereo" ui="Float values slider" value="0" type="System.Single" dim="0"/>
-                    <Arg name="stop_end_block" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="stop_end_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="stop_new_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="transform" ui="Transformation" value="0 0 0 0 0 0 0.3 0.3 0.3" type="System.Single" dim="1" sep=" " sizes="9"/>
                     <Arg name="transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
@@ -1018,7 +1018,7 @@
                     <Arg name="max_distance" ui="Float values slider" value="5" type="System.Single" dim="0"/>
                     <Arg name="min_distance" ui="Float values slider" value="0.01" type="System.Single" dim="0"/>
                     <Arg name="mute" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="nothing_end_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="nothing_end_block" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="nothing_new_block" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="pause_end_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="pause_new_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
@@ -1030,7 +1030,7 @@
                     <Arg name="spatialized" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="spread" ui="Integer slider" value="0" type="System.Int32" dim="0"/>
                     <Arg name="stereo" ui="Float values slider" value="0" type="System.Single" dim="0"/>
-                    <Arg name="stop_end_block" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="stop_end_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="stop_new_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="transform" ui="Transformation" value="0 0 0 0 0 0 0.3 0.3 0.3" type="System.Single" dim="1" sep=" " sizes="9"/>
                     <Arg name="transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
@@ -1061,7 +1061,7 @@
                     <Arg name="max_distance" ui="Float values slider" value="5" type="System.Single" dim="0"/>
                     <Arg name="min_distance" ui="Float values slider" value="0.01" type="System.Single" dim="0"/>
                     <Arg name="mute" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="nothing_end_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="nothing_end_block" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="nothing_new_block" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="pause_end_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="pause_new_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
@@ -1073,7 +1073,7 @@
                     <Arg name="spatialized" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="spread" ui="Integer slider" value="0" type="System.Int32" dim="0"/>
                     <Arg name="stereo" ui="Float values slider" value="-0.03" type="System.Single" dim="0"/>
-                    <Arg name="stop_end_block" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="stop_end_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="stop_new_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="transform" ui="Transformation" value="0 0 0 0 0 0 0.3 0.3 0.3" type="System.Single" dim="1" sep=" " sizes="9"/>
                     <Arg name="transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
@@ -1104,7 +1104,7 @@
                     <Arg name="max_distance" ui="Float values slider" value="5" type="System.Single" dim="0"/>
                     <Arg name="min_distance" ui="Float values slider" value="0.01" type="System.Single" dim="0"/>
                     <Arg name="mute" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="nothing_end_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="nothing_end_block" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="nothing_new_block" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="pause_end_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="pause_new_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
@@ -1116,7 +1116,7 @@
                     <Arg name="spatialized" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="spread" ui="Integer slider" value="0" type="System.Int32" dim="0"/>
                     <Arg name="stereo" ui="Float values slider" value="0" type="System.Single" dim="0"/>
-                    <Arg name="stop_end_block" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="stop_end_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="stop_new_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="transform" ui="Transformation" value="0 0 0 0 0 0 0.3 0.3 0.3" type="System.Single" dim="1" sep=" " sizes="9"/>
                     <Arg name="transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
@@ -1319,19 +1319,19 @@
                     <Arg name="max_distance" ui="Float values slider" value="5" type="System.Single" dim="0"/>
                     <Arg name="min_distance" ui="Float values slider" value="0.01" type="System.Single" dim="0"/>
                     <Arg name="mute" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="nothing_end_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="nothing_new_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="nothing_end_block" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="nothing_new_block" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="pause_end_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="pause_new_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="pitch" ui="Float values slider" value="1" type="System.Single" dim="0"/>
                     <Arg name="play_end_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="play_new_block" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="play_new_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="rollof_mode" ui="Combo box index" value="1" type="System.Int32" dim="0"/>
                     <Arg name="spatial_blend" ui="Float values slider" value="0" type="System.Single" dim="0"/>
                     <Arg name="spatialized" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="spread" ui="Integer slider" value="0" type="System.Int32" dim="0"/>
                     <Arg name="stereo" ui="Float values slider" value="0" type="System.Single" dim="0"/>
-                    <Arg name="stop_end_block" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="stop_end_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="stop_new_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="transform" ui="Transformation" value="0 0 0 0 0 0 0.3 0.3 0.3" type="System.Single" dim="1" sep=" " sizes="9"/>
                     <Arg name="transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
@@ -1362,19 +1362,19 @@
                     <Arg name="max_distance" ui="Float values slider" value="5" type="System.Single" dim="0"/>
                     <Arg name="min_distance" ui="Float values slider" value="0.01" type="System.Single" dim="0"/>
                     <Arg name="mute" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="nothing_end_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="nothing_new_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="nothing_end_block" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="nothing_new_block" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="pause_end_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="pause_new_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="pitch" ui="Float values slider" value="1" type="System.Single" dim="0"/>
                     <Arg name="play_end_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="play_new_block" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="play_new_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="rollof_mode" ui="Combo box index" value="1" type="System.Int32" dim="0"/>
                     <Arg name="spatial_blend" ui="Float values slider" value="0" type="System.Single" dim="0"/>
                     <Arg name="spatialized" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="spread" ui="Integer slider" value="0" type="System.Int32" dim="0"/>
                     <Arg name="stereo" ui="Float values slider" value="0" type="System.Single" dim="0"/>
-                    <Arg name="stop_end_block" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="stop_end_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="stop_new_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="transform" ui="Transformation" value="0 0 0 0 0 0 0.3 0.3 0.3" type="System.Single" dim="1" sep=" " sizes="9"/>
                     <Arg name="transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
@@ -1405,19 +1405,19 @@
                     <Arg name="max_distance" ui="Float values slider" value="5" type="System.Single" dim="0"/>
                     <Arg name="min_distance" ui="Float values slider" value="0.01" type="System.Single" dim="0"/>
                     <Arg name="mute" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="nothing_end_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="nothing_new_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="nothing_end_block" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="nothing_new_block" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="pause_end_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="pause_new_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="pitch" ui="Float values slider" value="1" type="System.Single" dim="0"/>
                     <Arg name="play_end_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="play_new_block" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="play_new_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="rollof_mode" ui="Combo box index" value="1" type="System.Int32" dim="0"/>
                     <Arg name="spatial_blend" ui="Float values slider" value="0" type="System.Single" dim="0"/>
                     <Arg name="spatialized" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="spread" ui="Integer slider" value="0" type="System.Int32" dim="0"/>
                     <Arg name="stereo" ui="Float values slider" value="0" type="System.Single" dim="0"/>
-                    <Arg name="stop_end_block" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="stop_end_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="stop_new_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="transform" ui="Transformation" value="0 0 0 0 0 0 0.3 0.3 0.3" type="System.Single" dim="1" sep=" " sizes="9"/>
                     <Arg name="transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
@@ -1448,19 +1448,19 @@
                     <Arg name="max_distance" ui="Float values slider" value="5" type="System.Single" dim="0"/>
                     <Arg name="min_distance" ui="Float values slider" value="0.01" type="System.Single" dim="0"/>
                     <Arg name="mute" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="nothing_end_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="nothing_new_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="nothing_end_block" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="nothing_new_block" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="pause_end_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="pause_new_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="pitch" ui="Float values slider" value="1" type="System.Single" dim="0"/>
                     <Arg name="play_end_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="play_new_block" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="play_new_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="rollof_mode" ui="Combo box index" value="1" type="System.Int32" dim="0"/>
                     <Arg name="spatial_blend" ui="Float values slider" value="0" type="System.Single" dim="0"/>
                     <Arg name="spatialized" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="spread" ui="Integer slider" value="0" type="System.Int32" dim="0"/>
                     <Arg name="stereo" ui="Float values slider" value="0" type="System.Single" dim="0"/>
-                    <Arg name="stop_end_block" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="stop_end_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="stop_new_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="transform" ui="Transformation" value="0 0 0 0 0 0 0.3 0.3 0.3" type="System.Single" dim="1" sep=" " sizes="9"/>
                     <Arg name="transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
@@ -2282,8 +2282,8 @@
                     <Arg name="display_clouds" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="display_filtering_obb" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="filter_points_outside_obb" ui="Check box" value="true" type="System.Boolean" dim="0"/>
-                    <Arg name="filtering_obb_tab" ui="Tab" value="true[#OBBFW#]false[#OBBFW#]0.784314 0 0 0.196078[#OBBFW#]0.55 1.05 0.2 0 0 0 2.8 2 2.8[#T#]false[#OBBFW#]false[#OBBFW#]0.784314 0.784314 0.784314 0.117647[#OBBFW#]0.6 0.8 0.7 0 0 0 1.2 1.8 1.2" type="System.String" dim="1" sep="[#T#]" sizes="2"/>
-                    <Arg name="global_transform" ui="Transformation" value="0.7 2.21 1.03 78 201.2 -247.8 -1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
+                    <Arg name="filtering_obb_tab" ui="Tab" value="true[#OBBFW#]false[#OBBFW#]0.784314 0 0 0.196078[#OBBFW#]0.55 1.04 0.2 0 0 0 2.8 2 2.8[#T#]false[#OBBFW#]false[#OBBFW#]0.784314 0.784314 0.784314 0.117647[#OBBFW#]0.6 0.8 0.7 0 0 0 1.2 1.8 1.2" type="System.String" dim="1" sep="[#T#]" sizes="2"/>
+                    <Arg name="global_transform" ui="Transformation" value="0.6 1.99 0.86 73.6 195 -254.7 -1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
                     <Arg name="global_transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="rendering" ui="Combo box index" value="    1" type="System.Int32" dim="0"/>
                     <Arg name="size_points" ui="Float spin box" value="0.0037" type="System.Single" dim="0"/>
@@ -2337,17 +2337,17 @@
                     <Arg name="circles" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="cones" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="details" ui="Combo box index" value="3" type="System.Int32" dim="0"/>
-                    <Arg name="display_filtering_obb" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="display_filtering_obb" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="enable_audio" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="end_time" ui="Float spin box" value="120" type="System.Single" dim="0"/>
                     <Arg name="filter_points_outside_obb" ui="Check box" value="true" type="System.Boolean" dim="0"/>
-                    <Arg name="filtering_obb_tr" ui="Transformation" value="0 0 0 0 0 0 0.1 0.1 0.1" type="System.Single" dim="1" sep=" " sizes="9"/>
+                    <Arg name="filtering_obb_tr" ui="Transformation" value="0 0.31 0 0 0 0 0.31 0.35 0.39" type="System.Single" dim="1" sep=" " sizes="9"/>
                     <Arg name="filtering_obb_tr_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="loop" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="rendering" ui="Combo box index" value="2" type="System.Int32" dim="0"/>
                     <Arg name="size_points" ui="Float spin box" value="0.0025" type="System.Single" dim="0"/>
                     <Arg name="start_time" ui="Float spin box" value="13" type="System.Single" dim="0"/>
-                    <Arg name="tint" ui="Color pick" value="1 1 1 0" type="System.Single" dim="1" sep=" " sizes="4"/>
+                    <Arg name="tint" ui="Color pick" value="0.854902 0.733333 0.733333 0" type="System.Single" dim="1" sep=" " sizes="4"/>
                     <Arg name="transform" ui="Transformation" value="0.49 1.26 0.88 15.4 -214.1 90.2 -1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
                     <Arg name="transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="volume" ui="Float spin box" value="1" type="System.Single" dim="0"/>
@@ -2376,7 +2376,7 @@
                     <Arg name="rendering" ui="Combo box index" value="2" type="System.Int32" dim="0"/>
                     <Arg name="size_points" ui="Float spin box" value="0.0025" type="System.Single" dim="0"/>
                     <Arg name="start_time" ui="Float spin box" value="14.3" type="System.Single" dim="0"/>
-                    <Arg name="tint" ui="Color pick" value="1 1 1 0" type="System.Single" dim="1" sep=" " sizes="4"/>
+                    <Arg name="tint" ui="Color pick" value="0.854902 0.768627 0.768627 0" type="System.Single" dim="1" sep=" " sizes="4"/>
                     <Arg name="transform" ui="Transformation" value="1.32 0.62 1.29 7.6 171.4 0.8 -1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
                     <Arg name="transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="volume" ui="Float spin box" value="1" type="System.Single" dim="0"/>
@@ -2405,7 +2405,7 @@
                     <Arg name="rendering" ui="Combo box index" value="2" type="System.Int32" dim="0"/>
                     <Arg name="size_points" ui="Float spin box" value="0.0025" type="System.Single" dim="0"/>
                     <Arg name="start_time" ui="Float spin box" value="24" type="System.Single" dim="0"/>
-                    <Arg name="tint" ui="Color pick" value="1 1 1 0" type="System.Single" dim="1" sep=" " sizes="4"/>
+                    <Arg name="tint" ui="Color pick" value="0.854902 0.733333 0.733333 0" type="System.Single" dim="1" sep=" " sizes="4"/>
                     <Arg name="transform" ui="Transformation" value="0.49 1.26 0.88 15.4 -214.1 90.2 -1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
                     <Arg name="transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="volume" ui="Float spin box" value="1" type="System.Single" dim="0"/>
@@ -2434,7 +2434,7 @@
                     <Arg name="rendering" ui="Combo box index" value="2" type="System.Int32" dim="0"/>
                     <Arg name="size_points" ui="Float spin box" value="0.0025" type="System.Single" dim="0"/>
                     <Arg name="start_time" ui="Float spin box" value="22.9" type="System.Single" dim="0"/>
-                    <Arg name="tint" ui="Color pick" value="1 1 1 0" type="System.Single" dim="1" sep=" " sizes="4"/>
+                    <Arg name="tint" ui="Color pick" value="0.854902 0.768627 0.768627 0" type="System.Single" dim="1" sep=" " sizes="4"/>
                     <Arg name="transform" ui="Transformation" value="1.32 0.62 1.29 7.6 171.4 0.8 -1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
                     <Arg name="transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="volume" ui="Float spin box" value="1" type="System.Single" dim="0"/>
@@ -2463,7 +2463,7 @@
                     <Arg name="rendering" ui="Combo box index" value="2" type="System.Int32" dim="0"/>
                     <Arg name="size_points" ui="Float spin box" value="0.0025" type="System.Single" dim="0"/>
                     <Arg name="start_time" ui="Float spin box" value="8.4" type="System.Single" dim="0"/>
-                    <Arg name="tint" ui="Color pick" value="1 1 1 0" type="System.Single" dim="1" sep=" " sizes="4"/>
+                    <Arg name="tint" ui="Color pick" value="0.854902 0.733333 0.733333 0" type="System.Single" dim="1" sep=" " sizes="4"/>
                     <Arg name="transform" ui="Transformation" value="0.49 1.26 0.88 15.4 -214.1 90.2 -1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
                     <Arg name="transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="volume" ui="Float spin box" value="1" type="System.Single" dim="0"/>
@@ -2492,7 +2492,7 @@
                     <Arg name="rendering" ui="Combo box index" value="2" type="System.Int32" dim="0"/>
                     <Arg name="size_points" ui="Float spin box" value="0.0025" type="System.Single" dim="0"/>
                     <Arg name="start_time" ui="Float spin box" value="9.6" type="System.Single" dim="0"/>
-                    <Arg name="tint" ui="Color pick" value="1 1 1 0" type="System.Single" dim="1" sep=" " sizes="4"/>
+                    <Arg name="tint" ui="Color pick" value="0.854902 0.768627 0.768627 0" type="System.Single" dim="1" sep=" " sizes="4"/>
                     <Arg name="transform" ui="Transformation" value="1.32 0.62 1.29 7.6 171.4 0.8 -1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
                     <Arg name="transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="volume" ui="Float spin box" value="1" type="System.Single" dim="0"/>
@@ -2521,7 +2521,7 @@
                     <Arg name="rendering" ui="Combo box index" value="2" type="System.Int32" dim="0"/>
                     <Arg name="size_points" ui="Float spin box" value="0.0025" type="System.Single" dim="0"/>
                     <Arg name="start_time" ui="Float spin box" value="8.3" type="System.Single" dim="0"/>
-                    <Arg name="tint" ui="Color pick" value="1 1 1 0" type="System.Single" dim="1" sep=" " sizes="4"/>
+                    <Arg name="tint" ui="Color pick" value="0.854902 0.733333 0.733333 0" type="System.Single" dim="1" sep=" " sizes="4"/>
                     <Arg name="transform" ui="Transformation" value="0.49 1.26 0.88 15.4 -214.1 90.2 -1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
                     <Arg name="transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="volume" ui="Float spin box" value="1" type="System.Single" dim="0"/>
@@ -2550,7 +2550,7 @@
                     <Arg name="rendering" ui="Combo box index" value="2" type="System.Int32" dim="0"/>
                     <Arg name="size_points" ui="Float spin box" value="0.0025" type="System.Single" dim="0"/>
                     <Arg name="start_time" ui="Float spin box" value="11" type="System.Single" dim="0"/>
-                    <Arg name="tint" ui="Color pick" value="1 1 1 0" type="System.Single" dim="1" sep=" " sizes="4"/>
+                    <Arg name="tint" ui="Color pick" value="0.854902 0.768627 0.768627 0" type="System.Single" dim="1" sep=" " sizes="4"/>
                     <Arg name="transform" ui="Transformation" value="1.32 0.62 1.29 7.6 171.4 0.8 -1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
                     <Arg name="transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="volume" ui="Float spin box" value="1" type="System.Single" dim="0"/>

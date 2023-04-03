@@ -410,6 +410,17 @@ namespace Ex
         }
 
 
+        public override void stop_experiment()
+        {
+            StopCoroutine("BodyEntry");
+            StopCoroutine("BodyExit");
+            StopCoroutine("PlatformMovementStart");
+            StopCoroutine("PlatformMovementBack");
+
+            forestMoving = false;
+            cameraMoving = false;
+        }
+
         // public override void stop_routine() {}
         // public override void stop_experiment(){}
         // public override void play(){}

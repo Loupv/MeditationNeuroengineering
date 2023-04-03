@@ -223,12 +223,10 @@ namespace Ex
                     fadingInDone = false;
                     fadingState = FadingState.idle;
                     return;
-                }
-                
-
-                if (omniController.isInitialized) omniController.UpdateSound();
-               
+                }  
             }
+
+            if (omniController.isInitialized) omniController.UpdateSound();
         }
 
 
@@ -346,9 +344,9 @@ namespace Ex
         {
             log_message("fading out");
 
-            log_message(currentSceneConfig.closeScreensBeforeFading.ToString());
+            /*log_message(currentSceneConfig.closeScreensBeforeFading.ToString());
             log_message(currentRoutineConfigID.ToString());
-            log_message(lastRoutineConfigID.ToString() + " vs " + currentRoutineConfigID.ToString());
+            log_message(lastRoutineConfigID.ToString() + " vs " + currentRoutineConfigID.ToString());*/
 
             // first we check if we need to fade screens
             if (currentSceneConfig.closeScreensBeforeFading)
@@ -693,6 +691,17 @@ namespace Ex
         // 	int id = idValue.id;
         // 	object value = idValue.value;
         // }  
+
+
+        public override void stop_experiment()
+        {
+            log_message("Stopping Experiment");
+            omniController.StopEveryAmbiences();
+            //StartCoroutine(StoppingExperiment());
+        }
+
+
+
     }
 }
 
