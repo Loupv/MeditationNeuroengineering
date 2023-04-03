@@ -3854,7 +3854,7 @@
                     </Action>
                 </Condition>
             </Routine>
-            <Routine key="85" name="Exit" randomizer="0" informations="">
+            <Routine key="85" name="Forest_Exit" randomizer="0" informations="">
                 <Condition key="21" name="default" duration="10000" ui_scale="100" ui_size="1" sets_keys="0">
                     <Action key="440" key_component="27" key_config="57" node_used="0" node_position="0 0">
                         <!--Component ForestScene with config standard -->
@@ -4262,7 +4262,7 @@
                     </Action>
                 </Condition>
             </Routine>
-            <Routine key="87" name="Entry" randomizer="0" informations="">
+            <Routine key="87" name="Forest_Entry" randomizer="0" informations="">
                 <Condition key="22" name="default" duration="10000" ui_scale="100" ui_size="1" sets_keys="0">
                     <Action key="459" key_component="27" key_config="57" node_used="0" node_position="0 0">
                         <!--Component ForestScene with config standard -->
