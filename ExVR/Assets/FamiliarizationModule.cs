@@ -22,15 +22,33 @@ namespace Ex{
 
         Task currentTask;
 
-        AudioSourceComponent note1, note2, note3, note4;
+        AudioSourceComponent note1, note2, note3;
+        
+        AssetBundleComponent questionModule;
+
+        public bool allowNextRoutine;
+
         GameObject sphere1, sphere2, sphere3;
         int currentNoteID;
 
         Vector3 sphereShift = new Vector3(0.6f, 1f, -1f);
 
         public override void start_routine() {
-            currentTask = Task.Sound;
-            currentNoteID = 0;
+
+            allowNextRoutine = false;    
+
+            if (current_routine().name == "Lab_Familiarization_Sound")
+            {
+                currentTask = Task.Sound;
+                currentNoteID = 0;
+            }
+            else if (current_routine().name == "Lab_Familiarization_Colors")
+            {
+                currentTask = Task.Colors;
+                CreateSpheresPrimitives();
+            }
+
+            questionModule = get<AssetBundleComponent>("FamiliarizationInstruction");
         }
 
         public override void update() {
@@ -39,23 +57,26 @@ namespace Ex{
             {
                 if (UnityEngine.Input.GetKeyDown("space"))
                 {
-                    if (currentNoteID >= 4)
+                    if (currentNoteID >= 3)
                     {
-                        currentTask = Task.Colors;
-                        CreateSpheresPrimitives();
+                        //next();
+                        allowNextRoutine = true;
                     }
                     else PlayNextNote();
                 }
             }
             else if (currentTask == Task.Colors)
             {
+                allowNextRoutine = true;
+                
                 if (UnityEngine.Input.GetKeyDown("space"))
                 {
                     sphere1.SetActive(false);
                     sphere2.SetActive(false);
                     sphere3.SetActive(false);
                     DestroySpheres();
-                    currentTask = Task.Handedness;
+                    //currentTask = Task.Handedness;
+                    next();
                 }
             }
             /*else if (currentTask == Task.Depth) 
@@ -68,7 +89,7 @@ namespace Ex{
             }*/
             else if (currentTask == Task.Handedness) 
             {
-                next();
+                
             }
         }
 
@@ -77,8 +98,8 @@ namespace Ex{
             AudioSourceComponent currentNote;
             if(currentNoteID == 0) currentNote = get<AudioSourceComponent>("FamiliarizationNote1");
             else if (currentNoteID == 1) currentNote = get<AudioSourceComponent>("FamiliarizationNote2");
-            else if (currentNoteID == 2) currentNote = get<AudioSourceComponent>("FamiliarizationNote3");
-            else currentNote = get<AudioSourceComponent>("FamiliarizationNote4");
+            //else if (currentNoteID == 2) currentNote = get<AudioSourceComponent>("FamiliarizationNote3");
+            else currentNote = get<AudioSourceComponent>("FamiliarizationNote3");
             log_message("play a note");
             currentNote.start_sound();
             currentNoteID += 1;

@@ -50,6 +50,8 @@ namespace Ex
         OmniController omniController;
         GraphicsHandler graphicsHandler;
 
+        FamiliarizationModule familiarizationModule;
+
         SceneConfig[] sceneConfigs;
         SceneConfig currentSceneConfig;
 
@@ -131,6 +133,14 @@ namespace Ex
                 graphicsHandler.InitExperiment();
             }
 
+
+            familiarizationModule = FindObjectOfType<FamiliarizationModule>();
+            if (familiarizationModule != null)
+            {
+                log_message(familiarizationModule.name + " found");
+            }
+
+
             sceneConfigs = InitSceneConfigArray();
             currentRoutineConfigID = GetConfigIDFromRoutineName(current_routine().name);
             currentSceneConfig = sceneConfigs[currentRoutineConfigID];
@@ -154,7 +164,8 @@ namespace Ex
             if (routineInited)
             {
                 // either we press space or soundguidance has stopped, and we're in the right state for it + there's a routine after this one
-                if ((UnityEngine.Input.GetKeyDown(KeyCode.Space) || (guidanceClipFound && !routineGuidance.isPlaying)) && fadingState == FadingState.idle && GetNextRoutineName() != "" && current_routine().name != "Lab_Familiarization")
+                if ((UnityEngine.Input.GetKeyDown(KeyCode.Space) || (guidanceClipFound && !routineGuidance.isPlaying)) && fadingState == FadingState.idle && GetNextRoutineName() != ""
+                    && !(current_routine().name.Contains("Familiarization") && !familiarizationModule.allowNextRoutine))  //!current_routine().name.Contains("Familiarization_Sound") && !current_routine().name.Contains("Familiarization_Colors"))
                 {
                     fadingState = FadingState.fadingOut;
 

@@ -1,3 +1,0 @@
-﻿12315.6065;What was the color of the left sphere?;Red
-15882.3203;What was the color of the sphere in the middle?;Green
-18210.6471;What was the color of the right sphere?;Blue

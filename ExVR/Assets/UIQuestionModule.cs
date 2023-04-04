@@ -64,12 +64,19 @@ namespace Ex{
 
             cursor = get<PlaneComponent>("Cursor");
 
-            if (current_config().name == "4answers")
+            if (current_config().name == "1answer")
+            {
+                questionModule = get<AssetBundleComponent>("QuestionModule_1answer");
+                answers = new List<GameObject>();
+                modulename = "questionmodule_1answer";
+                answersCount = 1;
+            }
+            else if (current_config().name == "4answers")
             {
                 questionModule = get<AssetBundleComponent>("QuestionModule_4answers");
                 answers = new List<GameObject>();
                 modulename = "questionmodule_4answers";
-                answersCount = 4;                
+                answersCount = 4;
             }
             else if(current_config().name == "7answers")
             {

@@ -109,15 +109,15 @@ namespace Ex
                         targetAngle = 0;
                         lerpTimeInSeconds = 15;
                         break;
-                    case 2: // far behind
+                    case 2: // initial position, quick
                         targetDistance = 0;
                         targetHeight = 0f;
                         targetAngle = 0;// Mathf.PI * 2;
                         lerpTimeInSeconds = 0.01f;
                         break;
-                    case 3: // above
-                        targetDistance = 1.7f;
-                        targetHeight = 0.7f;
+                    case 3: // behind, fbi / quick
+                        targetDistance = 1.5f;
+                        targetHeight = 0f;
                         targetAngle = 0;// Mathf.PI * 4;
                         lerpTimeInSeconds = 0.01f;
                         break;
