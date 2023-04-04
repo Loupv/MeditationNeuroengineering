@@ -44,7 +44,6 @@
         <Resource key="164" type="Text" alias="PBB" path="../Questionnaires/PBB.txt"/>
         <Resource key="165" type="Text" alias="FBIQuestionnaire" path="../Questionnaires/FBIQuestionnaire.txt"/>
         <Resource key="166" type="Text" alias="color_SV-10-005_all" path="../../k4-scaner-manager/config/settings/color_SV-10-005_all.config"/>
-        <Resource key="169" type="Text" alias="ColorOrder" path="D:/Meditation/MeditationProject/Questionnaires/ColorOrder.txt"/>
         <Resource key="45" type="UnityAssetBundle" alias="meditationshelter" path="Bundles/meditationshelter.unity3d"/>
         <Resource key="46" type="UnityAssetBundle" alias="distantsmokefx" path="Bundles/distantsmokefx.unity3d"/>
         <Resource key="62" type="UnityAssetBundle" alias="roundtablewood" path="Bundles/roundtablewood.unity3d"/>
@@ -278,7 +277,7 @@
                     <Arg name="panoramic-tint" ui="Color pick" value="0.498039 0.498039 0.498039 0.498039" type="System.Single" dim="1" sep=" " sizes="4"/>
                     <Arg name="panoramic-type" ui="Combo box index" value="0" type="System.Int32" dim="0"/>
                     <Arg name="panoramic_invert" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="procedural-exposure" ui="Float spin box" value="0.2" type="System.Single" dim="0"/>
+                    <Arg name="procedural-exposure" ui="Float spin box" value="0" type="System.Single" dim="0"/>
                     <Arg name="procedural-ground-color" ui="Color pick" value="1 1 1 1" type="System.Single" dim="1" sep=" " sizes="4"/>
                     <Arg name="procedural-sky-tint" ui="Color pick" value="0.886275 0.886275 0.886275 1" type="System.Single" dim="1" sep=" " sizes="4"/>
                     <Arg name="sky_color" ui="Color pick" value="0.211765 0.227451 0.258824 1" type="System.Single" dim="1" sep=" " sizes="4"/>
@@ -1014,6 +1013,44 @@
                     <Arg name="t_paragraph_spacing" ui="Float spin box" value="0" type="System.Single" dim="0"/>
                     <Arg name="t_rich_text" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="t_text" ui="Block text editor" value="Thank you, we will now ask you a set of &#10;questions." type="System.String" dim="0"/>
+                    <Arg name="t_text_component" ui="Component" value="%%%-1" type="System.String" dim="1" sep="%%%" sizes="2"/>
+                    <Arg name="t_text_resource" ui="Resource" value="%%%-1" type="System.String" dim="1" sep="%%%" sizes="2"/>
+                    <Arg name="t_under_line" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="t_upper_case" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="t_use_component" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="t_use_resource" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="t_use_text" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="t_word_spacing" ui="Float spin box" value="0" type="System.Single" dim="0"/>
+                    <Arg name="t_wrap" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="use_eye_camera" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="use_original_size" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="width" ui="Integer spin box" value="400" type="System.Int32" dim="0"/>
+                </Config>
+                <Config key="275" name="Instructions4">
+                    <Arg name="background_color" ui="Color pick" value="1 1 1 0" type="System.Single" dim="1" sep=" " sizes="4"/>
+                    <Arg name="distance" ui="Float spin box" value="1" type="System.Single" dim="0"/>
+                    <Arg name="eye_to_render" ui="Combo box text" value="Both eyes" type="System.String" dim="0"/>
+                    <Arg name="height" ui="Integer spin box" value="400" type="System.Int32" dim="0"/>
+                    <Arg name="pivot" ui="Vector 2D" value="0.5 0" type="System.Single" dim="1" sep=" " sizes="2"/>
+                    <Arg name="position" ui="Vector 3D" value="0.5 1 -2.2" type="System.Single" dim="1" sep=" " sizes="3"/>
+                    <Arg name="rotation" ui="Vector 3D" value="0 180 0" type="System.Single" dim="1" sep=" " sizes="3"/>
+                    <Arg name="scale_factor" ui="Float spin box" value="0.55" type="System.Single" dim="0"/>
+                    <Arg name="t_alignment" ui="Combo box text" value="Middle centered" type="System.String" dim="0"/>
+                    <Arg name="t_auto_size" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="t_bold" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="t_character_spacing" ui="Float spin box" value="0" type="System.Single" dim="0"/>
+                    <Arg name="t_face_color" ui="Color pick" value="1 1 1 1" type="System.Single" dim="1" sep=" " sizes="4"/>
+                    <Arg name="t_font_size" ui="Float spin box" value="26" type="System.Single" dim="0"/>
+                    <Arg name="t_highlight" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="t_italic" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="t_line_spacing" ui="Float spin box" value="0" type="System.Single" dim="0"/>
+                    <Arg name="t_lower_case" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="t_normal" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="t_outline_color" ui="Color pick" value="0 0 0 1" type="System.Single" dim="1" sep=" " sizes="4"/>
+                    <Arg name="t_outline_width" ui="Float spin box" value="0" type="System.Single" dim="0"/>
+                    <Arg name="t_paragraph_spacing" ui="Float spin box" value="0" type="System.Single" dim="0"/>
+                    <Arg name="t_rich_text" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="t_text" ui="Block text editor" value="Congratulations ! You have just finished first phase.&#10;Please stand by." type="System.String" dim="0"/>
                     <Arg name="t_text_component" ui="Component" value="%%%-1" type="System.String" dim="1" sep="%%%" sizes="2"/>
                     <Arg name="t_text_resource" ui="Resource" value="%%%-1" type="System.String" dim="1" sep="%%%" sizes="2"/>
                     <Arg name="t_under_line" ui="Check box" value="false" type="System.Boolean" dim="0"/>
@@ -2971,8 +3008,8 @@
                             <Interval t1="0" t2="10000"/>
                         </Timeline>
                     </Action>
-                    <Action key="1689" key_component="122" key_config="271" node_used="0" node_position="0 0">
-                        <!--Component Instructions with config Instructions1 -->
+                    <Action key="1689" key_component="122" key_config="274" node_used="0" node_position="0 0">
+                        <!--Component Instructions with config Instructions0 -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
                             <Interval t1="0" t2="10000"/>
@@ -4134,17 +4171,6 @@
                     </Action>
                     <Action key="757" key_component="71" key_config="158" node_used="0" node_position="0 0">
                         <!--Component K4 direct multi clouds with config standard -->
-                        <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
-                            <Interval t1="0" t2="1000"/>
-                        </Timeline>
-                        <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
-                            <Interval t1="0" t2="1000"/>
-                        </Timeline>
-                    </Action>
-                    <Action key="897" key_component="104" key_config="229" node_used="0" node_position="0 0">
-                        <!--Component CAMS-R Questionnaire Header with config standard -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
                             <Interval t1="0" t2="1000"/>
@@ -6656,8 +6682,8 @@
                             <Interval t1="0" t2="1000"/>
                         </Timeline>
                     </Action>
-                    <Action key="1714" key_component="90" key_config="269" node_used="1" node_position="545.2 155.8">
-                        <!--Component UIQuestionModule with config 4answers -->
+                    <Action key="1714" key_component="90" key_config="199" node_used="1" node_position="545.2 155.8">
+                        <!--Component UIQuestionModule with config 1answer -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
                             <Interval t1="0" t2="1000"/>
@@ -6799,7 +6825,7 @@
                             <Interval t1="0" t2="1000"/>
                         </Timeline>
                     </Action>
-                    <Connector key="172" name="String" node_position="-170.512 159.76">
+                    <Connector key="172" name="String" node_position="-157.512 155.76">
                         <Arg name="value" ui="Line text editor" value="Thank you, we will now ask you a set of questions about your experience;Validate;" type="System.String" dim="0"/>
                     </Connector>
                     <Connector key="173" name="StartRoutine" node_position="48 384">
@@ -6897,8 +6923,8 @@
                             <Interval t1="0" t2="1000"/>
                         </Timeline>
                     </Action>
-                    <Action key="905" key_component="90" key_config="199" node_used="1" node_position="545.2 155.8">
-                        <!--Component UIQuestionModule with config 1answer -->
+                    <Action key="905" key_component="90" key_config="269" node_used="1" node_position="545.2 155.8">
+                        <!--Component UIQuestionModule with config 4answers -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
                             <Interval t1="0" t2="1000"/>
@@ -7543,7 +7569,7 @@
                             <Interval t1="0" t2="1000"/>
                         </Timeline>
                     </Action>
-                    <Connector key="36" name="String" node_position="-7.6 252.8">
+                    <Connector key="36" name="String" node_position="-13.6 250.8">
                         <Arg name="value" ui="Line text editor" value="PBB" type="System.String" dim="0"/>
                     </Connector>
                     <Connector key="37" name="TextResource" node_position="260.2 254">
@@ -7555,8 +7581,9 @@
                     <Connector key="49" name="Delay" node_position="235 424">
                         <Arg name="value" ui="Integer spin box" value="5" type="System.Int32" dim="0"/>
                     </Connector>
-                    <!--Connection between Key37:Connector:TextResource:Port0 and Key90:Component:UIQuestionModule:Port0 -->
-                    <Connection key="136" out_type="connector" out_key="37" signal_id="0" out_data_type="string" signal="output value 0" in_type="component" in_key="90" slot_id="0" in_data_type="any" slot="slot1"/>
+                    <Connector key="175" name="String" node_position="18.4 109.8">
+                        <Arg name="value" ui="Line text editor" value="PBB" type="System.String" dim="0"/>
+                    </Connector>
                     <!--Connection between Key36:Connector:String:Port0 and Key37:Connector:TextResource:Port0 -->
                     <Connection key="137" out_type="connector" out_key="36" signal_id="0" out_data_type="string" signal="output value 0" in_type="connector" in_key="37" slot_id="0" in_data_type="string" slot="input value 0"/>
                     <!--Connection between Key90:Component:UIQuestionModule:Port0 and Key91:Component:QuestionnaireLogger:Port1 -->
@@ -7567,20 +7594,261 @@
                     <Connection key="183" out_type="connector" out_key="49" signal_id="0" out_data_type="any" signal="output value 0" in_type="component" in_key="90" slot_id="1" in_data_type="any" slot="slot2"/>
                 </Condition>
             </Routine>
-            <Routine key="100" name="Lab_Idle" randomizer="0" informations="">
-                <Condition key="23" name="default" duration="10000" ui_scale="10" ui_size="1" sets_keys="0">
-                    <Action key="480" key_component="25" key_config="53" node_used="0" node_position="0 0">
+            <Routine key="378" name="Lab_PreFBI" randomizer="0" informations="">
+                <Condition key="96" name="default" duration="1000" ui_scale="10" ui_size="1" sets_keys="">
+                    <Action key="1749" key_component="25" key_config="53" node_used="0" node_position="0 0">
+                        <!--Component LabRoom with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
+                            <Interval t1="0" t2="100"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
+                            <Interval t1="0" t2="1000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="1750" key_component="30" key_config="63" node_used="0" node_position="0 0">
+                        <!--Component MeditationShelter with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
+                            <Interval t1="0" t2="1000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
+                            <Interval t1="0" t2="1000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="1751" key_component="11" key_config="23" node_used="0" node_position="0 0">
+                        <!--Component PostProcess with config LabScene -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
+                            <Interval t1="0" t2="1000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
+                            <Interval t1="0" t2="1000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="1752" key_component="6" key_config="13" node_used="0" node_position="0 0">
+                        <!--Component SkyBox with config Lab -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
+                            <Interval t1="0" t2="1000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
+                            <Interval t1="0" t2="1000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="1753" key_component="29" key_config="61" node_used="0" node_position="0 0">
+                        <!--Component SceneFader with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
+                            <Interval t1="0" t2="1000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
+                            <Interval t1="0" t2="1000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="1754" key_component="28" key_config="59" node_used="0" node_position="0 0">
+                        <!--Component OmniController with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
+                            <Interval t1="0" t2="1000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
+                            <Interval t1="0" t2="1000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="1755" key_component="48" key_config="107" node_used="0" node_position="0 0">
+                        <!--Component GraphicsHandler with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
+                            <Interval t1="0" t2="1000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
+                            <Interval t1="0" t2="1000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="1756" key_component="90" key_config="199" node_used="1" node_position="545.2 155.8">
+                        <!--Component UIQuestionModule with config 1answer -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
+                            <Interval t1="0" t2="1000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
+                            <Interval t1="0" t2="1000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="1757" key_component="91" key_config="201" node_used="1" node_position="772 119.8">
+                        <!--Component QuestionnaireLogger with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
+                            <Interval t1="0" t2="1000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
+                            <Interval t1="0" t2="1000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="1758" key_component="101" key_config="223" node_used="0" node_position="0 0">
+                        <!--Component Cursor with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
+                            <Interval t1="0" t2="1000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
+                            <Interval t1="0" t2="1000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="1759" key_component="34" key_config="73" node_used="0" node_position="0 0">
+                        <!--Component LabRoom_Front with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
+                            <Interval t1="0" t2="1000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
+                            <Interval t1="0" t2="1000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="1760" key_component="37" key_config="79" node_used="0" node_position="0 0">
+                        <!--Component LabRoom_Right with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
+                            <Interval t1="0" t2="1000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
+                            <Interval t1="0" t2="1000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="1761" key_component="36" key_config="77" node_used="0" node_position="0 0">
+                        <!--Component LabRoom_Left with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
+                            <Interval t1="0" t2="1000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
+                            <Interval t1="0" t2="1000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="1762" key_component="35" key_config="75" node_used="0" node_position="0 0">
+                        <!--Component LabRoom_Back with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
+                            <Interval t1="0" t2="1000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
+                            <Interval t1="0" t2="1000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="1763" key_component="42" key_config="89" node_used="0" node_position="0 0">
+                        <!--Component BackgroundMusic_Spatialized with config default -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
+                            <Interval t1="0" t2="1000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
+                            <Interval t1="0" t2="1000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="1764" key_component="43" key_config="93" node_used="0" node_position="0 0">
+                        <!--Component BackgroundMusic_Ambient with config default -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
+                            <Interval t1="0" t2="1000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
+                            <Interval t1="0" t2="1000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="1765" key_component="23" key_config="49" node_used="0" node_position="0 0">
+                        <!--Component FPPCamera with config 1PP -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
+                            <Interval t1="0" t2="1000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
+                            <Interval t1="0" t2="100"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="1766" key_component="70" key_config="156" node_used="0" node_position="0 0">
+                        <!--Component K4 manager with config sync -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
+                            <Interval t1="0" t2="1000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
+                            <Interval t1="0" t2="1000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="1767" key_component="71" key_config="158" node_used="0" node_position="0 0">
+                        <!--Component K4 direct multi clouds with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
+                            <Interval t1="0" t2="1000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
+                            <Interval t1="0" t2="1000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="1768" key_component="121" key_config="268" node_used="0" node_position="0 0">
+                        <!--Component QuestionModule_1answer with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
+                            <Interval t1="0" t2="1000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
+                            <Interval t1="0" t2="1000"/>
+                        </Timeline>
+                    </Action>
+                    <Connector key="179" name="String" node_position="-170.512 159.76">
+                        <Arg name="value" ui="Line text editor" value="Thank you! We will now go through a new task;Validate;" type="System.String" dim="0"/>
+                    </Connector>
+                    <Connector key="180" name="StartRoutine" node_position="48 384">
+                        <Arg name="value" ui="Label" value="" type="System.String" dim="0"/>
+                    </Connector>
+                    <Connector key="181" name="Delay" node_position="281 382">
+                        <Arg name="value" ui="Integer spin box" value="5" type="System.Int32" dim="0"/>
+                    </Connector>
+                    <!--Connection between Key90:Component:UIQuestionModule:Port0 and Key91:Component:QuestionnaireLogger:Port1 -->
+                    <Connection key="579" out_type="component" out_key="90" signal_id="0" out_data_type="any" signal="signal1" in_type="component" in_key="91" slot_id="1" in_data_type="any" slot="write line"/>
+                    <!--Connection between Key180:Connector:StartRoutine:Port0 and Key181:Connector:Delay:Port0 -->
+                    <Connection key="580" out_type="connector" out_key="180" signal_id="0" out_data_type="string" signal="output value 0" in_type="connector" in_key="181" slot_id="0" in_data_type="any" slot="input value 0"/>
+                    <!--Connection between Key181:Connector:Delay:Port0 and Key90:Component:UIQuestionModule:Port1 -->
+                    <Connection key="581" out_type="connector" out_key="181" signal_id="0" out_data_type="any" signal="output value 0" in_type="component" in_key="90" slot_id="1" in_data_type="any" slot="slot2"/>
+                    <!--Connection between Key179:Connector:String:Port0 and Key90:Component:UIQuestionModule:Port0 -->
+                    <Connection key="582" out_type="connector" out_key="179" signal_id="0" out_data_type="string" signal="output value 0" in_type="component" in_key="90" slot_id="0" in_data_type="any" slot="slot1"/>
+                </Condition>
+            </Routine>
+            <Routine key="370" name="FBI" randomizer="1" informations="">
+                <Condition key="92" name="default" duration="100" ui_scale="10" ui_size="1" sets_keys=""/>
+            </Routine>
+            <Routine key="187" name="Lab_Idle" randomizer="0" informations="">
+                <Condition key="63" name="asynchroneous" duration="10000" ui_scale="10" ui_size="1" sets_keys="5">
+                    <Action key="1107" key_component="25" key_config="53" node_used="0" node_position="0 0">
                         <!--Component LabRoom with config standard -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
                             <Interval t1="0" t2="10000"/>
                         </Timeline>
-                        <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
+                        <Timeline type="Visibiliy"/>
                     </Action>
-                    <Action key="481" key_component="30" key_config="63" node_used="0" node_position="0 0">
+                    <Action key="1108" key_component="30" key_config="63" node_used="0" node_position="0 0">
                         <!--Component MeditationShelter with config standard -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
@@ -7591,7 +7859,7 @@
                             <Interval t1="0" t2="10000"/>
                         </Timeline>
                     </Action>
-                    <Action key="482" key_component="11" key_config="23" node_used="0" node_position="0 0">
+                    <Action key="1109" key_component="11" key_config="23" node_used="0" node_position="0 0">
                         <!--Component PostProcess with config LabScene -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
@@ -7602,8 +7870,8 @@
                             <Interval t1="0" t2="10000"/>
                         </Timeline>
                     </Action>
-                    <Action key="483" key_component="6" key_config="13" node_used="0" node_position="0 0">
-                        <!--Component SkyBox with config Lab -->
+                    <Action key="1110" key_component="6" key_config="264" node_used="0" node_position="0 0">
+                        <!--Component SkyBox with config FBI -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
                             <Interval t1="0" t2="10000"/>
@@ -7613,7 +7881,7 @@
                             <Interval t1="0" t2="10000"/>
                         </Timeline>
                     </Action>
-                    <Action key="484" key_component="29" key_config="61" node_used="0" node_position="0 0">
+                    <Action key="1111" key_component="29" key_config="61" node_used="0" node_position="0 0">
                         <!--Component SceneFader with config standard -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
@@ -7624,7 +7892,7 @@
                             <Interval t1="0" t2="10000"/>
                         </Timeline>
                     </Action>
-                    <Action key="485" key_component="28" key_config="59" node_used="0" node_position="0 0">
+                    <Action key="1112" key_component="28" key_config="59" node_used="0" node_position="0 0">
                         <!--Component OmniController with config standard -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
@@ -7635,7 +7903,7 @@
                             <Interval t1="0" t2="10000"/>
                         </Timeline>
                     </Action>
-                    <Action key="486" key_component="48" key_config="107" node_used="0" node_position="0 0">
+                    <Action key="1113" key_component="48" key_config="107" node_used="0" node_position="0 0">
                         <!--Component GraphicsHandler with config standard -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
@@ -7646,7 +7914,7 @@
                             <Interval t1="0" t2="10000"/>
                         </Timeline>
                     </Action>
-                    <Action key="487" key_component="34" key_config="73" node_used="0" node_position="0 0">
+                    <Action key="1114" key_component="34" key_config="73" node_used="0" node_position="0 0">
                         <!--Component LabRoom_Front with config standard -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
@@ -7657,7 +7925,7 @@
                             <Interval t1="0" t2="10000"/>
                         </Timeline>
                     </Action>
-                    <Action key="488" key_component="37" key_config="79" node_used="0" node_position="0 0">
+                    <Action key="1115" key_component="37" key_config="79" node_used="0" node_position="0 0">
                         <!--Component LabRoom_Right with config standard -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
@@ -7668,7 +7936,7 @@
                             <Interval t1="0" t2="10000"/>
                         </Timeline>
                     </Action>
-                    <Action key="489" key_component="36" key_config="77" node_used="0" node_position="0 0">
+                    <Action key="1116" key_component="36" key_config="77" node_used="0" node_position="0 0">
                         <!--Component LabRoom_Left with config standard -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
@@ -7679,7 +7947,7 @@
                             <Interval t1="0" t2="10000"/>
                         </Timeline>
                     </Action>
-                    <Action key="490" key_component="35" key_config="75" node_used="0" node_position="0 0">
+                    <Action key="1117" key_component="35" key_config="75" node_used="0" node_position="0 0">
                         <!--Component LabRoom_Back with config standard -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
@@ -7690,7 +7958,7 @@
                             <Interval t1="0" t2="10000"/>
                         </Timeline>
                     </Action>
-                    <Action key="491" key_component="42" key_config="89" node_used="0" node_position="0 0">
+                    <Action key="1118" key_component="42" key_config="89" node_used="0" node_position="0 0">
                         <!--Component BackgroundMusic_Spatialized with config default -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
@@ -7701,7 +7969,7 @@
                             <Interval t1="0" t2="10000"/>
                         </Timeline>
                     </Action>
-                    <Action key="492" key_component="43" key_config="93" node_used="0" node_position="0 0">
+                    <Action key="1119" key_component="43" key_config="93" node_used="0" node_position="0 0">
                         <!--Component BackgroundMusic_Ambient with config default -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
@@ -7712,7 +7980,7 @@
                             <Interval t1="0" t2="10000"/>
                         </Timeline>
                     </Action>
-                    <Action key="493" key_component="23" key_config="49" node_used="0" node_position="0 0">
+                    <Action key="1120" key_component="23" key_config="49" node_used="0" node_position="0 0">
                         <!--Component FPPCamera with config 1PP -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
@@ -7723,8 +7991,8 @@
                             <Interval t1="0" t2="10000"/>
                         </Timeline>
                     </Action>
-                    <Action key="495" key_component="70" key_config="156" node_used="0" node_position="0 0">
-                        <!--Component K4 manager with config sync -->
+                    <Action key="1121" key_component="70" key_config="247" node_used="0" node_position="0 0">
+                        <!--Component K4 manager with config async -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
                             <Interval t1="0" t2="10000"/>
@@ -7734,7 +8002,7 @@
                             <Interval t1="0" t2="10000"/>
                         </Timeline>
                     </Action>
-                    <Action key="496" key_component="71" key_config="158" node_used="0" node_position="0 0">
+                    <Action key="1122" key_component="71" key_config="158" node_used="0" node_position="0 0">
                         <!--Component K4 direct multi clouds with config standard -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
@@ -7746,9 +8014,181 @@
                         </Timeline>
                     </Action>
                 </Condition>
-            </Routine>
-            <Routine key="370" name="FBI" randomizer="1" informations="">
-                <Condition key="92" name="default" duration="100" ui_scale="10" ui_size="1" sets_keys=""/>
+                <Condition key="64" name="synchroneous" duration="10000" ui_scale="10" ui_size="1" sets_keys="4">
+                    <Action key="1770" key_component="25" key_config="53" node_used="0" node_position="0 0">
+                        <!--Component LabRoom with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy"/>
+                    </Action>
+                    <Action key="1124" key_component="30" key_config="63" node_used="0" node_position="0 0">
+                        <!--Component MeditationShelter with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="1125" key_component="11" key_config="23" node_used="0" node_position="0 0">
+                        <!--Component PostProcess with config LabScene -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="1126" key_component="6" key_config="264" node_used="0" node_position="0 0">
+                        <!--Component SkyBox with config FBI -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="1127" key_component="29" key_config="61" node_used="0" node_position="0 0">
+                        <!--Component SceneFader with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="1128" key_component="28" key_config="59" node_used="0" node_position="0 0">
+                        <!--Component OmniController with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="1129" key_component="48" key_config="107" node_used="0" node_position="0 0">
+                        <!--Component GraphicsHandler with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="1130" key_component="34" key_config="73" node_used="0" node_position="0 0">
+                        <!--Component LabRoom_Front with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="1131" key_component="37" key_config="79" node_used="0" node_position="0 0">
+                        <!--Component LabRoom_Right with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="1132" key_component="36" key_config="77" node_used="0" node_position="0 0">
+                        <!--Component LabRoom_Left with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="1133" key_component="35" key_config="75" node_used="0" node_position="0 0">
+                        <!--Component LabRoom_Back with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="1134" key_component="42" key_config="89" node_used="0" node_position="0 0">
+                        <!--Component BackgroundMusic_Spatialized with config default -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="1135" key_component="43" key_config="93" node_used="0" node_position="0 0">
+                        <!--Component BackgroundMusic_Ambient with config default -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="1136" key_component="23" key_config="49" node_used="0" node_position="0 0">
+                        <!--Component FPPCamera with config 1PP -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="1137" key_component="70" key_config="156" node_used="0" node_position="0 0">
+                        <!--Component K4 manager with config sync -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="1138" key_component="71" key_config="158" node_used="0" node_position="0 0">
+                        <!--Component K4 direct multi clouds with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                    </Action>
+                </Condition>
             </Routine>
             <Routine key="179" name="Lab_FBIOut" randomizer="0" informations="">
                 <Condition key="57" name="asynchroneous" duration="10000" ui_scale="10" ui_size="1" sets_keys="5">
@@ -7961,10 +8401,7 @@
                             <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
                             <Interval t1="0" t2="10000"/>
                         </Timeline>
-                        <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
+                        <Timeline type="Visibiliy"/>
                     </Action>
                     <Action key="1025" key_component="30" key_config="63" node_used="0" node_position="0 0">
                         <!--Component MeditationShelter with config standard -->
@@ -7988,8 +8425,8 @@
                             <Interval t1="0" t2="10000"/>
                         </Timeline>
                     </Action>
-                    <Action key="1027" key_component="6" key_config="13" node_used="0" node_position="0 0">
-                        <!--Component SkyBox with config Lab -->
+                    <Action key="1027" key_component="6" key_config="264" node_used="0" node_position="0 0">
+                        <!--Component SkyBox with config FBI -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
                             <Interval t1="0" t2="10000"/>
@@ -8148,8 +8585,8 @@
                     <Connector key="75" name="Delay" node_position="756 263">
                         <Arg name="value" ui="Integer spin box" value="500" type="System.Int32" dim="0"/>
                     </Connector>
-                    <Connector key="76" name="Delay" node_position="768.8 106.16">
-                        <Arg name="value" ui="Integer spin box" value="    0" type="System.Int32" dim="0"/>
+                    <Connector key="76" name="Delay" node_position="758.8 112.16">
+                        <Arg name="value" ui="Integer spin box" value="500" type="System.Int32" dim="0"/>
                     </Connector>
                     <!--Connection between Key48:Component:GraphicsHandler:Port0 and Key75:Connector:Delay:Port0 -->
                     <Connection key="244" out_type="component" out_key="48" signal_id="0" out_data_type="any" signal="signal1" in_type="connector" in_key="75" slot_id="0" in_data_type="any" slot="input value 0"/>
@@ -8161,1123 +8598,354 @@
                     <Connection key="247" out_type="connector" out_key="76" signal_id="0" out_data_type="any" signal="output value 0" in_type="component" in_key="29" slot_id="0" in_data_type="any" slot="slot1"/>
                 </Condition>
             </Routine>
-            <Routine key="185" name="Lab_Idle" randomizer="0" informations="">
-                <Condition key="59" name="asynchroneous" duration="10000" ui_scale="10" ui_size="1" sets_keys="5">
+            <Routine key="185" name="Lab_IdleOut" randomizer="0" informations="">
+                <Condition key="59" name="asynchroneous" duration="5" ui_scale="1" ui_size="1" sets_keys="5">
                     <Action key="1041" key_component="25" key_config="53" node_used="0" node_position="0 0">
                         <!--Component LabRoom with config standard -->
                         <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
+                            <!--Starts at 0(s) and ends at 5s(), duration: 5(s) -->
+                            <Interval t1="0" t2="5"/>
                         </Timeline>
                         <Timeline type="Visibiliy"/>
                     </Action>
                     <Action key="1042" key_component="30" key_config="63" node_used="0" node_position="0 0">
                         <!--Component MeditationShelter with config standard -->
                         <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
+                            <!--Starts at 0(s) and ends at 5s(), duration: 5(s) -->
+                            <Interval t1="0" t2="5"/>
                         </Timeline>
                         <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
+                            <!--Starts at 0(s) and ends at 5s(), duration: 5(s) -->
+                            <Interval t1="0" t2="5"/>
                         </Timeline>
                     </Action>
                     <Action key="1043" key_component="11" key_config="23" node_used="0" node_position="0 0">
                         <!--Component PostProcess with config LabScene -->
                         <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
+                            <!--Starts at 0(s) and ends at 5s(), duration: 5(s) -->
+                            <Interval t1="0" t2="5"/>
                         </Timeline>
                         <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
+                            <!--Starts at 0(s) and ends at 5s(), duration: 5(s) -->
+                            <Interval t1="0" t2="5"/>
                         </Timeline>
                     </Action>
                     <Action key="1044" key_component="6" key_config="264" node_used="0" node_position="0 0">
                         <!--Component SkyBox with config FBI -->
                         <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
+                            <!--Starts at 0(s) and ends at 5s(), duration: 5(s) -->
+                            <Interval t1="0" t2="5"/>
                         </Timeline>
                         <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
+                            <!--Starts at 0(s) and ends at 5s(), duration: 5(s) -->
+                            <Interval t1="0" t2="5"/>
                         </Timeline>
                     </Action>
                     <Action key="1045" key_component="29" key_config="61" node_used="0" node_position="0 0">
                         <!--Component SceneFader with config standard -->
                         <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
+                            <!--Starts at 0(s) and ends at 5s(), duration: 5(s) -->
+                            <Interval t1="0" t2="5"/>
                         </Timeline>
                         <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
+                            <!--Starts at 0(s) and ends at 5s(), duration: 5(s) -->
+                            <Interval t1="0" t2="5"/>
                         </Timeline>
                     </Action>
                     <Action key="1046" key_component="28" key_config="59" node_used="0" node_position="0 0">
                         <!--Component OmniController with config standard -->
                         <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
+                            <!--Starts at 0(s) and ends at 5s(), duration: 5(s) -->
+                            <Interval t1="0" t2="5"/>
                         </Timeline>
                         <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
+                            <!--Starts at 0(s) and ends at 5s(), duration: 5(s) -->
+                            <Interval t1="0" t2="5"/>
                         </Timeline>
                     </Action>
                     <Action key="1047" key_component="48" key_config="107" node_used="0" node_position="0 0">
                         <!--Component GraphicsHandler with config standard -->
                         <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
+                            <!--Starts at 0(s) and ends at 5s(), duration: 5(s) -->
+                            <Interval t1="0" t2="5"/>
                         </Timeline>
                         <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
+                            <!--Starts at 0(s) and ends at 5s(), duration: 5(s) -->
+                            <Interval t1="0" t2="5"/>
                         </Timeline>
                     </Action>
                     <Action key="1048" key_component="34" key_config="73" node_used="0" node_position="0 0">
                         <!--Component LabRoom_Front with config standard -->
                         <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
+                            <!--Starts at 0(s) and ends at 5s(), duration: 5(s) -->
+                            <Interval t1="0" t2="5"/>
                         </Timeline>
                         <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
+                            <!--Starts at 0(s) and ends at 5s(), duration: 5(s) -->
+                            <Interval t1="0" t2="5"/>
                         </Timeline>
                     </Action>
                     <Action key="1049" key_component="37" key_config="79" node_used="0" node_position="0 0">
                         <!--Component LabRoom_Right with config standard -->
                         <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
+                            <!--Starts at 0(s) and ends at 5s(), duration: 5(s) -->
+                            <Interval t1="0" t2="5"/>
                         </Timeline>
                         <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
+                            <!--Starts at 0(s) and ends at 5s(), duration: 5(s) -->
+                            <Interval t1="0" t2="5"/>
                         </Timeline>
                     </Action>
                     <Action key="1050" key_component="36" key_config="77" node_used="0" node_position="0 0">
                         <!--Component LabRoom_Left with config standard -->
                         <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
+                            <!--Starts at 0(s) and ends at 5s(), duration: 5(s) -->
+                            <Interval t1="0" t2="5"/>
                         </Timeline>
                         <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
+                            <!--Starts at 0(s) and ends at 5s(), duration: 5(s) -->
+                            <Interval t1="0" t2="5"/>
                         </Timeline>
                     </Action>
                     <Action key="1051" key_component="35" key_config="75" node_used="0" node_position="0 0">
                         <!--Component LabRoom_Back with config standard -->
                         <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
+                            <!--Starts at 0(s) and ends at 5s(), duration: 5(s) -->
+                            <Interval t1="0" t2="5"/>
                         </Timeline>
                         <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
+                            <!--Starts at 0(s) and ends at 5s(), duration: 5(s) -->
+                            <Interval t1="0" t2="5"/>
                         </Timeline>
                     </Action>
                     <Action key="1052" key_component="42" key_config="89" node_used="0" node_position="0 0">
                         <!--Component BackgroundMusic_Spatialized with config default -->
                         <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
+                            <!--Starts at 0(s) and ends at 5s(), duration: 5(s) -->
+                            <Interval t1="0" t2="5"/>
                         </Timeline>
                         <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
+                            <!--Starts at 0(s) and ends at 5s(), duration: 5(s) -->
+                            <Interval t1="0" t2="5"/>
                         </Timeline>
                     </Action>
                     <Action key="1053" key_component="43" key_config="93" node_used="0" node_position="0 0">
                         <!--Component BackgroundMusic_Ambient with config default -->
                         <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
+                            <!--Starts at 0(s) and ends at 5s(), duration: 5(s) -->
+                            <Interval t1="0" t2="5"/>
                         </Timeline>
                         <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
+                            <!--Starts at 0(s) and ends at 5s(), duration: 5(s) -->
+                            <Interval t1="0" t2="5"/>
                         </Timeline>
                     </Action>
                     <Action key="1054" key_component="23" key_config="49" node_used="0" node_position="0 0">
                         <!--Component FPPCamera with config 1PP -->
                         <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
+                            <!--Starts at 0(s) and ends at 5s(), duration: 5(s) -->
+                            <Interval t1="0" t2="5"/>
                         </Timeline>
                         <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
+                            <!--Starts at 0(s) and ends at 5s(), duration: 5(s) -->
+                            <Interval t1="0" t2="5"/>
                         </Timeline>
                     </Action>
                     <Action key="1055" key_component="70" key_config="247" node_used="0" node_position="0 0">
                         <!--Component K4 manager with config async -->
                         <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
+                            <!--Starts at 0(s) and ends at 5s(), duration: 5(s) -->
+                            <Interval t1="0" t2="5"/>
                         </Timeline>
                         <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
+                            <!--Starts at 0(s) and ends at 5s(), duration: 5(s) -->
+                            <Interval t1="0" t2="5"/>
                         </Timeline>
                     </Action>
                     <Action key="1056" key_component="71" key_config="158" node_used="0" node_position="0 0">
                         <!--Component K4 direct multi clouds with config standard -->
                         <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
+                            <!--Starts at 0(s) and ends at 5s(), duration: 5(s) -->
+                            <Interval t1="0" t2="5"/>
                         </Timeline>
                         <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
+                            <!--Starts at 0(s) and ends at 5s(), duration: 5(s) -->
+                            <Interval t1="0" t2="5"/>
                         </Timeline>
                     </Action>
                 </Condition>
-                <Condition key="60" name="synchroneous" duration="10000" ui_scale="10" ui_size="1" sets_keys="4">
+                <Condition key="60" name="synchroneous" duration="5" ui_scale="1" ui_size="1" sets_keys="4">
                     <Action key="1057" key_component="25" key_config="53" node_used="0" node_position="0 0">
                         <!--Component LabRoom with config standard -->
                         <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
+                            <!--Starts at 0(s) and ends at 5s(), duration: 5(s) -->
+                            <Interval t1="0" t2="5"/>
                         </Timeline>
-                        <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
+                        <Timeline type="Visibiliy"/>
                     </Action>
                     <Action key="1058" key_component="30" key_config="63" node_used="0" node_position="0 0">
                         <!--Component MeditationShelter with config standard -->
                         <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
+                            <!--Starts at 0(s) and ends at 5s(), duration: 5(s) -->
+                            <Interval t1="0" t2="5"/>
                         </Timeline>
                         <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
+                            <!--Starts at 0(s) and ends at 5s(), duration: 5(s) -->
+                            <Interval t1="0" t2="5"/>
                         </Timeline>
                     </Action>
                     <Action key="1059" key_component="11" key_config="23" node_used="0" node_position="0 0">
                         <!--Component PostProcess with config LabScene -->
                         <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
+                            <!--Starts at 0(s) and ends at 5s(), duration: 5(s) -->
+                            <Interval t1="0" t2="5"/>
                         </Timeline>
                         <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
+                            <!--Starts at 0(s) and ends at 5s(), duration: 5(s) -->
+                            <Interval t1="0" t2="5"/>
                         </Timeline>
                     </Action>
-                    <Action key="1060" key_component="6" key_config="13" node_used="0" node_position="0 0">
-                        <!--Component SkyBox with config Lab -->
+                    <Action key="1060" key_component="6" key_config="264" node_used="0" node_position="0 0">
+                        <!--Component SkyBox with config FBI -->
                         <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
+                            <!--Starts at 0(s) and ends at 5s(), duration: 5(s) -->
+                            <Interval t1="0" t2="5"/>
                         </Timeline>
                         <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
+                            <!--Starts at 0(s) and ends at 5s(), duration: 5(s) -->
+                            <Interval t1="0" t2="5"/>
                         </Timeline>
                     </Action>
                     <Action key="1061" key_component="29" key_config="61" node_used="0" node_position="0 0">
                         <!--Component SceneFader with config standard -->
                         <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
+                            <!--Starts at 0(s) and ends at 5s(), duration: 5(s) -->
+                            <Interval t1="0" t2="5"/>
                         </Timeline>
                         <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
+                            <!--Starts at 0(s) and ends at 5s(), duration: 5(s) -->
+                            <Interval t1="0" t2="5"/>
                         </Timeline>
                     </Action>
                     <Action key="1062" key_component="28" key_config="59" node_used="0" node_position="0 0">
                         <!--Component OmniController with config standard -->
                         <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
+                            <!--Starts at 0(s) and ends at 5s(), duration: 5(s) -->
+                            <Interval t1="0" t2="5"/>
                         </Timeline>
                         <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
+                            <!--Starts at 0(s) and ends at 5s(), duration: 5(s) -->
+                            <Interval t1="0" t2="5"/>
                         </Timeline>
                     </Action>
                     <Action key="1063" key_component="48" key_config="107" node_used="0" node_position="0 0">
                         <!--Component GraphicsHandler with config standard -->
                         <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
+                            <!--Starts at 0(s) and ends at 5s(), duration: 5(s) -->
+                            <Interval t1="0" t2="5"/>
                         </Timeline>
                         <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
+                            <!--Starts at 0(s) and ends at 5s(), duration: 5(s) -->
+                            <Interval t1="0" t2="5"/>
                         </Timeline>
                     </Action>
                     <Action key="1064" key_component="34" key_config="73" node_used="0" node_position="0 0">
                         <!--Component LabRoom_Front with config standard -->
                         <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
+                            <!--Starts at 0(s) and ends at 5s(), duration: 5(s) -->
+                            <Interval t1="0" t2="5"/>
                         </Timeline>
                         <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
+                            <!--Starts at 0(s) and ends at 5s(), duration: 5(s) -->
+                            <Interval t1="0" t2="5"/>
                         </Timeline>
                     </Action>
                     <Action key="1065" key_component="37" key_config="79" node_used="0" node_position="0 0">
                         <!--Component LabRoom_Right with config standard -->
                         <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
+                            <!--Starts at 0(s) and ends at 5s(), duration: 5(s) -->
+                            <Interval t1="0" t2="5"/>
                         </Timeline>
                         <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
+                            <!--Starts at 0(s) and ends at 5s(), duration: 5(s) -->
+                            <Interval t1="0" t2="5"/>
                         </Timeline>
                     </Action>
                     <Action key="1066" key_component="36" key_config="77" node_used="0" node_position="0 0">
                         <!--Component LabRoom_Left with config standard -->
                         <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
+                            <!--Starts at 0(s) and ends at 5s(), duration: 5(s) -->
+                            <Interval t1="0" t2="5"/>
                         </Timeline>
                         <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
+                            <!--Starts at 0(s) and ends at 5s(), duration: 5(s) -->
+                            <Interval t1="0" t2="5"/>
                         </Timeline>
                     </Action>
                     <Action key="1067" key_component="35" key_config="75" node_used="0" node_position="0 0">
                         <!--Component LabRoom_Back with config standard -->
                         <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
+                            <!--Starts at 0(s) and ends at 5s(), duration: 5(s) -->
+                            <Interval t1="0" t2="5"/>
                         </Timeline>
                         <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
+                            <!--Starts at 0(s) and ends at 5s(), duration: 5(s) -->
+                            <Interval t1="0" t2="5"/>
                         </Timeline>
                     </Action>
                     <Action key="1068" key_component="42" key_config="89" node_used="0" node_position="0 0">
                         <!--Component BackgroundMusic_Spatialized with config default -->
                         <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
+                            <!--Starts at 0(s) and ends at 5s(), duration: 5(s) -->
+                            <Interval t1="0" t2="5"/>
                         </Timeline>
                         <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
+                            <!--Starts at 0(s) and ends at 5s(), duration: 5(s) -->
+                            <Interval t1="0" t2="5"/>
                         </Timeline>
                     </Action>
                     <Action key="1069" key_component="43" key_config="93" node_used="0" node_position="0 0">
                         <!--Component BackgroundMusic_Ambient with config default -->
                         <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
+                            <!--Starts at 0(s) and ends at 5s(), duration: 5(s) -->
+                            <Interval t1="0" t2="5"/>
                         </Timeline>
                         <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
+                            <!--Starts at 0(s) and ends at 5s(), duration: 5(s) -->
+                            <Interval t1="0" t2="5"/>
                         </Timeline>
                     </Action>
                     <Action key="1070" key_component="23" key_config="49" node_used="0" node_position="0 0">
                         <!--Component FPPCamera with config 1PP -->
                         <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
+                            <!--Starts at 0(s) and ends at 5s(), duration: 5(s) -->
+                            <Interval t1="0" t2="5"/>
                         </Timeline>
                         <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
+                            <!--Starts at 0(s) and ends at 5s(), duration: 5(s) -->
+                            <Interval t1="0" t2="5"/>
                         </Timeline>
                     </Action>
                     <Action key="1071" key_component="70" key_config="156" node_used="0" node_position="0 0">
                         <!--Component K4 manager with config sync -->
                         <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
+                            <!--Starts at 0(s) and ends at 5s(), duration: 5(s) -->
+                            <Interval t1="0" t2="5"/>
                         </Timeline>
                         <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
+                            <!--Starts at 0(s) and ends at 5s(), duration: 5(s) -->
+                            <Interval t1="0" t2="5"/>
                         </Timeline>
                     </Action>
                     <Action key="1072" key_component="71" key_config="158" node_used="0" node_position="0 0">
                         <!--Component K4 direct multi clouds with config standard -->
                         <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
+                            <!--Starts at 0(s) and ends at 5s(), duration: 5(s) -->
+                            <Interval t1="0" t2="5"/>
                         </Timeline>
                         <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                    </Action>
-                </Condition>
-            </Routine>
-            <Routine key="177" name="Lab_FBIIn" randomizer="0" informations="">
-                <Condition key="61" name="asynchroneous" duration="10000" ui_scale="10" ui_size="1" sets_keys="5">
-                    <Action key="1073" key_component="25" key_config="53" node_used="0" node_position="0 0">
-                        <!--Component LabRoom with config standard -->
-                        <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                        <Timeline type="Visibiliy"/>
-                    </Action>
-                    <Action key="1074" key_component="30" key_config="63" node_used="0" node_position="0 0">
-                        <!--Component MeditationShelter with config standard -->
-                        <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                        <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                    </Action>
-                    <Action key="1075" key_component="11" key_config="23" node_used="0" node_position="0 0">
-                        <!--Component PostProcess with config LabScene -->
-                        <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                        <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                    </Action>
-                    <Action key="1076" key_component="6" key_config="264" node_used="0" node_position="0 0">
-                        <!--Component SkyBox with config FBI -->
-                        <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                        <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                    </Action>
-                    <Action key="1077" key_component="29" key_config="61" node_used="1" node_position="1008 59">
-                        <!--Component SceneFader with config standard -->
-                        <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                        <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                    </Action>
-                    <Action key="1078" key_component="28" key_config="59" node_used="0" node_position="0 0">
-                        <!--Component OmniController with config standard -->
-                        <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                        <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                    </Action>
-                    <Action key="1079" key_component="48" key_config="107" node_used="1" node_position="511 305">
-                        <!--Component GraphicsHandler with config standard -->
-                        <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                        <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                    </Action>
-                    <Action key="1080" key_component="34" key_config="73" node_used="0" node_position="0 0">
-                        <!--Component LabRoom_Front with config standard -->
-                        <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                        <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                    </Action>
-                    <Action key="1081" key_component="37" key_config="79" node_used="0" node_position="0 0">
-                        <!--Component LabRoom_Right with config standard -->
-                        <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                        <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                    </Action>
-                    <Action key="1082" key_component="36" key_config="77" node_used="0" node_position="0 0">
-                        <!--Component LabRoom_Left with config standard -->
-                        <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                        <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                    </Action>
-                    <Action key="1083" key_component="35" key_config="75" node_used="0" node_position="0 0">
-                        <!--Component LabRoom_Back with config standard -->
-                        <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                        <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                    </Action>
-                    <Action key="1084" key_component="42" key_config="89" node_used="0" node_position="0 0">
-                        <!--Component BackgroundMusic_Spatialized with config default -->
-                        <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                        <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                    </Action>
-                    <Action key="1085" key_component="43" key_config="93" node_used="0" node_position="0 0">
-                        <!--Component BackgroundMusic_Ambient with config default -->
-                        <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                        <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                    </Action>
-                    <Action key="1086" key_component="23" key_config="49" node_used="0" node_position="0 0">
-                        <!--Component FPPCamera with config 1PP -->
-                        <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                        <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                    </Action>
-                    <Action key="1087" key_component="70" key_config="247" node_used="0" node_position="0 0">
-                        <!--Component K4 manager with config async -->
-                        <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                        <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                    </Action>
-                    <Action key="1088" key_component="71" key_config="158" node_used="0" node_position="0 0">
-                        <!--Component K4 direct multi clouds with config standard -->
-                        <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                        <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                    </Action>
-                    <Action key="1089" key_component="102" key_config="225" node_used="0" node_position="0 0">
-                        <!--Component Blend fade viewer with config standard -->
-                        <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                        <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                    </Action>
-                    <Connector key="86" name="StartRoutine" node_position="525 52">
-                        <Arg name="value" ui="Label" value="" type="System.String" dim="0"/>
-                    </Connector>
-                    <Connector key="87" name="Delay" node_position="752 63">
-                        <Arg name="value" ui="Integer spin box" value="500" type="System.Int32" dim="0"/>
-                    </Connector>
-                    <Connector key="88" name="Delay" node_position="754 224">
-                        <Arg name="value" ui="Integer spin box" value="500" type="System.Int32" dim="0"/>
-                    </Connector>
-                    <!--Connection between Key86:Connector:StartRoutine:Port0 and Key87:Connector:Delay:Port0 -->
-                    <Connection key="276" out_type="connector" out_key="86" signal_id="0" out_data_type="string" signal="output value 0" in_type="connector" in_key="87" slot_id="0" in_data_type="any" slot="input value 0"/>
-                    <!--Connection between Key48:Component:GraphicsHandler:Port0 and Key88:Connector:Delay:Port0 -->
-                    <Connection key="277" out_type="component" out_key="48" signal_id="0" out_data_type="any" signal="signal1" in_type="connector" in_key="88" slot_id="0" in_data_type="any" slot="input value 0"/>
-                    <!--Connection between Key87:Connector:Delay:Port0 and Key29:Component:SceneFader:Port1 -->
-                    <Connection key="278" out_type="connector" out_key="87" signal_id="0" out_data_type="any" signal="output value 0" in_type="component" in_key="29" slot_id="1" in_data_type="any" slot="slot2"/>
-                    <!--Connection between Key88:Connector:Delay:Port0 and Key29:Component:SceneFader:Port2 -->
-                    <Connection key="279" out_type="connector" out_key="88" signal_id="0" out_data_type="any" signal="output value 0" in_type="component" in_key="29" slot_id="2" in_data_type="any" slot="slot3"/>
-                </Condition>
-                <Condition key="62" name="synchroneous" duration="10000" ui_scale="10" ui_size="1" sets_keys="4">
-                    <Action key="1090" key_component="25" key_config="53" node_used="0" node_position="0 0">
-                        <!--Component LabRoom with config standard -->
-                        <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                        <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                    </Action>
-                    <Action key="1091" key_component="30" key_config="63" node_used="0" node_position="0 0">
-                        <!--Component MeditationShelter with config standard -->
-                        <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                        <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                    </Action>
-                    <Action key="1092" key_component="11" key_config="23" node_used="0" node_position="0 0">
-                        <!--Component PostProcess with config LabScene -->
-                        <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                        <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                    </Action>
-                    <Action key="1093" key_component="6" key_config="13" node_used="0" node_position="0 0">
-                        <!--Component SkyBox with config Lab -->
-                        <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                        <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                    </Action>
-                    <Action key="1094" key_component="29" key_config="61" node_used="1" node_position="1008 59">
-                        <!--Component SceneFader with config standard -->
-                        <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                        <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                    </Action>
-                    <Action key="1095" key_component="28" key_config="59" node_used="0" node_position="0 0">
-                        <!--Component OmniController with config standard -->
-                        <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                        <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                    </Action>
-                    <Action key="1096" key_component="48" key_config="107" node_used="1" node_position="511 305">
-                        <!--Component GraphicsHandler with config standard -->
-                        <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                        <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                    </Action>
-                    <Action key="1097" key_component="34" key_config="73" node_used="0" node_position="0 0">
-                        <!--Component LabRoom_Front with config standard -->
-                        <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                        <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                    </Action>
-                    <Action key="1098" key_component="37" key_config="79" node_used="0" node_position="0 0">
-                        <!--Component LabRoom_Right with config standard -->
-                        <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                        <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                    </Action>
-                    <Action key="1099" key_component="36" key_config="77" node_used="0" node_position="0 0">
-                        <!--Component LabRoom_Left with config standard -->
-                        <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                        <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                    </Action>
-                    <Action key="1100" key_component="35" key_config="75" node_used="0" node_position="0 0">
-                        <!--Component LabRoom_Back with config standard -->
-                        <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                        <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                    </Action>
-                    <Action key="1101" key_component="42" key_config="89" node_used="0" node_position="0 0">
-                        <!--Component BackgroundMusic_Spatialized with config default -->
-                        <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                        <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                    </Action>
-                    <Action key="1102" key_component="43" key_config="93" node_used="0" node_position="0 0">
-                        <!--Component BackgroundMusic_Ambient with config default -->
-                        <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                        <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                    </Action>
-                    <Action key="1103" key_component="23" key_config="49" node_used="0" node_position="0 0">
-                        <!--Component FPPCamera with config 1PP -->
-                        <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                        <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                    </Action>
-                    <Action key="1104" key_component="70" key_config="156" node_used="0" node_position="0 0">
-                        <!--Component K4 manager with config sync -->
-                        <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                        <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                    </Action>
-                    <Action key="1105" key_component="71" key_config="158" node_used="0" node_position="0 0">
-                        <!--Component K4 direct multi clouds with config standard -->
-                        <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                        <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                    </Action>
-                    <Action key="1106" key_component="102" key_config="225" node_used="0" node_position="0 0">
-                        <!--Component Blend fade viewer with config standard -->
-                        <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                        <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                    </Action>
-                    <Connector key="89" name="StartRoutine" node_position="525 52">
-                        <Arg name="value" ui="Label" value="" type="System.String" dim="0"/>
-                    </Connector>
-                    <Connector key="90" name="Delay" node_position="752 63">
-                        <Arg name="value" ui="Integer spin box" value="500" type="System.Int32" dim="0"/>
-                    </Connector>
-                    <Connector key="91" name="Delay" node_position="754 224">
-                        <Arg name="value" ui="Integer spin box" value="500" type="System.Int32" dim="0"/>
-                    </Connector>
-                    <!--Connection between Key89:Connector:StartRoutine:Port0 and Key90:Connector:Delay:Port0 -->
-                    <Connection key="284" out_type="connector" out_key="89" signal_id="0" out_data_type="string" signal="output value 0" in_type="connector" in_key="90" slot_id="0" in_data_type="any" slot="input value 0"/>
-                    <!--Connection between Key48:Component:GraphicsHandler:Port0 and Key91:Connector:Delay:Port0 -->
-                    <Connection key="285" out_type="component" out_key="48" signal_id="0" out_data_type="any" signal="signal1" in_type="connector" in_key="91" slot_id="0" in_data_type="any" slot="input value 0"/>
-                    <!--Connection between Key90:Connector:Delay:Port0 and Key29:Component:SceneFader:Port1 -->
-                    <Connection key="286" out_type="connector" out_key="90" signal_id="0" out_data_type="any" signal="output value 0" in_type="component" in_key="29" slot_id="1" in_data_type="any" slot="slot2"/>
-                    <!--Connection between Key91:Connector:Delay:Port0 and Key29:Component:SceneFader:Port2 -->
-                    <Connection key="287" out_type="connector" out_key="91" signal_id="0" out_data_type="any" signal="output value 0" in_type="component" in_key="29" slot_id="2" in_data_type="any" slot="slot3"/>
-                </Condition>
-            </Routine>
-            <Routine key="187" name="Lab_Idle" randomizer="0" informations="">
-                <Condition key="63" name="asynchroneous" duration="10000" ui_scale="10" ui_size="1" sets_keys="5">
-                    <Action key="1107" key_component="25" key_config="53" node_used="0" node_position="0 0">
-                        <!--Component LabRoom with config standard -->
-                        <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                        <Timeline type="Visibiliy"/>
-                    </Action>
-                    <Action key="1108" key_component="30" key_config="63" node_used="0" node_position="0 0">
-                        <!--Component MeditationShelter with config standard -->
-                        <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                        <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                    </Action>
-                    <Action key="1109" key_component="11" key_config="23" node_used="0" node_position="0 0">
-                        <!--Component PostProcess with config LabScene -->
-                        <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                        <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                    </Action>
-                    <Action key="1110" key_component="6" key_config="264" node_used="0" node_position="0 0">
-                        <!--Component SkyBox with config FBI -->
-                        <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                        <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                    </Action>
-                    <Action key="1111" key_component="29" key_config="61" node_used="0" node_position="0 0">
-                        <!--Component SceneFader with config standard -->
-                        <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                        <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                    </Action>
-                    <Action key="1112" key_component="28" key_config="59" node_used="0" node_position="0 0">
-                        <!--Component OmniController with config standard -->
-                        <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                        <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                    </Action>
-                    <Action key="1113" key_component="48" key_config="107" node_used="0" node_position="0 0">
-                        <!--Component GraphicsHandler with config standard -->
-                        <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                        <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                    </Action>
-                    <Action key="1114" key_component="34" key_config="73" node_used="0" node_position="0 0">
-                        <!--Component LabRoom_Front with config standard -->
-                        <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                        <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                    </Action>
-                    <Action key="1115" key_component="37" key_config="79" node_used="0" node_position="0 0">
-                        <!--Component LabRoom_Right with config standard -->
-                        <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                        <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                    </Action>
-                    <Action key="1116" key_component="36" key_config="77" node_used="0" node_position="0 0">
-                        <!--Component LabRoom_Left with config standard -->
-                        <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                        <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                    </Action>
-                    <Action key="1117" key_component="35" key_config="75" node_used="0" node_position="0 0">
-                        <!--Component LabRoom_Back with config standard -->
-                        <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                        <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                    </Action>
-                    <Action key="1118" key_component="42" key_config="89" node_used="0" node_position="0 0">
-                        <!--Component BackgroundMusic_Spatialized with config default -->
-                        <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                        <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                    </Action>
-                    <Action key="1119" key_component="43" key_config="93" node_used="0" node_position="0 0">
-                        <!--Component BackgroundMusic_Ambient with config default -->
-                        <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                        <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                    </Action>
-                    <Action key="1120" key_component="23" key_config="49" node_used="0" node_position="0 0">
-                        <!--Component FPPCamera with config 1PP -->
-                        <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                        <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                    </Action>
-                    <Action key="1121" key_component="70" key_config="247" node_used="0" node_position="0 0">
-                        <!--Component K4 manager with config async -->
-                        <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                        <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                    </Action>
-                    <Action key="1122" key_component="71" key_config="158" node_used="0" node_position="0 0">
-                        <!--Component K4 direct multi clouds with config standard -->
-                        <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                        <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                    </Action>
-                </Condition>
-                <Condition key="64" name="synchroneous" duration="10000" ui_scale="10" ui_size="1" sets_keys="4">
-                    <Action key="1123" key_component="25" key_config="53" node_used="0" node_position="0 0">
-                        <!--Component LabRoom with config standard -->
-                        <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                        <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                    </Action>
-                    <Action key="1124" key_component="30" key_config="63" node_used="0" node_position="0 0">
-                        <!--Component MeditationShelter with config standard -->
-                        <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                        <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                    </Action>
-                    <Action key="1125" key_component="11" key_config="23" node_used="0" node_position="0 0">
-                        <!--Component PostProcess with config LabScene -->
-                        <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                        <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                    </Action>
-                    <Action key="1126" key_component="6" key_config="13" node_used="0" node_position="0 0">
-                        <!--Component SkyBox with config Lab -->
-                        <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                        <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                    </Action>
-                    <Action key="1127" key_component="29" key_config="61" node_used="0" node_position="0 0">
-                        <!--Component SceneFader with config standard -->
-                        <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                        <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                    </Action>
-                    <Action key="1128" key_component="28" key_config="59" node_used="0" node_position="0 0">
-                        <!--Component OmniController with config standard -->
-                        <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                        <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                    </Action>
-                    <Action key="1129" key_component="48" key_config="107" node_used="0" node_position="0 0">
-                        <!--Component GraphicsHandler with config standard -->
-                        <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                        <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                    </Action>
-                    <Action key="1130" key_component="34" key_config="73" node_used="0" node_position="0 0">
-                        <!--Component LabRoom_Front with config standard -->
-                        <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                        <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                    </Action>
-                    <Action key="1131" key_component="37" key_config="79" node_used="0" node_position="0 0">
-                        <!--Component LabRoom_Right with config standard -->
-                        <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                        <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                    </Action>
-                    <Action key="1132" key_component="36" key_config="77" node_used="0" node_position="0 0">
-                        <!--Component LabRoom_Left with config standard -->
-                        <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                        <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                    </Action>
-                    <Action key="1133" key_component="35" key_config="75" node_used="0" node_position="0 0">
-                        <!--Component LabRoom_Back with config standard -->
-                        <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                        <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                    </Action>
-                    <Action key="1134" key_component="42" key_config="89" node_used="0" node_position="0 0">
-                        <!--Component BackgroundMusic_Spatialized with config default -->
-                        <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                        <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                    </Action>
-                    <Action key="1135" key_component="43" key_config="93" node_used="0" node_position="0 0">
-                        <!--Component BackgroundMusic_Ambient with config default -->
-                        <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                        <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                    </Action>
-                    <Action key="1136" key_component="23" key_config="49" node_used="0" node_position="0 0">
-                        <!--Component FPPCamera with config 1PP -->
-                        <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                        <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                    </Action>
-                    <Action key="1137" key_component="70" key_config="156" node_used="0" node_position="0 0">
-                        <!--Component K4 manager with config sync -->
-                        <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                        <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                    </Action>
-                    <Action key="1138" key_component="71" key_config="158" node_used="0" node_position="0 0">
-                        <!--Component K4 direct multi clouds with config standard -->
-                        <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                        <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
+                            <!--Starts at 0(s) and ends at 5s(), duration: 5(s) -->
+                            <Interval t1="0" t2="5"/>
                         </Timeline>
                     </Action>
                 </Condition>
@@ -9519,10 +9187,7 @@
                             <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
                             <Interval t1="0" t2="100"/>
                         </Timeline>
-                        <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
-                            <Interval t1="0" t2="1000"/>
-                        </Timeline>
+                        <Timeline type="Visibiliy"/>
                     </Action>
                     <Action key="1178" key_component="30" key_config="63" node_used="0" node_position="0 0">
                         <!--Component MeditationShelter with config standard -->
@@ -9530,10 +9195,7 @@
                             <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
                             <Interval t1="0" t2="1000"/>
                         </Timeline>
-                        <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
-                            <Interval t1="0" t2="1000"/>
-                        </Timeline>
+                        <Timeline type="Visibiliy"/>
                     </Action>
                     <Action key="1179" key_component="11" key_config="23" node_used="0" node_position="0 0">
                         <!--Component PostProcess with config LabScene -->
@@ -9546,8 +9208,8 @@
                             <Interval t1="0" t2="1000"/>
                         </Timeline>
                     </Action>
-                    <Action key="1180" key_component="6" key_config="13" node_used="0" node_position="0 0">
-                        <!--Component SkyBox with config Lab -->
+                    <Action key="1180" key_component="6" key_config="264" node_used="0" node_position="0 0">
+                        <!--Component SkyBox with config FBI -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
                             <Interval t1="0" t2="1000"/>
@@ -9755,6 +9417,627 @@
                     <Connection key="347" out_type="connector" out_key="109" signal_id="0" out_data_type="any" signal="output value 0" in_type="component" in_key="90" slot_id="1" in_data_type="any" slot="slot2"/>
                     <!--Connection between Key110:Connector:StartRoutine:Port0 and Key109:Connector:Delay:Port0 -->
                     <Connection key="348" out_type="connector" out_key="110" signal_id="0" out_data_type="string" signal="output value 0" in_type="connector" in_key="109" slot_id="0" in_data_type="any" slot="input value 0"/>
+                </Condition>
+            </Routine>
+            <Routine key="177" name="Lab_FBIIn" randomizer="0" informations="">
+                <Condition key="61" name="asynchroneous" duration="10000" ui_scale="10" ui_size="1" sets_keys="5">
+                    <Action key="1073" key_component="25" key_config="53" node_used="0" node_position="0 0">
+                        <!--Component LabRoom with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy"/>
+                    </Action>
+                    <Action key="1074" key_component="30" key_config="63" node_used="0" node_position="0 0">
+                        <!--Component MeditationShelter with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="1075" key_component="11" key_config="23" node_used="0" node_position="0 0">
+                        <!--Component PostProcess with config LabScene -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="1076" key_component="6" key_config="264" node_used="0" node_position="0 0">
+                        <!--Component SkyBox with config FBI -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="1077" key_component="29" key_config="61" node_used="1" node_position="1008 59">
+                        <!--Component SceneFader with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="1078" key_component="28" key_config="59" node_used="0" node_position="0 0">
+                        <!--Component OmniController with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="1079" key_component="48" key_config="107" node_used="1" node_position="511 305">
+                        <!--Component GraphicsHandler with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="1080" key_component="34" key_config="73" node_used="0" node_position="0 0">
+                        <!--Component LabRoom_Front with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="1081" key_component="37" key_config="79" node_used="0" node_position="0 0">
+                        <!--Component LabRoom_Right with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="1082" key_component="36" key_config="77" node_used="0" node_position="0 0">
+                        <!--Component LabRoom_Left with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="1083" key_component="35" key_config="75" node_used="0" node_position="0 0">
+                        <!--Component LabRoom_Back with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="1084" key_component="42" key_config="89" node_used="0" node_position="0 0">
+                        <!--Component BackgroundMusic_Spatialized with config default -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="1085" key_component="43" key_config="93" node_used="0" node_position="0 0">
+                        <!--Component BackgroundMusic_Ambient with config default -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="1086" key_component="23" key_config="49" node_used="0" node_position="0 0">
+                        <!--Component FPPCamera with config 1PP -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="1087" key_component="70" key_config="247" node_used="0" node_position="0 0">
+                        <!--Component K4 manager with config async -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="1088" key_component="71" key_config="158" node_used="0" node_position="0 0">
+                        <!--Component K4 direct multi clouds with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="1089" key_component="102" key_config="225" node_used="0" node_position="0 0">
+                        <!--Component Blend fade viewer with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                    </Action>
+                    <Connector key="86" name="StartRoutine" node_position="525 52">
+                        <Arg name="value" ui="Label" value="" type="System.String" dim="0"/>
+                    </Connector>
+                    <Connector key="87" name="Delay" node_position="752 63">
+                        <Arg name="value" ui="Integer spin box" value="500" type="System.Int32" dim="0"/>
+                    </Connector>
+                    <Connector key="88" name="Delay" node_position="754 224">
+                        <Arg name="value" ui="Integer spin box" value="500" type="System.Int32" dim="0"/>
+                    </Connector>
+                    <!--Connection between Key86:Connector:StartRoutine:Port0 and Key87:Connector:Delay:Port0 -->
+                    <Connection key="276" out_type="connector" out_key="86" signal_id="0" out_data_type="string" signal="output value 0" in_type="connector" in_key="87" slot_id="0" in_data_type="any" slot="input value 0"/>
+                    <!--Connection between Key48:Component:GraphicsHandler:Port0 and Key88:Connector:Delay:Port0 -->
+                    <Connection key="277" out_type="component" out_key="48" signal_id="0" out_data_type="any" signal="signal1" in_type="connector" in_key="88" slot_id="0" in_data_type="any" slot="input value 0"/>
+                    <!--Connection between Key87:Connector:Delay:Port0 and Key29:Component:SceneFader:Port1 -->
+                    <Connection key="278" out_type="connector" out_key="87" signal_id="0" out_data_type="any" signal="output value 0" in_type="component" in_key="29" slot_id="1" in_data_type="any" slot="slot2"/>
+                    <!--Connection between Key88:Connector:Delay:Port0 and Key29:Component:SceneFader:Port2 -->
+                    <Connection key="279" out_type="connector" out_key="88" signal_id="0" out_data_type="any" signal="output value 0" in_type="component" in_key="29" slot_id="2" in_data_type="any" slot="slot3"/>
+                </Condition>
+                <Condition key="62" name="synchroneous" duration="10000" ui_scale="10" ui_size="1" sets_keys="4">
+                    <Action key="1090" key_component="25" key_config="53" node_used="0" node_position="0 0">
+                        <!--Component LabRoom with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy"/>
+                    </Action>
+                    <Action key="1091" key_component="30" key_config="63" node_used="0" node_position="0 0">
+                        <!--Component MeditationShelter with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="1092" key_component="11" key_config="23" node_used="0" node_position="0 0">
+                        <!--Component PostProcess with config LabScene -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="1093" key_component="6" key_config="264" node_used="0" node_position="0 0">
+                        <!--Component SkyBox with config FBI -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="1094" key_component="29" key_config="61" node_used="1" node_position="1008 59">
+                        <!--Component SceneFader with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="1095" key_component="28" key_config="59" node_used="0" node_position="0 0">
+                        <!--Component OmniController with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="1096" key_component="48" key_config="107" node_used="1" node_position="511 305">
+                        <!--Component GraphicsHandler with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="1097" key_component="34" key_config="73" node_used="0" node_position="0 0">
+                        <!--Component LabRoom_Front with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="1098" key_component="37" key_config="79" node_used="0" node_position="0 0">
+                        <!--Component LabRoom_Right with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="1099" key_component="36" key_config="77" node_used="0" node_position="0 0">
+                        <!--Component LabRoom_Left with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="1100" key_component="35" key_config="75" node_used="0" node_position="0 0">
+                        <!--Component LabRoom_Back with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="1101" key_component="42" key_config="89" node_used="0" node_position="0 0">
+                        <!--Component BackgroundMusic_Spatialized with config default -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="1102" key_component="43" key_config="93" node_used="0" node_position="0 0">
+                        <!--Component BackgroundMusic_Ambient with config default -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="1103" key_component="23" key_config="49" node_used="0" node_position="0 0">
+                        <!--Component FPPCamera with config 1PP -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="1104" key_component="70" key_config="156" node_used="0" node_position="0 0">
+                        <!--Component K4 manager with config sync -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="1105" key_component="71" key_config="158" node_used="0" node_position="0 0">
+                        <!--Component K4 direct multi clouds with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="1106" key_component="102" key_config="225" node_used="0" node_position="0 0">
+                        <!--Component Blend fade viewer with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                    </Action>
+                    <Connector key="89" name="StartRoutine" node_position="525 52">
+                        <Arg name="value" ui="Label" value="" type="System.String" dim="0"/>
+                    </Connector>
+                    <Connector key="90" name="Delay" node_position="752 63">
+                        <Arg name="value" ui="Integer spin box" value="500" type="System.Int32" dim="0"/>
+                    </Connector>
+                    <Connector key="91" name="Delay" node_position="754 224">
+                        <Arg name="value" ui="Integer spin box" value="500" type="System.Int32" dim="0"/>
+                    </Connector>
+                    <!--Connection between Key89:Connector:StartRoutine:Port0 and Key90:Connector:Delay:Port0 -->
+                    <Connection key="284" out_type="connector" out_key="89" signal_id="0" out_data_type="string" signal="output value 0" in_type="connector" in_key="90" slot_id="0" in_data_type="any" slot="input value 0"/>
+                    <!--Connection between Key48:Component:GraphicsHandler:Port0 and Key91:Connector:Delay:Port0 -->
+                    <Connection key="285" out_type="component" out_key="48" signal_id="0" out_data_type="any" signal="signal1" in_type="connector" in_key="91" slot_id="0" in_data_type="any" slot="input value 0"/>
+                    <!--Connection between Key90:Connector:Delay:Port0 and Key29:Component:SceneFader:Port1 -->
+                    <Connection key="286" out_type="connector" out_key="90" signal_id="0" out_data_type="any" signal="output value 0" in_type="component" in_key="29" slot_id="1" in_data_type="any" slot="slot2"/>
+                    <!--Connection between Key91:Connector:Delay:Port0 and Key29:Component:SceneFader:Port2 -->
+                    <Connection key="287" out_type="connector" out_key="91" signal_id="0" out_data_type="any" signal="output value 0" in_type="component" in_key="29" slot_id="2" in_data_type="any" slot="slot3"/>
+                </Condition>
+            </Routine>
+            <Routine key="376" name="Lab_EndFirstPhase" randomizer="0" informations="">
+                <Condition key="95" name="default" duration="1000" ui_scale="10" ui_size="1" sets_keys="">
+                    <Action key="1729" key_component="25" key_config="53" node_used="0" node_position="0 0">
+                        <!--Component LabRoom with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
+                            <Interval t1="0" t2="100"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
+                            <Interval t1="0" t2="1000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="1730" key_component="30" key_config="63" node_used="0" node_position="0 0">
+                        <!--Component MeditationShelter with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
+                            <Interval t1="0" t2="1000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
+                            <Interval t1="0" t2="1000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="1731" key_component="11" key_config="23" node_used="0" node_position="0 0">
+                        <!--Component PostProcess with config LabScene -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
+                            <Interval t1="0" t2="1000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
+                            <Interval t1="0" t2="1000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="1732" key_component="6" key_config="13" node_used="0" node_position="0 0">
+                        <!--Component SkyBox with config Lab -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
+                            <Interval t1="0" t2="1000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
+                            <Interval t1="0" t2="1000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="1733" key_component="29" key_config="61" node_used="0" node_position="0 0">
+                        <!--Component SceneFader with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
+                            <Interval t1="0" t2="1000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
+                            <Interval t1="0" t2="1000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="1734" key_component="28" key_config="59" node_used="0" node_position="0 0">
+                        <!--Component OmniController with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
+                            <Interval t1="0" t2="1000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
+                            <Interval t1="0" t2="1000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="1735" key_component="48" key_config="107" node_used="0" node_position="0 0">
+                        <!--Component GraphicsHandler with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
+                            <Interval t1="0" t2="1000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
+                            <Interval t1="0" t2="1000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="1737" key_component="101" key_config="223" node_used="0" node_position="0 0">
+                        <!--Component Cursor with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
+                            <Interval t1="0" t2="1000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
+                            <Interval t1="0" t2="1000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="1738" key_component="34" key_config="73" node_used="0" node_position="0 0">
+                        <!--Component LabRoom_Front with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
+                            <Interval t1="0" t2="1000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
+                            <Interval t1="0" t2="1000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="1739" key_component="37" key_config="79" node_used="0" node_position="0 0">
+                        <!--Component LabRoom_Right with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
+                            <Interval t1="0" t2="1000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
+                            <Interval t1="0" t2="1000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="1740" key_component="36" key_config="77" node_used="0" node_position="0 0">
+                        <!--Component LabRoom_Left with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
+                            <Interval t1="0" t2="1000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
+                            <Interval t1="0" t2="1000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="1741" key_component="35" key_config="75" node_used="0" node_position="0 0">
+                        <!--Component LabRoom_Back with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
+                            <Interval t1="0" t2="1000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
+                            <Interval t1="0" t2="1000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="1742" key_component="42" key_config="89" node_used="0" node_position="0 0">
+                        <!--Component BackgroundMusic_Spatialized with config default -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
+                            <Interval t1="0" t2="1000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
+                            <Interval t1="0" t2="1000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="1743" key_component="43" key_config="93" node_used="0" node_position="0 0">
+                        <!--Component BackgroundMusic_Ambient with config default -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
+                            <Interval t1="0" t2="1000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
+                            <Interval t1="0" t2="1000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="1744" key_component="23" key_config="49" node_used="0" node_position="0 0">
+                        <!--Component FPPCamera with config 1PP -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
+                            <Interval t1="0" t2="1000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
+                            <Interval t1="0" t2="100"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="1745" key_component="70" key_config="156" node_used="0" node_position="0 0">
+                        <!--Component K4 manager with config sync -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
+                            <Interval t1="0" t2="1000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
+                            <Interval t1="0" t2="1000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="1746" key_component="71" key_config="158" node_used="0" node_position="0 0">
+                        <!--Component K4 direct multi clouds with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
+                            <Interval t1="0" t2="1000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
+                            <Interval t1="0" t2="1000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="1748" key_component="122" key_config="275" node_used="0" node_position="0 0">
+                        <!--Component Instructions with config Instructions4 -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
+                            <Interval t1="0" t2="1000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
+                            <Interval t1="0" t2="1000"/>
+                        </Timeline>
+                    </Action>
+                    <Connector key="176" name="String" node_position="62.4 247.8">
+                        <Arg name="value" ui="Line text editor" value="We will now enter a set of perception task;Validate;" type="System.String" dim="0"/>
+                    </Connector>
+                    <Connector key="177" name="StartRoutine" node_position="29 382">
+                        <Arg name="value" ui="Label" value="" type="System.String" dim="0"/>
+                    </Connector>
+                    <Connector key="178" name="Delay" node_position="281 382">
+                        <Arg name="value" ui="Integer spin box" value="5" type="System.Int32" dim="0"/>
+                    </Connector>
+                    <!--Connection between Key177:Connector:StartRoutine:Port0 and Key178:Connector:Delay:Port0 -->
+                    <Connection key="573" out_type="connector" out_key="177" signal_id="0" out_data_type="string" signal="output value 0" in_type="connector" in_key="178" slot_id="0" in_data_type="any" slot="input value 0"/>
                 </Condition>
             </Routine>
             <Routine key="164" name="Break" randomizer="1" informations="">
@@ -13532,9 +13815,9 @@
             <Loop key="143" name="ControlCondition" type="fixed" nbReps="1" N="1" noFollowingValues="0" informations="">
                 <Set key="2" name="default" occu="1"/>
             </Loop>
-            <Loop key="168" name="FBI" type="random" nbReps="4" N="1" noFollowingValues="0" informations="">
-                <Set key="5" name="asynchroneous" occu="2"/>
-                <Set key="4" name="synchroneous" occu="2"/>
+            <Loop key="168" name="FBI" type="random" nbReps="2" N="1" noFollowingValues="0" informations="">
+                <Set key="5" name="asynchroneous" occu="1"/>
+                <Set key="4" name="synchroneous" occu="1"/>
             </Loop>
             <Loop key="280" name="FBI2" type="fixed" nbReps="1" N="1" noFollowingValues="0" informations="">
                 <Set key="7" name="asynchroneous" occu="1"/>
@@ -13579,15 +13862,16 @@
         <Element key="231" type="Routine"/>
         <Element key="238" type="Routine"/>
         <Element key="367" type="LoopEnd"/>
-        <Element key="100" type="Routine"/>
+        <Element key="378" type="Routine"/>
         <Element key="370" type="Routine"/>
         <Element key="168" type="LoopStart"/>
+        <Element key="187" type="Routine"/>
         <Element key="179" type="Routine"/>
         <Element key="185" type="Routine"/>
-        <Element key="177" type="Routine"/>
-        <Element key="187" type="Routine"/>
         <Element key="191" type="Routine"/>
+        <Element key="177" type="Routine"/>
         <Element key="168" type="LoopEnd"/>
+        <Element key="376" type="Routine"/>
         <Element key="164" type="Routine"/>
         <Element key="183" type="Routine"/>
         <Element key="160" type="Routine"/>

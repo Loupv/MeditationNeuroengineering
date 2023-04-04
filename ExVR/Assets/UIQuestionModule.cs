@@ -232,6 +232,7 @@ namespace Ex{
         {            
             var values = lines[currentQuestionID].Split2(";");// ToString();
 
+            ShowQuestionModule(true);
             currentQuestion = values.First();
             currentQuestion = currentQuestion.Replace("%", "\n");
             log_message(currentQuestion);
@@ -244,7 +245,6 @@ namespace Ex{
                 if (i < answerStrings.Length) answers[i].transform.Find("Text").GetComponent<UnityEngine.UI.Text>().text = answerStrings[i];
                 else answers[i].SetActive(false);
             }
-            ShowQuestionModule(true);
             
             questionLoaded = true;
         }
