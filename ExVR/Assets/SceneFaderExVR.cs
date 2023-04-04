@@ -58,6 +58,7 @@ namespace Ex
         AudioSource routineGuidance;
         Dictionary<string,string> guidanceClipNames;
         bool guidanceClipFound;
+        public bool nextRoutineRequestedByUI;
 
         // 0 is lab, 1 is white scene, 2 is forest
         public SceneConfig[] InitSceneConfigArray()
@@ -163,11 +164,13 @@ namespace Ex
 
             if (routineInited)
             {
-                // either we press space or soundguidance has stopped, and we're in the right state for it + there's a routine after this one
-                if ((UnityEngine.Input.GetKeyDown(KeyCode.Space) || (guidanceClipFound && !routineGuidance.isPlaying)) && fadingState == FadingState.idle && GetNextRoutineName() != ""
+                // either we press space, soundguidance has stopped or we triggered ui with gaze, check if we're in the right state for it and that there's still a routine after this one
+                if ((UnityEngine.Input.GetKeyDown(KeyCode.Space) || (guidanceClipFound && !routineGuidance.isPlaying) || nextRoutineRequestedByUI) && fadingState == FadingState.idle && GetNextRoutineName() != ""
                     && !(current_routine().name.Contains("Familiarization") && !familiarizationModule.allowNextRoutine))  //!current_routine().name.Contains("Familiarization_Sound") && !current_routine().name.Contains("Familiarization_Colors"))
                 {
                     fadingState = FadingState.fadingOut;
+
+                    nextRoutineRequestedByUI = false;
 
                     lastRoutineConfigID = currentRoutineConfigID;
                     currentRoutineConfigID = GetConfigIDFromRoutineName(GetNextRoutineName()); //  current_routine().name

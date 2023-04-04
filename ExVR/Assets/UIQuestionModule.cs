@@ -167,27 +167,33 @@ namespace Ex{
             {
                 fillerImage.fillAmount = 0;
                 currentQuestionID += 1;
+                ShowQuestionModule(false);
                 radialFiller.SetActive(false);
                 CancelInvoke("FillRadialUI");
 
                 SendLogSignal();
 
-                if (currentQuestionID < lines.Count())
-                {
-                    log_message("Loading next question.");
-                    LoadNextQuestion();
-                }
-                else //if(current_routine().name.Contains("Questionnaire"))
-                {
-                    log_message("End of questions. Next.");
-                    currentQuestionID = 0;
-                    active = false;
-                    active_selection = false;
-                    next();
-                }
+                Invoke("DelayedAnswer",0.5f); // little delay after displaying out question and before launching the next one
             }
         }
 
+        void DelayedAnswer()
+        {
+            if (currentQuestionID < lines.Count())
+            {
+                log_message("Loading next question.");
+                LoadNextQuestion();
+            }
+            else //if(current_routine().name.Contains("Questionnaire"))
+            {
+                log_message("End of questions. Next.");
+                currentQuestionID = 0;
+                active = false;
+                active_selection = false;
+                FindObjectOfType<SceneFaderExVR>().nextRoutineRequestedByUI = true;
+                //next();
+            }
+        }
 
         void SendLogSignal()
         {
@@ -238,7 +244,15 @@ namespace Ex{
                 if (i < answerStrings.Length) answers[i].transform.Find("Text").GetComponent<UnityEngine.UI.Text>().text = answerStrings[i];
                 else answers[i].SetActive(false);
             }
+            ShowQuestionModule(true);
+            
             questionLoaded = true;
+        }
+
+        void ShowQuestionModule(bool b)
+        {
+            questionModule.transform.Find(modulename + "/Canvas/Question/Text").gameObject.SetActive(b);
+            for (int i = 0; i < answers.Count; i++) answers[i].SetActive(b);
         }
 
         /*public void invoke_signal1(object value)

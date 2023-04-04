@@ -76,7 +76,7 @@ namespace Ex{
                     sphere3.SetActive(false);
                     DestroySpheres();
                     //currentTask = Task.Handedness;
-                    next();
+                    //next();
                 }
             }
             /*else if (currentTask == Task.Depth) 
