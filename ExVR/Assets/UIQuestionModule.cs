@@ -37,7 +37,7 @@ namespace Ex{
         string[] lines, answerStrings;
         int currentQuestionID, answersCount;
         bool questionLoaded;
-  
+        float horitontalSliderValue;
 
 
         public override void slot1(object value)
@@ -92,7 +92,7 @@ namespace Ex{
                 questionModule = get<AssetBundleComponent>("QuestionModule_PBB");
                 answers = new List<GameObject>();
                 modulename = "questionmodule_pbb";
-                answersCount = 7;
+                answersCount = 2;
 
                 horitontalSliderBar = GameObject.Find("HorizontalBar").GetComponent<Image>();
                 barCursor = GameObject.Find("BarCursor").GetComponent<Image>();
@@ -171,10 +171,13 @@ namespace Ex{
                     float maxX = horitontalSliderBar.GetComponent<BoxCollider>().bounds.max.x;
                     float minX = horitontalSliderBar.GetComponent<BoxCollider>().bounds.min.x;
                     float x = Mathf.Max(Mathf.Min(HitInfo.point.x, maxX), minX);
-                    float y = horitontalSliderBar.transform.position.y;
+                    float y = barCursor.gameObject.transform.position.y;
                     float z = horitontalSliderBar.transform.position.z;
 
                     barCursor.gameObject.transform.position = new Vector3(x,y,z);
+
+                    horitontalSliderValue = ScaleIt(x, minX, maxX, 1, 0);
+                    //log_message(horitontalSliderValue.ToString());
 
                     // if we look at the target for the first time
                     if (hasHit && (hitName.Contains("BarCursor") || hitName.Contains("HorizontalBar")) && !active_selection)
@@ -213,7 +216,8 @@ namespace Ex{
                 radialFiller.SetActive(false);
                 CancelInvoke("FillRadialUI");
 
-                SendLogSignal();
+                if (current_config().name == "pbb") SendLogContinuousSignal(horitontalSliderValue);
+                else SendLogSignal();
 
                 Invoke("DelayedAnswer",0.5f); // little delay after displaying out question and before launching the next one
             }
@@ -232,7 +236,7 @@ namespace Ex{
                 currentQuestionID = 0;
                 active = false;
                 active_selection = false;
-                FindObjectOfType<SceneFaderExVR>().nextRoutineRequestedByUI = true;
+                FindObjectOfType<SceneFaderExVR>().nextRoutineRequested = true;
                 //next();
             }
         }
@@ -244,7 +248,20 @@ namespace Ex{
 
             string str = time.ToString() + ";" + currentQuestion + ";" + HitInfo.transform.Find("Text").GetComponent<UnityEngine.UI.Text>().text;
             invoke_signal1(str);
+        }
 
+        void SendLogContinuousSignal(float f)
+        {
+            TimeManager timeManager = FindObjectOfType<TimeManager>();
+            double time = timeManager.ellapsed_exp_ms();
+
+            string str = time.ToString() + ";" + currentQuestion + ";" + f;
+            invoke_signal1(str);
+        }
+
+        float ScaleIt(float value, float from1, float from2, float to1, float to2)
+        {
+            return ((value - from1) * (to2 - to1)) / (from2 - from1) + to1;
         }
 
 
@@ -257,17 +274,17 @@ namespace Ex{
         // public override void pause(){}
         // public override void set_update_state(bool doUpdate) { }        
         // public override void set_visibility(bool visibility) { }
-        
+
         // # for advanced users 
         // public override void clean(){}
         // public override void pre_update() {}
         // public override void post_update() {}
         // public override void update_parameter_from_gui(XML.Arg arg){}
         // public override void update_from_current_config(){}
-        
+
         // # slots
-        
-       
+
+
 
 
         void LoadNextQuestion()

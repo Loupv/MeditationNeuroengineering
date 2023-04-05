@@ -413,7 +413,7 @@ namespace Ex
             StopCoroutine("PlatformMovementStart");
             StopCoroutine("PlatformMovementBack");
             forestMoving = false;
-            InitPlatformMovement(2)
+            InitPlatformMovement(2);
         }
 
         // x is the time, s is the slope, v is the speed
