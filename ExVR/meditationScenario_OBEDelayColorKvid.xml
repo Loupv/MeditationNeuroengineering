@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Experiment name="meditationScenario_OBEDelayColorKvid" version="1.0b2" mode="designer" designer-used="D:/Meditation/exvr-designer-1.0b02/ExVR.exe">
     <Settings debug="1" csharp_debug_info="0" catch_components_exceptions="0" positional_tracking="1" catch_external_keyboard_events="0">
-        <Display mode="1" stereo_fov="60" fullscreen="0" monitor_id="1" resolution_id="1" custom_width="1920" custom_height="1080"/>
+        <Display mode="0" stereo_fov="60" fullscreen="0" monitor_id="1" resolution_id="1" custom_width="1920" custom_height="1080"/>
         <Camera neutral_x="0" neutral_y="1" neutral_z="0"/>
     </Settings>
     <Resources reload="200">
@@ -2733,7 +2733,7 @@
                     <Arg name="loop" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="rendering" ui="Combo box index" value="2" type="System.Int32" dim="0"/>
                     <Arg name="size_points" ui="Float spin box" value="0.0025" type="System.Single" dim="0"/>
-                    <Arg name="start_time" ui="Float spin box" value="8.4" type="System.Single" dim="0"/>
+                    <Arg name="start_time" ui="Float spin box" value="13.4" type="System.Single" dim="0"/>
                     <Arg name="tint" ui="Color pick" value="0.854902 0.733333 0.733333 0" type="System.Single" dim="1" sep=" " sizes="4"/>
                     <Arg name="transform" ui="Transformation" value="0.49 1.26 0.88 15.4 -214.1 90.2 -1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
                     <Arg name="transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
@@ -2762,7 +2762,7 @@
                     <Arg name="loop" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="rendering" ui="Combo box index" value="2" type="System.Int32" dim="0"/>
                     <Arg name="size_points" ui="Float spin box" value="0.0025" type="System.Single" dim="0"/>
-                    <Arg name="start_time" ui="Float spin box" value="9.6" type="System.Single" dim="0"/>
+                    <Arg name="start_time" ui="Float spin box" value="14.5" type="System.Single" dim="0"/>
                     <Arg name="tint" ui="Color pick" value="0.854902 0.768627 0.768627 0" type="System.Single" dim="1" sep=" " sizes="4"/>
                     <Arg name="transform" ui="Transformation" value="1.32 0.62 1.29 7.6 171.4 0.8 -1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
                     <Arg name="transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
@@ -9609,10 +9609,7 @@
                     </Action>
                     <Action key="1194" key_component="70" key_config="156" node_used="0" node_position="0 0">
                         <!--Component K4 manager with config sync -->
-                        <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
-                            <Interval t1="0" t2="1000"/>
-                        </Timeline>
+                        <Timeline type="Update"/>
                         <Timeline type="Visibiliy">
                             <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
                             <Interval t1="0" t2="1000"/>
@@ -9620,14 +9617,8 @@
                     </Action>
                     <Action key="1195" key_component="71" key_config="158" node_used="0" node_position="0 0">
                         <!--Component K4 direct multi clouds with config standard -->
-                        <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
-                            <Interval t1="0" t2="1000"/>
-                        </Timeline>
-                        <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
-                            <Interval t1="0" t2="1000"/>
-                        </Timeline>
+                        <Timeline type="Update"/>
+                        <Timeline type="Visibiliy"/>
                     </Action>
                     <Action key="1196" key_component="106" key_config="233" node_used="0" node_position="0 0">
                         <!--Component QuestionModule_7answers with config standard -->
