@@ -29,6 +29,7 @@ public class FlockManager : MonoBehaviour {
                 Random.Range(-movementLimits.z, movementLimits.z));
 
             allObjects[i] = Instantiate(flockPrefab, pos, Quaternion.identity);
+            allObjects[i].transform.parent = this.transform;
         }
 
         FM = this;
