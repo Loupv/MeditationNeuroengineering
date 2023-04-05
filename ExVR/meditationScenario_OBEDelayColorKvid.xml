@@ -617,7 +617,7 @@
             <InitConfig key="48" name="standard">
                 <Arg name="position" ui="Vector 3D" value="0 1.8 1.5" type="System.Single" dim="1" sep=" " sizes="3"/>
                 <Arg name="rotation" ui="Vector 3D" value="0 0 0" type="System.Single" dim="1" sep=" " sizes="3"/>
-                <Arg name="start_experiment" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                <Arg name="start_experiment" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                 <Arg name="use_eye" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
                 <Arg name="use_neutral" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
             </InitConfig>
@@ -630,7 +630,7 @@
                     <Arg name="rx_speed" ui="Float spin box" value="2" type="System.Single" dim="0"/>
                     <Arg name="ry_speed" ui="Float spin box" value="2" type="System.Single" dim="0"/>
                     <Arg name="rz_speed" ui="Float spin box" value="2" type="System.Single" dim="0"/>
-                    <Arg name="start_routine" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="start_routine" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="update_on" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="use_eye" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="use_neutral" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
@@ -690,6 +690,10 @@
                 <Config key="57" name="standard">
                     <Arg name="transform" ui="Transformation" value="5.1 -1.545 8.205 0 0 0 1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
                     <Arg name="transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                </Config>
+                <Config key="276" name="noinit">
+                    <Arg name="transform" ui="Transformation" value="5.1 -1.545 8.205 0 0 0 1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
+                    <Arg name="transform_do_not_apply" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                 </Config>
             </Configs>
         </Component>
@@ -11082,8 +11086,8 @@
             </Routine>
             <Routine key="150" name="Forest_ControlState" randomizer="0" informations="">
                 <Condition key="32" name="default" duration="10000" ui_scale="100" ui_size="1" sets_keys="0">
-                    <Action key="587" key_component="27" key_config="57" node_used="0" node_position="0 0">
-                        <!--Component ForestScene with config standard -->
+                    <Action key="587" key_component="27" key_config="276" node_used="0" node_position="0 0">
+                        <!--Component ForestScene with config noinit -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
                             <Interval t1="0" t2="100"/>

@@ -98,13 +98,13 @@ namespace Ex
 
                 switch (i)
                 {
-                    case 0: // initial position
+                    case 0: // back to initial position, slow
                         targetDistance = 0;
                         targetHeight = 0;
                         targetAngle = 0;
                         lerpTimeInSeconds = 15;
                         break;
-                    case 1: // close behind
+                    case 1: // forest fbi, slow
                         targetDistance = 1.7f;
                         targetHeight = 0.7f;
                         targetAngle = 0;
@@ -116,17 +116,17 @@ namespace Ex
                         targetAngle = 0;// Mathf.PI * 2;
                         lerpTimeInSeconds = 0.01f;
                         break;
-                    case 3: // behind, fbi / quick
+                    case 3: // forest fbi, quick
+                        targetDistance = 1.7f;
+                        targetHeight = 0.7f;
+                        targetAngle = 0;// Mathf.PI * 2;
+                        lerpTimeInSeconds = 0.1f;
+                        break;
+                    case 4: // lab fbi / quick
                         targetDistance = 1.5f;
                         targetHeight = 0f;
                         targetAngle = 0;// Mathf.PI * 4;
                         lerpTimeInSeconds = 0.01f;
-                        break;
-                    case 7: // far behind
-                        targetDistance = 2;
-                        targetHeight = 1.5f;
-                        targetAngle = 0;// Mathf.PI * 2;
-                        lerpTimeInSeconds = 15;
                         break;
                     case 8: // above
                         targetDistance = 0.3f;
@@ -149,7 +149,7 @@ namespace Ex
                     cameraMoving = true;
                     lerpStartTime = Time.time;
                     //StartCoroutine("CameraOrbit");
-                    if (i == 0) StartCoroutine("BodyEntry");
+                    if (i == 0 || i == 2) StartCoroutine("BodyEntry");
                     else StartCoroutine("BodyExit");
                 }
             }
@@ -205,7 +205,7 @@ namespace Ex
 
             log_message("Camera lerp started");
 
-            while (t < 1)
+            while (t < 1 && cameraMoving)
             {
                 t = Mathf.Min(1, (Time.time - lerpStartTime) / lerpTimeInSeconds);
                 
@@ -245,7 +245,7 @@ namespace Ex
 
             log_message("Camera lerp started");
 
-            while (t > 0)
+            while (t > 0 && cameraMoving)
             {
                 t = Mathf.Max(0, 1 - (Time.time - lerpStartTime) / lerpTimeInSeconds);
 
@@ -306,6 +306,12 @@ namespace Ex
                         targetAngle = 0;
                         lerpTimeInSeconds = 0.1f;
                         break;
+                    case 3: // go quickly to final position
+                        targetDistance = 1.7f;
+                        targetHeight = 0.7f;
+                        targetAngle = 0;
+                        lerpTimeInSeconds = 0.1f;
+                        break;
                 }
                 lookForward = 0.5f;
                 smoothHandle = 2;
@@ -315,8 +321,8 @@ namespace Ex
                     forestMoving = true;
                     lerpStartTime = Time.time;
                     //StartCoroutine("CameraOrbit");
-                    if (i == 0) StartCoroutine("PlatformMovementStart");
-                    else StartCoroutine("PlatformMovementBack");
+                    if (i == 0 || i == 2) StartCoroutine("PlatformMovementBack");
+                    else StartCoroutine("PlatformMovementStart");
                 }
             }
         }
@@ -329,7 +335,7 @@ namespace Ex
 
             log_message("Forest lerp started");
 
-            while (t < 1)
+            while (t < 1 && forestMoving)
             {
                 t = Mathf.Min(1, (Time.time - lerpStartTime) / lerpTimeInSeconds);
 
@@ -370,7 +376,7 @@ namespace Ex
 
             GameObject forestObject = GameObject.Find("ForestScene");
 
-            while (t > 0)
+            while (t > 0 && forestMoving)
             {
                 t = Mathf.Max(0, 1 - (Time.time - lerpStartTime) / lerpTimeInSeconds);
 
@@ -402,18 +408,32 @@ namespace Ex
 
         public void StopCameraMovement()
         {
-            StopCoroutine("BodyEntry");
-            StopCoroutine("BodyExit");
+            /*if (coroutine1)
+            {
+                StopCoroutine("BodyExit");
+                InitCameraOrbit(2);
+            }
+            else if (coroutine2)
+            {
+                StopCoroutine("BodyEntry");
+                InitCameraOrbit(3);
+            }*/
             cameraMoving = false;
-            InitCameraOrbit(2);
         }
 
         public void StopPlatformMovement()
         {
-            StopCoroutine("PlatformMovementStart");
-            StopCoroutine("PlatformMovementBack");
+            /*if (coroutine1)
+            {
+                StopCoroutine("PlatformMovementStart");
+                InitPlatformMovement(2);
+            }
+            else if (coroutine2)
+            {
+                StopCoroutine("PlatformMovementBack");
+                InitPlatformMovement(3);
+            }*/
             forestMoving = false;
-            InitPlatformMovement(2);
         }
 
         // x is the time, s is the slope, v is the speed
