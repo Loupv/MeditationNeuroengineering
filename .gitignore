@@ -75,3 +75,6 @@ crashlytics-build.properties
 \assetsBundles\*
 .DS_Store
 ExVR/Bundles/forestscene.unity3d
+*.kvid
+Verbal Guidances/1. InUse/ControlCondition_Building.wav
+Verbal Guidances/1. InUse/Meditation_BuildingMPS.wav
