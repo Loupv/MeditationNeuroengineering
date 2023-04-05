@@ -23,7 +23,8 @@
 
         ZWrite Off
         Blend SrcAlpha OneMinusSrcAlpha
-        Cull back 
+		Lighting On
+        Cull Off
         LOD 100
 
         CGINCLUDE
@@ -68,11 +69,11 @@
             fixed4 albedo = tex2D(_Albedo, IN.uv_Albedo) * _Color;
             
             fixed4 metallic = tex2D(_Metallic, IN.uv_Albedo);
-            fixed3 normal = UnpackScaleNormal(tex2D(_Normal, IN.uv_Albedo), 1);
+            //fixed3 normal = UnpackScaleNormal(tex2D(_Normal, IN.uv_Albedo), 1);
  
             o.Albedo = albedo.rgb;
             o.Alpha = albedo.a;
-            o.Normal = normal;
+            //o.Normal = normal;
             o.Smoothness = metallic.a;
             o.Occlusion = metallic.g;
             o.Emission = metallic.b;

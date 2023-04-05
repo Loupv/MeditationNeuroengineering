@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class FlockManager : MonoBehaviour {
 
-    public static FlockManager FM;
+    //public static FlockManager FM;
     public GameObject flockPrefab;
     public int flockSize = 20;
     public GameObject[] allObjects;
     public Vector3 movementLimits = new Vector3(5.0f, 5.0f, 5.0f);
     public Vector3 goalPos = Vector3.zero;
+    
+    public Material mat1, mat2;
 
     [Header("Flock Settings")]
     [Range(0.0f, 5.0f)] public float minSpeed;
@@ -29,10 +31,13 @@ public class FlockManager : MonoBehaviour {
                 Random.Range(-movementLimits.z, movementLimits.z));
 
             allObjects[i] = Instantiate(flockPrefab, pos, Quaternion.identity);
+            allObjects[i].GetComponent<Flock>().Init(this);
             allObjects[i].transform.parent = this.transform;
+
+            if (Random.value >= 0.5f) allObjects[i].transform.Find("Butterfly").GetComponent<MeshRenderer>().materials[0] = mat2;
+            else allObjects[i].transform.Find("Butterfly").GetComponent<MeshRenderer>().materials[0] = mat1;
         }
 
-        FM = this;
         goalPos = this.transform.position;
     }
 
