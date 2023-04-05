@@ -25,8 +25,9 @@ namespace Ex
         float targetDistance, targetHeight, targetAngle, lookForward, smoothHandle;
         float lastTargetDistance = 0, lastTargetHeight = 0, lastTargetAngle = 0, lastLookForward = 0.5f;
 
-        bool cameraMoving, forestMoving;
+        public bool cameraMoving, forestMoving;
         float lerpStartTime;
+        float t;
 
         public void InitExperiment()
         {
@@ -199,7 +200,7 @@ namespace Ex
         // need to do an invert lerp for body entry
         IEnumerator BodyExit()
         {
-            float t = 0;
+            t = 0;
             Vector3 newPosition;
 
             log_message("Camera lerp started");
@@ -239,7 +240,7 @@ namespace Ex
 
         IEnumerator BodyEntry()
         {
-            float t = 1;
+            t = 1;
             Vector3 newPosition;
 
             log_message("Camera lerp started");
@@ -299,6 +300,12 @@ namespace Ex
                         targetAngle = 0;
                         lerpTimeInSeconds = 15;
                         break;
+                    case 2: // go quickly to initial position
+                        targetDistance = 0;
+                        targetHeight = 0;
+                        targetAngle = 0;
+                        lerpTimeInSeconds = 0.1f;
+                        break;
                 }
                 lookForward = 0.5f;
                 smoothHandle = 2;
@@ -317,7 +324,7 @@ namespace Ex
 
         IEnumerator PlatformMovementStart()
         {
-            float t = 0;
+            t = 0;
             Vector3 newPosition;
 
             log_message("Forest lerp started");
@@ -356,7 +363,7 @@ namespace Ex
 
         IEnumerator PlatformMovementBack()
         {
-            float t = 1;
+            t = 1;
             Vector3 newPosition;
 
             log_message("Forest lerp started");
@@ -392,6 +399,22 @@ namespace Ex
             invoke_signal1(true);
         }
 
+
+        public void StopCameraMovement()
+        {
+            StopCoroutine("BodyEntry");
+            StopCoroutine("BodyExit");
+            cameraMoving = false;
+            InitCameraOrbit(2);
+        }
+
+        public void StopPlatformMovement()
+        {
+            StopCoroutine("PlatformMovementStart");
+            StopCoroutine("PlatformMovementBack");
+            forestMoving = false;
+            InitPlatformMovement(2)
+        }
 
         // x is the time, s is the slope, v is the speed
         float LerpSmoother(float t, float s, float v)

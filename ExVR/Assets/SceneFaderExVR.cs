@@ -58,7 +58,7 @@ namespace Ex
         AudioSource routineGuidance;
         Dictionary<string,string> guidanceClipNames;
         bool guidanceClipFound;
-        public bool nextRoutineRequestedByUI;
+        public bool nextRoutineRequested;
 
         // 0 is lab, 1 is white scene, 2 is forest
         public SceneConfig[] InitSceneConfigArray()
@@ -164,13 +164,14 @@ namespace Ex
 
             if (routineInited)
             {
-                // either we press space, soundguidance has stopped or we triggered ui with gaze, check if we're in the right state for it and that there's still a routine after this one
-                if ((UnityEngine.Input.GetKeyDown(KeyCode.Space) || (guidanceClipFound && !routineGuidance.isPlaying) || nextRoutineRequestedByUI) && fadingState == FadingState.idle && GetNextRoutineName() != ""
-                    && !(current_routine().name.Contains("Familiarization") && !familiarizationModule.allowNextRoutine))  //!current_routine().name.Contains("Familiarization_Sound") && !current_routine().name.Contains("Familiarization_Colors"))
+                // either we press space, soundguidance has stopped or we triggered next (from UI or end of body/platform movement)
+                // check also if we're in the right state for it and that there's still a routine after this one
+                if ((UnityEngine.Input.GetKeyDown(KeyCode.Space) || (guidanceClipFound && !routineGuidance.isPlaying) || nextRoutineRequested) && fadingState == FadingState.idle && GetNextRoutineName() != ""
+                    && !(current_routine().name.Contains("Familiarization") && !familiarizationModule.allowNextRoutine))  
                 {
                     fadingState = FadingState.fadingOut;
 
-                    nextRoutineRequestedByUI = false;
+                    nextRoutineRequested = false;
 
                     lastRoutineConfigID = currentRoutineConfigID;
                     currentRoutineConfigID = GetConfigIDFromRoutineName(GetNextRoutineName()); //  current_routine().name
@@ -193,6 +194,13 @@ namespace Ex
                     }
 
                     if (guidanceClipFound) routineGuidance.Stop();
+
+                    if(graphicsHandler.cameraMoving)
+                        graphicsHandler.StopCameraMovement();
+                    if (graphicsHandler.forestMoving)
+                        graphicsHandler.StopPlatformMovement();
+
+
                 }
 
 
@@ -679,7 +687,8 @@ namespace Ex
 
         public override void slot3(object value)
         {
-            next();
+            //next();
+            nextRoutineRequested = true;
         }
 
 

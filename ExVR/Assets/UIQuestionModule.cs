@@ -30,6 +30,8 @@ namespace Ex{
         List<GameObject> answers;
         Image fillerImage;
 
+        Image horitontalSliderBar, barCursor;
+
         string currentQuestion, modulename;
         IEnumerable<string> currentAnswers;
         string[] lines, answerStrings;
@@ -91,6 +93,9 @@ namespace Ex{
                 answers = new List<GameObject>();
                 modulename = "questionmodule_pbb";
                 answersCount = 7;
+
+                horitontalSliderBar = GameObject.Find("HorizontalBar").GetComponent<Image>();
+                barCursor = GameObject.Find("BarCursor").GetComponent<Image>();
             }
             else if (current_config().name == "fbi")
             {
@@ -135,24 +140,61 @@ namespace Ex{
                 string hitName = "";
                 if (hasHit) hitName = HitInfo.transform.gameObject.name;
 
-                
-                // if we look at the target for the first time
-                if (hasHit && hitName.Contains("Answer") && !active_selection)
-                {
-                    active_selection = true;
-                    InvokeRepeating("FillRadialUI", 0, Time.deltaTime);
-                    log_message(HitInfo.point.ToString() + ", " + HitInfo.transform.gameObject);
 
+                // button based questionnaires
+                if (!modulename.Contains("pbb"))
+                {
+                    // if we look at the target for the first time
+                    if (hasHit && hitName.Contains("Answer") && !active_selection)
+                    {
+                        active_selection = true;
+                        InvokeRepeating("FillRadialUI", 0, Time.deltaTime);
+                        log_message(HitInfo.point.ToString() + ", " + HitInfo.transform.gameObject);
+
+                    }
+                    // if no hit or hitting something else
+                    else if(!hasHit || !hitName.Contains("Answer"))
+                    { 
+                        fillerImage.fillAmount = 0;
+                        radialFiller.SetActive(false);
+                        CancelInvoke("FillRadialUI");
+                        active_selection = false;
+                        cursor.transform.position = HitInfo.point;// + new Vector3(0.1f, 0.1f, 0);
+                    }
                 }
-                // if no hit or hitting something else
-                else if(!hasHit || !hitName.Contains("Answer"))
-                { 
-                    fillerImage.fillAmount = 0;
-                    radialFiller.SetActive(false);
-                    CancelInvoke("FillRadialUI");
-                    active_selection = false;
-                    cursor.transform.position = HitInfo.point;// + new Vector3(0.1f, 0.1f, 0);
+
+                // horitontal slider UI
+                else
+                {
+
+                    // we adjust the cursor no matter what, but if we look at the horizontal bar we start radial ui filling
+                    float maxX = horitontalSliderBar.GetComponent<BoxCollider>().bounds.max.x;
+                    float minX = horitontalSliderBar.GetComponent<BoxCollider>().bounds.min.x;
+                    float x = Mathf.Max(Mathf.Min(HitInfo.point.x, maxX), minX);
+                    float y = horitontalSliderBar.transform.position.y;
+                    float z = horitontalSliderBar.transform.position.z;
+
+                    barCursor.gameObject.transform.position = new Vector3(x,y,z);
+
+                    // if we look at the target for the first time
+                    if (hasHit && (hitName.Contains("BarCursor") || hitName.Contains("HorizontalBar")) && !active_selection)
+                    {
+                        active_selection = true;
+                        InvokeRepeating("FillRadialUI", 0, Time.deltaTime);
+                        log_message(HitInfo.point.ToString() + ", " + HitInfo.transform.gameObject);
+
+                    }
+                    // if no hit or hitting something else
+                    else if (!hasHit || !(hitName.Contains("BarCursor") || hitName.Contains("HorizontalBar")))
+                    {
+                        fillerImage.fillAmount = 0;
+                        radialFiller.SetActive(false);
+                        CancelInvoke("FillRadialUI");
+                        active_selection = false;
+                        cursor.transform.position = HitInfo.point;// + new Vector3(0.1f, 0.1f, 0);
+                    }
                 }
+
             }
         }
 
