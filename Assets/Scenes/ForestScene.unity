@@ -757,31 +757,12 @@ MonoBehaviour:
   vol: 100
   playDelay: 0
   audioMixerGroup: {fileID: 24300002, guid: ad6ade5e7029d7c41b2cb39a6022498c, type: 2}
---- !u!1 &1049066045 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2944055820410481533, guid: c0af05188aee14248ab54438876ff5ba,
-    type: 3}
-  m_PrefabInstance: {fileID: 1810023117}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1049066046 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2944055820410481535, guid: c0af05188aee14248ab54438876ff5ba,
     type: 3}
   m_PrefabInstance: {fileID: 1810023117}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &1049066047
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1049066045}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 60, y: 15, z: 40}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1068627205
 GameObject:
   m_ObjectHideFlags: 0
@@ -5973,21 +5954,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1318487147}
     m_Modifications:
-    - target: {fileID: 2944055820410481532, guid: c0af05188aee14248ab54438876ff5ba,
-        type: 3}
-      propertyPath: movementLimits.x
-      value: 60
-      objectReference: {fileID: 0}
-    - target: {fileID: 2944055820410481532, guid: c0af05188aee14248ab54438876ff5ba,
-        type: 3}
-      propertyPath: movementLimits.y
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 2944055820410481532, guid: c0af05188aee14248ab54438876ff5ba,
-        type: 3}
-      propertyPath: movementLimits.z
-      value: 40
-      objectReference: {fileID: 0}
     - target: {fileID: 2944055820410481533, guid: c0af05188aee14248ab54438876ff5ba,
         type: 3}
       propertyPath: m_Name
