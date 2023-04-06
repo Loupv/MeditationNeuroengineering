@@ -1,3 +1,3 @@
-How strong was the feeling that the body you saw was you?;1;2;3;4;5;6;7;
+How strong was the feeling that% the body you saw was you?;1;2;3;4;5;6;7;
 How strong was the feeling that the touch you felt was located where you saw the stroking?;1;2;3;4;5;6;7;
 I felt my body as usual, nothing changed;1;2;3;4;5;6;7;

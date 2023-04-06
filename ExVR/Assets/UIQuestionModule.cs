@@ -96,6 +96,9 @@ namespace Ex{
 
                 horitontalSliderBar = GameObject.Find("HorizontalBar").GetComponent<Image>();
                 barCursor = GameObject.Find("BarCursor").GetComponent<Image>();
+
+                if(questionModule.current_config().name == "training") questionModule.transform.Find(modulename + "/Canvas/Bodies").gameObject.SetActive(false);
+                else questionModule.transform.Find(modulename + "/Canvas/Bodies").gameObject.SetActive(true);
             }
             else if (current_config().name == "fbi")
             {
@@ -183,6 +186,7 @@ namespace Ex{
                     if (hasHit && (hitName.Contains("BarCursor") || hitName.Contains("HorizontalBar")) && !active_selection)
                     {
                         active_selection = true;
+                        CancelInvoke("FillRadialUI"); //just in case...
                         InvokeRepeating("FillRadialUI", 0, Time.deltaTime);
                         log_message(HitInfo.point.ToString() + ", " + HitInfo.transform.gameObject);
 

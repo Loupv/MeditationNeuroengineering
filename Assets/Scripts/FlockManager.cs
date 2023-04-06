@@ -34,8 +34,8 @@ public class FlockManager : MonoBehaviour {
             allObjects[i].GetComponent<Flock>().Init(this);
             allObjects[i].transform.parent = this.transform;
 
-            if (Random.value >= 0.5f) allObjects[i].transform.Find("Butterfly").GetComponent<MeshRenderer>().materials[0] = mat2;
-            else allObjects[i].transform.Find("Butterfly").GetComponent<MeshRenderer>().materials[0] = mat1;
+            if (Random.value >= 0.5f) allObjects[i].transform.Find("Butterfly").GetComponent<MeshRenderer>().materials[0] = mat1;
+            else allObjects[i].transform.Find("Butterfly").GetComponent<MeshRenderer>().materials[0] = mat2;
         }
 
         goalPos = this.transform.position;
