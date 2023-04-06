@@ -166,7 +166,7 @@ namespace Ex
             {
                 // either we press space, soundguidance has stopped or we triggered next (from UI or end of body/platform movement)
                 // check also if we're in the right state for it and that there's still a routine after this one
-                if ((UnityEngine.Input.GetKeyDown(KeyCode.Space) || (guidanceClipFound && !routineGuidance.isPlaying) || nextRoutineRequested) && fadingState == FadingState.idle && GetNextRoutineName() != ""
+                if ((UnityEngine.Input.GetKeyDown(KeyCode.Space) || (guidanceClipFound && !routineGuidance.isPlaying) || nextRoutineRequested) && fadingState == FadingState.idle && GetNextRoutineName() != "" && !(graphicsHandler.forestMoving || graphicsHandler.cameraMoving)
                     && !(current_routine().name.Contains("Familiarization") && !familiarizationModule.allowNextRoutine))  
                 {
                     fadingState = FadingState.fadingOut;
@@ -195,16 +195,13 @@ namespace Ex
 
                     if (guidanceClipFound) routineGuidance.Stop();
 
-                    if(graphicsHandler.cameraMoving)
-                        graphicsHandler.StopCameraMovement();
-                    if (graphicsHandler.forestMoving)
-                        graphicsHandler.StopPlatformMovement();
-
-
                 }
+                else if (UnityEngine.Input.GetKeyDown(KeyCode.Space) && graphicsHandler.cameraMoving)
+                    graphicsHandler.StopCameraMovement();
+                else if (UnityEngine.Input.GetKeyDown(KeyCode.Space) && graphicsHandler.forestMoving)
+                    graphicsHandler.StopPlatformMovement();
 
 
-                
                 // finally do post process and skybox lerps
                 if (fadingState == FadingState.fadingOut && fadeOutDone)
                 {
@@ -668,8 +665,8 @@ namespace Ex
             if(current_routine().name.Contains("Exit"))
                 graphicsHandler.InitCameraOrbit(1);
             else if (current_routine().name.Contains("FBIOut"))
-                graphicsHandler.InitCameraOrbit(3);
-            else
+                graphicsHandler.InitCameraOrbit(4);
+            else if (current_routine().name.Contains("PlatformMovement"))
                 graphicsHandler.InitPlatformMovement(1);
         }   
 
@@ -681,7 +678,7 @@ namespace Ex
                 graphicsHandler.InitCameraOrbit(0);
             else if (current_routine().name.Contains("FBIIn"))
                 graphicsHandler.InitCameraOrbit(2);
-            else
+            else if (current_routine().name.Contains("PlatformMovementBack"))
                 graphicsHandler.InitPlatformMovement(0);
         }
 

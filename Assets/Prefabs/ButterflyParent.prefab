@@ -111,24 +111,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: Butterfly
       objectReference: {fileID: 0}
-    - target: {fileID: 2508845134350146252, guid: 9954ac5cd9c3a4fde96fef578b0cdf50,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2508845134350146254, guid: 9954ac5cd9c3a4fde96fef578b0cdf50,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: -462981019419857548, guid: 01cff49ecf7e4a344b9da56d162d6911,
-        type: 3}
-    - target: {fileID: 7432251587985248893, guid: 9954ac5cd9c3a4fde96fef578b0cdf50,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 7432251587985248893, guid: 9954ac5cd9c3a4fde96fef578b0cdf50, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9954ac5cd9c3a4fde96fef578b0cdf50, type: 3}
 --- !u!4 &868241661655289817 stripped
 Transform:
