@@ -186,6 +186,7 @@ namespace Ex{
                     if (hasHit && (hitName.Contains("BarCursor") || hitName.Contains("HorizontalBar")) && !active_selection)
                     {
                         active_selection = true;
+                        fillerImage.fillAmount = 0;
                         CancelInvoke("FillRadialUI"); //just in case...
                         InvokeRepeating("FillRadialUI", 0, Time.deltaTime);
                         log_message(HitInfo.point.ToString() + ", " + HitInfo.transform.gameObject);
