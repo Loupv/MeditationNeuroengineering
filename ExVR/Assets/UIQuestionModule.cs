@@ -38,7 +38,7 @@ namespace Ex{
         int currentQuestionID, answersCount;
         bool questionLoaded;
         float horitontalSliderValue;
-
+        float validationSpeed;
 
         public override void slot1(object value)
         {
@@ -122,6 +122,8 @@ namespace Ex{
             myCamera = ExVR.Display().cameras().get_eye_camera_transform().gameObject;// GameObject.Find("[CameraRig]").transform.Find("Cameras").gameObject;
             active = true;
 
+            validationSpeed = 1f / 45f;
+
             LoadNextQuestion();
         } 
 
@@ -151,7 +153,9 @@ namespace Ex{
                     if (hasHit && hitName.Contains("Answer") && !active_selection)
                     {
                         active_selection = true;
-                        InvokeRepeating("FillRadialUI", 0, Time.deltaTime);
+                        fillerImage.fillAmount = 0;
+                        CancelInvoke("FillRadialUI"); //just in case...
+                        InvokeRepeating("FillRadialUI", 0, validationSpeed);
                         log_message(HitInfo.point.ToString() + ", " + HitInfo.transform.gameObject);
 
                     }
@@ -188,7 +192,7 @@ namespace Ex{
                         active_selection = true;
                         fillerImage.fillAmount = 0;
                         CancelInvoke("FillRadialUI"); //just in case...
-                        InvokeRepeating("FillRadialUI", 0, Time.deltaTime);
+                        InvokeRepeating("FillRadialUI", 0, validationSpeed);
                         log_message(HitInfo.point.ToString() + ", " + HitInfo.transform.gameObject);
 
                     }
@@ -212,7 +216,7 @@ namespace Ex{
             radialFiller.gameObject.transform.position = HitInfo.point;
             cursor.transform.position = new Vector3(0, -10, 0);
             fillerImage.fillAmount += Time.deltaTime;
-
+            log_message(Time.deltaTime.ToString());
             if (fillerImage.fillAmount >= 1 && active)
             {
                 fillerImage.fillAmount = 0;

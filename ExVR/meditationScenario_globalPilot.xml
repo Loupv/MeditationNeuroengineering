@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Experiment name="meditationScenario_globalPilot" version="1.0b2" mode="designer" designer-used="D:/Meditation/exvr-designer-1.0b02/ExVR.exe">
     <Settings debug="1" csharp_debug_info="0" catch_components_exceptions="0" positional_tracking="1" catch_external_keyboard_events="0">
-        <Display mode="1" stereo_fov="60" fullscreen="0" monitor_id="1" resolution_id="1" custom_width="1920" custom_height="1080"/>
+        <Display mode="0" stereo_fov="60" fullscreen="0" monitor_id="1" resolution_id="1" custom_width="1920" custom_height="1080"/>
         <Camera neutral_x="0" neutral_y="1" neutral_z="0"/>
     </Settings>
     <Resources reload="200">
@@ -708,8 +708,8 @@
                     <Arg name="rx_speed" ui="Float spin box" value="2" type="System.Single" dim="0"/>
                     <Arg name="ry_speed" ui="Float spin box" value="2" type="System.Single" dim="0"/>
                     <Arg name="rz_speed" ui="Float spin box" value="2" type="System.Single" dim="0"/>
-                    <Arg name="start_routine" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="update_on" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="start_routine" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="update_on" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="use_eye" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="use_neutral" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
                 </Config>
@@ -8883,7 +8883,7 @@
                     <Connector key="179" name="String" node_position="-170.512 159.76">
                         <Arg name="value" ui="Line text editor" value="Thank you! We will now go through a new task;Validate;" type="System.String" dim="0"/>
                     </Connector>
-                    <Connector key="180" name="StartRoutine" node_position="35.04 546.72">
+                    <Connector key="180" name="StartRoutine" node_position="33.312 558.816">
                         <Arg name="value" ui="Label" value="" type="System.String" dim="0"/>
                     </Connector>
                     <Connector key="181" name="Delay" node_position="281 382">
@@ -8944,10 +8944,7 @@
                             <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
                             <Interval t1="0" t2="10000"/>
                         </Timeline>
-                        <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
+                        <Timeline type="Visibiliy"/>
                     </Action>
                     <Action key="2295" key_component="30" key_config="63" node_used="0" node_position="0 0">
                         <!--Component MeditationShelter with config standard -->
@@ -8971,8 +8968,8 @@
                             <Interval t1="0" t2="10000"/>
                         </Timeline>
                     </Action>
-                    <Action key="2297" key_component="6" key_config="13" node_used="0" node_position="0 0">
-                        <!--Component SkyBox with config Lab -->
+                    <Action key="2297" key_component="6" key_config="264" node_used="0" node_position="0 0">
+                        <!--Component SkyBox with config FBI -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
                             <Interval t1="0" t2="10000"/>
@@ -9092,17 +9089,6 @@
                             <Interval t1="0" t2="10000"/>
                         </Timeline>
                     </Action>
-                    <Action key="2308" key_component="69" key_config="154" node_used="0" node_position="0 0">
-                        <!--Component Guidance_Lab_WelcomeBack with config default -->
-                        <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                        <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                    </Action>
                     <Action key="2309" key_component="70" key_config="156" node_used="0" node_position="0 0">
                         <!--Component K4 manager with config sync -->
                         <Timeline type="Update">
@@ -9116,28 +9102,6 @@
                     </Action>
                     <Action key="2310" key_component="71" key_config="158" node_used="0" node_position="0 0">
                         <!--Component K4 direct multi clouds with config standard -->
-                        <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                        <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                    </Action>
-                    <Action key="2311" key_component="114" key_config="253" node_used="0" node_position="0 0">
-                        <!--Component volumetricVid_2L with config standard -->
-                        <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                        <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                    </Action>
-                    <Action key="2312" key_component="117" key_config="259" node_used="0" node_position="0 0">
-                        <!--Component volumetricVid_2R with config standard -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
                             <Interval t1="0" t2="10000"/>
@@ -9219,10 +9183,7 @@
                             <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
                             <Interval t1="0" t2="10000"/>
                         </Timeline>
-                        <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
+                        <Timeline type="Visibiliy"/>
                     </Action>
                     <Action key="2316" key_component="30" key_config="63" node_used="0" node_position="0 0">
                         <!--Component MeditationShelter with config standard -->
@@ -9246,8 +9207,8 @@
                             <Interval t1="0" t2="10000"/>
                         </Timeline>
                     </Action>
-                    <Action key="2318" key_component="6" key_config="13" node_used="0" node_position="0 0">
-                        <!--Component SkyBox with config Lab -->
+                    <Action key="2318" key_component="6" key_config="264" node_used="0" node_position="0 0">
+                        <!--Component SkyBox with config FBI -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
                             <Interval t1="0" t2="10000"/>
@@ -9367,17 +9328,6 @@
                             <Interval t1="0" t2="10000"/>
                         </Timeline>
                     </Action>
-                    <Action key="2329" key_component="69" key_config="154" node_used="0" node_position="0 0">
-                        <!--Component Guidance_Lab_WelcomeBack with config default -->
-                        <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                        <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                    </Action>
                     <Action key="2330" key_component="70" key_config="156" node_used="0" node_position="0 0">
                         <!--Component K4 manager with config sync -->
                         <Timeline type="Update">
@@ -9389,30 +9339,8 @@
                             <Interval t1="0" t2="10000"/>
                         </Timeline>
                     </Action>
-                    <Action key="2331" key_component="71" key_config="158" node_used="0" node_position="0 0">
+                    <Action key="2774" key_component="71" key_config="158" node_used="0" node_position="0 0">
                         <!--Component K4 direct multi clouds with config standard -->
-                        <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                        <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                    </Action>
-                    <Action key="2332" key_component="114" key_config="253" node_used="0" node_position="0 0">
-                        <!--Component volumetricVid_2L with config standard -->
-                        <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                        <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                    </Action>
-                    <Action key="2333" key_component="117" key_config="259" node_used="0" node_position="0 0">
-                        <!--Component volumetricVid_2R with config standard -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
                             <Interval t1="0" t2="10000"/>
@@ -11116,10 +11044,7 @@
                             <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
                             <Interval t1="0" t2="10000"/>
                         </Timeline>
-                        <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
+                        <Timeline type="Visibiliy"/>
                     </Action>
                     <Action key="1075" key_component="11" key_config="23" node_used="0" node_position="0 0">
                         <!--Component PostProcess with config LabScene -->
@@ -11266,14 +11191,8 @@
                     </Action>
                     <Action key="1088" key_component="71" key_config="158" node_used="0" node_position="0 0">
                         <!--Component K4 direct multi clouds with config standard -->
-                        <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                        <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
+                        <Timeline type="Update"/>
+                        <Timeline type="Visibiliy"/>
                     </Action>
                     <Action key="1089" key_component="102" key_config="225" node_used="0" node_position="0 0">
                         <!--Component Blend fade viewer with config standard -->
@@ -11341,10 +11260,7 @@
                             <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
                             <Interval t1="0" t2="10000"/>
                         </Timeline>
-                        <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
+                        <Timeline type="Visibiliy"/>
                     </Action>
                     <Action key="1092" key_component="11" key_config="23" node_used="0" node_position="0 0">
                         <!--Component PostProcess with config LabScene -->
@@ -11491,14 +11407,8 @@
                     </Action>
                     <Action key="1105" key_component="71" key_config="158" node_used="0" node_position="0 0">
                         <!--Component K4 direct multi clouds with config standard -->
-                        <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                        <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
+                        <Timeline type="Update"/>
+                        <Timeline type="Visibiliy"/>
                     </Action>
                     <Action key="1106" key_component="102" key_config="225" node_used="0" node_position="0 0">
                         <!--Component Blend fade viewer with config standard -->
