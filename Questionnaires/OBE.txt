@@ -1,8 +1,8 @@
-I felt as if I was outside my physical body;Strongly disagree; Disagree; Somewhat disagree; Neutral; Somewhat agree; Agree; Strongly agree;
-I felt as if I was disconnected from my physical body;Strongly disagree; Disagree; Somewhat disagree; Neutral; Somewhat agree; Agree; Strongly agree;
-I felt as if I was separated from my physical body ;Strongly disagree; Disagree; Somewhat disagree; Neutral; Somewhat agree; Agree; Strongly agree;
-I felt as if I became lighter;Strongly disagree; Disagree; Somewhat disagree; Neutral; Somewhat agree; Agree; Strongly agree;
-I felt as if I was floating;Strongly disagree; Disagree; Somewhat disagree; Neutral; Somewhat agree; Agree; Strongly agree;
-I felt as if I was located from where I saw the scene;Strongly disagree; Disagree; Somewhat disagree; Neutral; Somewhat agree; Agree; Strongly agree;
-I felt as if the body I saw was my body;Strongly disagree; Disagree; Somewhat disagree; Neutral; Somewhat agree; Agree; Strongly agree;
-I felt as if I had more than three bodies;Strongly disagree; Disagree; Somewhat disagree; Neutral; Somewhat agree; Agree; Strongly agree;
+I felt as if I was outside my physical body;Strongly% disagree; Disagree; Somewhat% disagree; Neutral; Somewhat% agree; Agree; Strongly% agree;
+I felt as if I was disconnected from my physical body;Strongly% disagree; Disagree; Somewhat% disagree; Neutral; Somewhat% agree; Agree; Strongly% agree;
+I felt as if I was separated from my physical body ;Strongly% disagree; Disagree; Somewhat% disagree; Neutral; Somewhat% agree; Agree; Strongly% agree;
+I felt as if I became lighter;Strongly% disagree; Disagree; Somewhat% disagree; Neutral; Somewhat% agree; Agree; Strongly% agree;
+I felt as if I was floating;Strongly% disagree; Disagree; Somewhat% disagree; Neutral; Somewhat% agree; Agree; Strongly% agree;
+I felt as if I was located from where I saw the scene;Strongly% disagree; Disagree; Somewhat% disagree; Neutral; Somewhat% agree; Agree; Strongly% agree;
+I felt as if the body I saw was my body;Strongly% disagree; Disagree; Somewhat% disagree; Neutral; Somewhat% agree; Agree; Strongly% agree;
+I felt as if I had more than three bodies;Strongly% disagree; Disagree; Somewhat% disagree; Neutral; Somewhat% agree; Agree; Strongly% agree;

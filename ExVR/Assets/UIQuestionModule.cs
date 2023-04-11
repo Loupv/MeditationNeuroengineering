@@ -250,7 +250,7 @@ namespace Ex{
             TimeManager timeManager = FindObjectOfType<TimeManager>();
             double time = timeManager.ellapsed_exp_ms();
 
-            string str = time.ToString() + ";" + currentQuestion + ";" + HitInfo.transform.Find("Text").GetComponent<UnityEngine.UI.Text>().text;
+            string str = time.ToString() + ";" + currentQuestion.Replace("%","").Replace("\n","") + ";" + HitInfo.transform.Find("Text").GetComponent<UnityEngine.UI.Text>().text;
             invoke_signal1(str);
         }
 
@@ -298,13 +298,14 @@ namespace Ex{
             ShowQuestionModule(true);
             currentQuestion = values.First();
             currentQuestion = currentQuestion.Replace("%", "\n");
-            log_message(currentQuestion);
+            //log_message(currentQuestion);
             answerStrings = values.Skip(1).ToArray();
 
             questionModule.transform.Find(modulename+"/Canvas/Question/Text").GetComponent<UnityEngine.UI.Text>().text = currentQuestion;
 
             for (int i = 0; i < answers.Count; i++)
             {
+                answerStrings[i] = answerStrings[i].Replace("%", "\n");
                 if (i < answerStrings.Length) answers[i].transform.Find("Text").GetComponent<UnityEngine.UI.Text>().text = answerStrings[i];
                 else answers[i].SetActive(false);
             }
