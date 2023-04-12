@@ -37,6 +37,8 @@ namespace Ex
             
             // be sure that object cameras is turned looking at origin, for orbital camera purposes later
             cameraRig.transform.Find("Cameras").LookAt(cameraOrigin - new Vector3(0, 0, lookForward));
+
+            Camera.main.nearClipPlane = 0.4f; // to avoid blinking particles
         }
 
 
@@ -87,6 +89,17 @@ namespace Ex
                 InitCameraOrbit(3);                                                                   
             if (UnityEngine.Input.GetKeyDown(KeyCode.Keypad4) || UnityEngine.Input.GetKeyDown(KeyCode.Alpha4))
                 InitCameraOrbit(4);
+
+            /*if (UnityEngine.Input.GetKeyDown(KeyCode.Alpha8))
+            {
+                Camera.main.nearClipPlane += 0.1f;
+                log_message(Camera.main.nearClipPlane.ToString());
+            }
+            if (UnityEngine.Input.GetKeyDown(KeyCode.Alpha9))
+            {
+                Camera.main.nearClipPlane -= 0.1f;
+                log_message(Camera.main.nearClipPlane.ToString());
+            }*/
 
         }
 
