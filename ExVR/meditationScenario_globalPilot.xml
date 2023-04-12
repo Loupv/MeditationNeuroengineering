@@ -2818,7 +2818,7 @@
                     <Arg name="display_filtering_obb" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="filter_points_outside_obb" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="filtering_obb_tab" ui="Tab" value="true[#OBBFW#]false[#OBBFW#]0.784314 0 0 0.196078[#OBBFW#]0.55 1.04 0.2 0 0 0 2.8 2 2.8[#T#]false[#OBBFW#]false[#OBBFW#]0.784314 0.784314 0.784314 0.117647[#OBBFW#]0.6 0.8 0.7 0 0 0 1.2 1.8 1.2" type="System.String" dim="1" sep="[#T#]" sizes="2"/>
-                    <Arg name="global_transform" ui="Transformation" value="0.6 1.99 0.86 73.6 195 -254.7 -1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
+                    <Arg name="global_transform" ui="Transformation" value="-0.5 0.36 0.23 12.1 85.6 69.3 -1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
                     <Arg name="global_transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="rendering" ui="Combo box index" value="    1" type="System.Int32" dim="0"/>
                     <Arg name="size_points" ui="Float spin box" value="0.0037" type="System.Single" dim="0"/>
@@ -17725,9 +17725,9 @@
                 <Set key="5" name="asynchroneous" occu="2"/>
                 <Set key="4" name="synchroneous" occu="2"/>
             </Loop>
-            <Loop key="280" name="FBI2" type="fixed" nbReps="1" N="1" noFollowingValues="0" informations="">
-                <Set key="7" name="asynchroneous" occu="1"/>
-                <Set key="8" name="synchroneous" occu="1"/>
+            <Loop key="280" name="FBI2" type="random" nbReps="4" N="1" noFollowingValues="0" informations="">
+                <Set key="7" name="asynchroneous" occu="2"/>
+                <Set key="8" name="synchroneous" occu="2"/>
             </Loop>
             <Loop key="364" name="Familiarization" type="fixed" nbReps="1" N="1" noFollowingValues="0" informations="">
                 <Set key="9" name="default" occu="1"/>
