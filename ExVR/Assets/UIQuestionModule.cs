@@ -255,7 +255,8 @@ namespace Ex{
             TimeManager timeManager = FindObjectOfType<TimeManager>();
             double time = timeManager.ellapsed_exp_ms();
 
-            string str = time.ToString() + ";" + currentQuestion.Replace("%","").Replace("\n","") + ";" + HitInfo.transform.Find("Text").GetComponent<UnityEngine.UI.Text>().text;
+            //string str = time.ToString() + ";" + currentQuestion.Replace("%","").Replace("\n","") + ";" + HitInfo.transform.Find("Text").GetComponent<UnityEngine.UI.Text>().text.Replace("%", "").Replace("\n", "");
+            string str = time.ToString() + ";" + "question"+currentQuestionID.ToString() + ";" + HitInfo.transform.Find("Text").GetComponent<UnityEngine.UI.Text>().text.Replace("%", "").Replace("\n", "");
             invoke_signal1(str);
         }
 

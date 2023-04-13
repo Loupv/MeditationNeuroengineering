@@ -67,7 +67,8 @@
         <Resource key="61" type="CSharpScript" alias="GraphicsHandler" path="Assets/GraphicsHandler.cs"/>
         <Resource key="146" type="CSharpScript" alias="FamiliarizationModule" path="Assets/FamiliarizationModule.cs"/>
         <Resource key="147" type="CSharpScript" alias="UIQuestionModule" path="Assets/UIQuestionModule.cs"/>
-        <Resource key="154" type="Directory" alias="Logs" path="../../Logs"/>
+        <Resource key="172" type="Directory" alias="QuestionnairesLog" path="Logs/QuestionnairesLog"/>
+        <Resource key="173" type="Directory" alias="GlobalLog" path="Logs/GlobalLog"/>
         <Resource key="124" type="VolumetricVideo" alias="firstPartL" path="VolumetricVideos/firstPartL.kvid"/>
         <Resource key="125" type="VolumetricVideo" alias="firstPartR" path="VolumetricVideos/firstPartR.kvid"/>
         <Resource key="126" type="VolumetricVideo" alias="fourthPartL" path="VolumetricVideos/fourthPartL.kvid"/>
@@ -80,24 +81,24 @@
     <Components>
         <Component key="0" name="Global logger" category="Output" type="GlobalLogger" global="1" always_updating="1" exceptions="0" frame_logging="0" trigger_logging="0" restricted="0" priority="2">
             <InitConfig key="0" name="standard">
-                <Arg name="actions_count" ui="Check box" value="true" type="System.Boolean" dim="0"/>
-                <Arg name="add_current_instance_to_sub_directory_name" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                <Arg name="actions_count" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                <Arg name="add_current_instance_to_sub_directory_name" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                 <Arg name="add_date_to_sub_directory_name" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                 <Arg name="base_sub_directory_name" ui="Line text editor" value="global_log" type="System.String" dim="0"/>
-                <Arg name="camera_calibration" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                <Arg name="camera_calibration" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                 <Arg name="camera_rig" ui="Check box" value="true" type="System.Boolean" dim="0"/>
-                <Arg name="condition_duration" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                <Arg name="condition_duration" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                 <Arg name="condition_name" ui="Check box" value="true" type="System.Boolean" dim="0"/>
-                <Arg name="condition_nb_calls" ui="Check box" value="true" type="System.Boolean" dim="0"/>
-                <Arg name="connections_count" ui="Check box" value="true" type="System.Boolean" dim="0"/>
-                <Arg name="connectors_count" ui="Check box" value="true" type="System.Boolean" dim="0"/>
-                <Arg name="date_time_format" ui="Line text editor" value="yyyy-MM-dd_H-mm-ss" type="System.String" dim="0"/>
-                <Arg name="directory" ui="Resource" value="Logs%%%154" type="System.String" dim="1" sep="%%%" sizes="2"/>
+                <Arg name="condition_nb_calls" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                <Arg name="connections_count" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                <Arg name="connectors_count" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                <Arg name="date_time_format" ui="Line text editor" value="MM-dd_H-mm-ss" type="System.String" dim="0"/>
+                <Arg name="directory" ui="Resource" value="GlobalLog%%%173" type="System.String" dim="1" sep="%%%" sizes="2"/>
                 <Arg name="element_iteration" ui="Check box" value="true" type="System.Boolean" dim="0"/>
-                <Arg name="element_order" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                <Arg name="element_order" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                 <Arg name="ellapsed_element_time" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                 <Arg name="ellapsed_exp_time" ui="Check box" value="true" type="System.Boolean" dim="0"/>
-                <Arg name="eyes_camera" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                <Arg name="eyes_camera" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                 <Arg name="file_extension" ui="Line text editor" value="csv" type="System.String" dim="0"/>
                 <Arg name="frame_id" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                 <Arg name="framerate" ui="Check box" value="true" type="System.Boolean" dim="0"/>
@@ -114,13 +115,13 @@
         </Component>
         <Component key="131" name="Familiarization Logger" category="Output" type="Logger" global="0" always_updating="0" exceptions="0" frame_logging="0" trigger_logging="0" restricted="0" priority="2">
             <InitConfig key="299" name="standard">
-                <Arg name="add_current_instance_to_file_name" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                <Arg name="add_current_instance_to_file_name" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                 <Arg name="add_date_to_file_name" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                 <Arg name="add_header_line" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                 <Arg name="add_to_end_if_file_exists" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
-                <Arg name="base_file_name" ui="Line text editor" value="familiarization" type="System.String" dim="0"/>
-                <Arg name="date_time_format" ui="Line text editor" value="yyyy-MM-dd_H-mm-ss" type="System.String" dim="0"/>
-                <Arg name="directory" ui="Resource" value="Logs%%%154" type="System.String" dim="1" sep="%%%" sizes="2"/>
+                <Arg name="base_file_name" ui="Line text editor" value="fam" type="System.String" dim="0"/>
+                <Arg name="date_time_format" ui="Line text editor" value="MM-dd_H-mm-ss" type="System.String" dim="0"/>
+                <Arg name="directory" ui="Resource" value="QuestionnairesLog%%%172" type="System.String" dim="1" sep="%%%" sizes="2"/>
                 <Arg name="dont_write_if_file_exists" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                 <Arg name="file_extension" ui="Line text editor" value="txt" type="System.String" dim="0"/>
                 <Arg name="header_line" ui="Line text editor" value="" type="System.String" dim="0"/>
@@ -133,13 +134,13 @@
         </Component>
         <Component key="91" name="CamsR Logger" category="Output" type="Logger" global="0" always_updating="0" exceptions="0" frame_logging="0" trigger_logging="0" restricted="0" priority="2">
             <InitConfig key="200" name="standard">
-                <Arg name="add_current_instance_to_file_name" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                <Arg name="add_current_instance_to_file_name" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                 <Arg name="add_date_to_file_name" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                 <Arg name="add_header_line" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                 <Arg name="add_to_end_if_file_exists" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
-                <Arg name="base_file_name" ui="Line text editor" value="cams-r" type="System.String" dim="0"/>
+                <Arg name="base_file_name" ui="Line text editor" value="cam" type="System.String" dim="0"/>
                 <Arg name="date_time_format" ui="Line text editor" value="yyyy-MM-dd_H-mm-ss" type="System.String" dim="0"/>
-                <Arg name="directory" ui="Resource" value="Logs%%%154" type="System.String" dim="1" sep="%%%" sizes="2"/>
+                <Arg name="directory" ui="Resource" value="QuestionnairesLog%%%172" type="System.String" dim="1" sep="%%%" sizes="2"/>
                 <Arg name="dont_write_if_file_exists" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                 <Arg name="file_extension" ui="Line text editor" value="txt" type="System.String" dim="0"/>
                 <Arg name="header_line" ui="Line text editor" value="" type="System.String" dim="0"/>
@@ -152,13 +153,13 @@
         </Component>
         <Component key="128" name="OBE Logger" category="Output" type="Logger" global="0" always_updating="0" exceptions="0" frame_logging="0" trigger_logging="0" restricted="0" priority="2">
             <InitConfig key="293" name="standard">
-                <Arg name="add_current_instance_to_file_name" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                <Arg name="add_current_instance_to_file_name" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                 <Arg name="add_date_to_file_name" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                 <Arg name="add_header_line" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                 <Arg name="add_to_end_if_file_exists" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
                 <Arg name="base_file_name" ui="Line text editor" value="obe" type="System.String" dim="0"/>
-                <Arg name="date_time_format" ui="Line text editor" value="yyyy-MM-dd_H-mm-ss" type="System.String" dim="0"/>
-                <Arg name="directory" ui="Resource" value="Logs%%%154" type="System.String" dim="1" sep="%%%" sizes="2"/>
+                <Arg name="date_time_format" ui="Line text editor" value="MM-dd_H-mm-ss" type="System.String" dim="0"/>
+                <Arg name="directory" ui="Resource" value="QuestionnairesLog%%%172" type="System.String" dim="1" sep="%%%" sizes="2"/>
                 <Arg name="dont_write_if_file_exists" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                 <Arg name="file_extension" ui="Line text editor" value="txt" type="System.String" dim="0"/>
                 <Arg name="header_line" ui="Line text editor" value="" type="System.String" dim="0"/>
@@ -171,13 +172,13 @@
         </Component>
         <Component key="129" name="PBB Logger" category="Output" type="Logger" global="0" always_updating="0" exceptions="0" frame_logging="0" trigger_logging="0" restricted="0" priority="2">
             <InitConfig key="295" name="standard">
-                <Arg name="add_current_instance_to_file_name" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                <Arg name="add_current_instance_to_file_name" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                 <Arg name="add_date_to_file_name" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                 <Arg name="add_header_line" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                 <Arg name="add_to_end_if_file_exists" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
                 <Arg name="base_file_name" ui="Line text editor" value="pbb" type="System.String" dim="0"/>
-                <Arg name="date_time_format" ui="Line text editor" value="yyyy-MM-dd_H-mm-ss" type="System.String" dim="0"/>
-                <Arg name="directory" ui="Resource" value="Logs%%%154" type="System.String" dim="1" sep="%%%" sizes="2"/>
+                <Arg name="date_time_format" ui="Line text editor" value="MM-dd_H-mm-ss" type="System.String" dim="0"/>
+                <Arg name="directory" ui="Resource" value="QuestionnairesLog%%%172" type="System.String" dim="1" sep="%%%" sizes="2"/>
                 <Arg name="dont_write_if_file_exists" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                 <Arg name="file_extension" ui="Line text editor" value="txt" type="System.String" dim="0"/>
                 <Arg name="header_line" ui="Line text editor" value="" type="System.String" dim="0"/>
@@ -190,13 +191,13 @@
         </Component>
         <Component key="130" name="FBI Logger" category="Output" type="Logger" global="0" always_updating="0" exceptions="0" frame_logging="0" trigger_logging="0" restricted="0" priority="2">
             <InitConfig key="297" name="standard">
-                <Arg name="add_current_instance_to_file_name" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                <Arg name="add_current_instance_to_file_name" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                 <Arg name="add_date_to_file_name" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                 <Arg name="add_header_line" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                 <Arg name="add_to_end_if_file_exists" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
                 <Arg name="base_file_name" ui="Line text editor" value="fbi" type="System.String" dim="0"/>
-                <Arg name="date_time_format" ui="Line text editor" value="yyyy-MM-dd_H-mm-ss" type="System.String" dim="0"/>
-                <Arg name="directory" ui="Resource" value="Logs%%%154" type="System.String" dim="1" sep="%%%" sizes="2"/>
+                <Arg name="date_time_format" ui="Line text editor" value="MM-dd_H-mm-ss" type="System.String" dim="0"/>
+                <Arg name="directory" ui="Resource" value="QuestionnairesLog%%%172" type="System.String" dim="1" sep="%%%" sizes="2"/>
                 <Arg name="dont_write_if_file_exists" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                 <Arg name="file_extension" ui="Line text editor" value="txt" type="System.String" dim="0"/>
                 <Arg name="header_line" ui="Line text editor" value="" type="System.String" dim="0"/>
@@ -205,25 +206,6 @@
             </InitConfig>
             <Configs>
                 <Config key="298" name="standard"/>
-            </Configs>
-        </Component>
-        <Component key="110" name="MovementLogger" category="Output" type="Logger" global="0" always_updating="0" exceptions="0" frame_logging="0" trigger_logging="0" restricted="0" priority="2">
-            <InitConfig key="243" name="standard">
-                <Arg name="add_current_instance_to_file_name" ui="Check box" value="true" type="System.Boolean" dim="0"/>
-                <Arg name="add_date_to_file_name" ui="Check box" value="true" type="System.Boolean" dim="0"/>
-                <Arg name="add_header_line" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                <Arg name="add_to_end_if_file_exists" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
-                <Arg name="base_file_name" ui="Line text editor" value="movementlog" type="System.String" dim="0"/>
-                <Arg name="date_time_format" ui="Line text editor" value="yyyy-MM-dd_H-mm-ss" type="System.String" dim="0"/>
-                <Arg name="directory" ui="Resource" value="Logs%%%154" type="System.String" dim="1" sep="%%%" sizes="2"/>
-                <Arg name="dont_write_if_file_exists" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                <Arg name="file_extension" ui="Line text editor" value="txt" type="System.String" dim="0"/>
-                <Arg name="header_line" ui="Line text editor" value="" type="System.String" dim="0"/>
-                <Arg name="insert_new_routine_infos" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                <Arg name="replace_if_file_exists" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
-            </InitConfig>
-            <Configs>
-                <Config key="244" name="standard"/>
             </Configs>
         </Component>
         <Component key="92" name="CamsRQuestionnaire" category="Resource" type="TextResource" global="0" always_updating="0" exceptions="1" frame_logging="0" trigger_logging="0" restricted="0" priority="2">
@@ -701,7 +683,7 @@
             </InitConfig>
             <Configs>
                 <Config key="49" name="1PP">
-                    <Arg name="debug_camera" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="debug_camera" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="m_speed" ui="Float spin box" value="3" type="System.Single" dim="0"/>
                     <Arg name="position" ui="Vector 3D" value="0.57 0.123 1.723" type="System.Single" dim="1" sep=" " sizes="3"/>
                     <Arg name="rotation" ui="Vector 3D" value="0 180 0" type="System.Single" dim="1" sep=" " sizes="3"/>
@@ -6051,17 +6033,6 @@
                             <Interval t1="0" t2="10000"/>
                         </Timeline>
                     </Action>
-                    <Action key="1006" key_component="110" key_config="244" node_used="0" node_position="1294 117">
-                        <!--Component MovementLogger with config standard -->
-                        <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                        <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                    </Action>
                     <Action key="1197" key_component="112" key_config="249" node_used="0" node_position="0 0">
                         <!--Component volumetricVid_1L with config standard -->
                         <Timeline type="Update">
@@ -7683,7 +7654,7 @@
                             <Interval t1="0" t2="1000"/>
                         </Timeline>
                     </Action>
-                    <Action key="1716" key_component="91" key_config="201" node_used="1" node_position="772 119.8">
+                    <Action key="1716" key_component="91" key_config="201" node_used="1" node_position="839 119.8">
                         <!--Component CamsR Logger with config standard -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
@@ -7835,8 +7806,6 @@
                     <Connector key="174" name="Delay" node_position="281 382">
                         <Arg name="value" ui="Integer spin box" value="5" type="System.Int32" dim="0"/>
                     </Connector>
-                    <!--Connection between Key90:Component:UIQuestionModule:Port0 and Key91:Component:CamsR Logger:Port1 -->
-                    <Connection key="565" out_type="component" out_key="90" signal_id="0" out_data_type="any" signal="signal1" in_type="component" in_key="91" slot_id="1" in_data_type="any" slot="write line"/>
                     <!--Connection between Key173:Connector:StartRoutine:Port0 and Key174:Connector:Delay:Port0 -->
                     <Connection key="566" out_type="connector" out_key="173" signal_id="0" out_data_type="string" signal="output value 0" in_type="connector" in_key="174" slot_id="0" in_data_type="any" slot="input value 0"/>
                     <!--Connection between Key174:Connector:Delay:Port0 and Key90:Component:UIQuestionModule:Port1 -->
@@ -8907,8 +8876,6 @@
                     <Connector key="327" name="PassValueTrigger" node_position="829.04 657.68">
                         <Arg name="value" ui="Label" value="" type="System.String" dim="0"/>
                     </Connector>
-                    <!--Connection between Key90:Component:UIQuestionModule:Port0 and Key91:Component:CamsR Logger:Port1 -->
-                    <Connection key="579" out_type="component" out_key="90" signal_id="0" out_data_type="any" signal="signal1" in_type="component" in_key="91" slot_id="1" in_data_type="any" slot="write line"/>
                     <!--Connection between Key180:Connector:StartRoutine:Port0 and Key181:Connector:Delay:Port0 -->
                     <Connection key="580" out_type="connector" out_key="180" signal_id="0" out_data_type="string" signal="output value 0" in_type="connector" in_key="181" slot_id="0" in_data_type="any" slot="input value 0"/>
                     <!--Connection between Key181:Connector:Delay:Port0 and Key90:Component:UIQuestionModule:Port1 -->
@@ -14664,7 +14631,7 @@
                 </Condition>
             </Routine>
             <Routine key="514" name="Lab_PreFBI" randomizer="0" informations="">
-                <Condition key="98" name="default" duration="1000" ui_scale="10" ui_size="1" sets_keys="">
+                <Condition key="98" name="default" duration="1000" ui_scale="10" ui_size="1" sets_keys="0">
                     <Action key="2752" key_component="25" key_config="53" node_used="0" node_position="0 0">
                         <!--Component LabRoom with config standard -->
                         <Timeline type="Update">
