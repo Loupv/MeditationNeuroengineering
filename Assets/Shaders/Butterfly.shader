@@ -11,6 +11,7 @@
         _Amount("Displacement Amount", Range(0,3)) = 0.5
         _Speed("Speed", Range(0,3)) = 0.1
         _Color("Color", Color) = (1,1,1,1)
+        _Rand("RandomValue", Range(0.3,1)) = 1
     }
  
     SubShader
@@ -51,11 +52,25 @@
 
         float _Amount;
         float _Speed;
+        float _Rand;
         sampler2D _DispTex;
  
         void vert(inout appdata_full v)
         {
-            v.vertex.xyz += v.normal * tex2Dlod(_DispTex, float4(v.texcoord.xy, 0, 0)).r * _Amount * sin(_Time * 30 * _Speed);
+
+            float verticalOffset = sin(_Time * 30 * _Speed - v.texcoord.y * 3);
+            float f = sin(_Time * 30 * _Speed)/65;
+            //* _Rand
+
+            // for each vertex we take the normal vector, multiply it by disp texture r's value,
+            // then multiply again by amount times the vertical offset (vertical offset make points from the start of the wing go first)
+            // then we add f which is ??
+
+            v.vertex.xyz += v.normal * (tex2Dlod(_DispTex, float4(v.texcoord.xy, 0, 0)).r * _Amount * verticalOffset + f);
+
+            //v.vertex.xyz += v.normal * (tex2Dlod(_DispTex, float4(v.texcoord.xy, 0, 0)).r * _Amount * sin(_Time * 30 * _Speed - v.texcoord.y * 3) + sin(_Time * 30 * _Speed)/65
+            //);
+
         }
 
         /*fixed4 frag (v2f i) : SV_Target

@@ -8,10 +8,13 @@ public class Flock : MonoBehaviour {
     bool turning = false;
     FlockManager manager;
 
+    Renderer rend;
+    //public float min = 0.3f, max = 1.0f;// randomFloat;
 
     public void Init(FlockManager m) {
         manager = m;
         speed = Random.Range(manager.minSpeed, manager.maxSpeed);
+        rend = transform.GetChild(0).GetComponent<MeshRenderer>();
     }
 
 
@@ -40,6 +43,10 @@ public class Flock : MonoBehaviour {
             if (Random.Range(0, 100) < 10) {
 
                 speed = Random.Range(manager.minSpeed, manager.maxSpeed);
+                MaterialPropertyBlock materialProperty = new MaterialPropertyBlock();
+                materialProperty.Clear();
+                materialProperty.SetFloat("_Rand", speed/10);
+                rend.SetPropertyBlock(materialProperty);
             }
 
 
