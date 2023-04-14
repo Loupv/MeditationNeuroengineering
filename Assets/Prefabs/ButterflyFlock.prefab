@@ -44,16 +44,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98cafa4bb020f2d49a95d039807f251d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  flockPrefab: {fileID: 3377040476996125274, guid: 5dc8c7f2aef6342389323af0faa3d6ae,
+  flockPrefab1: {fileID: 3110370760573650453, guid: 5dc8c7f2aef6342389323af0faa3d6ae,
+    type: 3}
+  flockPrefab2: {fileID: 3377040476996125274, guid: d9abddee00ecd4a878a9a8844cd75b34,
     type: 3}
   flockSize: 20
   allObjects: []
   movementLimits: {x: 60, y: 15, z: 40}
   goalPos: {x: 0, y: 0, z: 0}
-  minSpeed: 0.29
-  maxSpeed: 1.12
-  neighbourDistance: 10
-  rotationSpeed: 2.61
+  minSpeed: 4
+  maxSpeed: 20
+  neighbourDistance: 3.2
+  rotationSpeed: 4
 --- !u!65 &2936473902014665044
 BoxCollider:
   m_ObjectHideFlags: 0

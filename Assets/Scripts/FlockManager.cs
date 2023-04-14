@@ -13,10 +13,12 @@ public class FlockManager : MonoBehaviour
     public Vector3 goalPos = Vector3.zero;
 
     [Header("Flock Settings")]
-    [Range(0.0f, 5.0f)] public float minSpeed;
-    [Range(5.0f, 20.0f)] public float maxSpeed;
+    [Range(0.0f, 1.0f)] public float minSpeed;
+    [Range(0.0f, 5.0f)] public float maxSpeed;
     [Range(1.0f, 10.0f)] public float neighbourDistance;
     [Range(1.0f, 15.0f)] public float rotationSpeed;
+    
+    //[Range(0.7f, 1.3f)] float instanceScale;
 
     void Start()
     {
@@ -35,6 +37,8 @@ public class FlockManager : MonoBehaviour
             else allObjects[i] = Instantiate(flockPrefab2, pos, Quaternion.identity);
             allObjects[i].GetComponent<Flock>().Init(this);
             allObjects[i].transform.parent = this.transform;
+
+            allObjects[i].transform.localScale *= Random.Range(0.7f,1.3f);
 
             //allObjects[i].transform.Find("Butterfly").GetComponent<MeshRenderer>().materials[0] = mat1;
             //else allObjects[i].transform.Find("Butterfly").GetComponent<MeshRenderer>().materials[0] = mat2;

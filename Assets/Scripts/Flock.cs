@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class Flock : MonoBehaviour {
 
-    float speed;
+    public float speed, lastSpeed, speedTarget, lerpTime, totalLerpTime = 2;
     bool turning = false;
+    public bool lerping;
     FlockManager manager;
-
+    MaterialPropertyBlock materialProperty;
     Renderer rend;
     //public float min = 0.3f, max = 1.0f;// randomFloat;
 
@@ -25,10 +26,13 @@ public class Flock : MonoBehaviour {
         if (!b.Contains(transform.position)) {
 
             turning = true;
-        } else {
+        } 
+        else {
 
             turning = false;
         }
+
+
 
         if (turning) {
 
@@ -37,16 +41,29 @@ public class Flock : MonoBehaviour {
                 transform.rotation,
                 Quaternion.LookRotation(direction),
                 manager.rotationSpeed * Time.deltaTime);
-        } else {
+        } 
+        else {
 
 
-            if (Random.Range(0, 100) < 10) {
+            if (Random.Range(0, 100) < 10 && !lerping) {
+                
+                lastSpeed = speed;
+                speedTarget = Random.Range(manager.minSpeed, manager.maxSpeed);
 
-                speed = Random.Range(manager.minSpeed, manager.maxSpeed);
-                MaterialPropertyBlock materialProperty = new MaterialPropertyBlock();
+                materialProperty = new MaterialPropertyBlock();
                 materialProperty.Clear();
-                materialProperty.SetFloat("_Rand", speed/10);
                 rend.SetPropertyBlock(materialProperty);
+                lerpTime = 0;
+                lerping = true;
+            }
+
+            else if (lerping)
+            {
+                //materialProperty.SetFloat("_Rand", Mathf.Lerp(lastSpeed, speedTarget, lerpTime));
+                speed = Mathf.Lerp(lastSpeed, speedTarget, lerpTime);
+                materialProperty.SetFloat("_Speed", speed);
+                lerpTime += Time.deltaTime;
+                if(lerpTime > totalLerpTime) { lerping = false; }
             }
 
 
@@ -94,12 +111,12 @@ public class Flock : MonoBehaviour {
         if (groupSize > 0) {
 
             vCentre = vCentre / groupSize + (manager.goalPos - this.transform.position);
-            speed = gSpeed / groupSize;
+            //speed = gSpeed / groupSize;
 
-            if (speed > manager.maxSpeed) {
+            /*if (speed > manager.maxSpeed) {
 
                 speed = manager.maxSpeed;
-            }
+            }*/
 
             Vector3 direction = (vCentre + vAvoid) - transform.position;
             if (direction != Vector3.zero) {

@@ -9,9 +9,9 @@
         [NoScaleOffset]        _DispTex("Displacement Texture", 2D) = "white" {}
         //_Color ("Color (RGBA)", Color) = (1, 1, 1, 1) // add _Color property
         _Amount("Displacement Amount", Range(0,3)) = 0.5
-        _Speed("Speed", Range(0,3)) = 0.1
+        _Speed("Speed", Range(0,30)) = 1
         _Color("Color", Color) = (1,1,1,1)
-        _Rand("RandomValue", Range(0.3,1)) = 1
+        _Rand("RandomValue", Range(0.3,100)) = 1
     }
  
     SubShader
@@ -58,15 +58,15 @@
         void vert(inout appdata_full v)
         {
 
-            float verticalOffset = sin(_Time * 30 * _Speed - v.texcoord.y * 3);
-            float f = sin(_Time * 30 * _Speed)/65;
+            float verticalOffset = sin(_Time * 150 * _Speed - v.texcoord.y * 3);
+            float bounce = sin(_Time * 150 * _Speed)/65;
             //* _Rand
 
             // for each vertex we take the normal vector, multiply it by disp texture r's value,
             // then multiply again by amount times the vertical offset (vertical offset make points from the start of the wing go first)
-            // then we add f which is ??
+            // then we add f which is the bouncing effect
 
-            v.vertex.xyz += v.normal * (tex2Dlod(_DispTex, float4(v.texcoord.xy, 0, 0)).r * _Amount * verticalOffset + f);
+            v.vertex.xyz += v.normal * (tex2Dlod(_DispTex, float4(v.texcoord.xy, 0, 0)).r * _Amount * verticalOffset + bounce);
 
             //v.vertex.xyz += v.normal * (tex2Dlod(_DispTex, float4(v.texcoord.xy, 0, 0)).r * _Amount * sin(_Time * 30 * _Speed - v.texcoord.y * 3) + sin(_Time * 30 * _Speed)/65
             //);
