@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Experiment name="meditationScenario_globalPilot" version="1.0b2" mode="designer" designer-used="D:/Meditation/exvr-designer-1.0b02/ExVR.exe">
     <Settings debug="1" csharp_debug_info="0" catch_components_exceptions="0" positional_tracking="1" catch_external_keyboard_events="0">
-        <Display mode="0" stereo_fov="60" fullscreen="0" monitor_id="1" resolution_id="1" custom_width="1920" custom_height="1080"/>
+        <Display mode="1" stereo_fov="60" fullscreen="0" monitor_id="1" resolution_id="1" custom_width="1920" custom_height="1080"/>
         <Camera neutral_x="0" neutral_y="1" neutral_z="0"/>
     </Settings>
     <Resources reload="200">
@@ -67,7 +67,8 @@
         <Resource key="61" type="CSharpScript" alias="GraphicsHandler" path="Assets/GraphicsHandler.cs"/>
         <Resource key="146" type="CSharpScript" alias="FamiliarizationModule" path="Assets/FamiliarizationModule.cs"/>
         <Resource key="147" type="CSharpScript" alias="UIQuestionModule" path="Assets/UIQuestionModule.cs"/>
-        <Resource key="154" type="Directory" alias="Logs" path="../../Logs"/>
+        <Resource key="172" type="Directory" alias="QuestionnairesLog" path="Logs/QuestionnairesLog"/>
+        <Resource key="173" type="Directory" alias="GlobalLog" path="Logs/GlobalLog"/>
         <Resource key="124" type="VolumetricVideo" alias="firstPartL" path="VolumetricVideos/firstPartL.kvid"/>
         <Resource key="125" type="VolumetricVideo" alias="firstPartR" path="VolumetricVideos/firstPartR.kvid"/>
         <Resource key="126" type="VolumetricVideo" alias="fourthPartL" path="VolumetricVideos/fourthPartL.kvid"/>
@@ -80,24 +81,24 @@
     <Components>
         <Component key="0" name="Global logger" category="Output" type="GlobalLogger" global="1" always_updating="1" exceptions="0" frame_logging="0" trigger_logging="0" restricted="0" priority="2">
             <InitConfig key="0" name="standard">
-                <Arg name="actions_count" ui="Check box" value="true" type="System.Boolean" dim="0"/>
-                <Arg name="add_current_instance_to_sub_directory_name" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                <Arg name="actions_count" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                <Arg name="add_current_instance_to_sub_directory_name" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                 <Arg name="add_date_to_sub_directory_name" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                 <Arg name="base_sub_directory_name" ui="Line text editor" value="global_log" type="System.String" dim="0"/>
-                <Arg name="camera_calibration" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                <Arg name="camera_calibration" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                 <Arg name="camera_rig" ui="Check box" value="true" type="System.Boolean" dim="0"/>
-                <Arg name="condition_duration" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                <Arg name="condition_duration" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                 <Arg name="condition_name" ui="Check box" value="true" type="System.Boolean" dim="0"/>
-                <Arg name="condition_nb_calls" ui="Check box" value="true" type="System.Boolean" dim="0"/>
-                <Arg name="connections_count" ui="Check box" value="true" type="System.Boolean" dim="0"/>
-                <Arg name="connectors_count" ui="Check box" value="true" type="System.Boolean" dim="0"/>
-                <Arg name="date_time_format" ui="Line text editor" value="yyyy-MM-dd_H-mm-ss" type="System.String" dim="0"/>
-                <Arg name="directory" ui="Resource" value="Logs%%%154" type="System.String" dim="1" sep="%%%" sizes="2"/>
+                <Arg name="condition_nb_calls" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                <Arg name="connections_count" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                <Arg name="connectors_count" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                <Arg name="date_time_format" ui="Line text editor" value="MM-dd_H-mm-ss" type="System.String" dim="0"/>
+                <Arg name="directory" ui="Resource" value="GlobalLog%%%173" type="System.String" dim="1" sep="%%%" sizes="2"/>
                 <Arg name="element_iteration" ui="Check box" value="true" type="System.Boolean" dim="0"/>
-                <Arg name="element_order" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                <Arg name="element_order" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                 <Arg name="ellapsed_element_time" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                 <Arg name="ellapsed_exp_time" ui="Check box" value="true" type="System.Boolean" dim="0"/>
-                <Arg name="eyes_camera" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                <Arg name="eyes_camera" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                 <Arg name="file_extension" ui="Line text editor" value="csv" type="System.String" dim="0"/>
                 <Arg name="frame_id" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                 <Arg name="framerate" ui="Check box" value="true" type="System.Boolean" dim="0"/>
@@ -114,13 +115,13 @@
         </Component>
         <Component key="131" name="Familiarization Logger" category="Output" type="Logger" global="0" always_updating="0" exceptions="0" frame_logging="0" trigger_logging="0" restricted="0" priority="2">
             <InitConfig key="299" name="standard">
-                <Arg name="add_current_instance_to_file_name" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                <Arg name="add_current_instance_to_file_name" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                 <Arg name="add_date_to_file_name" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                 <Arg name="add_header_line" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                 <Arg name="add_to_end_if_file_exists" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
-                <Arg name="base_file_name" ui="Line text editor" value="familiarization" type="System.String" dim="0"/>
-                <Arg name="date_time_format" ui="Line text editor" value="yyyy-MM-dd_H-mm-ss" type="System.String" dim="0"/>
-                <Arg name="directory" ui="Resource" value="Logs%%%154" type="System.String" dim="1" sep="%%%" sizes="2"/>
+                <Arg name="base_file_name" ui="Line text editor" value="fam" type="System.String" dim="0"/>
+                <Arg name="date_time_format" ui="Line text editor" value="MM-dd_H-mm-ss" type="System.String" dim="0"/>
+                <Arg name="directory" ui="Resource" value="QuestionnairesLog%%%172" type="System.String" dim="1" sep="%%%" sizes="2"/>
                 <Arg name="dont_write_if_file_exists" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                 <Arg name="file_extension" ui="Line text editor" value="txt" type="System.String" dim="0"/>
                 <Arg name="header_line" ui="Line text editor" value="" type="System.String" dim="0"/>
@@ -133,13 +134,13 @@
         </Component>
         <Component key="91" name="CamsR Logger" category="Output" type="Logger" global="0" always_updating="0" exceptions="0" frame_logging="0" trigger_logging="0" restricted="0" priority="2">
             <InitConfig key="200" name="standard">
-                <Arg name="add_current_instance_to_file_name" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                <Arg name="add_current_instance_to_file_name" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                 <Arg name="add_date_to_file_name" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                 <Arg name="add_header_line" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                 <Arg name="add_to_end_if_file_exists" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
-                <Arg name="base_file_name" ui="Line text editor" value="cams-r" type="System.String" dim="0"/>
+                <Arg name="base_file_name" ui="Line text editor" value="cam" type="System.String" dim="0"/>
                 <Arg name="date_time_format" ui="Line text editor" value="yyyy-MM-dd_H-mm-ss" type="System.String" dim="0"/>
-                <Arg name="directory" ui="Resource" value="Logs%%%154" type="System.String" dim="1" sep="%%%" sizes="2"/>
+                <Arg name="directory" ui="Resource" value="QuestionnairesLog%%%172" type="System.String" dim="1" sep="%%%" sizes="2"/>
                 <Arg name="dont_write_if_file_exists" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                 <Arg name="file_extension" ui="Line text editor" value="txt" type="System.String" dim="0"/>
                 <Arg name="header_line" ui="Line text editor" value="" type="System.String" dim="0"/>
@@ -152,13 +153,13 @@
         </Component>
         <Component key="128" name="OBE Logger" category="Output" type="Logger" global="0" always_updating="0" exceptions="0" frame_logging="0" trigger_logging="0" restricted="0" priority="2">
             <InitConfig key="293" name="standard">
-                <Arg name="add_current_instance_to_file_name" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                <Arg name="add_current_instance_to_file_name" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                 <Arg name="add_date_to_file_name" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                 <Arg name="add_header_line" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                 <Arg name="add_to_end_if_file_exists" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
                 <Arg name="base_file_name" ui="Line text editor" value="obe" type="System.String" dim="0"/>
-                <Arg name="date_time_format" ui="Line text editor" value="yyyy-MM-dd_H-mm-ss" type="System.String" dim="0"/>
-                <Arg name="directory" ui="Resource" value="Logs%%%154" type="System.String" dim="1" sep="%%%" sizes="2"/>
+                <Arg name="date_time_format" ui="Line text editor" value="MM-dd_H-mm-ss" type="System.String" dim="0"/>
+                <Arg name="directory" ui="Resource" value="QuestionnairesLog%%%172" type="System.String" dim="1" sep="%%%" sizes="2"/>
                 <Arg name="dont_write_if_file_exists" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                 <Arg name="file_extension" ui="Line text editor" value="txt" type="System.String" dim="0"/>
                 <Arg name="header_line" ui="Line text editor" value="" type="System.String" dim="0"/>
@@ -171,13 +172,13 @@
         </Component>
         <Component key="129" name="PBB Logger" category="Output" type="Logger" global="0" always_updating="0" exceptions="0" frame_logging="0" trigger_logging="0" restricted="0" priority="2">
             <InitConfig key="295" name="standard">
-                <Arg name="add_current_instance_to_file_name" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                <Arg name="add_current_instance_to_file_name" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                 <Arg name="add_date_to_file_name" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                 <Arg name="add_header_line" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                 <Arg name="add_to_end_if_file_exists" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
                 <Arg name="base_file_name" ui="Line text editor" value="pbb" type="System.String" dim="0"/>
-                <Arg name="date_time_format" ui="Line text editor" value="yyyy-MM-dd_H-mm-ss" type="System.String" dim="0"/>
-                <Arg name="directory" ui="Resource" value="Logs%%%154" type="System.String" dim="1" sep="%%%" sizes="2"/>
+                <Arg name="date_time_format" ui="Line text editor" value="MM-dd_H-mm-ss" type="System.String" dim="0"/>
+                <Arg name="directory" ui="Resource" value="QuestionnairesLog%%%172" type="System.String" dim="1" sep="%%%" sizes="2"/>
                 <Arg name="dont_write_if_file_exists" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                 <Arg name="file_extension" ui="Line text editor" value="txt" type="System.String" dim="0"/>
                 <Arg name="header_line" ui="Line text editor" value="" type="System.String" dim="0"/>
@@ -190,13 +191,13 @@
         </Component>
         <Component key="130" name="FBI Logger" category="Output" type="Logger" global="0" always_updating="0" exceptions="0" frame_logging="0" trigger_logging="0" restricted="0" priority="2">
             <InitConfig key="297" name="standard">
-                <Arg name="add_current_instance_to_file_name" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                <Arg name="add_current_instance_to_file_name" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                 <Arg name="add_date_to_file_name" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                 <Arg name="add_header_line" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                 <Arg name="add_to_end_if_file_exists" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
                 <Arg name="base_file_name" ui="Line text editor" value="fbi" type="System.String" dim="0"/>
-                <Arg name="date_time_format" ui="Line text editor" value="yyyy-MM-dd_H-mm-ss" type="System.String" dim="0"/>
-                <Arg name="directory" ui="Resource" value="Logs%%%154" type="System.String" dim="1" sep="%%%" sizes="2"/>
+                <Arg name="date_time_format" ui="Line text editor" value="MM-dd_H-mm-ss" type="System.String" dim="0"/>
+                <Arg name="directory" ui="Resource" value="QuestionnairesLog%%%172" type="System.String" dim="1" sep="%%%" sizes="2"/>
                 <Arg name="dont_write_if_file_exists" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                 <Arg name="file_extension" ui="Line text editor" value="txt" type="System.String" dim="0"/>
                 <Arg name="header_line" ui="Line text editor" value="" type="System.String" dim="0"/>
@@ -205,25 +206,6 @@
             </InitConfig>
             <Configs>
                 <Config key="298" name="standard"/>
-            </Configs>
-        </Component>
-        <Component key="110" name="MovementLogger" category="Output" type="Logger" global="0" always_updating="0" exceptions="0" frame_logging="0" trigger_logging="0" restricted="0" priority="2">
-            <InitConfig key="243" name="standard">
-                <Arg name="add_current_instance_to_file_name" ui="Check box" value="true" type="System.Boolean" dim="0"/>
-                <Arg name="add_date_to_file_name" ui="Check box" value="true" type="System.Boolean" dim="0"/>
-                <Arg name="add_header_line" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                <Arg name="add_to_end_if_file_exists" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
-                <Arg name="base_file_name" ui="Line text editor" value="movementlog" type="System.String" dim="0"/>
-                <Arg name="date_time_format" ui="Line text editor" value="yyyy-MM-dd_H-mm-ss" type="System.String" dim="0"/>
-                <Arg name="directory" ui="Resource" value="Logs%%%154" type="System.String" dim="1" sep="%%%" sizes="2"/>
-                <Arg name="dont_write_if_file_exists" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                <Arg name="file_extension" ui="Line text editor" value="txt" type="System.String" dim="0"/>
-                <Arg name="header_line" ui="Line text editor" value="" type="System.String" dim="0"/>
-                <Arg name="insert_new_routine_infos" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                <Arg name="replace_if_file_exists" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
-            </InitConfig>
-            <Configs>
-                <Config key="244" name="standard"/>
             </Configs>
         </Component>
         <Component key="92" name="CamsRQuestionnaire" category="Resource" type="TextResource" global="0" always_updating="0" exceptions="1" frame_logging="0" trigger_logging="0" restricted="0" priority="2">
@@ -994,7 +976,7 @@
                     <Arg name="t_outline_width" ui="Float spin box" value="0" type="System.Single" dim="0"/>
                     <Arg name="t_paragraph_spacing" ui="Float spin box" value="0" type="System.Single" dim="0"/>
                     <Arg name="t_rich_text" ui="Check box" value="true" type="System.Boolean" dim="0"/>
-                    <Arg name="t_text" ui="Block text editor" value="People have a variety of ways of relating to their&#10;thoughts and feelings.  For each of the upcoming items, &#10;rate how much each of them applies to you right now." type="System.String" dim="0"/>
+                    <Arg name="t_text" ui="Block text editor" value="People have a variety of ways of relating to their thoughts and feelings.  &#10;For each of the upcoming items, rate how much each of them &#10;applied to you in the past 15 minutes." type="System.String" dim="0"/>
                     <Arg name="t_text_component" ui="Component" value="%%%-1" type="System.String" dim="1" sep="%%%" sizes="2"/>
                     <Arg name="t_text_resource" ui="Resource" value="%%%-1" type="System.String" dim="1" sep="%%%" sizes="2"/>
                     <Arg name="t_under_line" ui="Check box" value="false" type="System.Boolean" dim="0"/>
@@ -1256,6 +1238,44 @@
                     <Arg name="use_original_size" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="width" ui="Integer spin box" value="400" type="System.Int32" dim="0"/>
                 </Config>
+                <Config key="301" name="Instructions5">
+                    <Arg name="background_color" ui="Color pick" value="1 1 1 0" type="System.Single" dim="1" sep=" " sizes="4"/>
+                    <Arg name="distance" ui="Float spin box" value="1" type="System.Single" dim="0"/>
+                    <Arg name="eye_to_render" ui="Combo box text" value="Both eyes" type="System.String" dim="0"/>
+                    <Arg name="height" ui="Integer spin box" value="400" type="System.Int32" dim="0"/>
+                    <Arg name="pivot" ui="Vector 2D" value="0.5 0" type="System.Single" dim="1" sep=" " sizes="2"/>
+                    <Arg name="position" ui="Vector 3D" value="0.5 1 -2.2" type="System.Single" dim="1" sep=" " sizes="3"/>
+                    <Arg name="rotation" ui="Vector 3D" value="0 180 0" type="System.Single" dim="1" sep=" " sizes="3"/>
+                    <Arg name="scale_factor" ui="Float spin box" value="0.55" type="System.Single" dim="0"/>
+                    <Arg name="t_alignment" ui="Combo box text" value="Middle centered" type="System.String" dim="0"/>
+                    <Arg name="t_auto_size" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="t_bold" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="t_character_spacing" ui="Float spin box" value="0" type="System.Single" dim="0"/>
+                    <Arg name="t_face_color" ui="Color pick" value="1 1 1 1" type="System.Single" dim="1" sep=" " sizes="4"/>
+                    <Arg name="t_font_size" ui="Float spin box" value="26" type="System.Single" dim="0"/>
+                    <Arg name="t_highlight" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="t_italic" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="t_line_spacing" ui="Float spin box" value="0" type="System.Single" dim="0"/>
+                    <Arg name="t_lower_case" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="t_normal" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="t_outline_color" ui="Color pick" value="0 0 0 1" type="System.Single" dim="1" sep=" " sizes="4"/>
+                    <Arg name="t_outline_width" ui="Float spin box" value="0" type="System.Single" dim="0"/>
+                    <Arg name="t_paragraph_spacing" ui="Float spin box" value="0" type="System.Single" dim="0"/>
+                    <Arg name="t_rich_text" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="t_text" ui="Block text editor" value="Thank you, &#10;&#10;Please remain still" type="System.String" dim="0"/>
+                    <Arg name="t_text_component" ui="Component" value="%%%-1" type="System.String" dim="1" sep="%%%" sizes="2"/>
+                    <Arg name="t_text_resource" ui="Resource" value="%%%-1" type="System.String" dim="1" sep="%%%" sizes="2"/>
+                    <Arg name="t_under_line" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="t_upper_case" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="t_use_component" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="t_use_resource" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="t_use_text" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="t_word_spacing" ui="Float spin box" value="0" type="System.Single" dim="0"/>
+                    <Arg name="t_wrap" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="use_eye_camera" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="use_original_size" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="width" ui="Integer spin box" value="400" type="System.Int32" dim="0"/>
+                </Config>
                 <Config key="273" name="Instructions3">
                     <Arg name="background_color" ui="Color pick" value="1 1 1 0" type="System.Single" dim="1" sep=" " sizes="4"/>
                     <Arg name="distance" ui="Float spin box" value="1" type="System.Single" dim="0"/>
@@ -1427,7 +1447,7 @@
                     <Arg name="color" ui="Color pick" value="1 1 1 1" type="System.Single" dim="1" sep=" " sizes="4"/>
                     <Arg name="cookie_size" ui="Float spin box" value="10" type="System.Single" dim="0"/>
                     <Arg name="cookie_t" ui="Resource" value="%%%-1" type="System.String" dim="1" sep="%%%" sizes="2"/>
-                    <Arg name="display_source" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="display_source" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="inner_spot_angle" ui="Float spin box" value="21.8" type="System.Single" dim="0"/>
                     <Arg name="intensity" ui="Float spin box" value="0.7" type="System.Single" dim="0"/>
                     <Arg name="range" ui="Float spin box" value="300" type="System.Single" dim="0"/>
@@ -2817,7 +2837,7 @@
                     <Arg name="display_clouds" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="display_filtering_obb" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="filter_points_outside_obb" ui="Check box" value="true" type="System.Boolean" dim="0"/>
-                    <Arg name="filtering_obb_tab" ui="Tab" value="true[#OBBFW#]false[#OBBFW#]0.784314 0 0 0.196078[#OBBFW#]0.55 1.04 0.2 0 0 0 2.8 2 2.8[#T#]false[#OBBFW#]false[#OBBFW#]0.784314 0.784314 0.784314 0.117647[#OBBFW#]0.6 0.8 0.7 0 0 0 1.2 1.8 1.2" type="System.String" dim="1" sep="[#T#]" sizes="2"/>
+                    <Arg name="filtering_obb_tab" ui="Tab" value="true[#OBBFW#]false[#OBBFW#]0.784314 0 0 0.196078[#OBBFW#]0.55 1.04 0.9 0 0 0 2.8 2 1.4[#T#]false[#OBBFW#]false[#OBBFW#]0.784314 0.784314 0.784314 0.117647[#OBBFW#]0.6 0.8 0.7 0 0 0 1.2 1.8 1.2" type="System.String" dim="1" sep="[#T#]" sizes="2"/>
                     <Arg name="global_transform" ui="Transformation" value="-0.5 0.36 0.23 12.1 85.6 69.3 -1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
                     <Arg name="global_transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="rendering" ui="Combo box index" value="    1" type="System.Int32" dim="0"/>
@@ -5609,6 +5629,543 @@
                     <Connection key="904" out_type="component" out_key="90" signal_id="0" out_data_type="any" signal="signal1" in_type="component" in_key="131" slot_id="1" in_data_type="any" slot="write line"/>
                 </Condition>
             </Routine>
+            <Routine key="584" name="Lab_RestingState" randomizer="0" informations="">
+                <Condition key="99" name="default" duration="1800" ui_scale="10" ui_size="1" sets_keys="0">
+                    <Action key="2775" key_component="25" key_config="53" node_used="0" node_position="0 0">
+                        <!--Component LabRoom with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 1800s(), duration: 1800(s) -->
+                            <Interval t1="0" t2="1800"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 1800s(), duration: 1800(s) -->
+                            <Interval t1="0" t2="1800"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="2776" key_component="30" key_config="63" node_used="0" node_position="0 0">
+                        <!--Component MeditationShelter with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 1800s(), duration: 1800(s) -->
+                            <Interval t1="0" t2="1800"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 1800s(), duration: 1800(s) -->
+                            <Interval t1="0" t2="1800"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="2777" key_component="11" key_config="23" node_used="0" node_position="0 0">
+                        <!--Component PostProcess with config LabScene -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 1800s(), duration: 1800(s) -->
+                            <Interval t1="0" t2="1800"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 1800s(), duration: 1800(s) -->
+                            <Interval t1="0" t2="1800"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="2778" key_component="6" key_config="13" node_used="0" node_position="0 0">
+                        <!--Component SkyBox with config Lab -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 1800s(), duration: 1800(s) -->
+                            <Interval t1="0" t2="1800"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 1800s(), duration: 1800(s) -->
+                            <Interval t1="0" t2="1800"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="2779" key_component="29" key_config="61" node_used="0" node_position="0 0">
+                        <!--Component SceneFader with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 1800s(), duration: 1800(s) -->
+                            <Interval t1="0" t2="1800"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 1800s(), duration: 1800(s) -->
+                            <Interval t1="0" t2="1800"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="2780" key_component="28" key_config="59" node_used="0" node_position="0 0">
+                        <!--Component OmniController with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 1800s(), duration: 1800(s) -->
+                            <Interval t1="0" t2="1800"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 1800s(), duration: 1800(s) -->
+                            <Interval t1="0" t2="1800"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="2781" key_component="48" key_config="107" node_used="0" node_position="0 0">
+                        <!--Component GraphicsHandler with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 1800s(), duration: 1800(s) -->
+                            <Interval t1="0" t2="1800"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 1800s(), duration: 1800(s) -->
+                            <Interval t1="0" t2="1800"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="2782" key_component="34" key_config="73" node_used="0" node_position="0 0">
+                        <!--Component LabRoom_Front with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 1800s(), duration: 1800(s) -->
+                            <Interval t1="0" t2="1800"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 1800s(), duration: 1800(s) -->
+                            <Interval t1="0" t2="1800"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="2783" key_component="37" key_config="79" node_used="0" node_position="0 0">
+                        <!--Component LabRoom_Right with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 1800s(), duration: 1800(s) -->
+                            <Interval t1="0" t2="1800"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 1800s(), duration: 1800(s) -->
+                            <Interval t1="0" t2="1800"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="2784" key_component="36" key_config="77" node_used="0" node_position="0 0">
+                        <!--Component LabRoom_Left with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 1800s(), duration: 1800(s) -->
+                            <Interval t1="0" t2="1800"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 1800s(), duration: 1800(s) -->
+                            <Interval t1="0" t2="1800"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="2785" key_component="35" key_config="75" node_used="0" node_position="0 0">
+                        <!--Component LabRoom_Back with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 1800s(), duration: 1800(s) -->
+                            <Interval t1="0" t2="1800"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 1800s(), duration: 1800(s) -->
+                            <Interval t1="0" t2="1800"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="2786" key_component="42" key_config="89" node_used="0" node_position="0 0">
+                        <!--Component BackgroundMusic_Spatialized with config default -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 1800s(), duration: 1800(s) -->
+                            <Interval t1="0" t2="1800"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 1800s(), duration: 1800(s) -->
+                            <Interval t1="0" t2="1800"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="2787" key_component="43" key_config="93" node_used="0" node_position="0 0">
+                        <!--Component BackgroundMusic_Ambient with config default -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 1800s(), duration: 1800(s) -->
+                            <Interval t1="0" t2="1800"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 1800s(), duration: 1800(s) -->
+                            <Interval t1="0" t2="1800"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="2788" key_component="23" key_config="49" node_used="0" node_position="0 0">
+                        <!--Component FPPCamera with config 1PP -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 1800s(), duration: 1800(s) -->
+                            <Interval t1="0" t2="1800"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 1800s(), duration: 1800(s) -->
+                            <Interval t1="0" t2="1800"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="2789" key_component="70" key_config="156" node_used="0" node_position="0 0">
+                        <!--Component K4 manager with config sync -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 1800s(), duration: 1800(s) -->
+                            <Interval t1="0" t2="1800"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 1800s(), duration: 1800(s) -->
+                            <Interval t1="0" t2="1800"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="2790" key_component="71" key_config="158" node_used="0" node_position="0 0">
+                        <!--Component K4 direct multi clouds with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 1800s(), duration: 1800(s) -->
+                            <Interval t1="0" t2="1800"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 1800s(), duration: 1800(s) -->
+                            <Interval t1="0" t2="1800"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="2791" key_component="122" key_config="301" node_used="0" node_position="0 0">
+                        <!--Component Instructions with config Instructions5 -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 1800s(), duration: 1800(s) -->
+                            <Interval t1="0" t2="1800"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 1800s(), duration: 1800(s) -->
+                            <Interval t1="0" t2="1800"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="2792" key_component="0" key_config="1" node_used="0" node_position="0 0">
+                        <!--Component Global logger with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 1800s(), duration: 1800(s) -->
+                            <Interval t1="0" t2="1800"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 1800s(), duration: 1800(s) -->
+                            <Interval t1="0" t2="1800"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="2793" key_component="111" key_config="280" node_used="1" node_position="1026 769.2">
+                        <!--Component Serial port writer with config default -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 1800s(), duration: 1800(s) -->
+                            <Interval t1="0" t2="1800"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 1800s(), duration: 1800(s) -->
+                            <Interval t1="0" t2="1800"/>
+                        </Timeline>
+                    </Action>
+                    <Connector key="591" name="StartRoutine" node_position="-311.8 606.4">
+                        <Arg name="value" ui="Label" value="" type="System.String" dim="0"/>
+                    </Connector>
+                    <Connector key="592" name="PassValues" node_position="745.2 768">
+                        <Arg name="value" ui="Label" value="" type="System.String" dim="0"/>
+                    </Connector>
+                    <Connector key="593" name="PassValueTrigger" node_position="447.6 571.2">
+                        <Arg name="value" ui="Label" value="" type="System.String" dim="0"/>
+                    </Connector>
+                    <Connector key="594" name="Integer" node_position="187.92 712.416">
+                        <Arg name="value" ui="Integer spin box" value="0" type="System.Int32" dim="0"/>
+                    </Connector>
+                    <Connector key="595" name="PassValueTrigger" node_position="448.4 743.6">
+                        <Arg name="value" ui="Label" value="" type="System.String" dim="0"/>
+                    </Connector>
+                    <Connector key="596" name="Integer" node_position="201.2 549.2">
+                        <Arg name="value" ui="Integer spin box" value="53" type="System.Int32" dim="0"/>
+                    </Connector>
+                    <Connector key="597" name="Delay" node_position="-42 778.8">
+                        <Arg name="value" ui="Integer spin box" value="100" type="System.Int32" dim="0"/>
+                    </Connector>
+                    <Connector key="598" name="PassValueTrigger" node_position="457.6 1069.6">
+                        <Arg name="value" ui="Label" value="" type="System.String" dim="0"/>
+                    </Connector>
+                    <Connector key="599" name="PassValueTrigger" node_position="453.2 892.4">
+                        <Arg name="value" ui="Label" value="" type="System.String" dim="0"/>
+                    </Connector>
+                    <Connector key="600" name="Integer" node_position="197.2 887.2">
+                        <Arg name="value" ui="Integer spin box" value="54" type="System.Int32" dim="0"/>
+                    </Connector>
+                    <Connector key="601" name="Integer" node_position="207.2 1043.6">
+                        <Arg name="value" ui="Integer spin box" value="0" type="System.Int32" dim="0"/>
+                    </Connector>
+                    <Connector key="602" name="Delay" node_position="-41.2 1094">
+                        <Arg name="value" ui="Integer spin box" value="100" type="System.Int32" dim="0"/>
+                    </Connector>
+                    <Connector key="603" name="StopRoutine" node_position="-312.336 926.592">
+                        <Arg name="value" ui="Label" value="" type="System.String" dim="0"/>
+                    </Connector>
+                    <!--Connection between Key593:Connector:PassValueTrigger:Port0 and Key592:Connector:PassValues:Port0 -->
+                    <Connection key="1508" out_type="connector" out_key="593" signal_id="0" out_data_type="any" signal="output value 0" in_type="connector" in_key="592" slot_id="0" in_data_type="any" slot="input value 0"/>
+                    <!--Connection between Key595:Connector:PassValueTrigger:Port0 and Key592:Connector:PassValues:Port1 -->
+                    <Connection key="1509" out_type="connector" out_key="595" signal_id="0" out_data_type="any" signal="output value 0" in_type="connector" in_key="592" slot_id="1" in_data_type="any" slot="input value 1"/>
+                    <!--Connection between Key594:Connector:Integer:Port0 and Key595:Connector:PassValueTrigger:Port0 -->
+                    <Connection key="1510" out_type="connector" out_key="594" signal_id="0" out_data_type="integer" signal="output value 0" in_type="connector" in_key="595" slot_id="0" in_data_type="any" slot="input value 0"/>
+                    <!--Connection between Key596:Connector:Integer:Port0 and Key593:Connector:PassValueTrigger:Port0 -->
+                    <Connection key="1511" out_type="connector" out_key="596" signal_id="0" out_data_type="integer" signal="output value 0" in_type="connector" in_key="593" slot_id="0" in_data_type="any" slot="input value 0"/>
+                    <!--Connection between Key591:Connector:StartRoutine:Port0 and Key593:Connector:PassValueTrigger:Port1 -->
+                    <Connection key="1512" out_type="connector" out_key="591" signal_id="0" out_data_type="string" signal="output value 0" in_type="connector" in_key="593" slot_id="1" in_data_type="trigger" slot="input value 1"/>
+                    <!--Connection between Key591:Connector:StartRoutine:Port0 and Key597:Connector:Delay:Port0 -->
+                    <Connection key="1513" out_type="connector" out_key="591" signal_id="0" out_data_type="string" signal="output value 0" in_type="connector" in_key="597" slot_id="0" in_data_type="any" slot="input value 0"/>
+                    <!--Connection between Key597:Connector:Delay:Port0 and Key595:Connector:PassValueTrigger:Port1 -->
+                    <Connection key="1514" out_type="connector" out_key="597" signal_id="0" out_data_type="any" signal="output value 0" in_type="connector" in_key="595" slot_id="1" in_data_type="trigger" slot="input value 1"/>
+                    <!--Connection between Key592:Connector:PassValues:Port0 and Key111:Component:Serial port writer:Port0 -->
+                    <Connection key="1515" out_type="connector" out_key="592" signal_id="0" out_data_type="any" signal="output value 0" in_type="component" in_key="111" slot_id="0" in_data_type="integer" slot="send byte pulse"/>
+                    <!--Connection between Key603:Connector:StopRoutine:Port0 and Key602:Connector:Delay:Port0 -->
+                    <Connection key="1524" out_type="connector" out_key="603" signal_id="0" out_data_type="string" signal="output value 0" in_type="connector" in_key="602" slot_id="0" in_data_type="any" slot="input value 0"/>
+                    <!--Connection between Key603:Connector:StopRoutine:Port0 and Key599:Connector:PassValueTrigger:Port1 -->
+                    <Connection key="1525" out_type="connector" out_key="603" signal_id="0" out_data_type="string" signal="output value 0" in_type="connector" in_key="599" slot_id="1" in_data_type="trigger" slot="input value 1"/>
+                    <!--Connection between Key602:Connector:Delay:Port0 and Key598:Connector:PassValueTrigger:Port1 -->
+                    <Connection key="1526" out_type="connector" out_key="602" signal_id="0" out_data_type="any" signal="output value 0" in_type="connector" in_key="598" slot_id="1" in_data_type="trigger" slot="input value 1"/>
+                    <!--Connection between Key601:Connector:Integer:Port0 and Key598:Connector:PassValueTrigger:Port0 -->
+                    <Connection key="1527" out_type="connector" out_key="601" signal_id="0" out_data_type="integer" signal="output value 0" in_type="connector" in_key="598" slot_id="0" in_data_type="any" slot="input value 0"/>
+                    <!--Connection between Key600:Connector:Integer:Port0 and Key599:Connector:PassValueTrigger:Port0 -->
+                    <Connection key="1528" out_type="connector" out_key="600" signal_id="0" out_data_type="integer" signal="output value 0" in_type="connector" in_key="599" slot_id="0" in_data_type="any" slot="input value 0"/>
+                    <!--Connection between Key599:Connector:PassValueTrigger:Port0 and Key592:Connector:PassValues:Port2 -->
+                    <Connection key="1529" out_type="connector" out_key="599" signal_id="0" out_data_type="any" signal="output value 0" in_type="connector" in_key="592" slot_id="2" in_data_type="any" slot="input value 2"/>
+                    <!--Connection between Key598:Connector:PassValueTrigger:Port0 and Key592:Connector:PassValues:Port3 -->
+                    <Connection key="1530" out_type="connector" out_key="598" signal_id="0" out_data_type="any" signal="output value 0" in_type="connector" in_key="592" slot_id="3" in_data_type="any" slot="input value 3"/>
+                </Condition>
+            </Routine>
+            <Routine key="586" name="Lab_1stPBB" randomizer="0" informations="">
+                <Condition key="100" name="default" duration="1000" ui_scale="10" ui_size="1" sets_keys="">
+                    <Action key="2794" key_component="25" key_config="53" node_used="0" node_position="0 0">
+                        <!--Component LabRoom with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
+                            <Interval t1="0" t2="100"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
+                            <Interval t1="0" t2="1000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="2795" key_component="30" key_config="63" node_used="0" node_position="0 0">
+                        <!--Component MeditationShelter with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
+                            <Interval t1="0" t2="1000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
+                            <Interval t1="0" t2="1000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="2796" key_component="11" key_config="23" node_used="0" node_position="0 0">
+                        <!--Component PostProcess with config LabScene -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
+                            <Interval t1="0" t2="1000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
+                            <Interval t1="0" t2="1000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="2797" key_component="6" key_config="13" node_used="0" node_position="0 0">
+                        <!--Component SkyBox with config Lab -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
+                            <Interval t1="0" t2="1000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
+                            <Interval t1="0" t2="1000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="2798" key_component="29" key_config="61" node_used="0" node_position="0 0">
+                        <!--Component SceneFader with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
+                            <Interval t1="0" t2="1000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
+                            <Interval t1="0" t2="1000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="2799" key_component="28" key_config="59" node_used="0" node_position="0 0">
+                        <!--Component OmniController with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
+                            <Interval t1="0" t2="1000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
+                            <Interval t1="0" t2="1000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="2800" key_component="48" key_config="107" node_used="0" node_position="0 0">
+                        <!--Component GraphicsHandler with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
+                            <Interval t1="0" t2="1000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
+                            <Interval t1="0" t2="1000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="2801" key_component="90" key_config="236" node_used="1" node_position="545.2 155.8">
+                        <!--Component UIQuestionModule with config pbb -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
+                            <Interval t1="0" t2="1000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
+                            <Interval t1="0" t2="1000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="2802" key_component="101" key_config="223" node_used="0" node_position="0 0">
+                        <!--Component Cursor with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
+                            <Interval t1="0" t2="1000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
+                            <Interval t1="0" t2="1000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="2803" key_component="34" key_config="73" node_used="0" node_position="0 0">
+                        <!--Component LabRoom_Front with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
+                            <Interval t1="0" t2="1000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
+                            <Interval t1="0" t2="1000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="2804" key_component="37" key_config="79" node_used="0" node_position="0 0">
+                        <!--Component LabRoom_Right with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
+                            <Interval t1="0" t2="1000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
+                            <Interval t1="0" t2="1000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="2805" key_component="36" key_config="77" node_used="0" node_position="0 0">
+                        <!--Component LabRoom_Left with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
+                            <Interval t1="0" t2="1000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
+                            <Interval t1="0" t2="1000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="2806" key_component="35" key_config="75" node_used="0" node_position="0 0">
+                        <!--Component LabRoom_Back with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
+                            <Interval t1="0" t2="1000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
+                            <Interval t1="0" t2="1000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="2807" key_component="42" key_config="89" node_used="0" node_position="0 0">
+                        <!--Component BackgroundMusic_Spatialized with config default -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
+                            <Interval t1="0" t2="1000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
+                            <Interval t1="0" t2="1000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="2808" key_component="43" key_config="93" node_used="0" node_position="0 0">
+                        <!--Component BackgroundMusic_Ambient with config default -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
+                            <Interval t1="0" t2="1000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
+                            <Interval t1="0" t2="1000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="2809" key_component="23" key_config="49" node_used="0" node_position="0 0">
+                        <!--Component FPPCamera with config 1PP -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
+                            <Interval t1="0" t2="1000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 100s(), duration: 100(s) -->
+                            <Interval t1="0" t2="100"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="2810" key_component="70" key_config="156" node_used="0" node_position="0 0">
+                        <!--Component K4 manager with config sync -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
+                            <Interval t1="0" t2="1000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
+                            <Interval t1="0" t2="1000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="2811" key_component="71" key_config="158" node_used="0" node_position="0 0">
+                        <!--Component K4 direct multi clouds with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
+                            <Interval t1="0" t2="1000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
+                            <Interval t1="0" t2="1000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="2812" key_component="107" key_config="235" node_used="0" node_position="0 0">
+                        <!--Component QuestionModule_PBB with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
+                            <Interval t1="0" t2="1000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
+                            <Interval t1="0" t2="1000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="2813" key_component="129" key_config="296" node_used="1" node_position="855 125">
+                        <!--Component PBB Logger with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
+                            <Interval t1="0" t2="1000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
+                            <Interval t1="0" t2="1000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="2814" key_component="0" key_config="1" node_used="0" node_position="0 0">
+                        <!--Component Global logger with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
+                            <Interval t1="0" t2="1000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
+                            <Interval t1="0" t2="1000"/>
+                        </Timeline>
+                    </Action>
+                    <Connector key="604" name="String" node_position="-880.6 150.8">
+                        <Arg name="value" ui="Line text editor" value="Please indicate an intermediate state that the bodies best represents your current body state by adjusting the position of the cusor.;My body boundaries are almost imperceptible;My body boundaries are extremely salient;" type="System.String" dim="0"/>
+                    </Connector>
+                    <Connector key="605" name="StartRoutine" node_position="-2 407">
+                        <Arg name="value" ui="Label" value="" type="System.String" dim="0"/>
+                    </Connector>
+                    <Connector key="606" name="Delay" node_position="235 424">
+                        <Arg name="value" ui="Integer spin box" value="5" type="System.Int32" dim="0"/>
+                    </Connector>
+                    <Connector key="607" name="String" node_position="747.4 664.8">
+                        <Arg name="value" ui="Line text editor" value="PBB" type="System.String" dim="0"/>
+                    </Connector>
+                    <!--Connection between Key605:Connector:StartRoutine:Port0 and Key606:Connector:Delay:Port0 -->
+                    <Connection key="1535" out_type="connector" out_key="605" signal_id="0" out_data_type="string" signal="output value 0" in_type="connector" in_key="606" slot_id="0" in_data_type="any" slot="input value 0"/>
+                    <!--Connection between Key606:Connector:Delay:Port0 and Key90:Component:UIQuestionModule:Port1 -->
+                    <Connection key="1536" out_type="connector" out_key="606" signal_id="0" out_data_type="any" signal="output value 0" in_type="component" in_key="90" slot_id="1" in_data_type="any" slot="slot2"/>
+                    <!--Connection between Key604:Connector:String:Port0 and Key90:Component:UIQuestionModule:Port0 -->
+                    <Connection key="1537" out_type="connector" out_key="604" signal_id="0" out_data_type="string" signal="output value 0" in_type="component" in_key="90" slot_id="0" in_data_type="any" slot="slot1"/>
+                    <!--Connection between Key90:Component:UIQuestionModule:Port0 and Key129:Component:PBB Logger:Port1 -->
+                    <Connection key="1538" out_type="component" out_key="90" signal_id="0" out_data_type="any" signal="signal1" in_type="component" in_key="129" slot_id="1" in_data_type="any" slot="write line"/>
+                </Condition>
+            </Routine>
             <Routine key="166" name="Lab_Idle" randomizer="0" informations="">
                 <Condition key="40" name="default" duration="10000" ui_scale="10" ui_size="1" sets_keys="0">
                     <Action key="712" key_component="25" key_config="53" node_used="0" node_position="0 0">
@@ -6042,17 +6599,6 @@
                     </Action>
                     <Action key="254" key_component="71" key_config="158" node_used="0" node_position="0 0">
                         <!--Component K4 direct multi clouds with config standard -->
-                        <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                        <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                    </Action>
-                    <Action key="1006" key_component="110" key_config="244" node_used="0" node_position="1294 117">
-                        <!--Component MovementLogger with config standard -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
                             <Interval t1="0" t2="10000"/>
@@ -7683,7 +8229,7 @@
                             <Interval t1="0" t2="1000"/>
                         </Timeline>
                     </Action>
-                    <Action key="1716" key_component="91" key_config="201" node_used="1" node_position="772 119.8">
+                    <Action key="1716" key_component="91" key_config="201" node_used="1" node_position="839 119.8">
                         <!--Component CamsR Logger with config standard -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
@@ -7835,8 +8381,6 @@
                     <Connector key="174" name="Delay" node_position="281 382">
                         <Arg name="value" ui="Integer spin box" value="5" type="System.Int32" dim="0"/>
                     </Connector>
-                    <!--Connection between Key90:Component:UIQuestionModule:Port0 and Key91:Component:CamsR Logger:Port1 -->
-                    <Connection key="565" out_type="component" out_key="90" signal_id="0" out_data_type="any" signal="signal1" in_type="component" in_key="91" slot_id="1" in_data_type="any" slot="write line"/>
                     <!--Connection between Key173:Connector:StartRoutine:Port0 and Key174:Connector:Delay:Port0 -->
                     <Connection key="566" out_type="connector" out_key="173" signal_id="0" out_data_type="string" signal="output value 0" in_type="connector" in_key="174" slot_id="0" in_data_type="any" slot="input value 0"/>
                     <!--Connection between Key174:Connector:Delay:Port0 and Key90:Component:UIQuestionModule:Port1 -->
@@ -8907,8 +9451,6 @@
                     <Connector key="327" name="PassValueTrigger" node_position="829.04 657.68">
                         <Arg name="value" ui="Label" value="" type="System.String" dim="0"/>
                     </Connector>
-                    <!--Connection between Key90:Component:UIQuestionModule:Port0 and Key91:Component:CamsR Logger:Port1 -->
-                    <Connection key="579" out_type="component" out_key="90" signal_id="0" out_data_type="any" signal="signal1" in_type="component" in_key="91" slot_id="1" in_data_type="any" slot="write line"/>
                     <!--Connection between Key180:Connector:StartRoutine:Port0 and Key181:Connector:Delay:Port0 -->
                     <Connection key="580" out_type="connector" out_key="180" signal_id="0" out_data_type="string" signal="output value 0" in_type="connector" in_key="181" slot_id="0" in_data_type="any" slot="input value 0"/>
                     <!--Connection between Key181:Connector:Delay:Port0 and Key90:Component:UIQuestionModule:Port1 -->
@@ -14664,7 +15206,7 @@
                 </Condition>
             </Routine>
             <Routine key="514" name="Lab_PreFBI" randomizer="0" informations="">
-                <Condition key="98" name="default" duration="1000" ui_scale="10" ui_size="1" sets_keys="">
+                <Condition key="98" name="default" duration="1000" ui_scale="10" ui_size="1" sets_keys="0">
                     <Action key="2752" key_component="25" key_config="53" node_used="0" node_position="0 0">
                         <!--Component LabRoom with config standard -->
                         <Timeline type="Update">
@@ -17754,6 +18296,8 @@
         <Element key="358" type="Routine"/>
         <Element key="444" type="Routine"/>
         <Element key="364" type="LoopEnd"/>
+        <Element key="584" type="Routine"/>
+        <Element key="586" type="Routine"/>
         <Element key="166" type="Routine"/>
         <Element key="134" type="Routine"/>
         <Element key="22" type="Routine"/>

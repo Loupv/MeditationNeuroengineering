@@ -22,8 +22,8 @@ namespace Ex
 
         float lerpTimeInSeconds;
 
-        float targetDistance, targetHeight, targetAngle, lookForward, smoothHandle;
-        float lastTargetDistance = 0, lastTargetHeight = 0, lastTargetAngle = 0, lastLookForward = 0.5f;
+        float targetDistance, targetHeight, targetShift, targetAngle, lookForward, smoothHandle;
+        float lastTargetDistance = 0, lastTargetHeight = 0, lastTargetShift = 0, lastTargetAngle = 0, lastLookForward = 0.5f;
 
         public bool cameraMoving, forestMoving;
         float lerpStartTime;
@@ -38,7 +38,7 @@ namespace Ex
             // be sure that object cameras is turned looking at origin, for orbital camera purposes later
             cameraRig.transform.Find("Cameras").LookAt(cameraOrigin - new Vector3(0, 0, lookForward));
 
-            Camera.main.nearClipPlane = 0.4f; // to avoid blinking particles
+            Camera.main.nearClipPlane = 0.25f; // to avoid blinking particles
         }
 
 
@@ -90,16 +90,28 @@ namespace Ex
             if (UnityEngine.Input.GetKeyDown(KeyCode.Keypad4) || UnityEngine.Input.GetKeyDown(KeyCode.Alpha4))
                 InitCameraOrbit(4);
 
-            /*if (UnityEngine.Input.GetKeyDown(KeyCode.Alpha8))
+            if (UnityEngine.Input.GetKeyDown(KeyCode.Keypad5) || UnityEngine.Input.GetKeyDown(KeyCode.Alpha5))
+                InitCameraOrbit(10);
+            if (UnityEngine.Input.GetKeyDown(KeyCode.Keypad6) || UnityEngine.Input.GetKeyDown(KeyCode.Alpha6))
+                InitCameraOrbit(11);
+            if (UnityEngine.Input.GetKeyDown(KeyCode.Keypad7) || UnityEngine.Input.GetKeyDown(KeyCode.Alpha7))
+                InitCameraOrbit(10);
+            if (UnityEngine.Input.GetKeyDown(KeyCode.Keypad8) || UnityEngine.Input.GetKeyDown(KeyCode.Alpha8))
+                InitCameraOrbit(8);
+            if (UnityEngine.Input.GetKeyDown(KeyCode.Keypad9) || UnityEngine.Input.GetKeyDown(KeyCode.Alpha9))
+                InitCameraOrbit(9);
+
+
+            if (UnityEngine.Input.GetKeyDown(KeyCode.KeypadPlus))
             {
-                Camera.main.nearClipPlane += 0.1f;
+                Camera.main.nearClipPlane += 0.05f;
                 log_message(Camera.main.nearClipPlane.ToString());
             }
-            if (UnityEngine.Input.GetKeyDown(KeyCode.Alpha9))
+            if (UnityEngine.Input.GetKeyDown(KeyCode.KeypadMinus))
             {
-                Camera.main.nearClipPlane -= 0.1f;
+                Camera.main.nearClipPlane -= 0.05f;
                 log_message(Camera.main.nearClipPlane.ToString());
-            }*/
+            }
 
         }
 
@@ -114,44 +126,65 @@ namespace Ex
                     case 0: // back to initial position, slow
                         targetDistance = 0;
                         targetHeight = 0;
+                        targetShift = 0;
                         targetAngle = 0;
                         lerpTimeInSeconds = 15;
                         break;
                     case 1: // forest fbi, slow
                         targetDistance = 1.7f;
                         targetHeight = 0.7f;
+                        targetShift = 0;
                         targetAngle = 0;
                         lerpTimeInSeconds = 15;
                         break;
                     case 2: // initial position, quick
                         targetDistance = 0;
                         targetHeight = 0f;
+                        targetShift = 0;
                         targetAngle = 0;// Mathf.PI * 2;
                         lerpTimeInSeconds = 0.01f;
                         break;
                     case 3: // forest fbi, quick
                         targetDistance = 1.7f;
                         targetHeight = 0.7f;
+                        targetShift = 0;
                         targetAngle = 0;// Mathf.PI * 2;
                         lerpTimeInSeconds = 0.1f;
                         break;
                     case 4: // lab fbi / quick
                         targetDistance = 1.5f;
                         targetHeight = 0f;
+                        targetShift = 0;
                         targetAngle = 0;// Mathf.PI * 4;
                         lerpTimeInSeconds = 0.01f;
                         break;
                     case 8: // above
                         targetDistance = 0.3f;
                         targetHeight = 2;
+                        targetShift = 0;
                         targetAngle = 0;// Mathf.PI * 4;
                         lerpTimeInSeconds = 15;
                         break;
                     case 9: // turning around
                         targetDistance = 2f;
                         targetHeight = 0.5f;
-                        targetAngle = Mathf.PI * 2;
-                        lerpTimeInSeconds = 45;
+                        targetShift = 0;
+                        targetAngle = 0;// Mathf.PI * 2;
+                        lerpTimeInSeconds = 10;
+                        break;
+                    case 10: // shifted
+                        targetDistance = 1.2f;
+                        targetHeight = 0.1f;
+                        targetShift = -0.5f;
+                        targetAngle = 0;
+                        lerpTimeInSeconds = 10;
+                        break;
+                    case 11: // shifted opposite
+                        targetDistance = 1.2f;
+                        targetHeight = 0.1f;
+                        targetShift = -0.9f;
+                        targetAngle = 0;
+                        lerpTimeInSeconds = 10;
                         break;
                 }
                 lookForward = 0.5f;
@@ -221,25 +254,26 @@ namespace Ex
             while (t < 1 && cameraMoving)
             {
                 t = Mathf.Min(1, (Time.time - lerpStartTime) / lerpTimeInSeconds);
-                
+
+                float xlerper = LerpSmoother(t, 2.2f, 1);
                 float ylerper = VerticalSmooth(t);
                 float zlerper = LerpSmoother(t, 2.2f, 1);
                 
-
-                //float x = xorigin;
+                float x = Mathf.Lerp(lastTargetShift, targetShift, xlerper);
                 float y = Mathf.Lerp(lastTargetHeight, targetHeight, ylerper);
                 float z = Mathf.Lerp(lastTargetDistance, targetDistance, zlerper);
 
-                cameraRig.transform.Find("Cameras").position = new Vector3(0,y,z) + cameraOrigin;
+                cameraRig.transform.Find("Cameras").position = new Vector3(x,y,z) + cameraOrigin;
                 //cameraRig.transform.Find("Cameras").LookAt(cameraOrigin - new Vector3(0, 0, l));
                 log_message(t.ToString());
                 yield return new WaitForEndOfFrame();
             }
 
+            lastTargetShift = targetShift;
             lastTargetDistance = targetDistance;
             lastTargetHeight = targetHeight;
 
-            newPosition = new Vector3(0, targetHeight, targetDistance) + cameraOrigin;
+            newPosition = new Vector3(targetShift, targetHeight, targetDistance) + cameraOrigin;
             cameraRig.transform.Find("Cameras").position = newPosition;
 
             //cameraRig.transform.Find("Cameras").LookAt(cameraOrigin - new Vector3(0, 0, lookForward));
@@ -262,19 +296,21 @@ namespace Ex
             {
                 t = Mathf.Max(0, 1 - (Time.time - lerpStartTime) / lerpTimeInSeconds);
 
+                float xlerper = LerpSmoother(t, 2.2f, 1);
                 float ylerper = VerticalSmooth(t);
                 float zlerper = LerpSmoother(t, 2.2f, 1);
 
-                //float x = xorigin;
+                float x = Mathf.Lerp(targetShift, lastTargetShift, xlerper);
                 float y = Mathf.Lerp(targetHeight, lastTargetHeight, ylerper);
                 float z = Mathf.Lerp(targetDistance, lastTargetDistance, zlerper);
 
-                cameraRig.transform.Find("Cameras").position = new Vector3(0, y, z) + cameraOrigin;
+                cameraRig.transform.Find("Cameras").position = new Vector3(x, y, z) + cameraOrigin;
                 //cameraRig.transform.Find("Cameras").LookAt(cameraOrigin - new Vector3(0, 0, l));
                 log_message(t.ToString());
                 yield return new WaitForEndOfFrame();
             }
 
+            lastTargetShift = targetShift;
             lastTargetDistance = targetDistance;
             lastTargetHeight = targetHeight;
 
