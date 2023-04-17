@@ -1,0 +1,13 @@
+﻿1169907.0482;question1; 2 (Sometimes)
+1178329.3624;question2; 2 (Sometimes)
+1187563.4212;question3; 3 (Often)
+1195442.2655;question4; 3 (Often)
+1203807.5349;question5; 3 (Often)
+1211220.2824;question6; 2 (Sometimes)
+1217139.8181;question7;1 (Rarely/Not at all)
+1228072.9764;question8; 3 (Often)
+1236485.8846;question9; 3 (Often)
+1241963.7008;question10; 4 (Almost always)
+1250730.5758;question11; 4 (Almost always)
+1259205.4669;question12; 2 (Sometimes)
+1348971.9243;question1;Validate
