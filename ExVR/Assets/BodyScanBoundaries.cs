@@ -10,39 +10,6 @@ namespace Ex{
 
     public class BodyScanBoundaries : BaseCompiledCSharpComponent{
 
-        // ### Ex component flow functions, uncomment to use
-        // # main functions
-        // public override bool initialize() {return true;}
-        // public override void start_experiment() {}
-
-        public override void update() {
-            
-            if (UnityEngine.Input.GetKeyDown(KeyCode.A))
-            {
-               
-            }
-
-            if (UnityEngine.Input.GetKeyDown(KeyCode.Z))
-            {
-                
-            }
-
-        }
-        // public override void stop_routine() {}
-        // public override void stop_experiment(){}
-        // public override void play(){}
-        // public override void pause(){}
-        // public override void set_update_state(bool doUpdate) { }        
-        // public override void set_visibility(bool visibility) { }
-
-        // # for advanced users 
-        // public override void clean(){}
-        // public override void pre_update() {}
-        // public override void post_update() {}
-        // public override void update_parameter_from_gui(XML.Arg arg){}
-        // public override void update_from_current_config(){}
-
-        // # slots
         public override void slot1(object value){
 
             var k4 = FindObjectOfType<K4DirectMultiCloudsComponent>();
@@ -58,12 +25,6 @@ namespace Ex{
             k4.update_from_current_config();
 
         }
-        // public override void slot3(object value){}
-        // public override void slot4(object value){}        
-        // public override void slot5(IdAny idValue){
-        // 	int id = idValue.id;
-        // 	object value = idValue.value;
-        // }  
     }
 }
 
