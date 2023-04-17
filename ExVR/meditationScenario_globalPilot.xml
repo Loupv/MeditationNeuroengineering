@@ -67,7 +67,7 @@
         <Resource key="61" type="CSharpScript" alias="GraphicsHandler" path="Assets/GraphicsHandler.cs"/>
         <Resource key="146" type="CSharpScript" alias="FamiliarizationModule" path="Assets/FamiliarizationModule.cs"/>
         <Resource key="147" type="CSharpScript" alias="UIQuestionModule" path="Assets/UIQuestionModule.cs"/>
-        <Resource key="174" type="CSharpScript" alias="BodyScanBoundaries" path="../../exvr-designer-1.0b02/data/scripts/csharp/BodyScanBoundaries.cs"/>
+        <Resource key="175" type="CSharpScript" alias="BodyScanBoundaries" path="Assets/BodyScanBoundaries.cs"/>
         <Resource key="172" type="Directory" alias="QuestionnairesLog" path="Logs/QuestionnairesLog"/>
         <Resource key="173" type="Directory" alias="GlobalLog" path="Logs/GlobalLog"/>
         <Resource key="124" type="VolumetricVideo" alias="firstPartL" path="VolumetricVideos/firstPartL.kvid"/>
@@ -1187,7 +1187,7 @@
                     <Arg name="t_outline_width" ui="Float spin box" value="0" type="System.Single" dim="0"/>
                     <Arg name="t_paragraph_spacing" ui="Float spin box" value="0" type="System.Single" dim="0"/>
                     <Arg name="t_rich_text" ui="Check box" value="true" type="System.Boolean" dim="0"/>
-                    <Arg name="t_text" ui="Block text editor" value="Please point with your finger &#10;to the position of the sound" type="System.String" dim="0"/>
+                    <Arg name="t_text" ui="Block text editor" value="Please point with your finger &#10;to the location of the sound" type="System.String" dim="0"/>
                     <Arg name="t_text_component" ui="Component" value="%%%-1" type="System.String" dim="1" sep="%%%" sizes="2"/>
                     <Arg name="t_text_resource" ui="Resource" value="%%%-1" type="System.String" dim="1" sep="%%%" sizes="2"/>
                     <Arg name="t_under_line" ui="Check box" value="false" type="System.Boolean" dim="0"/>
@@ -10830,10 +10830,7 @@
                             <!--Starts at 0(s) and ends at 20s(), duration: 20(s) -->
                             <Interval t1="0" t2="20"/>
                         </Timeline>
-                        <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 20s(), duration: 20(s) -->
-                            <Interval t1="0" t2="20"/>
-                        </Timeline>
+                        <Timeline type="Visibiliy"/>
                     </Action>
                     <Action key="2819" key_component="11" key_config="23" node_used="0" node_position="0 0">
                         <!--Component PostProcess with config LabScene -->
@@ -11071,10 +11068,7 @@
                             <!--Starts at 0(s) and ends at 20s(), duration: 20(s) -->
                             <Interval t1="0" t2="20"/>
                         </Timeline>
-                        <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 20s(), duration: 20(s) -->
-                            <Interval t1="0" t2="20"/>
-                        </Timeline>
+                        <Timeline type="Visibiliy"/>
                     </Action>
                     <Action key="2876" key_component="11" key_config="23" node_used="0" node_position="0 0">
                         <!--Component PostProcess with config LabScene -->
@@ -16956,10 +16950,7 @@
                             <!--Starts at 0(s) and ends at 20s(), duration: 20(s) -->
                             <Interval t1="0" t2="20"/>
                         </Timeline>
-                        <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 20s(), duration: 20(s) -->
-                            <Interval t1="0" t2="20"/>
-                        </Timeline>
+                        <Timeline type="Visibiliy"/>
                     </Action>
                     <Action key="2973" key_component="11" key_config="23" node_used="0" node_position="0 0">
                         <!--Component PostProcess with config LabScene -->
@@ -17197,10 +17188,7 @@
                             <!--Starts at 0(s) and ends at 20s(), duration: 20(s) -->
                             <Interval t1="0" t2="20"/>
                         </Timeline>
-                        <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 20s(), duration: 20(s) -->
-                            <Interval t1="0" t2="20"/>
-                        </Timeline>
+                        <Timeline type="Visibiliy"/>
                     </Action>
                     <Action key="2992" key_component="11" key_config="23" node_used="0" node_position="0 0">
                         <!--Component PostProcess with config LabScene -->
