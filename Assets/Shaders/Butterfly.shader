@@ -8,7 +8,7 @@
         [NoScaleOffset]        _Normal("Normal (RGB)", 2D) = "bump" {}
         [NoScaleOffset]        _DispTex("Displacement Texture", 2D) = "white" {}
         //_Color ("Color (RGBA)", Color) = (1, 1, 1, 1) // add _Color property
-        _Amount("Displacement Amount", Range(0,3)) = 0.5
+        _Amount("Displacement Amount", Range(0,15)) = 0.5
         _Speed("_Speed", Range(0,30)) = 1
         _Color("Color", Color) = (1,1,1,1)
         _Rand("RandomValue", Range(0.3,100)) = 1

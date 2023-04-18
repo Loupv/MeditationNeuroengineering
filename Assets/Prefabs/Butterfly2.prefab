@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 809954292}
   - component: {fileID: 809954293}
   m_Layer: 0
-  m_Name: Butterfly
+  m_Name: Butterfly2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -60,7 +60,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 83ead5c19807f43d5bd3435ec83d8d01, type: 2}
+  - {fileID: 2100000, guid: 36a78e5d7879a1546921212955bb7d63, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

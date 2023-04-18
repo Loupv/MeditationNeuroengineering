@@ -10,7 +10,16 @@ namespace Ex{
 
     public class BodyScanBoundaries : BaseCompiledCSharpComponent{
 
+        // deactivate filter
         public override void slot1(object value){
+
+            var k4 = FindObjectOfType<K4DirectMultiCloudsComponent>();
+            k4.currentC.set<bool>("filter_points_outside_obb", false);
+            k4.update_from_current_config();
+
+        }
+        // activate filter
+        public override void slot2(object value){
 
             var k4 = FindObjectOfType<K4DirectMultiCloudsComponent>();
             k4.currentC.set<bool>("filter_points_outside_obb", true);
@@ -18,13 +27,6 @@ namespace Ex{
 
         }
 
-        public override void slot2(object value){
-
-            var k4 = FindObjectOfType<K4DirectMultiCloudsComponent>();
-            k4.currentC.set<bool>("filter_points_outside_obb", false);
-            k4.update_from_current_config();
-
-        }
     }
 }
 
