@@ -79,3 +79,5 @@ ExVR/Bundles/forestscene.unity3d
 Verbal Guidances/1. InUse/ControlCondition_Building.wav
 Verbal Guidances/1. InUse/Meditation_BuildingMPS.wav
 ExVR/Logs/PreviousLogs/*
+ExVR/Logs/GlobalLog/*
+ExVR/Logs/QuestionnairesLog/*

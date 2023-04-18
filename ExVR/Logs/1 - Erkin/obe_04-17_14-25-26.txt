@@ -1,0 +1,8 @@
+﻿1266629.913;question1;Strongly disagree
+1271261.8622;question2;Strongly disagree
+1276394.317;question3;Strongly disagree
+1301351.1229;question4; Disagree
+1305795.7771;question5; Disagree
+1312471.4057;question6; Strongly agree
+1319159.8553;question7; Strongly agree
+1325004.831;question8;Strongly disagree
