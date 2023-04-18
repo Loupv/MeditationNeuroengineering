@@ -11538,11 +11538,11 @@
                     <Connector key="625" name="PassValueTrigger" node_position="651.92 -46.48">
                         <Arg name="value" ui="Label" value="" type="System.String" dim="0"/>
                     </Connector>
-                    <Connector key="626" name="Delay" node_position="292.08 34.8">
+                    <Connector key="626" name="Delay" node_position="290.08 59.8">
                         <Arg name="value" ui="Integer spin box" value="100" type="System.Int32" dim="0"/>
                     </Connector>
                     <Connector key="627" name="Integer" node_position="380.64 -248.4">
-                        <Arg name="value" ui="Integer spin box" value="22" type="System.Int32" dim="0"/>
+                        <Arg name="value" ui="Integer spin box" value="18" type="System.Int32" dim="0"/>
                     </Connector>
                     <Connector key="628" name="Integer" node_position="378.32 -112.48">
                         <Arg name="value" ui="Integer spin box" value="0" type="System.Int32" dim="0"/>
