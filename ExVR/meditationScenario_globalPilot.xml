@@ -37,6 +37,7 @@
         <Resource key="145" type="Audio" alias="note4" path="../Assets/Audio/note4.wav"/>
         <Resource key="155" type="Audio" alias="ControlCondition_AfterMovement" path="../Verbal Guidances/1. InUse/ControlCondition_AfterMovement.wav"/>
         <Resource key="156" type="Audio" alias="ControlCondition_Building" path="../Verbal Guidances/1. InUse/ControlCondition_Building.wav"/>
+        <Resource key="176" type="Audio" alias="TibetanBowl" path="Assets/TibetanBowl.wav"/>
         <Resource key="120" type="Text" alias="network_SV-10-005" path="../../k4-scaner-manager/config/network/network_SV-10-005.config"/>
         <Resource key="121" type="Text" alias="device_SV-10-005_all" path="../../k4-scaner-manager/config/settings/device_SV-10-005_all.config"/>
         <Resource key="122" type="Text" alias="filters_SV-10-005_all" path="../../k4-scaner-manager/config/settings/filters_SV-10-005_all.config"/>
@@ -684,7 +685,7 @@
             </InitConfig>
             <Configs>
                 <Config key="49" name="1PP">
-                    <Arg name="debug_camera" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="debug_camera" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="m_speed" ui="Float spin box" value="3" type="System.Single" dim="0"/>
                     <Arg name="position" ui="Vector 3D" value="0.57 0.123 1.723" type="System.Single" dim="1" sep=" " sizes="3"/>
                     <Arg name="rotation" ui="Vector 3D" value="0 180 0" type="System.Single" dim="1" sep=" " sizes="3"/>
@@ -888,11 +889,11 @@
             </InitConfig>
             <Configs>
                 <Config key="281" name="training">
-                    <Arg name="transform" ui="Transformation" value="0.45 1.4 -2.08 0 0 0 0.32 0.32 0.32" type="System.Single" dim="1" sep=" " sizes="9"/>
+                    <Arg name="transform" ui="Transformation" value="0.45 1.4 -2.25 0 0 0 0.32 0.32 0.32" type="System.Single" dim="1" sep=" " sizes="9"/>
                     <Arg name="transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                 </Config>
                 <Config key="235" name="standard">
-                    <Arg name="transform" ui="Transformation" value="0.45 1.4 -2.08 0 0 0 0.32 0.32 0.32" type="System.Single" dim="1" sep=" " sizes="9"/>
+                    <Arg name="transform" ui="Transformation" value="0.45 1.4 -2.25 0 0 0 0.32 0.32 0.32" type="System.Single" dim="1" sep=" " sizes="9"/>
                     <Arg name="transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                 </Config>
             </Configs>
@@ -1226,6 +1227,44 @@
                     <Arg name="t_paragraph_spacing" ui="Float spin box" value="0" type="System.Single" dim="0"/>
                     <Arg name="t_rich_text" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="t_text" ui="Block text editor" value="Thank you, &#10;&#10;The experiment&#10;will now start." type="System.String" dim="0"/>
+                    <Arg name="t_text_component" ui="Component" value="%%%-1" type="System.String" dim="1" sep="%%%" sizes="2"/>
+                    <Arg name="t_text_resource" ui="Resource" value="%%%-1" type="System.String" dim="1" sep="%%%" sizes="2"/>
+                    <Arg name="t_under_line" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="t_upper_case" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="t_use_component" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="t_use_resource" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="t_use_text" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="t_word_spacing" ui="Float spin box" value="0" type="System.Single" dim="0"/>
+                    <Arg name="t_wrap" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="use_eye_camera" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="use_original_size" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="width" ui="Integer spin box" value="400" type="System.Int32" dim="0"/>
+                </Config>
+                <Config key="313" name="Instructions_RestingState">
+                    <Arg name="background_color" ui="Color pick" value="1 1 1 0" type="System.Single" dim="1" sep=" " sizes="4"/>
+                    <Arg name="distance" ui="Float spin box" value="1" type="System.Single" dim="0"/>
+                    <Arg name="eye_to_render" ui="Combo box text" value="Both eyes" type="System.String" dim="0"/>
+                    <Arg name="height" ui="Integer spin box" value="400" type="System.Int32" dim="0"/>
+                    <Arg name="pivot" ui="Vector 2D" value="0.5 0" type="System.Single" dim="1" sep=" " sizes="2"/>
+                    <Arg name="position" ui="Vector 3D" value="0.5 1 -2.2" type="System.Single" dim="1" sep=" " sizes="3"/>
+                    <Arg name="rotation" ui="Vector 3D" value="0 180 0" type="System.Single" dim="1" sep=" " sizes="3"/>
+                    <Arg name="scale_factor" ui="Float spin box" value="0.55" type="System.Single" dim="0"/>
+                    <Arg name="t_alignment" ui="Combo box text" value="Middle centered" type="System.String" dim="0"/>
+                    <Arg name="t_auto_size" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="t_bold" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="t_character_spacing" ui="Float spin box" value="0" type="System.Single" dim="0"/>
+                    <Arg name="t_face_color" ui="Color pick" value="1 1 1 1" type="System.Single" dim="1" sep=" " sizes="4"/>
+                    <Arg name="t_font_size" ui="Float spin box" value="26" type="System.Single" dim="0"/>
+                    <Arg name="t_highlight" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="t_italic" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="t_line_spacing" ui="Float spin box" value="0" type="System.Single" dim="0"/>
+                    <Arg name="t_lower_case" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="t_normal" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="t_outline_color" ui="Color pick" value="0 0 0 1" type="System.Single" dim="1" sep=" " sizes="4"/>
+                    <Arg name="t_outline_width" ui="Float spin box" value="0" type="System.Single" dim="0"/>
+                    <Arg name="t_paragraph_spacing" ui="Float spin box" value="0" type="System.Single" dim="0"/>
+                    <Arg name="t_rich_text" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="t_text" ui="Block text editor" value="Thank you, &#10;&#10;Now we will perform a calibration task.&#10;A soon as you hear a bell play, please remain still until you hear it again." type="System.String" dim="0"/>
                     <Arg name="t_text_component" ui="Component" value="%%%-1" type="System.String" dim="1" sep="%%%" sizes="2"/>
                     <Arg name="t_text_resource" ui="Resource" value="%%%-1" type="System.String" dim="1" sep="%%%" sizes="2"/>
                     <Arg name="t_under_line" ui="Check box" value="false" type="System.Boolean" dim="0"/>
@@ -2837,6 +2876,49 @@
                     <Arg name="spread" ui="Integer slider" value="184" type="System.Int32" dim="0"/>
                     <Arg name="stereo" ui="Float values slider" value="0" type="System.Single" dim="0"/>
                     <Arg name="stop_end_block" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="stop_new_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="transform" ui="Transformation" value="0.6 1 3.3 0 0 0 0.1 0.1 0.1" type="System.Single" dim="1" sep=" " sizes="9"/>
+                    <Arg name="transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="volume" ui="Float values slider" value="1" type="System.Single" dim="0"/>
+                </Config>
+            </Configs>
+        </Component>
+        <Component key="135" name="TibetanBowl" category="Audio" type="AudioSource" global="0" always_updating="0" exceptions="1" frame_logging="0" trigger_logging="0" restricted="0" priority="1">
+            <InitConfig key="314" name="standard">
+                <Arg name="asset_bundle" ui="Resource" value="%%%-1" type="System.String" dim="1" sep="%%%" sizes="2"/>
+                <Arg name="channel_0_copy_destination" ui="Line text editor" value="1 2" type="System.String" dim="0"/>
+                <Arg name="channel_1_copy_destination" ui="Line text editor" value="" type="System.String" dim="0"/>
+                <Arg name="channel_2_copy_destination" ui="Line text editor" value="" type="System.String" dim="0"/>
+                <Arg name="channel_3_copy_destination" ui="Line text editor" value="" type="System.String" dim="0"/>
+                <Arg name="channel_4_copy_destination" ui="Line text editor" value="" type="System.String" dim="0"/>
+                <Arg name="channel_5_copy_destination" ui="Line text editor" value="" type="System.String" dim="0"/>
+                <Arg name="channel_6_copy_destination" ui="Line text editor" value="" type="System.String" dim="0"/>
+                <Arg name="channel_7_copy_destination" ui="Line text editor" value="" type="System.String" dim="0"/>
+                <Arg name="generate_new_sound" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                <Arg name="new_sound_channel" ui="Combo box index" value="0" type="System.Int32" dim="0"/>
+                <Arg name="sound" ui="Resource" value="TibetanBowl%%%176" type="System.String" dim="1" sep="%%%" sizes="2"/>
+            </InitConfig>
+            <Configs>
+                <Config key="315" name="default">
+                    <Arg name="display" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="doppler_level" ui="Float values slider" value="1" type="System.Single" dim="0"/>
+                    <Arg name="loop" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="max_distance" ui="Float values slider" value="10" type="System.Single" dim="0"/>
+                    <Arg name="min_distance" ui="Float values slider" value="0.01" type="System.Single" dim="0"/>
+                    <Arg name="mute" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="nothing_end_block" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="nothing_new_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="pause_end_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="pause_new_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="pitch" ui="Float values slider" value="1" type="System.Single" dim="0"/>
+                    <Arg name="play_end_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="play_new_block" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="rollof_mode" ui="Combo box index" value="1" type="System.Int32" dim="0"/>
+                    <Arg name="spatial_blend" ui="Float values slider" value="1" type="System.Single" dim="0"/>
+                    <Arg name="spatialized" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="spread" ui="Integer slider" value="184" type="System.Int32" dim="0"/>
+                    <Arg name="stereo" ui="Float values slider" value="0" type="System.Single" dim="0"/>
+                    <Arg name="stop_end_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="stop_new_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="transform" ui="Transformation" value="0.6 1 3.3 0 0 0 0.1 0.1 0.1" type="System.Single" dim="1" sep=" " sizes="9"/>
                     <Arg name="transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
@@ -5717,286 +5799,254 @@
                     <Connection key="904" out_type="component" out_key="90" signal_id="0" out_data_type="any" signal="signal1" in_type="component" in_key="131" slot_id="1" in_data_type="any" slot="write line"/>
                 </Condition>
             </Routine>
-            <Routine key="584" name="Lab_RestingState" randomizer="0" informations="">
-                <Condition key="99" name="default" duration="180" ui_scale="10" ui_size="1" sets_keys="0">
-                    <Action key="2775" key_component="25" key_config="53" node_used="0" node_position="0 0">
+            <Routine key="166" name="Lab_Idle" randomizer="0" informations="">
+                <Condition key="40" name="default" duration="10000" ui_scale="10" ui_size="1" sets_keys="0">
+                    <Action key="712" key_component="25" key_config="53" node_used="0" node_position="0 0">
                         <!--Component LabRoom with config standard -->
                         <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 180s(), duration: 180(s) -->
-                            <Interval t1="0" t2="180"/>
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
                         </Timeline>
                         <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 180s(), duration: 180(s) -->
-                            <Interval t1="0" t2="180"/>
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
                         </Timeline>
                     </Action>
-                    <Action key="2776" key_component="30" key_config="63" node_used="0" node_position="0 0">
+                    <Action key="713" key_component="30" key_config="63" node_used="0" node_position="0 0">
                         <!--Component MeditationShelter with config standard -->
                         <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 180s(), duration: 180(s) -->
-                            <Interval t1="0" t2="180"/>
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
                         </Timeline>
                         <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 180s(), duration: 180(s) -->
-                            <Interval t1="0" t2="180"/>
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
                         </Timeline>
                     </Action>
-                    <Action key="2777" key_component="11" key_config="23" node_used="0" node_position="0 0">
+                    <Action key="714" key_component="11" key_config="23" node_used="0" node_position="0 0">
                         <!--Component PostProcess with config LabScene -->
                         <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 180s(), duration: 180(s) -->
-                            <Interval t1="0" t2="180"/>
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
                         </Timeline>
                         <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 180s(), duration: 180(s) -->
-                            <Interval t1="0" t2="180"/>
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
                         </Timeline>
                     </Action>
-                    <Action key="2778" key_component="6" key_config="13" node_used="0" node_position="0 0">
+                    <Action key="715" key_component="6" key_config="13" node_used="0" node_position="0 0">
                         <!--Component SkyBox with config Lab -->
                         <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 180s(), duration: 180(s) -->
-                            <Interval t1="0" t2="180"/>
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
                         </Timeline>
                         <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 180s(), duration: 180(s) -->
-                            <Interval t1="0" t2="180"/>
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
                         </Timeline>
                     </Action>
-                    <Action key="2779" key_component="29" key_config="61" node_used="0" node_position="0 0">
+                    <Action key="716" key_component="29" key_config="61" node_used="0" node_position="0 0">
                         <!--Component SceneFader with config standard -->
                         <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 180s(), duration: 180(s) -->
-                            <Interval t1="0" t2="180"/>
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
                         </Timeline>
                         <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 180s(), duration: 180(s) -->
-                            <Interval t1="0" t2="180"/>
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
                         </Timeline>
                     </Action>
-                    <Action key="2780" key_component="28" key_config="59" node_used="0" node_position="0 0">
+                    <Action key="717" key_component="28" key_config="59" node_used="0" node_position="0 0">
                         <!--Component OmniController with config standard -->
                         <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 180s(), duration: 180(s) -->
-                            <Interval t1="0" t2="180"/>
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
                         </Timeline>
                         <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 180s(), duration: 180(s) -->
-                            <Interval t1="0" t2="180"/>
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
                         </Timeline>
                     </Action>
-                    <Action key="2781" key_component="48" key_config="107" node_used="0" node_position="0 0">
+                    <Action key="718" key_component="48" key_config="107" node_used="0" node_position="0 0">
                         <!--Component GraphicsHandler with config standard -->
                         <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 180s(), duration: 180(s) -->
-                            <Interval t1="0" t2="180"/>
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
                         </Timeline>
                         <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 180s(), duration: 180(s) -->
-                            <Interval t1="0" t2="180"/>
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
                         </Timeline>
                     </Action>
-                    <Action key="2782" key_component="34" key_config="73" node_used="0" node_position="0 0">
+                    <Action key="719" key_component="34" key_config="73" node_used="0" node_position="0 0">
                         <!--Component LabRoom_Front with config standard -->
                         <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 180s(), duration: 180(s) -->
-                            <Interval t1="0" t2="180"/>
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
                         </Timeline>
                         <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 180s(), duration: 180(s) -->
-                            <Interval t1="0" t2="180"/>
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
                         </Timeline>
                     </Action>
-                    <Action key="2783" key_component="37" key_config="79" node_used="0" node_position="0 0">
+                    <Action key="720" key_component="37" key_config="79" node_used="0" node_position="0 0">
                         <!--Component LabRoom_Right with config standard -->
                         <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 180s(), duration: 180(s) -->
-                            <Interval t1="0" t2="180"/>
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
                         </Timeline>
                         <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 180s(), duration: 180(s) -->
-                            <Interval t1="0" t2="180"/>
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
                         </Timeline>
                     </Action>
-                    <Action key="2784" key_component="36" key_config="77" node_used="0" node_position="0 0">
+                    <Action key="721" key_component="36" key_config="77" node_used="0" node_position="0 0">
                         <!--Component LabRoom_Left with config standard -->
                         <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 180s(), duration: 180(s) -->
-                            <Interval t1="0" t2="180"/>
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
                         </Timeline>
                         <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 180s(), duration: 180(s) -->
-                            <Interval t1="0" t2="180"/>
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
                         </Timeline>
                     </Action>
-                    <Action key="2785" key_component="35" key_config="75" node_used="0" node_position="0 0">
+                    <Action key="722" key_component="35" key_config="75" node_used="0" node_position="0 0">
                         <!--Component LabRoom_Back with config standard -->
                         <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 180s(), duration: 180(s) -->
-                            <Interval t1="0" t2="180"/>
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
                         </Timeline>
                         <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 180s(), duration: 180(s) -->
-                            <Interval t1="0" t2="180"/>
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
                         </Timeline>
                     </Action>
-                    <Action key="2786" key_component="42" key_config="89" node_used="0" node_position="0 0">
+                    <Action key="723" key_component="42" key_config="89" node_used="0" node_position="0 0">
                         <!--Component BackgroundMusic_Spatialized with config default -->
                         <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 180s(), duration: 180(s) -->
-                            <Interval t1="0" t2="180"/>
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
                         </Timeline>
                         <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 180s(), duration: 180(s) -->
-                            <Interval t1="0" t2="180"/>
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
                         </Timeline>
                     </Action>
-                    <Action key="2787" key_component="43" key_config="93" node_used="0" node_position="0 0">
+                    <Action key="724" key_component="43" key_config="93" node_used="0" node_position="0 0">
                         <!--Component BackgroundMusic_Ambient with config default -->
                         <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 180s(), duration: 180(s) -->
-                            <Interval t1="0" t2="180"/>
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
                         </Timeline>
                         <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 180s(), duration: 180(s) -->
-                            <Interval t1="0" t2="180"/>
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
                         </Timeline>
                     </Action>
-                    <Action key="2788" key_component="23" key_config="49" node_used="0" node_position="0 0">
+                    <Action key="725" key_component="23" key_config="49" node_used="0" node_position="0 0">
                         <!--Component FPPCamera with config 1PP -->
                         <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 180s(), duration: 180(s) -->
-                            <Interval t1="0" t2="180"/>
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
                         </Timeline>
                         <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 180s(), duration: 180(s) -->
-                            <Interval t1="0" t2="180"/>
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
                         </Timeline>
                     </Action>
-                    <Action key="2789" key_component="70" key_config="156" node_used="0" node_position="0 0">
+                    <Action key="726" key_component="70" key_config="156" node_used="0" node_position="0 0">
                         <!--Component K4 manager with config sync -->
                         <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 180s(), duration: 180(s) -->
-                            <Interval t1="0" t2="180"/>
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
                         </Timeline>
                         <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 180s(), duration: 180(s) -->
-                            <Interval t1="0" t2="180"/>
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
                         </Timeline>
                     </Action>
-                    <Action key="2790" key_component="71" key_config="158" node_used="0" node_position="0 0">
+                    <Action key="727" key_component="71" key_config="158" node_used="0" node_position="0 0">
                         <!--Component K4 direct multi clouds with config standard -->
                         <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 180s(), duration: 180(s) -->
-                            <Interval t1="0" t2="180"/>
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
                         </Timeline>
                         <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 180s(), duration: 180(s) -->
-                            <Interval t1="0" t2="180"/>
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
                         </Timeline>
                     </Action>
-                    <Action key="2791" key_component="122" key_config="301" node_used="0" node_position="0 0">
-                        <!--Component Instructions with config Instructions5 -->
+                    <Action key="1611" key_component="122" key_config="313" node_used="0" node_position="0 0">
+                        <!--Component Instructions with config Instructions_RestingState -->
                         <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 180s(), duration: 180(s) -->
-                            <Interval t1="0" t2="180"/>
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
                         </Timeline>
                         <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 180s(), duration: 180(s) -->
-                            <Interval t1="0" t2="180"/>
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
                         </Timeline>
                     </Action>
-                    <Action key="2792" key_component="0" key_config="1" node_used="0" node_position="0 0">
+                    <Action key="2237" key_component="0" key_config="1" node_used="0" node_position="0 0">
                         <!--Component Global logger with config standard -->
                         <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 180s(), duration: 180(s) -->
-                            <Interval t1="0" t2="180"/>
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
                         </Timeline>
                         <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 180s(), duration: 180(s) -->
-                            <Interval t1="0" t2="180"/>
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
                         </Timeline>
                     </Action>
-                    <Action key="2793" key_component="111" key_config="280" node_used="1" node_position="1026 769.2">
+                    <Action key="2342" key_component="111" key_config="280" node_used="1" node_position="956.4 615.6">
                         <!--Component Serial port writer with config default -->
                         <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 180s(), duration: 180(s) -->
-                            <Interval t1="0" t2="180"/>
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
                         </Timeline>
                         <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 180s(), duration: 180(s) -->
-                            <Interval t1="0" t2="180"/>
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
                         </Timeline>
                     </Action>
-                    <Connector key="591" name="StartRoutine" node_position="-311.8 606.4">
+                    <Connector key="338" name="StartRoutine" node_position="-311.8 606.4">
                         <Arg name="value" ui="Label" value="" type="System.String" dim="0"/>
                     </Connector>
-                    <Connector key="592" name="PassValues" node_position="745.2 768">
+                    <Connector key="340" name="PassValues" node_position="716.4 615.6">
                         <Arg name="value" ui="Label" value="" type="System.String" dim="0"/>
                     </Connector>
-                    <Connector key="593" name="PassValueTrigger" node_position="447.6 571.2">
+                    <Connector key="341" name="PassValueTrigger" node_position="447.6 571.2">
                         <Arg name="value" ui="Label" value="" type="System.String" dim="0"/>
                     </Connector>
-                    <Connector key="594" name="Integer" node_position="187.92 712.416">
+                    <Connector key="342" name="Integer" node_position="195.6 740.4">
                         <Arg name="value" ui="Integer spin box" value="0" type="System.Int32" dim="0"/>
                     </Connector>
-                    <Connector key="595" name="PassValueTrigger" node_position="448.4 743.6">
+                    <Connector key="343" name="PassValueTrigger" node_position="448.4 743.6">
                         <Arg name="value" ui="Label" value="" type="System.String" dim="0"/>
                     </Connector>
-                    <Connector key="596" name="Integer" node_position="201.2 549.2">
-                        <Arg name="value" ui="Integer spin box" value="53" type="System.Int32" dim="0"/>
+                    <Connector key="344" name="Integer" node_position="201.2 549.2">
+                        <Arg name="value" ui="Integer spin box" value="12" type="System.Int32" dim="0"/>
                     </Connector>
-                    <Connector key="597" name="Delay" node_position="-42 778.8">
+                    <Connector key="345" name="Delay" node_position="-80.4 776.4">
                         <Arg name="value" ui="Integer spin box" value="100" type="System.Int32" dim="0"/>
                     </Connector>
-                    <Connector key="598" name="PassValueTrigger" node_position="457.6 1069.6">
-                        <Arg name="value" ui="Label" value="" type="System.String" dim="0"/>
-                    </Connector>
-                    <Connector key="599" name="PassValueTrigger" node_position="453.2 892.4">
-                        <Arg name="value" ui="Label" value="" type="System.String" dim="0"/>
-                    </Connector>
-                    <Connector key="600" name="Integer" node_position="197.2 887.2">
-                        <Arg name="value" ui="Integer spin box" value="54" type="System.Int32" dim="0"/>
-                    </Connector>
-                    <Connector key="601" name="Integer" node_position="207.2 1043.6">
-                        <Arg name="value" ui="Integer spin box" value="0" type="System.Int32" dim="0"/>
-                    </Connector>
-                    <Connector key="602" name="Delay" node_position="-41.2 1094">
-                        <Arg name="value" ui="Integer spin box" value="100" type="System.Int32" dim="0"/>
-                    </Connector>
-                    <Connector key="603" name="StopRoutine" node_position="-312.336 926.592">
-                        <Arg name="value" ui="Label" value="" type="System.String" dim="0"/>
-                    </Connector>
-                    <!--Connection between Key593:Connector:PassValueTrigger:Port0 and Key592:Connector:PassValues:Port0 -->
-                    <Connection key="1508" out_type="connector" out_key="593" signal_id="0" out_data_type="any" signal="output value 0" in_type="connector" in_key="592" slot_id="0" in_data_type="any" slot="input value 0"/>
-                    <!--Connection between Key595:Connector:PassValueTrigger:Port0 and Key592:Connector:PassValues:Port1 -->
-                    <Connection key="1509" out_type="connector" out_key="595" signal_id="0" out_data_type="any" signal="output value 0" in_type="connector" in_key="592" slot_id="1" in_data_type="any" slot="input value 1"/>
-                    <!--Connection between Key594:Connector:Integer:Port0 and Key595:Connector:PassValueTrigger:Port0 -->
-                    <Connection key="1510" out_type="connector" out_key="594" signal_id="0" out_data_type="integer" signal="output value 0" in_type="connector" in_key="595" slot_id="0" in_data_type="any" slot="input value 0"/>
-                    <!--Connection between Key596:Connector:Integer:Port0 and Key593:Connector:PassValueTrigger:Port0 -->
-                    <Connection key="1511" out_type="connector" out_key="596" signal_id="0" out_data_type="integer" signal="output value 0" in_type="connector" in_key="593" slot_id="0" in_data_type="any" slot="input value 0"/>
-                    <!--Connection between Key591:Connector:StartRoutine:Port0 and Key593:Connector:PassValueTrigger:Port1 -->
-                    <Connection key="1512" out_type="connector" out_key="591" signal_id="0" out_data_type="string" signal="output value 0" in_type="connector" in_key="593" slot_id="1" in_data_type="trigger" slot="input value 1"/>
-                    <!--Connection between Key591:Connector:StartRoutine:Port0 and Key597:Connector:Delay:Port0 -->
-                    <Connection key="1513" out_type="connector" out_key="591" signal_id="0" out_data_type="string" signal="output value 0" in_type="connector" in_key="597" slot_id="0" in_data_type="any" slot="input value 0"/>
-                    <!--Connection between Key597:Connector:Delay:Port0 and Key595:Connector:PassValueTrigger:Port1 -->
-                    <Connection key="1514" out_type="connector" out_key="597" signal_id="0" out_data_type="any" signal="output value 0" in_type="connector" in_key="595" slot_id="1" in_data_type="trigger" slot="input value 1"/>
-                    <!--Connection between Key592:Connector:PassValues:Port0 and Key111:Component:Serial port writer:Port0 -->
-                    <Connection key="1515" out_type="connector" out_key="592" signal_id="0" out_data_type="any" signal="output value 0" in_type="component" in_key="111" slot_id="0" in_data_type="integer" slot="send byte pulse"/>
-                    <!--Connection between Key603:Connector:StopRoutine:Port0 and Key602:Connector:Delay:Port0 -->
-                    <Connection key="1524" out_type="connector" out_key="603" signal_id="0" out_data_type="string" signal="output value 0" in_type="connector" in_key="602" slot_id="0" in_data_type="any" slot="input value 0"/>
-                    <!--Connection between Key603:Connector:StopRoutine:Port0 and Key599:Connector:PassValueTrigger:Port1 -->
-                    <Connection key="1525" out_type="connector" out_key="603" signal_id="0" out_data_type="string" signal="output value 0" in_type="connector" in_key="599" slot_id="1" in_data_type="trigger" slot="input value 1"/>
-                    <!--Connection between Key602:Connector:Delay:Port0 and Key598:Connector:PassValueTrigger:Port1 -->
-                    <Connection key="1526" out_type="connector" out_key="602" signal_id="0" out_data_type="any" signal="output value 0" in_type="connector" in_key="598" slot_id="1" in_data_type="trigger" slot="input value 1"/>
-                    <!--Connection between Key601:Connector:Integer:Port0 and Key598:Connector:PassValueTrigger:Port0 -->
-                    <Connection key="1527" out_type="connector" out_key="601" signal_id="0" out_data_type="integer" signal="output value 0" in_type="connector" in_key="598" slot_id="0" in_data_type="any" slot="input value 0"/>
-                    <!--Connection between Key600:Connector:Integer:Port0 and Key599:Connector:PassValueTrigger:Port0 -->
-                    <Connection key="1528" out_type="connector" out_key="600" signal_id="0" out_data_type="integer" signal="output value 0" in_type="connector" in_key="599" slot_id="0" in_data_type="any" slot="input value 0"/>
-                    <!--Connection between Key599:Connector:PassValueTrigger:Port0 and Key592:Connector:PassValues:Port2 -->
-                    <Connection key="1529" out_type="connector" out_key="599" signal_id="0" out_data_type="any" signal="output value 0" in_type="connector" in_key="592" slot_id="2" in_data_type="any" slot="input value 2"/>
-                    <!--Connection between Key598:Connector:PassValueTrigger:Port0 and Key592:Connector:PassValues:Port3 -->
-                    <Connection key="1530" out_type="connector" out_key="598" signal_id="0" out_data_type="any" signal="output value 0" in_type="connector" in_key="592" slot_id="3" in_data_type="any" slot="input value 3"/>
+                    <!--Connection between Key341:Connector:PassValueTrigger:Port0 and Key340:Connector:PassValues:Port0 -->
+                    <Connection key="1039" out_type="connector" out_key="341" signal_id="0" out_data_type="any" signal="output value 0" in_type="connector" in_key="340" slot_id="0" in_data_type="any" slot="input value 0"/>
+                    <!--Connection between Key343:Connector:PassValueTrigger:Port0 and Key340:Connector:PassValues:Port1 -->
+                    <Connection key="1040" out_type="connector" out_key="343" signal_id="0" out_data_type="any" signal="output value 0" in_type="connector" in_key="340" slot_id="1" in_data_type="any" slot="input value 1"/>
+                    <!--Connection between Key342:Connector:Integer:Port0 and Key343:Connector:PassValueTrigger:Port0 -->
+                    <Connection key="1041" out_type="connector" out_key="342" signal_id="0" out_data_type="integer" signal="output value 0" in_type="connector" in_key="343" slot_id="0" in_data_type="any" slot="input value 0"/>
+                    <!--Connection between Key344:Connector:Integer:Port0 and Key341:Connector:PassValueTrigger:Port0 -->
+                    <Connection key="1042" out_type="connector" out_key="344" signal_id="0" out_data_type="integer" signal="output value 0" in_type="connector" in_key="341" slot_id="0" in_data_type="any" slot="input value 0"/>
+                    <!--Connection between Key338:Connector:StartRoutine:Port0 and Key341:Connector:PassValueTrigger:Port1 -->
+                    <Connection key="1043" out_type="connector" out_key="338" signal_id="0" out_data_type="string" signal="output value 0" in_type="connector" in_key="341" slot_id="1" in_data_type="trigger" slot="input value 1"/>
+                    <!--Connection between Key338:Connector:StartRoutine:Port0 and Key345:Connector:Delay:Port0 -->
+                    <Connection key="1044" out_type="connector" out_key="338" signal_id="0" out_data_type="string" signal="output value 0" in_type="connector" in_key="345" slot_id="0" in_data_type="any" slot="input value 0"/>
+                    <!--Connection between Key345:Connector:Delay:Port0 and Key343:Connector:PassValueTrigger:Port1 -->
+                    <Connection key="1045" out_type="connector" out_key="345" signal_id="0" out_data_type="any" signal="output value 0" in_type="connector" in_key="343" slot_id="1" in_data_type="trigger" slot="input value 1"/>
+                    <!--Connection between Key340:Connector:PassValues:Port0 and Key111:Component:Serial port writer:Port0 -->
+                    <Connection key="1095" out_type="connector" out_key="340" signal_id="0" out_data_type="any" signal="output value 0" in_type="component" in_key="111" slot_id="0" in_data_type="integer" slot="send byte pulse"/>
                 </Condition>
             </Routine>
             <Routine key="811" name="Lab_RestingStateEyesClosed" randomizer="0" informations="">
@@ -6210,6 +6260,17 @@
                             <Interval t1="0" t2="180"/>
                         </Timeline>
                     </Action>
+                    <Action key="3071" key_component="135" key_config="315" node_used="0" node_position="0 0">
+                        <!--Component TibetanBowl with config default -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 180s(), duration: 180(s) -->
+                            <Interval t1="0" t2="180"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 180s(), duration: 180(s) -->
+                            <Interval t1="0" t2="180"/>
+                        </Timeline>
+                    </Action>
                     <Connector key="666" name="StartRoutine" node_position="-311.8 606.4">
                         <Arg name="value" ui="Label" value="" type="System.String" dim="0"/>
                     </Connector>
@@ -6226,7 +6287,7 @@
                         <Arg name="value" ui="Label" value="" type="System.String" dim="0"/>
                     </Connector>
                     <Connector key="671" name="Integer" node_position="201.2 549.2">
-                        <Arg name="value" ui="Integer spin box" value="55" type="System.Int32" dim="0"/>
+                        <Arg name="value" ui="Integer spin box" value="53" type="System.Int32" dim="0"/>
                     </Connector>
                     <Connector key="672" name="Delay" node_position="-42 778.8">
                         <Arg name="value" ui="Integer spin box" value="100" type="System.Int32" dim="0"/>
@@ -6238,7 +6299,7 @@
                         <Arg name="value" ui="Label" value="" type="System.String" dim="0"/>
                     </Connector>
                     <Connector key="675" name="Integer" node_position="197.2 887.2">
-                        <Arg name="value" ui="Integer spin box" value="56" type="System.Int32" dim="0"/>
+                        <Arg name="value" ui="Integer spin box" value="54" type="System.Int32" dim="0"/>
                     </Connector>
                     <Connector key="676" name="Integer" node_position="207.2 1043.6">
                         <Arg name="value" ui="Integer spin box" value="0" type="System.Int32" dim="0"/>
@@ -6279,6 +6340,299 @@
                     <Connection key="1984" out_type="connector" out_key="674" signal_id="0" out_data_type="any" signal="output value 0" in_type="connector" in_key="667" slot_id="2" in_data_type="any" slot="input value 2"/>
                     <!--Connection between Key673:Connector:PassValueTrigger:Port0 and Key667:Connector:PassValues:Port3 -->
                     <Connection key="1985" out_type="connector" out_key="673" signal_id="0" out_data_type="any" signal="output value 0" in_type="connector" in_key="667" slot_id="3" in_data_type="any" slot="input value 3"/>
+                </Condition>
+            </Routine>
+            <Routine key="584" name="Lab_RestingStateEyesOpen" randomizer="0" informations="">
+                <Condition key="99" name="default" duration="180" ui_scale="10" ui_size="1" sets_keys="0">
+                    <Action key="2775" key_component="25" key_config="53" node_used="0" node_position="0 0">
+                        <!--Component LabRoom with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 180s(), duration: 180(s) -->
+                            <Interval t1="0" t2="180"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 180s(), duration: 180(s) -->
+                            <Interval t1="0" t2="180"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="2776" key_component="30" key_config="63" node_used="0" node_position="0 0">
+                        <!--Component MeditationShelter with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 180s(), duration: 180(s) -->
+                            <Interval t1="0" t2="180"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 180s(), duration: 180(s) -->
+                            <Interval t1="0" t2="180"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="2777" key_component="11" key_config="23" node_used="0" node_position="0 0">
+                        <!--Component PostProcess with config LabScene -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 180s(), duration: 180(s) -->
+                            <Interval t1="0" t2="180"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 180s(), duration: 180(s) -->
+                            <Interval t1="0" t2="180"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="2778" key_component="6" key_config="13" node_used="0" node_position="0 0">
+                        <!--Component SkyBox with config Lab -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 180s(), duration: 180(s) -->
+                            <Interval t1="0" t2="180"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 180s(), duration: 180(s) -->
+                            <Interval t1="0" t2="180"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="2779" key_component="29" key_config="61" node_used="0" node_position="0 0">
+                        <!--Component SceneFader with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 180s(), duration: 180(s) -->
+                            <Interval t1="0" t2="180"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 180s(), duration: 180(s) -->
+                            <Interval t1="0" t2="180"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="2780" key_component="28" key_config="59" node_used="0" node_position="0 0">
+                        <!--Component OmniController with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 180s(), duration: 180(s) -->
+                            <Interval t1="0" t2="180"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 180s(), duration: 180(s) -->
+                            <Interval t1="0" t2="180"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="2781" key_component="48" key_config="107" node_used="0" node_position="0 0">
+                        <!--Component GraphicsHandler with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 180s(), duration: 180(s) -->
+                            <Interval t1="0" t2="180"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 180s(), duration: 180(s) -->
+                            <Interval t1="0" t2="180"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="2782" key_component="34" key_config="73" node_used="0" node_position="0 0">
+                        <!--Component LabRoom_Front with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 180s(), duration: 180(s) -->
+                            <Interval t1="0" t2="180"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 180s(), duration: 180(s) -->
+                            <Interval t1="0" t2="180"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="2783" key_component="37" key_config="79" node_used="0" node_position="0 0">
+                        <!--Component LabRoom_Right with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 180s(), duration: 180(s) -->
+                            <Interval t1="0" t2="180"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 180s(), duration: 180(s) -->
+                            <Interval t1="0" t2="180"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="2784" key_component="36" key_config="77" node_used="0" node_position="0 0">
+                        <!--Component LabRoom_Left with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 180s(), duration: 180(s) -->
+                            <Interval t1="0" t2="180"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 180s(), duration: 180(s) -->
+                            <Interval t1="0" t2="180"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="2785" key_component="35" key_config="75" node_used="0" node_position="0 0">
+                        <!--Component LabRoom_Back with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 180s(), duration: 180(s) -->
+                            <Interval t1="0" t2="180"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 180s(), duration: 180(s) -->
+                            <Interval t1="0" t2="180"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="2786" key_component="42" key_config="89" node_used="0" node_position="0 0">
+                        <!--Component BackgroundMusic_Spatialized with config default -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 180s(), duration: 180(s) -->
+                            <Interval t1="0" t2="180"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 180s(), duration: 180(s) -->
+                            <Interval t1="0" t2="180"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="2787" key_component="43" key_config="93" node_used="0" node_position="0 0">
+                        <!--Component BackgroundMusic_Ambient with config default -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 180s(), duration: 180(s) -->
+                            <Interval t1="0" t2="180"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 180s(), duration: 180(s) -->
+                            <Interval t1="0" t2="180"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="2788" key_component="23" key_config="49" node_used="0" node_position="0 0">
+                        <!--Component FPPCamera with config 1PP -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 180s(), duration: 180(s) -->
+                            <Interval t1="0" t2="180"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 180s(), duration: 180(s) -->
+                            <Interval t1="0" t2="180"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="2789" key_component="70" key_config="156" node_used="0" node_position="0 0">
+                        <!--Component K4 manager with config sync -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 180s(), duration: 180(s) -->
+                            <Interval t1="0" t2="180"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 180s(), duration: 180(s) -->
+                            <Interval t1="0" t2="180"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="2790" key_component="71" key_config="158" node_used="0" node_position="0 0">
+                        <!--Component K4 direct multi clouds with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 180s(), duration: 180(s) -->
+                            <Interval t1="0" t2="180"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 180s(), duration: 180(s) -->
+                            <Interval t1="0" t2="180"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="2791" key_component="122" key_config="301" node_used="0" node_position="0 0">
+                        <!--Component Instructions with config Instructions5 -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 180s(), duration: 180(s) -->
+                            <Interval t1="0" t2="180"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 180s(), duration: 180(s) -->
+                            <Interval t1="0" t2="180"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="2792" key_component="0" key_config="1" node_used="0" node_position="0 0">
+                        <!--Component Global logger with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 180s(), duration: 180(s) -->
+                            <Interval t1="0" t2="180"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 180s(), duration: 180(s) -->
+                            <Interval t1="0" t2="180"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="2793" key_component="111" key_config="280" node_used="1" node_position="1026 769.2">
+                        <!--Component Serial port writer with config default -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 180s(), duration: 180(s) -->
+                            <Interval t1="0" t2="180"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 180s(), duration: 180(s) -->
+                            <Interval t1="0" t2="180"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="3072" key_component="135" key_config="315" node_used="0" node_position="0 0">
+                        <!--Component TibetanBowl with config default -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 180s(), duration: 180(s) -->
+                            <Interval t1="0" t2="180"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 180s(), duration: 180(s) -->
+                            <Interval t1="0" t2="180"/>
+                        </Timeline>
+                    </Action>
+                    <Connector key="591" name="StartRoutine" node_position="-311.8 606.4">
+                        <Arg name="value" ui="Label" value="" type="System.String" dim="0"/>
+                    </Connector>
+                    <Connector key="592" name="PassValues" node_position="745.2 768">
+                        <Arg name="value" ui="Label" value="" type="System.String" dim="0"/>
+                    </Connector>
+                    <Connector key="593" name="PassValueTrigger" node_position="447.6 571.2">
+                        <Arg name="value" ui="Label" value="" type="System.String" dim="0"/>
+                    </Connector>
+                    <Connector key="594" name="Integer" node_position="187.92 712.416">
+                        <Arg name="value" ui="Integer spin box" value="0" type="System.Int32" dim="0"/>
+                    </Connector>
+                    <Connector key="595" name="PassValueTrigger" node_position="448.4 743.6">
+                        <Arg name="value" ui="Label" value="" type="System.String" dim="0"/>
+                    </Connector>
+                    <Connector key="596" name="Integer" node_position="200.2 549.2">
+                        <Arg name="value" ui="Integer spin box" value="55" type="System.Int32" dim="0"/>
+                    </Connector>
+                    <Connector key="597" name="Delay" node_position="-42 778.8">
+                        <Arg name="value" ui="Integer spin box" value="100" type="System.Int32" dim="0"/>
+                    </Connector>
+                    <Connector key="598" name="PassValueTrigger" node_position="457.6 1069.6">
+                        <Arg name="value" ui="Label" value="" type="System.String" dim="0"/>
+                    </Connector>
+                    <Connector key="599" name="PassValueTrigger" node_position="453.2 892.4">
+                        <Arg name="value" ui="Label" value="" type="System.String" dim="0"/>
+                    </Connector>
+                    <Connector key="600" name="Integer" node_position="189.48 870.848">
+                        <Arg name="value" ui="Integer spin box" value="56" type="System.Int32" dim="0"/>
+                    </Connector>
+                    <Connector key="601" name="Integer" node_position="200.288 1026.32">
+                        <Arg name="value" ui="Integer spin box" value="0" type="System.Int32" dim="0"/>
+                    </Connector>
+                    <Connector key="602" name="Delay" node_position="-41.2 1094">
+                        <Arg name="value" ui="Integer spin box" value="100" type="System.Int32" dim="0"/>
+                    </Connector>
+                    <Connector key="603" name="StopRoutine" node_position="-312.336 926.592">
+                        <Arg name="value" ui="Label" value="" type="System.String" dim="0"/>
+                    </Connector>
+                    <!--Connection between Key593:Connector:PassValueTrigger:Port0 and Key592:Connector:PassValues:Port0 -->
+                    <Connection key="1508" out_type="connector" out_key="593" signal_id="0" out_data_type="any" signal="output value 0" in_type="connector" in_key="592" slot_id="0" in_data_type="any" slot="input value 0"/>
+                    <!--Connection between Key595:Connector:PassValueTrigger:Port0 and Key592:Connector:PassValues:Port1 -->
+                    <Connection key="1509" out_type="connector" out_key="595" signal_id="0" out_data_type="any" signal="output value 0" in_type="connector" in_key="592" slot_id="1" in_data_type="any" slot="input value 1"/>
+                    <!--Connection between Key594:Connector:Integer:Port0 and Key595:Connector:PassValueTrigger:Port0 -->
+                    <Connection key="1510" out_type="connector" out_key="594" signal_id="0" out_data_type="integer" signal="output value 0" in_type="connector" in_key="595" slot_id="0" in_data_type="any" slot="input value 0"/>
+                    <!--Connection between Key596:Connector:Integer:Port0 and Key593:Connector:PassValueTrigger:Port0 -->
+                    <Connection key="1511" out_type="connector" out_key="596" signal_id="0" out_data_type="integer" signal="output value 0" in_type="connector" in_key="593" slot_id="0" in_data_type="any" slot="input value 0"/>
+                    <!--Connection between Key591:Connector:StartRoutine:Port0 and Key593:Connector:PassValueTrigger:Port1 -->
+                    <Connection key="1512" out_type="connector" out_key="591" signal_id="0" out_data_type="string" signal="output value 0" in_type="connector" in_key="593" slot_id="1" in_data_type="trigger" slot="input value 1"/>
+                    <!--Connection between Key591:Connector:StartRoutine:Port0 and Key597:Connector:Delay:Port0 -->
+                    <Connection key="1513" out_type="connector" out_key="591" signal_id="0" out_data_type="string" signal="output value 0" in_type="connector" in_key="597" slot_id="0" in_data_type="any" slot="input value 0"/>
+                    <!--Connection between Key597:Connector:Delay:Port0 and Key595:Connector:PassValueTrigger:Port1 -->
+                    <Connection key="1514" out_type="connector" out_key="597" signal_id="0" out_data_type="any" signal="output value 0" in_type="connector" in_key="595" slot_id="1" in_data_type="trigger" slot="input value 1"/>
+                    <!--Connection between Key592:Connector:PassValues:Port0 and Key111:Component:Serial port writer:Port0 -->
+                    <Connection key="1515" out_type="connector" out_key="592" signal_id="0" out_data_type="any" signal="output value 0" in_type="component" in_key="111" slot_id="0" in_data_type="integer" slot="send byte pulse"/>
+                    <!--Connection between Key603:Connector:StopRoutine:Port0 and Key602:Connector:Delay:Port0 -->
+                    <Connection key="1524" out_type="connector" out_key="603" signal_id="0" out_data_type="string" signal="output value 0" in_type="connector" in_key="602" slot_id="0" in_data_type="any" slot="input value 0"/>
+                    <!--Connection between Key603:Connector:StopRoutine:Port0 and Key599:Connector:PassValueTrigger:Port1 -->
+                    <Connection key="1525" out_type="connector" out_key="603" signal_id="0" out_data_type="string" signal="output value 0" in_type="connector" in_key="599" slot_id="1" in_data_type="trigger" slot="input value 1"/>
+                    <!--Connection between Key602:Connector:Delay:Port0 and Key598:Connector:PassValueTrigger:Port1 -->
+                    <Connection key="1526" out_type="connector" out_key="602" signal_id="0" out_data_type="any" signal="output value 0" in_type="connector" in_key="598" slot_id="1" in_data_type="trigger" slot="input value 1"/>
+                    <!--Connection between Key601:Connector:Integer:Port0 and Key598:Connector:PassValueTrigger:Port0 -->
+                    <Connection key="1527" out_type="connector" out_key="601" signal_id="0" out_data_type="integer" signal="output value 0" in_type="connector" in_key="598" slot_id="0" in_data_type="any" slot="input value 0"/>
+                    <!--Connection between Key600:Connector:Integer:Port0 and Key599:Connector:PassValueTrigger:Port0 -->
+                    <Connection key="1528" out_type="connector" out_key="600" signal_id="0" out_data_type="integer" signal="output value 0" in_type="connector" in_key="599" slot_id="0" in_data_type="any" slot="input value 0"/>
+                    <!--Connection between Key599:Connector:PassValueTrigger:Port0 and Key592:Connector:PassValues:Port2 -->
+                    <Connection key="1529" out_type="connector" out_key="599" signal_id="0" out_data_type="any" signal="output value 0" in_type="connector" in_key="592" slot_id="2" in_data_type="any" slot="input value 2"/>
+                    <!--Connection between Key598:Connector:PassValueTrigger:Port0 and Key592:Connector:PassValues:Port3 -->
+                    <Connection key="1530" out_type="connector" out_key="598" signal_id="0" out_data_type="any" signal="output value 0" in_type="connector" in_key="592" slot_id="3" in_data_type="any" slot="input value 3"/>
                 </Condition>
             </Routine>
             <Routine key="586" name="Lab_1stPBB" randomizer="0" informations="">
@@ -6536,9 +6890,9 @@
                     <Connection key="1538" out_type="component" out_key="90" signal_id="0" out_data_type="any" signal="signal1" in_type="component" in_key="129" slot_id="1" in_data_type="any" slot="write line"/>
                 </Condition>
             </Routine>
-            <Routine key="166" name="Lab_Idle" randomizer="0" informations="">
-                <Condition key="40" name="default" duration="10000" ui_scale="10" ui_size="1" sets_keys="0">
-                    <Action key="712" key_component="25" key_config="53" node_used="0" node_position="0 0">
+            <Routine key="889" name="Lab_Idle" randomizer="0" informations="">
+                <Condition key="110" name="default" duration="10000" ui_scale="10" ui_size="1" sets_keys="0">
+                    <Action key="3052" key_component="25" key_config="53" node_used="0" node_position="0 0">
                         <!--Component LabRoom with config standard -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
@@ -6549,7 +6903,7 @@
                             <Interval t1="0" t2="10000"/>
                         </Timeline>
                     </Action>
-                    <Action key="713" key_component="30" key_config="63" node_used="0" node_position="0 0">
+                    <Action key="3053" key_component="30" key_config="63" node_used="0" node_position="0 0">
                         <!--Component MeditationShelter with config standard -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
@@ -6560,7 +6914,7 @@
                             <Interval t1="0" t2="10000"/>
                         </Timeline>
                     </Action>
-                    <Action key="714" key_component="11" key_config="23" node_used="0" node_position="0 0">
+                    <Action key="3054" key_component="11" key_config="23" node_used="0" node_position="0 0">
                         <!--Component PostProcess with config LabScene -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
@@ -6571,7 +6925,7 @@
                             <Interval t1="0" t2="10000"/>
                         </Timeline>
                     </Action>
-                    <Action key="715" key_component="6" key_config="13" node_used="0" node_position="0 0">
+                    <Action key="3055" key_component="6" key_config="13" node_used="0" node_position="0 0">
                         <!--Component SkyBox with config Lab -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
@@ -6582,7 +6936,7 @@
                             <Interval t1="0" t2="10000"/>
                         </Timeline>
                     </Action>
-                    <Action key="716" key_component="29" key_config="61" node_used="0" node_position="0 0">
+                    <Action key="3056" key_component="29" key_config="61" node_used="0" node_position="0 0">
                         <!--Component SceneFader with config standard -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
@@ -6593,7 +6947,7 @@
                             <Interval t1="0" t2="10000"/>
                         </Timeline>
                     </Action>
-                    <Action key="717" key_component="28" key_config="59" node_used="0" node_position="0 0">
+                    <Action key="3057" key_component="28" key_config="59" node_used="0" node_position="0 0">
                         <!--Component OmniController with config standard -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
@@ -6604,7 +6958,7 @@
                             <Interval t1="0" t2="10000"/>
                         </Timeline>
                     </Action>
-                    <Action key="718" key_component="48" key_config="107" node_used="0" node_position="0 0">
+                    <Action key="3058" key_component="48" key_config="107" node_used="0" node_position="0 0">
                         <!--Component GraphicsHandler with config standard -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
@@ -6615,7 +6969,7 @@
                             <Interval t1="0" t2="10000"/>
                         </Timeline>
                     </Action>
-                    <Action key="719" key_component="34" key_config="73" node_used="0" node_position="0 0">
+                    <Action key="3059" key_component="34" key_config="73" node_used="0" node_position="0 0">
                         <!--Component LabRoom_Front with config standard -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
@@ -6626,7 +6980,7 @@
                             <Interval t1="0" t2="10000"/>
                         </Timeline>
                     </Action>
-                    <Action key="720" key_component="37" key_config="79" node_used="0" node_position="0 0">
+                    <Action key="3060" key_component="37" key_config="79" node_used="0" node_position="0 0">
                         <!--Component LabRoom_Right with config standard -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
@@ -6637,7 +6991,7 @@
                             <Interval t1="0" t2="10000"/>
                         </Timeline>
                     </Action>
-                    <Action key="721" key_component="36" key_config="77" node_used="0" node_position="0 0">
+                    <Action key="3061" key_component="36" key_config="77" node_used="0" node_position="0 0">
                         <!--Component LabRoom_Left with config standard -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
@@ -6648,7 +7002,7 @@
                             <Interval t1="0" t2="10000"/>
                         </Timeline>
                     </Action>
-                    <Action key="722" key_component="35" key_config="75" node_used="0" node_position="0 0">
+                    <Action key="3062" key_component="35" key_config="75" node_used="0" node_position="0 0">
                         <!--Component LabRoom_Back with config standard -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
@@ -6659,7 +7013,7 @@
                             <Interval t1="0" t2="10000"/>
                         </Timeline>
                     </Action>
-                    <Action key="723" key_component="42" key_config="89" node_used="0" node_position="0 0">
+                    <Action key="3063" key_component="42" key_config="89" node_used="0" node_position="0 0">
                         <!--Component BackgroundMusic_Spatialized with config default -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
@@ -6670,7 +7024,7 @@
                             <Interval t1="0" t2="10000"/>
                         </Timeline>
                     </Action>
-                    <Action key="724" key_component="43" key_config="93" node_used="0" node_position="0 0">
+                    <Action key="3064" key_component="43" key_config="93" node_used="0" node_position="0 0">
                         <!--Component BackgroundMusic_Ambient with config default -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
@@ -6681,7 +7035,7 @@
                             <Interval t1="0" t2="10000"/>
                         </Timeline>
                     </Action>
-                    <Action key="725" key_component="23" key_config="49" node_used="0" node_position="0 0">
+                    <Action key="3065" key_component="23" key_config="49" node_used="0" node_position="0 0">
                         <!--Component FPPCamera with config 1PP -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
@@ -6692,7 +7046,7 @@
                             <Interval t1="0" t2="10000"/>
                         </Timeline>
                     </Action>
-                    <Action key="726" key_component="70" key_config="156" node_used="0" node_position="0 0">
+                    <Action key="3066" key_component="70" key_config="156" node_used="0" node_position="0 0">
                         <!--Component K4 manager with config sync -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
@@ -6703,7 +7057,7 @@
                             <Interval t1="0" t2="10000"/>
                         </Timeline>
                     </Action>
-                    <Action key="727" key_component="71" key_config="158" node_used="0" node_position="0 0">
+                    <Action key="3067" key_component="71" key_config="158" node_used="0" node_position="0 0">
                         <!--Component K4 direct multi clouds with config standard -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
@@ -6714,7 +7068,7 @@
                             <Interval t1="0" t2="10000"/>
                         </Timeline>
                     </Action>
-                    <Action key="1611" key_component="122" key_config="272" node_used="0" node_position="0 0">
+                    <Action key="3068" key_component="122" key_config="272" node_used="0" node_position="0 0">
                         <!--Component Instructions with config Instructions2 -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
@@ -6725,7 +7079,7 @@
                             <Interval t1="0" t2="10000"/>
                         </Timeline>
                     </Action>
-                    <Action key="2237" key_component="0" key_config="1" node_used="0" node_position="0 0">
+                    <Action key="3069" key_component="0" key_config="1" node_used="0" node_position="0 0">
                         <!--Component Global logger with config standard -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
@@ -6736,7 +7090,7 @@
                             <Interval t1="0" t2="10000"/>
                         </Timeline>
                     </Action>
-                    <Action key="2342" key_component="111" key_config="280" node_used="1" node_position="956.4 615.6">
+                    <Action key="3070" key_component="111" key_config="280" node_used="1" node_position="956.4 615.6">
                         <!--Component Serial port writer with config default -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
@@ -6747,43 +7101,43 @@
                             <Interval t1="0" t2="10000"/>
                         </Timeline>
                     </Action>
-                    <Connector key="338" name="StartRoutine" node_position="-311.8 606.4">
+                    <Connector key="686" name="StartRoutine" node_position="-311.8 606.4">
                         <Arg name="value" ui="Label" value="" type="System.String" dim="0"/>
                     </Connector>
-                    <Connector key="340" name="PassValues" node_position="716.4 615.6">
+                    <Connector key="687" name="PassValues" node_position="716.4 615.6">
                         <Arg name="value" ui="Label" value="" type="System.String" dim="0"/>
                     </Connector>
-                    <Connector key="341" name="PassValueTrigger" node_position="447.6 571.2">
+                    <Connector key="688" name="PassValueTrigger" node_position="447.6 571.2">
                         <Arg name="value" ui="Label" value="" type="System.String" dim="0"/>
                     </Connector>
-                    <Connector key="342" name="Integer" node_position="195.6 740.4">
+                    <Connector key="689" name="Integer" node_position="195.6 740.4">
                         <Arg name="value" ui="Integer spin box" value="0" type="System.Int32" dim="0"/>
                     </Connector>
-                    <Connector key="343" name="PassValueTrigger" node_position="448.4 743.6">
+                    <Connector key="690" name="PassValueTrigger" node_position="448.4 743.6">
                         <Arg name="value" ui="Label" value="" type="System.String" dim="0"/>
                     </Connector>
-                    <Connector key="344" name="Integer" node_position="201.2 549.2">
+                    <Connector key="691" name="Integer" node_position="201.2 549.2">
                         <Arg name="value" ui="Integer spin box" value="12" type="System.Int32" dim="0"/>
                     </Connector>
-                    <Connector key="345" name="Delay" node_position="-80.4 776.4">
+                    <Connector key="692" name="Delay" node_position="-80.4 776.4">
                         <Arg name="value" ui="Integer spin box" value="100" type="System.Int32" dim="0"/>
                     </Connector>
-                    <!--Connection between Key341:Connector:PassValueTrigger:Port0 and Key340:Connector:PassValues:Port0 -->
-                    <Connection key="1039" out_type="connector" out_key="341" signal_id="0" out_data_type="any" signal="output value 0" in_type="connector" in_key="340" slot_id="0" in_data_type="any" slot="input value 0"/>
-                    <!--Connection between Key343:Connector:PassValueTrigger:Port0 and Key340:Connector:PassValues:Port1 -->
-                    <Connection key="1040" out_type="connector" out_key="343" signal_id="0" out_data_type="any" signal="output value 0" in_type="connector" in_key="340" slot_id="1" in_data_type="any" slot="input value 1"/>
-                    <!--Connection between Key342:Connector:Integer:Port0 and Key343:Connector:PassValueTrigger:Port0 -->
-                    <Connection key="1041" out_type="connector" out_key="342" signal_id="0" out_data_type="integer" signal="output value 0" in_type="connector" in_key="343" slot_id="0" in_data_type="any" slot="input value 0"/>
-                    <!--Connection between Key344:Connector:Integer:Port0 and Key341:Connector:PassValueTrigger:Port0 -->
-                    <Connection key="1042" out_type="connector" out_key="344" signal_id="0" out_data_type="integer" signal="output value 0" in_type="connector" in_key="341" slot_id="0" in_data_type="any" slot="input value 0"/>
-                    <!--Connection between Key338:Connector:StartRoutine:Port0 and Key341:Connector:PassValueTrigger:Port1 -->
-                    <Connection key="1043" out_type="connector" out_key="338" signal_id="0" out_data_type="string" signal="output value 0" in_type="connector" in_key="341" slot_id="1" in_data_type="trigger" slot="input value 1"/>
-                    <!--Connection between Key338:Connector:StartRoutine:Port0 and Key345:Connector:Delay:Port0 -->
-                    <Connection key="1044" out_type="connector" out_key="338" signal_id="0" out_data_type="string" signal="output value 0" in_type="connector" in_key="345" slot_id="0" in_data_type="any" slot="input value 0"/>
-                    <!--Connection between Key345:Connector:Delay:Port0 and Key343:Connector:PassValueTrigger:Port1 -->
-                    <Connection key="1045" out_type="connector" out_key="345" signal_id="0" out_data_type="any" signal="output value 0" in_type="connector" in_key="343" slot_id="1" in_data_type="trigger" slot="input value 1"/>
-                    <!--Connection between Key340:Connector:PassValues:Port0 and Key111:Component:Serial port writer:Port0 -->
-                    <Connection key="1095" out_type="connector" out_key="340" signal_id="0" out_data_type="any" signal="output value 0" in_type="component" in_key="111" slot_id="0" in_data_type="integer" slot="send byte pulse"/>
+                    <!--Connection between Key688:Connector:PassValueTrigger:Port0 and Key687:Connector:PassValues:Port0 -->
+                    <Connection key="2061" out_type="connector" out_key="688" signal_id="0" out_data_type="any" signal="output value 0" in_type="connector" in_key="687" slot_id="0" in_data_type="any" slot="input value 0"/>
+                    <!--Connection between Key690:Connector:PassValueTrigger:Port0 and Key687:Connector:PassValues:Port1 -->
+                    <Connection key="2062" out_type="connector" out_key="690" signal_id="0" out_data_type="any" signal="output value 0" in_type="connector" in_key="687" slot_id="1" in_data_type="any" slot="input value 1"/>
+                    <!--Connection between Key689:Connector:Integer:Port0 and Key690:Connector:PassValueTrigger:Port0 -->
+                    <Connection key="2063" out_type="connector" out_key="689" signal_id="0" out_data_type="integer" signal="output value 0" in_type="connector" in_key="690" slot_id="0" in_data_type="any" slot="input value 0"/>
+                    <!--Connection between Key691:Connector:Integer:Port0 and Key688:Connector:PassValueTrigger:Port0 -->
+                    <Connection key="2064" out_type="connector" out_key="691" signal_id="0" out_data_type="integer" signal="output value 0" in_type="connector" in_key="688" slot_id="0" in_data_type="any" slot="input value 0"/>
+                    <!--Connection between Key686:Connector:StartRoutine:Port0 and Key688:Connector:PassValueTrigger:Port1 -->
+                    <Connection key="2065" out_type="connector" out_key="686" signal_id="0" out_data_type="string" signal="output value 0" in_type="connector" in_key="688" slot_id="1" in_data_type="trigger" slot="input value 1"/>
+                    <!--Connection between Key686:Connector:StartRoutine:Port0 and Key692:Connector:Delay:Port0 -->
+                    <Connection key="2066" out_type="connector" out_key="686" signal_id="0" out_data_type="string" signal="output value 0" in_type="connector" in_key="692" slot_id="0" in_data_type="any" slot="input value 0"/>
+                    <!--Connection between Key692:Connector:Delay:Port0 and Key690:Connector:PassValueTrigger:Port1 -->
+                    <Connection key="2067" out_type="connector" out_key="692" signal_id="0" out_data_type="any" signal="output value 0" in_type="connector" in_key="690" slot_id="1" in_data_type="trigger" slot="input value 1"/>
+                    <!--Connection between Key687:Connector:PassValues:Port0 and Key111:Component:Serial port writer:Port0 -->
+                    <Connection key="2068" out_type="connector" out_key="687" signal_id="0" out_data_type="any" signal="output value 0" in_type="component" in_key="111" slot_id="0" in_data_type="integer" slot="send byte pulse"/>
                 </Condition>
             </Routine>
             <Routine key="134" name="FirstConditionStart" randomizer="1" informations="">
@@ -7954,7 +8308,7 @@
                             <Interval t1="0" t2="10000"/>
                         </Timeline>
                     </Action>
-                    <Action key="2293" key_component="111" key_config="280" node_used="1" node_position="1694.88 486.72">
+                    <Action key="2293" key_component="111" key_config="280" node_used="1" node_position="1719.88 478.72">
                         <!--Component Serial port writer with config default -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
@@ -8004,8 +8358,6 @@
                     <Connection key="952" out_type="connector" out_key="301" signal_id="0" out_data_type="any" signal="output value 0" in_type="connector" in_key="300" slot_id="0" in_data_type="any" slot="input value 0"/>
                     <!--Connection between Key302:Connector:PassValueTrigger:Port0 and Key300:Connector:PassValues:Port1 -->
                     <Connection key="953" out_type="connector" out_key="302" signal_id="0" out_data_type="any" signal="output value 0" in_type="connector" in_key="300" slot_id="1" in_data_type="any" slot="input value 1"/>
-                    <!--Connection between Key300:Connector:PassValues:Port0 and Key111:Component:Serial port writer:Port0 -->
-                    <Connection key="954" out_type="connector" out_key="300" signal_id="0" out_data_type="any" signal="output value 0" in_type="component" in_key="111" slot_id="0" in_data_type="integer" slot="send byte pulse"/>
                 </Condition>
             </Routine>
             <Routine key="70" name="Forest_Dissolution" randomizer="0" informations="">
@@ -8478,7 +8830,7 @@
                         <Arg name="value" ui="Integer spin box" value="100" type="System.Int32" dim="0"/>
                     </Connector>
                     <Connector key="216" name="Integer" node_position="404.64 -259.2">
-                        <Arg name="value" ui="Integer spin box" value="2" type="System.Int32" dim="0"/>
+                        <Arg name="value" ui="Integer spin box" value="16" type="System.Int32" dim="0"/>
                     </Connector>
                     <Connector key="217" name="Integer" node_position="378.32 -112.48">
                         <Arg name="value" ui="Integer spin box" value="0" type="System.Int32" dim="0"/>
@@ -8500,6 +8852,8 @@
                     <Connection key="664" out_type="connector" out_key="215" signal_id="0" out_data_type="any" signal="output value 0" in_type="connector" in_key="214" slot_id="1" in_data_type="trigger" slot="input value 1"/>
                     <!--Connection between Key216:Connector:Integer:Port0 and Key212:Connector:PassValueTrigger:Port0 -->
                     <Connection key="665" out_type="connector" out_key="216" signal_id="0" out_data_type="integer" signal="output value 0" in_type="connector" in_key="212" slot_id="0" in_data_type="any" slot="input value 0"/>
+                    <!--Connection between Key213:Connector:PassValues:Port0 and Key111:Component:Serial port writer:Port0 -->
+                    <Connection key="2238" out_type="connector" out_key="213" signal_id="0" out_data_type="any" signal="output value 0" in_type="component" in_key="111" slot_id="0" in_data_type="integer" slot="send byte pulse"/>
                 </Condition>
             </Routine>
             <Routine key="236" name="Questionnaire" randomizer="1" informations="">
@@ -14154,8 +14508,6 @@
                     <Connection key="1202" out_type="connector" out_key="420" signal_id="0" out_data_type="any" signal="output value 0" in_type="connector" in_key="419" slot_id="0" in_data_type="any" slot="input value 0"/>
                     <!--Connection between Key421:Connector:PassValueTrigger:Port0 and Key419:Connector:PassValues:Port1 -->
                     <Connection key="1203" out_type="connector" out_key="421" signal_id="0" out_data_type="any" signal="output value 0" in_type="connector" in_key="419" slot_id="1" in_data_type="any" slot="input value 1"/>
-                    <!--Connection between Key419:Connector:PassValues:Port0 and Key111:Component:Serial port writer:Port0 -->
-                    <Connection key="1204" out_type="connector" out_key="419" signal_id="0" out_data_type="any" signal="output value 0" in_type="component" in_key="111" slot_id="0" in_data_type="integer" slot="send byte pulse"/>
                 </Condition>
             </Routine>
             <Routine key="154" name="Forest_Dissolution2" randomizer="0" informations="">
@@ -14628,7 +14980,7 @@
                         <Arg name="value" ui="Integer spin box" value="100" type="System.Int32" dim="0"/>
                     </Connector>
                     <Connector key="232" name="Integer" node_position="402.64 -257.2">
-                        <Arg name="value" ui="Integer spin box" value="4" type="System.Int32" dim="0"/>
+                        <Arg name="value" ui="Integer spin box" value="36" type="System.Int32" dim="0"/>
                     </Connector>
                     <Connector key="233" name="Integer" node_position="405.92 -75.28">
                         <Arg name="value" ui="Integer spin box" value="0" type="System.Int32" dim="0"/>
@@ -14650,6 +15002,8 @@
                     <Connection key="680" out_type="connector" out_key="231" signal_id="0" out_data_type="any" signal="output value 0" in_type="connector" in_key="230" slot_id="1" in_data_type="trigger" slot="input value 1"/>
                     <!--Connection between Key232:Connector:Integer:Port0 and Key228:Connector:PassValueTrigger:Port0 -->
                     <Connection key="681" out_type="connector" out_key="232" signal_id="0" out_data_type="integer" signal="output value 0" in_type="connector" in_key="228" slot_id="0" in_data_type="any" slot="input value 0"/>
+                    <!--Connection between Key229:Connector:PassValues:Port0 and Key111:Component:Serial port writer:Port0 -->
+                    <Connection key="2239" out_type="connector" out_key="229" signal_id="0" out_data_type="any" signal="output value 0" in_type="component" in_key="111" slot_id="0" in_data_type="integer" slot="send byte pulse"/>
                 </Condition>
             </Routine>
             <Routine key="162" name="Lab_PreQuestionnaire" randomizer="0" informations="">
@@ -17453,7 +17807,7 @@
                         <Arg name="value" ui="Integer spin box" value="100" type="System.Int32" dim="0"/>
                     </Connector>
                     <Connector key="652" name="Integer" node_position="380.64 -248.4">
-                        <Arg name="value" ui="Integer spin box" value="22" type="System.Int32" dim="0"/>
+                        <Arg name="value" ui="Integer spin box" value="43" type="System.Int32" dim="0"/>
                     </Connector>
                     <Connector key="653" name="Integer" node_position="378.32 -112.48">
                         <Arg name="value" ui="Integer spin box" value="0" type="System.Int32" dim="0"/>
@@ -17691,7 +18045,7 @@
                         <Arg name="value" ui="Integer spin box" value="100" type="System.Int32" dim="0"/>
                     </Connector>
                     <Connector key="660" name="Integer" node_position="380.64 -248.4">
-                        <Arg name="value" ui="Integer spin box" value="22" type="System.Int32" dim="0"/>
+                        <Arg name="value" ui="Integer spin box" value="39" type="System.Int32" dim="0"/>
                     </Connector>
                     <Connector key="661" name="Integer" node_position="378.32 -112.48">
                         <Arg name="value" ui="Integer spin box" value="0" type="System.Int32" dim="0"/>
@@ -18845,10 +19199,11 @@
         <Element key="358" type="Routine"/>
         <Element key="444" type="Routine"/>
         <Element key="364" type="LoopEnd"/>
-        <Element key="584" type="Routine"/>
-        <Element key="811" type="Routine"/>
-        <Element key="586" type="Routine"/>
         <Element key="166" type="Routine"/>
+        <Element key="811" type="Routine"/>
+        <Element key="584" type="Routine"/>
+        <Element key="586" type="Routine"/>
+        <Element key="889" type="Routine"/>
         <Element key="134" type="Routine"/>
         <Element key="22" type="Routine"/>
         <Element key="138" type="LoopStart"/>
