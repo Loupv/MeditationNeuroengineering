@@ -3002,6 +3002,20 @@
                     <Arg name="size_points" ui="Float spin box" value="0.0037" type="System.Single" dim="0"/>
                     <Arg name="tint" ui="Color pick" value="1 1 1 0" type="System.Single" dim="1" sep=" " sizes="4"/>
                 </Config>
+                <Config key="317" name="experimenter">
+                    <Arg name="circles" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="cones" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="details" ui="Combo box index" value="3" type="System.Int32" dim="0"/>
+                    <Arg name="display_clouds" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="display_filtering_obb" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="filter_points_outside_obb" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="filtering_obb_tab" ui="Tab" value="true[#OBBFW#]false[#OBBFW#]0.784314 0 0 0.196078[#OBBFW#]0.55 1.04 0.9 0 0 0 2.8 2 2.8[#T#]false[#OBBFW#]false[#OBBFW#]0.784314 0.784314 0.784314 0.117647[#OBBFW#]0.6 0.8 0.7 0 0 0 1.2 1.8 1.2" type="System.String" dim="1" sep="[#T#]" sizes="2"/>
+                    <Arg name="global_transform" ui="Transformation" value="-0.5 0.34 0.23 12.1 85.6 69.3 -1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
+                    <Arg name="global_transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="rendering" ui="Combo box index" value="    1" type="System.Int32" dim="0"/>
+                    <Arg name="size_points" ui="Float spin box" value="0.0037" type="System.Single" dim="0"/>
+                    <Arg name="tint" ui="Color pick" value="1 1 1 0" type="System.Single" dim="1" sep=" " sizes="4"/>
+                </Config>
             </Configs>
         </Component>
         <Component key="102" name="Blend fade viewer" category="Viewer" type="BlendFadeViewer" global="0" always_updating="0" exceptions="1" frame_logging="0" trigger_logging="0" restricted="0" priority="2">
@@ -3463,8 +3477,8 @@
                             <Interval t1="0" t2="10000"/>
                         </Timeline>
                     </Action>
-                    <Action key="1688" key_component="71" key_config="158" node_used="0" node_position="191 209">
-                        <!--Component K4 direct multi clouds with config standard -->
+                    <Action key="1688" key_component="71" key_config="317" node_used="0" node_position="191 209">
+                        <!--Component K4 direct multi clouds with config experimenter -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
                             <Interval t1="0" t2="10000"/>
@@ -3496,17 +3510,6 @@
                             <Interval t1="0" t2="10000"/>
                         </Timeline>
                     </Action>
-                    <Action key="3010" key_component="134" key_config="312" node_used="1" node_position="727 38">
-                        <!--Component BodyScanBoundaries with config default -->
-                        <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                        <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                    </Action>
                     <Action key="3093" key_component="111" key_config="280" node_used="1" node_position="1516 406">
                         <!--Component Serial port writer with config default -->
                         <Timeline type="Update">
@@ -3518,7 +3521,7 @@
                             <Interval t1="0" t2="10000"/>
                         </Timeline>
                     </Action>
-                    <Connector key="663" name="StartRoutine" node_position="296 37">
+                    <Connector key="663" name="StartRoutine" node_position="295 9">
                         <Arg name="value" ui="Label" value="" type="System.String" dim="0"/>
                     </Connector>
                     <Connector key="664" name="StopRoutine" node_position="315 268">
@@ -3542,10 +3545,9 @@
                     <Connector key="705" name="PassValueTrigger" node_position="1003 555">
                         <Arg name="value" ui="Label" value="" type="System.String" dim="0"/>
                     </Connector>
-                    <!--Connection between Key663:Connector:StartRoutine:Port0 and Key134:Component:BodyScanBoundaries:Port0 -->
-                    <Connection key="1881" out_type="connector" out_key="663" signal_id="0" out_data_type="string" signal="output value 0" in_type="component" in_key="134" slot_id="0" in_data_type="any" slot="slot1"/>
-                    <!--Connection between Key664:Connector:StopRoutine:Port0 and Key134:Component:BodyScanBoundaries:Port1 -->
-                    <Connection key="1882" out_type="connector" out_key="664" signal_id="0" out_data_type="string" signal="output value 0" in_type="component" in_key="134" slot_id="1" in_data_type="any" slot="slot2"/>
+                    <Connector key="810" name="Delay" node_position="567 7">
+                        <Arg name="value" ui="Integer spin box" value="100" type="System.Int32" dim="0"/>
+                    </Connector>
                     <!--Connection between Key700:Connector:Integer:Port0 and Key703:Connector:PassValueTrigger:Port0 -->
                     <Connection key="2289" out_type="connector" out_key="700" signal_id="0" out_data_type="integer" signal="output value 0" in_type="connector" in_key="703" slot_id="0" in_data_type="any" slot="input value 0"/>
                     <!--Connection between Key701:Connector:Integer:Port0 and Key705:Connector:PassValueTrigger:Port0 -->
@@ -3562,6 +3564,8 @@
                     <Connection key="2295" out_type="connector" out_key="705" signal_id="0" out_data_type="any" signal="output value 0" in_type="connector" in_key="702" slot_id="1" in_data_type="any" slot="input value 1"/>
                     <!--Connection between Key702:Connector:PassValues:Port0 and Key111:Component:Serial port writer:Port0 -->
                     <Connection key="2296" out_type="connector" out_key="702" signal_id="0" out_data_type="any" signal="output value 0" in_type="component" in_key="111" slot_id="0" in_data_type="integer" slot="send byte pulse"/>
+                    <!--Connection between Key663:Connector:StartRoutine:Port0 and Key810:Connector:Delay:Port0 -->
+                    <Connection key="2797" out_type="connector" out_key="663" signal_id="0" out_data_type="string" signal="output value 0" in_type="connector" in_key="810" slot_id="0" in_data_type="any" slot="input value 0"/>
                 </Condition>
             </Routine>
             <Routine key="354" name="Lab_Instruction1" randomizer="0" informations="">
@@ -13499,8 +13503,8 @@
                             <Interval t1="0" t2="1000"/>
                         </Timeline>
                     </Action>
-                    <Action key="1746" key_component="71" key_config="158" node_used="0" node_position="0 0">
-                        <!--Component K4 direct multi clouds with config standard -->
+                    <Action key="1746" key_component="71" key_config="317" node_used="0" node_position="0 0">
+                        <!--Component K4 direct multi clouds with config experimenter -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
                             <Interval t1="0" t2="1000"/>
@@ -13534,17 +13538,6 @@
                     </Action>
                     <Action key="2337" key_component="111" key_config="280" node_used="1" node_position="1360.8 623.52">
                         <!--Component Serial port writer with config default -->
-                        <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
-                            <Interval t1="0" t2="1000"/>
-                        </Timeline>
-                        <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
-                            <Interval t1="0" t2="1000"/>
-                        </Timeline>
-                    </Action>
-                    <Action key="3011" key_component="134" key_config="312" node_used="1" node_position="326.16 825.36">
-                        <!--Component BodyScanBoundaries with config default -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 1000s(), duration: 1000(s) -->
                             <Interval t1="0" t2="1000"/>
@@ -13591,8 +13584,6 @@
                     <Connection key="1018" out_type="connector" out_key="336" signal_id="0" out_data_type="any" signal="output value 0" in_type="connector" in_key="334" slot_id="1" in_data_type="any" slot="input value 1"/>
                     <!--Connection between Key334:Connector:PassValues:Port0 and Key111:Component:Serial port writer:Port0 -->
                     <Connection key="1019" out_type="connector" out_key="334" signal_id="0" out_data_type="any" signal="output value 0" in_type="component" in_key="111" slot_id="0" in_data_type="integer" slot="send byte pulse"/>
-                    <!--Connection between Key329:Connector:StartRoutine:Port0 and Key134:Component:BodyScanBoundaries:Port0 -->
-                    <Connection key="1883" out_type="connector" out_key="329" signal_id="0" out_data_type="string" signal="output value 0" in_type="component" in_key="134" slot_id="0" in_data_type="any" slot="slot1"/>
                 </Condition>
             </Routine>
             <Routine key="164" name="Break" randomizer="1" informations="">
@@ -13765,8 +13756,8 @@
                             <Interval t1="0" t2="10000"/>
                         </Timeline>
                     </Action>
-                    <Action key="838" key_component="71" key_config="158" node_used="0" node_position="0 0">
-                        <!--Component K4 direct multi clouds with config standard -->
+                    <Action key="838" key_component="71" key_config="317" node_used="0" node_position="0 0">
+                        <!--Component K4 direct multi clouds with config experimenter -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
                             <Interval t1="0" t2="10000"/>
@@ -19777,8 +19768,8 @@
                             <Interval t1="0" t2="10000"/>
                         </Timeline>
                     </Action>
-                    <Action key="1220" key_component="71" key_config="158" node_used="0" node_position="0 0">
-                        <!--Component K4 direct multi clouds with config standard -->
+                    <Action key="1220" key_component="71" key_config="317" node_used="0" node_position="0 0">
+                        <!--Component K4 direct multi clouds with config experimenter -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
                             <Interval t1="0" t2="10000"/>
@@ -19801,17 +19792,6 @@
                     </Action>
                     <Action key="3009" key_component="122" key_config="306" node_used="0" node_position="0 0">
                         <!--Component Instructions with config Instructions6 -->
-                        <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                        <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                    </Action>
-                    <Action key="3013" key_component="134" key_config="312" node_used="1" node_position="315.36 820.8">
-                        <!--Component BodyScanBoundaries with config default -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
                             <Interval t1="0" t2="10000"/>
@@ -19856,8 +19836,6 @@
                     <Connection key="1498" out_type="connector" out_key="584" signal_id="0" out_data_type="string" signal="output value 0" in_type="connector" in_key="585" slot_id="0" in_data_type="any" slot="input value 0"/>
                     <!--Connection between Key590:Connector:PassValueTrigger:Port0 and Key588:Connector:PassValues:Port1 -->
                     <Connection key="1499" out_type="connector" out_key="590" signal_id="0" out_data_type="any" signal="output value 0" in_type="connector" in_key="588" slot_id="1" in_data_type="any" slot="input value 1"/>
-                    <!--Connection between Key584:Connector:StartRoutine:Port0 and Key134:Component:BodyScanBoundaries:Port0 -->
-                    <Connection key="1891" out_type="connector" out_key="584" signal_id="0" out_data_type="string" signal="output value 0" in_type="component" in_key="134" slot_id="0" in_data_type="any" slot="slot1"/>
                 </Condition>
             </Routine>
         </Routines>
