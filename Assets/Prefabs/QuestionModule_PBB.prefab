@@ -467,8 +467,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Please indicate an intermediate state that the bodies best represents your
-    current body state by adjusting the position of the cusor.
+  m_Text: "Please indicate an intermediate state that best represent your current
+    body state, \nby adjusting the position of the cusor."
 --- !u!1 &5188537994787972707
 GameObject:
   m_ObjectHideFlags: 0

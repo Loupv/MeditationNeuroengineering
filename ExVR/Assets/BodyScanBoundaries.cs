@@ -6,6 +6,8 @@ using System.Collections.Generic;
 // unity
 using UnityEngine;
 
+
+// not used anymore, rather use different configs for k4 direct multi clouds component
 namespace Ex{
 
     public class BodyScanBoundaries : BaseCompiledCSharpComponent{
@@ -16,6 +18,7 @@ namespace Ex{
             var k4 = FindObjectOfType<K4DirectMultiCloudsComponent>();
             k4.currentC.set<bool>("filter_points_outside_obb", false);
             k4.update_from_current_config();
+            log_message("Bodyscan filtering off");
 
         }
         // activate filter
@@ -24,7 +27,7 @@ namespace Ex{
             var k4 = FindObjectOfType<K4DirectMultiCloudsComponent>();
             k4.currentC.set<bool>("filter_points_outside_obb", true);
             k4.update_from_current_config();
-
+            log_message("Bodyscan filtering on");
         }
 
     }

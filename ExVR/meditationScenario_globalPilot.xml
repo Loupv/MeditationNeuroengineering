@@ -44,7 +44,6 @@
         <Resource key="123" type="Text" alias="model_SV-10-005_all" path="../../k4-scaner-manager/config/calibration/model_SV-10-005_all.config"/>
         <Resource key="158" type="Text" alias="CAMS-R" path="../Questionnaires/CAMS-R.txt"/>
         <Resource key="163" type="Text" alias="OBE" path="../Questionnaires/OBE.txt"/>
-        <Resource key="164" type="Text" alias="PBB" path="../Questionnaires/PBB.txt"/>
         <Resource key="165" type="Text" alias="FBIQuestionnaire" path="../Questionnaires/FBIQuestionnaire.txt"/>
         <Resource key="166" type="Text" alias="color_SV-10-005_all" path="../../k4-scaner-manager/config/settings/color_SV-10-005_all.config"/>
         <Resource key="45" type="UnityAssetBundle" alias="meditationshelter" path="Bundles/meditationshelter.unity3d"/>
@@ -223,14 +222,6 @@
             <Configs>
                 <Config key="239" name="standard">
                     <Arg name="text" ui="Resource" value="OBE%%%163" type="System.String" dim="1" sep="%%%" sizes="2"/>
-                </Config>
-            </Configs>
-        </Component>
-        <Component key="109" name="PBBQuestionnaire" category="Resource" type="TextResource" global="0" always_updating="0" exceptions="1" frame_logging="0" trigger_logging="0" restricted="0" priority="2">
-            <InitConfig key="240" name="standard"/>
-            <Configs>
-                <Config key="241" name="standard">
-                    <Arg name="text" ui="Resource" value="PBB%%%164" type="System.String" dim="1" sep="%%%" sizes="2"/>
                 </Config>
             </Configs>
         </Component>
@@ -685,7 +676,7 @@
             </InitConfig>
             <Configs>
                 <Config key="49" name="1PP">
-                    <Arg name="debug_camera" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="debug_camera" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="m_speed" ui="Float spin box" value="3" type="System.Single" dim="0"/>
                     <Arg name="position" ui="Vector 3D" value="0.57 0.123 1.723" type="System.Single" dim="1" sep=" " sizes="3"/>
                     <Arg name="rotation" ui="Vector 3D" value="0 180 0" type="System.Single" dim="1" sep=" " sizes="3"/>
@@ -946,7 +937,7 @@
                     <Arg name="rgba_t" ui="Resource" value="sam%%%170" type="System.String" dim="1" sep="%%%" sizes="2"/>
                     <Arg name="shadow_mode" ui="Combo box index" value="0" type="System.Int32" dim="0"/>
                     <Arg name="smoothness" ui="Float spin box" value="0" type="System.Single" dim="0"/>
-                    <Arg name="transform" ui="Transformation" value="0.47 1.37 -2.21 0 180 0 0.023 0.006 1" type="System.Single" dim="1" sep=" " sizes="9"/>
+                    <Arg name="transform" ui="Transformation" value="0.47 1.37 -2.19 0 180 0 0.023 0.006 1" type="System.Single" dim="1" sep=" " sizes="9"/>
                     <Arg name="transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                 </Config>
             </Configs>

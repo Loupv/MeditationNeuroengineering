@@ -141,7 +141,15 @@ namespace Ex
                 log_message(familiarizationModule.name + " found");
             }
 
+            var postProcessLayer = Camera.main.GetComponent<PostProcessLayer>();
+            if (postProcessLayer != null) postProcessLayer.antialiasingMode = PostProcessLayer.Antialiasing.TemporalAntialiasing; // UnityEngine.Rendering.PostProcessing.PostProcessLayer.
 
+            /*var pb = Camera.main.GetComponent<PostProcessLayer>();
+            var anti = UnityEngine.Rendering.PostProcessing.PostProcessLayer.Antialiasing.Method;
+            anti.fxaaSettings.preset = AntialiasingModel.Methode.Taa;
+            pb.profile.antialiasing.settings = anti; */
+
+            
             sceneConfigs = InitSceneConfigArray();
             currentRoutineConfigID = GetConfigIDFromRoutineName(current_routine().name);
             currentSceneConfig = sceneConfigs[currentRoutineConfigID];

@@ -216,7 +216,7 @@ namespace Ex{
             radialFiller.gameObject.transform.position = HitInfo.point;
             cursor.transform.position = new Vector3(0, -10, 0);
             fillerImage.fillAmount += Time.deltaTime;
-            log_message(Time.deltaTime.ToString());
+            
             if (fillerImage.fillAmount >= 1 && active)
             {
                 fillerImage.fillAmount = 0;
