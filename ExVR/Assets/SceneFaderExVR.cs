@@ -14,7 +14,7 @@ namespace Ex
     public class SceneConfig{
 
         public string sceneName;
-        public bool closeScreensBeforeFading, fadeSounds, keepShelterLightOn, activateFog;
+        public bool fadeSounds, keepShelterLightOn, activateFog;
         public Color fogColor;
         public float fogDensity;
         public float[] bloomValues;
@@ -36,7 +36,7 @@ namespace Ex
 
         public FadingState fadingState;
 
-        public bool fadingInDone, fadeOutDone, lerpingDone, routineInited;
+        public bool fadingInDone, fadeOutDone, lerpingDone, routineInited, curtainsClosed;
 
         public List<Light> lights;
         Light shelterTransitionLight;
@@ -64,11 +64,11 @@ namespace Ex
         public SceneConfig[] InitSceneConfigArray()
         {
             sceneConfigs = new SceneConfig[4];
-            sceneConfigs[0] = new SceneConfig { sceneName = "Lab",     closeScreensBeforeFading = true, fadeSounds = true, keepShelterLightOn = false, activateFog = true, fogColor = new Color(0.67f, 0.72f, 0.72f, 1f), fogDensity = 0.0045f, bloomValues = new float[5] { 1.96f, 0.78f, 0.5f, 5000f, 10f }, bloomColor = new Color(1f, 0f, 0f, 1f) };
-            sceneConfigs[1] = new SceneConfig { sceneName = "DarkLab", closeScreensBeforeFading = true, fadeSounds = true, keepShelterLightOn = false, activateFog = true, fogColor = new Color(0.67f, 0.72f, 0.72f, 1f), fogDensity = 0.0045f, bloomValues = new float[5] { 1.96f, 0.78f, 0.5f, 5000f, 10f }, bloomColor = new Color(1f, 0f, 0f, 1f) };
-            sceneConfigs[2] = new SceneConfig { sceneName = "Forest",  closeScreensBeforeFading = true, fadeSounds = true, keepShelterLightOn = true,  activateFog = true, fogColor = new Color(0.47f, 0.60f, 0.60f, 1f), fogDensity = 0.0045f, bloomValues = new float[5] { 0f, 1.67f, 0.11f, 1.9f, 6.97f },  bloomColor=  new Color(0.98f, 0.43f, 0f, 1f) };
-            //sceneConfigs[1] = new SceneConfig { sceneName = "White", closeScreensBeforeFading = true, fadeSounds = true, keepShelterLightOn = false, activateFog = true, fogColor = new Color(0.67f, 0.72f, 0.72f, 1f), fogDensity = 0.01f, bloomValues = new float[5] { 3f, 0.61f, 0.5f, 2f, 10f }, bloomColor = new Color(0.8f, 0.46f, 0f, 1f) };
-            //sceneConfigs[3] = new SceneConfig { sceneName = "Forest FOA", closeScreensBeforeFading = false, fadeSounds = true, keepShelterLightOn = false, activateFog = true, fogColor = new Color(0.29f, 0.32f, 0.32f, 1f), fogDensity = 0.0045f, bloomValues = new float[4] { 2.06f, 0.5f, 0.5f, 10f }, bloomColor = new Color(1f, 0f, 0f, 1f) };
+            sceneConfigs[0] = new SceneConfig { sceneName = "Lab",     fadeSounds = true, keepShelterLightOn = false, activateFog = true, fogColor = new Color(0.67f, 0.72f, 0.72f, 1f), fogDensity = 0.0045f, bloomValues = new float[5] { 1.96f, 0.78f, 0.5f, 5000f, 10f }, bloomColor = new Color(1f, 0f, 0f, 1f) };
+            sceneConfigs[1] = new SceneConfig { sceneName = "DarkLab", fadeSounds = true, keepShelterLightOn = false, activateFog = true, fogColor = new Color(0.67f, 0.72f, 0.72f, 1f), fogDensity = 0.0045f, bloomValues = new float[5] { 1.96f, 0.78f, 0.5f, 5000f, 10f }, bloomColor = new Color(1f, 0f, 0f, 1f) };
+            sceneConfigs[2] = new SceneConfig { sceneName = "Forest",  fadeSounds = true, keepShelterLightOn = true,  activateFog = true, fogColor = new Color(0.47f, 0.60f, 0.60f, 1f), fogDensity = 0.0045f, bloomValues = new float[5] { 0f, 1.67f, 0.11f, 1.9f, 6.97f },  bloomColor=  new Color(0.98f, 0.43f, 0f, 1f) };
+            //sceneConfigs[1] = new SceneConfig { sceneName = "White", fadeSounds = true, keepShelterLightOn = false, activateFog = true, fogColor = new Color(0.67f, 0.72f, 0.72f, 1f), fogDensity = 0.01f, bloomValues = new float[5] { 3f, 0.61f, 0.5f, 2f, 10f }, bloomColor = new Color(0.8f, 0.46f, 0f, 1f) };
+            sceneConfigs[3] = new SceneConfig { sceneName = "Night",   fadeSounds = true, keepShelterLightOn = false, activateFog = true, fogColor = new Color(0.29f, 0.32f, 0.32f, 1f), fogDensity = 0.0045f, bloomValues = new float[4] { 2.06f, 0.5f, 0.5f, 10f }, bloomColor = new Color(1f, 0f, 0f, 1f) };
             return sceneConfigs;
         }
 
@@ -78,16 +78,27 @@ namespace Ex
             guidanceClipNames = new Dictionary<string, string>();
             guidanceClipNames.Add("Lab_Intro","Guidance_Lab_Intro");
             guidanceClipNames.Add("Lab_Intro2", "Guidance_Lab_Intro2");
-            guidanceClipNames.Add("Forest_BuildingMPS","Guidance_Forest_BuildingMPS");
-            guidanceClipNames.Add("Forest_FocusedAttention", "Guidance_Forest_FocusedAttention");
-            guidanceClipNames.Add("Forest_OBE", "Guidance_Forest_OBE");
-            guidanceClipNames.Add("Forest_ControlState", "Guidance_Forest_ControlState");
-            guidanceClipNames.Add("Forest_Dissolution", "Guidance_Forest_Dissolution"); // these are
-            guidanceClipNames.Add("Forest_Dissolution2", "Guidance_Forest_Dissolution"); // the same
-            guidanceClipNames.Add("Lab_Dissolution", "Guidance_Lab_Dissolution");
-            guidanceClipNames.Add("Lab_Dissolution2", "Guidance_Lab_Dissolution2");
+
+            guidanceClipNames.Add("Forest_MPS_Part1", "Guidance_MPS_Part1");
+            guidanceClipNames.Add("Night_MPS_Part2",  "Guidance_MPS_Part2");
+            guidanceClipNames.Add("Forest_MPS_Part3", "Guidance_MPS_Part3");
+            guidanceClipNames.Add("Forest_MPS_Part4", "Guidance_MPS_Part4");
+            guidanceClipNames.Add("Forest_MPS_Part5", "Guidance_MPS_Part5");
+
+            guidanceClipNames.Add("Forest_Control_Part1", "Guidance_Control_Part1");
+            guidanceClipNames.Add("Night_Control_Part2",  "Guidance_Control_Part2");
+            guidanceClipNames.Add("Forest_Control_Part3", "Guidance_Control_Part3");
+            guidanceClipNames.Add("Forest_Control_Part4", "Guidance_Control_Part4");
+            guidanceClipNames.Add("Forest_Control_Part5", "Guidance_Control_Part5");
+
             guidanceClipNames.Add("Lab_WelcomeBack", "Guidance_Lab_WelcomeBack");
             guidanceClipNames.Add("Lab_WelcomeBack2", "Guidance_Lab_WelcomeBack2");
+
+            guidanceClipNames.Add("Lab_Dissolution", "Guidance_Lab_Dissolution");
+            guidanceClipNames.Add("Lab_Dissolution2", "Guidance_Lab_Dissolution2");
+            guidanceClipNames.Add("Forest_FocusedAttention", "Guidance_Forest_FocusedAttention");
+            guidanceClipNames.Add("Forest_ControlState", "Guidance_Forest_ControlState");
+            guidanceClipNames.Add("Forest_Dissolution2", "Guidance_Forest_Dissolution"); // the same
             return guidanceClipNames;
         }
 
@@ -144,6 +155,7 @@ namespace Ex
             var postProcessLayer = Camera.main.GetComponent<PostProcessLayer>();
             if (postProcessLayer != null) postProcessLayer.antialiasingMode = PostProcessLayer.Antialiasing.TemporalAntialiasing; // UnityEngine.Rendering.PostProcessing.PostProcessLayer.
 
+            curtainsClosed = true;
             /*var pb = Camera.main.GetComponent<PostProcessLayer>();
             var anti = UnityEngine.Rendering.PostProcessing.PostProcessLayer.Antialiasing.Method;
             anti.fxaaSettings.preset = AntialiasingModel.Methode.Taa;
@@ -267,6 +279,7 @@ namespace Ex
 
         private IEnumerator PrepareNewRoutine()
         {
+            log_message("initing routine");
             fadingState = FadingState.initingRoutine;
             yield return 0;
             currentRoutineConfigID = GetConfigIDFromRoutineName(current_routine().name);
@@ -288,7 +301,7 @@ namespace Ex
                 shelterTransitionLight.gameObject.SetActive(false);
             }*/
 
-            if(currentRoutineConfigID != lastRoutineConfigID)
+            if (currentRoutineConfigID != lastRoutineConfigID)
             {
                 omniController.PrepareSoundInNewRoutine(current_routine().name);
                 graphicsHandler.SetGraphicsForRoutine(currentSceneConfig);
@@ -300,12 +313,14 @@ namespace Ex
                     Material mat = screen.GetComponent<MeshRenderer>().materials[0];
                     mat.SetColor("_Color", new Color(mat.color.r, mat.color.g, mat.color.b, 1));
                 }
-                
+
 
                 GetLightsReferences();
                 ShutEveryLights();
 
-                var ppvp = ExVR.Display().postProcessingVolume.profile;
+                
+                // non working in night scene?
+                /*var ppvp = ExVR.Display().postProcessingVolume.profile;
                 var bl = ppvp.GetSetting<Bloom>();
                 bl.active = true;
                 bl.enabled.value = true;
@@ -314,11 +329,11 @@ namespace Ex
                 bl.softKnee.value = currentSceneConfig.bloomValues[2];
                 bl.clamp.value = currentSceneConfig.bloomValues[3];
                 bl.diffusion.value = currentSceneConfig.bloomValues[4];
-                bl.color.value = currentSceneConfig.bloomColor;
-
+                bl.color.value = currentSceneConfig.bloomColor;*/
+                
                 yield return 0;
             }
-
+            log_message("4");
             log_message("routine inited");
             routineInited = true;
         }
@@ -343,7 +358,7 @@ namespace Ex
             
             //FadeLightsAndSounds(FadeDirection.In);
 
-            if (currentSceneConfig.closeScreensBeforeFading)
+            if (curtainsClosed)
             {
                 float  alpha = 1f, fadeEndValue = 0f;
 
@@ -376,7 +391,9 @@ namespace Ex
             log_message(lastRoutineConfigID.ToString() + " vs " + currentRoutineConfigID.ToString());*/
 
             // first we check if we need to fade screens
-            if (currentSceneConfig.closeScreensBeforeFading)
+            
+            
+            if (ShouldWeCloseCurtains())
             {
                 float alpha = 0, fadeEndValue = 1;
 
@@ -392,14 +409,22 @@ namespace Ex
                     alpha += Time.deltaTime * (1.0f / curtainsClosingSpeed);
                     yield return null;
                 }
+
             }
 
             log_message("fade out done");
+            curtainsClosed = true;
             fadeOutDone = true;
         }
 
 
-
+        bool ShouldWeCloseCurtains()
+        {
+            if (current_routine().name.Contains("Lab") && (GetNextRoutineName().Contains("Forest") || GetNextRoutineName().Contains("Night"))) return true;
+            else if ((current_routine().name.Contains("Forest") || current_routine().name.Contains("Night")) && (GetNextRoutineName().Contains("Lab"))) return true;
+            //else if (lastRoutineConfigID == -2) return true;
+            else return false;
+        }
 
 
         private IEnumerator LerpToNextRoutineValues(SceneConfig currentSceneConfig)
@@ -582,6 +607,7 @@ namespace Ex
             if (routineName.Contains("Lab") && !routineName.Contains("Dissolution")) return 0;
             else if (routineName.Contains("Lab") && routineName.Contains("Dissolution")) return 1;
             else if (routineName.Contains("Forest")) return 2;
+            else if (routineName.Contains("Night")) return 3;
             else if (routineName.Contains("Exit") || routineName.Contains("Entry")) return 2;
             else return 0;
         }

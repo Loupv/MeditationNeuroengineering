@@ -78,7 +78,7 @@ namespace Ex
                 _180deg = get<AudioSourceComponent>("WhiteRoom_Back");
                 _270deg = get<AudioSourceComponent>("WhiteRoom_Left");
             }
-            else if (routineName.Contains("Forest"))
+            else if (routineName.Contains("Forest") || routineName.Contains("Night"))
             {
                 _0deg = get<AudioSourceComponent>("AmbianceForest_Front"); 
                 _90deg = get<AudioSourceComponent>("AmbianceForest_Right");
