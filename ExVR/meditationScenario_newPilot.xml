@@ -3088,12 +3088,12 @@
                     <Arg name="min_distance" ui="Float values slider" value="0.01" type="System.Single" dim="0"/>
                     <Arg name="mute" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="nothing_end_block" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
-                    <Arg name="nothing_new_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="nothing_new_block" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="pause_end_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="pause_new_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="pitch" ui="Float values slider" value="1" type="System.Single" dim="0"/>
                     <Arg name="play_end_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
-                    <Arg name="play_new_block" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="play_new_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="rollof_mode" ui="Combo box index" value="1" type="System.Int32" dim="0"/>
                     <Arg name="spatial_blend" ui="Float values slider" value="1" type="System.Single" dim="0"/>
                     <Arg name="spatialized" ui="Check box" value="true" type="System.Boolean" dim="0"/>
@@ -6481,7 +6481,7 @@
                             <Interval t1="0" t2="180"/>
                         </Timeline>
                     </Action>
-                    <Action key="3071" key_component="135" key_config="315" node_used="0" node_position="0 0">
+                    <Action key="3071" key_component="135" key_config="315" node_used="1" node_position="164.4 1094.93">
                         <!--Component TibetanBowl with config default -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 180s(), duration: 180(s) -->
@@ -6506,7 +6506,7 @@
                     <Connector key="666" name="StartRoutine" node_position="-311.8 606.4">
                         <Arg name="value" ui="Label" value="" type="System.String" dim="0"/>
                     </Connector>
-                    <Connector key="667" name="PassValues" node_position="745.2 768">
+                    <Connector key="667" name="PassValues" node_position="740.4 770.4">
                         <Arg name="value" ui="Label" value="" type="System.String" dim="0"/>
                     </Connector>
                     <Connector key="668" name="PassValueTrigger" node_position="447.6 571.2">
@@ -6524,6 +6524,12 @@
                     <Connector key="672" name="Delay" node_position="-42 778.8">
                         <Arg name="value" ui="Integer spin box" value="100" type="System.Int32" dim="0"/>
                     </Connector>
+                    <Connector key="845" name="StopRoutine" node_position="-306 961.2">
+                        <Arg name="value" ui="Label" value="" type="System.String" dim="0"/>
+                    </Connector>
+                    <Connector key="846" name="PassValues" node_position="-47.2 1092.8">
+                        <Arg name="value" ui="Label" value="" type="System.String" dim="0"/>
+                    </Connector>
                     <!--Connection between Key668:Connector:PassValueTrigger:Port0 and Key667:Connector:PassValues:Port0 -->
                     <Connection key="1971" out_type="connector" out_key="668" signal_id="0" out_data_type="any" signal="output value 0" in_type="connector" in_key="667" slot_id="0" in_data_type="any" slot="input value 0"/>
                     <!--Connection between Key670:Connector:PassValueTrigger:Port0 and Key667:Connector:PassValues:Port1 -->
@@ -6540,6 +6546,14 @@
                     <Connection key="1977" out_type="connector" out_key="672" signal_id="0" out_data_type="any" signal="output value 0" in_type="connector" in_key="670" slot_id="1" in_data_type="trigger" slot="input value 1"/>
                     <!--Connection between Key667:Connector:PassValues:Port0 and Key111:Component:Serial port writer:Port0 -->
                     <Connection key="1978" out_type="connector" out_key="667" signal_id="0" out_data_type="any" signal="output value 0" in_type="component" in_key="111" slot_id="0" in_data_type="integer" slot="send byte pulse"/>
+                    <!--Connection between Key666:Connector:StartRoutine:Port0 and Key135:Component:TibetanBowl:Port0 -->
+                    <Connection key="2958" out_type="connector" out_key="666" signal_id="0" out_data_type="string" signal="output value 0" in_type="component" in_key="135" slot_id="0" in_data_type="trigger" slot="play"/>
+                    <!--Connection between Key666:Connector:StartRoutine:Port0 and Key846:Connector:PassValues:Port0 -->
+                    <Connection key="2959" out_type="connector" out_key="666" signal_id="0" out_data_type="string" signal="output value 0" in_type="connector" in_key="846" slot_id="0" in_data_type="any" slot="input value 0"/>
+                    <!--Connection between Key845:Connector:StopRoutine:Port0 and Key846:Connector:PassValues:Port1 -->
+                    <Connection key="2960" out_type="connector" out_key="845" signal_id="0" out_data_type="string" signal="output value 0" in_type="connector" in_key="846" slot_id="1" in_data_type="any" slot="input value 1"/>
+                    <!--Connection between Key846:Connector:PassValues:Port0 and Key135:Component:TibetanBowl:Port0 -->
+                    <Connection key="2961" out_type="connector" out_key="846" signal_id="0" out_data_type="any" signal="output value 0" in_type="component" in_key="135" slot_id="0" in_data_type="trigger" slot="play"/>
                 </Condition>
             </Routine>
             <Routine key="891" name="Lab_Idle" randomizer="0" informations="">
@@ -6992,7 +7006,7 @@
                             <Interval t1="0" t2="180"/>
                         </Timeline>
                     </Action>
-                    <Action key="3072" key_component="135" key_config="315" node_used="0" node_position="0 0">
+                    <Action key="3072" key_component="135" key_config="315" node_used="1" node_position="146.88 969.12">
                         <!--Component TibetanBowl with config default -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 180s(), duration: 180(s) -->
@@ -7006,7 +7020,7 @@
                     <Connector key="591" name="StartRoutine" node_position="-311.8 606.4">
                         <Arg name="value" ui="Label" value="" type="System.String" dim="0"/>
                     </Connector>
-                    <Connector key="592" name="PassValues" node_position="745.2 768">
+                    <Connector key="592" name="PassValues" node_position="746.64 768">
                         <Arg name="value" ui="Label" value="" type="System.String" dim="0"/>
                     </Connector>
                     <Connector key="593" name="PassValueTrigger" node_position="447.6 571.2">
@@ -7024,6 +7038,12 @@
                     <Connector key="597" name="Delay" node_position="-42 778.8">
                         <Arg name="value" ui="Integer spin box" value="100" type="System.Int32" dim="0"/>
                     </Connector>
+                    <Connector key="847" name="PassValues" node_position="-93.28 969.2">
+                        <Arg name="value" ui="Label" value="" type="System.String" dim="0"/>
+                    </Connector>
+                    <Connector key="848" name="StopRoutine" node_position="-311.04 1013.76">
+                        <Arg name="value" ui="Label" value="" type="System.String" dim="0"/>
+                    </Connector>
                     <!--Connection between Key593:Connector:PassValueTrigger:Port0 and Key592:Connector:PassValues:Port0 -->
                     <Connection key="1508" out_type="connector" out_key="593" signal_id="0" out_data_type="any" signal="output value 0" in_type="connector" in_key="592" slot_id="0" in_data_type="any" slot="input value 0"/>
                     <!--Connection between Key595:Connector:PassValueTrigger:Port0 and Key592:Connector:PassValues:Port1 -->
@@ -7040,6 +7060,12 @@
                     <Connection key="1514" out_type="connector" out_key="597" signal_id="0" out_data_type="any" signal="output value 0" in_type="connector" in_key="595" slot_id="1" in_data_type="trigger" slot="input value 1"/>
                     <!--Connection between Key592:Connector:PassValues:Port0 and Key111:Component:Serial port writer:Port0 -->
                     <Connection key="1515" out_type="connector" out_key="592" signal_id="0" out_data_type="any" signal="output value 0" in_type="component" in_key="111" slot_id="0" in_data_type="integer" slot="send byte pulse"/>
+                    <!--Connection between Key847:Connector:PassValues:Port0 and Key135:Component:TibetanBowl:Port0 -->
+                    <Connection key="2970" out_type="connector" out_key="847" signal_id="0" out_data_type="any" signal="output value 0" in_type="component" in_key="135" slot_id="0" in_data_type="trigger" slot="play"/>
+                    <!--Connection between Key848:Connector:StopRoutine:Port0 and Key847:Connector:PassValues:Port1 -->
+                    <Connection key="2971" out_type="connector" out_key="848" signal_id="0" out_data_type="string" signal="output value 0" in_type="connector" in_key="847" slot_id="1" in_data_type="any" slot="input value 1"/>
+                    <!--Connection between Key591:Connector:StartRoutine:Port0 and Key847:Connector:PassValues:Port0 -->
+                    <Connection key="2972" out_type="connector" out_key="591" signal_id="0" out_data_type="string" signal="output value 0" in_type="connector" in_key="847" slot_id="0" in_data_type="any" slot="input value 0"/>
                 </Condition>
             </Routine>
             <Routine key="969" name="Lab_InstantTrigg" randomizer="0" informations="">
@@ -8189,6 +8215,17 @@
                             <Interval t1="0" t2="10000"/>
                         </Timeline>
                     </Action>
+                    <Action key="3552" key_component="135" key_config="315" node_used="1" node_position="288 154">
+                        <!--Component TibetanBowl with config default -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                    </Action>
                     <Connector key="203" name="StartRoutine" node_position="-5.28 -197.52">
                         <Arg name="value" ui="Label" value="" type="System.String" dim="0"/>
                     </Connector>
@@ -8231,6 +8268,8 @@
                     <Connection key="657" out_type="connector" out_key="205" signal_id="0" out_data_type="any" signal="output value 0" in_type="connector" in_key="210" slot_id="0" in_data_type="string" slot="input value 0"/>
                     <!--Connection between Key205:Connector:PassValues:Port0 and Key111:Component:Serial port writer:Port0 -->
                     <Connection key="658" out_type="connector" out_key="205" signal_id="0" out_data_type="any" signal="output value 0" in_type="component" in_key="111" slot_id="0" in_data_type="integer" slot="send byte pulse"/>
+                    <!--Connection between Key203:Connector:StartRoutine:Port0 and Key135:Component:TibetanBowl:Port0 -->
+                    <Connection key="2973" out_type="connector" out_key="203" signal_id="0" out_data_type="string" signal="output value 0" in_type="component" in_key="135" slot_id="0" in_data_type="trigger" slot="play"/>
                 </Condition>
             </Routine>
             <Routine key="1048" name="Night_MPS_Part2" randomizer="0" informations="">
@@ -8470,8 +8509,8 @@
                     <Connector key="815" name="Delay" node_position="292.08 34.8">
                         <Arg name="value" ui="Integer spin box" value="100" type="System.Int32" dim="0"/>
                     </Connector>
-                    <Connector key="816" name="Integer" node_position="403.464 -248.656">
-                        <Arg name="value" ui="Integer spin box" value="13" type="System.Int32" dim="0"/>
+                    <Connector key="816" name="Integer" node_position="402.464 -245.656">
+                        <Arg name="value" ui="Integer spin box" value="63" type="System.Int32" dim="0"/>
                     </Connector>
                     <Connector key="817" name="Integer" node_position="405.92 -75.28">
                         <Arg name="value" ui="Integer spin box" value="0" type="System.Int32" dim="0"/>
@@ -8737,7 +8776,7 @@
                         <Arg name="value" ui="Integer spin box" value="100" type="System.Int32" dim="0"/>
                     </Connector>
                     <Connector key="824" name="Integer" node_position="403.464 -248.656">
-                        <Arg name="value" ui="Integer spin box" value="13" type="System.Int32" dim="0"/>
+                        <Arg name="value" ui="Integer spin box" value="64" type="System.Int32" dim="0"/>
                     </Connector>
                     <Connector key="825" name="Integer" node_position="405.92 -75.28">
                         <Arg name="value" ui="Integer spin box" value="0" type="System.Int32" dim="0"/>
@@ -9679,6 +9718,22 @@
                             <Interval t1="0" t2="10000"/>
                         </Timeline>
                     </Action>
+                    <Action key="3553" key_component="135" key_config="315" node_used="1" node_position="422.454 254.63">
+                        <!--Component TibetanBowl with config default -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                    </Action>
+                    <Connector key="849" name="StopRoutine" node_position="177.984 257.472">
+                        <Arg name="value" ui="Label" value="" type="System.String" dim="0"/>
+                    </Connector>
+                    <!--Connection between Key849:Connector:StopRoutine:Port0 and Key135:Component:TibetanBowl:Port0 -->
+                    <Connection key="2974" out_type="connector" out_key="849" signal_id="0" out_data_type="string" signal="output value 0" in_type="component" in_key="135" slot_id="0" in_data_type="trigger" slot="play"/>
                 </Condition>
             </Routine>
             <Routine key="26" name="Lab_WelcomeBack" randomizer="0" informations="">
@@ -14966,6 +15021,17 @@
                             <Interval t1="0" t2="10000"/>
                         </Timeline>
                     </Action>
+                    <Action key="3554" key_component="135" key_config="315" node_used="1" node_position="290.4 206.4">
+                        <!--Component TibetanBowl with config default -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                    </Action>
                     <Connector key="219" name="StartRoutine" node_position="-10.08 -191.52">
                         <Arg name="value" ui="Label" value="" type="System.String" dim="0"/>
                     </Connector>
@@ -15008,6 +15074,8 @@
                     <Connection key="674" out_type="connector" out_key="221" signal_id="0" out_data_type="any" signal="output value 0" in_type="connector" in_key="226" slot_id="0" in_data_type="string" slot="input value 0"/>
                     <!--Connection between Key221:Connector:PassValues:Port0 and Key111:Component:Serial port writer:Port0 -->
                     <Connection key="700" out_type="connector" out_key="221" signal_id="0" out_data_type="any" signal="output value 0" in_type="component" in_key="111" slot_id="0" in_data_type="integer" slot="send byte pulse"/>
+                    <!--Connection between Key219:Connector:StartRoutine:Port0 and Key135:Component:TibetanBowl:Port0 -->
+                    <Connection key="2975" out_type="connector" out_key="219" signal_id="0" out_data_type="string" signal="output value 0" in_type="component" in_key="135" slot_id="0" in_data_type="trigger" slot="play"/>
                 </Condition>
             </Routine>
             <Routine key="1052" name="Night_Control_Part2" randomizer="0" informations="">
@@ -15248,7 +15316,7 @@
                         <Arg name="value" ui="Integer spin box" value="100" type="System.Int32" dim="0"/>
                     </Connector>
                     <Connector key="832" name="Integer" node_position="392.64 -256.2">
-                        <Arg name="value" ui="Integer spin box" value="33" type="System.Int32" dim="0"/>
+                        <Arg name="value" ui="Integer spin box" value="73" type="System.Int32" dim="0"/>
                     </Connector>
                     <Connector key="833" name="Integer" node_position="405.92 -75.28">
                         <Arg name="value" ui="Integer spin box" value="0" type="System.Int32" dim="0"/>
@@ -15514,7 +15582,7 @@
                         <Arg name="value" ui="Integer spin box" value="100" type="System.Int32" dim="0"/>
                     </Connector>
                     <Connector key="840" name="Integer" node_position="392.64 -256.2">
-                        <Arg name="value" ui="Integer spin box" value="33" type="System.Int32" dim="0"/>
+                        <Arg name="value" ui="Integer spin box" value="74" type="System.Int32" dim="0"/>
                     </Connector>
                     <Connector key="841" name="Integer" node_position="405.92 -75.28">
                         <Arg name="value" ui="Integer spin box" value="0" type="System.Int32" dim="0"/>
@@ -16488,6 +16556,22 @@
                             <Interval t1="0" t2="10000"/>
                         </Timeline>
                     </Action>
+                    <Action key="3555" key_component="135" key_config="315" node_used="1" node_position="497 184">
+                        <!--Component TibetanBowl with config default -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                    </Action>
+                    <Connector key="850" name="StopRoutine" node_position="190 184">
+                        <Arg name="value" ui="Label" value="" type="System.String" dim="0"/>
+                    </Connector>
+                    <!--Connection between Key850:Connector:StopRoutine:Port0 and Key135:Component:TibetanBowl:Port0 -->
+                    <Connection key="2976" out_type="connector" out_key="850" signal_id="0" out_data_type="string" signal="output value 0" in_type="component" in_key="135" slot_id="0" in_data_type="trigger" slot="play"/>
                 </Condition>
             </Routine>
             <Routine key="158" name="Lab_WelcomeBack2" randomizer="0" informations="">

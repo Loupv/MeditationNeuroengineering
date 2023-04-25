@@ -318,10 +318,12 @@ namespace Ex
                 GetLightsReferences();
                 ShutEveryLights();
 
-                
+
                 // non working in night scene?
-                /*var ppvp = ExVR.Display().postProcessingVolume.profile;
-                var bl = ppvp.GetSetting<Bloom>();
+                
+                var ppvp = ExVR.Display().postProcessingVolume.profile;
+                
+                /*var bl = ppvp.GetSetting<Bloom>();
                 bl.active = true;
                 bl.enabled.value = true;
                 bl.intensity.value = currentSceneConfig.bloomValues[0];
@@ -330,10 +332,23 @@ namespace Ex
                 bl.clamp.value = currentSceneConfig.bloomValues[3];
                 bl.diffusion.value = currentSceneConfig.bloomValues[4];
                 bl.color.value = currentSceneConfig.bloomColor;*/
-                
+
+                // add following values to sceneConfig class
+                var dof = ppvp.GetSetting<DepthOfField>();
+               
+                dof.active = true;
+                dof.enabled.value = true;
+                dof.focusDistance.value = 0.88f;
+                dof.aperture.overrideState = true;
+                dof.aperture.value = 5.3f;
+                dof.focalLength.overrideState = true;
+                dof.focalLength.value = 23;
+                dof.kernelSize.overrideState = true;
+                dof.kernelSize.value = KernelSize.Medium;
+
                 yield return 0;
             }
-            log_message("4");
+
             log_message("routine inited");
             routineInited = true;
         }

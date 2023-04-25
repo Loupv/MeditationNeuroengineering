@@ -86,6 +86,9 @@ namespace Ex
                 _270deg = get<AudioSourceComponent>("AmbianceForest_Left");
             }
 
+            if (routineName.Contains("Night")) volumeMultiplier = 0.5f;
+            else volumeMultiplier = 1;
+
             log_message("sounds set");
 
             omniSoundsMainVolume = 0;
