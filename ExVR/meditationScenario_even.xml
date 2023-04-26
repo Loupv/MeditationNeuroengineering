@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Experiment name="meditationScenario_even" version="1.0b2" mode="designer" designer-used="D:/Meditation/exvr-designer-1.0b02/ExVR.exe">
     <Settings debug="1" csharp_debug_info="0" catch_components_exceptions="0" positional_tracking="1" catch_external_keyboard_events="0">
-        <Display mode="1" stereo_fov="60" fullscreen="0" monitor_id="1" resolution_id="1" custom_width="1920" custom_height="1080"/>
+        <Display mode="0" stereo_fov="60" fullscreen="0" monitor_id="1" resolution_id="1" custom_width="1920" custom_height="1080"/>
         <Camera neutral_x="0" neutral_y="1" neutral_z="0"/>
     </Settings>
     <Resources reload="200">

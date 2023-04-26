@@ -1,0 +1,4 @@
+﻿185390.4804;question1;Red, Green, Blue
+225934.2435;question1; 2 (Sometimes)
+232712.6542;question1; 2 (Sometimes)
+256624.3806;Please indicate an intermediate state that best represents your current state by adjusting the position of the cusor.;0.5116264

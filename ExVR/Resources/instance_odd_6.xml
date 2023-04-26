@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Nb routines: 67-->
+<!-- routine [FamiliarizationStart] [129] is called [1] times and has [1] conditions-->
+<!--   condition [default] is called [1] times-->
+<!-- routine [Lab_Idle] [41] is called [1] times and has [1] conditions-->
+<!--   condition [default] is called [1] times-->
+<!-- routine [Lab_Instruction1] [354] is called [1] times and has [1] conditions-->
+<!--   condition [default] is called [1] times-->
+<!-- routine [Lab_Familiarization_Sound] [102] is called [1] times and has [1] conditions-->
+<!--   condition [default] is called [1] times-->
+<!-- routine [Lab_Instruction2] [356] is called [1] times and has [1] conditions-->
+<!--   condition [default] is called [1] times-->
+<!-- routine [Lab_Familiarization_Colors] [352] is called [1] times and has [1] conditions-->
+<!--   condition [default] is called [1] times-->
+<!-- routine [Lab_ColorOrderQuestionnaire] [115] is called [1] times and has [1] conditions-->
+<!--   condition [default] is called [1] times-->
+<!-- routine [Lab_Instruction3] [362] is called [1] times and has [1] conditions-->
+<!--   condition [default] is called [1] times-->
+<!-- routine [Lab_DinnerQuestion] [360] is called [1] times and has [1] conditions-->
+<!--   condition [default] is called [1] times-->
+<!-- routine [Lab_CalmQuestion] [358] is called [1] times and has [1] conditions-->
+<!--   condition [default] is called [1] times-->
+<!-- routine [Lab_SliderTraining] [444] is called [1] times and has [1] conditions-->
+<!--   condition [default] is called [1] times-->
+<!-- routine [Lab_Idle] [166] is called [1] times and has [1] conditions-->
+<!--   condition [default] is called [1] times-->
+<!-- routine [Lab_RestingStateEyesClosed] [811] is called [1] times and has [1] conditions-->
+<!--   condition [default] is called [1] times-->
+<!-- routine [Lab_Idle] [891] is called [1] times and has [1] conditions-->
+<!--   condition [default] is called [1] times-->
+<!-- routine [Lab_RestingStateEyesOpen] [584] is called [1] times and has [1] conditions-->
+<!--   condition [default] is called [1] times-->
+<!-- routine [Lab_InstantTrigg] [969] is called [1] times and has [1] conditions-->
+<!--   condition [default] is called [1] times-->
+<!-- routine [Lab_1stPBB] [586] is called [1] times and has [1] conditions-->
+<!--   condition [default] is called [1] times-->
+<!-- routine [Lab_Idle] [889] is called [1] times and has [1] conditions-->
+<!--   condition [default] is called [1] times-->
+<!-- routine [FirstConditionStart] [134] is called [1] times and has [1] conditions-->
+<!--   condition [default] is called [1] times-->
+<!-- routine [Lab_Intro] [22] is called [1] times and has [1] conditions-->
+<!--   condition [default] is called [1] times-->
+<!-- routine [Forest_MPS_Part1] [10] is called [1] times and has [1] conditions-->
+<!--   condition [default] is called [1] times-->
+<!-- routine [Night_MPS_Part2] [1048] is called [1] times and has [1] conditions-->
+<!--   condition [default] is called [1] times-->
+<!-- routine [Forest_MPS_Part3] [1050] is called [1] times and has [1] conditions-->
+<!--   condition [default] is called [1] times-->
+<!-- routine [Forest_Exit] [85] is called [1] times and has [1] conditions-->
+<!--   condition [default] is called [1] times-->
+<!-- routine [Forest_MPS_Part4] [54] is called [1] times and has [1] conditions-->
+<!--   condition [default] is called [1] times-->
+<!-- routine [Forest_Entry] [87] is called [1] times and has [1] conditions-->
+<!--   condition [default] is called [1] times-->
+<!-- routine [Forest_MPS_Part5] [70] is called [1] times and has [1] conditions-->
+<!--   condition [default] is called [1] times-->
+<!-- routine [Lab_WelcomeBack] [26] is called [1] times and has [1] conditions-->
+<!--   condition [default] is called [1] times-->
+<!-- routine [Questionnaire] [236] is called [1] times and has [1] conditions-->
+<!--   condition [default] is called [1] times-->
+<!-- routine [Lab_PreQuestionnaire] [374] is called [1] times and has [1] conditions-->
+<!--   condition [default] is called [1] times-->
+<!-- routine [Lab_CAMS-R_Questionnaire] [229] is called [1] times and has [1] conditions-->
+<!--   condition [default] is called [1] times-->
+<!-- routine [Lab_OBE_Questionnaire] [231] is called [1] times and has [1] conditions-->
+<!--   condition [default] is called [1] times-->
+<!-- routine [Lab_PBB_Questionnaire] [238] is called [1] times and has [1] conditions-->
+<!--   condition [default] is called [1] times-->
+<!-- routine [Lab_PreFBI] [378] is called [1] times and has [1] conditions-->
+<!--   condition [default] is called [1] times-->
+<!-- routine [FBI] [370] is called [1] times and has [1] conditions-->
+<!--   condition [default] is called [1] times-->
+<!-- routine [Lab_FixationCross] [187] is called [4] times and has [2] conditions-->
+<!--   condition [asynchroneous] is called [2] times-->
+<!--   condition [synchroneous] is called [2] times-->
+<!-- routine [Lab_FBIOut] [660] is called [4] times and has [2] conditions-->
+<!--   condition [asynchroneous] is called [2] times-->
+<!--   condition [synchroneous] is called [2] times-->
+<!-- routine [Lab_Stroking] [185] is called [4] times and has [2] conditions-->
+<!--   condition [asynchroneous] is called [2] times-->
+<!--   condition [synchroneous] is called [2] times-->
+<!-- routine [Lab_FixationCross] [658] is called [4] times and has [2] conditions-->
+<!--   condition [asynchroneous] is called [2] times-->
+<!--   condition [synchroneous] is called [2] times-->
+<!-- routine [Lab_FBIQuestionnaire] [191] is called [4] times and has [2] conditions-->
+<!--   condition [asynchroneous] is called [2] times-->
+<!--   condition [synchroneous] is called [2] times-->
+<!-- routine [Lab_FBIIn] [177] is called [1] times and has [1] conditions-->
+<!--   condition [default] is called [1] times-->
+<!-- routine [Lab_EndFirstPhase] [376] is called [1] times and has [1] conditions-->
+<!--   condition [default] is called [1] times-->
+<!-- routine [Break] [164] is called [1] times and has [1] conditions-->
+<!--   condition [default] is called [1] times-->
+<!-- routine [Lab_Idle] [183] is called [1] times and has [1] conditions-->
+<!--   condition [default] is called [1] times-->
+<!-- routine [SecondConditionStart] [160] is called [1] times and has [1] conditions-->
+<!--   condition [default] is called [1] times-->
+<!-- routine [Lab_Intro2] [141] is called [1] times and has [1] conditions-->
+<!--   condition [default] is called [1] times-->
+<!-- routine [Forest_Control_Part1] [146] is called [1] times and has [1] conditions-->
+<!--   condition [default] is called [1] times-->
+<!-- routine [Night_Control_Part2] [1052] is called [1] times and has [1] conditions-->
+<!--   condition [default] is called [1] times-->
+<!-- routine [Forest_Control_Part3] [1054] is called [1] times and has [1] conditions-->
+<!--   condition [default] is called [1] times-->
+<!-- routine [Forest_PlatformMovement] [148] is called [1] times and has [1] conditions-->
+<!--   condition [default] is called [1] times-->
+<!-- routine [Forest_Control_Part4] [150] is called [1] times and has [1] conditions-->
+<!--   condition [default] is called [1] times-->
+<!-- routine [Forest_PlatformMovementBack] [152] is called [1] times and has [1] conditions-->
+<!--   condition [default] is called [1] times-->
+<!-- routine [Forest_Control_Part5] [154] is called [1] times and has [1] conditions-->
+<!--   condition [default] is called [1] times-->
+<!-- routine [Lab_WelcomeBack2] [158] is called [1] times and has [1] conditions-->
+<!--   condition [default] is called [1] times-->
+<!-- routine [Lab_PreQuestionnaire] [162] is called [1] times and has [1] conditions-->
+<!--   condition [default] is called [1] times-->
+<!-- routine [Lab_CAMS-R_Questionnaire] [295] is called [1] times and has [1] conditions-->
+<!--   condition [default] is called [1] times-->
+<!-- routine [Lab_OBE_Questionnaire] [297] is called [1] times and has [1] conditions-->
+<!--   condition [default] is called [1] times-->
+<!-- routine [Lab_PBB_Questionnaire] [299] is called [1] times and has [1] conditions-->
+<!--   condition [default] is called [1] times-->
+<!-- routine [Lab_PreFBI] [514] is called [1] times and has [1] conditions-->
+<!--   condition [default] is called [1] times-->
+<!-- routine [FBI] [734] is called [1] times and has [1] conditions-->
+<!--   condition [default] is called [1] times-->
+<!-- routine [Lab_FixationCross] [289] is called [4] times and has [2] conditions-->
+<!--   condition [synchroneous] is called [2] times-->
+<!--   condition [asynchroneous] is called [2] times-->
+<!-- routine [Lab_FBIOut] [291] is called [4] times and has [2] conditions-->
+<!--   condition [synchroneous] is called [2] times-->
+<!--   condition [asynchroneous] is called [2] times-->
+<!-- routine [Lab_Stroking] [285] is called [4] times and has [2] conditions-->
+<!--   condition [synchroneous] is called [2] times-->
+<!--   condition [asynchroneous] is called [2] times-->
+<!-- routine [Lab_FixationCross] [736] is called [4] times and has [2] conditions-->
+<!--   condition [synchroneous] is called [2] times-->
+<!--   condition [asynchroneous] is called [2] times-->
+<!-- routine [Lab_FBIQuestionnaire] [283] is called [4] times and has [2] conditions-->
+<!--   condition [synchroneous] is called [2] times-->
+<!--   condition [asynchroneous] is called [2] times-->
+<!-- routine [Lab_FBIIn] [287] is called [1] times and has [1] conditions-->
+<!--   condition [default] is called [1] times-->
+<!-- routine [Lab_End] [293] is called [1] times and has [1] conditions-->
+<!--   condition [default] is called [1] times-->
+<ExperimentFlow id_instance="6">
+    <Element key="129" type="routine" name="FamiliarizationStart" cond="default" elem_iter="0" cond_iter="0"/>
+    <Element key="41" type="routine" name="Lab_Idle" cond="default" elem_iter="0" cond_iter="0"/>
+    <Element key="354" type="routine" name="Lab_Instruction1" cond="default" elem_iter="0" cond_iter="0"/>
+    <Element key="102" type="routine" name="Lab_Familiarization_Sound" cond="default" elem_iter="0" cond_iter="0"/>
+    <Element key="356" type="routine" name="Lab_Instruction2" cond="default" elem_iter="0" cond_iter="0"/>
+    <Element key="352" type="routine" name="Lab_Familiarization_Colors" cond="default" elem_iter="0" cond_iter="0"/>
+    <Element key="115" type="routine" name="Lab_ColorOrderQuestionnaire" cond="default" elem_iter="0" cond_iter="0"/>
+    <Element key="362" type="routine" name="Lab_Instruction3" cond="default" elem_iter="0" cond_iter="0"/>
+    <Element key="360" type="routine" name="Lab_DinnerQuestion" cond="default" elem_iter="0" cond_iter="0"/>
+    <Element key="358" type="routine" name="Lab_CalmQuestion" cond="default" elem_iter="0" cond_iter="0"/>
+    <Element key="444" type="routine" name="Lab_SliderTraining" cond="default" elem_iter="0" cond_iter="0"/>
+    <Element key="166" type="routine" name="Lab_Idle" cond="default" elem_iter="0" cond_iter="0"/>
+    <Element key="811" type="routine" name="Lab_RestingStateEyesClosed" cond="default" elem_iter="0" cond_iter="0"/>
+    <Element key="891" type="routine" name="Lab_Idle" cond="default" elem_iter="0" cond_iter="0"/>
+    <Element key="584" type="routine" name="Lab_RestingStateEyesOpen" cond="default" elem_iter="0" cond_iter="0"/>
+    <Element key="969" type="routine" name="Lab_InstantTrigg" cond="default" elem_iter="0" cond_iter="0"/>
+    <Element key="586" type="routine" name="Lab_1stPBB" cond="default" elem_iter="0" cond_iter="0"/>
+    <Element key="889" type="routine" name="Lab_Idle" cond="default" elem_iter="0" cond_iter="0"/>
+    <Element key="134" type="routine" name="FirstConditionStart" cond="default" elem_iter="0" cond_iter="0"/>
+    <Element key="22" type="routine" name="Lab_Intro" cond="default" elem_iter="0" cond_iter="0"/>
+    <Element key="10" type="routine" name="Forest_MPS_Part1" cond="default" elem_iter="0" cond_iter="0"/>
+    <Element key="1048" type="routine" name="Night_MPS_Part2" cond="default" elem_iter="0" cond_iter="0"/>
+    <Element key="1050" type="routine" name="Forest_MPS_Part3" cond="default" elem_iter="0" cond_iter="0"/>
+    <Element key="85" type="routine" name="Forest_Exit" cond="default" elem_iter="0" cond_iter="0"/>
+    <Element key="54" type="routine" name="Forest_MPS_Part4" cond="default" elem_iter="0" cond_iter="0"/>
+    <Element key="87" type="routine" name="Forest_Entry" cond="default" elem_iter="0" cond_iter="0"/>
+    <Element key="70" type="routine" name="Forest_MPS_Part5" cond="default" elem_iter="0" cond_iter="0"/>
+    <Element key="26" type="routine" name="Lab_WelcomeBack" cond="default" elem_iter="0" cond_iter="0"/>
+    <Element key="236" type="routine" name="Questionnaire" cond="default" elem_iter="0" cond_iter="0"/>
+    <Element key="374" type="routine" name="Lab_PreQuestionnaire" cond="default" elem_iter="0" cond_iter="0"/>
+    <Element key="229" type="routine" name="Lab_CAMS-R_Questionnaire" cond="default" elem_iter="0" cond_iter="0"/>
+    <Element key="231" type="routine" name="Lab_OBE_Questionnaire" cond="default" elem_iter="0" cond_iter="0"/>
+    <Element key="238" type="routine" name="Lab_PBB_Questionnaire" cond="default" elem_iter="0" cond_iter="0"/>
+    <Element key="378" type="routine" name="Lab_PreFBI" cond="default" elem_iter="0" cond_iter="0"/>
+    <Element key="370" type="routine" name="FBI" cond="default" elem_iter="0" cond_iter="0"/>
+    <Element key="187" type="routine" name="Lab_FixationCross" cond="asynchroneous" elem_iter="0" cond_iter="0"/>
+    <Element key="660" type="routine" name="Lab_FBIOut" cond="asynchroneous" elem_iter="0" cond_iter="0"/>
+    <Element key="185" type="routine" name="Lab_Stroking" cond="asynchroneous" elem_iter="0" cond_iter="0"/>
+    <Element key="658" type="routine" name="Lab_FixationCross" cond="asynchroneous" elem_iter="0" cond_iter="0"/>
+    <Element key="191" type="routine" name="Lab_FBIQuestionnaire" cond="asynchroneous" elem_iter="0" cond_iter="0"/>
+    <Element key="187" type="routine" name="Lab_FixationCross" cond="asynchroneous" elem_iter="1" cond_iter="1"/>
+    <Element key="660" type="routine" name="Lab_FBIOut" cond="asynchroneous" elem_iter="1" cond_iter="1"/>
+    <Element key="185" type="routine" name="Lab_Stroking" cond="asynchroneous" elem_iter="1" cond_iter="1"/>
+    <Element key="658" type="routine" name="Lab_FixationCross" cond="asynchroneous" elem_iter="1" cond_iter="1"/>
+    <Element key="191" type="routine" name="Lab_FBIQuestionnaire" cond="asynchroneous" elem_iter="1" cond_iter="1"/>
+    <Element key="187" type="routine" name="Lab_FixationCross" cond="synchroneous" elem_iter="2" cond_iter="0"/>
+    <Element key="660" type="routine" name="Lab_FBIOut" cond="synchroneous" elem_iter="2" cond_iter="0"/>
+    <Element key="185" type="routine" name="Lab_Stroking" cond="synchroneous" elem_iter="2" cond_iter="0"/>
+    <Element key="658" type="routine" name="Lab_FixationCross" cond="synchroneous" elem_iter="2" cond_iter="0"/>
+    <Element key="191" type="routine" name="Lab_FBIQuestionnaire" cond="synchroneous" elem_iter="2" cond_iter="0"/>
+    <Element key="187" type="routine" name="Lab_FixationCross" cond="synchroneous" elem_iter="3" cond_iter="1"/>
+    <Element key="660" type="routine" name="Lab_FBIOut" cond="synchroneous" elem_iter="3" cond_iter="1"/>
+    <Element key="185" type="routine" name="Lab_Stroking" cond="synchroneous" elem_iter="3" cond_iter="1"/>
+    <Element key="658" type="routine" name="Lab_FixationCross" cond="synchroneous" elem_iter="3" cond_iter="1"/>
+    <Element key="191" type="routine" name="Lab_FBIQuestionnaire" cond="synchroneous" elem_iter="3" cond_iter="1"/>
+    <Element key="177" type="routine" name="Lab_FBIIn" cond="default" elem_iter="0" cond_iter="0"/>
+    <Element key="376" type="routine" name="Lab_EndFirstPhase" cond="default" elem_iter="0" cond_iter="0"/>
+    <Element key="164" type="routine" name="Break" cond="default" elem_iter="0" cond_iter="0"/>
+    <Element key="183" type="routine" name="Lab_Idle" cond="default" elem_iter="0" cond_iter="0"/>
+    <Element key="160" type="routine" name="SecondConditionStart" cond="default" elem_iter="0" cond_iter="0"/>
+    <Element key="141" type="routine" name="Lab_Intro2" cond="default" elem_iter="0" cond_iter="0"/>
+    <Element key="146" type="routine" name="Forest_Control_Part1" cond="default" elem_iter="0" cond_iter="0"/>
+    <Element key="1052" type="routine" name="Night_Control_Part2" cond="default" elem_iter="0" cond_iter="0"/>
+    <Element key="1054" type="routine" name="Forest_Control_Part3" cond="default" elem_iter="0" cond_iter="0"/>
+    <Element key="148" type="routine" name="Forest_PlatformMovement" cond="default" elem_iter="0" cond_iter="0"/>
+    <Element key="150" type="routine" name="Forest_Control_Part4" cond="default" elem_iter="0" cond_iter="0"/>
+    <Element key="152" type="routine" name="Forest_PlatformMovementBack" cond="default" elem_iter="0" cond_iter="0"/>
+    <Element key="154" type="routine" name="Forest_Control_Part5" cond="default" elem_iter="0" cond_iter="0"/>
+    <Element key="158" type="routine" name="Lab_WelcomeBack2" cond="default" elem_iter="0" cond_iter="0"/>
+    <Element key="162" type="routine" name="Lab_PreQuestionnaire" cond="default" elem_iter="0" cond_iter="0"/>
+    <Element key="295" type="routine" name="Lab_CAMS-R_Questionnaire" cond="default" elem_iter="0" cond_iter="0"/>
+    <Element key="297" type="routine" name="Lab_OBE_Questionnaire" cond="default" elem_iter="0" cond_iter="0"/>
+    <Element key="299" type="routine" name="Lab_PBB_Questionnaire" cond="default" elem_iter="0" cond_iter="0"/>
+    <Element key="514" type="routine" name="Lab_PreFBI" cond="default" elem_iter="0" cond_iter="0"/>
+    <Element key="734" type="routine" name="FBI" cond="default" elem_iter="0" cond_iter="0"/>
+    <Element key="289" type="routine" name="Lab_FixationCross" cond="synchroneous" elem_iter="0" cond_iter="0"/>
+    <Element key="291" type="routine" name="Lab_FBIOut" cond="synchroneous" elem_iter="0" cond_iter="0"/>
+    <Element key="285" type="routine" name="Lab_Stroking" cond="synchroneous" elem_iter="0" cond_iter="0"/>
+    <Element key="736" type="routine" name="Lab_FixationCross" cond="synchroneous" elem_iter="0" cond_iter="0"/>
+    <Element key="283" type="routine" name="Lab_FBIQuestionnaire" cond="synchroneous" elem_iter="0" cond_iter="0"/>
+    <Element key="289" type="routine" name="Lab_FixationCross" cond="synchroneous" elem_iter="1" cond_iter="1"/>
+    <Element key="291" type="routine" name="Lab_FBIOut" cond="synchroneous" elem_iter="1" cond_iter="1"/>
+    <Element key="285" type="routine" name="Lab_Stroking" cond="synchroneous" elem_iter="1" cond_iter="1"/>
+    <Element key="736" type="routine" name="Lab_FixationCross" cond="synchroneous" elem_iter="1" cond_iter="1"/>
+    <Element key="283" type="routine" name="Lab_FBIQuestionnaire" cond="synchroneous" elem_iter="1" cond_iter="1"/>
+    <Element key="289" type="routine" name="Lab_FixationCross" cond="asynchroneous" elem_iter="2" cond_iter="0"/>
+    <Element key="291" type="routine" name="Lab_FBIOut" cond="asynchroneous" elem_iter="2" cond_iter="0"/>
+    <Element key="285" type="routine" name="Lab_Stroking" cond="asynchroneous" elem_iter="2" cond_iter="0"/>
+    <Element key="736" type="routine" name="Lab_FixationCross" cond="asynchroneous" elem_iter="2" cond_iter="0"/>
+    <Element key="283" type="routine" name="Lab_FBIQuestionnaire" cond="asynchroneous" elem_iter="2" cond_iter="0"/>
+    <Element key="289" type="routine" name="Lab_FixationCross" cond="asynchroneous" elem_iter="3" cond_iter="1"/>
+    <Element key="291" type="routine" name="Lab_FBIOut" cond="asynchroneous" elem_iter="3" cond_iter="1"/>
+    <Element key="285" type="routine" name="Lab_Stroking" cond="asynchroneous" elem_iter="3" cond_iter="1"/>
+    <Element key="736" type="routine" name="Lab_FixationCross" cond="asynchroneous" elem_iter="3" cond_iter="1"/>
+    <Element key="283" type="routine" name="Lab_FBIQuestionnaire" cond="asynchroneous" elem_iter="3" cond_iter="1"/>
+    <Element key="287" type="routine" name="Lab_FBIIn" cond="default" elem_iter="0" cond_iter="0"/>
+    <Element key="293" type="routine" name="Lab_End" cond="default" elem_iter="0" cond_iter="0"/>
+</ExperimentFlow>
