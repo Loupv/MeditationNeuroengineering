@@ -1,0 +1,8 @@
+﻿1610631.4154;question1; Somewhat disagree
+1615308.398;question2; Somewhat disagree
+1619409.5834;question3; Somewhat disagree
+1624096.805;question4; Somewhat disagree
+1628129.5897;question5; Somewhat disagree
+1633684.9804;question6; Somewhat agree
+1638663.8181;question7; Somewhat agree
+1642753.1084;question8;Strongly disagree
