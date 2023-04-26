@@ -1,0 +1,8 @@
+﻿3070251.5792;question1; Agree
+3078929.7212;question2; Somewhat agree
+3087927.3119;question3; Agree
+3093761.6763;question4; Strongly agree
+3097882.7491;question5; Strongly agree
+3107638.3896;question6; Strongly agree
+3114084.0979;question7; Strongly agree
+3123093.4505;question8; Somewhat disagree
