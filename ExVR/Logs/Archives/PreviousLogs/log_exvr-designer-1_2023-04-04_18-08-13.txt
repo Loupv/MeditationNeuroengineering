@@ -1,0 +1,3 @@
+﻿13931.1049;In which order did you see the sphere colors?;Blue, Green, Red
+20297.1516;I am preoccupied by what I will have at lunch/dinner.; 3 (Often)
+23113.9285;I feel calm and relaxed.; 2 (Sometimes)

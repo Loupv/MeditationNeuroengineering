@@ -1,0 +1,4 @@
+﻿96388.2401;1. It is easy for me to concentrate on what I am doing.; 2 (Sometimes)
+98382.4179;2. I am preoccupied by the future.; 3 (Often)
+100016.9608;3. I can tolerate emotional pain.; or 4 (Almost always)
+102057.9786;4. I can accept things I cannot change.;1 (Rarely/Not at all)

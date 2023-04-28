@@ -1,0 +1,4 @@
+﻿398365.827;In which order did you see the sphere colors?;Red, Green, Blue
+427088.6834;I am preoccupied by what I will have at lunch/dinner.;1 (Rarely/Not at all)
+432720.7419;I feel calm and relaxed.;1 (Rarely/Not at all)
+444177.4998;Please indicate an intermediate state that best represents your current state by adjusting the position of the cusor.;0.2663897

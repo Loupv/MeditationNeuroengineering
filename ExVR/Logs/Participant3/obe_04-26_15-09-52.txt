@@ -1,0 +1,8 @@
+﻿1205869.9597;question1; Agree
+1211670.162;question2; Neutral
+1220490.2139;question3; Somewhat disagree
+1224749.2193;question4; Agree
+1229758.8631;question5; Agree
+1236459.406;question6; Strongly agree
+1243046.7519;question7; Strongly agree
+1249512.8901;question8; Somewhat disagree

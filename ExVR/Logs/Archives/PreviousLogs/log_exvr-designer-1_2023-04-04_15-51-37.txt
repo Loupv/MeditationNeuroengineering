@@ -1,0 +1,2 @@
+﻿18966.209;In which order did you see the sphere colors?;Red, Green, Blue
+21879.6887;I feel calm and relaxed.; 3 (Often)

@@ -1,0 +1,5 @@
+﻿87313.1928;1. It is easy for me to concentrate on what I am doing.; 2 (Sometimes)
+139201.0128;2. I am preoccupied by the future.; 2 (Sometimes)
+188889.0403;3. I can tolerate emotional pain.; 2 (Sometimes)
+191545.7727;4. I can accept things I cannot change.; 2 (Sometimes)
+197133.6423;5. I can usually describe how I feel at the moment in considerable detail.; 2 (Sometimes)

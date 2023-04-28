@@ -1,0 +1,4 @@
+﻿18842.0126;In which order did you see the sphere colors?;Red, Green, Blue
+34188.7872;I am preoccupied by what I will have at lunch/dinner.; or 4 (Almost always)
+38239.8612;I feel calm and relaxed.; or 4 (Almost always)
+43863.2155;I am preoccupied by what I will have at lunch/dinner.;0.1761363

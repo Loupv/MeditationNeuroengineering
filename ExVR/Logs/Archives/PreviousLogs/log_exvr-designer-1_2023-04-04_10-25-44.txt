@@ -1,0 +1,50 @@
+﻿624724.9627;1. It is easy for me to concentrate on what I am doing.; 2 (Sometimes)
+750180.3049;2. I am preoccupied by the future.; 2 (Sometimes)
+762290.4725;3. I can tolerate emotional pain.; or 4 (Almost always)
+768457.0884;4. I can accept things I cannot change.; or 4 (Almost always)
+770712.5343;5. I can usually describe how I feel at the moment in considerable detail.;1 (Rarely/Not at all)
+775056.4456;6. I am easily distracted.;1 (Rarely/Not at all)
+776645.3585;7. I am preoccupied by the past.;1 (Rarely/Not at all)
+796167.822;8. It's easy for me to keep track of my thoughts and feelings.; 2 (Sometimes)
+813702.165;9. I try to notice my thoughts without judging them.; 3 (Often)
+829623.2561;10. I am able to accept the thoughts and feelings I have.; 3 (Often)
+836789.1543;11. I am able to focus on the present moment.;1 (Rarely/Not at all)
+843311.8655;12. I am able to pay close attention to one thing for a long period of time.;1 (Rarely/Not at all)
+1412653.8158;1. It is easy for me to concentrate on what I am doing.; 2 (Sometimes)
+1415097.5039;2. I am preoccupied by the future.; 3 (Often)
+1416919.3646;3. I can tolerate emotional pain.; 2 (Sometimes)
+1418918.5386;4. I can accept things I cannot change.; 3 (Often)
+1420173.4561;5. I can usually describe how I feel at the moment in considerable detail.; 2 (Sometimes)
+1421629.4803;6. I am easily distracted.; 3 (Often)
+1423063.8021;7. I am preoccupied by the past.; 2 (Sometimes)
+1437262.4385;8. It's easy for me to keep track of my thoughts and feelings.; 3 (Often)
+1439474.7997;9. I try to notice my thoughts without judging them.; 2 (Sometimes)
+1440851.972;10. I am able to accept the thoughts and feelings I have.; 3 (Often)
+1442174.1692;11. I am able to focus on the present moment.; 2 (Sometimes)
+1443541.7112;12. I am able to pay close attention to one thing for a long period of time.; 3 (Often)
+1443784.9229;I felt as if I was outside my physical body; Somewhat agree
+1458173.3193;I felt as if I was disconnected from my physical body; Neutral
+1466806.9207;I felt as if I was separated from my physical body ; Somewhat disagree
+1471007.264;I felt as if I became lighter; Somewhat agree
+1474762.7832;I felt as if I was floating; Agree
+1482050.8214;I felt as if I was located from where I saw the scene; Agree
+1486595.0019;I felt as if the body I saw was my body; Agree
+1490283.7504;I felt as if I had more than three bodies; Agree
+1490506.0675;Please find below several bodies that are more or less salient. 
+ A salient body is a body in which one feels enclosed, that is highly distinct from the bodies of others, and that sets a marked boundary between you and the rest of the world. Conversely, a body low in salience is strongly connected to its surroundings. It is a kind of permeable envelope, without any marked boundaries. 
+ Please indicate which of the bodies presented below best represents your current body state. If the boundaries of your body are extremely salient you should draw a line on the extreme right of the double-headed arrow. If the boundaries of your body are almost imperceptible you should draw a line at the extreme left of the double-headed arrow. 
+ You can indicate an intermediate state by drawing a line somewhere between the two poles of the double-headed arrow.;7
+1575362.3887;Please find below several bodies that are more or less salient. 
+ A salient body is a body in which one feels enclosed, that is highly distinct from the bodies of others, and that sets a marked boundary between you and the rest of the world. Conversely, a body low in salience is strongly connected to its surroundings. It is a kind of permeable envelope, without any marked boundaries. 
+ Please indicate which of the bodies presented below best represents your current body state. If the boundaries of your body are extremely salient you should draw a line on the extreme right of the double-headed arrow. If the boundaries of your body are almost imperceptible you should draw a line at the extreme left of the double-headed arrow. 
+ You can indicate an intermediate state by drawing a line somewhere between the two poles of the double-headed arrow.;4
+2092959.6385;Please find below several bodies that are more or less salient. 
+ A salient body is a body in which one feels enclosed, that is highly distinct from the bodies of others, and that sets a marked boundary between you and the rest of the world. Conversely, a body low in salience is strongly connected to its surroundings. It is a kind of permeable envelope, without any marked boundaries. 
+ Please indicate which of the bodies presented below best represents your current body state. If the boundaries of your body are extremely salient you should draw a line on the extreme right of the double-headed arrow. If the boundaries of your body are almost imperceptible you should draw a line at the extreme left of the double-headed arrow. 
+ You can indicate an intermediate state by drawing a line somewhere between the two poles of the double-headed arrow.;4
+2328011.0062;Please find below several bodies that are more or less salient. 
+ A salient body is a body in which one feels enclosed, that is highly distinct from the bodies of others, and that sets a marked boundary between you and the rest of the world. Conversely, a body low in salience is strongly connected to its surroundings. It is a kind of permeable envelope, without any marked boundaries. 
+ Please indicate which of the bodies presented below best represents your current body state. If the boundaries of your body are extremely salient you should draw a line on the extreme right of the double-headed arrow. If the boundaries of your body are almost imperceptible you should draw a line at the extreme left of the double-headed arrow. 
+ You can indicate an intermediate state by drawing a line somewhere between the two poles of the double-headed arrow.;4
+2442042.7384;How strong was the feeling that the body you saw was you ?;4
+2517442.8579;How strong was the feeling that the body you saw was you ?;3

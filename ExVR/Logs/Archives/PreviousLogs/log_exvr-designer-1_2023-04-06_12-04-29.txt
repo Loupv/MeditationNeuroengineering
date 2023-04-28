@@ -1,0 +1,3 @@
+﻿3832.8273;Please indicate an intermediate state that best represents your current state by adjusting the position of the cusor.;0.4590431
+8955.6309;Please indicate an intermediate state that best represents your current state by adjusting the position of the cusor.;0.4592129
+32831.8333;Please indicate an intermediate state that best represents your current state by adjusting the position of the cusor.;0.6743298

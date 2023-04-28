@@ -1,0 +1,4 @@
+﻿4267.7799;Thank you! We will now go through a new task;Validate
+13234.0828;How strong was the feeling that the body you saw was you?;4
+16325.7427;How strong was the feeling that the touch you felt was located where you saw the stroking?;4
+18817.9612;I felt my body as usual, nothing changed;5

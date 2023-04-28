@@ -1,0 +1,13 @@
+﻿2816.9332;Thank you, we will now ask you a set of questions about your experience;Validate
+12036.2184;1. It is easy for me to concentrate on what I am doing.;Disagree
+15035.6266;2. I am preoccupied by the future.;Somewhat 
+disagree
+16928.2123;3. I can tolerate emotional pain.;Disagree
+18999.0868;4. I can accept things I cannot change.;Somewhat 
+disagree
+22293.218;5. I can usually describe how I feel at the moment in considerable detail.;Disagree
+24478.939;6. I am easily distracted.;Somewhat 
+disagree
+26398.9198;7. I am preoccupied by the past.;Disagree
+28950.1311;8. It's easy for me to keep track of my thoughts and feelings.;Somewhat 
+disagree

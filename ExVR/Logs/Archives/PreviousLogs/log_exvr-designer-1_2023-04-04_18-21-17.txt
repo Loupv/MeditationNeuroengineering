@@ -1,0 +1,2 @@
+﻿3349.227;Thank you! We will now go through a new task;Validate
+15627.4043;How strong was the feeling that the body you saw was your body?;4

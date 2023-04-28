@@ -1,0 +1,4 @@
+﻿5514.6407;Thank you! We will now go through a new task;Validate
+35150.6919;How strong was the feeling that the body you saw was your body?;4
+49926.1805;How strong was the feeling that the body you saw was your body?;4
+78568.8153;How strong was the feeling that the body you saw was your body?;4

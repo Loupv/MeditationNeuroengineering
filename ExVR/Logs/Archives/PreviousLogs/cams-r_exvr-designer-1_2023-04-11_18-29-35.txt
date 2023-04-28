@@ -1,0 +1,2 @@
+﻿3471.0414;Thank you, we will now ask you a set of questions about your experience;Validate
+6446.4267;1. It is easy for me to concentrate on what I am doing.; 2 (Sometimes)

@@ -1,0 +1,16 @@
+﻿1544426.2215;1. It is easy for me to concentrate on what I am doing.;Disagree
+1556437.3213;I felt as if I was disconnected from my physical body; Disagree
+1560047.0062;I felt as if I was separated from my physical body ; Disagree
+1565158.7093;I felt as if I became lighter; Neutral
+1570103.5922;I felt as if I was floating; Somewhat agree
+1582093.5584;I felt as if I was located from where I saw the scene; Somewhat agree
+1593904.0761;I felt as if the body I saw was my body; Agree
+1599604.0082;I felt as if I had more than three bodies; Disagree
+1635046.7703;Please find below several bodies that are more or less salient. 
+ A salient body is a body in which one feels enclosed, that is highly distinct from the bodies of others, and that sets a marked boundary between you and the rest of the world. Conversely, a body low in salience is strongly connected to its surroundings. It is a kind of permeable envelope, without any marked boundaries. 
+ Please indicate which of the bodies presented below best represents your current body state. If the boundaries of your body are extremely salient you should draw a line on the extreme right of the double-headed arrow. If the boundaries of your body are almost imperceptible you should draw a line at the extreme left of the double-headed arrow. 
+ You can indicate an intermediate state by drawing a line somewhere between the two poles of the double-headed arrow.;0.6449507
+1669780.6191;How strong was the feeling that
+ the body you saw was you?;2
+1684600.53;How strong was the feeling that the touch you felt was located where you saw the stroking?;2
+1689045.3856;I felt my body as usual, nothing changed;6

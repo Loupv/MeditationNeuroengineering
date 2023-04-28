@@ -1,0 +1,1 @@
+﻿20743.3108;Please indicate an intermediate state that best represents your current state by adjusting the position of the cusor.;0.9433679

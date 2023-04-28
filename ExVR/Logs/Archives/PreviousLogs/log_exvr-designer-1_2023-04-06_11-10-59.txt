@@ -1,0 +1,34 @@
+﻿244107.4808;In which order did you see the sphere colors?;Red, Green, Blue
+272166.3514;In which order did you see the sphere colors?;Red, Green, Blue
+337952.7782;I am preoccupied by what I will have at lunch/dinner.; 3 (Often)
+344739.8294;I feel calm and relaxed.; 3 (Often)
+354717.5411;I am preoccupied by what I will have at lunch/dinner.;0.1970832
+633593.9984;Thank you, we will now ask you a set of questions about your experience;Validate
+634681.2843;1. It is easy for me to concentrate on what I am doing.; 2 (Sometimes)
+656269.005;2. I am preoccupied by the future.; 2 (Sometimes)
+661215.2987;3. I can tolerate emotional pain.; 2 (Sometimes)
+662592.808;4. I can accept things I cannot change.; 2 (Sometimes)
+663971.8812;5. I can usually describe how I feel at the moment in considerable detail.; 2 (Sometimes)
+666270.7215;6. I am easily distracted.; 2 (Sometimes)
+668358.1508;7. I am preoccupied by the past.; 3 (Often)
+670570.83;8. It's easy for me to keep track of my thoughts and feelings.; 3 (Often)
+672793.9879;9. I try to notice my thoughts without judging them.; 3 (Often)
+674124.589;10. I am able to accept the thoughts and feelings I have.; 3 (Often)
+675483.3571;11. I am able to focus on the present moment.; 3 (Often)
+676802.4836;12. I am able to pay close attention to one thing for a long period of time.; 3 (Often)
+730924.5325;I felt as if I was outside my physical body; Somewhat agree
+735549.583;I felt as if I was disconnected from my physical body; Neutral
+740348.3599;I felt as if I was separated from my physical body ; Agree
+744268.7861;I felt as if I became lighter; Strongly agree
+748513.3845;I felt as if I was floating; Agree
+753957.1389;I felt as if I was located from where I saw the scene; Agree
+762135.2837;I felt as if the body I saw was my body; Somewhat agree
+772823.3373;I felt as if I had more than three bodies; Disagree
+789180.268;Please indicate an intermediate state that the bodies best represents your current body state by adjusting the position of the cusor.;0.725952
+793867.516;Thank you! We will now go through a new task;Validate
+826781.0987;How strong was the feeling that the body you saw was you?;4
+841957.6213;How strong was the feeling that the touch you felt was located where you saw the stroking?;5
+861613.8529;I felt my body as usual, nothing changed;4
+878353.9642;How strong was the feeling that the body you saw was you?;3
+879887.893;How strong was the feeling that the touch you felt was located where you saw the stroking?;3
+881387.5222;I felt my body as usual, nothing changed;3
