@@ -11342,8 +11342,8 @@
                             <Interval t1="0" t2="1000"/>
                         </Timeline>
                     </Action>
-                    <Connector key="179" name="String" node_position="-170.512 159.76">
-                        <Arg name="value" ui="Line text editor" value="Thank you! We will now go through a new task;Validate;" type="System.String" dim="0"/>
+                    <Connector key="179" name="String" node_position="-272.512 156.76">
+                        <Arg name="value" ui="Line text editor" value="Thank you! In the next task you will see a body in front of you and feel a touch in the back.;Validate;" type="System.String" dim="0"/>
                     </Connector>
                     <Connector key="180" name="StartRoutine" node_position="33.312 558.816">
                         <Arg name="value" ui="Label" value="" type="System.String" dim="0"/>
@@ -18134,8 +18134,8 @@
                             <Interval t1="0" t2="1000"/>
                         </Timeline>
                     </Action>
-                    <Connector key="575" name="String" node_position="-170.512 159.76">
-                        <Arg name="value" ui="Line text editor" value="Thank you! We will now go through a new task;Validate;" type="System.String" dim="0"/>
+                    <Connector key="575" name="String" node_position="-225.512 160.76">
+                        <Arg name="value" ui="Line text editor" value="Thank you! In the next task you will see a body in front of you and feel a touch in the back.;Validate;" type="System.String" dim="0"/>
                     </Connector>
                     <Connector key="576" name="StartRoutine" node_position="35.04 546.72">
                         <Arg name="value" ui="Label" value="" type="System.String" dim="0"/>
