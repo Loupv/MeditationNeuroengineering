@@ -973,7 +973,7 @@
                     <Arg name="t_outline_width" ui="Float spin box" value="0" type="System.Single" dim="0"/>
                     <Arg name="t_paragraph_spacing" ui="Float spin box" value="0" type="System.Single" dim="0"/>
                     <Arg name="t_rich_text" ui="Check box" value="true" type="System.Boolean" dim="0"/>
-                    <Arg name="t_text" ui="Block text editor" value="People have a variety of ways of relating &#10;to their thoughts and feelings.  &#10;&#10;For each of the upcoming items, rate how much &#10;each of them applied to you in the past 15 minutes." type="System.String" dim="0"/>
+                    <Arg name="t_text" ui="Block text editor" value="Think of the past 15 minutes&#10;&#10;For each of the upcoming items, rate how much &#10;each of them applied to you." type="System.String" dim="0"/>
                     <Arg name="t_text_component" ui="Component" value="%%%-1" type="System.String" dim="1" sep="%%%" sizes="2"/>
                     <Arg name="t_text_resource" ui="Resource" value="%%%-1" type="System.String" dim="1" sep="%%%" sizes="2"/>
                     <Arg name="t_under_line" ui="Check box" value="false" type="System.Boolean" dim="0"/>
@@ -3131,7 +3131,7 @@
                     <Arg name="delay" ui="Integer spin box" value="    0" type="System.Int32" dim="0"/>
                 </Config>
                 <Config key="247" name="async">
-                    <Arg name="delay" ui="Integer spin box" value="  500" type="System.Int32" dim="0"/>
+                    <Arg name="delay" ui="Integer spin box" value="1000" type="System.Int32" dim="0"/>
                 </Config>
             </Configs>
         </Component>
@@ -3147,7 +3147,7 @@
                     <Arg name="display_clouds" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="display_filtering_obb" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="filter_points_outside_obb" ui="Check box" value="true" type="System.Boolean" dim="0"/>
-                    <Arg name="filtering_obb_tab" ui="Tab" value="true[#OBBFW#]false[#OBBFW#]0.784314 0 0 0.196078[#OBBFW#]0.45 0.84 0.9 0 0 0 1.3 1.8 1[#T#]false[#OBBFW#]false[#OBBFW#]0.784314 0.784314 0.784314 0.117647[#OBBFW#]0.6 0.8 0.7 0 0 0 1.2 1.8 1.2" type="System.String" dim="1" sep="[#T#]" sizes="2"/>
+                    <Arg name="filtering_obb_tab" ui="Tab" value="true[#OBBFW#]false[#OBBFW#]0.784314 0 0 0.196078[#OBBFW#]0.45 0.84 0.9 0 0 0 1.3 1.8 1[#T#]true[#OBBFW#]false[#OBBFW#]0.784314 0.784314 0.784314 0.117647[#OBBFW#]0.6 0.8 0.7 0 0 0 1.2 1.8 1.2" type="System.String" dim="1" sep="[#T#]" sizes="2"/>
                     <Arg name="global_transform" ui="Transformation" value="-0.49 0.34 0.23 12.1 85.6 69.3 -1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
                     <Arg name="global_transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="rendering" ui="Combo box index" value="    1" type="System.Int32" dim="0"/>
@@ -11299,8 +11299,8 @@
                             <Interval t1="0" t2="1000"/>
                         </Timeline>
                     </Action>
-                    <Connector key="179" name="String" node_position="-333.512 163.76">
-                        <Arg name="value" ui="Line text editor" value="Thank you! In the next task you will see a body in front of you and feel a touch in the back. ;Validate;" type="System.String" dim="0"/>
+                    <Connector key="179" name="String" node_position="-767.512 144.76">
+                        <Arg name="value" ui="Line text editor" value="Thank you! %%In the next task you will see a body in front of you %and feel a touch in the back. %You'll have then to answer a questionnaire %and all this will be repeated four times. ;Validate;" type="System.String" dim="0"/>
                     </Connector>
                     <Connector key="180" name="StartRoutine" node_position="33.312 558.816">
                         <Arg name="value" ui="Label" value="" type="System.String" dim="0"/>
@@ -18134,8 +18134,8 @@
                             <Interval t1="0" t2="1000"/>
                         </Timeline>
                     </Action>
-                    <Connector key="575" name="String" node_position="-248.512 162.76">
-                        <Arg name="value" ui="Line text editor" value="Thank you! In the next task you will see a body in front of you and feel a touch in the back.;Validate;" type="System.String" dim="0"/>
+                    <Connector key="575" name="String" node_position="-733.512 162.76">
+                        <Arg name="value" ui="Line text editor" value="Thank you! %%In the next task you will see a body in front of you %and feel a touch in the back. %You'll have then to answer a questionnaire %and all this will be repeated four times. ;Validate;" type="System.String" dim="0"/>
                     </Connector>
                     <Connector key="576" name="StartRoutine" node_position="35.04 546.72">
                         <Arg name="value" ui="Label" value="" type="System.String" dim="0"/>
