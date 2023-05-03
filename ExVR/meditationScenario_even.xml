@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Experiment name="meditationScenario_even" version="1.0b2" mode="designer" designer-used="D:/Meditation/exvr-designer-1.0b02/ExVR.exe">
+<Experiment name="meditationScenario_even" version="1.0b3" mode="designer" designer-used="D:/Meditation/exvr-designer-1.0b3/ExVR.exe">
     <Settings debug="1" csharp_debug_info="0" catch_components_exceptions="0" positional_tracking="1" catch_external_keyboard_events="0">
         <Display mode="0" stereo_fov="60" fullscreen="0" monitor_id="1" resolution_id="1" custom_width="1920" custom_height="1080"/>
         <Camera neutral_x="0" neutral_y="1" neutral_z="0"/>
@@ -3216,12 +3216,16 @@
                     <Arg name="circles" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="cones" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="details" ui="Combo box index" value="3" type="System.Int32" dim="0"/>
-                    <Arg name="display_filtering_obb" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="display_clouds" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="display_filtering_obb" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="enable_audio" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="end_time" ui="Float spin box" value="120" type="System.Single" dim="0"/>
                     <Arg name="filter_points_outside_obb" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="filtering_obb_tab" ui="Tab" value="true[#OBBFW#]true[#OBBFW#]0.784314 0 0 0.196078[#OBBFW#]1.5 0.7 -1.1 0 0 0 1.1 2.5 1.9" type="System.String" dim="1" sep="[#T#]" sizes="1"/>
                     <Arg name="filtering_obb_tr" ui="Transformation" value="0 0.31 0 0 0 0 0.31 0.35 0.39" type="System.Single" dim="1" sep=" " sizes="9"/>
                     <Arg name="filtering_obb_tr_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="global_transform" ui="Transformation" value="0.49 1.26 0.88 15.4 -214.1 90.2 -1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
+                    <Arg name="global_transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="loop" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="rendering" ui="Combo box index" value="2" type="System.Int32" dim="0"/>
                     <Arg name="size_points" ui="Float spin box" value="0.0025" type="System.Single" dim="0"/>
@@ -3245,12 +3249,16 @@
                     <Arg name="circles" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="cones" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="details" ui="Combo box index" value="3" type="System.Int32" dim="0"/>
+                    <Arg name="display_clouds" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="display_filtering_obb" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="enable_audio" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="end_time" ui="Float spin box" value="121.3" type="System.Single" dim="0"/>
                     <Arg name="filter_points_outside_obb" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="filtering_obb_tab" ui="Tab" value="true[#OBBFW#]true[#OBBFW#]0.784314 0 0 0.196078[#OBBFW#]1.5 0.7 -1.1 0 0 0 1.1 2.5 1.9" type="System.String" dim="1" sep="[#T#]" sizes="1"/>
                     <Arg name="filtering_obb_tr" ui="Transformation" value="0.23 0.29 0 0 0 0 0.1 0.1 0.1" type="System.Single" dim="1" sep=" " sizes="9"/>
                     <Arg name="filtering_obb_tr_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="global_transform" ui="Transformation" value="1.32 0.62 1.29 7.6 171.4 0.8 -1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
+                    <Arg name="global_transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="loop" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="rendering" ui="Combo box index" value="2" type="System.Int32" dim="0"/>
                     <Arg name="size_points" ui="Float spin box" value="0.0025" type="System.Single" dim="0"/>
@@ -3274,12 +3282,16 @@
                     <Arg name="circles" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="cones" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="details" ui="Combo box index" value="3" type="System.Int32" dim="0"/>
+                    <Arg name="display_clouds" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="display_filtering_obb" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="enable_audio" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="end_time" ui="Float spin box" value="52.9" type="System.Single" dim="0"/>
                     <Arg name="filter_points_outside_obb" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="filtering_obb_tab" ui="Tab" value="true[#OBBFW#]true[#OBBFW#]0.784314 0 0 0.196078[#OBBFW#]1.5 0.7 -1.1 0 0 0 1.1 2.5 1.9" type="System.String" dim="1" sep="[#T#]" sizes="1"/>
                     <Arg name="filtering_obb_tr" ui="Transformation" value="0 0 0 0 0 0 0.1 0.1 0.1" type="System.Single" dim="1" sep=" " sizes="9"/>
                     <Arg name="filtering_obb_tr_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="global_transform" ui="Transformation" value="0.49 1.26 0.88 15.4 -214.1 90.2 -1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
+                    <Arg name="global_transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="loop" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="rendering" ui="Combo box index" value="2" type="System.Int32" dim="0"/>
                     <Arg name="size_points" ui="Float spin box" value="0.0025" type="System.Single" dim="0"/>
@@ -3303,12 +3315,16 @@
                     <Arg name="circles" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="cones" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="details" ui="Combo box index" value="3" type="System.Int32" dim="0"/>
+                    <Arg name="display_clouds" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="display_filtering_obb" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="enable_audio" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="end_time" ui="Float spin box" value="52" type="System.Single" dim="0"/>
                     <Arg name="filter_points_outside_obb" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="filtering_obb_tab" ui="Tab" value="true[#OBBFW#]true[#OBBFW#]0.784314 0 0 0.196078[#OBBFW#]1.5 0.7 -1.1 0 0 0 1.1 2.5 1.9" type="System.String" dim="1" sep="[#T#]" sizes="1"/>
                     <Arg name="filtering_obb_tr" ui="Transformation" value="0.23 0.29 0 0 0 0 0.1 0.1 0.1" type="System.Single" dim="1" sep=" " sizes="9"/>
                     <Arg name="filtering_obb_tr_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="global_transform" ui="Transformation" value="1.32 0.62 1.29 7.6 171.4 0.8 -1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
+                    <Arg name="global_transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="loop" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="rendering" ui="Combo box index" value="2" type="System.Int32" dim="0"/>
                     <Arg name="size_points" ui="Float spin box" value="0.0025" type="System.Single" dim="0"/>
@@ -3332,12 +3348,16 @@
                     <Arg name="circles" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="cones" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="details" ui="Combo box index" value="3" type="System.Int32" dim="0"/>
+                    <Arg name="display_clouds" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="display_filtering_obb" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="enable_audio" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="end_time" ui="Float spin box" value="109" type="System.Single" dim="0"/>
                     <Arg name="filter_points_outside_obb" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="filtering_obb_tab" ui="Tab" value="true[#OBBFW#]true[#OBBFW#]0.784314 0 0 0.196078[#OBBFW#]1.5 0.7 -1.1 0 0 0 1.1 2.5 1.9" type="System.String" dim="1" sep="[#T#]" sizes="1"/>
                     <Arg name="filtering_obb_tr" ui="Transformation" value="0 0 0 0 0 0 0.1 0.1 0.1" type="System.Single" dim="1" sep=" " sizes="9"/>
                     <Arg name="filtering_obb_tr_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="global_transform" ui="Transformation" value="0.49 1.26 0.88 15.4 -214.1 90.2 -1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
+                    <Arg name="global_transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="loop" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="rendering" ui="Combo box index" value="2" type="System.Int32" dim="0"/>
                     <Arg name="size_points" ui="Float spin box" value="0.0025" type="System.Single" dim="0"/>
@@ -3361,12 +3381,16 @@
                     <Arg name="circles" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="cones" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="details" ui="Combo box index" value="3" type="System.Int32" dim="0"/>
+                    <Arg name="display_clouds" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="display_filtering_obb" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="enable_audio" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="end_time" ui="Float spin box" value="109" type="System.Single" dim="0"/>
                     <Arg name="filter_points_outside_obb" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="filtering_obb_tab" ui="Tab" value="true[#OBBFW#]true[#OBBFW#]0.784314 0 0 0.196078[#OBBFW#]1.5 0.7 -1.1 0 0 0 1.1 2.5 1.9" type="System.String" dim="1" sep="[#T#]" sizes="1"/>
                     <Arg name="filtering_obb_tr" ui="Transformation" value="0.23 0.29 0 0 0 0 0.1 0.1 0.1" type="System.Single" dim="1" sep=" " sizes="9"/>
                     <Arg name="filtering_obb_tr_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="global_transform" ui="Transformation" value="1.32 0.62 1.29 7.6 171.4 0.8 -1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
+                    <Arg name="global_transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="loop" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="rendering" ui="Combo box index" value="2" type="System.Int32" dim="0"/>
                     <Arg name="size_points" ui="Float spin box" value="0.0025" type="System.Single" dim="0"/>
@@ -3390,12 +3414,16 @@
                     <Arg name="circles" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="cones" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="details" ui="Combo box index" value="3" type="System.Int32" dim="0"/>
+                    <Arg name="display_clouds" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="display_filtering_obb" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="enable_audio" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="end_time" ui="Float spin box" value="49.7" type="System.Single" dim="0"/>
                     <Arg name="filter_points_outside_obb" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="filtering_obb_tab" ui="Tab" value="true[#OBBFW#]true[#OBBFW#]0.784314 0 0 0.196078[#OBBFW#]1.5 0.7 -1.1 0 0 0 1.1 2.5 1.9" type="System.String" dim="1" sep="[#T#]" sizes="1"/>
                     <Arg name="filtering_obb_tr" ui="Transformation" value="0 0 0 0 0 0 0.1 0.1 0.1" type="System.Single" dim="1" sep=" " sizes="9"/>
                     <Arg name="filtering_obb_tr_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="global_transform" ui="Transformation" value="0.49 1.26 0.88 15.4 -214.1 90.2 -1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
+                    <Arg name="global_transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="loop" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="rendering" ui="Combo box index" value="2" type="System.Int32" dim="0"/>
                     <Arg name="size_points" ui="Float spin box" value="0.0025" type="System.Single" dim="0"/>
@@ -3419,12 +3447,16 @@
                     <Arg name="circles" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="cones" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="details" ui="Combo box index" value="3" type="System.Int32" dim="0"/>
+                    <Arg name="display_clouds" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="display_filtering_obb" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="enable_audio" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="end_time" ui="Float spin box" value="52.4" type="System.Single" dim="0"/>
                     <Arg name="filter_points_outside_obb" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="filtering_obb_tab" ui="Tab" value="true[#OBBFW#]true[#OBBFW#]0.784314 0 0 0.196078[#OBBFW#]1.5 0.7 -1.1 0 0 0 1.1 2.5 1.9" type="System.String" dim="1" sep="[#T#]" sizes="1"/>
                     <Arg name="filtering_obb_tr" ui="Transformation" value="0.23 0.29 0 0 0 0 0.1 0.1 0.1" type="System.Single" dim="1" sep=" " sizes="9"/>
                     <Arg name="filtering_obb_tr_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="global_transform" ui="Transformation" value="1.32 0.62 1.29 7.6 171.4 0.8 -1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
+                    <Arg name="global_transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="loop" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="rendering" ui="Combo box index" value="2" type="System.Int32" dim="0"/>
                     <Arg name="size_points" ui="Float spin box" value="0.0025" type="System.Single" dim="0"/>
