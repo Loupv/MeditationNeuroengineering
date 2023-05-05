@@ -1,0 +1,8 @@
+2120946.8443;question1; Strongly agree
+2126546.8927;question2; Agree
+2136235.4915;question3; Somewhat agree
+2144513.3043;question4; Agree
+2148247.1438;question5; Agree
+2156534.9888;question6; Agree
+2160970.4652;question7; Agree
+2171647.2807;question8; Somewhat disagree

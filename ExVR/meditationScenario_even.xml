@@ -91,7 +91,7 @@
                 <Arg name="add_date_to_sub_directory_name" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                 <Arg name="base_sub_directory_name" ui="Line text editor" value="global_log" type="System.String" dim="0"/>
                 <Arg name="camera_calibration" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                <Arg name="camera_rig" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                <Arg name="camera_rig" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                 <Arg name="condition_duration" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                 <Arg name="condition_name" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                 <Arg name="condition_nb_calls" ui="Check box" value="false" type="System.Boolean" dim="0"/>
@@ -103,7 +103,7 @@
                 <Arg name="element_order" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                 <Arg name="ellapsed_element_time" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                 <Arg name="ellapsed_exp_time" ui="Check box" value="true" type="System.Boolean" dim="0"/>
-                <Arg name="eyes_camera" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                <Arg name="eyes_camera" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                 <Arg name="file_extension" ui="Line text editor" value="csv" type="System.String" dim="0"/>
                 <Arg name="frame_id" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                 <Arg name="framerate" ui="Check box" value="true" type="System.Boolean" dim="0"/>
