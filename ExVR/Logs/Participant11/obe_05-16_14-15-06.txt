@@ -1,0 +1,16 @@
+2017357.6551;question1; Somewhat agree
+2027102.1208;question2; Neutral
+2039424.8063;question3; Somewhat disagree
+2045404.1124;question4; Somewhat agree
+2052335.8728;question5; Agree
+2060534.8797;question6; Agree
+2066168.8333;question7; Agree
+2073358.0323;question8;Strongly disagree
+5142969.9167;question1; Disagree
+5150001.9724;question2; Disagree
+5155236.8458;question3; Disagree
+5161115.9288;question4; Somewhat agree
+5167660.2956;question5; Neutral
+5174935.4527;question6; Agree
+5183237.0327;question7;Strongly disagree
+5187413.3145;question8;Strongly disagree

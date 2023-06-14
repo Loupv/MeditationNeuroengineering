@@ -1,0 +1,8 @@
+1317912.5068;question1; Somewhat agree
+1324280.4539;question2; Somewhat agree
+1329368.45;question3; Somewhat agree
+1335065.8969;question4; Agree
+1339900.7342;question5; Agree
+1348111.8897;question6; Somewhat agree
+1354244.6515;question7; Somewhat agree
+1363667.7149;question8; Disagree

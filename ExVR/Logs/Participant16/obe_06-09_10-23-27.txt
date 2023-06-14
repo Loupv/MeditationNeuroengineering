@@ -1,0 +1,8 @@
+2177078.9482;question1; Somewhat agree
+2185588.9495;question2; Somewhat disagree
+2193855.8113;question3; Disagree
+2199066.9253;question4; Neutral
+2206555.6049;question5; Somewhat agree
+2216789.066;question6; Agree
+2223876.5809;question7; Somewhat disagree
+2231265.7025;question8; Disagree

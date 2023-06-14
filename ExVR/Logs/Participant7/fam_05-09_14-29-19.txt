@@ -1,0 +1,4 @@
+271432.791;question1;Green, Red, Blue
+325022.2237;question1;1 (Rarely/Not at all)
+350911.4649;question1; 4 (Almost always)
+373399.2381;Please indicate an intermediate state that best represents your current state by adjusting the position of the cusor.;0.02190417

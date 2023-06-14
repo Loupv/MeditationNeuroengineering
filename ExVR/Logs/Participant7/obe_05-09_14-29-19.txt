@@ -1,0 +1,16 @@
+2044631.1931;question1; Strongly agree
+2054566.9533;question2; Strongly agree
+2062343.8262;question3; Strongly agree
+2076689.3073;question4; Neutral
+2083821.5064;question5; Strongly agree
+2095066.7826;question6; Neutral
+2113253.5573;question7; Agree
+2127298.1903;question8; Neutral
+5600174.2517;question1; Strongly agree
+5607263.9346;question2; Strongly agree
+5613951.8677;question3; Strongly agree
+5623931.2936;question4; Neutral
+5629528.2804;question5; Strongly agree
+5637996.2139;question6; Neutral
+5646706.6819;question7; Agree
+5655640.2137;question8; Neutral
