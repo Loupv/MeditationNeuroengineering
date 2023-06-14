@@ -43,7 +43,7 @@ namespace Ex{
         public float turnSpeed = 0.5f;      // Speed of camera turning when mouse moves in along an axis
         public float panSpeed = 0.5f;       // Speed of the camera when being panned
         public float zoomSpeed = 0.3f;      // Speed of the camera going back and forth
-        public float translateSpeed = 0.005f;
+        public float translateSpeed = 0.002f;
         private Vector3 mouseOrigin;    // Position of cursor when mouse dragging starts
         private bool isPanning;     // Is the camera being panned?
         private bool isRotating;    // Is the camera being rotated?
