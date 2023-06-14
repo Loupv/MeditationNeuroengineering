@@ -204,7 +204,7 @@ namespace Ex
             {
                 cameraMoving = true;
                 lerpStartTime = Time.time;
-                lerpTimeInSeconds = 10;
+                lerpTimeInSeconds = 30;
                 StartCoroutine("SpinAroundPoint");
             }
         }
@@ -220,26 +220,45 @@ namespace Ex
 
             //float ray = direction.magnitude;
             
-            Vector3 currentOrigin = cameraRig.transform.Find("Cameras").position;
-            Vector3 direction;// = currentOrigin - cameraOrigin;
-            float currentAngle = 0;
+            Vector3 currentRigOrigin = cameraRig.transform.position;
+            //Quaternion originalRotation = cameraRig.transform.rotation;
+
+            // where is our body
+            Vector3 initialCamPoint = new Vector3(0.5f, cameraRig.transform.Find("Cameras").position.y, 1f); //cameraRig.transform.Find("Cameras").position + new Vector3(0,0,-targetDistance);
+            
+            //Vector3 direction;// = currentOrigin - cameraOrigin;
+            //float currentAngle = 0;
 
             while (t < 1 && cameraMoving)
             {
 
                 t = Mathf.Min(1, (Time.time - lerpStartTime) / lerpTimeInSeconds);
                 
-                log_message(t.ToString());
+                //log_message(t.ToString());
                 
-                currentAngle = Mathf.Lerp(Mathf.PI/2, 2*Mathf.PI+ Mathf.PI / 2, LerpSmoother(t, 2.2f, 1));
+                //currentAngle = Mathf.Lerp(Mathf.PI/2, 2*Mathf.PI+ Mathf.PI / 2, LerpSmoother(t, 2.2f, 1));
 
-                newPos = cameraOrigin + new Vector3(targetDistance * Mathf.Cos(currentAngle), targetHeight, targetDistance * Mathf.Sin(currentAngle));
+                // currentAngle starts at pi/2 and goes up to pi/2 + 2*pi
+                // x starts at 0 when currentAngle is at pi/2, then = targetDistance when currentAngle is at pi
+
+                // z starts at targetDistance, is at currentOrigin.z at pi and down to currentOrigin.z - targetDistance at 3*pi/2
+
+                float x = Mathf.Lerp(-targetDistance*1.5f, targetDistance*1.5f, 0.5f+0.5f*Mathf.Sin(LerpSmoother(t, 2.2f, 1)* 2* Mathf.PI) );
+                float y = Mathf.Lerp(0, -1, Mathf.Sin(Mathf.Lerp(0, 1, LerpSmoother(t, 2.2f, 1)) * Mathf.PI));
+                //float z = targetDistance * Mathf.Sin(currentAngle / 2) - currentOrigin.z * Mathf.Lerp(0, 1, Mathf.Cos(currentAngle / 2));
+                log_message(t.ToString());
+                float z = Mathf.Lerp(0, - 2*targetDistance - 3, Mathf.Sin(Mathf.Lerp(0,1, LerpSmoother(t, 2.2f, 1)) *Mathf.PI));
+
+                newPos = currentRigOrigin + new Vector3(x, y, z) ;
+                cameraRig.transform.position = newPos;
+
+                cameraRig.transform.Find("Cameras").LookAt(initialCamPoint);
                 
-                direction = new Vector3(cameraOrigin.x - newPos.x,0, cameraOrigin.z - newPos.z);
-                Quaternion rotation = Quaternion.LookRotation(direction, Vector3.up);
-                
-                cameraRig.transform.Find("Cameras").position = newPos;
-                cameraRig.transform.Find("Cameras").rotation = rotation;
+                //Vector3 camPos = cameraRig.transform.Find("Cameras").position;
+                //direction = new Vector3(cameraOrigin.x - camPos.x,0, cameraOrigin.z - camPos.z);
+
+                //Quaternion rotation = Quaternion.LookRotation(direction, Vector3.up);
+                //cameraRig.transform.rotation = rotation * originalRotation;
 
                 yield return new WaitForEndOfFrame();
             }
