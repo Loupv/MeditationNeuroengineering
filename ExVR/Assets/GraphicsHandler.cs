@@ -204,7 +204,7 @@ namespace Ex
             {
                 cameraMoving = true;
                 lerpStartTime = Time.time;
-                lerpTimeInSeconds = 30;
+                lerpTimeInSeconds = 60;
                 StartCoroutine("SpinAroundPoint");
             }
         }
