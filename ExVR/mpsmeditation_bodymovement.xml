@@ -3714,17 +3714,6 @@
                             <Interval t1="0" t2="10000"/>
                         </Timeline>
                     </Action>
-                    <Action key="3556" key_component="143" key_config="338" node_used="0" node_position="0 0">
-                        <!--Component CameraController with config default -->
-                        <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                        <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                    </Action>
                 </Condition>
             </Routine>
             <Routine key="22" name="Lab_Intro" randomizer="0" informations="">
@@ -3949,17 +3938,6 @@
                             <Interval t1="0" t2="10000"/>
                         </Timeline>
                     </Action>
-                    <Action key="3557" key_component="143" key_config="338" node_used="0" node_position="0 0">
-                        <!--Component CameraController with config default -->
-                        <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                        <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                    </Action>
                 </Condition>
             </Routine>
             <Routine key="10" name="Forest_MPS_Part1" randomizer="0" informations="">
@@ -4175,17 +4153,6 @@
                     </Action>
                     <Action key="3552" key_component="135" key_config="315" node_used="1" node_position="288 154">
                         <!--Component TibetanBowl with config default -->
-                        <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                        <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                    </Action>
-                    <Action key="3558" key_component="143" key_config="338" node_used="0" node_position="0 0">
-                        <!--Component CameraController with config default -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
                             <Interval t1="0" t2="10000"/>
@@ -4463,17 +4430,6 @@
                             <Interval t1="0" t2="10000"/>
                         </Timeline>
                     </Action>
-                    <Action key="3559" key_component="143" key_config="338" node_used="0" node_position="0 0">
-                        <!--Component CameraController with config default -->
-                        <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                        <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                    </Action>
                     <Connector key="811" name="StartRoutine" node_position="-5.28 -197.52">
                         <Arg name="value" ui="Label" value="" type="System.String" dim="0"/>
                     </Connector>
@@ -4731,17 +4687,6 @@
                     </Action>
                     <Action key="3504" key_component="137" key_config="322" node_used="0" node_position="0 0">
                         <!--Component Guidance_MPS_Part3 with config default -->
-                        <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                        <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                    </Action>
-                    <Action key="3560" key_component="143" key_config="338" node_used="0" node_position="0 0">
-                        <!--Component CameraController with config default -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
                             <Interval t1="0" t2="10000"/>
@@ -5014,17 +4959,6 @@
                             <Interval t1="0" t2="10000"/>
                         </Timeline>
                     </Action>
-                    <Action key="3561" key_component="143" key_config="338" node_used="0" node_position="0 0">
-                        <!--Component CameraController with config default -->
-                        <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                        <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                    </Action>
                 </Condition>
             </Routine>
             <Routine key="70" name="Forest_MPS_Part5" randomizer="0" informations="">
@@ -5248,17 +5182,6 @@
                     </Action>
                     <Action key="3553" key_component="135" key_config="315" node_used="1" node_position="422.454 254.63">
                         <!--Component TibetanBowl with config default -->
-                        <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                        <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                    </Action>
-                    <Action key="3562" key_component="143" key_config="338" node_used="0" node_position="0 0">
-                        <!--Component CameraController with config default -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
                             <Interval t1="0" t2="10000"/>
@@ -5508,17 +5431,6 @@
                             <Interval t1="0" t2="10000"/>
                         </Timeline>
                     </Action>
-                    <Action key="3563" key_component="143" key_config="338" node_used="0" node_position="0 0">
-                        <!--Component CameraController with config default -->
-                        <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                        <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                    </Action>
                     <Connector key="211" name="StartRoutine" node_position="-10.08 -191.52">
                         <Arg name="value" ui="Label" value="" type="System.String" dim="0"/>
                     </Connector>
@@ -5752,17 +5664,6 @@
                     </Action>
                     <Action key="2343" key_component="111" key_config="280" node_used="1" node_position="1095.6 614.4">
                         <!--Component Serial port writer with config default -->
-                        <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                        <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                    </Action>
-                    <Action key="3581" key_component="143" key_config="338" node_used="0" node_position="0 0">
-                        <!--Component CameraController with config default -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
                             <Interval t1="0" t2="10000"/>
