@@ -1,0 +1,3 @@
+624230.9686;Please indicate an intermediate state that the bodies best represents your current body state by adjusting the position of the cusor.;0.702257
+1858413.074;Please indicate an intermediate state that the bodies best represents your current body state by adjusting the position of the cusor.;0.5120733
+4755214.3491;Please indicate an intermediate state that the bodies best represents your current body state by adjusting the position of the cusor.;0.3558424
