@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Experiment name="meditationScenario_odd" version="1.0b3" mode="designer" designer-used="D:/Meditation/exvr-designer-1.0b3/ExVR.exe">
+<Experiment name="meditationScenario_odd" version="1.0b5" mode="designer" designer-used="D:/Meditation/exvr-designer-1.0b5/ExVR.exe">
     <Settings debug="1" csharp_debug_info="0" catch_components_exceptions="0" positional_tracking="1" catch_external_keyboard_events="0">
-        <Display mode="0" stereo_fov="60" fullscreen="0" monitor_id="1" resolution_id="1" custom_width="1920" custom_height="1080"/>
+        <Display mode="1" stereo_fov="60" fullscreen="0" monitor_id="1" resolution_id="1" custom_width="1920" custom_height="1080"/>
         <Camera neutral_x="0" neutral_y="1" neutral_z="0"/>
     </Settings>
     <Resources reload="200">
@@ -1664,6 +1664,7 @@
                 <Config key="35" name="standard">
                     <Arg name="display" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="doppler_level" ui="Float values slider" value="1" type="System.Single" dim="0"/>
+                    <Arg name="end_time" ui="Float spin box" value="100" type="System.Single" dim="0"/>
                     <Arg name="loop" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="max_distance" ui="Float values slider" value="5" type="System.Single" dim="0"/>
                     <Arg name="min_distance" ui="Float values slider" value="0.01" type="System.Single" dim="0"/>
@@ -1679,6 +1680,7 @@
                     <Arg name="spatial_blend" ui="Float values slider" value="0" type="System.Single" dim="0"/>
                     <Arg name="spatialized" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="spread" ui="Integer slider" value="0" type="System.Int32" dim="0"/>
+                    <Arg name="start_time" ui="Float spin box" value="0" type="System.Single" dim="0"/>
                     <Arg name="stereo" ui="Float values slider" value="0" type="System.Single" dim="0"/>
                     <Arg name="stop_end_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="stop_new_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
@@ -1707,6 +1709,7 @@
                 <Config key="37" name="standard">
                     <Arg name="display" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="doppler_level" ui="Float values slider" value="1" type="System.Single" dim="0"/>
+                    <Arg name="end_time" ui="Float spin box" value="100" type="System.Single" dim="0"/>
                     <Arg name="loop" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="max_distance" ui="Float values slider" value="5" type="System.Single" dim="0"/>
                     <Arg name="min_distance" ui="Float values slider" value="0.01" type="System.Single" dim="0"/>
@@ -1722,6 +1725,7 @@
                     <Arg name="spatial_blend" ui="Float values slider" value="0" type="System.Single" dim="0"/>
                     <Arg name="spatialized" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="spread" ui="Integer slider" value="0" type="System.Int32" dim="0"/>
+                    <Arg name="start_time" ui="Float spin box" value="0" type="System.Single" dim="0"/>
                     <Arg name="stereo" ui="Float values slider" value="0" type="System.Single" dim="0"/>
                     <Arg name="stop_end_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="stop_new_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
@@ -1750,6 +1754,7 @@
                 <Config key="39" name="standard">
                     <Arg name="display" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="doppler_level" ui="Float values slider" value="1" type="System.Single" dim="0"/>
+                    <Arg name="end_time" ui="Float spin box" value="100" type="System.Single" dim="0"/>
                     <Arg name="loop" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="max_distance" ui="Float values slider" value="5" type="System.Single" dim="0"/>
                     <Arg name="min_distance" ui="Float values slider" value="0.01" type="System.Single" dim="0"/>
@@ -1765,6 +1770,7 @@
                     <Arg name="spatial_blend" ui="Float values slider" value="0" type="System.Single" dim="0"/>
                     <Arg name="spatialized" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="spread" ui="Integer slider" value="0" type="System.Int32" dim="0"/>
+                    <Arg name="start_time" ui="Float spin box" value="0" type="System.Single" dim="0"/>
                     <Arg name="stereo" ui="Float values slider" value="-0.03" type="System.Single" dim="0"/>
                     <Arg name="stop_end_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="stop_new_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
@@ -1793,6 +1799,7 @@
                 <Config key="41" name="standard">
                     <Arg name="display" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="doppler_level" ui="Float values slider" value="1" type="System.Single" dim="0"/>
+                    <Arg name="end_time" ui="Float spin box" value="100" type="System.Single" dim="0"/>
                     <Arg name="loop" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="max_distance" ui="Float values slider" value="5" type="System.Single" dim="0"/>
                     <Arg name="min_distance" ui="Float values slider" value="0.01" type="System.Single" dim="0"/>
@@ -1808,6 +1815,7 @@
                     <Arg name="spatial_blend" ui="Float values slider" value="0" type="System.Single" dim="0"/>
                     <Arg name="spatialized" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="spread" ui="Integer slider" value="0" type="System.Int32" dim="0"/>
+                    <Arg name="start_time" ui="Float spin box" value="0" type="System.Single" dim="0"/>
                     <Arg name="stereo" ui="Float values slider" value="0" type="System.Single" dim="0"/>
                     <Arg name="stop_end_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="stop_new_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
@@ -1836,6 +1844,7 @@
                 <Config key="81" name="standard">
                     <Arg name="display" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="doppler_level" ui="Float values slider" value="1" type="System.Single" dim="0"/>
+                    <Arg name="end_time" ui="Float spin box" value="100" type="System.Single" dim="0"/>
                     <Arg name="loop" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="max_distance" ui="Float values slider" value="5" type="System.Single" dim="0"/>
                     <Arg name="min_distance" ui="Float values slider" value="0.01" type="System.Single" dim="0"/>
@@ -1851,6 +1860,7 @@
                     <Arg name="spatial_blend" ui="Float values slider" value="0" type="System.Single" dim="0"/>
                     <Arg name="spatialized" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="spread" ui="Integer slider" value="0" type="System.Int32" dim="0"/>
+                    <Arg name="start_time" ui="Float spin box" value="0" type="System.Single" dim="0"/>
                     <Arg name="stereo" ui="Float values slider" value="0" type="System.Single" dim="0"/>
                     <Arg name="stop_end_block" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="stop_new_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
@@ -1879,6 +1889,7 @@
                 <Config key="83" name="standard">
                     <Arg name="display" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="doppler_level" ui="Float values slider" value="1" type="System.Single" dim="0"/>
+                    <Arg name="end_time" ui="Float spin box" value="100" type="System.Single" dim="0"/>
                     <Arg name="loop" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="max_distance" ui="Float values slider" value="5" type="System.Single" dim="0"/>
                     <Arg name="min_distance" ui="Float values slider" value="0.01" type="System.Single" dim="0"/>
@@ -1894,6 +1905,7 @@
                     <Arg name="spatial_blend" ui="Float values slider" value="0" type="System.Single" dim="0"/>
                     <Arg name="spatialized" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="spread" ui="Integer slider" value="0" type="System.Int32" dim="0"/>
+                    <Arg name="start_time" ui="Float spin box" value="0" type="System.Single" dim="0"/>
                     <Arg name="stereo" ui="Float values slider" value="0" type="System.Single" dim="0"/>
                     <Arg name="stop_end_block" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="stop_new_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
@@ -1922,6 +1934,7 @@
                 <Config key="85" name="standard">
                     <Arg name="display" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="doppler_level" ui="Float values slider" value="1" type="System.Single" dim="0"/>
+                    <Arg name="end_time" ui="Float spin box" value="100" type="System.Single" dim="0"/>
                     <Arg name="loop" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="max_distance" ui="Float values slider" value="5" type="System.Single" dim="0"/>
                     <Arg name="min_distance" ui="Float values slider" value="0.01" type="System.Single" dim="0"/>
@@ -1937,6 +1950,7 @@
                     <Arg name="spatial_blend" ui="Float values slider" value="0" type="System.Single" dim="0"/>
                     <Arg name="spatialized" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="spread" ui="Integer slider" value="0" type="System.Int32" dim="0"/>
+                    <Arg name="start_time" ui="Float spin box" value="0" type="System.Single" dim="0"/>
                     <Arg name="stereo" ui="Float values slider" value="0" type="System.Single" dim="0"/>
                     <Arg name="stop_end_block" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="stop_new_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
@@ -1965,6 +1979,7 @@
                 <Config key="87" name="standard">
                     <Arg name="display" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="doppler_level" ui="Float values slider" value="1" type="System.Single" dim="0"/>
+                    <Arg name="end_time" ui="Float spin box" value="100" type="System.Single" dim="0"/>
                     <Arg name="loop" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="max_distance" ui="Float values slider" value="5" type="System.Single" dim="0"/>
                     <Arg name="min_distance" ui="Float values slider" value="0.01" type="System.Single" dim="0"/>
@@ -1980,6 +1995,7 @@
                     <Arg name="spatial_blend" ui="Float values slider" value="0" type="System.Single" dim="0"/>
                     <Arg name="spatialized" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="spread" ui="Integer slider" value="0" type="System.Int32" dim="0"/>
+                    <Arg name="start_time" ui="Float spin box" value="0" type="System.Single" dim="0"/>
                     <Arg name="stereo" ui="Float values slider" value="0" type="System.Single" dim="0"/>
                     <Arg name="stop_end_block" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="stop_new_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
@@ -2008,6 +2024,7 @@
                 <Config key="73" name="standard">
                     <Arg name="display" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="doppler_level" ui="Float values slider" value="1" type="System.Single" dim="0"/>
+                    <Arg name="end_time" ui="Float spin box" value="100" type="System.Single" dim="0"/>
                     <Arg name="loop" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="max_distance" ui="Float values slider" value="5" type="System.Single" dim="0"/>
                     <Arg name="min_distance" ui="Float values slider" value="0.01" type="System.Single" dim="0"/>
@@ -2023,6 +2040,7 @@
                     <Arg name="spatial_blend" ui="Float values slider" value="0" type="System.Single" dim="0"/>
                     <Arg name="spatialized" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="spread" ui="Integer slider" value="0" type="System.Int32" dim="0"/>
+                    <Arg name="start_time" ui="Float spin box" value="0" type="System.Single" dim="0"/>
                     <Arg name="stereo" ui="Float values slider" value="0" type="System.Single" dim="0"/>
                     <Arg name="stop_end_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="stop_new_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
@@ -2051,6 +2069,7 @@
                 <Config key="79" name="standard">
                     <Arg name="display" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="doppler_level" ui="Float values slider" value="1" type="System.Single" dim="0"/>
+                    <Arg name="end_time" ui="Float spin box" value="100" type="System.Single" dim="0"/>
                     <Arg name="loop" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="max_distance" ui="Float values slider" value="5" type="System.Single" dim="0"/>
                     <Arg name="min_distance" ui="Float values slider" value="0.01" type="System.Single" dim="0"/>
@@ -2066,6 +2085,7 @@
                     <Arg name="spatial_blend" ui="Float values slider" value="0" type="System.Single" dim="0"/>
                     <Arg name="spatialized" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="spread" ui="Integer slider" value="0" type="System.Int32" dim="0"/>
+                    <Arg name="start_time" ui="Float spin box" value="0" type="System.Single" dim="0"/>
                     <Arg name="stereo" ui="Float values slider" value="0" type="System.Single" dim="0"/>
                     <Arg name="stop_end_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="stop_new_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
@@ -2094,6 +2114,7 @@
                 <Config key="77" name="standard">
                     <Arg name="display" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="doppler_level" ui="Float values slider" value="1" type="System.Single" dim="0"/>
+                    <Arg name="end_time" ui="Float spin box" value="100" type="System.Single" dim="0"/>
                     <Arg name="loop" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="max_distance" ui="Float values slider" value="5" type="System.Single" dim="0"/>
                     <Arg name="min_distance" ui="Float values slider" value="0.01" type="System.Single" dim="0"/>
@@ -2109,6 +2130,7 @@
                     <Arg name="spatial_blend" ui="Float values slider" value="0" type="System.Single" dim="0"/>
                     <Arg name="spatialized" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="spread" ui="Integer slider" value="0" type="System.Int32" dim="0"/>
+                    <Arg name="start_time" ui="Float spin box" value="0" type="System.Single" dim="0"/>
                     <Arg name="stereo" ui="Float values slider" value="0" type="System.Single" dim="0"/>
                     <Arg name="stop_end_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="stop_new_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
@@ -2137,6 +2159,7 @@
                 <Config key="75" name="standard">
                     <Arg name="display" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="doppler_level" ui="Float values slider" value="1" type="System.Single" dim="0"/>
+                    <Arg name="end_time" ui="Float spin box" value="100" type="System.Single" dim="0"/>
                     <Arg name="loop" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="max_distance" ui="Float values slider" value="5" type="System.Single" dim="0"/>
                     <Arg name="min_distance" ui="Float values slider" value="0.01" type="System.Single" dim="0"/>
@@ -2152,6 +2175,7 @@
                     <Arg name="spatial_blend" ui="Float values slider" value="0" type="System.Single" dim="0"/>
                     <Arg name="spatialized" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="spread" ui="Integer slider" value="0" type="System.Int32" dim="0"/>
+                    <Arg name="start_time" ui="Float spin box" value="0" type="System.Single" dim="0"/>
                     <Arg name="stereo" ui="Float values slider" value="0" type="System.Single" dim="0"/>
                     <Arg name="stop_end_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="stop_new_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
@@ -2180,6 +2204,7 @@
                 <Config key="89" name="default">
                     <Arg name="display" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="doppler_level" ui="Float values slider" value="1" type="System.Single" dim="0"/>
+                    <Arg name="end_time" ui="Float spin box" value="100" type="System.Single" dim="0"/>
                     <Arg name="loop" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="max_distance" ui="Float values slider" value="10" type="System.Single" dim="0"/>
                     <Arg name="min_distance" ui="Float values slider" value="0.01" type="System.Single" dim="0"/>
@@ -2195,6 +2220,7 @@
                     <Arg name="spatial_blend" ui="Float values slider" value="1" type="System.Single" dim="0"/>
                     <Arg name="spatialized" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="spread" ui="Integer slider" value="184" type="System.Int32" dim="0"/>
+                    <Arg name="start_time" ui="Float spin box" value="0" type="System.Single" dim="0"/>
                     <Arg name="stereo" ui="Float values slider" value="0" type="System.Single" dim="0"/>
                     <Arg name="stop_end_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="stop_new_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
@@ -2223,6 +2249,7 @@
                 <Config key="93" name="default">
                     <Arg name="display" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="doppler_level" ui="Float values slider" value="1" type="System.Single" dim="0"/>
+                    <Arg name="end_time" ui="Float spin box" value="100" type="System.Single" dim="0"/>
                     <Arg name="loop" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="max_distance" ui="Float values slider" value="10" type="System.Single" dim="0"/>
                     <Arg name="min_distance" ui="Float values slider" value="0.01" type="System.Single" dim="0"/>
@@ -2238,6 +2265,7 @@
                     <Arg name="spatial_blend" ui="Float values slider" value="0" type="System.Single" dim="0"/>
                     <Arg name="spatialized" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="spread" ui="Integer slider" value="184" type="System.Int32" dim="0"/>
+                    <Arg name="start_time" ui="Float spin box" value="0" type="System.Single" dim="0"/>
                     <Arg name="stereo" ui="Float values slider" value="0" type="System.Single" dim="0"/>
                     <Arg name="stop_end_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="stop_new_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
@@ -2266,6 +2294,7 @@
                 <Config key="146" name="default">
                     <Arg name="display" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="doppler_level" ui="Float values slider" value="1" type="System.Single" dim="0"/>
+                    <Arg name="end_time" ui="Float spin box" value="100" type="System.Single" dim="0"/>
                     <Arg name="loop" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="max_distance" ui="Float values slider" value="10" type="System.Single" dim="0"/>
                     <Arg name="min_distance" ui="Float values slider" value="0.01" type="System.Single" dim="0"/>
@@ -2281,6 +2310,7 @@
                     <Arg name="spatial_blend" ui="Float values slider" value="1" type="System.Single" dim="0"/>
                     <Arg name="spatialized" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="spread" ui="Integer slider" value="184" type="System.Int32" dim="0"/>
+                    <Arg name="start_time" ui="Float spin box" value="0" type="System.Single" dim="0"/>
                     <Arg name="stereo" ui="Float values slider" value="0" type="System.Single" dim="0"/>
                     <Arg name="stop_end_block" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="stop_new_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
@@ -2309,6 +2339,7 @@
                 <Config key="208" name="default">
                     <Arg name="display" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="doppler_level" ui="Float values slider" value="1" type="System.Single" dim="0"/>
+                    <Arg name="end_time" ui="Float spin box" value="100" type="System.Single" dim="0"/>
                     <Arg name="loop" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="max_distance" ui="Float values slider" value="10" type="System.Single" dim="0"/>
                     <Arg name="min_distance" ui="Float values slider" value="0.01" type="System.Single" dim="0"/>
@@ -2324,6 +2355,7 @@
                     <Arg name="spatial_blend" ui="Float values slider" value="1" type="System.Single" dim="0"/>
                     <Arg name="spatialized" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="spread" ui="Integer slider" value="184" type="System.Int32" dim="0"/>
+                    <Arg name="start_time" ui="Float spin box" value="0" type="System.Single" dim="0"/>
                     <Arg name="stereo" ui="Float values slider" value="0" type="System.Single" dim="0"/>
                     <Arg name="stop_end_block" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="stop_new_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
@@ -2352,6 +2384,7 @@
                 <Config key="329" name="default">
                     <Arg name="display" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="doppler_level" ui="Float values slider" value="1" type="System.Single" dim="0"/>
+                    <Arg name="end_time" ui="Float spin box" value="100" type="System.Single" dim="0"/>
                     <Arg name="loop" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="max_distance" ui="Float values slider" value="10" type="System.Single" dim="0"/>
                     <Arg name="min_distance" ui="Float values slider" value="0.01" type="System.Single" dim="0"/>
@@ -2367,6 +2400,7 @@
                     <Arg name="spatial_blend" ui="Float values slider" value="0" type="System.Single" dim="0"/>
                     <Arg name="spatialized" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="spread" ui="Integer slider" value="201" type="System.Int32" dim="0"/>
+                    <Arg name="start_time" ui="Float spin box" value="0" type="System.Single" dim="0"/>
                     <Arg name="stereo" ui="Float values slider" value="0" type="System.Single" dim="0"/>
                     <Arg name="stop_end_block" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="stop_new_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
@@ -2395,6 +2429,7 @@
                 <Config key="320" name="default">
                     <Arg name="display" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="doppler_level" ui="Float values slider" value="1" type="System.Single" dim="0"/>
+                    <Arg name="end_time" ui="Float spin box" value="100" type="System.Single" dim="0"/>
                     <Arg name="loop" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="max_distance" ui="Float values slider" value="10" type="System.Single" dim="0"/>
                     <Arg name="min_distance" ui="Float values slider" value="0.01" type="System.Single" dim="0"/>
@@ -2410,6 +2445,7 @@
                     <Arg name="spatial_blend" ui="Float values slider" value="0" type="System.Single" dim="0"/>
                     <Arg name="spatialized" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="spread" ui="Integer slider" value="201" type="System.Int32" dim="0"/>
+                    <Arg name="start_time" ui="Float spin box" value="0" type="System.Single" dim="0"/>
                     <Arg name="stereo" ui="Float values slider" value="0" type="System.Single" dim="0"/>
                     <Arg name="stop_end_block" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="stop_new_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
@@ -2438,6 +2474,7 @@
                 <Config key="322" name="default">
                     <Arg name="display" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="doppler_level" ui="Float values slider" value="1" type="System.Single" dim="0"/>
+                    <Arg name="end_time" ui="Float spin box" value="100" type="System.Single" dim="0"/>
                     <Arg name="loop" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="max_distance" ui="Float values slider" value="10" type="System.Single" dim="0"/>
                     <Arg name="min_distance" ui="Float values slider" value="0.01" type="System.Single" dim="0"/>
@@ -2453,6 +2490,7 @@
                     <Arg name="spatial_blend" ui="Float values slider" value="0" type="System.Single" dim="0"/>
                     <Arg name="spatialized" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="spread" ui="Integer slider" value="201" type="System.Int32" dim="0"/>
+                    <Arg name="start_time" ui="Float spin box" value="0" type="System.Single" dim="0"/>
                     <Arg name="stereo" ui="Float values slider" value="0" type="System.Single" dim="0"/>
                     <Arg name="stop_end_block" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="stop_new_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
@@ -2481,6 +2519,7 @@
                 <Config key="324" name="default">
                     <Arg name="display" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="doppler_level" ui="Float values slider" value="1" type="System.Single" dim="0"/>
+                    <Arg name="end_time" ui="Float spin box" value="100" type="System.Single" dim="0"/>
                     <Arg name="loop" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="max_distance" ui="Float values slider" value="10" type="System.Single" dim="0"/>
                     <Arg name="min_distance" ui="Float values slider" value="0.01" type="System.Single" dim="0"/>
@@ -2496,6 +2535,7 @@
                     <Arg name="spatial_blend" ui="Float values slider" value="0" type="System.Single" dim="0"/>
                     <Arg name="spatialized" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="spread" ui="Integer slider" value="201" type="System.Int32" dim="0"/>
+                    <Arg name="start_time" ui="Float spin box" value="0" type="System.Single" dim="0"/>
                     <Arg name="stereo" ui="Float values slider" value="0" type="System.Single" dim="0"/>
                     <Arg name="stop_end_block" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="stop_new_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
@@ -2524,6 +2564,7 @@
                 <Config key="326" name="default">
                     <Arg name="display" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="doppler_level" ui="Float values slider" value="1" type="System.Single" dim="0"/>
+                    <Arg name="end_time" ui="Float spin box" value="100" type="System.Single" dim="0"/>
                     <Arg name="loop" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="max_distance" ui="Float values slider" value="10" type="System.Single" dim="0"/>
                     <Arg name="min_distance" ui="Float values slider" value="0.01" type="System.Single" dim="0"/>
@@ -2539,6 +2580,7 @@
                     <Arg name="spatial_blend" ui="Float values slider" value="0" type="System.Single" dim="0"/>
                     <Arg name="spatialized" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="spread" ui="Integer slider" value="201" type="System.Int32" dim="0"/>
+                    <Arg name="start_time" ui="Float spin box" value="0" type="System.Single" dim="0"/>
                     <Arg name="stereo" ui="Float values slider" value="0" type="System.Single" dim="0"/>
                     <Arg name="stop_end_block" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="stop_new_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
@@ -2567,6 +2609,7 @@
                 <Config key="212" name="default">
                     <Arg name="display" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="doppler_level" ui="Float values slider" value="1" type="System.Single" dim="0"/>
+                    <Arg name="end_time" ui="Float spin box" value="100" type="System.Single" dim="0"/>
                     <Arg name="loop" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="max_distance" ui="Float values slider" value="10" type="System.Single" dim="0"/>
                     <Arg name="min_distance" ui="Float values slider" value="0.01" type="System.Single" dim="0"/>
@@ -2582,6 +2625,7 @@
                     <Arg name="spatial_blend" ui="Float values slider" value="0" type="System.Single" dim="0"/>
                     <Arg name="spatialized" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="spread" ui="Integer slider" value="201" type="System.Int32" dim="0"/>
+                    <Arg name="start_time" ui="Float spin box" value="0" type="System.Single" dim="0"/>
                     <Arg name="stereo" ui="Float values slider" value="0" type="System.Single" dim="0"/>
                     <Arg name="stop_end_block" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="stop_new_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
@@ -2610,6 +2654,7 @@
                 <Config key="332" name="default">
                     <Arg name="display" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="doppler_level" ui="Float values slider" value="1" type="System.Single" dim="0"/>
+                    <Arg name="end_time" ui="Float spin box" value="100" type="System.Single" dim="0"/>
                     <Arg name="loop" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="max_distance" ui="Float values slider" value="10" type="System.Single" dim="0"/>
                     <Arg name="min_distance" ui="Float values slider" value="0.01" type="System.Single" dim="0"/>
@@ -2625,6 +2670,7 @@
                     <Arg name="spatial_blend" ui="Float values slider" value="0" type="System.Single" dim="0"/>
                     <Arg name="spatialized" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="spread" ui="Integer slider" value="360" type="System.Int32" dim="0"/>
+                    <Arg name="start_time" ui="Float spin box" value="0" type="System.Single" dim="0"/>
                     <Arg name="stereo" ui="Float values slider" value="0" type="System.Single" dim="0"/>
                     <Arg name="stop_end_block" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="stop_new_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
@@ -2653,6 +2699,7 @@
                 <Config key="334" name="default">
                     <Arg name="display" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="doppler_level" ui="Float values slider" value="1" type="System.Single" dim="0"/>
+                    <Arg name="end_time" ui="Float spin box" value="100" type="System.Single" dim="0"/>
                     <Arg name="loop" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="max_distance" ui="Float values slider" value="10" type="System.Single" dim="0"/>
                     <Arg name="min_distance" ui="Float values slider" value="0.01" type="System.Single" dim="0"/>
@@ -2668,6 +2715,7 @@
                     <Arg name="spatial_blend" ui="Float values slider" value="0" type="System.Single" dim="0"/>
                     <Arg name="spatialized" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="spread" ui="Integer slider" value="360" type="System.Int32" dim="0"/>
+                    <Arg name="start_time" ui="Float spin box" value="0" type="System.Single" dim="0"/>
                     <Arg name="stereo" ui="Float values slider" value="0" type="System.Single" dim="0"/>
                     <Arg name="stop_end_block" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="stop_new_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
@@ -2696,6 +2744,7 @@
                 <Config key="336" name="default">
                     <Arg name="display" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="doppler_level" ui="Float values slider" value="1" type="System.Single" dim="0"/>
+                    <Arg name="end_time" ui="Float spin box" value="100" type="System.Single" dim="0"/>
                     <Arg name="loop" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="max_distance" ui="Float values slider" value="10" type="System.Single" dim="0"/>
                     <Arg name="min_distance" ui="Float values slider" value="0.01" type="System.Single" dim="0"/>
@@ -2711,6 +2760,7 @@
                     <Arg name="spatial_blend" ui="Float values slider" value="0" type="System.Single" dim="0"/>
                     <Arg name="spatialized" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="spread" ui="Integer slider" value="360" type="System.Int32" dim="0"/>
+                    <Arg name="start_time" ui="Float spin box" value="0" type="System.Single" dim="0"/>
                     <Arg name="stereo" ui="Float values slider" value="0" type="System.Single" dim="0"/>
                     <Arg name="stop_end_block" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="stop_new_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
@@ -2739,6 +2789,7 @@
                 <Config key="214" name="default">
                     <Arg name="display" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="doppler_level" ui="Float values slider" value="1" type="System.Single" dim="0"/>
+                    <Arg name="end_time" ui="Float spin box" value="100" type="System.Single" dim="0"/>
                     <Arg name="loop" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="max_distance" ui="Float values slider" value="10" type="System.Single" dim="0"/>
                     <Arg name="min_distance" ui="Float values slider" value="0.01" type="System.Single" dim="0"/>
@@ -2754,6 +2805,7 @@
                     <Arg name="spatial_blend" ui="Float values slider" value="0" type="System.Single" dim="0"/>
                     <Arg name="spatialized" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="spread" ui="Integer slider" value="360" type="System.Int32" dim="0"/>
+                    <Arg name="start_time" ui="Float spin box" value="0" type="System.Single" dim="0"/>
                     <Arg name="stereo" ui="Float values slider" value="0" type="System.Single" dim="0"/>
                     <Arg name="stop_end_block" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="stop_new_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
@@ -2782,6 +2834,7 @@
                 <Config key="216" name="default">
                     <Arg name="display" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="doppler_level" ui="Float values slider" value="1" type="System.Single" dim="0"/>
+                    <Arg name="end_time" ui="Float spin box" value="100" type="System.Single" dim="0"/>
                     <Arg name="loop" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="max_distance" ui="Float values slider" value="10" type="System.Single" dim="0"/>
                     <Arg name="min_distance" ui="Float values slider" value="0.01" type="System.Single" dim="0"/>
@@ -2797,6 +2850,7 @@
                     <Arg name="spatial_blend" ui="Float values slider" value="1" type="System.Single" dim="0"/>
                     <Arg name="spatialized" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="spread" ui="Integer slider" value="184" type="System.Int32" dim="0"/>
+                    <Arg name="start_time" ui="Float spin box" value="0" type="System.Single" dim="0"/>
                     <Arg name="stereo" ui="Float values slider" value="0" type="System.Single" dim="0"/>
                     <Arg name="stop_end_block" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="stop_new_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
@@ -2825,6 +2879,7 @@
                 <Config key="154" name="default">
                     <Arg name="display" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="doppler_level" ui="Float values slider" value="1" type="System.Single" dim="0"/>
+                    <Arg name="end_time" ui="Float spin box" value="100" type="System.Single" dim="0"/>
                     <Arg name="loop" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="max_distance" ui="Float values slider" value="10" type="System.Single" dim="0"/>
                     <Arg name="min_distance" ui="Float values slider" value="0.01" type="System.Single" dim="0"/>
@@ -2840,6 +2895,7 @@
                     <Arg name="spatial_blend" ui="Float values slider" value="1" type="System.Single" dim="0"/>
                     <Arg name="spatialized" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="spread" ui="Integer slider" value="184" type="System.Int32" dim="0"/>
+                    <Arg name="start_time" ui="Float spin box" value="0" type="System.Single" dim="0"/>
                     <Arg name="stereo" ui="Float values slider" value="0" type="System.Single" dim="0"/>
                     <Arg name="stop_end_block" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="stop_new_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
@@ -2868,6 +2924,7 @@
                 <Config key="210" name="default">
                     <Arg name="display" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="doppler_level" ui="Float values slider" value="1" type="System.Single" dim="0"/>
+                    <Arg name="end_time" ui="Float spin box" value="100" type="System.Single" dim="0"/>
                     <Arg name="loop" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="max_distance" ui="Float values slider" value="10" type="System.Single" dim="0"/>
                     <Arg name="min_distance" ui="Float values slider" value="0.01" type="System.Single" dim="0"/>
@@ -2883,6 +2940,7 @@
                     <Arg name="spatial_blend" ui="Float values slider" value="1" type="System.Single" dim="0"/>
                     <Arg name="spatialized" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="spread" ui="Integer slider" value="184" type="System.Int32" dim="0"/>
+                    <Arg name="start_time" ui="Float spin box" value="0" type="System.Single" dim="0"/>
                     <Arg name="stereo" ui="Float values slider" value="0" type="System.Single" dim="0"/>
                     <Arg name="stop_end_block" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="stop_new_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
@@ -2911,6 +2969,7 @@
                 <Config key="186" name="default">
                     <Arg name="display" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="doppler_level" ui="Float values slider" value="1" type="System.Single" dim="0"/>
+                    <Arg name="end_time" ui="Float spin box" value="100" type="System.Single" dim="0"/>
                     <Arg name="loop" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="max_distance" ui="Float values slider" value="10" type="System.Single" dim="0"/>
                     <Arg name="min_distance" ui="Float values slider" value="0.01" type="System.Single" dim="0"/>
@@ -2926,6 +2985,7 @@
                     <Arg name="spatial_blend" ui="Float values slider" value="1" type="System.Single" dim="0"/>
                     <Arg name="spatialized" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="spread" ui="Integer slider" value="184" type="System.Int32" dim="0"/>
+                    <Arg name="start_time" ui="Float spin box" value="0" type="System.Single" dim="0"/>
                     <Arg name="stereo" ui="Float values slider" value="0" type="System.Single" dim="0"/>
                     <Arg name="stop_end_block" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="stop_new_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
@@ -2954,6 +3014,7 @@
                 <Config key="188" name="default">
                     <Arg name="display" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="doppler_level" ui="Float values slider" value="1" type="System.Single" dim="0"/>
+                    <Arg name="end_time" ui="Float spin box" value="100" type="System.Single" dim="0"/>
                     <Arg name="loop" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="max_distance" ui="Float values slider" value="10" type="System.Single" dim="0"/>
                     <Arg name="min_distance" ui="Float values slider" value="0.01" type="System.Single" dim="0"/>
@@ -2969,6 +3030,7 @@
                     <Arg name="spatial_blend" ui="Float values slider" value="1" type="System.Single" dim="0"/>
                     <Arg name="spatialized" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="spread" ui="Integer slider" value="184" type="System.Int32" dim="0"/>
+                    <Arg name="start_time" ui="Float spin box" value="0" type="System.Single" dim="0"/>
                     <Arg name="stereo" ui="Float values slider" value="0" type="System.Single" dim="0"/>
                     <Arg name="stop_end_block" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="stop_new_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
@@ -2997,6 +3059,7 @@
                 <Config key="190" name="default">
                     <Arg name="display" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="doppler_level" ui="Float values slider" value="1" type="System.Single" dim="0"/>
+                    <Arg name="end_time" ui="Float spin box" value="100" type="System.Single" dim="0"/>
                     <Arg name="loop" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="max_distance" ui="Float values slider" value="10" type="System.Single" dim="0"/>
                     <Arg name="min_distance" ui="Float values slider" value="0.01" type="System.Single" dim="0"/>
@@ -3012,6 +3075,7 @@
                     <Arg name="spatial_blend" ui="Float values slider" value="1" type="System.Single" dim="0"/>
                     <Arg name="spatialized" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="spread" ui="Integer slider" value="184" type="System.Int32" dim="0"/>
+                    <Arg name="start_time" ui="Float spin box" value="0" type="System.Single" dim="0"/>
                     <Arg name="stereo" ui="Float values slider" value="0" type="System.Single" dim="0"/>
                     <Arg name="stop_end_block" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="stop_new_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
@@ -3040,6 +3104,7 @@
                 <Config key="192" name="default">
                     <Arg name="display" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="doppler_level" ui="Float values slider" value="1" type="System.Single" dim="0"/>
+                    <Arg name="end_time" ui="Float spin box" value="100" type="System.Single" dim="0"/>
                     <Arg name="loop" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="max_distance" ui="Float values slider" value="10" type="System.Single" dim="0"/>
                     <Arg name="min_distance" ui="Float values slider" value="0.01" type="System.Single" dim="0"/>
@@ -3055,6 +3120,7 @@
                     <Arg name="spatial_blend" ui="Float values slider" value="1" type="System.Single" dim="0"/>
                     <Arg name="spatialized" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="spread" ui="Integer slider" value="184" type="System.Int32" dim="0"/>
+                    <Arg name="start_time" ui="Float spin box" value="0" type="System.Single" dim="0"/>
                     <Arg name="stereo" ui="Float values slider" value="0" type="System.Single" dim="0"/>
                     <Arg name="stop_end_block" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="stop_new_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
@@ -3083,6 +3149,7 @@
                 <Config key="315" name="default">
                     <Arg name="display" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="doppler_level" ui="Float values slider" value="1" type="System.Single" dim="0"/>
+                    <Arg name="end_time" ui="Float spin box" value="100" type="System.Single" dim="0"/>
                     <Arg name="loop" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="max_distance" ui="Float values slider" value="10" type="System.Single" dim="0"/>
                     <Arg name="min_distance" ui="Float values slider" value="0.01" type="System.Single" dim="0"/>
@@ -3098,6 +3165,7 @@
                     <Arg name="spatial_blend" ui="Float values slider" value="1" type="System.Single" dim="0"/>
                     <Arg name="spatialized" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="spread" ui="Integer slider" value="184" type="System.Int32" dim="0"/>
+                    <Arg name="start_time" ui="Float spin box" value="0" type="System.Single" dim="0"/>
                     <Arg name="stereo" ui="Float values slider" value="0" type="System.Single" dim="0"/>
                     <Arg name="stop_end_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="stop_new_block" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
@@ -3148,11 +3216,11 @@
                     <Arg name="display_filtering_obb" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="filter_points_outside_obb" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="filtering_obb_tab" ui="Tab" value="true[#OBBFW#]false[#OBBFW#]0.784314 0.784314 0.784314 0.117647[#OBBFW#]0.6 0.3 1 0 0 0 1.2 1.8 1.2" type="System.String" dim="1" sep="[#T#]" sizes="1"/>
-                    <Arg name="global_transform" ui="Transformation" value="-0.49 0.36 0.23 12.1 85.6 69.3 -1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
+                    <Arg name="global_transform" ui="Transformation" value="-0.42 -0.36 0.23 -12.3 84.1 112.4 1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
                     <Arg name="global_transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="rendering" ui="Combo box index" value="    1" type="System.Int32" dim="0"/>
                     <Arg name="size_points" ui="Float spin box" value="0.0037" type="System.Single" dim="0"/>
-                    <Arg name="tint" ui="Color pick" value="1 1 1 0" type="System.Single" dim="1" sep=" " sizes="4"/>
+                    <Arg name="tint" ui="Color pick" value="1 1 1 1" type="System.Single" dim="1" sep=" " sizes="4"/>
                 </Config>
                 <Config key="317" name="experimenter">
                     <Arg name="circles" ui="Check box" value="true" type="System.Boolean" dim="0"/>
@@ -3162,11 +3230,11 @@
                     <Arg name="display_filtering_obb" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="filter_points_outside_obb" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="filtering_obb_tab" ui="Tab" value="true[#OBBFW#]false[#OBBFW#]0.784314 0 0 0.196078[#OBBFW#]0.55 1.04 0.9 0 0 0 2.8 2 2.8" type="System.String" dim="1" sep="[#T#]" sizes="1"/>
-                    <Arg name="global_transform" ui="Transformation" value="-0.5 0.36 0.23 12.1 85.6 69.3 -1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
+                    <Arg name="global_transform" ui="Transformation" value="-0.42 -0.36 0.23 -12.3 84.1 112.4 1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
                     <Arg name="global_transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="rendering" ui="Combo box index" value="    1" type="System.Int32" dim="0"/>
                     <Arg name="size_points" ui="Float spin box" value="0.0037" type="System.Single" dim="0"/>
-                    <Arg name="tint" ui="Color pick" value="1 1 1 0" type="System.Single" dim="1" sep=" " sizes="4"/>
+                    <Arg name="tint" ui="Color pick" value="1 1 1 1" type="System.Single" dim="1" sep=" " sizes="4"/>
                 </Config>
             </Configs>
         </Component>
@@ -3230,7 +3298,7 @@
                     <Arg name="rendering" ui="Combo box index" value="2" type="System.Int32" dim="0"/>
                     <Arg name="size_points" ui="Float spin box" value="0.0025" type="System.Single" dim="0"/>
                     <Arg name="start_time" ui="Float spin box" value="13" type="System.Single" dim="0"/>
-                    <Arg name="tint" ui="Color pick" value="0.854902 0.733333 0.733333 0" type="System.Single" dim="1" sep=" " sizes="4"/>
+                    <Arg name="tint" ui="Color pick" value="0.854902 0.733333 0.733333 1" type="System.Single" dim="1" sep=" " sizes="4"/>
                     <Arg name="transform" ui="Transformation" value="0.49 1.26 0.88 15.4 -214.1 90.2 -1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
                     <Arg name="transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="volume" ui="Float spin box" value="1" type="System.Single" dim="0"/>
@@ -3263,7 +3331,7 @@
                     <Arg name="rendering" ui="Combo box index" value="2" type="System.Int32" dim="0"/>
                     <Arg name="size_points" ui="Float spin box" value="0.0025" type="System.Single" dim="0"/>
                     <Arg name="start_time" ui="Float spin box" value="14.3" type="System.Single" dim="0"/>
-                    <Arg name="tint" ui="Color pick" value="0.854902 0.768627 0.768627 0" type="System.Single" dim="1" sep=" " sizes="4"/>
+                    <Arg name="tint" ui="Color pick" value="0.854902 0.768627 0.768627 1" type="System.Single" dim="1" sep=" " sizes="4"/>
                     <Arg name="transform" ui="Transformation" value="1.32 0.62 1.29 7.6 171.4 0.8 -1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
                     <Arg name="transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="volume" ui="Float spin box" value="1" type="System.Single" dim="0"/>
@@ -3296,7 +3364,7 @@
                     <Arg name="rendering" ui="Combo box index" value="2" type="System.Int32" dim="0"/>
                     <Arg name="size_points" ui="Float spin box" value="0.0025" type="System.Single" dim="0"/>
                     <Arg name="start_time" ui="Float spin box" value="24" type="System.Single" dim="0"/>
-                    <Arg name="tint" ui="Color pick" value="0.854902 0.733333 0.733333 0" type="System.Single" dim="1" sep=" " sizes="4"/>
+                    <Arg name="tint" ui="Color pick" value="0.854902 0.733333 0.733333 1" type="System.Single" dim="1" sep=" " sizes="4"/>
                     <Arg name="transform" ui="Transformation" value="0.49 1.26 0.88 15.4 -214.1 90.2 -1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
                     <Arg name="transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="volume" ui="Float spin box" value="1" type="System.Single" dim="0"/>
@@ -3329,7 +3397,7 @@
                     <Arg name="rendering" ui="Combo box index" value="2" type="System.Int32" dim="0"/>
                     <Arg name="size_points" ui="Float spin box" value="0.0025" type="System.Single" dim="0"/>
                     <Arg name="start_time" ui="Float spin box" value="22.9" type="System.Single" dim="0"/>
-                    <Arg name="tint" ui="Color pick" value="0.854902 0.768627 0.768627 0" type="System.Single" dim="1" sep=" " sizes="4"/>
+                    <Arg name="tint" ui="Color pick" value="0.854902 0.768627 0.768627 1" type="System.Single" dim="1" sep=" " sizes="4"/>
                     <Arg name="transform" ui="Transformation" value="1.32 0.62 1.29 7.6 171.4 0.8 -1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
                     <Arg name="transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="volume" ui="Float spin box" value="1" type="System.Single" dim="0"/>
@@ -3362,7 +3430,7 @@
                     <Arg name="rendering" ui="Combo box index" value="2" type="System.Int32" dim="0"/>
                     <Arg name="size_points" ui="Float spin box" value="0.0025" type="System.Single" dim="0"/>
                     <Arg name="start_time" ui="Float spin box" value="13.4" type="System.Single" dim="0"/>
-                    <Arg name="tint" ui="Color pick" value="0.854902 0.733333 0.733333 0" type="System.Single" dim="1" sep=" " sizes="4"/>
+                    <Arg name="tint" ui="Color pick" value="0.854902 0.733333 0.733333 1" type="System.Single" dim="1" sep=" " sizes="4"/>
                     <Arg name="transform" ui="Transformation" value="0.49 1.26 0.88 15.4 -214.1 90.2 -1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
                     <Arg name="transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="volume" ui="Float spin box" value="1" type="System.Single" dim="0"/>
@@ -3395,7 +3463,7 @@
                     <Arg name="rendering" ui="Combo box index" value="2" type="System.Int32" dim="0"/>
                     <Arg name="size_points" ui="Float spin box" value="0.0025" type="System.Single" dim="0"/>
                     <Arg name="start_time" ui="Float spin box" value="14.5" type="System.Single" dim="0"/>
-                    <Arg name="tint" ui="Color pick" value="0.854902 0.768627 0.768627 0" type="System.Single" dim="1" sep=" " sizes="4"/>
+                    <Arg name="tint" ui="Color pick" value="0.854902 0.768627 0.768627 1" type="System.Single" dim="1" sep=" " sizes="4"/>
                     <Arg name="transform" ui="Transformation" value="1.32 0.62 1.29 7.6 171.4 0.8 -1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
                     <Arg name="transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="volume" ui="Float spin box" value="1" type="System.Single" dim="0"/>
@@ -3428,7 +3496,7 @@
                     <Arg name="rendering" ui="Combo box index" value="2" type="System.Int32" dim="0"/>
                     <Arg name="size_points" ui="Float spin box" value="0.0025" type="System.Single" dim="0"/>
                     <Arg name="start_time" ui="Float spin box" value="13.3" type="System.Single" dim="0"/>
-                    <Arg name="tint" ui="Color pick" value="0.854902 0.733333 0.733333 0" type="System.Single" dim="1" sep=" " sizes="4"/>
+                    <Arg name="tint" ui="Color pick" value="0.854902 0.733333 0.733333 1" type="System.Single" dim="1" sep=" " sizes="4"/>
                     <Arg name="transform" ui="Transformation" value="0.49 1.26 0.88 15.4 -214.1 90.2 -1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
                     <Arg name="transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="volume" ui="Float spin box" value="1" type="System.Single" dim="0"/>
@@ -3461,7 +3529,7 @@
                     <Arg name="rendering" ui="Combo box index" value="2" type="System.Int32" dim="0"/>
                     <Arg name="size_points" ui="Float spin box" value="0.0025" type="System.Single" dim="0"/>
                     <Arg name="start_time" ui="Float spin box" value="16" type="System.Single" dim="0"/>
-                    <Arg name="tint" ui="Color pick" value="0.854902 0.768627 0.768627 0" type="System.Single" dim="1" sep=" " sizes="4"/>
+                    <Arg name="tint" ui="Color pick" value="0.854902 0.768627 0.768627 1" type="System.Single" dim="1" sep=" " sizes="4"/>
                     <Arg name="transform" ui="Transformation" value="1.32 0.62 1.29 7.6 171.4 0.8 -1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
                     <Arg name="transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="volume" ui="Float spin box" value="1" type="System.Single" dim="0"/>
