@@ -1,0 +1,1433 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Experiment name="AnalyticalMeditation" version="1.0b5" mode="designer" designer-used="C:/Users/loupv/Desktop/exvr-designer-1.0b5/ExVR.exe">
+    <Settings debug="1" csharp_debug_info="0" catch_components_exceptions="0" positional_tracking="1" catch_external_keyboard_events="0">
+        <Display mode="1" stereo_fov="60" fullscreen="0" monitor_id="1" resolution_id="1" custom_width="1920" custom_height="1080"/>
+        <Camera neutral_x="0" neutral_y="1" neutral_z="0"/>
+    </Settings>
+    <Resources reload="200">
+        <Resource key="152" type="Image" alias="cursor" path="Assets/cursor.png"/>
+        <Resource key="169" type="Image" alias="OBE_bodies" path="Assets/OBE_bodies.png"/>
+        <Resource key="170" type="Image" alias="sam" path="Assets/sam.png"/>
+        <Resource key="158" type="Text" alias="CAMS-R" path="../Questionnaires/CAMS-R.txt"/>
+        <Resource key="163" type="Text" alias="OBE" path="../Questionnaires/OBE.txt"/>
+        <Resource key="165" type="Text" alias="FBIQuestionnaire" path="../Questionnaires/FBIQuestionnaire.txt"/>
+        <Resource key="186" type="Text" alias="network_default" path="../../../../Desktop/k4-scaner-manager/config/network/network_default.config"/>
+        <Resource key="45" type="UnityAssetBundle" alias="meditationshelter" path="Bundles/meditationshelter.unity3d"/>
+        <Resource key="74" type="UnityAssetBundle" alias="labroom_tiny" path="Bundles/labroom_tiny.unity3d"/>
+        <Resource key="83" type="UnityAssetBundle" alias="meditationshelternobars" path="Bundles/meditationshelternobars.unity3d"/>
+        <Resource key="107" type="UnityAssetBundle" alias="mediationshelter_final" path="Bundles/mediationshelter_final.unity3d"/>
+        <Resource key="37" type="CSharpScript" alias="OmniController" path="Assets/OmniController.cs"/>
+        <Resource key="44" type="CSharpScript" alias="SceneFaderExVR" path="Assets/SceneFaderExVR.cs"/>
+        <Resource key="61" type="CSharpScript" alias="GraphicsHandler" path="Assets/GraphicsHandler.cs"/>
+        <Resource key="146" type="CSharpScript" alias="FamiliarizationModule" path="Assets/FamiliarizationModule.cs"/>
+        <Resource key="147" type="CSharpScript" alias="UIQuestionModule" path="Assets/UIQuestionModule.cs"/>
+        <Resource key="172" type="Directory" alias="QuestionnairesLog" path="Logs/QuestionnairesLog"/>
+        <Resource key="173" type="Directory" alias="GlobalLog" path="Logs/GlobalLog"/>
+    </Resources>
+    <Components>
+        <Component key="0" name="Global logger" category="Output" type="GlobalLogger" global="1" always_updating="1" exceptions="0" frame_logging="0" trigger_logging="0" restricted="0" priority="2">
+            <InitConfig key="0" name="standard">
+                <Arg name="actions_count" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                <Arg name="add_current_instance_to_sub_directory_name" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                <Arg name="add_date_to_sub_directory_name" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                <Arg name="base_sub_directory_name" ui="Line text editor" value="global_log" type="System.String" dim="0"/>
+                <Arg name="camera_calibration" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                <Arg name="camera_rig" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                <Arg name="condition_duration" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                <Arg name="condition_name" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                <Arg name="condition_nb_calls" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                <Arg name="connections_count" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                <Arg name="connectors_count" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                <Arg name="date_time_format" ui="Line text editor" value="MM-dd_H-mm-ss" type="System.String" dim="0"/>
+                <Arg name="directory" ui="Resource" value="GlobalLog%%%173" type="System.String" dim="1" sep="%%%" sizes="2"/>
+                <Arg name="element_iteration" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                <Arg name="element_order" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                <Arg name="ellapsed_element_time" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                <Arg name="ellapsed_exp_time" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                <Arg name="eyes_camera" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                <Arg name="file_extension" ui="Line text editor" value="csv" type="System.String" dim="0"/>
+                <Arg name="frame_id" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                <Arg name="framerate" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                <Arg name="inputs_components" ui="Components list" value="" type="System.String" dim="1" sep=" " sizes="0"/>
+                <Arg name="network_components" ui="Components list" value="111" type="System.String" dim="1" sep=" " sizes="1"/>
+                <Arg name="routine_name" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                <Arg name="start_frame_time" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                <Arg name="tracking_components" ui="Components list" value="" type="System.String" dim="1" sep=" " sizes="0"/>
+                <Arg name="ui_components" ui="Components list" value="" type="System.String" dim="1" sep=" " sizes="0"/>
+            </InitConfig>
+            <Configs>
+                <Config key="1" name="standard"/>
+            </Configs>
+        </Component>
+        <Component key="131" name="Familiarization Logger" category="Output" type="Logger" global="0" always_updating="0" exceptions="0" frame_logging="0" trigger_logging="0" restricted="0" priority="2">
+            <InitConfig key="299" name="standard">
+                <Arg name="add_current_instance_to_file_name" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                <Arg name="add_date_to_file_name" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                <Arg name="add_header_line" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                <Arg name="add_to_end_if_file_exists" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
+                <Arg name="base_file_name" ui="Line text editor" value="fam" type="System.String" dim="0"/>
+                <Arg name="date_time_format" ui="Line text editor" value="MM-dd_H-mm-ss" type="System.String" dim="0"/>
+                <Arg name="directory" ui="Resource" value="QuestionnairesLog%%%172" type="System.String" dim="1" sep="%%%" sizes="2"/>
+                <Arg name="dont_write_if_file_exists" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                <Arg name="file_extension" ui="Line text editor" value="txt" type="System.String" dim="0"/>
+                <Arg name="header_line" ui="Line text editor" value="" type="System.String" dim="0"/>
+                <Arg name="insert_new_routine_infos" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                <Arg name="replace_if_file_exists" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
+            </InitConfig>
+            <Configs>
+                <Config key="300" name="standard"/>
+            </Configs>
+        </Component>
+        <Component key="6" name="SkyBox" category="Environment" type="Sky" global="0" always_updating="0" exceptions="1" frame_logging="0" trigger_logging="0" restricted="0" priority="2">
+            <InitConfig key="12" name="standard"/>
+            <Configs>
+                <Config key="13" name="Lab">
+                    <Arg name="6sided-exposure" ui="Float spin box" value="1" type="System.Single" dim="0"/>
+                    <Arg name="6sided-rotation" ui="Float spin box" value="0" type="System.Single" dim="0"/>
+                    <Arg name="6sided-tint" ui="Color pick" value="0.498039 0.498039 0.498039 0.498039" type="System.Single" dim="1" sep=" " sizes="4"/>
+                    <Arg name="X+" ui="Resource" value="%%%-1" type="System.String" dim="1" sep="%%%" sizes="2"/>
+                    <Arg name="X+_invert" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="X-" ui="Resource" value="%%%-1" type="System.String" dim="1" sep="%%%" sizes="2"/>
+                    <Arg name="X-_invert" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="Y+" ui="Resource" value="%%%-1" type="System.String" dim="1" sep="%%%" sizes="2"/>
+                    <Arg name="Y+_invert" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="Y-" ui="Resource" value="%%%-1" type="System.String" dim="1" sep="%%%" sizes="2"/>
+                    <Arg name="Y-_invert" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="Z+" ui="Resource" value="%%%-1" type="System.String" dim="1" sep="%%%" sizes="2"/>
+                    <Arg name="Z+_invert" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="Z-" ui="Resource" value="%%%-1" type="System.String" dim="1" sep="%%%" sizes="2"/>
+                    <Arg name="Z-_invert" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="ambient_color" ui="Color pick" value="0.211765 0.227451 0.258824 1" type="System.Single" dim="1" sep=" " sizes="4"/>
+                    <Arg name="ambient_intensity" ui="Float spin box" value="1" type="System.Single" dim="0"/>
+                    <Arg name="ambient_mode" ui="Combo box index" value="0" type="System.Int32" dim="0"/>
+                    <Arg name="atmosphere-thickness" ui="Float spin box" value="0.2" type="System.Single" dim="0"/>
+                    <Arg name="background_color" ui="Color pick" value="0.207843 0.188235 0.188235 1" type="System.Single" dim="1" sep=" " sizes="4"/>
+                    <Arg name="convergence" ui="Float spin box" value="1" type="System.Single" dim="0"/>
+                    <Arg name="cubemap" ui="Resource" value="%%%-1" type="System.String" dim="1" sep="%%%" sizes="2"/>
+                    <Arg name="cubemap-exposure" ui="Float spin box" value="1" type="System.Single" dim="0"/>
+                    <Arg name="cubemap-rotation" ui="Float spin box" value="0" type="System.Single" dim="0"/>
+                    <Arg name="cubemap-tint" ui="Color pick" value="0.498039 0.498039 0.498039 0.498039" type="System.Single" dim="1" sep=" " sizes="4"/>
+                    <Arg name="cubemap_invert" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="equator_color" ui="Color pick" value="0.113725 0.12549 0.133333 1" type="System.Single" dim="1" sep=" " sizes="4"/>
+                    <Arg name="ground_color" ui="Color pick" value="0.0431373 0.0470588 0.0352941 1" type="System.Single" dim="1" sep=" " sizes="4"/>
+                    <Arg name="mode" ui="Combo box index" value="4" type="System.Int32" dim="0"/>
+                    <Arg name="panoramic" ui="Resource" value="%%%-1" type="System.String" dim="1" sep="%%%" sizes="2"/>
+                    <Arg name="panoramic-exposure" ui="Float spin box" value="1" type="System.Single" dim="0"/>
+                    <Arg name="panoramic-layout" ui="Combo box index" value="0" type="System.Int32" dim="0"/>
+                    <Arg name="panoramic-mapping" ui="Combo box index" value="0" type="System.Int32" dim="0"/>
+                    <Arg name="panoramic-mirror_back" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="panoramic-rotation" ui="Float spin box" value="0" type="System.Single" dim="0"/>
+                    <Arg name="panoramic-tint" ui="Color pick" value="0.498039 0.498039 0.498039 0.498039" type="System.Single" dim="1" sep=" " sizes="4"/>
+                    <Arg name="panoramic-type" ui="Combo box index" value="0" type="System.Int32" dim="0"/>
+                    <Arg name="panoramic_invert" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="procedural-exposure" ui="Float spin box" value="0.2" type="System.Single" dim="0"/>
+                    <Arg name="procedural-ground-color" ui="Color pick" value="1 1 1 1" type="System.Single" dim="1" sep=" " sizes="4"/>
+                    <Arg name="procedural-sky-tint" ui="Color pick" value="0.886275 0.886275 0.886275 1" type="System.Single" dim="1" sep=" " sizes="4"/>
+                    <Arg name="sky_color" ui="Color pick" value="0.211765 0.227451 0.258824 1" type="System.Single" dim="1" sep=" " sizes="4"/>
+                    <Arg name="sun" ui="Combo box index" value="2" type="System.Int32" dim="0"/>
+                    <Arg name="sun-size" ui="Float spin box" value="0" type="System.Single" dim="0"/>
+                    <Arg name="sun_bounce_intensity" ui="Float spin box" value="1" type="System.Single" dim="0"/>
+                    <Arg name="sun_color" ui="Color pick" value="1 1 1 1" type="System.Single" dim="1" sep=" " sizes="4"/>
+                    <Arg name="sun_intensity" ui="Float spin box" value="0" type="System.Single" dim="0"/>
+                    <Arg name="sun_rotation" ui="Vector 3D" value="-39.1 15 0" type="System.Single" dim="1" sep=" " sizes="3"/>
+                    <Arg name="sun_shadow_bias" ui="Float spin box" value="0.05" type="System.Single" dim="0"/>
+                    <Arg name="sun_shadow_mode" ui="Combo box index" value="2" type="System.Int32" dim="0"/>
+                    <Arg name="sun_shadow_near_plane" ui="Float spin box" value="0.2" type="System.Single" dim="0"/>
+                    <Arg name="sun_shadow_normal_bias" ui="Float spin box" value="0.4" type="System.Single" dim="0"/>
+                    <Arg name="sun_shadow_strength" ui="Float spin box" value="1" type="System.Single" dim="0"/>
+                </Config>
+                <Config key="264" name="FBI">
+                    <Arg name="6sided-exposure" ui="Float spin box" value="1" type="System.Single" dim="0"/>
+                    <Arg name="6sided-rotation" ui="Float spin box" value="0" type="System.Single" dim="0"/>
+                    <Arg name="6sided-tint" ui="Color pick" value="0.498039 0.498039 0.498039 0.498039" type="System.Single" dim="1" sep=" " sizes="4"/>
+                    <Arg name="X+" ui="Resource" value="%%%-1" type="System.String" dim="1" sep="%%%" sizes="2"/>
+                    <Arg name="X+_invert" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="X-" ui="Resource" value="%%%-1" type="System.String" dim="1" sep="%%%" sizes="2"/>
+                    <Arg name="X-_invert" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="Y+" ui="Resource" value="%%%-1" type="System.String" dim="1" sep="%%%" sizes="2"/>
+                    <Arg name="Y+_invert" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="Y-" ui="Resource" value="%%%-1" type="System.String" dim="1" sep="%%%" sizes="2"/>
+                    <Arg name="Y-_invert" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="Z+" ui="Resource" value="%%%-1" type="System.String" dim="1" sep="%%%" sizes="2"/>
+                    <Arg name="Z+_invert" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="Z-" ui="Resource" value="%%%-1" type="System.String" dim="1" sep="%%%" sizes="2"/>
+                    <Arg name="Z-_invert" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="ambient_color" ui="Color pick" value="0.211765 0.227451 0.258824 1" type="System.Single" dim="1" sep=" " sizes="4"/>
+                    <Arg name="ambient_intensity" ui="Float spin box" value="1" type="System.Single" dim="0"/>
+                    <Arg name="ambient_mode" ui="Combo box index" value="0" type="System.Int32" dim="0"/>
+                    <Arg name="atmosphere-thickness" ui="Float spin box" value="0.2" type="System.Single" dim="0"/>
+                    <Arg name="background_color" ui="Color pick" value="0.207843 0.188235 0.188235 1" type="System.Single" dim="1" sep=" " sizes="4"/>
+                    <Arg name="convergence" ui="Float spin box" value="1" type="System.Single" dim="0"/>
+                    <Arg name="cubemap" ui="Resource" value="%%%-1" type="System.String" dim="1" sep="%%%" sizes="2"/>
+                    <Arg name="cubemap-exposure" ui="Float spin box" value="1" type="System.Single" dim="0"/>
+                    <Arg name="cubemap-rotation" ui="Float spin box" value="0" type="System.Single" dim="0"/>
+                    <Arg name="cubemap-tint" ui="Color pick" value="0.498039 0.498039 0.498039 0.498039" type="System.Single" dim="1" sep=" " sizes="4"/>
+                    <Arg name="cubemap_invert" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="equator_color" ui="Color pick" value="0.113725 0.12549 0.133333 1" type="System.Single" dim="1" sep=" " sizes="4"/>
+                    <Arg name="ground_color" ui="Color pick" value="0.0431373 0.0470588 0.0352941 1" type="System.Single" dim="1" sep=" " sizes="4"/>
+                    <Arg name="mode" ui="Combo box index" value="4" type="System.Int32" dim="0"/>
+                    <Arg name="panoramic" ui="Resource" value="%%%-1" type="System.String" dim="1" sep="%%%" sizes="2"/>
+                    <Arg name="panoramic-exposure" ui="Float spin box" value="1" type="System.Single" dim="0"/>
+                    <Arg name="panoramic-layout" ui="Combo box index" value="0" type="System.Int32" dim="0"/>
+                    <Arg name="panoramic-mapping" ui="Combo box index" value="0" type="System.Int32" dim="0"/>
+                    <Arg name="panoramic-mirror_back" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="panoramic-rotation" ui="Float spin box" value="0" type="System.Single" dim="0"/>
+                    <Arg name="panoramic-tint" ui="Color pick" value="0.498039 0.498039 0.498039 0.498039" type="System.Single" dim="1" sep=" " sizes="4"/>
+                    <Arg name="panoramic-type" ui="Combo box index" value="0" type="System.Int32" dim="0"/>
+                    <Arg name="panoramic_invert" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="procedural-exposure" ui="Float spin box" value="0" type="System.Single" dim="0"/>
+                    <Arg name="procedural-ground-color" ui="Color pick" value="1 1 1 1" type="System.Single" dim="1" sep=" " sizes="4"/>
+                    <Arg name="procedural-sky-tint" ui="Color pick" value="0.886275 0.886275 0.886275 1" type="System.Single" dim="1" sep=" " sizes="4"/>
+                    <Arg name="sky_color" ui="Color pick" value="0.211765 0.227451 0.258824 1" type="System.Single" dim="1" sep=" " sizes="4"/>
+                    <Arg name="sun" ui="Combo box index" value="2" type="System.Int32" dim="0"/>
+                    <Arg name="sun-size" ui="Float spin box" value="0" type="System.Single" dim="0"/>
+                    <Arg name="sun_bounce_intensity" ui="Float spin box" value="1" type="System.Single" dim="0"/>
+                    <Arg name="sun_color" ui="Color pick" value="1 1 1 1" type="System.Single" dim="1" sep=" " sizes="4"/>
+                    <Arg name="sun_intensity" ui="Float spin box" value="0" type="System.Single" dim="0"/>
+                    <Arg name="sun_rotation" ui="Vector 3D" value="-39.1 15 0" type="System.Single" dim="1" sep=" " sizes="3"/>
+                    <Arg name="sun_shadow_bias" ui="Float spin box" value="0.05" type="System.Single" dim="0"/>
+                    <Arg name="sun_shadow_mode" ui="Combo box index" value="2" type="System.Int32" dim="0"/>
+                    <Arg name="sun_shadow_near_plane" ui="Float spin box" value="0.2" type="System.Single" dim="0"/>
+                    <Arg name="sun_shadow_normal_bias" ui="Float spin box" value="0.4" type="System.Single" dim="0"/>
+                    <Arg name="sun_shadow_strength" ui="Float spin box" value="1" type="System.Single" dim="0"/>
+                </Config>
+                <Config key="46" name="White">
+                    <Arg name="6sided-exposure" ui="Float spin box" value="1" type="System.Single" dim="0"/>
+                    <Arg name="6sided-rotation" ui="Float spin box" value="0" type="System.Single" dim="0"/>
+                    <Arg name="6sided-tint" ui="Color pick" value="0.498039 0.498039 0.498039 0.498039" type="System.Single" dim="1" sep=" " sizes="4"/>
+                    <Arg name="X+" ui="Resource" value="%%%-1" type="System.String" dim="1" sep="%%%" sizes="2"/>
+                    <Arg name="X+_invert" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="X-" ui="Resource" value="%%%-1" type="System.String" dim="1" sep="%%%" sizes="2"/>
+                    <Arg name="X-_invert" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="Y+" ui="Resource" value="%%%-1" type="System.String" dim="1" sep="%%%" sizes="2"/>
+                    <Arg name="Y+_invert" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="Y-" ui="Resource" value="%%%-1" type="System.String" dim="1" sep="%%%" sizes="2"/>
+                    <Arg name="Y-_invert" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="Z+" ui="Resource" value="%%%-1" type="System.String" dim="1" sep="%%%" sizes="2"/>
+                    <Arg name="Z+_invert" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="Z-" ui="Resource" value="%%%-1" type="System.String" dim="1" sep="%%%" sizes="2"/>
+                    <Arg name="Z-_invert" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="ambient_color" ui="Color pick" value="0.239216 0.239216 0.239216 1" type="System.Single" dim="1" sep=" " sizes="4"/>
+                    <Arg name="ambient_intensity" ui="Float spin box" value="1" type="System.Single" dim="0"/>
+                    <Arg name="ambient_mode" ui="Combo box index" value="0" type="System.Int32" dim="0"/>
+                    <Arg name="atmosphere-thickness" ui="Float spin box" value="0.5" type="System.Single" dim="0"/>
+                    <Arg name="background_color" ui="Color pick" value="0.207843 0.188235 0.188235 1" type="System.Single" dim="1" sep=" " sizes="4"/>
+                    <Arg name="convergence" ui="Float spin box" value="1" type="System.Single" dim="0"/>
+                    <Arg name="cubemap" ui="Resource" value="%%%-1" type="System.String" dim="1" sep="%%%" sizes="2"/>
+                    <Arg name="cubemap-exposure" ui="Float spin box" value="1" type="System.Single" dim="0"/>
+                    <Arg name="cubemap-rotation" ui="Float spin box" value="0" type="System.Single" dim="0"/>
+                    <Arg name="cubemap-tint" ui="Color pick" value="0.498039 0.498039 0.498039 0.498039" type="System.Single" dim="1" sep=" " sizes="4"/>
+                    <Arg name="cubemap_invert" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="equator_color" ui="Color pick" value="0.113725 0.12549 0.133333 1" type="System.Single" dim="1" sep=" " sizes="4"/>
+                    <Arg name="ground_color" ui="Color pick" value="0.0431373 0.0470588 0.0352941 1" type="System.Single" dim="1" sep=" " sizes="4"/>
+                    <Arg name="mode" ui="Combo box index" value="4" type="System.Int32" dim="0"/>
+                    <Arg name="panoramic" ui="Resource" value="%%%-1" type="System.String" dim="1" sep="%%%" sizes="2"/>
+                    <Arg name="panoramic-exposure" ui="Float spin box" value="1" type="System.Single" dim="0"/>
+                    <Arg name="panoramic-layout" ui="Combo box index" value="0" type="System.Int32" dim="0"/>
+                    <Arg name="panoramic-mapping" ui="Combo box index" value="0" type="System.Int32" dim="0"/>
+                    <Arg name="panoramic-mirror_back" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="panoramic-rotation" ui="Float spin box" value="0" type="System.Single" dim="0"/>
+                    <Arg name="panoramic-tint" ui="Color pick" value="0.498039 0.498039 0.498039 0.498039" type="System.Single" dim="1" sep=" " sizes="4"/>
+                    <Arg name="panoramic-type" ui="Combo box index" value="0" type="System.Int32" dim="0"/>
+                    <Arg name="panoramic_invert" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="procedural-exposure" ui="Float spin box" value="0.1" type="System.Single" dim="0"/>
+                    <Arg name="procedural-ground-color" ui="Color pick" value="0.603922 0.603922 0.603922 1" type="System.Single" dim="1" sep=" " sizes="4"/>
+                    <Arg name="procedural-sky-tint" ui="Color pick" value="0.87451 0.87451 0.87451 1" type="System.Single" dim="1" sep=" " sizes="4"/>
+                    <Arg name="sky_color" ui="Color pick" value="0.211765 0.227451 0.258824 1" type="System.Single" dim="1" sep=" " sizes="4"/>
+                    <Arg name="sun" ui="Combo box index" value="2" type="System.Int32" dim="0"/>
+                    <Arg name="sun-size" ui="Float spin box" value="0" type="System.Single" dim="0"/>
+                    <Arg name="sun_bounce_intensity" ui="Float spin box" value="1" type="System.Single" dim="0"/>
+                    <Arg name="sun_color" ui="Color pick" value="1 1 1 1" type="System.Single" dim="1" sep=" " sizes="4"/>
+                    <Arg name="sun_intensity" ui="Float spin box" value="6.93889e-17" type="System.Single" dim="0"/>
+                    <Arg name="sun_rotation" ui="Vector 3D" value="-39.1 15 0" type="System.Single" dim="1" sep=" " sizes="3"/>
+                    <Arg name="sun_shadow_bias" ui="Float spin box" value="0.05" type="System.Single" dim="0"/>
+                    <Arg name="sun_shadow_mode" ui="Combo box index" value="0" type="System.Int32" dim="0"/>
+                    <Arg name="sun_shadow_near_plane" ui="Float spin box" value="0.2" type="System.Single" dim="0"/>
+                    <Arg name="sun_shadow_normal_bias" ui="Float spin box" value="0.4" type="System.Single" dim="0"/>
+                    <Arg name="sun_shadow_strength" ui="Float spin box" value="1" type="System.Single" dim="0"/>
+                </Config>
+                <Config key="47" name="Forest">
+                    <Arg name="6sided-exposure" ui="Float spin box" value="1" type="System.Single" dim="0"/>
+                    <Arg name="6sided-rotation" ui="Float spin box" value="0" type="System.Single" dim="0"/>
+                    <Arg name="6sided-tint" ui="Color pick" value="0.498039 0.498039 0.498039 0.498039" type="System.Single" dim="1" sep=" " sizes="4"/>
+                    <Arg name="X+" ui="Resource" value="%%%-1" type="System.String" dim="1" sep="%%%" sizes="2"/>
+                    <Arg name="X+_invert" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="X-" ui="Resource" value="%%%-1" type="System.String" dim="1" sep="%%%" sizes="2"/>
+                    <Arg name="X-_invert" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="Y+" ui="Resource" value="%%%-1" type="System.String" dim="1" sep="%%%" sizes="2"/>
+                    <Arg name="Y+_invert" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="Y-" ui="Resource" value="%%%-1" type="System.String" dim="1" sep="%%%" sizes="2"/>
+                    <Arg name="Y-_invert" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="Z+" ui="Resource" value="%%%-1" type="System.String" dim="1" sep="%%%" sizes="2"/>
+                    <Arg name="Z+_invert" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="Z-" ui="Resource" value="%%%-1" type="System.String" dim="1" sep="%%%" sizes="2"/>
+                    <Arg name="Z-_invert" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="ambient_color" ui="Color pick" value="0.815686 0.894118 1 1" type="System.Single" dim="1" sep=" " sizes="4"/>
+                    <Arg name="ambient_intensity" ui="Float spin box" value="0.55" type="System.Single" dim="0"/>
+                    <Arg name="ambient_mode" ui="Combo box index" value="0" type="System.Int32" dim="0"/>
+                    <Arg name="atmosphere-thickness" ui="Float spin box" value="0.75" type="System.Single" dim="0"/>
+                    <Arg name="background_color" ui="Color pick" value="0.207843 0.188235 0.188235 1" type="System.Single" dim="1" sep=" " sizes="4"/>
+                    <Arg name="convergence" ui="Float spin box" value="10" type="System.Single" dim="0"/>
+                    <Arg name="cubemap" ui="Resource" value="%%%-1" type="System.String" dim="1" sep="%%%" sizes="2"/>
+                    <Arg name="cubemap-exposure" ui="Float spin box" value="1" type="System.Single" dim="0"/>
+                    <Arg name="cubemap-rotation" ui="Float spin box" value="0" type="System.Single" dim="0"/>
+                    <Arg name="cubemap-tint" ui="Color pick" value="0.498039 0.498039 0.498039 0.498039" type="System.Single" dim="1" sep=" " sizes="4"/>
+                    <Arg name="cubemap_invert" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="equator_color" ui="Color pick" value="0.113725 0.12549 0.133333 1" type="System.Single" dim="1" sep=" " sizes="4"/>
+                    <Arg name="ground_color" ui="Color pick" value="0.0431373 0.0470588 0.0352941 1" type="System.Single" dim="1" sep=" " sizes="4"/>
+                    <Arg name="mode" ui="Combo box index" value="4" type="System.Int32" dim="0"/>
+                    <Arg name="panoramic" ui="Resource" value="%%%-1" type="System.String" dim="1" sep="%%%" sizes="2"/>
+                    <Arg name="panoramic-exposure" ui="Float spin box" value="1" type="System.Single" dim="0"/>
+                    <Arg name="panoramic-layout" ui="Combo box index" value="0" type="System.Int32" dim="0"/>
+                    <Arg name="panoramic-mapping" ui="Combo box index" value="0" type="System.Int32" dim="0"/>
+                    <Arg name="panoramic-mirror_back" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="panoramic-rotation" ui="Float spin box" value="0" type="System.Single" dim="0"/>
+                    <Arg name="panoramic-tint" ui="Color pick" value="0.498039 0.498039 0.498039 0.498039" type="System.Single" dim="1" sep=" " sizes="4"/>
+                    <Arg name="panoramic-type" ui="Combo box index" value="0" type="System.Int32" dim="0"/>
+                    <Arg name="panoramic_invert" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="procedural-exposure" ui="Float spin box" value="0.9" type="System.Single" dim="0"/>
+                    <Arg name="procedural-ground-color" ui="Color pick" value="0.372549 0.372549 0.372549 1" type="System.Single" dim="1" sep=" " sizes="4"/>
+                    <Arg name="procedural-sky-tint" ui="Color pick" value="0.439216 0.737255 1 1" type="System.Single" dim="1" sep=" " sizes="4"/>
+                    <Arg name="sky_color" ui="Color pick" value="0.211765 0.227451 0.258824 1" type="System.Single" dim="1" sep=" " sizes="4"/>
+                    <Arg name="sun" ui="Combo box index" value="2" type="System.Int32" dim="0"/>
+                    <Arg name="sun-size" ui="Float spin box" value="0.04" type="System.Single" dim="0"/>
+                    <Arg name="sun_bounce_intensity" ui="Float spin box" value="1" type="System.Single" dim="0"/>
+                    <Arg name="sun_color" ui="Color pick" value="1 1 1 1" type="System.Single" dim="1" sep=" " sizes="4"/>
+                    <Arg name="sun_intensity" ui="Float spin box" value="1.4" type="System.Single" dim="0"/>
+                    <Arg name="sun_rotation" ui="Vector 3D" value="-29.3 13.8 0" type="System.Single" dim="1" sep=" " sizes="3"/>
+                    <Arg name="sun_shadow_bias" ui="Float spin box" value="0.05" type="System.Single" dim="0"/>
+                    <Arg name="sun_shadow_mode" ui="Combo box index" value="2" type="System.Int32" dim="0"/>
+                    <Arg name="sun_shadow_near_plane" ui="Float spin box" value="0.2" type="System.Single" dim="0"/>
+                    <Arg name="sun_shadow_normal_bias" ui="Float spin box" value="0.4" type="System.Single" dim="0"/>
+                    <Arg name="sun_shadow_strength" ui="Float spin box" value="0.9" type="System.Single" dim="0"/>
+                </Config>
+                <Config key="101" name="Night">
+                    <Arg name="6sided-exposure" ui="Float spin box" value="1" type="System.Single" dim="0"/>
+                    <Arg name="6sided-rotation" ui="Float spin box" value="0" type="System.Single" dim="0"/>
+                    <Arg name="6sided-tint" ui="Color pick" value="0.498039 0.498039 0.498039 0.498039" type="System.Single" dim="1" sep=" " sizes="4"/>
+                    <Arg name="X+" ui="Resource" value="%%%-1" type="System.String" dim="1" sep="%%%" sizes="2"/>
+                    <Arg name="X+_invert" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="X-" ui="Resource" value="%%%-1" type="System.String" dim="1" sep="%%%" sizes="2"/>
+                    <Arg name="X-_invert" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="Y+" ui="Resource" value="%%%-1" type="System.String" dim="1" sep="%%%" sizes="2"/>
+                    <Arg name="Y+_invert" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="Y-" ui="Resource" value="%%%-1" type="System.String" dim="1" sep="%%%" sizes="2"/>
+                    <Arg name="Y-_invert" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="Z+" ui="Resource" value="%%%-1" type="System.String" dim="1" sep="%%%" sizes="2"/>
+                    <Arg name="Z+_invert" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="Z-" ui="Resource" value="%%%-1" type="System.String" dim="1" sep="%%%" sizes="2"/>
+                    <Arg name="Z-_invert" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="ambient_color" ui="Color pick" value="0.211765 0.227451 0.258824 1" type="System.Single" dim="1" sep=" " sizes="4"/>
+                    <Arg name="ambient_intensity" ui="Float spin box" value="1" type="System.Single" dim="0"/>
+                    <Arg name="ambient_mode" ui="Combo box index" value="1" type="System.Int32" dim="0"/>
+                    <Arg name="atmosphere-thickness" ui="Float spin box" value="1.5" type="System.Single" dim="0"/>
+                    <Arg name="background_color" ui="Color pick" value="0.207843 0.188235 0.188235 1" type="System.Single" dim="1" sep=" " sizes="4"/>
+                    <Arg name="convergence" ui="Float spin box" value="10" type="System.Single" dim="0"/>
+                    <Arg name="cubemap" ui="Resource" value="%%%-1" type="System.String" dim="1" sep="%%%" sizes="2"/>
+                    <Arg name="cubemap-exposure" ui="Float spin box" value="1" type="System.Single" dim="0"/>
+                    <Arg name="cubemap-rotation" ui="Float spin box" value="0" type="System.Single" dim="0"/>
+                    <Arg name="cubemap-tint" ui="Color pick" value="0.498039 0.498039 0.498039 0.498039" type="System.Single" dim="1" sep=" " sizes="4"/>
+                    <Arg name="cubemap_invert" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="equator_color" ui="Color pick" value="0.113725 0.12549 0.133333 1" type="System.Single" dim="1" sep=" " sizes="4"/>
+                    <Arg name="ground_color" ui="Color pick" value="0.0431373 0.0470588 0.0352941 1" type="System.Single" dim="1" sep=" " sizes="4"/>
+                    <Arg name="mode" ui="Combo box index" value="4" type="System.Int32" dim="0"/>
+                    <Arg name="panoramic" ui="Resource" value="%%%-1" type="System.String" dim="1" sep="%%%" sizes="2"/>
+                    <Arg name="panoramic-exposure" ui="Float spin box" value="1" type="System.Single" dim="0"/>
+                    <Arg name="panoramic-layout" ui="Combo box index" value="0" type="System.Int32" dim="0"/>
+                    <Arg name="panoramic-mapping" ui="Combo box index" value="0" type="System.Int32" dim="0"/>
+                    <Arg name="panoramic-mirror_back" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="panoramic-rotation" ui="Float spin box" value="0" type="System.Single" dim="0"/>
+                    <Arg name="panoramic-tint" ui="Color pick" value="0.498039 0.498039 0.498039 0.498039" type="System.Single" dim="1" sep=" " sizes="4"/>
+                    <Arg name="panoramic-type" ui="Combo box index" value="0" type="System.Int32" dim="0"/>
+                    <Arg name="panoramic_invert" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="procedural-exposure" ui="Float spin box" value="0.1" type="System.Single" dim="0"/>
+                    <Arg name="procedural-ground-color" ui="Color pick" value="0.372549 0.372549 0.372549 1" type="System.Single" dim="1" sep=" " sizes="4"/>
+                    <Arg name="procedural-sky-tint" ui="Color pick" value="0.498039 0.498039 0.498039 1" type="System.Single" dim="1" sep=" " sizes="4"/>
+                    <Arg name="sky_color" ui="Color pick" value="0.152941 0.164706 0.188235 1" type="System.Single" dim="1" sep=" " sizes="4"/>
+                    <Arg name="sun" ui="Combo box index" value="2" type="System.Int32" dim="0"/>
+                    <Arg name="sun-size" ui="Float spin box" value="0" type="System.Single" dim="0"/>
+                    <Arg name="sun_bounce_intensity" ui="Float spin box" value="1" type="System.Single" dim="0"/>
+                    <Arg name="sun_color" ui="Color pick" value="1 1 1 1" type="System.Single" dim="1" sep=" " sizes="4"/>
+                    <Arg name="sun_intensity" ui="Float spin box" value="0.5" type="System.Single" dim="0"/>
+                    <Arg name="sun_rotation" ui="Vector 3D" value="-32.5 15 0" type="System.Single" dim="1" sep=" " sizes="3"/>
+                    <Arg name="sun_shadow_bias" ui="Float spin box" value="0.05" type="System.Single" dim="0"/>
+                    <Arg name="sun_shadow_mode" ui="Combo box index" value="2" type="System.Int32" dim="0"/>
+                    <Arg name="sun_shadow_near_plane" ui="Float spin box" value="0.2" type="System.Single" dim="0"/>
+                    <Arg name="sun_shadow_normal_bias" ui="Float spin box" value="0.4" type="System.Single" dim="0"/>
+                    <Arg name="sun_shadow_strength" ui="Float spin box" value="1" type="System.Single" dim="0"/>
+                </Config>
+            </Configs>
+        </Component>
+        <Component key="11" name="PostProcess" category="Environment" type="PostProcess" global="0" always_updating="0" exceptions="1" frame_logging="0" trigger_logging="0" restricted="0" priority="2">
+            <InitConfig key="22" name="standard"/>
+            <Configs>
+                <Config key="23" name="LabScene">
+                    <Arg name="ao_color" ui="Color pick" value="0 0 0 1" type="System.Single" dim="1" sep=" " sizes="4"/>
+                    <Arg name="ao_color_enable" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="ao_enable" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="ao_intensity" ui="Float values slider" value="0.43" type="System.Single" dim="0"/>
+                    <Arg name="ao_intensity_enable" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="ao_thickness" ui="Float values slider" value="5.22" type="System.Single" dim="0"/>
+                    <Arg name="ao_thickness_enable" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="cg_enable" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="cg_tone_color_filter" ui="Color pick" value="1 1 1 1" type="System.Single" dim="1" sep=" " sizes="4"/>
+                    <Arg name="cg_tone_color_filter_enable" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="cg_tone_contrast" ui="Integer slider" value="0" type="System.Int32" dim="0"/>
+                    <Arg name="cg_tone_contrast_enable" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="cg_tone_hue_shift" ui="Integer slider" value="0" type="System.Int32" dim="0"/>
+                    <Arg name="cg_tone_hue_shift_enable" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="cg_tone_post_exposure" ui="Float values slider" value="0.9" type="System.Single" dim="0"/>
+                    <Arg name="cg_tone_post_exposure_enable" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="cg_tone_saturation" ui="Integer slider" value="1" type="System.Int32" dim="0"/>
+                    <Arg name="cg_tone_saturation_enable" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="cg_wb_temp" ui="Float values slider" value="18.6" type="System.Single" dim="0"/>
+                    <Arg name="cg_wb_temp_enable" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="cg_wb_tint" ui="Float values slider" value="0" type="System.Single" dim="0"/>
+                    <Arg name="cg_wb_tint_enable" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="v_center" ui="Vector 2D" value="0.5 0.5" type="System.Single" dim="1" sep=" " sizes="2"/>
+                    <Arg name="v_center_enable" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="v_color" ui="Color pick" value="0 0 0 1" type="System.Single" dim="1" sep=" " sizes="4"/>
+                    <Arg name="v_color_enable" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="v_enable" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="v_intensity" ui="Float values slider" value="0.2" type="System.Single" dim="0"/>
+                    <Arg name="v_intensity_enable" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="v_rounded" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="v_rounded_enable" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="v_roundness" ui="Float values slider" value="1" type="System.Single" dim="0"/>
+                    <Arg name="v_roundness_enable" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="v_smoothness" ui="Float values slider" value="0.8" type="System.Single" dim="0"/>
+                    <Arg name="v_smoothness_enable" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                </Config>
+                <Config key="64" name="WhiteScene">
+                    <Arg name="ao_color" ui="Color pick" value="0 0 0 1" type="System.Single" dim="1" sep=" " sizes="4"/>
+                    <Arg name="ao_color_enable" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="ao_enable" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="ao_intensity" ui="Float values slider" value="0.45" type="System.Single" dim="0"/>
+                    <Arg name="ao_intensity_enable" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="ao_thickness" ui="Float values slider" value="5.22" type="System.Single" dim="0"/>
+                    <Arg name="ao_thickness_enable" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="cg_enable" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="cg_tone_color_filter" ui="Color pick" value="0 0 0 0" type="System.Single" dim="1" sep=" " sizes="4"/>
+                    <Arg name="cg_tone_color_filter_enable" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="cg_tone_contrast" ui="Integer slider" value="0" type="System.Int32" dim="0"/>
+                    <Arg name="cg_tone_contrast_enable" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="cg_tone_hue_shift" ui="Integer slider" value="0" type="System.Int32" dim="0"/>
+                    <Arg name="cg_tone_hue_shift_enable" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="cg_tone_post_exposure" ui="Float values slider" value="0.5" type="System.Single" dim="0"/>
+                    <Arg name="cg_tone_post_exposure_enable" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="cg_tone_saturation" ui="Integer slider" value="1" type="System.Int32" dim="0"/>
+                    <Arg name="cg_tone_saturation_enable" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="cg_wb_temp" ui="Float values slider" value="18.6" type="System.Single" dim="0"/>
+                    <Arg name="cg_wb_temp_enable" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="cg_wb_tint" ui="Float values slider" value="0" type="System.Single" dim="0"/>
+                    <Arg name="cg_wb_tint_enable" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="v_center" ui="Vector 2D" value="0.5 0.5" type="System.Single" dim="1" sep=" " sizes="2"/>
+                    <Arg name="v_center_enable" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="v_color" ui="Color pick" value="0 0 0 1" type="System.Single" dim="1" sep=" " sizes="4"/>
+                    <Arg name="v_color_enable" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="v_enable" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="v_intensity" ui="Float values slider" value="0.2" type="System.Single" dim="0"/>
+                    <Arg name="v_intensity_enable" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="v_rounded" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="v_rounded_enable" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="v_roundness" ui="Float values slider" value="1" type="System.Single" dim="0"/>
+                    <Arg name="v_roundness_enable" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="v_smoothness" ui="Float values slider" value="0.8" type="System.Single" dim="0"/>
+                    <Arg name="v_smoothness_enable" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                </Config>
+                <Config key="65" name="Forestscene">
+                    <Arg name="ao_color" ui="Color pick" value="0 0 0 1" type="System.Single" dim="1" sep=" " sizes="4"/>
+                    <Arg name="ao_color_enable" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="ao_enable" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="ao_intensity" ui="Float values slider" value="0.43" type="System.Single" dim="0"/>
+                    <Arg name="ao_intensity_enable" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="ao_thickness" ui="Float values slider" value="5.22" type="System.Single" dim="0"/>
+                    <Arg name="ao_thickness_enable" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="cg_enable" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="cg_tone_color_filter" ui="Color pick" value="0 0 0 1" type="System.Single" dim="1" sep=" " sizes="4"/>
+                    <Arg name="cg_tone_color_filter_enable" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="cg_tone_contrast" ui="Integer slider" value="0" type="System.Int32" dim="0"/>
+                    <Arg name="cg_tone_contrast_enable" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="cg_tone_hue_shift" ui="Integer slider" value="0" type="System.Int32" dim="0"/>
+                    <Arg name="cg_tone_hue_shift_enable" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="cg_tone_post_exposure" ui="Float values slider" value="0.9" type="System.Single" dim="0"/>
+                    <Arg name="cg_tone_post_exposure_enable" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="cg_tone_saturation" ui="Integer slider" value="1" type="System.Int32" dim="0"/>
+                    <Arg name="cg_tone_saturation_enable" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="cg_wb_temp" ui="Float values slider" value="18.6" type="System.Single" dim="0"/>
+                    <Arg name="cg_wb_temp_enable" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="cg_wb_tint" ui="Float values slider" value="0" type="System.Single" dim="0"/>
+                    <Arg name="cg_wb_tint_enable" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="v_center" ui="Vector 2D" value="0.5 0.5" type="System.Single" dim="1" sep=" " sizes="2"/>
+                    <Arg name="v_center_enable" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="v_color" ui="Color pick" value="0 0 0 1" type="System.Single" dim="1" sep=" " sizes="4"/>
+                    <Arg name="v_color_enable" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="v_enable" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="v_intensity" ui="Float values slider" value="0.2" type="System.Single" dim="0"/>
+                    <Arg name="v_intensity_enable" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="v_rounded" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="v_rounded_enable" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="v_roundness" ui="Float values slider" value="1" type="System.Single" dim="0"/>
+                    <Arg name="v_roundness_enable" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="v_smoothness" ui="Float values slider" value="0.8" type="System.Single" dim="0"/>
+                    <Arg name="v_smoothness_enable" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                </Config>
+                <Config key="112" name="Forest FOA">
+                    <Arg name="ao_color" ui="Color pick" value="0 0 0 1" type="System.Single" dim="1" sep=" " sizes="4"/>
+                    <Arg name="ao_color_enable" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="ao_enable" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="ao_intensity" ui="Float values slider" value="0.29" type="System.Single" dim="0"/>
+                    <Arg name="ao_intensity_enable" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="ao_thickness" ui="Float values slider" value="4.96" type="System.Single" dim="0"/>
+                    <Arg name="ao_thickness_enable" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="cg_enable" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="cg_tone_color_filter" ui="Color pick" value="0 0 0 1" type="System.Single" dim="1" sep=" " sizes="4"/>
+                    <Arg name="cg_tone_color_filter_enable" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="cg_tone_contrast" ui="Integer slider" value="0" type="System.Int32" dim="0"/>
+                    <Arg name="cg_tone_contrast_enable" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="cg_tone_hue_shift" ui="Integer slider" value="0" type="System.Int32" dim="0"/>
+                    <Arg name="cg_tone_hue_shift_enable" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="cg_tone_post_exposure" ui="Float values slider" value="0.9" type="System.Single" dim="0"/>
+                    <Arg name="cg_tone_post_exposure_enable" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="cg_tone_saturation" ui="Integer slider" value="1" type="System.Int32" dim="0"/>
+                    <Arg name="cg_tone_saturation_enable" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="cg_wb_temp" ui="Float values slider" value="18.6" type="System.Single" dim="0"/>
+                    <Arg name="cg_wb_temp_enable" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="cg_wb_tint" ui="Float values slider" value="0" type="System.Single" dim="0"/>
+                    <Arg name="cg_wb_tint_enable" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="v_center" ui="Vector 2D" value="0.5 0.5" type="System.Single" dim="1" sep=" " sizes="2"/>
+                    <Arg name="v_center_enable" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="v_color" ui="Color pick" value="0 0 0 1" type="System.Single" dim="1" sep=" " sizes="4"/>
+                    <Arg name="v_color_enable" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="v_enable" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="v_intensity" ui="Float values slider" value="0.2" type="System.Single" dim="0"/>
+                    <Arg name="v_intensity_enable" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="v_rounded" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="v_rounded_enable" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="v_roundness" ui="Float values slider" value="1" type="System.Single" dim="0"/>
+                    <Arg name="v_roundness_enable" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="v_smoothness" ui="Float values slider" value="0.8" type="System.Single" dim="0"/>
+                    <Arg name="v_smoothness_enable" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                </Config>
+            </Configs>
+        </Component>
+        <Component key="23" name="FPPCamera" category="Camera" type="CameraController" global="0" always_updating="0" exceptions="1" frame_logging="0" trigger_logging="0" restricted="0" priority="0">
+            <InitConfig key="48" name="standard">
+                <Arg name="position" ui="Vector 3D" value="0 1.8 1.5" type="System.Single" dim="1" sep=" " sizes="3"/>
+                <Arg name="rotation" ui="Vector 3D" value="0 0 0" type="System.Single" dim="1" sep=" " sizes="3"/>
+                <Arg name="start_experiment" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                <Arg name="use_eye" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
+                <Arg name="use_neutral" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
+            </InitConfig>
+            <Configs>
+                <Config key="49" name="1stPP">
+                    <Arg name="debug_camera" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="m_speed" ui="Float spin box" value="3" type="System.Single" dim="0"/>
+                    <Arg name="position" ui="Vector 3D" value="0.57 0.123 1.723" type="System.Single" dim="1" sep=" " sizes="3"/>
+                    <Arg name="rotation" ui="Vector 3D" value="0 180 0" type="System.Single" dim="1" sep=" " sizes="3"/>
+                    <Arg name="rx_speed" ui="Float spin box" value="2" type="System.Single" dim="0"/>
+                    <Arg name="ry_speed" ui="Float spin box" value="2" type="System.Single" dim="0"/>
+                    <Arg name="rz_speed" ui="Float spin box" value="2" type="System.Single" dim="0"/>
+                    <Arg name="start_routine" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="update_on" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="use_eye" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="use_neutral" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
+                </Config>
+                <Config key="135" name="3rdPP">
+                    <Arg name="debug_camera" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="m_speed" ui="Float spin box" value="3" type="System.Single" dim="0"/>
+                    <Arg name="position" ui="Vector 3D" value="0.395 0.124 -0.253" type="System.Single" dim="1" sep=" " sizes="3"/>
+                    <Arg name="rotation" ui="Vector 3D" value="354.882 1.485 359.969" type="System.Single" dim="1" sep=" " sizes="3"/>
+                    <Arg name="rx_speed" ui="Float spin box" value="2" type="System.Single" dim="0"/>
+                    <Arg name="ry_speed" ui="Float spin box" value="2.2" type="System.Single" dim="0"/>
+                    <Arg name="rz_speed" ui="Float spin box" value="2" type="System.Single" dim="0"/>
+                    <Arg name="start_routine" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="update_on" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="use_eye" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="use_neutral" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
+                </Config>
+                <Config key="137" name="2ndPP">
+                    <Arg name="debug_camera" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="m_speed" ui="Float spin box" value="3" type="System.Single" dim="0"/>
+                    <Arg name="position" ui="Vector 3D" value="1.456 0.127 0.581" type="System.Single" dim="1" sep=" " sizes="3"/>
+                    <Arg name="rotation" ui="Vector 3D" value="356.56 270.757 359.793" type="System.Single" dim="1" sep=" " sizes="3"/>
+                    <Arg name="rx_speed" ui="Float spin box" value="2" type="System.Single" dim="0"/>
+                    <Arg name="ry_speed" ui="Float spin box" value="2.2" type="System.Single" dim="0"/>
+                    <Arg name="rz_speed" ui="Float spin box" value="2" type="System.Single" dim="0"/>
+                    <Arg name="start_routine" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="update_on" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="use_eye" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="use_neutral" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
+                </Config>
+            </Configs>
+        </Component>
+        <Component key="25" name="LabRoom" category="Model" type="AssetBundle" global="0" always_updating="0" exceptions="1" frame_logging="0" trigger_logging="0" restricted="0" priority="2">
+            <InitConfig key="52" name="standard">
+                <Arg name="asset_bundle" ui="Resource" value="labroom_tiny%%%74" type="System.String" dim="1" sep="%%%" sizes="2"/>
+                <Arg name="display_hierarchy" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                <Arg name="init_transform" ui="Transformation" value="3.1225e-17 0 0 0 0 0 1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
+                <Arg name="init_transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                <Arg name="name_sub_object" ui="Line text editor" value="" type="System.String" dim="0"/>
+            </InitConfig>
+            <Configs>
+                <Config key="53" name="standard">
+                    <Arg name="transform" ui="Transformation" value="0.5 0 0.15 0 90 0 1 1.02 1" type="System.Single" dim="1" sep=" " sizes="9"/>
+                    <Arg name="transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                </Config>
+            </Configs>
+        </Component>
+        <Component key="30" name="MeditationShelter" category="Model" type="AssetBundle" global="0" always_updating="0" exceptions="1" frame_logging="0" trigger_logging="0" restricted="0" priority="2">
+            <InitConfig key="62" name="standard">
+                <Arg name="asset_bundle" ui="Resource" value="mediationshelter_final%%%107" type="System.String" dim="1" sep="%%%" sizes="2"/>
+                <Arg name="display_hierarchy" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                <Arg name="init_transform" ui="Transformation" value="0 0 0 0 180 0 1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
+                <Arg name="init_transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                <Arg name="name_sub_object" ui="Line text editor" value="" type="System.String" dim="0"/>
+            </InitConfig>
+            <Configs>
+                <Config key="63" name="standard">
+                    <Arg name="transform" ui="Transformation" value="0.49 3.46945e-18 0.16 0 0 0 1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
+                    <Arg name="transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                </Config>
+            </Configs>
+        </Component>
+        <Component key="64" name="MeditationShelterNoBars" category="Model" type="AssetBundle" global="0" always_updating="0" exceptions="1" frame_logging="0" trigger_logging="0" restricted="0" priority="2">
+            <InitConfig key="143" name="standard">
+                <Arg name="asset_bundle" ui="Resource" value="meditationshelternobars%%%83" type="System.String" dim="1" sep="%%%" sizes="2"/>
+                <Arg name="display_hierarchy" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                <Arg name="init_transform" ui="Transformation" value="0 0 0 0 180 0 1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
+                <Arg name="init_transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                <Arg name="name_sub_object" ui="Line text editor" value="" type="System.String" dim="0"/>
+            </InitConfig>
+            <Configs>
+                <Config key="144" name="standard">
+                    <Arg name="transform" ui="Transformation" value="0.56 3.46945e-18 0 0 0 0 1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
+                    <Arg name="transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                </Config>
+            </Configs>
+        </Component>
+        <Component key="29" name="SceneFader" category="Script" type="CSharpScript" global="0" always_updating="0" exceptions="1" frame_logging="0" trigger_logging="0" restricted="0" priority="0">
+            <InitConfig key="60" name="standard">
+                <Arg name="component_class_name" ui="Line text editor" value="SceneFaderExVR" type="System.String" dim="0"/>
+            </InitConfig>
+            <Configs>
+                <Config key="61" name="standard"/>
+            </Configs>
+        </Component>
+        <Component key="28" name="OmniController" category="Script" type="CSharpScript" global="0" always_updating="0" exceptions="1" frame_logging="0" trigger_logging="0" restricted="0" priority="0">
+            <InitConfig key="58" name="standard">
+                <Arg name="component_class_name" ui="Line text editor" value="OmniController" type="System.String" dim="0"/>
+            </InitConfig>
+            <Configs>
+                <Config key="59" name="standard"/>
+            </Configs>
+        </Component>
+        <Component key="48" name="GraphicsHandler" category="Script" type="CSharpScript" global="0" always_updating="0" exceptions="1" frame_logging="0" trigger_logging="0" restricted="0" priority="0">
+            <InitConfig key="106" name="standard">
+                <Arg name="component_class_name" ui="Line text editor" value="GraphicsHandler" type="System.String" dim="0"/>
+            </InitConfig>
+            <Configs>
+                <Config key="107" name="standard"/>
+            </Configs>
+        </Component>
+        <Component key="70" name="K4 manager" category="AcquisitionDevice" type="K4Manager" global="0" always_updating="0" exceptions="1" frame_logging="0" trigger_logging="0" restricted="0" priority="2">
+            <InitConfig key="155" name="standard">
+                <Arg name="cameras_to_use" ui="Line text editor" value="0;1;2;3" type="System.String" dim="0"/>
+                <Arg name="color_init_default" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
+                <Arg name="color_init_file" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
+                <Arg name="color_init_nothing" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
+                <Arg name="color_settings" ui="Resource" value="color_SV-10-005_all%%%166" type="System.String" dim="1" sep="%%%" sizes="2"/>
+                <Arg name="debug_bypass" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                <Arg name="device_init_default" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
+                <Arg name="device_init_file" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
+                <Arg name="device_init_nothing" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
+                <Arg name="device_settings" ui="Resource" value="device_SV-10-005_all%%%121" type="System.String" dim="1" sep="%%%" sizes="2"/>
+                <Arg name="filters" ui="Resource" value="filters_SV-10-005_all%%%122" type="System.String" dim="1" sep="%%%" sizes="2"/>
+                <Arg name="filters_init_default" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
+                <Arg name="filters_init_file" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
+                <Arg name="filters_init_nothing" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
+                <Arg name="models" ui="Resource" value="model_SV-10-005_all%%%123" type="System.String" dim="1" sep="%%%" sizes="2"/>
+                <Arg name="network_settings" ui="Resource" value="network_default%%%186" type="System.String" dim="1" sep="%%%" sizes="2"/>
+            </InitConfig>
+            <Configs>
+                <Config key="156" name="sync">
+                    <Arg name="delay" ui="Integer spin box" value="    0" type="System.Int32" dim="0"/>
+                </Config>
+                <Config key="247" name="async">
+                    <Arg name="delay" ui="Integer spin box" value="1000" type="System.Int32" dim="0"/>
+                </Config>
+            </Configs>
+        </Component>
+        <Component key="71" name="K4 direct multi clouds" category="AcquisitionDevice" type="K4DirectMultiClouds" global="0" always_updating="0" exceptions="1" frame_logging="0" trigger_logging="0" restricted="0" priority="1">
+            <InitConfig key="157" name="standard">
+                <Arg name="k4_manager" ui="Component" value="K4 manager%%%70" type="System.String" dim="1" sep="%%%" sizes="2"/>
+            </InitConfig>
+            <Configs>
+                <Config key="158" name="1stPP">
+                    <Arg name="circles" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="cones" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="details" ui="Combo box index" value="3" type="System.Int32" dim="0"/>
+                    <Arg name="display_clouds" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="display_filtering_obb" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="filter_points_outside_obb" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="filtering_obb_tab" ui="Tab" value="true[#OBBFW#]false[#OBBFW#]0.784314 0.784314 0.784314 0.117647[#OBBFW#]0.6 0.3 1 0 0 0 1.2 1.8 1.2" type="System.String" dim="1" sep="[#T#]" sizes="1"/>
+                    <Arg name="global_transform" ui="Transformation" value="-0.42 -0.36 0.23 -12.3 84.1 112.4 1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
+                    <Arg name="global_transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="rendering" ui="Combo box index" value="    1" type="System.Int32" dim="0"/>
+                    <Arg name="size_points" ui="Float spin box" value="0.0037" type="System.Single" dim="0"/>
+                    <Arg name="tint" ui="Color pick" value="1 1 1 1" type="System.Single" dim="1" sep=" " sizes="4"/>
+                </Config>
+            </Configs>
+        </Component>
+        <Component key="102" name="Blend fade viewer" category="Viewer" type="BlendFadeViewer" global="0" always_updating="0" exceptions="1" frame_logging="0" trigger_logging="0" restricted="0" priority="2">
+            <InitConfig key="224" name="standard"/>
+            <Configs>
+                <Config key="225" name="standard">
+                    <Arg name="blend_and_fade" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="duration_blend" ui="Float spin box" value="0.1" type="System.Single" dim="0"/>
+                    <Arg name="duration_fade" ui="Float spin box" value="0.1" type="System.Single" dim="0"/>
+                    <Arg name="end_color" ui="Color pick" value="0 0 0 1" type="System.Single" dim="1" sep=" " sizes="4"/>
+                    <Arg name="only_blend" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="start_color" ui="Color pick" value="0 0 0 0" type="System.Single" dim="1" sep=" " sizes="4"/>
+                </Config>
+            </Configs>
+        </Component>
+        <Component key="111" name="Serial port writer" category="Network" type="SerialPortWriter" global="0" always_updating="1" exceptions="0" frame_logging="0" trigger_logging="1" restricted="0" priority="2">
+            <InitConfig key="245" name="standard">
+                <Arg name="baud_rate" ui="Integer spin box" value="115200" type="System.Int32" dim="0"/>
+                <Arg name="port_to_write" ui="Line text editor" value="COM10" type="System.String" dim="0"/>
+            </InitConfig>
+            <Configs>
+                <Config key="280" name="default">
+                    <Arg name="bits_mode" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="bits_pulse_mode" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="int_mode" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="int_pulse_mode" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="message" ui="Block text editor" value="" type="System.String" dim="0"/>
+                    <Arg name="pulse_time" ui="Double spin box" value="1" type="System.Double" dim="0"/>
+                    <Arg name="send_end_update_block" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="send_every_frame" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="send_new_routine" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="send_new_update_block" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="string_mode" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
+                </Config>
+            </Configs>
+        </Component>
+        <Component key="132" name="Fixation cross viewer" category="Viewer" type="FixationCrossViewer" global="0" always_updating="0" exceptions="1" frame_logging="0" trigger_logging="0" restricted="0" priority="0">
+            <InitConfig key="302" name="standard"/>
+            <Configs>
+                <Config key="303" name="standard">
+                    <Arg name="background_color" ui="Color pick" value="0 0 0 0" type="System.Single" dim="1" sep=" " sizes="4"/>
+                    <Arg name="cross-color" ui="Color pick" value="1 1 1 1" type="System.Single" dim="1" sep=" " sizes="4"/>
+                    <Arg name="cross-size-factor" ui="Float spin box" value="0.1" type="System.Single" dim="0"/>
+                    <Arg name="distance" ui="Float spin box" value="1" type="System.Single" dim="0"/>
+                    <Arg name="eye_to_render" ui="Combo box text" value="Both eyes" type="System.String" dim="0"/>
+                    <Arg name="height" ui="Integer spin box" value="400" type="System.Int32" dim="0"/>
+                    <Arg name="pivot" ui="Vector 2D" value="0.5 0.5" type="System.Single" dim="1" sep=" " sizes="2"/>
+                    <Arg name="position" ui="Vector 3D" value="0.5 1.1 -2.2" type="System.Single" dim="1" sep=" " sizes="3"/>
+                    <Arg name="rotation" ui="Vector 3D" value="0 180 0" type="System.Single" dim="1" sep=" " sizes="3"/>
+                    <Arg name="scale_factor" ui="Float spin box" value="0.25" type="System.Single" dim="0"/>
+                    <Arg name="use_eye_camera" ui="Check box" value="false" type="System.Boolean" dim="0"/>
+                    <Arg name="use_original_size" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="width" ui="Integer spin box" value="400" type="System.Int32" dim="0"/>
+                </Config>
+            </Configs>
+        </Component>
+    </Components>
+    <FlowElements>
+        <Routines>
+            <Routine key="129" name="FamiliarizationStart" randomizer="1" informations="">
+                <Condition key="26" name="default" duration="100" ui_scale="10" ui_size="1" sets_keys="0"/>
+            </Routine>
+            <Routine key="41" name="Lab_Idle" randomizer="0" informations="">
+                <Condition key="11" name="default" duration="10000" ui_scale="10" ui_size="1" sets_keys="0">
+                    <Action key="1673" key_component="25" key_config="53" node_used="0" node_position="0 0">
+                        <!--Component LabRoom with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="1674" key_component="30" key_config="63" node_used="0" node_position="0 0">
+                        <!--Component MeditationShelter with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="1675" key_component="11" key_config="23" node_used="0" node_position="0 0">
+                        <!--Component PostProcess with config LabScene -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="1676" key_component="6" key_config="13" node_used="0" node_position="0 0">
+                        <!--Component SkyBox with config Lab -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="1677" key_component="29" key_config="61" node_used="0" node_position="0 0">
+                        <!--Component SceneFader with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="1678" key_component="28" key_config="59" node_used="0" node_position="0 0">
+                        <!--Component OmniController with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="1679" key_component="48" key_config="107" node_used="0" node_position="0 0">
+                        <!--Component GraphicsHandler with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="1686" key_component="23" key_config="49" node_used="0" node_position="0 0">
+                        <!--Component FPPCamera with config 1stPP -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="1687" key_component="70" key_config="156" node_used="0" node_position="430 264">
+                        <!--Component K4 manager with config sync -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="2227" key_component="0" key_config="1" node_used="0" node_position="164 179">
+                        <!--Component Global logger with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="3093" key_component="111" key_config="280" node_used="1" node_position="1516 406">
+                        <!--Component Serial port writer with config default -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                    </Action>
+                    <Connector key="663" name="StartRoutine" node_position="295 9">
+                        <Arg name="value" ui="Label" value="" type="System.String" dim="0"/>
+                    </Connector>
+                    <Connector key="664" name="StopRoutine" node_position="315 268">
+                        <Arg name="value" ui="Label" value="" type="System.String" dim="0"/>
+                    </Connector>
+                    <Connector key="700" name="Integer" node_position="767 378">
+                        <Arg name="value" ui="Integer spin box" value="10" type="System.Int32" dim="0"/>
+                    </Connector>
+                    <Connector key="701" name="Integer" node_position="779 538">
+                        <Arg name="value" ui="Integer spin box" value="0" type="System.Int32" dim="0"/>
+                    </Connector>
+                    <Connector key="702" name="PassValues" node_position="1284 406">
+                        <Arg name="value" ui="Label" value="" type="System.String" dim="0"/>
+                    </Connector>
+                    <Connector key="703" name="PassValueTrigger" node_position="1003 377">
+                        <Arg name="value" ui="Label" value="" type="System.String" dim="0"/>
+                    </Connector>
+                    <Connector key="704" name="Delay" node_position="529 580">
+                        <Arg name="value" ui="Integer spin box" value="100" type="System.Int32" dim="0"/>
+                    </Connector>
+                    <Connector key="705" name="PassValueTrigger" node_position="1003 555">
+                        <Arg name="value" ui="Label" value="" type="System.String" dim="0"/>
+                    </Connector>
+                    <Connector key="810" name="Delay" node_position="567 7">
+                        <Arg name="value" ui="Integer spin box" value="100" type="System.Int32" dim="0"/>
+                    </Connector>
+                    <!--Connection between Key700:Connector:Integer:Port0 and Key703:Connector:PassValueTrigger:Port0 -->
+                    <Connection key="2289" out_type="connector" out_key="700" signal_id="0" out_data_type="integer" signal="output value 0" in_type="connector" in_key="703" slot_id="0" in_data_type="any" slot="input value 0"/>
+                    <!--Connection between Key701:Connector:Integer:Port0 and Key705:Connector:PassValueTrigger:Port0 -->
+                    <Connection key="2290" out_type="connector" out_key="701" signal_id="0" out_data_type="integer" signal="output value 0" in_type="connector" in_key="705" slot_id="0" in_data_type="any" slot="input value 0"/>
+                    <!--Connection between Key663:Connector:StartRoutine:Port0 and Key703:Connector:PassValueTrigger:Port1 -->
+                    <Connection key="2291" out_type="connector" out_key="663" signal_id="0" out_data_type="string" signal="output value 0" in_type="connector" in_key="703" slot_id="1" in_data_type="trigger" slot="input value 1"/>
+                    <!--Connection between Key663:Connector:StartRoutine:Port0 and Key704:Connector:Delay:Port0 -->
+                    <Connection key="2292" out_type="connector" out_key="663" signal_id="0" out_data_type="string" signal="output value 0" in_type="connector" in_key="704" slot_id="0" in_data_type="any" slot="input value 0"/>
+                    <!--Connection between Key704:Connector:Delay:Port0 and Key705:Connector:PassValueTrigger:Port1 -->
+                    <Connection key="2293" out_type="connector" out_key="704" signal_id="0" out_data_type="any" signal="output value 0" in_type="connector" in_key="705" slot_id="1" in_data_type="trigger" slot="input value 1"/>
+                    <!--Connection between Key703:Connector:PassValueTrigger:Port0 and Key702:Connector:PassValues:Port0 -->
+                    <Connection key="2294" out_type="connector" out_key="703" signal_id="0" out_data_type="any" signal="output value 0" in_type="connector" in_key="702" slot_id="0" in_data_type="any" slot="input value 0"/>
+                    <!--Connection between Key705:Connector:PassValueTrigger:Port0 and Key702:Connector:PassValues:Port1 -->
+                    <Connection key="2295" out_type="connector" out_key="705" signal_id="0" out_data_type="any" signal="output value 0" in_type="connector" in_key="702" slot_id="1" in_data_type="any" slot="input value 1"/>
+                    <!--Connection between Key702:Connector:PassValues:Port0 and Key111:Component:Serial port writer:Port0 -->
+                    <Connection key="2296" out_type="connector" out_key="702" signal_id="0" out_data_type="any" signal="output value 0" in_type="component" in_key="111" slot_id="0" in_data_type="integer" slot="send byte pulse"/>
+                    <!--Connection between Key663:Connector:StartRoutine:Port0 and Key810:Connector:Delay:Port0 -->
+                    <Connection key="2797" out_type="connector" out_key="663" signal_id="0" out_data_type="string" signal="output value 0" in_type="connector" in_key="810" slot_id="0" in_data_type="any" slot="input value 0"/>
+                </Condition>
+            </Routine>
+            <Routine key="1137" name="Lab_1stPP" randomizer="0" informations="">
+                <Condition key="119" name="default" duration="10000" ui_scale="10" ui_size="1" sets_keys="0">
+                    <Action key="3575" key_component="25" key_config="53" node_used="0" node_position="0 0">
+                        <!--Component LabRoom with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="3576" key_component="30" key_config="63" node_used="0" node_position="0 0">
+                        <!--Component MeditationShelter with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="3577" key_component="11" key_config="23" node_used="0" node_position="0 0">
+                        <!--Component PostProcess with config LabScene -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="3578" key_component="6" key_config="13" node_used="0" node_position="0 0">
+                        <!--Component SkyBox with config Lab -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="3579" key_component="29" key_config="61" node_used="0" node_position="0 0">
+                        <!--Component SceneFader with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="3580" key_component="28" key_config="59" node_used="0" node_position="0 0">
+                        <!--Component OmniController with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="3581" key_component="48" key_config="107" node_used="0" node_position="0 0">
+                        <!--Component GraphicsHandler with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="3582" key_component="23" key_config="49" node_used="0" node_position="0 0">
+                        <!--Component FPPCamera with config 1stPP -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="3583" key_component="70" key_config="156" node_used="0" node_position="430 264">
+                        <!--Component K4 manager with config sync -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="3584" key_component="0" key_config="1" node_used="0" node_position="164 179">
+                        <!--Component Global logger with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="3585" key_component="111" key_config="280" node_used="1" node_position="1516 406">
+                        <!--Component Serial port writer with config default -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                    </Action>
+                    <Connector key="851" name="StartRoutine" node_position="295 9">
+                        <Arg name="value" ui="Label" value="" type="System.String" dim="0"/>
+                    </Connector>
+                    <Connector key="852" name="StopRoutine" node_position="315 268">
+                        <Arg name="value" ui="Label" value="" type="System.String" dim="0"/>
+                    </Connector>
+                    <Connector key="853" name="Integer" node_position="767 378">
+                        <Arg name="value" ui="Integer spin box" value="10" type="System.Int32" dim="0"/>
+                    </Connector>
+                    <Connector key="854" name="Integer" node_position="779 538">
+                        <Arg name="value" ui="Integer spin box" value="0" type="System.Int32" dim="0"/>
+                    </Connector>
+                    <Connector key="855" name="PassValues" node_position="1284 406">
+                        <Arg name="value" ui="Label" value="" type="System.String" dim="0"/>
+                    </Connector>
+                    <Connector key="856" name="PassValueTrigger" node_position="1003 377">
+                        <Arg name="value" ui="Label" value="" type="System.String" dim="0"/>
+                    </Connector>
+                    <Connector key="857" name="Delay" node_position="529 580">
+                        <Arg name="value" ui="Integer spin box" value="100" type="System.Int32" dim="0"/>
+                    </Connector>
+                    <Connector key="858" name="PassValueTrigger" node_position="1003 555">
+                        <Arg name="value" ui="Label" value="" type="System.String" dim="0"/>
+                    </Connector>
+                    <Connector key="859" name="Delay" node_position="567 7">
+                        <Arg name="value" ui="Integer spin box" value="100" type="System.Int32" dim="0"/>
+                    </Connector>
+                    <!--Connection between Key853:Connector:Integer:Port0 and Key856:Connector:PassValueTrigger:Port0 -->
+                    <Connection key="2986" out_type="connector" out_key="853" signal_id="0" out_data_type="integer" signal="output value 0" in_type="connector" in_key="856" slot_id="0" in_data_type="any" slot="input value 0"/>
+                    <!--Connection between Key854:Connector:Integer:Port0 and Key858:Connector:PassValueTrigger:Port0 -->
+                    <Connection key="2987" out_type="connector" out_key="854" signal_id="0" out_data_type="integer" signal="output value 0" in_type="connector" in_key="858" slot_id="0" in_data_type="any" slot="input value 0"/>
+                    <!--Connection between Key851:Connector:StartRoutine:Port0 and Key856:Connector:PassValueTrigger:Port1 -->
+                    <Connection key="2988" out_type="connector" out_key="851" signal_id="0" out_data_type="string" signal="output value 0" in_type="connector" in_key="856" slot_id="1" in_data_type="trigger" slot="input value 1"/>
+                    <!--Connection between Key851:Connector:StartRoutine:Port0 and Key857:Connector:Delay:Port0 -->
+                    <Connection key="2989" out_type="connector" out_key="851" signal_id="0" out_data_type="string" signal="output value 0" in_type="connector" in_key="857" slot_id="0" in_data_type="any" slot="input value 0"/>
+                    <!--Connection between Key857:Connector:Delay:Port0 and Key858:Connector:PassValueTrigger:Port1 -->
+                    <Connection key="2990" out_type="connector" out_key="857" signal_id="0" out_data_type="any" signal="output value 0" in_type="connector" in_key="858" slot_id="1" in_data_type="trigger" slot="input value 1"/>
+                    <!--Connection between Key856:Connector:PassValueTrigger:Port0 and Key855:Connector:PassValues:Port0 -->
+                    <Connection key="2991" out_type="connector" out_key="856" signal_id="0" out_data_type="any" signal="output value 0" in_type="connector" in_key="855" slot_id="0" in_data_type="any" slot="input value 0"/>
+                    <!--Connection between Key858:Connector:PassValueTrigger:Port0 and Key855:Connector:PassValues:Port1 -->
+                    <Connection key="2992" out_type="connector" out_key="858" signal_id="0" out_data_type="any" signal="output value 0" in_type="connector" in_key="855" slot_id="1" in_data_type="any" slot="input value 1"/>
+                    <!--Connection between Key855:Connector:PassValues:Port0 and Key111:Component:Serial port writer:Port0 -->
+                    <Connection key="2993" out_type="connector" out_key="855" signal_id="0" out_data_type="any" signal="output value 0" in_type="component" in_key="111" slot_id="0" in_data_type="integer" slot="send byte pulse"/>
+                    <!--Connection between Key851:Connector:StartRoutine:Port0 and Key859:Connector:Delay:Port0 -->
+                    <Connection key="2994" out_type="connector" out_key="851" signal_id="0" out_data_type="string" signal="output value 0" in_type="connector" in_key="859" slot_id="0" in_data_type="any" slot="input value 0"/>
+                </Condition>
+            </Routine>
+            <Routine key="1139" name="Lab_3rdPP" randomizer="0" informations="">
+                <Condition key="120" name="default" duration="10000" ui_scale="10" ui_size="1" sets_keys="0">
+                    <Action key="3586" key_component="25" key_config="53" node_used="0" node_position="0 0">
+                        <!--Component LabRoom with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="3587" key_component="30" key_config="63" node_used="0" node_position="0 0">
+                        <!--Component MeditationShelter with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="3588" key_component="11" key_config="23" node_used="0" node_position="0 0">
+                        <!--Component PostProcess with config LabScene -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="3589" key_component="6" key_config="13" node_used="0" node_position="0 0">
+                        <!--Component SkyBox with config Lab -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="3590" key_component="29" key_config="61" node_used="0" node_position="0 0">
+                        <!--Component SceneFader with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="3591" key_component="28" key_config="59" node_used="0" node_position="0 0">
+                        <!--Component OmniController with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="3592" key_component="48" key_config="107" node_used="0" node_position="0 0">
+                        <!--Component GraphicsHandler with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="3593" key_component="23" key_config="135" node_used="0" node_position="0 0">
+                        <!--Component FPPCamera with config 3rdPP -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="3594" key_component="70" key_config="156" node_used="0" node_position="430 264">
+                        <!--Component K4 manager with config sync -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="3595" key_component="0" key_config="1" node_used="0" node_position="164 179">
+                        <!--Component Global logger with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="3596" key_component="111" key_config="280" node_used="1" node_position="1516 406">
+                        <!--Component Serial port writer with config default -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                    </Action>
+                    <Connector key="860" name="StartRoutine" node_position="295 9">
+                        <Arg name="value" ui="Label" value="" type="System.String" dim="0"/>
+                    </Connector>
+                    <Connector key="861" name="StopRoutine" node_position="315 268">
+                        <Arg name="value" ui="Label" value="" type="System.String" dim="0"/>
+                    </Connector>
+                    <Connector key="862" name="Integer" node_position="767 378">
+                        <Arg name="value" ui="Integer spin box" value="10" type="System.Int32" dim="0"/>
+                    </Connector>
+                    <Connector key="863" name="Integer" node_position="779 538">
+                        <Arg name="value" ui="Integer spin box" value="0" type="System.Int32" dim="0"/>
+                    </Connector>
+                    <Connector key="864" name="PassValues" node_position="1284 406">
+                        <Arg name="value" ui="Label" value="" type="System.String" dim="0"/>
+                    </Connector>
+                    <Connector key="865" name="PassValueTrigger" node_position="1003 377">
+                        <Arg name="value" ui="Label" value="" type="System.String" dim="0"/>
+                    </Connector>
+                    <Connector key="866" name="Delay" node_position="529 580">
+                        <Arg name="value" ui="Integer spin box" value="100" type="System.Int32" dim="0"/>
+                    </Connector>
+                    <Connector key="867" name="PassValueTrigger" node_position="1003 555">
+                        <Arg name="value" ui="Label" value="" type="System.String" dim="0"/>
+                    </Connector>
+                    <Connector key="868" name="Delay" node_position="567 7">
+                        <Arg name="value" ui="Integer spin box" value="100" type="System.Int32" dim="0"/>
+                    </Connector>
+                    <!--Connection between Key862:Connector:Integer:Port0 and Key865:Connector:PassValueTrigger:Port0 -->
+                    <Connection key="3004" out_type="connector" out_key="862" signal_id="0" out_data_type="integer" signal="output value 0" in_type="connector" in_key="865" slot_id="0" in_data_type="any" slot="input value 0"/>
+                    <!--Connection between Key863:Connector:Integer:Port0 and Key867:Connector:PassValueTrigger:Port0 -->
+                    <Connection key="3005" out_type="connector" out_key="863" signal_id="0" out_data_type="integer" signal="output value 0" in_type="connector" in_key="867" slot_id="0" in_data_type="any" slot="input value 0"/>
+                    <!--Connection between Key860:Connector:StartRoutine:Port0 and Key865:Connector:PassValueTrigger:Port1 -->
+                    <Connection key="3006" out_type="connector" out_key="860" signal_id="0" out_data_type="string" signal="output value 0" in_type="connector" in_key="865" slot_id="1" in_data_type="trigger" slot="input value 1"/>
+                    <!--Connection between Key860:Connector:StartRoutine:Port0 and Key866:Connector:Delay:Port0 -->
+                    <Connection key="3007" out_type="connector" out_key="860" signal_id="0" out_data_type="string" signal="output value 0" in_type="connector" in_key="866" slot_id="0" in_data_type="any" slot="input value 0"/>
+                    <!--Connection between Key866:Connector:Delay:Port0 and Key867:Connector:PassValueTrigger:Port1 -->
+                    <Connection key="3008" out_type="connector" out_key="866" signal_id="0" out_data_type="any" signal="output value 0" in_type="connector" in_key="867" slot_id="1" in_data_type="trigger" slot="input value 1"/>
+                    <!--Connection between Key865:Connector:PassValueTrigger:Port0 and Key864:Connector:PassValues:Port0 -->
+                    <Connection key="3009" out_type="connector" out_key="865" signal_id="0" out_data_type="any" signal="output value 0" in_type="connector" in_key="864" slot_id="0" in_data_type="any" slot="input value 0"/>
+                    <!--Connection between Key867:Connector:PassValueTrigger:Port0 and Key864:Connector:PassValues:Port1 -->
+                    <Connection key="3010" out_type="connector" out_key="867" signal_id="0" out_data_type="any" signal="output value 0" in_type="connector" in_key="864" slot_id="1" in_data_type="any" slot="input value 1"/>
+                    <!--Connection between Key864:Connector:PassValues:Port0 and Key111:Component:Serial port writer:Port0 -->
+                    <Connection key="3011" out_type="connector" out_key="864" signal_id="0" out_data_type="any" signal="output value 0" in_type="component" in_key="111" slot_id="0" in_data_type="integer" slot="send byte pulse"/>
+                    <!--Connection between Key860:Connector:StartRoutine:Port0 and Key868:Connector:Delay:Port0 -->
+                    <Connection key="3012" out_type="connector" out_key="860" signal_id="0" out_data_type="string" signal="output value 0" in_type="connector" in_key="868" slot_id="0" in_data_type="any" slot="input value 0"/>
+                </Condition>
+            </Routine>
+            <Routine key="1141" name="Lab_2ndPP" randomizer="0" informations="">
+                <Condition key="121" name="default" duration="10000" ui_scale="10" ui_size="1" sets_keys="0">
+                    <Action key="3597" key_component="25" key_config="53" node_used="0" node_position="0 0">
+                        <!--Component LabRoom with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="3598" key_component="30" key_config="63" node_used="0" node_position="0 0">
+                        <!--Component MeditationShelter with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="3599" key_component="11" key_config="23" node_used="0" node_position="0 0">
+                        <!--Component PostProcess with config LabScene -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="3600" key_component="6" key_config="13" node_used="0" node_position="0 0">
+                        <!--Component SkyBox with config Lab -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="3601" key_component="29" key_config="61" node_used="0" node_position="0 0">
+                        <!--Component SceneFader with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="3602" key_component="28" key_config="59" node_used="0" node_position="0 0">
+                        <!--Component OmniController with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="3603" key_component="48" key_config="107" node_used="0" node_position="0 0">
+                        <!--Component GraphicsHandler with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="3604" key_component="23" key_config="137" node_used="0" node_position="0 0">
+                        <!--Component FPPCamera with config 2ndPP -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="3605" key_component="70" key_config="156" node_used="0" node_position="430 264">
+                        <!--Component K4 manager with config sync -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="3606" key_component="0" key_config="1" node_used="0" node_position="164 179">
+                        <!--Component Global logger with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="3607" key_component="111" key_config="280" node_used="1" node_position="1516 406">
+                        <!--Component Serial port writer with config default -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                    </Action>
+                    <Connector key="869" name="StartRoutine" node_position="295 9">
+                        <Arg name="value" ui="Label" value="" type="System.String" dim="0"/>
+                    </Connector>
+                    <Connector key="870" name="StopRoutine" node_position="315 268">
+                        <Arg name="value" ui="Label" value="" type="System.String" dim="0"/>
+                    </Connector>
+                    <Connector key="871" name="Integer" node_position="767 378">
+                        <Arg name="value" ui="Integer spin box" value="10" type="System.Int32" dim="0"/>
+                    </Connector>
+                    <Connector key="872" name="Integer" node_position="779 538">
+                        <Arg name="value" ui="Integer spin box" value="0" type="System.Int32" dim="0"/>
+                    </Connector>
+                    <Connector key="873" name="PassValues" node_position="1284 406">
+                        <Arg name="value" ui="Label" value="" type="System.String" dim="0"/>
+                    </Connector>
+                    <Connector key="874" name="PassValueTrigger" node_position="1003 377">
+                        <Arg name="value" ui="Label" value="" type="System.String" dim="0"/>
+                    </Connector>
+                    <Connector key="875" name="Delay" node_position="529 580">
+                        <Arg name="value" ui="Integer spin box" value="100" type="System.Int32" dim="0"/>
+                    </Connector>
+                    <Connector key="876" name="PassValueTrigger" node_position="1003 555">
+                        <Arg name="value" ui="Label" value="" type="System.String" dim="0"/>
+                    </Connector>
+                    <Connector key="877" name="Delay" node_position="567 7">
+                        <Arg name="value" ui="Integer spin box" value="100" type="System.Int32" dim="0"/>
+                    </Connector>
+                    <!--Connection between Key871:Connector:Integer:Port0 and Key874:Connector:PassValueTrigger:Port0 -->
+                    <Connection key="3022" out_type="connector" out_key="871" signal_id="0" out_data_type="integer" signal="output value 0" in_type="connector" in_key="874" slot_id="0" in_data_type="any" slot="input value 0"/>
+                    <!--Connection between Key872:Connector:Integer:Port0 and Key876:Connector:PassValueTrigger:Port0 -->
+                    <Connection key="3023" out_type="connector" out_key="872" signal_id="0" out_data_type="integer" signal="output value 0" in_type="connector" in_key="876" slot_id="0" in_data_type="any" slot="input value 0"/>
+                    <!--Connection between Key869:Connector:StartRoutine:Port0 and Key874:Connector:PassValueTrigger:Port1 -->
+                    <Connection key="3024" out_type="connector" out_key="869" signal_id="0" out_data_type="string" signal="output value 0" in_type="connector" in_key="874" slot_id="1" in_data_type="trigger" slot="input value 1"/>
+                    <!--Connection between Key869:Connector:StartRoutine:Port0 and Key875:Connector:Delay:Port0 -->
+                    <Connection key="3025" out_type="connector" out_key="869" signal_id="0" out_data_type="string" signal="output value 0" in_type="connector" in_key="875" slot_id="0" in_data_type="any" slot="input value 0"/>
+                    <!--Connection between Key875:Connector:Delay:Port0 and Key876:Connector:PassValueTrigger:Port1 -->
+                    <Connection key="3026" out_type="connector" out_key="875" signal_id="0" out_data_type="any" signal="output value 0" in_type="connector" in_key="876" slot_id="1" in_data_type="trigger" slot="input value 1"/>
+                    <!--Connection between Key874:Connector:PassValueTrigger:Port0 and Key873:Connector:PassValues:Port0 -->
+                    <Connection key="3027" out_type="connector" out_key="874" signal_id="0" out_data_type="any" signal="output value 0" in_type="connector" in_key="873" slot_id="0" in_data_type="any" slot="input value 0"/>
+                    <!--Connection between Key876:Connector:PassValueTrigger:Port0 and Key873:Connector:PassValues:Port1 -->
+                    <Connection key="3028" out_type="connector" out_key="876" signal_id="0" out_data_type="any" signal="output value 0" in_type="connector" in_key="873" slot_id="1" in_data_type="any" slot="input value 1"/>
+                    <!--Connection between Key873:Connector:PassValues:Port0 and Key111:Component:Serial port writer:Port0 -->
+                    <Connection key="3029" out_type="connector" out_key="873" signal_id="0" out_data_type="any" signal="output value 0" in_type="component" in_key="111" slot_id="0" in_data_type="integer" slot="send byte pulse"/>
+                    <!--Connection between Key869:Connector:StartRoutine:Port0 and Key877:Connector:Delay:Port0 -->
+                    <Connection key="3030" out_type="connector" out_key="869" signal_id="0" out_data_type="string" signal="output value 0" in_type="connector" in_key="877" slot_id="0" in_data_type="any" slot="input value 0"/>
+                </Condition>
+            </Routine>
+        </Routines>
+        <ISIs/>
+        <Loops/>
+    </FlowElements>
+    <FlowSequence>
+        <Element key="129" type="Routine"/>
+        <Element key="41" type="Routine"/>
+        <Element key="1137" type="Routine"/>
+        <Element key="1139" type="Routine"/>
+        <Element key="1141" type="Routine"/>
+    </FlowSequence>
+</Experiment>
