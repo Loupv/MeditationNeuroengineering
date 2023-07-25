@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Experiment name="AnalyticalMeditation" version="1.0b5" mode="designer" designer-used="C:/Users/loupv/Desktop/exvr-designer-1.0b5/ExVR.exe">
+<Experiment name="AnalyticalMeditation" version="1.0b5" mode="designer" designer-used="D:/Meditation/exvr-designer-1.0b5/ExVR.exe">
     <Settings debug="1" csharp_debug_info="0" catch_components_exceptions="0" positional_tracking="1" catch_external_keyboard_events="0">
-        <Display mode="1" stereo_fov="60" fullscreen="0" monitor_id="1" resolution_id="1" custom_width="1920" custom_height="1080"/>
+        <Display mode="0" stereo_fov="60" fullscreen="0" monitor_id="1" resolution_id="1" custom_width="1920" custom_height="1080"/>
         <Camera neutral_x="0" neutral_y="1" neutral_z="0"/>
     </Settings>
     <Resources reload="200">
@@ -11,16 +11,16 @@
         <Resource key="158" type="Text" alias="CAMS-R" path="../Questionnaires/CAMS-R.txt"/>
         <Resource key="163" type="Text" alias="OBE" path="../Questionnaires/OBE.txt"/>
         <Resource key="165" type="Text" alias="FBIQuestionnaire" path="../Questionnaires/FBIQuestionnaire.txt"/>
-        <Resource key="186" type="Text" alias="network_default" path="../../../../Desktop/k4-scaner-manager/config/network/network_default.config"/>
+        <Resource key="187" type="Text" alias="model_SV-10-005_all" path="../../k4-scaner-manager/config/calibration/model_SV-10-005_all.config"/>
+        <Resource key="188" type="Text" alias="network_SV-10-005" path="../../k4-scaner-manager/config/network/network_SV-10-005.config"/>
+        <Resource key="189" type="Text" alias="color_SV-10-005_all" path="../../k4-scaner-manager/config/settings/color_SV-10-005_all.config"/>
+        <Resource key="190" type="Text" alias="device_SV-10-005_all" path="../../k4-scaner-manager/config/settings/device_SV-10-005_all.config"/>
+        <Resource key="191" type="Text" alias="filters_SV-10-005_all" path="../../k4-scaner-manager/config/settings/filters_SV-10-005_all.config"/>
         <Resource key="45" type="UnityAssetBundle" alias="meditationshelter" path="Bundles/meditationshelter.unity3d"/>
         <Resource key="74" type="UnityAssetBundle" alias="labroom_tiny" path="Bundles/labroom_tiny.unity3d"/>
         <Resource key="83" type="UnityAssetBundle" alias="meditationshelternobars" path="Bundles/meditationshelternobars.unity3d"/>
         <Resource key="107" type="UnityAssetBundle" alias="mediationshelter_final" path="Bundles/mediationshelter_final.unity3d"/>
-        <Resource key="37" type="CSharpScript" alias="OmniController" path="Assets/OmniController.cs"/>
-        <Resource key="44" type="CSharpScript" alias="SceneFaderExVR" path="Assets/SceneFaderExVR.cs"/>
-        <Resource key="61" type="CSharpScript" alias="GraphicsHandler" path="Assets/GraphicsHandler.cs"/>
-        <Resource key="146" type="CSharpScript" alias="FamiliarizationModule" path="Assets/FamiliarizationModule.cs"/>
-        <Resource key="147" type="CSharpScript" alias="UIQuestionModule" path="Assets/UIQuestionModule.cs"/>
+        <Resource key="192" type="CSharpScript" alias="SceneSwitch" path="Assets/SceneSwitch.cs"/>
         <Resource key="172" type="Directory" alias="QuestionnairesLog" path="Logs/QuestionnairesLog"/>
         <Resource key="173" type="Directory" alias="GlobalLog" path="Logs/GlobalLog"/>
     </Resources>
@@ -536,7 +536,7 @@
                 <Config key="135" name="3rdPP">
                     <Arg name="debug_camera" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="m_speed" ui="Float spin box" value="3" type="System.Single" dim="0"/>
-                    <Arg name="position" ui="Vector 3D" value="0.395 0.124 -0.253" type="System.Single" dim="1" sep=" " sizes="3"/>
+                    <Arg name="position" ui="Vector 3D" value="0.625 0.124 -1.693" type="System.Single" dim="1" sep=" " sizes="3"/>
                     <Arg name="rotation" ui="Vector 3D" value="354.882 1.485 359.969" type="System.Single" dim="1" sep=" " sizes="3"/>
                     <Arg name="rx_speed" ui="Float spin box" value="2" type="System.Single" dim="0"/>
                     <Arg name="ry_speed" ui="Float spin box" value="2.2" type="System.Single" dim="0"/>
@@ -549,7 +549,7 @@
                 <Config key="137" name="2ndPP">
                     <Arg name="debug_camera" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="m_speed" ui="Float spin box" value="3" type="System.Single" dim="0"/>
-                    <Arg name="position" ui="Vector 3D" value="1.456 0.127 0.581" type="System.Single" dim="1" sep=" " sizes="3"/>
+                    <Arg name="position" ui="Vector 3D" value="2.486 0.127 0.161" type="System.Single" dim="1" sep=" " sizes="3"/>
                     <Arg name="rotation" ui="Vector 3D" value="356.56 270.757 359.793" type="System.Single" dim="1" sep=" " sizes="3"/>
                     <Arg name="rx_speed" ui="Float spin box" value="2" type="System.Single" dim="0"/>
                     <Arg name="ry_speed" ui="Float spin box" value="2.2" type="System.Single" dim="0"/>
@@ -606,25 +606,9 @@
                 </Config>
             </Configs>
         </Component>
-        <Component key="29" name="SceneFader" category="Script" type="CSharpScript" global="0" always_updating="0" exceptions="1" frame_logging="0" trigger_logging="0" restricted="0" priority="0">
-            <InitConfig key="60" name="standard">
-                <Arg name="component_class_name" ui="Line text editor" value="SceneFaderExVR" type="System.String" dim="0"/>
-            </InitConfig>
-            <Configs>
-                <Config key="61" name="standard"/>
-            </Configs>
-        </Component>
-        <Component key="28" name="OmniController" category="Script" type="CSharpScript" global="0" always_updating="0" exceptions="1" frame_logging="0" trigger_logging="0" restricted="0" priority="0">
-            <InitConfig key="58" name="standard">
-                <Arg name="component_class_name" ui="Line text editor" value="OmniController" type="System.String" dim="0"/>
-            </InitConfig>
-            <Configs>
-                <Config key="59" name="standard"/>
-            </Configs>
-        </Component>
-        <Component key="48" name="GraphicsHandler" category="Script" type="CSharpScript" global="0" always_updating="0" exceptions="1" frame_logging="0" trigger_logging="0" restricted="0" priority="0">
+        <Component key="48" name="SceneSwitch" category="Script" type="CSharpScript" global="0" always_updating="0" exceptions="1" frame_logging="0" trigger_logging="0" restricted="0" priority="0">
             <InitConfig key="106" name="standard">
-                <Arg name="component_class_name" ui="Line text editor" value="GraphicsHandler" type="System.String" dim="0"/>
+                <Arg name="component_class_name" ui="Line text editor" value="SceneSwitch" type="System.String" dim="0"/>
             </InitConfig>
             <Configs>
                 <Config key="107" name="standard"/>
@@ -636,18 +620,18 @@
                 <Arg name="color_init_default" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
                 <Arg name="color_init_file" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
                 <Arg name="color_init_nothing" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
-                <Arg name="color_settings" ui="Resource" value="color_SV-10-005_all%%%166" type="System.String" dim="1" sep="%%%" sizes="2"/>
+                <Arg name="color_settings" ui="Resource" value="color_SV-10-005_all%%%189" type="System.String" dim="1" sep="%%%" sizes="2"/>
                 <Arg name="debug_bypass" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                 <Arg name="device_init_default" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
                 <Arg name="device_init_file" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
                 <Arg name="device_init_nothing" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
-                <Arg name="device_settings" ui="Resource" value="device_SV-10-005_all%%%121" type="System.String" dim="1" sep="%%%" sizes="2"/>
-                <Arg name="filters" ui="Resource" value="filters_SV-10-005_all%%%122" type="System.String" dim="1" sep="%%%" sizes="2"/>
+                <Arg name="device_settings" ui="Resource" value="device_SV-10-005_all%%%190" type="System.String" dim="1" sep="%%%" sizes="2"/>
+                <Arg name="filters" ui="Resource" value="filters_SV-10-005_all%%%191" type="System.String" dim="1" sep="%%%" sizes="2"/>
                 <Arg name="filters_init_default" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
                 <Arg name="filters_init_file" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
                 <Arg name="filters_init_nothing" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
-                <Arg name="models" ui="Resource" value="model_SV-10-005_all%%%123" type="System.String" dim="1" sep="%%%" sizes="2"/>
-                <Arg name="network_settings" ui="Resource" value="network_default%%%186" type="System.String" dim="1" sep="%%%" sizes="2"/>
+                <Arg name="models" ui="Resource" value="model_SV-10-005_all%%%187" type="System.String" dim="1" sep="%%%" sizes="2"/>
+                <Arg name="network_settings" ui="Resource" value="network_SV-10-005%%%188" type="System.String" dim="1" sep="%%%" sizes="2"/>
             </InitConfig>
             <Configs>
                 <Config key="156" name="sync">
@@ -669,9 +653,9 @@
                     <Arg name="details" ui="Combo box index" value="3" type="System.Int32" dim="0"/>
                     <Arg name="display_clouds" ui="Check box" value="true" type="System.Boolean" dim="0"/>
                     <Arg name="display_filtering_obb" ui="Check box" value="true" type="System.Boolean" dim="0"/>
-                    <Arg name="filter_points_outside_obb" ui="Check box" value="true" type="System.Boolean" dim="0"/>
+                    <Arg name="filter_points_outside_obb" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="filtering_obb_tab" ui="Tab" value="true[#OBBFW#]false[#OBBFW#]0.784314 0.784314 0.784314 0.117647[#OBBFW#]0.6 0.3 1 0 0 0 1.2 1.8 1.2" type="System.String" dim="1" sep="[#T#]" sizes="1"/>
-                    <Arg name="global_transform" ui="Transformation" value="-0.42 -0.36 0.23 -12.3 84.1 112.4 1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
+                    <Arg name="global_transform" ui="Transformation" value="-0.65 0 1.31 180 -101.3 0 1 1 1" type="System.Single" dim="1" sep=" " sizes="9"/>
                     <Arg name="global_transform_do_not_apply" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="rendering" ui="Combo box index" value="    1" type="System.Int32" dim="0"/>
                     <Arg name="size_points" ui="Float spin box" value="0.0037" type="System.Single" dim="0"/>
@@ -785,30 +769,8 @@
                             <Interval t1="0" t2="10000"/>
                         </Timeline>
                     </Action>
-                    <Action key="1677" key_component="29" key_config="61" node_used="0" node_position="0 0">
-                        <!--Component SceneFader with config standard -->
-                        <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                        <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                    </Action>
-                    <Action key="1678" key_component="28" key_config="59" node_used="0" node_position="0 0">
-                        <!--Component OmniController with config standard -->
-                        <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                        <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                    </Action>
                     <Action key="1679" key_component="48" key_config="107" node_used="0" node_position="0 0">
-                        <!--Component GraphicsHandler with config standard -->
+                        <!--Component SceneSwitch with config standard -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
                             <Interval t1="0" t2="10000"/>
@@ -853,6 +815,17 @@
                     </Action>
                     <Action key="3093" key_component="111" key_config="280" node_used="1" node_position="1516 406">
                         <!--Component Serial port writer with config default -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="3608" key_component="71" key_config="158" node_used="0" node_position="0 0">
+                        <!--Component K4 direct multi clouds with config 1stPP -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
                             <Interval t1="0" t2="10000"/>
@@ -955,30 +928,8 @@
                             <Interval t1="0" t2="10000"/>
                         </Timeline>
                     </Action>
-                    <Action key="3579" key_component="29" key_config="61" node_used="0" node_position="0 0">
-                        <!--Component SceneFader with config standard -->
-                        <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                        <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                    </Action>
-                    <Action key="3580" key_component="28" key_config="59" node_used="0" node_position="0 0">
-                        <!--Component OmniController with config standard -->
-                        <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                        <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                    </Action>
                     <Action key="3581" key_component="48" key_config="107" node_used="0" node_position="0 0">
-                        <!--Component GraphicsHandler with config standard -->
+                        <!--Component SceneSwitch with config standard -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
                             <Interval t1="0" t2="10000"/>
@@ -1023,6 +974,17 @@
                     </Action>
                     <Action key="3585" key_component="111" key_config="280" node_used="1" node_position="1516 406">
                         <!--Component Serial port writer with config default -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="3609" key_component="71" key_config="158" node_used="0" node_position="0 0">
+                        <!--Component K4 direct multi clouds with config 1stPP -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
                             <Interval t1="0" t2="10000"/>
@@ -1125,30 +1087,8 @@
                             <Interval t1="0" t2="10000"/>
                         </Timeline>
                     </Action>
-                    <Action key="3590" key_component="29" key_config="61" node_used="0" node_position="0 0">
-                        <!--Component SceneFader with config standard -->
-                        <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                        <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                    </Action>
-                    <Action key="3591" key_component="28" key_config="59" node_used="0" node_position="0 0">
-                        <!--Component OmniController with config standard -->
-                        <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                        <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                    </Action>
                     <Action key="3592" key_component="48" key_config="107" node_used="0" node_position="0 0">
-                        <!--Component GraphicsHandler with config standard -->
+                        <!--Component SceneSwitch with config standard -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
                             <Interval t1="0" t2="10000"/>
@@ -1193,6 +1133,17 @@
                     </Action>
                     <Action key="3596" key_component="111" key_config="280" node_used="1" node_position="1516 406">
                         <!--Component Serial port writer with config default -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="3610" key_component="71" key_config="158" node_used="0" node_position="0 0">
+                        <!--Component K4 direct multi clouds with config 1stPP -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
                             <Interval t1="0" t2="10000"/>
@@ -1295,30 +1246,8 @@
                             <Interval t1="0" t2="10000"/>
                         </Timeline>
                     </Action>
-                    <Action key="3601" key_component="29" key_config="61" node_used="0" node_position="0 0">
-                        <!--Component SceneFader with config standard -->
-                        <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                        <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                    </Action>
-                    <Action key="3602" key_component="28" key_config="59" node_used="0" node_position="0 0">
-                        <!--Component OmniController with config standard -->
-                        <Timeline type="Update">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                        <Timeline type="Visibiliy">
-                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
-                            <Interval t1="0" t2="10000"/>
-                        </Timeline>
-                    </Action>
                     <Action key="3603" key_component="48" key_config="107" node_used="0" node_position="0 0">
-                        <!--Component GraphicsHandler with config standard -->
+                        <!--Component SceneSwitch with config standard -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
                             <Interval t1="0" t2="10000"/>
@@ -1363,6 +1292,17 @@
                     </Action>
                     <Action key="3607" key_component="111" key_config="280" node_used="1" node_position="1516 406">
                         <!--Component Serial port writer with config default -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="3611" key_component="71" key_config="158" node_used="0" node_position="0 0">
+                        <!--Component K4 direct multi clouds with config 1stPP -->
                         <Timeline type="Update">
                             <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
                             <Interval t1="0" t2="10000"/>
@@ -1419,6 +1359,165 @@
                     <Connection key="3030" out_type="connector" out_key="869" signal_id="0" out_data_type="string" signal="output value 0" in_type="connector" in_key="877" slot_id="0" in_data_type="any" slot="input value 0"/>
                 </Condition>
             </Routine>
+            <Routine key="1148" name="Lab_Idle" randomizer="0" informations="">
+                <Condition key="122" name="default" duration="10000" ui_scale="10" ui_size="1" sets_keys="0">
+                    <Action key="3612" key_component="25" key_config="53" node_used="0" node_position="0 0">
+                        <!--Component LabRoom with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="3613" key_component="30" key_config="63" node_used="0" node_position="0 0">
+                        <!--Component MeditationShelter with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="3614" key_component="11" key_config="23" node_used="0" node_position="0 0">
+                        <!--Component PostProcess with config LabScene -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="3615" key_component="6" key_config="13" node_used="0" node_position="0 0">
+                        <!--Component SkyBox with config Lab -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="3616" key_component="48" key_config="107" node_used="0" node_position="0 0">
+                        <!--Component SceneSwitch with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="3617" key_component="23" key_config="49" node_used="0" node_position="0 0">
+                        <!--Component FPPCamera with config 1stPP -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="3618" key_component="70" key_config="156" node_used="0" node_position="430 264">
+                        <!--Component K4 manager with config sync -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="3619" key_component="0" key_config="1" node_used="0" node_position="164 179">
+                        <!--Component Global logger with config standard -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="3620" key_component="111" key_config="280" node_used="1" node_position="1516 406">
+                        <!--Component Serial port writer with config default -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                    </Action>
+                    <Action key="3621" key_component="71" key_config="158" node_used="0" node_position="0 0">
+                        <!--Component K4 direct multi clouds with config 1stPP -->
+                        <Timeline type="Update">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                        <Timeline type="Visibiliy">
+                            <!--Starts at 0(s) and ends at 10000s(), duration: 10000(s) -->
+                            <Interval t1="0" t2="10000"/>
+                        </Timeline>
+                    </Action>
+                    <Connector key="878" name="StartRoutine" node_position="295 9">
+                        <Arg name="value" ui="Label" value="" type="System.String" dim="0"/>
+                    </Connector>
+                    <Connector key="879" name="StopRoutine" node_position="315 268">
+                        <Arg name="value" ui="Label" value="" type="System.String" dim="0"/>
+                    </Connector>
+                    <Connector key="880" name="Integer" node_position="767 378">
+                        <Arg name="value" ui="Integer spin box" value="10" type="System.Int32" dim="0"/>
+                    </Connector>
+                    <Connector key="881" name="Integer" node_position="779 538">
+                        <Arg name="value" ui="Integer spin box" value="0" type="System.Int32" dim="0"/>
+                    </Connector>
+                    <Connector key="882" name="PassValues" node_position="1284 406">
+                        <Arg name="value" ui="Label" value="" type="System.String" dim="0"/>
+                    </Connector>
+                    <Connector key="883" name="PassValueTrigger" node_position="1003 377">
+                        <Arg name="value" ui="Label" value="" type="System.String" dim="0"/>
+                    </Connector>
+                    <Connector key="884" name="Delay" node_position="529 580">
+                        <Arg name="value" ui="Integer spin box" value="100" type="System.Int32" dim="0"/>
+                    </Connector>
+                    <Connector key="885" name="PassValueTrigger" node_position="1003 555">
+                        <Arg name="value" ui="Label" value="" type="System.String" dim="0"/>
+                    </Connector>
+                    <Connector key="886" name="Delay" node_position="567 7">
+                        <Arg name="value" ui="Integer spin box" value="100" type="System.Int32" dim="0"/>
+                    </Connector>
+                    <!--Connection between Key880:Connector:Integer:Port0 and Key883:Connector:PassValueTrigger:Port0 -->
+                    <Connection key="3067" out_type="connector" out_key="880" signal_id="0" out_data_type="integer" signal="output value 0" in_type="connector" in_key="883" slot_id="0" in_data_type="any" slot="input value 0"/>
+                    <!--Connection between Key881:Connector:Integer:Port0 and Key885:Connector:PassValueTrigger:Port0 -->
+                    <Connection key="3068" out_type="connector" out_key="881" signal_id="0" out_data_type="integer" signal="output value 0" in_type="connector" in_key="885" slot_id="0" in_data_type="any" slot="input value 0"/>
+                    <!--Connection between Key878:Connector:StartRoutine:Port0 and Key883:Connector:PassValueTrigger:Port1 -->
+                    <Connection key="3069" out_type="connector" out_key="878" signal_id="0" out_data_type="string" signal="output value 0" in_type="connector" in_key="883" slot_id="1" in_data_type="trigger" slot="input value 1"/>
+                    <!--Connection between Key878:Connector:StartRoutine:Port0 and Key884:Connector:Delay:Port0 -->
+                    <Connection key="3070" out_type="connector" out_key="878" signal_id="0" out_data_type="string" signal="output value 0" in_type="connector" in_key="884" slot_id="0" in_data_type="any" slot="input value 0"/>
+                    <!--Connection between Key884:Connector:Delay:Port0 and Key885:Connector:PassValueTrigger:Port1 -->
+                    <Connection key="3071" out_type="connector" out_key="884" signal_id="0" out_data_type="any" signal="output value 0" in_type="connector" in_key="885" slot_id="1" in_data_type="trigger" slot="input value 1"/>
+                    <!--Connection between Key883:Connector:PassValueTrigger:Port0 and Key882:Connector:PassValues:Port0 -->
+                    <Connection key="3072" out_type="connector" out_key="883" signal_id="0" out_data_type="any" signal="output value 0" in_type="connector" in_key="882" slot_id="0" in_data_type="any" slot="input value 0"/>
+                    <!--Connection between Key885:Connector:PassValueTrigger:Port0 and Key882:Connector:PassValues:Port1 -->
+                    <Connection key="3073" out_type="connector" out_key="885" signal_id="0" out_data_type="any" signal="output value 0" in_type="connector" in_key="882" slot_id="1" in_data_type="any" slot="input value 1"/>
+                    <!--Connection between Key882:Connector:PassValues:Port0 and Key111:Component:Serial port writer:Port0 -->
+                    <Connection key="3074" out_type="connector" out_key="882" signal_id="0" out_data_type="any" signal="output value 0" in_type="component" in_key="111" slot_id="0" in_data_type="integer" slot="send byte pulse"/>
+                    <!--Connection between Key878:Connector:StartRoutine:Port0 and Key886:Connector:Delay:Port0 -->
+                    <Connection key="3075" out_type="connector" out_key="878" signal_id="0" out_data_type="string" signal="output value 0" in_type="connector" in_key="886" slot_id="0" in_data_type="any" slot="input value 0"/>
+                </Condition>
+            </Routine>
         </Routines>
         <ISIs/>
         <Loops/>
@@ -1429,5 +1528,6 @@
         <Element key="1137" type="Routine"/>
         <Element key="1139" type="Routine"/>
         <Element key="1141" type="Routine"/>
+        <Element key="1148" type="Routine"/>
     </FlowSequence>
 </Experiment>

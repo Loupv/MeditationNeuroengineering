@@ -580,7 +580,7 @@ namespace Ex
 
 
             if (fadeDirection == FadeDirection.Out) omniController.StopEveryAmbiences();
-/*
+            /*
                 {
                     // lights
                     for (int i = 0; i < lights.Count; i++)
