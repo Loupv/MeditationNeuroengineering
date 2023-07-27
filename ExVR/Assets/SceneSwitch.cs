@@ -1,10 +1,13 @@
 // system
 using System;
 using System.Reflection;
+using System.Collections;
 using System.Collections.Generic;
 
 // unity
+using System.Linq;
 using UnityEngine;
+using UnityEngine.Rendering.PostProcessing;
 
 namespace Ex{
 
@@ -30,17 +33,38 @@ namespace Ex{
         // public override void post_update() {}
         // public override void update_parameter_from_gui(XML.Arg arg){}
         // public override void update_from_current_config(){}
+        GraphicsHandler graphicsHandler;
 
-        // # slots
-        // public override void slot1(object value){}
-        // public override void slot2(object value){}
-        // public override void slot3(object value){}
-        // public override void slot4(object value){}        
-        // public override void slot5(IdAny idValue){
-        // 	int id = idValue.id;
-        // 	object value = idValue.value;
-        // }  
+        public override void start_experiment()
+        {
+            log_message("Starting Experiment");
 
+            StartCoroutine(PrepareExperiment());
+        }
+
+
+        private IEnumerator PrepareExperiment()
+        {
+            yield return new WaitForEndOfFrame();
+
+            graphicsHandler = FindObjectOfType<GraphicsHandler>();
+            if (graphicsHandler != null)
+            {
+                log_message(graphicsHandler.name + " found");
+                graphicsHandler.InitExperiment();
+            }
+
+            var postProcessLayer = Camera.main.GetComponent<PostProcessLayer>();
+            if (postProcessLayer != null) postProcessLayer.antialiasingMode = PostProcessLayer.Antialiasing.TemporalAntialiasing; // UnityEngine.Rendering.PostProcessing.PostProcessLayer.
+
+            //curtainsClosed = true;
+            //sceneConfigs = InitSceneConfigArray();
+            //currentRoutineConfigID = GetConfigIDFromRoutineName(current_routine().name);
+            //currentSceneConfig = sceneConfigs[currentRoutineConfigID];
+
+            //guidanceClipNames = InitGuidanceClipsNames();
+
+        }
 
 
         public override void update()
@@ -53,6 +77,30 @@ namespace Ex{
             }
 
         }
+
+
+        // # slots
+        public override void slot1(object value)
+        {
+            log_message(value.ToString());
+            graphicsHandler.InitCameraOrbit(4);
+        }
+
+        public override void slot2(object value)
+        {
+            log_message(value.ToString());
+            graphicsHandler.InitCameraOrbit(2);
+
+        }
+
+
+        // public override void slot2(object value){}
+        // public override void slot3(object value){}
+        // public override void slot4(object value){}        
+        // public override void slot5(IdAny idValue){
+        // 	int id = idValue.id;
+        // 	object value = idValue.value;
+        // }  
     }
 }
 
