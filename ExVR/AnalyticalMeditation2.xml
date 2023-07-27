@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Experiment name="AnalyticalMeditation2" version="1.0b5" mode="designer" designer-used="C:/Users/loupv/Desktop/OlderVersion/exvr-designer-1.0b5/ExVR.exe">
+<Experiment name="AnalyticalMeditation2" version="1.0b6" mode="designer" designer-used="D:/Meditation/exvr-designer/ExVR.exe">
     <Settings debug="1" csharp_debug_info="0" catch_components_exceptions="0" positional_tracking="1" catch_external_keyboard_events="0">
         <Display mode="1" stereo_fov="60" fullscreen="0" monitor_id="1" resolution_id="1" custom_width="1920" custom_height="1080"/>
         <Camera neutral_x="0" neutral_y="1" neutral_z="0"/>
@@ -12,7 +12,11 @@
         <Resource key="158" type="Text" alias="CAMS-R" path="../Questionnaires/CAMS-R.txt"/>
         <Resource key="163" type="Text" alias="OBE" path="../Questionnaires/OBE.txt"/>
         <Resource key="165" type="Text" alias="FBIQuestionnaire" path="../Questionnaires/FBIQuestionnaire.txt"/>
-        <Resource key="187" type="Text" alias="network_default" path="../../../../Desktop/k4-scaner-manager/config/network/network_default.config"/>
+        <Resource key="192" type="Text" alias="model_SV-10-005_all" path="../../k4-scaner-manager/config/calibration/model_SV-10-005_all.config"/>
+        <Resource key="193" type="Text" alias="network_SV-10-005" path="../../k4-scaner-manager/config/network/network_SV-10-005.config"/>
+        <Resource key="194" type="Text" alias="color_SV-10-005_all" path="../../k4-scaner-manager/config/settings/color_SV-10-005_all.config"/>
+        <Resource key="195" type="Text" alias="device_SV-10-005_all" path="../../k4-scaner-manager/config/settings/device_SV-10-005_all.config"/>
+        <Resource key="196" type="Text" alias="filters_SV-10-005_all" path="../../k4-scaner-manager/config/settings/filters_SV-10-005_all.config"/>
         <Resource key="74" type="UnityAssetBundle" alias="labroom_tiny" path="Bundles/labroom_tiny.unity3d"/>
         <Resource key="107" type="UnityAssetBundle" alias="mediationshelter_final" path="Bundles/mediationshelter_final.unity3d"/>
         <Resource key="160" type="UnityAssetBundle" alias="questionmodule_7answers" path="Bundles/questionmodule_7answers.unity3d"/>
@@ -1388,21 +1392,21 @@
         <Component key="70" name="K4 manager" category="AcquisitionDevice" type="K4Manager" global="0" always_updating="0" exceptions="1" frame_logging="0" trigger_logging="0" restricted="0" priority="2">
             <InitConfig key="155" name="standard">
                 <Arg name="cameras_to_use" ui="Line text editor" value="0;1;2;3" type="System.String" dim="0"/>
-                <Arg name="color_init_default" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
-                <Arg name="color_init_file" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
+                <Arg name="color_init_default" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
+                <Arg name="color_init_file" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
                 <Arg name="color_init_nothing" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
-                <Arg name="color_settings" ui="Resource" value="color_SV-10-005_all%%%166" type="System.String" dim="1" sep="%%%" sizes="2"/>
+                <Arg name="color_settings" ui="Resource" value="color_SV-10-005_all%%%194" type="System.String" dim="1" sep="%%%" sizes="2"/>
                 <Arg name="debug_bypass" ui="Check box" value="false" type="System.Boolean" dim="0"/>
-                <Arg name="device_init_default" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
-                <Arg name="device_init_file" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
+                <Arg name="device_init_default" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
+                <Arg name="device_init_file" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
                 <Arg name="device_init_nothing" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
-                <Arg name="device_settings" ui="Resource" value="device_SV-10-005_all%%%121" type="System.String" dim="1" sep="%%%" sizes="2"/>
-                <Arg name="filters" ui="Resource" value="filters_SV-10-005_all%%%122" type="System.String" dim="1" sep="%%%" sizes="2"/>
-                <Arg name="filters_init_default" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
-                <Arg name="filters_init_file" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
+                <Arg name="device_settings" ui="Resource" value="device_SV-10-005_all%%%195" type="System.String" dim="1" sep="%%%" sizes="2"/>
+                <Arg name="filters" ui="Resource" value="filters_SV-10-005_all%%%196" type="System.String" dim="1" sep="%%%" sizes="2"/>
+                <Arg name="filters_init_default" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
+                <Arg name="filters_init_file" ui="Radio buttons" value="true" type="System.Boolean" dim="0"/>
                 <Arg name="filters_init_nothing" ui="Radio buttons" value="false" type="System.Boolean" dim="0"/>
-                <Arg name="models" ui="Resource" value="model_SV-10-005_all%%%123" type="System.String" dim="1" sep="%%%" sizes="2"/>
-                <Arg name="network_settings" ui="Resource" value="network_default%%%187" type="System.String" dim="1" sep="%%%" sizes="2"/>
+                <Arg name="models" ui="Resource" value="model_SV-10-005_all%%%192" type="System.String" dim="1" sep="%%%" sizes="2"/>
+                <Arg name="network_settings" ui="Resource" value="network_SV-10-005%%%193" type="System.String" dim="1" sep="%%%" sizes="2"/>
             </InitConfig>
             <Configs>
                 <Config key="156" name="sync">
@@ -1464,7 +1468,7 @@
         <Component key="111" name="Serial port writer" category="Network" type="SerialPortWriter" global="0" always_updating="1" exceptions="0" frame_logging="0" trigger_logging="1" restricted="0" priority="2">
             <InitConfig key="245" name="standard">
                 <Arg name="baud_rate" ui="Integer spin box" value="115200" type="System.Int32" dim="0"/>
-                <Arg name="port_to_write" ui="Line text editor" value="COM10" type="System.String" dim="0"/>
+                <Arg name="port_to_write" ui="Line text editor" value="COM15" type="System.String" dim="0"/>
             </InitConfig>
             <Configs>
                 <Config key="280" name="default">
@@ -4594,7 +4598,7 @@
                 </Condition>
             </Routine>
             <Routine key="177" name="Lab_FBIIn" randomizer="0" informations="">
-                <Condition key="61" name="default" duration="0.5" ui_scale="10" ui_size="1" sets_keys="5">
+                <Condition key="61" name="default" duration="1" ui_scale="10" ui_size="1" sets_keys="5">
                     <Action key="1073" key_component="25" key_config="53" node_used="0" node_position="0 0">
                         <!--Component LabRoom with config standard -->
                         <Timeline type="Update">
@@ -7837,7 +7841,7 @@
                 </Condition>
             </Routine>
             <Routine key="287" name="Lab_FBIIn" randomizer="0" informations="">
-                <Condition key="81" name="default" duration="0.5" ui_scale="10" ui_size="1" sets_keys="7">
+                <Condition key="81" name="default" duration="1" ui_scale="10" ui_size="1" sets_keys="7">
                     <Action key="3556" key_component="25" key_config="53" node_used="0" node_position="0 0">
                         <!--Component LabRoom with config standard -->
                         <Timeline type="Update">
@@ -11080,7 +11084,7 @@
                 </Condition>
             </Routine>
             <Routine key="1245" name="Lab_FBIIn" randomizer="0" informations="">
-                <Condition key="149" name="default" duration="0.5" ui_scale="10" ui_size="1" sets_keys="0">
+                <Condition key="149" name="default" duration="1" ui_scale="10" ui_size="1" sets_keys="0">
                     <Action key="4044" key_component="25" key_config="53" node_used="0" node_position="0 0">
                         <!--Component LabRoom with config standard -->
                         <Timeline type="Update">
@@ -11585,7 +11589,7 @@
             <Loop key="1146" name="Questionnaire2" type="fixed" nbReps="1" N="1" noFollowingValues="0" informations="">
                 <Set key="13" name="default" occu="1"/>
             </Loop>
-            <Loop key="1149" name="FBI3" type="fixed" nbReps="1" N="1" noFollowingValues="0" informations="">
+            <Loop key="1149" name="FBI3" type="shuffle" nbReps="4" N="1" noFollowingValues="0" informations="">
                 <Set key="17" name="synchroneous" occu="1"/>
                 <Set key="18" name="asynchroneous" occu="1"/>
             </Loop>
