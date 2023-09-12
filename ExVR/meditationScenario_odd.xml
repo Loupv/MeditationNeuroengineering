@@ -2294,7 +2294,7 @@
                 <Config key="146" name="default">
                     <Arg name="display" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="doppler_level" ui="Float values slider" value="1" type="System.Single" dim="0"/>
-                    <Arg name="end_time" ui="Float spin box" value="100" type="System.Single" dim="0"/>
+                    <Arg name="end_time" ui="Float spin box" value="108" type="System.Single" dim="0"/>
                     <Arg name="loop" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="max_distance" ui="Float values slider" value="10" type="System.Single" dim="0"/>
                     <Arg name="min_distance" ui="Float values slider" value="0.01" type="System.Single" dim="0"/>
@@ -2429,7 +2429,7 @@
                 <Config key="320" name="default">
                     <Arg name="display" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="doppler_level" ui="Float values slider" value="1" type="System.Single" dim="0"/>
-                    <Arg name="end_time" ui="Float spin box" value="100" type="System.Single" dim="0"/>
+                    <Arg name="end_time" ui="Float spin box" value="320" type="System.Single" dim="0"/>
                     <Arg name="loop" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="max_distance" ui="Float values slider" value="10" type="System.Single" dim="0"/>
                     <Arg name="min_distance" ui="Float values slider" value="0.01" type="System.Single" dim="0"/>
@@ -2474,7 +2474,7 @@
                 <Config key="322" name="default">
                     <Arg name="display" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="doppler_level" ui="Float values slider" value="1" type="System.Single" dim="0"/>
-                    <Arg name="end_time" ui="Float spin box" value="100" type="System.Single" dim="0"/>
+                    <Arg name="end_time" ui="Float spin box" value="302" type="System.Single" dim="0"/>
                     <Arg name="loop" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="max_distance" ui="Float values slider" value="10" type="System.Single" dim="0"/>
                     <Arg name="min_distance" ui="Float values slider" value="0.01" type="System.Single" dim="0"/>
@@ -2519,7 +2519,7 @@
                 <Config key="324" name="default">
                     <Arg name="display" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="doppler_level" ui="Float values slider" value="1" type="System.Single" dim="0"/>
-                    <Arg name="end_time" ui="Float spin box" value="100" type="System.Single" dim="0"/>
+                    <Arg name="end_time" ui="Float spin box" value="175" type="System.Single" dim="0"/>
                     <Arg name="loop" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="max_distance" ui="Float values slider" value="10" type="System.Single" dim="0"/>
                     <Arg name="min_distance" ui="Float values slider" value="0.01" type="System.Single" dim="0"/>
@@ -2654,7 +2654,7 @@
                 <Config key="332" name="default">
                     <Arg name="display" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="doppler_level" ui="Float values slider" value="1" type="System.Single" dim="0"/>
-                    <Arg name="end_time" ui="Float spin box" value="100" type="System.Single" dim="0"/>
+                    <Arg name="end_time" ui="Float spin box" value="340" type="System.Single" dim="0"/>
                     <Arg name="loop" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="max_distance" ui="Float values slider" value="10" type="System.Single" dim="0"/>
                     <Arg name="min_distance" ui="Float values slider" value="0.01" type="System.Single" dim="0"/>
@@ -2699,7 +2699,7 @@
                 <Config key="334" name="default">
                     <Arg name="display" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="doppler_level" ui="Float values slider" value="1" type="System.Single" dim="0"/>
-                    <Arg name="end_time" ui="Float spin box" value="100" type="System.Single" dim="0"/>
+                    <Arg name="end_time" ui="Float spin box" value="308" type="System.Single" dim="0"/>
                     <Arg name="loop" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="max_distance" ui="Float values slider" value="10" type="System.Single" dim="0"/>
                     <Arg name="min_distance" ui="Float values slider" value="0.01" type="System.Single" dim="0"/>
@@ -2744,7 +2744,7 @@
                 <Config key="336" name="default">
                     <Arg name="display" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="doppler_level" ui="Float values slider" value="1" type="System.Single" dim="0"/>
-                    <Arg name="end_time" ui="Float spin box" value="100" type="System.Single" dim="0"/>
+                    <Arg name="end_time" ui="Float spin box" value="110" type="System.Single" dim="0"/>
                     <Arg name="loop" ui="Check box" value="false" type="System.Boolean" dim="0"/>
                     <Arg name="max_distance" ui="Float values slider" value="10" type="System.Single" dim="0"/>
                     <Arg name="min_distance" ui="Float values slider" value="0.01" type="System.Single" dim="0"/>
