@@ -151,8 +151,8 @@ Material:
     m_Floats:
     - _Albedo2Flow: -0.3
     - _Albedo2Tiling: 0.9
-    - _AlbedoContrast: 0.93
-    - _AlbedoIntensity: 0.46
+    - _AlbedoContrast: 0.95
+    - _AlbedoIntensity: 1.11
     - _Brightness: 1
     - _BumpReflectionStr: 0.5
     - _BumpScale: 1
@@ -201,14 +201,14 @@ Material:
     - _MirrorFPOW: 1.55
     - _MirrorR0: 0.23
     - _MirrorSaturation: 1
-    - _MirrorStrength: 1
+    - _MirrorStrength: 1.02
     - _MirrorWaveFlow: 6
     - _MirrorWavePow: 0.3
     - _MirrorWaveScale: 2
     - _Mitigation: 22.4
     - _Mode: 0
     - _NormalDetailFlow: 1
-    - _NormalMap1Strength: 0.95
+    - _NormalMap1Strength: 1.01
     - _NormalMap2Flow: 0.5
     - _NormalMap2Strength: 0.9
     - _NormalMap2Tiling: -0.9
@@ -242,7 +242,7 @@ Material:
     - _ReverseFlow: -5
     - _Saturation: 1
     - _SaturationRef: 0.5
-    - _Shininess: 0.209
+    - _Shininess: 0.3
     - _SmoothnessTextureChannel: 0
     - _SoftFactor: 0.638
     - _SpecularHighlights: 1
@@ -258,7 +258,7 @@ Material:
     - _WaveSpeed: 20
     - _ZWrite: 1
     m_Colors:
-    - _AlbedoColor: {r: 0.1254902, g: 0.15461197, b: 0.1882353, a: 1}
+    - _AlbedoColor: {r: 0.11690104, g: 0.2184691, b: 0.3490566, a: 1}
     - _BlendColor: {r: 0.29411763, g: 0.29411763, b: 0.29411763, a: 1}
     - _Color: {r: 0.035, g: 0.054999992, b: 0.07, a: 1}
     - _DepthColor: {r: 0, g: 0, b: 0, a: 0.5}
@@ -272,5 +272,5 @@ Material:
     - _MirrorReflectionColor: {r: 1, g: 1, b: 1, a: 0.5}
     - _ReflectColor: {r: 1, g: 1, b: 1, a: 1}
     - _ReflectionColor: {r: 1, g: 1, b: 1, a: 0.5}
-    - _SpecColor: {r: 0.24528301, g: 0.24528301, b: 0.24528301, a: 1}
+    - _SpecColor: {r: 0.10991457, g: 0.18272902, b: 0.3584906, a: 1}
     - _SpecularColor: {r: 0.5808823, g: 0.5808823, b: 0.5808823, a: 1}

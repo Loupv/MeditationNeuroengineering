@@ -6,7 +6,9 @@
 
 
 using UnityEngine;
+using System;
 using System.Collections;
+using System.Collections.Generic;
 
 [HelpURL("https://nvjob.github.io/unity/nvjob-water-shaders-v2")]
 [AddComponentMenu("#NVJOB/Water Shaders V2")]

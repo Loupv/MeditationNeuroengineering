@@ -1,0 +1,12 @@
+# Blender 4.0.2 MTL File: 'Flower_Lotus-Stylized.blend'
+# www.blender.org
+
+newmtl Lotus
+Ns 79.421471
+Ka 1.000000 1.000000 1.000000
+Ks 0.140909 0.140909 0.140909
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd COMPLETED_Models/Flower_Lotus-Stylized/Textures/Mergedbake_1k_pbr_diffuse.png
