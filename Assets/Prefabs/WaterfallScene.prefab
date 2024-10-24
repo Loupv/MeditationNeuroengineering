@@ -526,7 +526,7 @@ WindZone:
   m_Enabled: 1
   m_Mode: 1
   m_Radius: 100
-  m_WindMain: 0.2
+  m_WindMain: 0.05
   m_WindTurbulence: 15.45
   m_WindPulseMagnitude: 0.58
   m_WindPulseFrequency: 0.28
@@ -542,7 +542,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1edb39aa169eb40cfa015393d5396847, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WindMultiplier: 0.1
+  WindMultiplier: 0.05
 --- !u!1001 &321075664231335361
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4402,6 +4402,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4519178309241464456, guid: 16d1bc924f0eb1c4a9c92f247ccf0b0f,
         type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4519178309241464456, guid: 16d1bc924f0eb1c4a9c92f247ccf0b0f,
+        type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
@@ -5513,17 +5518,17 @@ PrefabInstance:
     - target: {fileID: 4519178310258909534, guid: 16d1bc924f0eb1c4a9c92f247ccf0b0f,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.9
+      value: -7.1
       objectReference: {fileID: 0}
     - target: {fileID: 4519178310258909534, guid: 16d1bc924f0eb1c4a9c92f247ccf0b0f,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 17
+      value: 15.31
       objectReference: {fileID: 0}
     - target: {fileID: 4519178310258909534, guid: 16d1bc924f0eb1c4a9c92f247ccf0b0f,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -33.39
+      value: -33.35
       objectReference: {fileID: 0}
     - target: {fileID: 4519178310258909534, guid: 16d1bc924f0eb1c4a9c92f247ccf0b0f,
         type: 3}

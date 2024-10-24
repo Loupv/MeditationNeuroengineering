@@ -18,7 +18,7 @@ EditorBuildSettings:
     path: Assets/Scenes/ForestScene.unity
     guid: cf2e4ad51707ced4796896b1c1fc10e0
   m_configObjects:
-    Unity.XR.WindowsMR.Settings: {fileID: 11400000, guid: 1bc66377cb6bb274780ed70a5afc052b,
+    Unity.XR.WindowsMR.Settings: {fileID: 11400000, guid: 38745896b44049b4c9d03a1225464062,
       type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 185f7728123062445ab3762d6830fa67,
       type: 2}
